@@ -1,0 +1,297 @@
+/*! CSS Used from: https://fedora.teachablecdn.com/assets/application-23491958e294fe4d246330299b9c6d23458454934c3a178dd5cefcb27d36f097.css ; media=all */
+@media all{
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{margin:0;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+h1{font-size:2em;margin:0.67em 0;}
+img{border:0;}
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{border:0;padding:0;}
+html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body{margin:0;}
+a{background:0 0;}
+a:active,a:hover{outline:0;}
+h1{margin:.67em 0;font-size:2em;}
+img{border:0;}
+button{margin:0;font:inherit;color:inherit;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+@media print{
+*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+p,h2{orphans:3;widows:3;}
+h2{page-break-after:avoid;}
+.label{border:1px solid #000;}
+}
+*{box-sizing:border-box;}
+:before,:after{box-sizing:border-box;}
+html{font-size:10px;-webkit-tap-highlight-color:transparent;}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
+button{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#428bca;text-decoration:none;}
+a:hover,a:focus{color:#2a6496;text-decoration:underline;}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+h1,h2{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h1,h2{margin-top:20px;margin-bottom:10px;}
+h1{font-size:36px;}
+h2{font-size:30px;}
+p{margin:0 0 10px;}
+ul{margin-top:0;margin-bottom:10px;}
+.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
+.row{margin-right:-15px;margin-left:-15px;}
+label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
+.collapse{display:none;}
+.nav{padding-left:0;margin-bottom:0;list-style:none;}
+.nav>li{position:relative;display:block;}
+.nav>li>a{position:relative;display:block;padding:10px 15px;}
+.nav>li>a:hover,.nav>li>a:focus{text-decoration:none;background-color:#eee;}
+.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);}
+@media (min-width: 991px){
+.navbar-collapse{width:auto;border-top:0;box-shadow:none;}
+.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important;}
+}
+.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px;}
+.navbar-toggle:focus{outline:0;}
+.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px;}
+.navbar-toggle .icon-bar+.icon-bar{margin-top:4px;}
+@media (min-width: 991px){
+.navbar-toggle{display:none;}
+}
+.navbar-nav{margin:7.5px -15px;}
+.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px;}
+@media (min-width: 991px){
+.navbar-nav{float:left;margin:0;}
+.navbar-nav>li{float:left;}
+.navbar-nav>li>a{padding-top:15px;padding-bottom:15px;}
+}
+.label{display:inline;padding:.2em .6em .3em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em;}
+.label:empty{display:none;}
+.container-fluid:before,.container-fluid:after,.row:before,.row:after,.nav:before,.nav:after,.navbar-collapse:before,.navbar-collapse:after{display:table;content:" ";}
+.container-fluid:after,.row:after,.nav:after,.navbar-collapse:after{clear:both;}
+html{min-height:100%;position:relative;}
+body{background-image:none;background-size:none;background:none;font-family:"Proxima";margin:0!important;color:#2b3636;}
+a{color:#1ea69a;}
+a:hover,a:active{color:#0e504a;}
+a,a:active,a:hover,a:focus{text-decoration:none;}
+p{font-size:18px;font-weight:200;line-height:28px;}
+h1,h2{color:#2b3636;}
+.nav>li>a:focus{background:none!important;outline:0;}
+.nav.navbar-nav>li>a{line-height:30px;font-weight:200;}
+.my-teachable-layout{font-family:'TeachableSans';}
+.my-teachable-layout{font-family:'TeachableSans', 'Helvetica', 'Arial';min-width:330px;background:#f5f6f7;}
+.my-teachable-layout .sidebar{width:276px;}
+.my-teachable-layout .sidebar .profile-card{height:353px;text-align:center;padding:30px;}
+.my-teachable-layout .sidebar .profile-card .logo-wrapper{position:absolute;left:0;top:22px;}
+.my-teachable-layout .sidebar .profile-card .logo-wrapper .logo{display:inline-block;}
+.my-teachable-layout .sidebar .profile-card .mobile-settings{position:absolute;right:20px;top:27px;display:none;}
+.my-teachable-layout .sidebar .profile-card .mobile-settings img{width:21px;}
+.my-teachable-layout .sidebar .profile-card .mobile-logout{font-size:11px;color:rgba(255,255,255,0.68);text-decoration:underline;margin-top:0;display:none;}
+.my-teachable-layout .sidebar .profile-card .navbar-toggle{position:absolute;left:30px;top:12px;display:none;}
+.my-teachable-layout .sidebar .profile-card .navbar-toggle .icon-bar{background:#fff;}
+.my-teachable-layout .sidebar .profile-card .mobile-navbar{background:#fff;height:279px;left:0px;padding-left:30px;position:absolute;text-align:left;top:74px;-webkit-transition:0.2s all ease-in;transition:0.2s all ease-in;width:100%;z-index:1000;}
+.my-teachable-layout .sidebar .profile-card .mobile-navbar .navbar-nav{margin-top:14px;}
+.my-teachable-layout .sidebar .profile-card .mobile-navbar .navbar-nav a{font-weight:600;color:#8f9da5;}
+.my-teachable-layout .sidebar .profile-card .mobile-navbar .navbar-nav a:hover{color:#09a59a;background:none;}
+.my-teachable-layout .sidebar .profile-card .user-info{margin-top:40px;}
+.my-teachable-layout .sidebar .profile-card .user-info h2{font-size:16px;font-weight:500;letter-spacing:0.64px;}
+.my-teachable-layout .sidebar .profile-card .user-info p{font-size:13px;letter-spacing:0.49px;line-height:1;}
+.my-teachable-layout .sidebar .profile-card .avatar{padding:5px;border:1px solid #ccc;margin-top:30px;border-radius:50%;display:inline-block;}
+.my-teachable-layout .sidebar .nav-sidebar{padding:20px 30px;}
+.my-teachable-layout .sidebar .nav-sidebar>li{background-repeat:no-repeat;background-position:5px 16px;background-size:50px;cursor:pointer;}
+.my-teachable-layout .sidebar .nav-sidebar>li a{padding-right:0;margin-left:30px;text-transform:uppercase;font-weight:500;font-size:13px;color:#8592a6;letter-spacing:1px;line-height:35px;background:#fff;}
+.my-teachable-layout .sidebar .nav-sidebar>li a:focus{background:#fff!important;}
+.my-teachable-layout .sidebar .nav-sidebar>li:hover,.my-teachable-layout .sidebar .nav-sidebar>li:focus,.my-teachable-layout .sidebar .nav-sidebar>li.selected{background-position:-24px 16px;}
+.my-teachable-layout .sidebar .nav-sidebar>li:hover a,.my-teachable-layout .sidebar .nav-sidebar>li:focus a,.my-teachable-layout .sidebar .nav-sidebar>li.selected a{color:#ff7f45;}
+.my-teachable-layout .sidebar .nav-sidebar>li.selected a{font-weight:600;}
+.my-teachable-layout .sidebar .nav-sidebar>li.nav-item-profile{background-image:url("//assets.teachablecdn.com/icons/icon-school.svg");}
+.my-teachable-layout .sidebar .nav-sidebar>li.nav-item-create{background-image:url("//assets.teachablecdn.com/icons/icon-plus.svg");}
+.my-teachable-layout .sidebar .nav-sidebar>li.nav-item-settings{background-image:url("//assets.teachablecdn.com/icons/icon-settings.svg");}
+.my-teachable-layout .sidebar .nav-sidebar>li.nav-item-help{background-image:url("//assets.teachablecdn.com/icons/icon-help.svg");}
+.my-teachable-layout .sidebar .nav-sidebar>li.nav-item-billing{background-image:url("//assets.teachablecdn.com/icons/my-teachable/icons/icon-billing.svg");}
+.my-teachable-layout .sidebar .nav-sidebar>li.nav-item-logout{background-image:url("//assets.teachablecdn.com/icons/icon-logout.svg");}
+@media (max-width: 767px){
+.my-teachable-layout .sidebar{width:100%;}
+.my-teachable-layout .sidebar .nav-sidebar{margin-right:0px;}
+}
+@media (min-width: 767px){
+.my-teachable-layout .sidebar{position:fixed;top:0;bottom:0;left:0;padding:0;z-index:1000;display:block;overflow-x:hidden;overflow-y:auto;background-color:#fff;border-right:1px solid #eee;}
+.my-teachable-layout .sidebar .navbar-collapse.collapse.mobile-navbar{display:none!important;}
+}
+@media screen and (max-width: 767px){
+.my-teachable-layout .sidebar .logo-wrapper{display:none;}
+.my-teachable-layout .sidebar .profile-card{background-position:0px 95%;background-image:url("//assets.teachablecdn.com/teachable-bg.svg");}
+.my-teachable-layout .sidebar .profile-card h2,.my-teachable-layout .sidebar .profile-card p{color:#fff;}
+.my-teachable-layout .sidebar .profile-card .navbar-toggle{display:block;}
+.my-teachable-layout .sidebar .profile-card .mobile-settings,.my-teachable-layout .sidebar .mobile-logout{display:block;}
+.my-teachable-layout .sidebar .nav-sidebar{display:none;}
+}
+.my-teachable-layout .my-teachable-dashboard{padding:20px;min-height:100%;position:relative;width:100%;}
+.my-teachable-layout .my-teachable-dashboard h1{padding-left:5px;font-size:17px;font-weight:600;margin-bottom:33px;letter-spacing:1px;color:#33353a;}
+@media screen and (min-width: 768px){
+.my-teachable-layout .my-teachable-dashboard{position:absolute;padding-right:50px;padding-top:28px;padding-left:325px;}
+}
+.my-teachable-layout .label-user-type{vertical-align:2px;margin-left:5px;margin-right:6px;font-size:9px;font-weight:700;padding-top:7px;padding-bottom:6px;padding-left:13px;padding-right:13px;text-transform:uppercase;border-radius:16px;}
+.my-teachable-layout .label-user-type.label-free{background:#efefef;color:#5f5f5f;}
+.my-teachable-layout .schools-list{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;}
+@media (min-width: 767px){
+.my-teachable-layout .schools-list{margin:-10px 0 0 -10px;}
+}
+.my-teachable-layout .schools-list .school-card{display:block;margin:20px 20px 40px 20px;padding:0px;min-height:350px;position:relative;border-radius:5px;background-size:130%;background-repeat:no-repeat;box-shadow:0 8px 20px #e3e7ea;-webkit-transition:0.15s all ease-in;transition:0.15s all ease-in;background-position:center top;}
+.my-teachable-layout .schools-list .school-card:hover{background-repeat:no-repeat;box-shadow:0 30px 100px rgba(50,50,93,0.12),0 10px 20px rgba(50,50,93,0.1);-webkit-transform:translateY(-4px);transform:translateY(-4px);}
+.my-teachable-layout .schools-list .school-card:hover .school-name{color:#09a59a;}
+.my-teachable-layout .schools-list .school-card .school-favicon{width:50px;height:50px;border-radius:50%;position:absolute;top:-30px;left:30px;z-index:10;background-color:#fff;box-shadow:0px 2px 21px 0 #c1c5c5;}
+.my-teachable-layout .schools-list .school-card .school-info{background:#fff;position:absolute;width:100%;bottom:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;padding:40px 20px 30px 30px;min-height:160px;}
+.my-teachable-layout .schools-list .school-card .school-name{color:#000;font-size:16px;font-weight:600;line-height:23px;margin-top:2px;margin-bottom:0px;letter-spacing:0.7px;word-wrap:break-word;}
+.my-teachable-layout .schools-list .school-card .school-url{font-size:13px;padding-bottom:14px;color:#8f9da5;font-weight:500;line-height:17px;margin-top:6px;margin-bottom:4px;letter-spacing:0.53px;word-wrap:break-word;}
+@media screen and (min-width: 0px) and (max-width: 500px){
+.my-teachable-layout .schools-list{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}
+.my-teachable-layout .schools-list .school-card{-ms-flex-preferred-size:100%;flex-basis:100%;}
+}
+@media screen and (min-width: 500px) and (max-width: 767px){
+.my-teachable-layout .schools-list .school-card{-ms-flex-preferred-size:calc(50% - 40px);flex-basis:calc(50% - 40px);}
+}
+@media screen and (min-width: 768px) and (max-width: 1000px){
+.my-teachable-layout .schools-list{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}
+.my-teachable-layout .schools-list .school-card{-ms-flex-preferred-size:100%;flex-basis:100%;}
+}
+@media screen and (min-width: 1000px) and (max-width: 1250px){
+.my-teachable-layout .schools-list .school-card{-ms-flex-preferred-size:calc(50% - 40px);flex-basis:calc(50% - 40px);}
+}
+@media screen and (min-width: 1250px) and (max-width: 1600px){
+.my-teachable-layout .schools-list .school-card{-ms-flex-preferred-size:calc(33% - 40px);flex-basis:calc(33% - 40px);}
+}
+@media screen and (min-width: 1600px){
+.my-teachable-layout .schools-list .school-card{-ms-flex-preferred-size:calc(25% - 40px);flex-basis:calc(25% - 40px);}
+}
+}
+/*! CSS Used fontfaces */
+@font-face{font-family:'Proxima';src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}
+@font-face{font-family:'Proxima';font-style:italic;src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}
+@font-face{font-family:'Proxima';font-weight:300;src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}
+@font-face{font-family:'Proxima';font-weight:600;src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}
+@font-face{font-family:'Proxima';font-weight:600;font-style:italic;src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}
+@font-face{font-family:'Proxima';font-weight:bold;src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}
+@font-face{font-family:'Proxima';font-weight:bold;font-style:italic;src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}
+@font-face{font-family:'Proxima';font-weight:900;src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-MediumItalic.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-MediumItalic.eot?#iefix") format("embedded-opentype"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-MediumItalic.woff2") format("woff2"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-MediumItalic.woff") format("woff"),url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-MediumItalic.ttf") format("truetype");font-weight:500;font-style:italic;font-display:swap;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Italic.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Italic.eot?#iefix") format("embedded-opentype"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-Italic.woff2") format("woff2"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-Italic.woff") format("woff"),url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Italic.ttf") format("truetype");font-weight:normal;font-style:italic;font-display:swap;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-BoldItalic.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-BoldItalic.eot?#iefix") format("embedded-opentype"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-BoldItalic.woff2") format("woff2"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-BoldItalic.woff") format("woff"),url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-BoldItalic.ttf") format("truetype");font-weight:bold;font-style:italic;font-display:swap;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Bold.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix") format("embedded-opentype"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-Bold.woff2") format("woff2"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-Bold.woff") format("woff"),url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Bold.ttf") format("truetype");font-weight:bold;font-style:normal;font-display:swap;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBold.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBold.eot?#iefix") format("embedded-opentype"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-SemiBold.woff2") format("woff2"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-SemiBold.woff") format("woff"),url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Medium.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Medium.eot?#iefix") format("embedded-opentype"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-Medium.woff2") format("woff2"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-Medium.woff") format("woff"),url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Regular.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Regular.eot?#iefix") format("embedded-opentype"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-Regular.woff2") format("woff2"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-Regular.woff") format("woff"),url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Regular.ttf") format("truetype");font-weight:normal;font-style:normal;font-display:swap;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBoldItalic.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-SemiBoldItalic.woff2") format("woff2"),url("//assets.teachablecdn.com/fonts/teachable-sans-v2/TeachableSans-SemiBoldItalic.woff") format("woff"),url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBoldItalic.ttf") format("truetype");font-weight:600;font-style:italic;font-display:swap;}
+
+
+
+
+
+
+/*school create view*/
+
+/*! CSS Used from: https://fedora.teachablecdn.com/assets/application-23491958e294fe4d246330299b9c6d23458454934c3a178dd5cefcb27d36f097.css ; media=all */
+@media all{
+input{color:inherit;font:inherit;margin:0;}
+input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+input::-moz-focus-inner{border:0;padding:0;}
+input{line-height:normal;}
+input{margin:0;font:inherit;color:inherit;}
+input[type=submit]{-webkit-appearance:button;cursor:pointer;}
+input::-moz-focus-inner{padding:0;border:0;}
+input{line-height:normal;}
+@media print{
+*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+}
+*{box-sizing:border-box;}
+:before,:after{box-sizing:border-box;}
+input{font-family:inherit;font-size:inherit;line-height:inherit;}
+.text-center{text-align:center;}
+label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
+.form-control{display:block;width:100%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;}
+.form-control:focus{border-color:#66afe9;outline:0;box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);}
+.form-control::-moz-placeholder{color:#777;opacity:1;}
+.form-control:-ms-input-placeholder{color:#777;}
+.form-control::-webkit-input-placeholder{color:#777;}
+.form-group{margin-bottom:15px;}
+.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px;}
+.btn:focus,.btn:active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.btn:hover,.btn:focus{color:#333;text-decoration:none;}
+.btn:active{background-image:none;outline:0;box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);}
+.btn-primary{color:#fff;background-color:#428bca;border-color:#357ebd;}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active{color:#fff;background-color:#3071a9;border-color:#285e8e;}
+.btn-primary:active{background-image:none;}
+.btn-primary,.btn-primary:active,.btn-primary:focus{background:#1ea69a!important;border:1px solid #1ea69a!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
+.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#1a9086!important;border:1px solid #1a9086!important;color:#fff;}
+@media screen and (max-width: 767px){
+.btn-primary,.btn-primary:active,.btn-primary:focus{font-size:15px;}
+}
+.btn-md,.btn-md:active,.btn-md:focus{display:inline-block;border-radius:50px!important;font-size:13px!important;letter-spacing:0.49px;padding-top:16px!important;padding-bottom:16px!important;padding-left:30px!important;padding-right:30px!important;}
+.btn-teachable-block{min-width:200px;}
+.btn-orange,.btn-orange:hover,.btn-orange:active,.btn-orange:focus{border-color:#ff7f45!important;background-color:#ff7f45!important;}
+.btn-orange:hover,.btn-orange:active,.btn-orange:focus,.btn-orange:hover:hover,.btn-orange:hover:active,.btn-orange:hover:focus,.btn-orange:active:hover,.btn-orange:active:active,.btn-orange:active:focus,.btn-orange:focus:hover,.btn-orange:focus:active,.btn-orange:focus:focus{border-color:#ff6d2c!important;background-color:#ff6d2c!important;}
+input.form-control{padding:5px 10px;height:40px;font-weight:200;margin-bottom:14px;-webkit-transition:all 0.3s ease;transition:all 0.3s ease;box-shadow:none;}
+input.form-control:focus{border-color:#4bdfd2;outline:0;box-shadow:none;}
+input.form-control::-webkit-input-placeholder{opacity:0.7;}
+.content-box{background:#fff;border-radius:6px;box-shadow:0 10px 21px #e7eeef;padding-left:0px;padding:30px 45px;position:relative;text-align:left;width:100%;margin-bottom:70px;}
+.content-box .button-group{margin-top:45px;display:block;}
+.content-box .control-input{font-size:13px;line-height:21px;}
+.content-box .form-group{margin-bottom:20px;}
+.content-box .form-control{background-color:#f4f9fb;border:0;box-shadow:0px 1px 1px 0px #e6e9ec;}
+.content-box .form-control:focus{background-color:#fff8e6;color:#333;box-shadow:0px 1px 1px 0px #f9c4ad;border:0;}
+.content-box label{color:#47505e;font-size:13px;font-weight:500;line-height:29px;letter-spacing:0.61px;}
+.content-box label.description{color:#8592a6;font-size:12px;line-height:20px;}
+.content-box label.description .highlight-text{color:#47505e;}
+.my-teachable-layout .content-box{padding-top:40px;padding-bottom:40px;}
+@media screen and (max-width: 767px){
+.content-box{border:0;border-radius:0;box-shadow:none;width:calc(100% + 40px);margin:0 0 0 -20px;}
+}
+.my-teachable-layout .my-teachable-dashboard{padding:20px;min-height:100%;position:relative;width:100%;}
+.my-teachable-layout .my-teachable-dashboard .sticky-center-container{margin-left:137px;}
+@media screen and (max-width: 767px){
+.my-teachable-layout .my-teachable-dashboard .sticky-center-container{margin-left:0px;}
+}
+@media screen and (min-width: 768px) and (max-width: 930px){
+.my-teachable-layout .my-teachable-dashboard .sticky-center-container{margin-top:0px;width:calc(100% - 275px);}
+}
+@media screen and (min-width: 768px){
+.my-teachable-layout .my-teachable-dashboard{position:absolute;padding-right:50px;padding-top:28px;padding-left:325px;}
+}
+.my-teachable-layout .sticky-center-container{position:absolute;top:50%;width:550px;left:50%;}
+.my-teachable-layout .sticky-center-container .content-box{border:0!important;width:100%;margin-bottom:0;}
+.my-teachable-layout .sticky-center-container .content-box .button-group{margin-top:45px;display:block;}
+@media screen and (max-width: 767px){
+.my-teachable-layout .sticky-center-container{width:100%;border-radius:0px;-webkit-transform:none;transform:none;top:0px;left:0px;margin-top:-20px;border-top:1px solid #f1f1f1;margin-bottom:0px;}
+.my-teachable-layout .sticky-center-container .content-box{box-shadow:none;border-radius:0px;min-height:100%;margin-left:0px;}
+}
+@media screen and (min-width: 768px){
+.my-teachable-layout .sticky-center-container{width:550px;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);}
+}
+.form-control::-moz-placeholder{color:#b2bcc5;opacity:1;}
+}
+
+
+/*status message*/
+
+
+/*! CSS Used from: https://themes.teachablecdn.com/themecss/production.css?_=e663dd809d40&logged_out_homepage_background_image_overlay=0.0&show_login=true&show_signup=true */
+a{color:#1ea69a;}
+a:hover,a:active{color:#0e504a;}
+a,a:active,a:hover,a:focus{text-decoration:none;}
+.alert-header{background:#e3ffe3;text-align:center;padding:10px;border-bottom:1px solid #dbdbdb;font-size:13px;line-height:22px;display:none;margin-bottom:0px;}
+.alert-header .bolded{font-weight:bold;}
+.alert-header a{text-decoration:underline;}
+.alert-header .center-container{text-align:center;margin:auto;}
+.alert-header .green,.alert-header .green a{color:#789b71;}
+@media screen and (min-width: 768px){
+.alert-header{display:block;}
+}

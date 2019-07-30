@@ -10,6 +10,11 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    const ADMIN_TYPE = 'admin';
+    const DEFAULT_TYPE = 'default';
+    const TEACHER_TYPE = 'teacher';
+    const OWNER_TYPE = 'owner';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -36,4 +41,26 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function isAdmin()    {
+        return $this->type1 === self::ADMIN_TYPE;
+    }
+
+    public function isTeacher()    {
+        return $this->type2 === self::TEACHER_TYPE;
+    }
+
+    public function isOwner()    {
+        return $this->type3 === self::OWNER_TYPE;
+    }
+
+    public function schools()
+    {
+        return $this->belongsToMany('App\School');
+    }
+
+    public function createSchools()
+    {
+        return $this->hasMany('App\School');
+    }
 }

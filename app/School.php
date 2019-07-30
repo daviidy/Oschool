@@ -23,6 +23,7 @@ class School extends Model
                            'logo',
                            'background',
                            'overlay',
+                           'user_id',
                          ];
 
     /**
@@ -43,5 +44,10 @@ class School extends Model
      public function courses()
      {
          return $this->belongsToMany('App\Course');
+     }
+
+     public function user()
+     {
+         return $this->belongsTo('App\User');
      }
 }
