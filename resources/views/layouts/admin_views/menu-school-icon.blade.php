@@ -4,12 +4,26 @@
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/admin/menu-school.css">
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
-      <script type="text/javascript" src="/js/admin_views/menu.js"></script>
+
       <link rel="stylesheet" href="/nProgress/nprogress.css">
+      <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
+
+      <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+        <!--highlight js-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+
+        <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-dark.min.css">
+      <!--fin highlight js-->
+
+
 
     <style type="text/css">
         .Button-module_button__3Rp1B {
@@ -92,7 +106,7 @@
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_dashboard')" text="Dashboard" icon="icon icon-speed-fast" sref="admin.dashboard" onboarding-tooltip-if="school.is_launched == false" onboarding-tooltip-text="Complete the onboarding steps to launch your school.">
-                            <!----><a what="link" ui-sref="admin.dashboard" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/dashboard">
+                            <!----><a what="link" ui-sref="admin.dashboard" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}">
                                 <!----><i ng-if="::icon" ng-class="::icon" tooltip="Dashboard" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-speed-fast"></i>
                                 <!---->
                                 <!---->
@@ -352,12 +366,90 @@
         </div>
     </div>
 
+
+
+    <script type="text/javascript" src="/notifs/amaran/jquery.amaran.js"></script>
+
+    <!--youtube loading-->
     <script type="text/javascript" src="/nProgress/nprogress.js"></script>
     <script type="text/javascript">
     NProgress.configure({ showSpinner: false });
     NProgress.start();
     NProgress.done();
     </script>
+    <!--fin youtube loading-->
+
+    <script type="text/javascript" src="/js/admin_views/menu.js"></script>
+
+
+    <!--quill js-->
+
+    <!-- Include the Quill library -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="/js/quill/image-resize.min.js"></script>
+  <script src="/js/quill/video-resize.min.js"></script>
+
+
+
+  <!-- Initialize Quill editor -->
+  <script>
+    var options = {
+    modules: {
+      toolbar: [
+        [{ header: [1, 2, false] }],
+        ['size', 'bold', 'italic', 'underline'],
+        ['image', 'code-block', 'video', 'blockquote', 'code', 'align', 'link'],
+        ['color'],
+    ],
+    imageResize: {
+         modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
+     },
+     videoResize: {
+            modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
+        },
+     syntax: true,
+    },
+    placeholder: 'Description de l\'école...',
+    theme: 'snow'  // or 'bubble'
+};
+    var quill = new Quill('#site-description', options);
+
+  var form = document.getElementById("description");
+  form.onsubmit = function() {
+    // Populate hidden form on submit
+    var description = document.querySelector('input[name=description]');
+    description.value = JSON.stringify(quill.getContents());
+
+
+    $.ajax({
+        type: 'post',
+        url: '/updateSchool',
+        data: {
+            '_token': $('input[name=_token]').val(),
+            'id': $("#schoolDescription").val(),
+            'description': quill.root.innerHTML,
+
+        },
+        success: function(data) {
+            $.amaran({'message':"Modifications enregistrées!"});
+
+        },
+        error: function(){
+            alert('erreur');
+        }
+    });
+
+    return false;
+  };
+
+
+
+
+
+  </script>
+
+  <!--fin quill js-->
+
 
 </body>
 

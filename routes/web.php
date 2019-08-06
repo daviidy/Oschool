@@ -37,6 +37,12 @@ Route::get('/owner', 'OwnerController@owner')
 
     */
 
+//Ajax Routes
+
+Route::post('/updateSchoolStatus', 'SchoolController@updateSchoolStatus');
+Route::post('/deleteSchool', 'SchoolController@deleteSchool');
+Route::post('/updateSchool', 'SchoolController@updateSchool');
+
 
 
 //routes for school admin dashboard

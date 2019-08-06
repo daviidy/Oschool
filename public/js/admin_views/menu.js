@@ -1,20 +1,61 @@
-/*
-$('#save-school-basic-infos').on('click', function() {
+
+$('#changeStatus').on('click', function() {
 
         $.ajax({
             type: 'post',
-            url: '/updateSchool',
+            url: '/updateSchoolStatus',
             data: {
                 '_token': $('input[name=_token]').val(),
-                'id': $("#site-id").val(),
-                'name': $('#site-name').val(),
-                'heading': $('#heading').val(),
-                'description': $('#description').val(),
+                'id': $("#schoolId").val(),
+                'status': $('#status').val(),
+
             },
             success: function(data) {
-                $('.item' + data.id).replaceWith("<tr class='item" + data.id + "'><td>" + data.id + "</td><td>" + data.name + "</td><td><button class='edit-modal btn btn-info' data-id='" + data.id + "' data-name='" + data.name + "'><span class='glyphicon glyphicon-edit'></span> Edit</button> <button class='delete-modal btn btn-danger' data-id='" + data.id + "' data-name='" + data.name + "' ><span class='glyphicon glyphicon-trash'></span> Delete</button></td></tr>");
+                if (data.status == 'active') {
+
+                    $('#changeStatus').css("background-color", "#FF6621")
+                    .html("Mettre mon école hors ligne");
+
+                    $('#status').val('inactive');
+
+
+                }
+                else {
+
+                    $('#changeStatus').css("background-color", "#1EA69A")
+                    .html("Mettre mon école en ligne");
+
+                    $('#status').val('active');
+
+                }
+
+	        $.amaran({'message':"Statut de l'école mis à jour!"});
+
+            },
+            error: function(){
+                alert('erreur');
             }
         });
     });
 
-*/
+
+        $('#deleteSchool').on('click', function() {
+
+                $.ajax({
+                    type: 'post',
+                    url: '/deleteSchool',
+                    data: {
+                        '_token': $('input[name=_token]').val(),
+                        'id': $("#schoolId").val(),
+                        'status': $('#status').val(),
+
+                    },
+                    success: function() {
+                        window.location = '/home';
+
+                    },
+                    error: function(){
+                        alert('erreur');
+                    }
+                });
+            });

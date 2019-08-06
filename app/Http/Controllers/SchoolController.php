@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\School;
 use Auth;
 use App\User;
+use Image;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class SchoolController extends Controller
@@ -62,7 +64,7 @@ class SchoolController extends Controller
      */
     public function show(School $school)
     {
-        //
+        return view('schools.show', ['school' => $school]);
     }
 
 
@@ -167,7 +169,48 @@ class SchoolController extends Controller
     public function update(Request $request, School $school)
     {
         $school->update($request->all());
+
+        if($request->hasFile('logo')){
+          $image = $request->file('logo');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/images/schools/logos/' . $filename));
+          $school->logo = $filename;
+          $school->save();
+        }
+
+        if($request->hasFile('background')){
+          $image = $request->file('logo');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/images/schools/backgrounds/' . $filename));
+          $school->background = $filename;
+          $school->save();
+        }
+
+
+
+
         return redirect()->back()->with('status', 'Les modifications ont bien été enregistrées');
+    }
+
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\School  $school
+     * @return \Illuminate\Http\Response
+     */
+    public function updateSchool(Request $request)
+    {
+        //$result = json_decode($request->getContent());
+
+        $data = School::find($request->id);
+
+        $data->description = $request->description;
+
+        $data->save();
+
+        return response()->json($data);
     }
 
     /**
@@ -178,6 +221,33 @@ class SchoolController extends Controller
      */
     public function destroy(School $school)
     {
-        //
+        $formation->delete();
+        return redirect('home')->with('status', 'Ecole supprimée de la base de données' );
+    }
+
+
+    /**
+     * [editItem description]
+     * @param  Request $req [description]
+     * @return [type]       [description]
+     */
+    public function updateSchoolStatus(Request $req) {
+        $data = School::find($req->id);
+        $data->status = $req->status;
+        $data->save();
+        return response()->json($data);
+    }
+
+
+    /**
+     * [editItem description]
+     * @param  Request $req [description]
+     * @return [type]       [description]
+     */
+    public function deleteSchool(Request $req) {
+        $data = School::find($req->id);
+        $data->delete();
+        Session::flash('status', 'Ecole supprimée de la base de données');
+        return response()->json();
     }
 }

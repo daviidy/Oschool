@@ -9,7 +9,7 @@
                         <div class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                         <div class="tch-school-onboarding-header-icons"></div>
                         <div class="tch-school-onboarding-header-text">
-                            <h3><span>Bienvenue à {{$school->name}}!</span></h3><a href="/?preview=logged_out" target="_blank" class="tch-btn-header-primary">Voir l'école</a><span class="space"></span>
+                            <h3><span>Bienvenue à {{$school->name}}!</span></h3><a href="{{url('schools', $school)}}" target="_blank" class="tch-btn-header-primary">Voir l'école</a><span class="space"></span>
                             <div dropdown="" class="btn-group dropdown"><a dropdown-toggle="" type="button" class="tch-btn-header-dropdown dropdown-toggle" aria-haspopup="true" aria-expanded="false">Comment puis-je<span class="space"></span><i
                                       class="fa fa-angle-down no-margin"></i></a>
                                 <div class="dropdown-menu-arrow"></div>

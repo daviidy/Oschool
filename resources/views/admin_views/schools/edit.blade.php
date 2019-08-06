@@ -95,21 +95,75 @@
                             <!---->
                             <!---->
                         </div>
+
+
+
+
+
+                    </div>
+                    <div ng-show="showButtonsBar" class="tab-bottom">
+                        <!---->
+                        <!---->
+                        <!----><button id="save-school-basic-infos" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Enregistrer</button>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ng-include>
+
+
+    <ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-school">
+        <form id="description" method="post" enctype="multipart/form-data" action="{{url('schools', $school)}}" name="settingsSchoolForm" class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength">
+            <div ng-show="!section.if || section.if()" id="section-school" class="row tch-section-wrapper" section="section" save="true">
+                {{ csrf_field() }}
+                {{ method_field('patch') }}
+                <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
+                    <!---->
+                    <!---->
+                    <h2 ng-if="section.name" class="tch-subheading">
+                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Description de l'école</span>
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!----><br ng-if="!removeDescriptionLineBreak">
+                        <!---->
+                        <p ng-bind-html="section.description" what="section-description" class="small">Présentez votre école comme il se doit ;)</p>
+                        <!---->
+                        <!---->
+                    </h2>
+                    <!---->
+                </div>
+                <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
+                    <div ng-transclude="">
+
                         <div form="settingsSchoolForm" label="Homepage Description" for="homepage_description">
                             <!---->
                             <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group">
                                 <label-block required-label="requiredLabel">
                                     <!---->
                                     <!----><label for="homepage_description" ng-if="label" class="control-label">
-                                        <!----><span ng-bind="label">Description de la page d'acceuil</span>
+                                        <!----><span ng-bind="label">Description de la page d'accueil</span>
                                         <!----></label>
                                     <!---->
                                     <!---->
                                     <!---->
                                 </label-block>
-                                <div ng-transclude="">
-                                    <textarea id="site-description" what="description" ng-model="settings.description" name="description" placeholder="Une description courte pour encourager vos potentiels étudiants" maxlength="500"
-                                      class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></textarea></div>
+                                <input name="description" type="hidden">
+                                <input style="display: none;" id="schoolDescription" type="text" name="id" value="{{$school->id}}">
+                                <div class="eidtor-container">
+
+                                    <div id="site-description">
+
+                                        @if($school->description)
+                                        {!!$school->description!!}
+                                        @endif
+
+                                     </div>
+
+                                </div>
+
                                 <help-block>
                                     <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
 
@@ -976,7 +1030,10 @@
                                         <!---->
                                         <!---->
                                         <!---->
-                                    </label-block>
+                                    </label-block><br>
+
+                                    <img width="75" src="/images/schools/logos/{{$school->logo}}" alt="">
+
                                     <div ng-transclude="">
                                         <div data-ng-transclude="" what="upload image button" ng-hide="customization.site_logo_url" type="button" data-filepicker-btn="" data-preview-on-upload="true" data-prevent-default="true"
                                           data-max-size="20971520" data-services="CUSTOMSOURCE, COMPUTER, IMAGE_SEARCH, URL, FTP, DROPBOX, GOOGLE_DRIVE, SKYDRIVE, CONVERT, IMGUR" ng-click="setImageUploadModel('site_logo_url')"
@@ -1014,7 +1071,9 @@
 
                                         <!---->
                                         <!---->
-                                    </label-block>
+                                    </label-block><br>
+
+                                    <img width="75" src="/images/schools/backgrounds/{{$school->background}}" alt="">
                                     <div ng-transclude="">
                                         <div data-ng-transclude="" what="upload image button" ng-hide="customization.logged_out_homepage_background_image_url" type="button" data-filepicker-btn="" data-preview-on-upload="true"
                                           data-prevent-default="true" data-max-size="20971520" data-services="CUSTOMSOURCE, COMPUTER, IMAGE_SEARCH, URL, FTP, DROPBOX, GOOGLE_DRIVE, SKYDRIVE, CONVERT, IMGUR"
@@ -1069,9 +1128,9 @@
                     <!---->
                     <!----><br ng-if="!removeDescriptionLineBreak">
                     <!---->
-                    <p ng-bind-html="section.description" what="section-description" class="small">Customize your blog information.
-                        <a href="https://teachable.zendesk.com/hc/en-us/articles/223404027-Adding-a-Blog?src=admin" target="_blank">
-                            Learn more about blog settings here</a>.</p>
+                    <p ng-bind-html="section.description" what="section-description" class="small">Vous pourrez écrire des articles directement sur le blog d'Oschool.
+                        <a href="" target="_blank">
+                            En savoir plus</a>.</p>
                     <!---->
                     <!---->
                 </h2>
@@ -1088,10 +1147,10 @@
                                 <div ng-if="$ctrl.iconImage" class="image-icon-wrapper"><img ng-src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-blog.svg"
                                       src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-blog.svg"></div>
                                 <!----><i ng-class="$ctrl.icon"></i>
-                                <h4 ng-bind="$ctrl.heading">Add a Blog to Your School</h4>
+                                <h4 ng-bind="$ctrl.heading">Notre équipe vous accordera les accès pour éditer des articles sur le blog Oschool</h4>
                                 <!---->
                                 <!---->
-                                <p ng-if="$ctrl.description || $ctrl.learnMoreLink || $ctrl.addLabel"><span ng-bind-html="$ctrl.description">Once enabled, your blog will become active at oschool2.teachable.com/blog.</span><span class="space"></span>
+                                <p ng-if="$ctrl.description || $ctrl.learnMoreLink || $ctrl.addLabel"><span ng-bind-html="$ctrl.description">Une fois validé vous pourrez utiliser notre blog pour drainer plus de trafic vers votre école</span><span class="space"></span>
                                     <!---->
                                     <!---->
                                 </p>
@@ -1102,27 +1161,9 @@
                                 <!---->
                                 <!---->
                             </div>
-                            <div ng-hide="($ctrl.custom &amp;&amp; $ctrl.custom != 'false')" class="ng-hide">
-                                <!----><br ng-if="!$ctrl.$ctrl.noPadding">
-                                <!---->
-                                <!---->
-                                <!---->
-                                <div ng-if="$ctrl.iconImage" class="image-icon-wrapper"><img ng-src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-blog.svg"
-                                      src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-blog.svg"></div>
-                                <!---->
-                                <h4 ng-bind="$ctrl.heading">Add a Blog to Your School</h4>
-                                <!---->
-                                <!---->
-                                <p ng-if="$ctrl.description || $ctrl.learnMoreLink"><span ng-bind-html="$ctrl.description">Once enabled, your blog will become active at oschool2.teachable.com/blog.</span><span class="space"></span>
-                                    <!----><br></p>
-                                <!---->
-                                <!----><a what="upgrade button" ng-click="$ctrl.upgradeForFeature(title)" class="tch-btn-header-primary fastclickable">Upgrade Now</a>
-                                <!---->
-                                <!---->
-                            </div>
-                        </div>
+
                     </disabled-feature-state>
-                    <div class="text-center"><a ng-click="enableBlog()" what="enable blog link" class="tch-btn-content-primary add-bottom-margin-25 fastclickable">Enable Blog</a></div>
+                    <div class="text-center"><a ng-click="enableBlog()" what="enable blog link" class="tch-btn-content-primary add-bottom-margin-25 fastclickable">Faire une demande</a></div>
                 </div>
                 <div ng-show="showButtonsBar" class="tab-bottom ng-hide">
                     <!---->
@@ -1140,21 +1181,26 @@
     <!---->
     <ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-status">
         <form ng-submit="save()" name="settingsLaunchModeForm" api-form="savePromise" class="ng-pristine ng-valid">
+            {{ csrf_field() }}
+            {{ method_field('patch') }}
             <div ng-show="!section.if || section.if()" id="section-status" class="row tch-section-wrapper" section="section">
                 <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
                     <!---->
                     <!---->
                     <h2 ng-if="section.name" class="tch-subheading">
-                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Status</span>
+                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Statut de l'école</span>
                         <!---->
                         <!---->
                         <!---->
                         <!---->
                         <!----><br ng-if="!removeDescriptionLineBreak">
                         <!---->
-                        <p ng-bind-html="section.description" what="section-description" class="small">Taking your school offline will make it inaccessible to visitors and students until you bring
-                            it back online (which you can do at any time). Deleting your school will permanently erase all
-                            information from your courses, school, etc. Deleted schools are unrecoverable.</p>
+                        <p ng-bind-html="section.description" what="section-description" class="small">
+                            Mettre votre école hors ligne la rend inaccessible aux visiteurs et étudiants, jusqu'à ce que vous la
+                            remettiez en ligne (ce qui peut être fait à nimporte quel moment).
+                            Supprimer votre école va définitivement écraser toutes les infos la concernant et les cours associés.
+                            Les écoles supprimées sont irrécupérables.
+                        </p>
                         <!---->
                         <!---->
                     </h2>
@@ -1162,12 +1208,21 @@
                 </div>
                 <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
                     <div ng-transclude="">
+                        <input style="display: none;" id="schoolId" type="text" name="id" value="{{$school->id}}">
                         <!---->
                         <!---->
-                        <div ng-click="changeStatus(true)" confirm="Are you sure you want to take your school online?" ng-if="settings.is_launched == false" class="tch-btn-content-primary fastclickable">Take My School Online</div>
+                        @if($school->status == "inactive")
+                        <div id="changeStatus" class="tch-btn-content-primary fastclickable">Mettre mon école en ligne</div>
+                        <input style="display: none;" id="status" type="text" name="status" value="active">
+
+                        @else
+                        <div id="changeStatus" style="background-color: #FF6621;"  class="tch-btn-content-primary fastclickable">Mettre mon école hors ligne</div>
+                        <input style="display: none;" id="status" type="text" name="status" value="inactive">
+                        @endif
                         <!----><span class="space"></span>
-                        <!----><a ng-if="::permissions.can('delete_school')" what="delete school button" ng-disabled="::!permissions.can('delete_school')" ng-click="showDeleteSchoolModal(school)" class="tch-btn-content-danger fastclickable">Delete
-                            School Permanently</a>
+
+                        <!----><a id="deleteSchool" class="tch-btn-content-danger fastclickable">
+                        Supprimer l'école définitivement</a>
                         <!---->
                     </div>
                     <div ng-show="showButtonsBar" class="tab-bottom ng-hide">
@@ -1179,51 +1234,7 @@
             </div>
         </form>
     </ng-include>
-    <!---->
-    <!---->
-    <ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-ssl">
-        <form ng-submit="save()" name="settingsSSLForm" api-form="savePromise" class="ng-pristine ng-valid">
-            <div ng-show="!section.if || section.if()" id="section-ssl" class="row tch-section-wrapper ng-hide" section="section">
-                <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
-                    <!---->
-                    <!---->
-                    <h2 ng-if="section.name" class="tch-subheading">
-                        <!---->
-                        <!----><span ng-bind="::section.altName" ng-if="section.altName">SSL Security</span>
-                        <!---->
-                        <!---->
-                        <!---->
-                        <!----><br ng-if="!removeDescriptionLineBreak">
-                        <!---->
-                        <p ng-bind-html="section.description" what="section-description" class="small">Supporting SSL security (HTTPS) for your site is an important step in protecting your site
-                            and your users from attack.</p>
-                        <!---->
-                        <!---->
-                    </h2>
-                    <!---->
-                </div>
-                <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
-                    <div ng-transclude="">
-                        <!---->
-                        <!---->
-                        <div ng-if="isSSLEnabled">
-                            <div class="alert alert-success"><span what="feature enabled">SSL security (HTTPS) is enabled.</span></div>
-                            <div ng-click="forceSSL(false)" confirm="Are you sure you want to disable SSL on your school? To protect your site and your users, we strongly advise school owners to keep SSL security enabled."
-                              class="tch-btn-content-secondary fastclickable">Disable SSL Security</div>
-                        </div>
-                        <!---->
-                    </div>
-                    <div ng-show="showButtonsBar" class="tab-bottom ng-hide">
-                        <!---->
-                        <!---->
-                        <!---->
-                    </div>
-                </div>
-            </div>
-        </form>
-    </ng-include>
-    <!---->
-    <!---->
+
 
     <!---->
     <div class="tch-learn-more" text="about general settings in the Teachable Knowledge Base" label="admin.settings.general">
