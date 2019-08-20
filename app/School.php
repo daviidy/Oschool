@@ -43,11 +43,25 @@ class School extends Model
       */
      public function courses()
      {
-         return $this->belongsToMany('App\Course');
+         return $this->hasMany('App\Course');
      }
 
+     /**
+      * [user description]
+      * @return [type] [description]
+      */
      public function user()
      {
          return $this->belongsTo('App\User');
+     }
+
+     /**
+      * [authors description]
+      * relationship one to many with Author model
+      * @return [type] [description]
+      */
+     public function authors()
+     {
+         return $this->hasMany('App\Author');
      }
 }

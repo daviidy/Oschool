@@ -63,9 +63,9 @@
       </style>
       <div class="container">
         <div class="row">
-          <a class="create-course" href="/create-account?utm_source=nav">Create a course</a>
+          <a class="create-course" href="{{route('login')}}">Salle de classe</a>
           <a class="teachable-logo" href="/" title="Teachable - Create a Course"></a>
-          <a class="log-in" href="/login?src=nav">Log in</a>
+          <a class="log-in" href="/login?src=nav">Entreprises</a>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>

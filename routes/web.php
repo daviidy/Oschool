@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
@@ -20,6 +20,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('schools', 'SchoolController');
+
+Route::resource('courses', 'CourseController');
+
+Route::resource('categories', 'CategoryController');
+
+Route::resource('pricings', 'PricingController');
+
 
 /*
 
@@ -47,22 +54,53 @@ Route::post('/updateSchool', 'SchoolController@updateSchool');
 
 //routes for school admin dashboard
 
+//school admin dashboard
 Route::get('/schoolAdmin/{school}', 'SchoolController@showForAdmin');
 
+//school settings
 Route::get('/schoolAdmin/{school}/settings/general', 'SchoolController@edit');
 
+//school payments
 Route::get('/schoolAdmin/{school}/settings/payments', 'SchoolController@schoolPayments');
 
+//school students
 Route::get('/schoolAdmin/{school}/users/students', 'SchoolController@schoolStudents');
 
+//school owners
 Route::get('/schoolAdmin/{school}/users/owners', 'SchoolController@schoolOwners');
 
+//school teachers
 Route::get('/schoolAdmin/{school}/users/teachers', 'SchoolController@schoolTeachers');
 
+//school transactions from students
 Route::get('/schoolAdmin/{school}/sales/transactions', 'SchoolController@schoolTransactions');
 
+//school statements from oschool
 Route::get('/schoolAdmin/{school}/sales/statements', 'SchoolController@schoolStatements');
 
+
+//routes for course admin dashboard
+
+//course creation
+Route::get('/schoolAdmin/{school}/courses/create', 'CourseController@createAdmin');
+
+//courses admin index
+Route::get('/schoolAdmin/{school}/courses', 'CourseController@indexForAdmin');
+
+//course information
+Route::get('/schoolAdmin/{school}/courses/{course}/information', 'CourseController@information');
+
+//course pages
+Route::get('/schoolAdmin/{school}/courses/{course}/pages', 'CourseController@pages');
+
+//course curriculum
+Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum');
+
+//course pricing
+Route::get('/schoolAdmin/{school}/courses/{course}/pricing', 'CourseController@pricing');
+
+//course crtificates
+Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseController@certificates');
 /*
 
 Route::get('/schoolAdmin/{school}/courses', 'CourseController@coursesForAdmin');

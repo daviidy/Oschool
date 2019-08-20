@@ -1049,7 +1049,7 @@
                         <hr ng-if="::permissions.can('view_courses')">
                         <!---->
                         <!---->
-                        <h3 ng-if="::permissions.can('view_courses')" class="nav-section-title hide-on-expand"><a ui-sref="admin.courses" href="/admin/courses">Courses</a><a ui-sref="admin.courses.new" class="plus" href="/admin/courses/new">+</a>
+                        <h3 ng-if="::permissions.can('view_courses')" class="nav-section-title hide-on-expand"><a ui-sref="admin.courses" href="{{url('courses')}}">Courses</a><a ui-sref="admin.courses.new" class="plus" href="/schoolAdmin/{{$school->id}}/courses/create">+</a>
                         </h3>
                         <!---->
                         <!---->
@@ -1446,6 +1446,8 @@
     NProgress.start();
     NProgress.done();
     </script>
+
+    <script type="text/javascript" src="/js/admin_views/menu.js"></script>
 
 
 </body>

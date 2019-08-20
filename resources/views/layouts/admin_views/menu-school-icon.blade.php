@@ -379,7 +379,7 @@
     </script>
     <!--fin youtube loading-->
 
-    <script type="text/javascript" src="/js/admin_views/menu.js"></script>
+    <script type="text/javascript" src="/js/admin_views/menu-icon.js"></script>
 
 
     <!--quill js-->

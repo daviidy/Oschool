@@ -1,61 +1,8 @@
 
-$('#changeStatus').on('click', function() {
-
-        $.ajax({
-            type: 'post',
-            url: '/updateSchoolStatus',
-            data: {
-                '_token': $('input[name=_token]').val(),
-                'id': $("#schoolId").val(),
-                'status': $('#status').val(),
-
-            },
-            success: function(data) {
-                if (data.status == 'active') {
-
-                    $('#changeStatus').css("background-color", "#FF6621")
-                    .html("Mettre mon école hors ligne");
-
-                    $('#status').val('inactive');
+$('#addAuthor').on('click', function() {
 
 
-                }
-                else {
+                  $('#authorBlock').append("<div label='Select Author'><div class='form-group'><label-block required-label='requiredLabel'><label for='author' ng-if='label' class='control-label'><span ng-bind='label'>Ajouter nouvel auteur</span><a style='cursor: pointer;' id='cancelAddAuthor'>Annuler</a></label></label-block><div ng-transclude=''><input id='course-name' what='name' ng-model='course.name' type='text' name='name' maxlength='100' placeholder='Nom complet du prof' autofocus='true'required='' class='form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength'></div></div></div>");
+console.log('dave');
 
-                    $('#changeStatus').css("background-color", "#1EA69A")
-                    .html("Mettre mon école en ligne");
-
-                    $('#status').val('active');
-
-                }
-
-	        $.amaran({'message':"Statut de l'école mis à jour!"});
-
-            },
-            error: function(){
-                alert('erreur');
-            }
-        });
-    });
-
-
-        $('#deleteSchool').on('click', function() {
-
-                $.ajax({
-                    type: 'post',
-                    url: '/deleteSchool',
-                    data: {
-                        '_token': $('input[name=_token]').val(),
-                        'id': $("#schoolId").val(),
-                        'status': $('#status').val(),
-
-                    },
-                    success: function() {
-                        window.location = '/home';
-
-                    },
-                    error: function(){
-                        alert('erreur');
-                    }
-                });
-            });
+});
