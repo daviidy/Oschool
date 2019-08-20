@@ -49,6 +49,8 @@ Route::get('/owner', 'OwnerController@owner')
 Route::post('/updateSchoolStatus', 'SchoolController@updateSchoolStatus');
 Route::post('/deleteSchool', 'SchoolController@deleteSchool');
 Route::post('/updateSchool', 'SchoolController@updateSchool');
+Route::post('/addAuthor', 'SchoolController@addAuthor');
+
 
 
 
@@ -58,10 +60,10 @@ Route::post('/updateSchool', 'SchoolController@updateSchool');
 Route::get('/schoolAdmin/{school}', 'SchoolController@showForAdmin');
 
 //school settings
-Route::get('/schoolAdmin/{school}/settings/general', 'SchoolController@edit');
+Route::get('/schoolAdmin/{school}/settings/general', 'SchoolController@edit')->name('schoolSettings');
 
 //school payments
-Route::get('/schoolAdmin/{school}/settings/payments', 'SchoolController@schoolPayments');
+Route::get('/schoolAdmin/{school}/settings/payments', 'SchoolController@schoolPayments')->name('schoolSettings');
 
 //school students
 Route::get('/schoolAdmin/{school}/users/students', 'SchoolController@schoolStudents');
@@ -82,25 +84,25 @@ Route::get('/schoolAdmin/{school}/sales/statements', 'SchoolController@schoolSta
 //routes for course admin dashboard
 
 //course creation
-Route::get('/schoolAdmin/{school}/courses/create', 'CourseController@createAdmin');
+Route::get('/schoolAdmin/{school}/courses/create', 'CourseController@createAdmin')->name('course');
 
 //courses admin index
-Route::get('/schoolAdmin/{school}/courses', 'CourseController@indexForAdmin');
+Route::get('/schoolAdmin/{school}/courses', 'CourseController@indexForAdmin')->name('course');
 
 //course information
-Route::get('/schoolAdmin/{school}/courses/{course}/information', 'CourseController@information');
+Route::get('/schoolAdmin/{school}/courses/{course}/information', 'CourseController@information')->name('course');
 
 //course pages
-Route::get('/schoolAdmin/{school}/courses/{course}/pages', 'CourseController@pages');
+Route::get('/schoolAdmin/{school}/courses/{course}/pages', 'CourseController@pages')->name('course');
 
 //course curriculum
-Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum');
+Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum')->name('course');
 
 //course pricing
-Route::get('/schoolAdmin/{school}/courses/{course}/pricing', 'CourseController@pricing');
+Route::get('/schoolAdmin/{school}/courses/{course}/pricing', 'CourseController@pricing')->name('course');
 
 //course crtificates
-Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseController@certificates');
+Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseController@certificates')->name('course');
 /*
 
 Route::get('/schoolAdmin/{school}/courses', 'CourseController@coursesForAdmin');

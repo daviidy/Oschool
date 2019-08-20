@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\School;
 use Auth;
 use App\User;
+use App\Author;
 use Image;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
@@ -250,4 +251,21 @@ class SchoolController extends Controller
         Session::flash('status', 'Ecole supprimée de la base de données');
         return response()->json();
     }
+
+
+    /**
+     * [editItem description]
+     * @param  Request $req [description]
+     * @return [type]       [description]
+     */
+    public function addAuthor(Request $req) {
+        $data = Author::create([
+            'school_id' => $req->id,
+            'name' => $req->name,
+        ]);
+        return response()->json($data);
+    }
+
+
+
 }

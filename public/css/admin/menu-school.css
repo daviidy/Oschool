@@ -884,3 +884,52 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
 /*! CSS Used from: Embedded */
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+
+
+
+
+
+
+/*course preview box*/
+
+/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-8126fa277249c04e853f.css ; media=screen */
+@media screen{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+a{color:#30787d;text-decoration:none;}
+a:hover,a:focus{color:#09a59a;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.row{margin-right:-15px;margin-left:-15px;}
+.row:before,.row:after{display:table;content:" ";}
+.row:after{clear:both;}
+.tch-btn-content-transparent{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #939393;background:none;-webkit-box-shadow:inset 0px 0px 0px 1px rgba(255, 255, 255, .75);box-shadow:inset 0px 0px 0px 1px rgba(255, 255, 255, .75);color:rgba(255, 255, 255, .75);border:none;}
+.tch-btn-content-transparent:focus{outline:0!important;}
+.tch-btn-content-transparent:focus{outline:0!important;}
+.tch-btn-content-transparent:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
+.tch-btn-content-transparent:hover{color:white;background-color:#ededed;border-color:#7c7c7c;}
+.tch-btn-content-transparent:active{color:white;background-color:#ededed;border-color:#7c7c7c;}
+.tch-btn-content-transparent:active:hover,.tch-btn-content-transparent:active:focus{color:white;background-color:#dedede;border-color:#6d6d6d;}
+.tch-btn-content-transparent:active{background-image:none;}
+.tch-btn-content-transparent:focus{background:none;-webkit-box-shadow:inset 0px 0px 0px 1px #fff!important;box-shadow:inset 0px 0px 0px 1px #fff!important;color:#fff;}
+.tch-btn-content-transparent:active,.tch-btn-content-transparent:hover{background:none;-webkit-box-shadow:inset 0px 0px 0px 1px #fff!important;box-shadow:inset 0px 0px 0px 1px #fff!important;color:#fff;}
+.tch-course-card{display:block;width:100%;margin-bottom:8px;}
+.tch-course-card .course-name-placeholder{text-align:center;background-color:rgba(255, 255, 255, .11);color:#fff;padding-bottom:20px;}
+.tch-course-card .course-name-placeholder .row .placeholder-course-name{padding:19px 25px;background-color:transparent;color:#fff;}
+a{color:#1ea69a;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
+a:hover,a:focus{color:#167b72;text-decoration:none;}
+.admin-sidebar :-webkit-scrollbar,.admin-sidebar :-moz-scrollbar{display:none;}
+.admin-sidebar .placeholder-course-name{background:rgba(255, 255, 255, .39);max-height:105px;line-height:21px;background-size:100%;color:#2b3636;text-align:center;vertical-align:middle;font-size:15px;font-weight:700;padding:19px 25px;position:relative;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+/*! CSS Used from: Embedded */
+.FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+/*! CSS Used from: Embedded */
+.FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}

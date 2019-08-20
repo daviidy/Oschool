@@ -263,7 +263,7 @@
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_settings') &amp;&amp; !permissions.can('view_settings_notifications')" text="Settings" icon="icon icon-cog2" sref="admin.settings" class="active">
-                            <!----><a what="link" ui-sref="admin.settings" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/settings">
+                            <!----><a what="link" ui-sref="admin.settings" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/courses">
                                 <!----><i ng-if="::icon" ng-class="::icon" tooltip="Settings" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-book2"></i>
                                 <!---->
                                 <!---->
@@ -283,8 +283,14 @@
                     </ul>
                     @include('includes.admin_views.submenus.site-nav')
                     @include('includes.admin_views.submenus.users-nav')
+                    @if(\Route::current()->getName() == 'schoolSettings')
                     @include('includes.admin_views.submenus.settings-nav')
+                    @endif
                     @include('includes.admin_views.submenus.emails-nav')
+                    @if(\Route::current()->getName() == 'course')
+                      @include('includes.admin_views.submenus.course-nav')
+                    @endif
+
 
                 </div>
                 <div tooltip="David Yao" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="visible-xs" class="misc-buttons">

@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="/nProgress/nprogress.css">
 
+    <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
+
 
     <style type="text/css">
         .Button-module_button__3Rp1B {
@@ -876,6 +878,11 @@
 
 <body ng-class="bodyCssClasses" flow-prevent-drop="" class="state-admin state-admin-onboarding" style="" cz-shortcut-listen="true">
 
+    @if (session('status'))
+    <div style="z-index: 10000;" class="w3-panel w3-red w3-display-container">
+        {{ session('status') }}
+    </div>
+    @endif
     <!--[if lte IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
@@ -1439,13 +1446,15 @@
         </div>
     </div>
 
-
+    <script type="text/javascript" src="/notifs/amaran/jquery.amaran.js"></script>
+<!--youtube loading-->
     <script type="text/javascript" src="/nProgress/nprogress.js"></script>
     <script type="text/javascript">
     NProgress.configure({ showSpinner: false });
     NProgress.start();
     NProgress.done();
     </script>
+    <!--fin youtube loading-->
 
     <script type="text/javascript" src="/js/admin_views/menu.js"></script>
 

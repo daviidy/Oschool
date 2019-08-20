@@ -1,8 +1,46 @@
+$(document).ready(function(){
+
+
+
 
 $('#addAuthor').on('click', function() {
 
 
-                  $('#authorBlock').append("<div label='Select Author'><div class='form-group'><label-block required-label='requiredLabel'><label for='author' ng-if='label' class='control-label'><span ng-bind='label'>Ajouter nouvel auteur</span><a style='cursor: pointer;' id='cancelAddAuthor'>Annuler</a></label></label-block><div ng-transclude=''><input id='course-name' what='name' ng-model='course.name' type='text' name='name' maxlength='100' placeholder='Nom complet du prof' autofocus='true'required='' class='form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength'></div></div></div>");
-console.log('dave');
+                  $('#inputCreateAuthor').show();
+                  $('#createAuthor').show();
+                  $("#selectAuthor").hide();
+});
+
+
+$('#createAuthor').on('click', function() {
+
+
+    $.ajax({
+        type: 'post',
+        url: '/addAuthor',
+        data: {
+            '_token': $('input[name=_token]').val(),
+            'id': $("#schoolId").val(),
+            'name': $('#author-name').val(),
+
+        },
+        success: function(data) {
+            $("#selectAuthor").show();
+            $('#listAuthor').append("<option label='davidy' value='"+ data.id +"'>"+ data.name +"</option>")
+            $('#inputCreateAuthor').hide();
+            $("#createAuthor").hide();
+      $.amaran({'message':"Auteur bien ajouté!"});
+
+        },
+        error: function(){
+            alert('erreur');
+        }
+    });
+});
+
+
+
+
+
 
 });

@@ -48,7 +48,18 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $course = Course::where('name', $request->name)->first();
+        if ($course === null) {
+            $course = Course::create($request->all());
+            $category_id = Category::find($request->category_id);
+            $course->categories()->attach($category_id);
+            return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$course->id.'/curriculum');
+        }
+        else {
+            return redirect()->back()->with('status', 'Le nom existe déjà');
+        }
+
+
     }
 
     /**

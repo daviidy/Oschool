@@ -20,10 +20,8 @@
         </div>
     </div>
     <!---->
-    <form ng-submit="save()" name="courseNewForm" api-form="savePromise" what="course form" class="ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength">
-        <div ng-show="!section.if || section.if()" id="section-information" class="row tch-section-wrapper"
-          section="{ name: 'information', description: 'Add basic information about the course and author name.<br><br>To add author headline, image, and bio, please visit site &amp;gt; bios.' }" save="true" form="courseNewForm"
-          save-label="Create Course">
+    <form method="post" enctype="multipart/form-data" action="{{route('courses.store')}}" name="courseNewForm">
+        <div id="section-information" class="row tch-section-wrapper">
             <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
                 <!---->
                 <!---->
@@ -35,12 +33,13 @@
                     <!---->
                     <!----><br ng-if="!removeDescriptionLineBreak">
                     <!---->
-                    <p ng-bind-html="section.description" what="section-description" class="small">Add basic information about the course and author name.<br><br>To add author headline, image, and bio, please visit site &gt; bios.</p>
+                    <p ng-bind-html="section.description" what="section-description" class="small">Ajoutez des informations de base sur le cours et le nom de l'auteur.<br><br>Pour ajouter un titre d'auteur, une image et une biographie, visitez le site bios</p>
                     <!---->
                     <!---->
                 </h2>
                 <!---->
             </div>
+            @csrf
             <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
                 <div ng-transclude="" id="authorBlock">
                     <div form="courseNewForm" label="Course Title" for="name">
@@ -92,7 +91,7 @@
                                 <!---->
                                 <!---->
                             </label-block>
-                            <div ng-transclude=""><input id="course-heading" what="heading" ng-model="course.heading" type="text" name="heading" maxlength="160" value="" placeholder="e.g. 'Tout ce que vous avez besoin de savir sur le montage vidéo'"
+                            <div ng-transclude=""><input id="course-heading" type="text" name="description" maxlength="160" value="" placeholder="e.g. 'Tout ce que vous avez besoin de savir sur le montage vidéo'"
                                   class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"><label ng-show="state.errors.heading" ng-bind="state.errors.heading" for="#course-heading" class="control-label ng-hide"></label>
                             </div>
                             <help-block>
@@ -116,6 +115,10 @@
                         </div>
                         <!---->
                         <!---->
+                    </div>
+                    <div style="display: none;" ng-transclude="">
+                        <input name="school_id" id="schoolId" type="text" maxlength="160" value="{{$school->id}}" placeholder="e.g. 'Tout ce que vous avez besoin de savir sur le montage vidéo'"
+                          class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
                     </div>
                     <div label="Select Category" tooltip-text="Displays on student curriculum side as &quot;Instructor&quot;" for="author">
                         <!---->
@@ -160,7 +163,7 @@
                         </div>
                         <!---->
                     </div>
-                    <div label="Select Author" tooltip-text="Displays on student curriculum side as &quot;Instructor&quot;" for="author">
+                    <div id="selectAuthor" label="Select Author" tooltip-text="Displays on student curriculum side as &quot;Instructor&quot;" for="author">
                         <!---->
                         <!---->
                         <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
@@ -174,14 +177,29 @@
                             </label-block>
                             <div ng-transclude="">
                                 <a style="cursor: pointer;" id="addAuthor">Ajouter nouvel auteur</a>
-                                <select name="teacher_id" what="author" ng-model="course.author_bio_id" ng-options="author.id as author.name for author in authors | orderBy:'name'" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
-                                    <option label="davidy" value="">davidy</option>
+                                @if($school->authors)
+                                <select id="listAuthor" name="author_id" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
+                                    @foreach($school->authors as $author)
+                                    <option label="davidy" value="{{$author->id}}">{{$author->name}}</option>
+                                    @endforeach
                                 </select>
+                                @endif
                             </div>
 
                         </div>
                         <!---->
                     </div>
+
+                    <div style="display: none;" id='inputCreateAuthor'>
+                        <div class='form-group'>
+                            <label-block required-label='requiredLabel'><label for='author' ng-if='label' class='control-label'><span ng-bind='label'>Ajouter nouvel auteur</span><a style='cursor: pointer;' id='cancelAddAuthor'>Annuler</a></label></label-block>
+                            <div ng-transclude=''>
+                                <input id='author-name' type='text' placeholder='Nom complet du prof'
+                                  class='form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength'></div>
+                        </div>
+                    </div>
+
+                    <a style='display: none; cursor: pointer;' id='createAuthor'>Ajouter</a>
 
 
                     <!---->
