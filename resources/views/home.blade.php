@@ -58,17 +58,17 @@
                 <div class="row">
                     <div class="col-xs-12 vertically-align-contents-except-xs">
                         <div class="hero-text hero-text-left">
-                            <h1>Create and sell beautiful online courses</h1>
-                            <h2>Your skills and experiences are unique and valuable. Easily build a beautiful course website, share your knowledge, and be rewarded for it.</h2>
+                            <h1>On ne vas pas à l'école, on y est dèja.</h1>
+                            <h2>Faites vous accompagner par nos mentors pendant votre apprentissage et réalisez des projets professionnalisants.</h2>
                             <div class="input-container left">
                                 <div class="hidden redirect">/create-account</div>
                                 <div class="hidden iterable-event"></div>
                                 <div class="hidden iterable-campaign"></div>
-                                <input id="email-input" type="email" autofocus="autofocus" placeholder="Email address">
-                                <button id="email-submit-button" class="orange-button">Get started</button>
+                                <input id="email-input" type="email" autofocus="autofocus" placeholder="Que voulez-vous apprendre">
+                                <button id="email-submit-button" class="orange-button">Commencez</button>
                                 <div class="hidden marketing-email-opt-in-container">
                                     <input class="marketing-email-opt-in-input" type="checkbox" name="opted-into-marketing-email">
-                                    <label for="opted-into-marketing-email">I agree to receive product and marketing updates from Teachable</label>
+                                    <label for="opted-into-marketing-email">J'accepte de recevoir des mises à jour de produit et de marketing de oschool</label>
                                 </div>
                                 <div>
                                 </div>
@@ -101,10 +101,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="default-header">Everything is Teachable</h1>
+                    <h1 class="default-header">Votre reussite n'est pas loin</h1>
                     <h1>
                     </h1>
-                    <h2 class="default-paragraph">Join the 68,000+ instructors who use Teachable to share their knowledge. Easily create an online course with our powerful yet simple all-in-one platform.</h2>
+                    <h2 class="default-paragraph">Rejoignez les +2000 étudiants qui utilisent oschool pour apprendre les compétences les plus rechercher sur le marché de l'emploi.</h2>
                 </div>
             </div>
             <div class="row">
@@ -112,26 +112,26 @@
                 <ul class="col-xs-12 hidden-md hidden-lg">
                     <li class="col-sm-6 col-xs-12">
                         <div class="inner-li">
-                            <h3>18m+</h3>
-                            <h4 class="default-paragraph">Students learning</h4>
+                            <h3>+ 2k</h3>
+                            <h4 class="default-paragraph">Apprenants</h4>
                         </div>
                     </li>
                     <li class="flex-item-number col-sm-6 col-xs-12">
                         <div class="inner-li">
-                            <h3>186k+</h3>
-                            <h4 class="default-paragraph">Active courses</h4>
+                            <h3>+ 15</h3>
+                            <h4 class="default-paragraph">Parcours disponible</h4>
                         </div>
                     </li>
                     <li class="flex-item-number col-sm-6 col-xs-12">
                         <div class="inner-li">
-                            <h3>68k+</h3>
-                            <h4 class="default-paragraph">Instructors online</h4>
+                            <h3>+ 10</h3>
+                            <h4 class="default-paragraph">Ecoles partenaires</h4>
                         </div>
                     </li>
                     <li class="flex-item-number col-sm-6 col-xs-12">
                         <div class="inner-li">
-                            <h3>$338m+</h3>
-                            <h4 class="default-paragraph">Earned by instructors</h4>
+                            <h3>+ 10k</h3>
+                            <h4 class="default-paragraph">Personnes dans la communauté Oschool</h4>
                         </div>
                     </li>
                 </ul>
@@ -139,8 +139,8 @@
                 <ul class="flex-numbers-container hidden-xs hidden-sm">
                     <li class="flex-item-number">
                         <div class="inner-li">
-                            <h3>18m+</h3>
-                            <h4 class="default-paragraph">Students learning</h4>
+                            <h3>+ 2k</h3>
+                            <h4 class="default-paragraph">Apprenants</h4>
                         </div>
                     </li>
                     <div class="flex-item-line-segment-container">
@@ -148,8 +148,8 @@
                     </div>
                     <li class="flex-item-number">
                         <div class="inner-li">
-                            <h3>186k+</h3>
-                            <h4 class="default-paragraph">Active courses</h4>
+                            <h3>+ 15</h3>
+                            <h4 class="default-paragraph">Parcours disponible</h4>
                         </div>
                     </li>
                     <div class="flex-item-line-segment-container">
@@ -157,8 +157,8 @@
                     </div>
                     <li class="flex-item-number">
                         <div class="inner-li">
-                            <h3>68k+</h3>
-                            <h4 class="default-paragraph">Instructors online</h4>
+                            <h3>+ 10</h3>
+                            <h4 class="default-paragraph">Ecoles partenaires</h4>
                         </div>
                     </li>
                     <div class="flex-item-line-segment-container">
@@ -166,8 +166,8 @@
                     </div>
                     <li class="flex-item-number">
                         <div class="inner-li">
-                            <h3>$338m+</h3>
-                            <h4 class="default-paragraph">Earned by instructors</h4>
+                            <h3>+ 10k</h3>
+                            <h4 class="default-paragraph">Personnes dans la communauté Oschool</h4>
                         </div>
                     </li>
                 </ul>
@@ -228,9 +228,9 @@
                 <div class="col-md-1 hidden-sm hidden-xs"></div>
                 <div class="col-xs-12 col-md-5 text-column vertically-align-contents match-height" style="height: 688px;">
                     <div class="inner-text">
-                        <h1 class="default-header ">Provide a world-class learning experience</h1>
-                        <p class="default-paragraph">Let Teachable do the heavy lifting so you can focus on what matters - creating courses with our user-friendly interface.</p>
-                        <div class="button-container">
+                        <h1 class="default-header ">Suivez des formations 100% en ligne auprès des meilleurs universités et entreprises d'Afrique</h1>
+                        <p class="default-paragraph">Oschool vous offre la possibilité de poursuivre des diplômes et certificats 100% en ligne, auprès des meilleures universités d’Afrique.</p>
+                        <!--div class="button-container">
                             <svg class="play-button" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 141 141" style="enable-background:new 0 0 141 141;"
                               xml:space="preserve">
                                 <style type="text/css">
@@ -246,9 +246,9 @@
                                 <path class="st1" d="M62.5,58.4v24.2l19-12.1L62.5,58.4z"></path>
                             </svg>
                             <a class="default-paragraph orange hidden-xs hidden-sm">Watch our short demo video</a>
-                        </div>
-                        <p class="default-paragraph">Allow your students to easily sign up to your school, view curriculums and previews, and purchase your courses.</p>
-                        <p class="default-paragraph orange hidden-md hidden-lg hidden-xl">Watch our short demo video</p>
+                        </div-->
+                        <p class="default-paragraph">Profitez de l’expertise de Oschool dans le domaine et de son offre de formation à distance complète et variée pour décrocher un diplôme universitaire</p>
+                        <p class="default-paragraph orange hidden-md hidden-lg hidden-xl">et réaliser vos plus grandes ambitions professionnelles.</p>
                     </div>
                 </div>
             </div>
@@ -441,17 +441,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1 class="default-green-header ">Effortless setup</h1>
+                        <h1 class="default-green-header ">Cours interactifs</h1>
                         <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p>With just a few clicks, you’ll get a fully functioning school with learning management, payment gateways, and sales &amp; marketing tools.</p>
+                            <p>les cours Oschool sont des cours où les participantes et participants peuvent intervenir immédiatement. Dans ces cours, la formatrice ou le formateur est directement présent avec les participantes et participants.</p>
                         </div>
-                        <h1 class="default-green-header ">Exceptional learning experience</h1>
+                        <h1 class="default-green-header ">Aide et assistance </h1>
                         <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p>Your content is your greatest asset. Take it to the next level with Teachable’s top-notch virtual classroom experience.</p>
+                            <p>Oschool associe un mentor dans le domaine de votre formation pour vous aidez à mieux la suivre .</p>
                         </div>
-                        <h1 class="default-green-header ">Simple yet powerful website customization</h1>
+                        <h1 class="default-green-header ">Certificats et diplômes</h1>
                         <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p>Get a professional website out-of-the-box with minimal configuration necessary. Plus, enjoy full control to personalize any aspect of it.</p>
+                            <p>Suivre tes cours sur oschool à votre rythme, tout en obtenant un diplôme reconnu par l'Etat et les entreprises partenaires, ou pour améliorer votre performance.</p>
                         </div>
                     </div>
                 </div>
@@ -462,17 +462,17 @@
             <div class="row">
                 <div class="col-md-7 left-column match-height" style="height: 724px;">
                     <div class="text">
-                        <h1 class="default-green-header">Effortless setup</h1>
+                        <h1 class="default-green-header">Cours interactifs</h1>
                         <div class="default-paragraph-container markdown-area">
-                            <p>With just a few clicks, you’ll get a fully functioning school with learning management, payment gateways, and sales &amp; marketing tools.</p>
+                            <p>les cours Oschool sont des cours où les participantes et participants peuvent intervenir immédiatement. Dans ces cours, la formatrice ou le formateur est directement présent avec les participantes et participants.</p>
                         </div>
-                        <h1 class="default-green-header">Exceptional learning experience</h1>
+                        <h1 class="default-green-header">Aide et assistance </h1>
                         <div class="default-paragraph-container markdown-area">
-                            <p>Your content is your greatest asset. Take it to the next level with Teachable’s top-notch virtual classroom experience.</p>
+                            <p>Oschool associe un mentor dans le domaine de votre formation pour vous aidez à mieux la suivre .</p>
                         </div>
-                        <h1 class="default-green-header">Simple yet powerful website customization</h1>
+                        <h1 class="default-green-header">Certificats et diplômes</h1>
                         <div class="default-paragraph-container markdown-area">
-                            <p>Get a professional website out-of-the-box with minimal configuration necessary. Plus, enjoy full control to personalize any aspect of it.</p>
+                            <p>Suivre tes cours sur oschool à votre rythme, tout en obtenant un diplôme reconnu par l'Etat et les entreprises partenaires, ou pour améliorer votre performance.</p>
                         </div>
                     </div>
                 </div>
@@ -511,83 +511,83 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="default-header">Share your knowledge in five simple steps</h1>
+                    <h1 class="default-header">Pourquoi choisir Oschool?</h1>
                     <ul class="steps-nav">
                         <div class="line"></div>
                         <li class="steps active" data-step="1">
                             <a href="#step1" data-scroll="false">
                                 <h2>1</h2>
-                                <p>Create a course for free</p>
+                                <p>Projets de la vie réelle conçus par des experts de l'industrie</p>
                             </a>
                         </li>
                         <li class="steps" data-step="2">
                             <a href="#step2" data-scroll="false">
                                 <h2>2</h2>
-                                <p>Upload your content</p>
+                                <p>Mentorat</p>
                             </a>
                         </li>
                         <li class="steps" data-step="3">
                             <a href="#step3" data-scroll="false">
                                 <h2>3</h2>
-                                <p>Make your school beautiful</p>
+                                <p>Programme d'apprentissage flexible</p>
                             </a>
                         </li>
                         <li class="steps" data-step="4">
                             <a href="#step4" data-scroll="false">
                                 <h2>4</h2>
-                                <p>Engage your students</p>
+                                <p>Accompagnement à l'emploi</p>
                             </a>
                         </li>
-                        <li class="steps" data-step="5">
+                        <!--li class="steps" data-step="5">
                             <a href="#step5" data-scroll="false">
                                 <h2>5</h2>
                                 <p>Share knowledge and be rewarded</p>
                             </a>
-                        </li>
+                        </li-->
                     </ul>
                 </div>
             </div>
-            <div class="row second-row active" data-step="1">
+            <div class="row second-row active" data-step="1" id="step1">
                 <div class="col-md-7 image-column">
                     <img src="https://teachable.com/assets/five-steps/step1-3fd2c54b7e72864447f8592b46ffed7927760eeb11ca09a77b9b3a7426a76b29.svg">
                 </div>
                 <div class="col-md-5">
-                    <h1 class="default-header">Create a course for free in minutes with Teachable</h1>
-                    <p class="default-paragraph">Get started with just your email and the name of your school. It’s as simple as that -- no payments or credit card information required.</p>
-                    <a class="next-step green-button">Next step&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    <h1 class="default-header">Projets de la vie réelle conçus par des experts de l'industrie</h1>
+                    <p class="default-paragraph">Avec des projets du monde réel construits en partenariat avec des experts du secteur, vous serez en mesure de constituer un portefeuille prêt à l'emploi, et directement utilisable par les entreprises.</p>
+                    <!--a class="next-step green-button">Suivant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a-->
                 </div>
             </div>
-            <div class="row second-row" data-step="2">
+            <div class="row second-row" data-step="2" id="step2">
                 <div class="col-md-7 image-column">
                     <img src="https://teachable.com/assets/five-steps/step2-ca89a5b5172f4db76cdc855c5f9f8f0915f0ec6f08e26fc509a027f4439c4022.svg">
                 </div>
                 <div class="col-md-5">
-                    <h1 class="default-header">Access everything you need to build rich, interactive lectures</h1>
-                    <p class="default-paragraph">Seamlessly upload videos, audio, presentations, images, and text. Effortlessly create quizzes and start discussion forums.</p>
-                    <a class="next-step green-button">Next step&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    <h1 class="default-header">Mentorat</h1>
+                    <p class="default-paragraph">Obtenez un mentor compétent qui oriente votre apprentissage et qui se concentre sur les réponses à vos questions, vous motive et vous garde sur la bonne voie.</p>
+                    <!--a class="next-step green-button">Suivant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a-->
                 </div>
             </div>
-            <div class="row second-row" data-step="3">
+            <div class="row second-row" data-step="3" id="step3">
                 <div class="col-md-7 image-column">
                     <img src="https://teachable.com/assets/five-steps/step3-8f437aa13e47280d12ebc583e8f93dc75924ec2c796d7972c02e2f87bc3737ff.svg">
                 </div>
                 <div class="col-md-5">
-                    <h1 class="default-header">Showcase a stunning school with your own branding</h1>
-                    <p class="default-paragraph">Tailor the look and feel of your school to make it your own -- no coding skills required. Leverage our beautiful design to present a captivating course website.</p>
-                    <a class="next-step green-button">Next step&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    <h1 class="default-header">Programme d'apprentissage flexible</h1>
+                    <p class="default-paragraph">Obtenez un plan d'apprentissage personnalisé sur mesure pour votre vie bien remplie. Avec des paiements mensuels faciles, vous pouvez apprendre à votre rythme et atteindre vos objectifs personnels.</p>
+                    <!--a class="next-step green-button">Suivant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a-->
                 </div>
             </div>
-            <div class="row second-row" data-step="4">
+            <div class="row second-row" data-step="4" id="step4">
                 <div class="col-md-7 image-column">
                     <img src="https://teachable.com/assets/five-steps/step4-7c0f831a75108d29133c05c3c702da22ba47e389e582fa333d64101d7aac8ce6.svg">
                 </div>
                 <div class="col-md-5">
-                    <h1 class="default-header">Build a vibrant community around your school</h1>
-                    <p class="default-paragraph">Impress your students with a world-class online course experience. Nurture your community using our ready-to-go comment and email system.</p>
-                    <a class="next-step green-button">Next step&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    <h1 class="default-header">Accompagnement à l'emploi</h1>
+                    <p class="default-paragraph">Vous aurez accès à des sessions de coaching en carrière, à des conseils de préparation aux entretiens, à des résumés de CV et à des critiques de profils professionnels en ligne pour vous aider à progresser dans votre carrière.</p>
+                    <a class="next-step green-button">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
                 </div>
             </div>
-            <div class="row second-row" data-step="5">
+            <!--div class="row second-row" data-step="5">
                 <div class="col-md-7 image-column">
                     <img src="https://teachable.com/assets/five-steps/step5-675f78f2901de7b19928570ae8cff205a4b34dc3c38e72adb8aad9b5a8bef953.svg">
                 </div>
@@ -596,10 +596,22 @@
                     <p class="default-paragraph">Launch your course and join thousands of online instructors already making millions on Teachable. Accept payments and enrollments instantly.</p>
                     <a class="next-step green-button">Get started&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
                 </div>
-            </div>
+            </div-->
         </div>
     </section>
+    <script type="text/javascript">
+    $('.steps-nav a').on('click', function (event) {
+        event.preventDefault();
 
+        $('.active').removeClass('active');
+        $(this).parent().addClass('active');
+        $('.second-row').hide();
+        $($(this).attr('href')).show();
+    });
+
+    $('.steps-nav a:first .next-step').trigger('click'); // Default
+
+    </script>
     <section class="showcase _7">
         <style>
             ._7 {
@@ -620,8 +632,8 @@
         </style>
         <div class="container-fluid">
             <div class="row">
-                <h1 class="default-header">The most gorgeous online schools are built on Teachable</h1>
-                <p class="default-paragraph subheader">Take your content to the next level by packaging it in a beautiful, professional, and fully personalized online school</p>
+                <h1 class="default-header">Les meilleurs écoles sont sur Oschool</h1>
+                <p class="default-paragraph subheader">Apprenez les compétences qu'il vous faut pour réussir votre carrière</p>
             </div>
             <div class="slider-parent">
                 <div class="slider homepage-slider slick-initialized slick-slider"><button type="button" class="slick-prev slick-arrow" style="display: block;">‹</button>
@@ -739,28 +751,29 @@
         <div class="container container-beneath-slider">
             <div class="row">
                 <div class="col-xs-12 col-md-4 column">
-                    <h1 class="default-green-header">User-friendly website builder</h1>
+                    <h1 class="default-green-header">Une communauté engagée</h1>
                     <p class="default-paragraph">Customize your online school with an intuitive user interface. Design your homepage, lectures, and sales pages to fit your specific needs.</p>
                 </div>
                 <div class="col-xs-12 col-md-4 column">
-                    <h1 class="default-green-header">Fully optimized for web and mobile</h1>
+                    <h1 class="default-green-header">Une équipe prête pour vous.</h1>
                     <p class="default-paragraph">Provide your students a consistent and captivating learning experience across desktops, tablets, and smartphones. Present a website that looks great on any device.</p>
                 </div>
                 <div class="col-xs-12 col-md-4 column">
-                    <h1 class="default-green-header">Advanced developer customization</h1>
+                    <h1 class="default-green-header">Une présence dans la semaine</h1>
                     <p class="default-paragraph">With our Power Editor, you or your team can dig into the code and modify any aspect of your online school. Your ambition is the only limit to what you can accomplish.</p>
                 </div>
             </div>
             <div class="row last-row">
                 <div class="col-xs-12">
-                    <a href="/features" class="dark-green-button">More features</a>
-                    <p class="default-paragraph">Market leaders use Teachable to enrich their brand &amp; business.</p>
+                    <a href="/features" class="dark-green-button">Tous nos écoles</a>
+                    <p class="default-paragraph">En collaboration avec les leaders de l'industrie</p>
                     <div class="clearfix company-logos">
-                        <img src="https://teachable.com/assets/showcase/logo1-492edcd6564167cc91a0162d028da0669ae87f2959ccf683b78b4a176e9338c4.png">
-                        <img src="https://teachable.com/assets/showcase/logo2-d60d37fa3443fe00a9e47bc2c42a43799a0faf2f1f1d81b9f9441bcb77d17e60.png">
-                        <img src="https://teachable.com/assets/showcase/logo3-459469bb472753db1c99486b03df57852e15959cc830efe60d984db56f171f9c.png">
-                        <img src="https://teachable.com/assets/showcase/logo-pearson-42979f87ef26b43c43d1696ea250245731ebc4fecf738c3b0442bdec64a2475f.svg">
-                        <img src="https://teachable.com/assets/showcase/logo5-522181dfddb7bfe3ab06b9b76d635dbb46fd77748a9b14a850a1cc6b0290bc60.png">
+                        <img src="/images/divers/cinetpay.png">
+                        <img src="/images/divers/Epistrophe.jpg">
+                        <img src="/images/divers/bora.png">
+                        <img src="/images/divers/final.png">
+                        <img src="/images/divers/LogoM-1.png">
+                        <img src="/images/divers/Logo-1.png">
                     </div>
 
                 </div>
@@ -789,8 +802,8 @@
         <div class="container">
             <div class="row header-row">
                 <div class="col-xs-12">
-                    <h1 class="default-header">Join creators who have made over $300m in sales</h1>
-                    <p class="default-paragraph">Their secret? Focusing 100% of their effort on creating and promoting their amazing courses, and letting Teachable take care of the rest.</p>
+                    <h1 class="default-header">Ils ont reussir avec Oschool</h1>
+                    <p class="default-paragraph"></p>
                 </div>
             </div>
             <div class="row cards-row">
@@ -935,9 +948,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="small-uppercase-text">WHAT ARE YOU WAITING FOR?</h1>
-                    <h2 class="default-header" style="max-width: 750px">Join thousands of creators making a difference every day using Teachable</h2>
-                    <a href="/create-account?utm_source=home-testimonial" class="orange-button">Get started for free</a>
+                    <h1 class="small-uppercase-text">ET SI VOUS DEVENEZ UN MENTOR OSCHOOL?</h1>
+                    <h2 class="default-header" style="max-width: 750px">Faite la difference en devenant mentor Oschool</h2>
+                    <a href="/create-account?utm_source=home-testimonial" class="orange-button">Postuler pour devenir mentor.</a>
                 </div>
             </div>
         </div>
@@ -966,10 +979,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-5 pull-right green-box">
-                        <h2>Teachable Quickstart Webinar</h2>
+                        <h2>Rejoignez le show oschool sur facebook</h2>
                         <div class="description">
-                            <p>Learn how to create your own online school and set up your first course using Teachable (without any technical headaches)</p>
-                            <a href="https://teachable.com/webinars/quickstart1/register?src=homepage" target="_blank" rel="noopener noreferrer">Register for the webinar</a>
+                            <p>Chaque vendredi à 19h, oschool organise un show sur facebook sur des questions de l'entreprenariat, du Elearning ... Vous êtes invités!  </p>
+                            <a href="https://teachable.com/webinars/quickstart1/register?src=homepage" target="_blank" rel="noopener noreferrer">Clique et Rejoigne nous!</a>
                         </div>
                     </div>
                 </div>
@@ -996,8 +1009,8 @@
             }
         </style>
         <div class="container">
-            <h1 class="default-header">Your success is our success</h1>
-            <p class="default-paragraph">Our diverse team of professionals shares a passion for online education. We tirelessly work to improve our product, content, and community to help you achieve your goals.</p>
+            <h1 class="default-header">Votre succès est notre succès</h1>
+            <p class="default-paragraph"></p>
         </div>
         <div class="container-fluid">
             <div class="row pictures-grid">
@@ -1094,9 +1107,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="small-uppercase-text">CREATE YOUR FIRST COURSE</h1>
-                    <h2 class="default-header" style="max-width: 750px">Start now and turn your knowledge into a profitable online course</h2>
-                    <a href="/create-account?utm_source=home-bottom" class="orange-button">Get started</a>
+                    <h1 class="small-uppercase-text">CHOISSER OSCHOOL POUR VOTRE FORMATION</h1>
+                    <h2 class="default-header" style="max-width: 750px">Commencer dèh maintenant et transformer votre competence en une carrière profitable.</h2>
+                    <a href="/create-account?utm_source=home-bottom" class="orange-button">Commencer maintenant</a>
                 </div>
             </div>
         </div>

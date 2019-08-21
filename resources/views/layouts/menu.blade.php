@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>@yield('title | Oschool')</title>
     <link rel="stylesheet" href="/css/school_homepage.css">
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   </head>
 
   <body class="body-public  " cz-shortcut-listen="true">
@@ -73,13 +74,13 @@
           </button>
           <div class="navbar-collapse collapse">
             <ul>
-              <li class="dropdown-only"><a href="/create-account?utm_source=nav">Create a course</a></li>
-              <li class="dropdown-only"><a href="/login">Log In</a></li>
-              <li><a href="/features">Features</a></li>
-              <li><a href="/pricing">Pricing</a></li>
-              <li><a href="/examples">Examples</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/blog/resources">Resources</a></li>
+              <li class="dropdown-only"><a href="{{route('login')}}">Salle de classe</a></li>
+              <li class="dropdown-only"><a href="/login?src=nav">Entreprises</a></li>
+              <li><a href="/features">Nos écoles</a></li>
+              <li><a href="/pricing">Nos offres de formations</a></li>
+              <li><a href="/examples">Emplois</a></li>
+              <li><a href="/blog">Evernements</a></li>
+              <li><a href="/blog/resources">Blog</a></li>
             </ul>
           </div>
         </div>
