@@ -5,7 +5,7 @@
 
 <div class="main my-teachable-dashboard">
 
-    @if(Auth::user()->isAdmin() || Auth::user()->isOwner)
+    @if(Auth::user()->isAdmin() || Auth::user()->isOwner())
     @foreach(Auth::user()->createSchools as $school)
     @if($loop->first)
     <h1>Les écoles que je possède</h1>
