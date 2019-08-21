@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddFieldToSchoolsTable extends Migration
+class DropFieldToSchoolsTable2 extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddFieldToSchoolsTable extends Migration
     public function up()
     {
         Schema::table('schools', function (Blueprint $table) {
-            $table->longText('description');
+            $table->dropColumn('description');
         });
     }
 
