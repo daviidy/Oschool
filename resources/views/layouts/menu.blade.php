@@ -86,7 +86,13 @@
         </div>
       </div>
     </section>
-
+    <script>
+    $('.navbar-toggle').click(function(e){
+  e.preventDefault();
+  $('.navbar-collapse').slideToggle();
+  $(this).toggleClass('active');
+});
+    </script>
     @yield('content')
 
     <footer>
