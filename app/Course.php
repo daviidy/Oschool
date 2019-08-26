@@ -18,7 +18,8 @@ class Course extends Model
                            'user_id',
                            'school_id',
                            'author_id',
-                           'image'
+                           'logo',
+                           'category_id'
                          ];
 
 
@@ -27,7 +28,7 @@ class Course extends Model
       * relationship many to many with User model
       * @return [array] [description]
       */
-      public function teacher()
+      public function author()
       {
           return $this->belongsTo('App\Author');
       }
@@ -38,9 +39,9 @@ class Course extends Model
        * relationship many to many with Category model
        * @return [array] [description]
        */
-       public function categories()
+       public function category()
        {
-           return $this->belongsToMany('App\Category');
+           return $this->belongsTo('App\Category');
        }
 
 

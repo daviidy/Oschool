@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Author extends Model
 {
 
-    protected $fillable = ['name', 'headline', 'bio', 'image', 'school_id'];
+    protected $fillable = ['full_name', 'headline', 'bio', 'image', 'school_id'];
 
     /**
      * [school description]

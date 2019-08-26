@@ -58,7 +58,7 @@
                                     <!---->
                                 </label-block>
                                 <div ng-transclude="">
-                                    <input id="site-name" what="name" ng-model="settings.name" name="name" placeholder="Exemple: Académie Photoshop" type="text" maxlength="100" required=""
+                                    <input value="{{$school->name}}" id="site-name" name="name" placeholder="Exemple: Académie Photoshop" type="text" maxlength="100" required=""
                                       class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-maxlength"></div>
                                 <help-block>
                                     <ng-messages for="" role="alert" class="ng-inactive">
@@ -83,7 +83,7 @@
                                     <!---->
                                 </label-block>
                                 <div ng-transclude="">
-                                    <input id="site-heading" what="heading" ng-model="settings.heading" name="heading" placeholder="Un slogan, exple. L'école en ligne pour les designers" maxlength="100"
+                                    <input value="{{$school->heading}}" id="site-heading" name="heading" placeholder="Un slogan, exple. L'école en ligne pour les designers" maxlength="100"
                                       class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
                                 <help-block>
                                     <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
@@ -152,7 +152,7 @@
                                 </label-block>
                                 <input name="description" type="hidden">
                                 <input style="display: none;" id="schoolDescription" type="text" name="id" value="{{$school->id}}">
-                                <div class="eidtor-container">
+                                <div class="editor-container">
 
                                     <div id="site-description">
 
@@ -182,7 +182,7 @@
                     <div ng-show="showButtonsBar" class="tab-bottom">
                         <!---->
                         <!---->
-                        <!----><button id="save-school-basic-infos" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Enregistrer</button>
+                        <!----><button id="save-school-basic-infos"  type="submit" class="tch-btn-header-primary">Enregistrer</button>
                         <!---->
                     </div>
                 </div>
@@ -1237,14 +1237,7 @@
 
 
     <!---->
-    <div class="tch-learn-more" text="about general settings in the Teachable Knowledge Base" label="admin.settings.general">
-        <div class="alert alert-info">
-            <!---->
-            <div ng-transclude="" ng-class="{ 'border-left': title }" class="alert-text-wrapper"><a ng-href="https://support.teachable.com/hc/en-us/articles/219442868-General-Settings?src=admin"
-                  href="https://support.teachable.com/hc/en-us/articles/219442868-General-Settings?src=admin" target="_blank">Learn more</a><span class="space"></span><span ng-bind="text">about general settings in the Teachable Knowledge Base</span>
-            </div>
-        </div>
-    </div>
+    @include('includes.information')
 </div>
 
 @endsection

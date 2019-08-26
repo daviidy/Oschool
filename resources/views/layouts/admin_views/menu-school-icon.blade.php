@@ -42,6 +42,9 @@
         .FocusFixer-module_usingMouse__1zr_y :focus {
             outline: none;
         }
+        .ql-container {
+    height: 50%;
+}
     </style>
     <style type="text/css">
         /* Single source of truth for variables to be used by JS if needed */
@@ -399,45 +402,105 @@
 
   <!-- Initialize Quill editor -->
   <script>
-    var options = {
-    modules: {
-      toolbar: [
-        [{ header: [1, 2, false] }],
-        ['size', 'bold', 'italic', 'underline'],
-        ['image', 'code-block', 'video', 'blockquote', 'code', 'align', 'link'],
-        ['color'],
-    ],
-    imageResize: {
-         modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
-     },
-     videoResize: {
-            modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
-        },
-     syntax: true,
-    },
-    placeholder: 'Description de l\'école...',
-    theme: 'snow'  // or 'bubble'
-};
-    var quill = new Quill('#site-description', options);
+  //sauvegarde des données du quill editor
 
+  //initialisation de l'editeur
+  var options = {
+  modules: {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['size', 'bold', 'italic', 'underline'],
+      ['image', 'code-block', 'video', 'blockquote', 'code', 'align', 'link'],
+      ['color'],
+  ],
+  imageResize: {
+       modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
+   },
+   videoResize: {
+          modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
+      },
+   syntax: true,
+  },
+  placeholder: 'Ecrivez ici...',
+  theme: 'snow'  // or 'bubble'
+  };
+  var quill = new Quill('#site-description', options);
+
+  //mise a jour description ecole
+
+  //recuperation de la description ecole
   var form = document.getElementById("description");
-  form.onsubmit = function() {
-    // Populate hidden form on submit
-    var description = document.querySelector('input[name=description]');
-    description.value = JSON.stringify(quill.getContents());
+  if (form) {
 
+      form.onsubmit = function() {
+      // Populate hidden form on submit
+      var description = document.querySelector('input[name=description]');
+      description.value = JSON.stringify(quill.getContents());
+
+
+      $.ajax({
+          type: 'post',
+          url: '/updateSchool',
+          data: {
+              '_token': $('input[name=_token]').val(),
+              'id': $("#schoolDescription").val(),
+              'description': quill.root.innerHTML,
+
+          },
+          success: function(data) {
+              $.amaran({'message':"Modifications enregistrées!"});
+
+          },
+          error: function(){
+              alert('erreur');
+          }
+      });
+
+      return false;
+      };
+
+  }
+
+
+  //fin mise a jour description ecole
+
+
+
+
+
+$('#submitNewAuthor').click(function(){
+
+    var bio = document.querySelector('input[name=bio]');
+    bio.value = JSON.stringify(quill.getContents());
+
+    var dataImage = new FormData();
+    dataImage.append('image', $('#imageAuthor')[0].files[0]);
+    dataImage.append('_token', '{{csrf_token()}}');
+    dataImage.append('school_id', $("#schoolDescription").val());
+    dataImage.append('full_name', $("#nameAuthor").val());
+    dataImage.append('headline', $("#headlineAuthor").val());
+    dataImage.append('bio', quill.root.innerHTML);
+
+//après on réinitialise tout
+    $("#schoolDescription").val('');
+    $("#nameAuthor").val('');
+    $("#headlineAuthor").val('');
+    $("#imageAuthor").val('');
+    quill.setContents([]);
+
+    $('#addAuthorZone').removeClass("add");
 
     $.ajax({
         type: 'post',
-        url: '/updateSchool',
-        data: {
-            '_token': $('input[name=_token]').val(),
-            'id': $("#schoolDescription").val(),
-            'description': quill.root.innerHTML,
+        url: '/addAuthor',
+        contentType: false,
+        processData: false,
+        data: dataImage,
 
-        },
         success: function(data) {
-            $.amaran({'message':"Modifications enregistrées!"});
+            $("#author_select option:selected").removeAttr("selected");
+            $('#author_select').append('<option label="" value="'+data.id+'" selected="selected">'+data.full_name+'</option>');
+            $.amaran({'message':"Auteur ajouté avec succès"});
 
         },
         error: function(){
@@ -446,7 +509,11 @@
     });
 
     return false;
-  };
+
+});
+
+
+
 
 
 

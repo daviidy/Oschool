@@ -6,6 +6,7 @@ use App\Course;
 use App\School;
 use App\Category;
 use Illuminate\Http\Request;
+use Image;
 
 class CourseController extends Controller
 {
@@ -93,7 +94,17 @@ class CourseController extends Controller
      */
     public function update(Request $request, Course $course)
     {
-        //
+        $course->update($request->all());
+
+        if($request->hasFile('logo')){
+          $image = $request->file('logo');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/images/courses/logos/' . $filename));
+          $course->logo = $filename;
+          $course->save();
+        }
+        return redirect()->back()->with('status', 'Les modifications ont bien été enregistrées');
+
     }
 
     /**
@@ -104,7 +115,8 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
-        //
+        $formation->delete();
+        return redirect('home')->with('status', 'Cours supprimé définitivement de la base de données' );
     }
 
 
@@ -132,7 +144,11 @@ class CourseController extends Controller
       */
      public function information(School $school, Course $course)
      {
-         return view('admin_views.courses.information', ['school' => $school, 'course' => $course]);
+         $categories = Category::orderby('id', 'asc')->paginate(100);
+         return view('admin_views.courses.information', ['school' => $school,
+                                                        'course' => $course,
+                                                        'categories' => $categories
+                                                    ]);
      }
 
      /**

@@ -91,7 +91,7 @@
                                 <!---->
                                 <!---->
                             </label-block>
-                            <div ng-transclude=""><input id="course-heading" type="text" name="description" maxlength="160" value="" placeholder="e.g. 'Tout ce que vous avez besoin de savir sur le montage vidéo'"
+                            <div ng-transclude=""><input id="course-heading" type="text" name="subtitle" maxlength="160" value="" placeholder="e.g. 'Tout ce que vous avez besoin de savoir sur le montage vidéo'"
                                   class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"><label ng-show="state.errors.heading" ng-bind="state.errors.heading" for="#course-heading" class="control-label ng-hide"></label>
                             </div>
                             <help-block>
