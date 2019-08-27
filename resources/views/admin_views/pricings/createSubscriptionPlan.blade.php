@@ -233,6 +233,179 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 /*! CSS Used from: Embedded */
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
 
+/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-79e90a8f89fd85fce9ba.css ; media=screen */
+@media screen{
+.redactor-box{position:relative;overflow:visible;margin-bottom:24px;}
+.redactor-box textarea{display:block;position:relative;margin:0;padding:0;width:100%;overflow:auto;outline:none;border:none;background-color:#111;-webkit-box-shadow:none;box-shadow:none;color:#ccc;font-size:13px;font-family:Menlo, Monaco, monospace, sans-serif!important;resize:none;}
+.redactor-box textarea:focus{outline:none;}
+.redactor-editor,.redactor-box{background:#fff;}
+.redactor-editor,.redactor-box,.redactor-box textarea{z-index:auto;}
+.redactor-toolbar{z-index:100;}
+.redactor-editor{position:relative;overflow:auto;margin:0!important;padding:20px;min-height:80px;outline:none;white-space:normal;border:1px solid #eee;font-family:Arial, Helvetica, Verdana, Tahoma, sans-serif!important;font-size:14px;line-height:1.6em;}
+.redactor-editor:focus{outline:none;}
+.redactor-placeholder:after{position:absolute;top:20px;left:20px;content:attr(placeholder);display:block;color:#999!important;font-weight:normal!important;}
+.redactor-toolbar{position:relative;top:0;left:0;margin:0!important;padding:0!important;list-style:none!important;font-size:14px!important;line-height:1!important;background:#fff;border:none;-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, .2);box-shadow:0 1px 2px rgba(0, 0, 0, .2);}
+.redactor-toolbar:after{content:"";display:table;clear:both;}
+.redactor-toolbar li{vertical-align:top;display:inline-block;margin:0!important;padding:0!important;outline:none;list-style:none!important;-webkit-box-sizing:content-box;box-sizing:content-box;}
+.redactor-toolbar li a{display:block;color:#333;text-align:center;padding:9px 10px;outline:none;border:none;text-decoration:none;cursor:pointer;zoom:1;-webkit-box-sizing:content-box;box-sizing:content-box;}
+.redactor-toolbar li a:hover{outline:none;background-color:#1f78d8;color:#fff;}
+.redactor-toolbar li a:hover i:before{color:#fff;}
+.redactor-toolbar li a:active{outline:none;background-color:#ccc;color:#444;}
+.redactor-toolbar li a.redactor-btn-image{width:14px;height:14px;background-position:center center;background-repeat:no-repeat;}
+.redactor-toolbar li a.fa-redactor-btn{display:inline-block;padding:9px 10px 8px 10px;line-height:1;}
+.re-icon{font-family:'RedactorFont';speak:none;font-style:normal;font-weight:normal;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.re-icon i:before{position:relative;font-size:14px;}
+.re-unorderedlist:before{content:"\E601";}
+.re-underline:before{content:"\E603";}
+.re-fontcolor:before{content:"\E605";}
+.re-outdent:before{content:"\E609";}
+.re-orderedlist:before{content:"\E60A";}
+.re-link:before{content:"\E60B";}
+.re-horizontalrule:before{content:"\E60C";}
+.re-italic:before{content:"\E60D";}
+.re-indent:before{content:"\E60E";}
+.re-fullscreen:before{content:"\E610";}
+.re-formatting:before{content:"\E612";}
+.re-fontsize:before{content:"\E613";}
+.re-fontfamily:before{content:"\E614";}
+.re-html:before{content:"\E616";}
+.re-bold:before{content:"\E618";}
+.re-backcolor:before{content:"\E619";}
+.re-alignment:before{content:"\E61C";}
+.redactor-editor p{font-size:14px;line-height:1.6em;}
+.redactor-editor p{margin:0;margin-bottom:15px;border:none;background:none;-webkit-box-shadow:none;box-shadow:none;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+button,input,select,textarea{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button,select{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button[disabled]{cursor:default;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+input{line-height:normal;}
+textarea{overflow:auto;}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.fa-image:before{content:"\F03E";}
+.fa-chevron-left:before{content:"\F053";}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+button,input,select,textarea{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button,select{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button[disabled]{cursor:default;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+input{line-height:normal;}
+textarea{overflow:auto;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+a[href^="#"]:after{content:"";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+p{orphans:3;widows:3;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#30787d;text-decoration:none;}
+a:hover,a:focus{color:#09a59a;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+[role="button"]{cursor:pointer;}
+p{margin:0 0 11px;}
+.text-center{text-align:center;}
+ul{margin-top:0;margin-bottom:11px;}
+.col-sm-6,.col-sm-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
+@media (min-width: 768px){
+.col-sm-6,.col-sm-12{float:left;}
+.col-sm-6{width:50%;}
+.col-sm-12{width:100%;}
+.col-sm-offset-3{margin-left:25%;}
+}
+label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
+.form-control{display:block;width:100%;height:41px;padding:6px 12px;font-size:13px;line-height:1.72222;color:#95a5a6;background-color:white;background-image:none;border:1px solid #ccc;border-radius:5px;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);-webkit-transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;-webkit-transition:border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;}
+.form-control:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);}
+.form-control::-moz-placeholder{color:#999;opacity:1;}
+.form-control:-ms-input-placeholder{color:#999;}
+.form-control::-webkit-input-placeholder{color:#999;}
+.form-control::-ms-expand{background-color:transparent;border:0;}
+.input-group{position:relative;display:table;border-collapse:separate;}
+.input-group .form-control{position:relative;z-index:2;float:left;width:100%;margin-bottom:0;}
+.input-group .form-control:focus{z-index:3;}
+.input-group-addon,.input-group .form-control{display:table-cell;}
+.input-group-addon{width:1%;white-space:nowrap;vertical-align:middle;}
+.input-group-addon{padding:6px 12px;font-size:13px;font-weight:400;line-height:1;color:#95a5a6;text-align:center;background-color:#eeeeee;border:1px solid #ccc;border-radius:5px;}
+.input-group .form-control:first-child{border-top-right-radius:0;border-bottom-right-radius:0;}
+.input-group .form-control:last-child,.input-group-addon:last-child{border-top-left-radius:0;border-bottom-left-radius:0;}
+.input-group-addon:last-child{border-left:0;}
+[disabled]{cursor:default!important;pointer-events:none;}
+.tch-btn-header-primary-block{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
+.tch-btn-header-primary-block:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block:active:hover,.tch-btn-header-primary-block:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
+.tch-btn-header-primary-block:active{background-image:none;}
+.tch-btn-header-primary-block[disabled],.tch-btn-header-primary-block[disabled]:hover,.tch-btn-header-primary-block[disabled]:focus,.tch-btn-header-primary-block[disabled]:active{filter:alpha(opacity=65);opacity:0.65;background-color:#ff7f45;border-color:#ff7f45;cursor:not-allowed;-webkit-box-shadow:none;box-shadow:none;}
+.tch-btn-header-primary-block:focus{outline:0!important;}
+.tch-btn-header-primary-block:focus{outline:0!important;}
+.tch-btn-header-primary-block:focus{outline:0!important;}
+textarea{font-size:14px;line-height:24px;padding:5px 11px;}
+label{font-weight:normal;line-height:2.4;font-size:16px;color:#808080;line-height:30px;font-weight:600;margin-bottom:12px;}
+.form-control::-moz-placeholder{color:#97999b;opacity:1;}
+.form-control:-ms-input-placeholder{color:#97999b;}
+.form-control::-webkit-input-placeholder{color:#97999b;}
+.form-control{border:1px solid #dbdbdb;color:#20272d;font-family:"TeachableSans", Helvetica, Arial, sans-serif;font-size:13px;line-height:1.467;padding:12px 14px;height:44px;border-radius:5px;-webkit-box-shadow:none;box-shadow:none;-webkit-transition:"border .25s linear, color .25s linear, background-color .25s linear";transition:"border .25s linear, color .25s linear, background-color .25s linear";}
+.form-control:focus{outline:0;border:1px solid rgba(0, 0, 0, .34)!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+select.form-control{-moz-appearance:none;appearance:none;-webkit-appearance:none;background:url("//assets.teachablecdn.com/admin/assets/images/select-up-down.png") right 12px center #fff no-repeat;background-size:15px;font-size:13px;}
+p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
+.text-center{text-align:center;}
+ul{margin-top:0;margin-bottom:11px;}
+.input-group-addon{padding:10px 12px;font-size:13px;color:white;text-align:center;background-color:#9a9ea2;border:1px solid #9a9ea2;border-radius:6px;-webkit-transition:"border .25s linear, color .25s linear, background-color .25s linear";transition:"border .25s linear, color .25s linear, background-color .25s linear";}
+.tch-inline-form .inline-form-wrapper{padding-left:50px;padding-right:50px;}
+.tch-inline-form .inline-form-wrapper .inline-form-container{padding-top:30px;padding-bottom:50px;margin-top:2px;}
+.input-group-image{float:left;}
+.input-group-image img{padding-right:15px;width:59px;}
+.input-group-select{float:left;}
+.input-group-select select.form-control{-webkit-appearance:none;border-right:0;border-top-right-radius:0;border-bottom-right-radius:0;border-top-left-radius:5px!important;border-bottom-left-radius:5px!important;background:#f9f9f9;border-right:1px solid #dbdbdb;font-weight:bold;background:url("//assets.teachablecdn.com/admin/assets/images/select-dropdown.png") no-repeat 88%;background-size:10px;cursor:pointer;padding-right:25px;}
+.input-group-select select.form-control:focus{border-right:1px solid #1ea69a;}
+.input-group-select-attached input.form-control{border-top-left-radius:0;border-bottom-left-radius:0;border-left:0;}
+.input-group-select-attached input.form-control:focus{border-left:1px solid #1ea69a;}
+.input-group-addon{background:#f9f9f9;padding:1px;color:#34495e;padding:0 10px;font-weight:200;font-size:13px;border:1px solid #dbdbdb;}
+.tch-inline-form .inline-form-wrapper .inline-form-container label.for-checkbox{font-size:15px;color:#848484;margin-bottom:10px;}
+.tch-inline-form .inline-form-wrapper .inline-form-container select.small-inline{width:100px;margin-left:5px;margin-top:7px;display:inline;font-size:13px;}
+.tch-inline-form .inline-form-wrapper .inline-form-container .re-alignment,.tch-inline-form .inline-form-wrapper .inline-form-container .re-horizontalrule,.tch-inline-form .inline-form-wrapper .inline-form-container .re-fullscreen,.tch-inline-form .inline-form-wrapper .inline-form-container .re-fontfamily,.tch-inline-form .inline-form-wrapper .inline-form-container .re-fontsize,.tch-inline-form .inline-form-wrapper .inline-form-container .re-fontcolor,.tch-inline-form .inline-form-wrapper .inline-form-container .re-backcolor,.tch-inline-form .inline-form-wrapper .inline-form-container .re-outdent{display:none!important;}
+.tch-inline-form .tch-inline-support-article{position:absolute;top:13px;right:20px;font-size:13px;text-decoration:underline;color:#bbb;}
+.tch-inline-form .tch-inline-back{border-radius:50%;color:#a9a9a9;height:30px;left:15px;font-size:12px;line-height:30px;padding-right:2px;position:absolute;text-align:center;top:10px;width:30px;}
+.tch-inline-form .tch-inline-back:hover{color:#394244;}
+.redactor-box{margin-bottom:0;background:none!important;}
+.redactor-box textarea{background-color:#111!important;}
+.redactor-toolbar{-webkit-box-shadow:none;box-shadow:none;border-bottom-width:0;border-top-left-radius:6px;border-top-right-radius:6px;border:1px solid #dbdbdb;border-bottom:none;}
+.redactor-toolbar li a{padding:12px 14px;}
+.redactor-toolbar li a:hover{background-color:#1ea69a!important;}
+.redactor-toolbar .fa{margin:0!important;}
+.redactor-toolbar{z-index:0!important;}
+.redactor-editor{border:1px solid #dbdbdb;border-bottom-left-radius:6px;border-bottom-right-radius:6px;cursor:text;}
+.redactor-placeholder:after{color:#ccc!important;}
+.re-fullscreen{display:none!important;}
+.re-formatting{display:none!important;}
+a{color:#1ea69a;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
+a:hover,a:focus{color:#167b72;text-decoration:none;}
+.slide-show{-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-timing-function:ease-in;transition-timing-function:ease-in;max-height:1000px;overflow:hidden;}
+.add-top-margin{margin-top:15px;}
+.add-top-margin-25{margin-top:25px;}
+.redactor-editor{max-height:300px;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+/*! CSS Used from: Embedded */
+.FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+/*! CSS Used from: Embedded */
+.FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+
+
 
 </style>
 
@@ -255,115 +428,68 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
     </div>
     <div class="tch-inline-form">
-        <div id="test-id-add-product-btn" ng-click="form.toggle()" class="btn btn-block btn-attached fastclickable">Nouvelle offre de prix<i class="fa fa-angle-down icon-arrow-down"></i></div>
-        <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
+
+        <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-show" style="">
+    <!---->
+    <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
+        <form method="post" action="{{route('pricings.store')}}" what="product form" name="inlinePricingForm" ng-submit="addPricingPlan()" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required" style="">
             <!---->
-            <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-                <form what="product form" name="inlinePricingForm" ng-submit="addPricingPlan()" class="inline-form-wrapper ng-pristine ng-valid">
+            <!---->
+            <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="#" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+                <!----><a what="learn-more-about-subscriptions" ng-href="https://teachable.zendesk.com/hc/en-us/articles/219442088-Overview-of-Course-Pricing-Options" target="_blank" ng-if="planType == 'subscription'"
+                  class="tch-inline-support-article" href="https://teachable.zendesk.com/hc/en-us/articles/219442088-Overview-of-Course-Pricing-Options"><span>Learn more about Subscriptions</span></a>
+                <!---->
+                <!---->
+                <!---->
+                @csrf
+                <div class="inline-form-container col-sm-6 col-sm-offset-3">
                     <!---->
-                    <div ng-if="!planType" class="row">
-                        <div class="col-sm-10 col-sm-offset-1 tch-inline-form-select">
-                            <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createFreePlan" id="test-id-add-free-plan" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img
-                                  src="/admin/assets/images/icons/icon-pricing-free.svg" class="tch-table-thumb"><br>
-                                <div ng-bind="'PRODUCT.free.name' | translate" class="inline-form-option-name">Gratuit</div>
-                                <div ng-bind="'PRODUCT.free.description' | translate" class="inline-form-option-subtitle">Aucun paiement</div>
-                            </a><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createSubscriptionPlan" id="test-id-add-subscription" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/admin/assets/images/icons/icon-pricing-subscription.svg"
-                                  class="tch-table-thumb"><br>
-                                <div ng-bind="'PRODUCT.subscription.name' | translate" class="inline-form-option-name">Abonnement</div>
-                                <div ng-bind="'PRODUCT.subscription.description' | translate" class="inline-form-option-subtitle">Paiement mensuel ou annuel</div>
-                            </a><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createOnePurchasePlan" id="test-id-add-one-off" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/admin/assets/images/icons/icon-pricing-purchase.svg" class="tch-table-thumb"><br>
-                                <div ng-bind="'PRODUCT.purchase.name' | translate" class="inline-form-option-name">Paiment en une fois</div>
-                                <div ng-bind="'PRODUCT.purchase.description' | translate" class="inline-form-option-subtitle">Un seul paiement</div>
-                            </a><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createPaymentPlan" id="test-id-add-pricing-plan" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/admin/assets/images/icons/icon-pricing-plan.svg" class="tch-table-thumb"><br>
-                                <div ng-bind="'PRODUCT.plan.name' | translate" class="inline-form-option-name">Plan de paiement</div>
-                                <div ng-bind="'PRODUCT.plan.description' | translate" class="inline-form-option-subtitle">Un nombre fixé de paiement</div>
-                            </a></div>
+                    <!---->
+                    <div ng-if="planType != 'free'" class="col-sm-12">
+                        <div class="input-group input-group-image"><img ng-src="/admin/assets/images/icons/icon-pricing-subscription.svg" class="tch-table-thumb" src="/admin/assets/images/icons/icon-pricing-subscription.svg"></div>
+                        <div class="input-group input-group-select">
+                          <select what="currency" ng-disabled="product.id" ng-model="product.currency" ng-options="currency.iso as currency.iso for (key, currency) in currencies" required=""
+                              class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
+                                <option label="FCFA" value="string:XOF" selected="selected">FCFA</option>
+                          </select></div>
+                        <div class="input-group input-group-select-attached">
+                          <input name="price" id="amount" type="text" maxlength="15" placeholder="Entrer un prix" convert-currency="currencies[product.currency].ratio"
+                              numeric="" required="" autofocus="true" class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-touched" style="">
+                            <div what="input-group-addon" class="input-group-addon">
+                                <!----><span ng-if="currencies[product.currency].ratio === 100" class="disable-animations">.00</span>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
                     </div>
                     <!---->
                     <!---->
-                </form>
-            </ng-include>
-        </div>
-    </div><br>
-    <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
-        <div class="tch-table-wrapper">
-            <!---->
-            <table ng-if="products.length > 0" class="tch-table draggable-products">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Type</th>
-                        <th>Nom de l'offre</th>
-                        <th>Prix<a href="#" tooltip="The default price will be set to the first pricing plan on this list." tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="tch-btn-tooltip no-padding"><i
-                                  class="fa fa-question-circle"></i></a></th>
-                        <th>Récurrent</th>
+                    <div ng-if="planType == 'subscription'" class="col-sm-12 text-center add-top-margin"><label class="for-checkbox"><span ng-bind="'PRODUCT.per' | translate">per</span>
+                      <select name="per" id="test-id-recurring"
+                              ng-model="product.billing_interval" class="form-control small-inline disable-animations ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <option value="month" ng-bind="'PRODUCT.month' | translate">month</option>
+                                <option value="year" ng-bind="'PRODUCT.year' | translate">year</option>
+                            </select></label>
 
-                    </tr>
-                </thead>
-                <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
+                            <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
+                            <input style="display: none;" type="text" name="type" value="Abonnement">
+                            <input style="display: none;" type="text" name="recurring" value="Yes">
+                    </div>
                     <!---->
-                    @foreach($course->pricings as $pricing)
-                    <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
-                        <td what="id"><span ng-bind="'#' + product.id">#{{$pricing->id}}</span><span class="space"></span><span class="space"></span>
-                            <!---->
-                        </td>
-                        <td what="type"><img ng-src="/admin/assets/images/pricing-free.svg" class="tch-table-thumb" src="/admin/assets/images/pricing-free.svg">
-                            <!---->
-                            <!---->
-                            <!---->
-                            <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Free</span>
-                            <!---->
-                        </td>
-                        <td what="name">{{$pricing->name}}</td>
-                        <td what="price" ng-bind="formatProductPrice(product)">
-                            @if($pricing->type == 'Free')
-                            GRATUIT
-                            @else
-                            {{$pricing->price}} FCFA
-                            @endif
-                        </td>
-                        <td>{{$pricing->recurring}}</td>
-                        <td>
-                            <!---->
-                            <!---->
-                            <div ng-if="product.is_published" class="pull-right">
-                                <a href="{{route('pricings.edit', $pricing)}}">
-                                    <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
-                                </a>
-                                <form action="{{ route('pricings.destroy', $pricing) }}" method="post">
-                                    {{ csrf_field() }}
-                                    {{ method_field('delete') }}
-                                    <button
-                                      id="test-id-unpublish-btn"
-                                      class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i></button>
-                                </form>
-                            </div>
-                            <!---->
-                        </td>
-                    </tr>
-                    @endforeach
+                    <!---->
+                    <div ng-show="products.length > 0" class="">
+                        <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" maxlength="100" placeholder="Name"
+                              class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
 
-                    <!---->
-                </tbody>
-            </table>
+                    </div>
+                    <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Ajouter offre</button></div>
+                </div>
+            </div>
             <!---->
-        </div>
-        <div ng-show="ctrl.meta.number_of_pages > 1" class="tch-page-nav ng-hide" meta="meta">
-            <!---->
-            <div class="pull-right"><span class="tch-page-nav-page-number">Page 1 of 1</span><span class="space"></span><button ng-click="ctrl.previousPage()" ng-disabled="ctrl.meta.page == 1" class="tch-page-nav-btn tch-back-button fastclickable"
-                  disabled="disabled"><i class="fa fa-angle-left"></i></button><button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page" class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"><i
-                      class="fa fa-angle-right"></i></button></div>
-        </div>
-        <!---->
-        <div ng-class="{ 'text-center': products.length == 0, 'pull-right': products.length > 0 }" ng-if=" deletedPlansCount > 0" class="pull-right">
-            <!----><a ui-sref="admin.courses.course.pricing(::{id: course.id, is_published: false})" ng-if="showPublishedPlans" ui-sref-opts="{reload:true}" class="gray-underline"
-              href="/admin/courses/627895/pricing?is_published=false&amp;page=1">Show deleted pricing plans (1)</a>
-            <!---->
-            <!---->
-        </div>
-        <!---->
-        <!----><br ng-if="products.length > 0">
-        <!---->
+        </form>
+    </ng-include>
+</div>
+
     </div><br>
     @include('includes.information')
 </div>

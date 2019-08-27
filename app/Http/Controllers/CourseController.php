@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Course;
 use App\School;
 use App\Category;
+use App\Pricing;
 use Illuminate\Http\Request;
 use Image;
 

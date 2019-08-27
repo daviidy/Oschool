@@ -397,9 +397,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .btn{font-family:'TeachableSans', sans-serif;}
 }
 
-.add{
-    max-height: 1000px !important;
-}
+
 
 </style>
 
@@ -910,10 +908,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     @include('includes.information')
 </div>
 
-
+<!--popup-->
+<div style="display: none;" class="modal-backdrop fade in" modal-animation-class="fade" modal-in-class="in" modal-backdrop="modal-backdrop" modal-animation="true" style="z-index: 1040;"></div>
 
 <div modal-render="true" tabindex="-1" role="dialog" class="modal fade fastclickable in" modal-animation-class="fade" modal-in-class="in" ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)" modal-window="modal-window"
-  trackid="1781" index="0" animate="animate" modal-animation="true" style="z-index: 1050; display: block;">
+  trackid="1781" index="0" animate="animate" modal-animation="true" style="z-index: 1050; display: none;">
     <div class="modal-dialog" ng-class="size ? 'modal-' + size : ''">
         <div class="modal-content" modal-transclude="" trackid="1788">
             <div what="confirm modal">
@@ -930,5 +929,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
     </div>
 </div>
+
+<!--fin popup-->
 
 @endsection

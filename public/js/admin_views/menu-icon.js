@@ -71,3 +71,9 @@ $('#changeStatus').on('click', function() {
                     $('#addAuthorZone').toggleClass("add");
 
                 });
+
+
+            $('#test-id-add-product-btn').on('click', function() {
+                    $('.slide-hide').toggleClass("add");
+
+                });

@@ -16,7 +16,7 @@ class Pricing extends Model
                            'recurring',
                            'per',
                            'times',
-                           'school_id'
+                           'course_id'
 
                          ];
 
@@ -26,7 +26,7 @@ class Pricing extends Model
       * relationship many to many with Course model
       * @return [array] [description]
       */
-      public function users()
+      public function course()
       {
           return $this->belongsTo('App\Course');
       }

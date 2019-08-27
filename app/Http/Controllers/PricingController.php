@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Pricing;
+use App\School;
+use App\Course;
 use Illuminate\Http\Request;
 
 class PricingController extends Controller
@@ -22,10 +24,61 @@ class PricingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createFreePlan(School $school, Course $course)
     {
-        //
+        return view('admin_views.pricings.createFreePlan', ['school' => $school, 'course' => $course]);
     }
+
+    public function editFreePlan(School $school, Course $course, Pricing $pricing)
+    {
+        return view('admin_views.pricings.editFreePlan', ['school' => $school, 'course' => $course, 'pricing' => $pricing]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createSubscriptionPlan(School $school, Course $course)
+    {
+        return view('admin_views.pricings.createSubscriptionPlan', ['school' => $school, 'course' => $course]);
+    }
+
+    public function editSubscriptionPlan(School $school, Course $course, Pricing $pricing)
+    {
+        return view('admin_views.pricings.editSubscriptionPlan', ['school' => $school, 'course' => $course, 'pricing' => $pricing]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createOnePurchasePlan(School $school, Course $course)
+    {
+        return view('admin_views.pricings.createOnePurchasePlan', ['school' => $school, 'course' => $course]);
+    }
+
+    public function editOnePurchasePlan(School $school, Course $course, Pricing $pricing)
+    {
+        return view('admin_views.pricings.editOnePurchasePlan', ['school' => $school, 'course' => $course, 'pricing' => $pricing]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createPaymentPlan(School $school, Course $course)
+    {
+        return view('admin_views.pricings.createPaymentPlan', ['school' => $school, 'course' => $course]);
+    }
+
+    public function editPaymentPlan(School $school, Course $course, Pricing $pricing)
+    {
+        return view('admin_views.pricings.editPaymentPlan', ['school' => $school, 'course' => $course, 'pricing' => $pricing]);
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +88,8 @@ class PricingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pricing = Pricing::create($request->all());
+        return redirect('/schoolAdmin/'.$pricing->course->school_id.'/courses/'.$request->course_id.'/pricing')->with('status', 'L\'offre de prix a bien été ajoutée');
     }
 
     /**
@@ -57,7 +111,18 @@ class PricingController extends Controller
      */
     public function edit(Pricing $pricing)
     {
-        //
+        if ($pricing->type == 'Free') {
+            return redirect('/schoolAdmin/'.$pricing->course->school_id.'/courses/'.$pricing->course_id.'/pricing/'.$pricing->id.'/editFreePlan');
+        }
+        elseif ($pricing->type == 'Abonnement') {
+            return redirect('/schoolAdmin/'.$pricing->course->school_id.'/courses/'.$pricing->course_id.'/pricing/'.$pricing->id.'/editSubscriptionPlan');
+        }
+        elseif ($pricing->type == 'Paiement en une fois') {
+            return redirect('/schoolAdmin/'.$pricing->course->school_id.'/courses/'.$pricing->course_id.'/pricing/'.$pricing->id.'/editOnePurchasePlan');
+        }
+        elseif ($pricing->type == 'Plan de paiement') {
+            return redirect('/schoolAdmin/'.$pricing->course->school_id.'/courses/'.$pricing->course_id.'/pricing/'.$pricing->id.'/editPaymentPlan');
+        }
     }
 
     /**
@@ -69,7 +134,8 @@ class PricingController extends Controller
      */
     public function update(Request $request, Pricing $pricing)
     {
-        //
+        $pricing->update($request->all());
+        return redirect('/schoolAdmin/'.$pricing->course->school_id.'/courses/'.$request->course_id.'/pricing')->with('status', 'L\'offre de prix a bien été modifiée');
     }
 
     /**
@@ -80,6 +146,7 @@ class PricingController extends Controller
      */
     public function destroy(Pricing $pricing)
     {
-        //
+        $pricing->delete();
+        return redirect('/schoolAdmin/'.$pricing->course->school_id.'/courses/'.$request->course_id.'/pricing')->with('status', 'Offre de prix supprimée de la base de données' );
     }
 }

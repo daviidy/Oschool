@@ -63,7 +63,7 @@ class Course extends Model
          */
          public function pricings()
          {
-             return $this->belongsToMany('App\Pricing');
+             return $this->hasMany('App\Pricing');
          }
 
 }

@@ -1,3 +1,8 @@
+.add{
+    max-height: 1000px !important;
+}
+
+
 /*! CSS Used from: Embedded */
 .ng-hide:not(.ng-hide-animate){display:none!important;}
 /*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-8126fa277249c04e853f.css ; media=screen */
@@ -1031,3 +1036,26 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
 /*! CSS Used from: Embedded */
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+
+/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-79e90a8f89fd85fce9ba.css ; media=screen */
+@media screen{
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+.fade{opacity:0;-webkit-transition:opacity 0.15s linear;transition:opacity 0.15s linear;}
+.fade.in{opacity:1;}
+.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#161b20;}
+.modal-backdrop.fade{filter:alpha(opacity=0);opacity:0;}
+.modal-backdrop.in{filter:alpha(opacity=95);opacity:0.95;}
+.modal-backdrop{z-index:1040;background-color:#161b20;}
+.modal-backdrop.in{filter:alpha(opacity=95);opacity:0.95;}
+.modal-backdrop,.modal-backdrop.fade.in{opacity:0.66!important;}
+.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;background-color:rgba(0, 0, 0, .66);}
+.modal-backdrop.fade{opacity:0;}
+.modal-backdrop,.modal-backdrop.fade.in{filter:alpha(opacity=8000);opacity:80;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+
+/*ifn style popup*/
