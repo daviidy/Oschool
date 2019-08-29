@@ -8,21 +8,34 @@
             <!---->
             <div class="tabs">
                 <!---->
-                <div  class="tab ng-star-inserted inactive"><img class="tab--icon" src="//images.ctfassets.net/2y9b3o528xhq/4pZfIm2HNd4tDfiQ3zVtfc/423754d30a19155e229342d431459ad3/icon_brain_blue_on_white.svg">
-                    <div class="tab--container">
-                        <div class="tab--title">Pédagogie Active</div>
-                    </div>
+
+
+
+                <div  class="tab ng-star-inserted inactive">
+                  <a href="1">
+                    <img class="tab--icon" src="//images.ctfassets.net/2y9b3o528xhq/4pZfIm2HNd4tDfiQ3zVtfc/423754d30a19155e229342d431459ad3/icon_brain_blue_on_white.svg">
+                      <div class="tab--container">
+                          <div class="tab--title">Pédagogie Active</div>
+                      </div>
+                  </a>
                 </div>
-                <div  class="tab ng-star-inserted inactive"><img class="tab--icon" src="//images.ctfassets.net/2y9b3o528xhq/2R8cHoMVdnPYQhPXAcsbn2/7cd9f1a4914f93bafa34531133fa2db7/icon_command_prompt_pink_on_white.svg">
-                    <div class="tab--container">
-                        <div class="tab--title">Ateliers collectifs</div>
-                    </div>
+                <div  class="tab ng-star-inserted inactive">
+                  <a href="2">
+                    <img class="tab--icon" src="//images.ctfassets.net/2y9b3o528xhq/2R8cHoMVdnPYQhPXAcsbn2/7cd9f1a4914f93bafa34531133fa2db7/icon_command_prompt_pink_on_white.svg">
+                      <div class="tab--container">
+                          <div class="tab--title">Ateliers collectifs</div>
+                      </div>
+                  </a>
                 </div>
-                <div class="tab ng-star-inserted inactive"><img class="tab--icon" src="//images.ctfassets.net/2y9b3o528xhq/1wiqpVycnZpnTjY3fP23DO/4140ec14bc7c4432ba529b192b9afa9d/icon_person_wearing_suit_purple_on_white.svg">
-                    <div class="tab--container">
-                        <div class="tab--title">Personal Career Coach</div>
-                    </div>
-                </div>
+                <div class="tab ng-star-inserted inactive">
+                  <a href="3">
+                    <img class="tab--icon" src="//images.ctfassets.net/2y9b3o528xhq/1wiqpVycnZpnTjY3fP23DO/4140ec14bc7c4432ba529b192b9afa9d/icon_person_wearing_suit_purple_on_white.svg">
+                      <div class="tab--container">
+                          <div class="tab--title">Personal Career Coach</div>
+                      </div>
+                  </div>
+                  </a>
+
             </div>
             <!---->
 
@@ -103,3 +116,16 @@
         </div>
     </div>
 </section>
+<script type="text/javascript">
+$('.tabs .tab').on('click', function (event) {
+    event.preventDefault();
+
+    $('.active').removeClass('active');
+    $(this).parent().addClass('active');
+    $('.tab-panel .ng-star-inserted').hide();
+    $($(this).attr('href')).show();
+});
+
+$('#category-tabs a:first').trigger('click'); // Default
+
+</script>
