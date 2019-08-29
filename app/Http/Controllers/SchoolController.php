@@ -259,10 +259,22 @@ class SchoolController extends Controller
      * @return [type]       [description]
      */
     public function addAuthor(Request $req) {
-        $data = Author::create([
-            'school_id' => $req->id,
-            'name' => $req->name,
-        ]);
+        if ($req->headline) {
+          $data = Author::create($req->all());
+          $image = $req->file('image');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/images/users/authors/' . $filename));
+          $data->image = $filename;
+          $data->save();
+
+        }
+        else {
+            $data = Author::create([
+                'school_id' => $req->id,
+                'name' => $req->name,
+            ]);
+        }
+
         return response()->json($data);
     }
 

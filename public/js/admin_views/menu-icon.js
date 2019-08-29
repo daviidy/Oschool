@@ -1,4 +1,9 @@
 
+
+
+
+
+
 $('#changeStatus').on('click', function() {
 
         $.ajax({
@@ -59,3 +64,16 @@ $('#changeStatus').on('click', function() {
                     }
                 });
             });
+
+
+
+            $('#addAuthor').on('click', function() {
+                    $('#addAuthorZone').toggleClass("add");
+
+                });
+
+
+            $('#test-id-add-product-btn').on('click', function() {
+                    $('.slide-hide').toggleClass("add");
+
+                });

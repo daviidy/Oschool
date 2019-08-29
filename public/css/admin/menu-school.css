@@ -1,3 +1,8 @@
+.add{
+    max-height: 1000px !important;
+}
+
+
 /*! CSS Used from: Embedded */
 .ng-hide:not(.ng-hide-animate){display:none!important;}
 /*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-8126fa277249c04e853f.css ; media=screen */
@@ -933,3 +938,124 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
 /*! CSS Used from: Embedded */
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+
+
+
+/*style popup*/
+
+/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-79e90a8f89fd85fce9ba.css ; media=screen */
+@media screen{
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{border:0;padding:0;}
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{border:0;padding:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+p{orphans:3;widows:3;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+button{font-family:inherit;font-size:inherit;line-height:inherit;}
+h4{font-family:inherit;font-weight:700;line-height:1.1;color:inherit;}
+h4{margin-top:11px;margin-bottom:11px;}
+h4{font-size:21px;}
+p{margin:0 0 11px;}
+.fade{opacity:0;-webkit-transition:opacity 0.15s linear;transition:opacity 0.15s linear;}
+.fade.in{opacity:1;}
+.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;-webkit-overflow-scrolling:touch;outline:0;}
+.modal.fade .modal-dialog{-webkit-transform:translate(0, -25%);transform:translate(0, -25%);-webkit-transition:-webkit-transform 0.3s ease-out;transition:-webkit-transform 0.3s ease-out;transition:transform 0.3s ease-out;transition:transform 0.3s ease-out, -webkit-transform 0.3s ease-out;}
+.modal.in .modal-dialog{-webkit-transform:translate(0, 0);transform:translate(0, 0);}
+.modal-open .modal{overflow-x:hidden;overflow-y:auto;}
+.modal-dialog{position:relative;width:auto;margin:10px;}
+.modal-content{position:relative;background-color:#f7f7f7;background-clip:padding-box;border:1px solid #999;border:1px solid #e9e9ea;border-radius:6px;-webkit-box-shadow:0 3px 9px rgba(0, 0, 0, .5);box-shadow:0 3px 9px rgba(0, 0, 0, .5);outline:0;}
+.modal-body{position:relative;padding:15px;}
+.modal-footer{padding:15px;text-align:right;border-top:1px solid #e9e9ea;}
+.modal-footer:before,.modal-footer:after{display:table;content:" ";}
+.modal-footer:after{clear:both;}
+@media (min-width: 768px){
+.modal-dialog{width:624px;margin:30px auto;}
+.modal-content{-webkit-box-shadow:0 5px 15px rgba(0, 0, 0, .5);box-shadow:0 5px 15px rgba(0, 0, 0, .5);}
+}
+.tch-btn-header-primary{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
+.tch-btn-header-primary:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
+.tch-btn-header-primary:active{background-image:none;}
+.tch-btn-header-primary:focus{outline:0!important;}
+.tch-btn-header-primary:focus{outline:0!important;}
+.tch-btn-header-primary:focus{outline:0!important;}
+.tch-btn-header-primary:focus{outline:0!important;}
+.tch-btn-header-secondary{min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;color:white;background-color:#fff;border:1px solid #a9a9a9;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e1e3e4;color:#0f8d82;}
+.tch-btn-header-secondary:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
+.tch-btn-header-secondary:hover{color:white;background-color:#ededed;border-color:#929292;}
+.tch-btn-header-secondary:active{color:white;background-color:#ededed;border-color:#929292;}
+.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus{color:white;background-color:#dedede;border-color:#838383;}
+.tch-btn-header-secondary:active{background-image:none;}
+.tch-btn-header-secondary:active,.tch-btn-header-secondary:hover,.tch-btn-header-secondary:focus{background:#fff;border-color:#1ea69a;color:#1ea69a;}
+.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus,.tch-btn-header-secondary:hover:hover,.tch-btn-header-secondary:hover:focus,.tch-btn-header-secondary:focus:hover,.tch-btn-header-secondary:focus:focus{background:#fff;border-color:#1ea69a;color:#1ea69a;}
+.tch-btn-header-secondary:focus{outline:0!important;}
+.tch-btn-header-secondary:focus{outline:0!important;}
+.tch-btn-header-secondary:focus{outline:0!important;}
+.tch-btn-header-secondary:focus{outline:0!important;}
+.modal:before{display:inline-block;vertical-align:middle;content:' ';height:100%;}
+.modal-dialog{display:inline-block;text-align:left;vertical-align:middle;-webkit-animation:fadeIn 0.2s ease-out;animation:fadeIn 0.2s ease-out;-webkit-perspective:1000;perspective:1000;}
+.modal{z-index:1050;text-align:center;}
+.modal .tch-btn-header-primary,.modal .tch-btn-header-secondary{font-size:13px;}
+.modal-content{border-radius:7px;background-color:#fff!important;background-clip:padding-box;-webkit-box-shadow:0px 0px 10px -2px #2a2a2a;box-shadow:0px 0px 10px -2px #2a2a2a;border-radius:4px;}
+.modal-body{padding:20px 45px 0px 45px;background:#fff;border-radius:5px;}
+.modal-body p{font-size:13px;line-height:24px;margin-bottom:21px;text-align:left;color:#67777c;}
+.modal-footer{padding:20px 0px 40px;margin-top:0;background-color:#fff;border-top:none;border-radius:0 0 7px 7px;text-align:center;}
+.modal-footer.center{text-align:center!important;}
+.modal-footer .tch-btn-header-primary,.modal-footer .tch-btn-header-secondary{margin:0px 5px;}
+@media (min-width: 768px){
+.modal-dialog{width:624px;margin:30px auto;}
+.modal-content{-webkit-box-shadow:0px 0px 10px -2px #2a2a2a;box-shadow:0px 0px 10px -2px #2a2a2a;}
+}
+@media (min-width: 0px) and (max-width: 767px){
+.modal-dialog{width:90%!important;}
+}
+.angular-confirm-text{padding-bottom:3px;border-top-left-radius:10px;border-top-right-radius:10px;padding-top:30px;}
+.angular-confirm-text > p{font-size:16px;font-family:"TeachableSans", Helvetica, Arial, sans-serif;}
+.modal-footer.angular-confirm-footer{border-top:0px!important;padding-top:0px!important;margin-top:22px!important;text-align:center!important;}
+h4{font-family:inherit;font-weight:700;line-height:1.1;color:inherit;}
+h4{margin-top:11px;margin-bottom:11px;}
+h4{font-size:21px;}
+p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
+.angular-confirm-text .angular-confirm-title{margin-bottom:25px;text-align:center;}
+.angular-confirm-text .angular-confirm-copy{font-size:14px;letter-spacing:0.4px;margin:0;text-align:center;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+/*! CSS Used from: Embedded */
+.FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+/*! CSS Used from: Embedded */
+.FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+
+/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-79e90a8f89fd85fce9ba.css ; media=screen */
+@media screen{
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+.fade{opacity:0;-webkit-transition:opacity 0.15s linear;transition:opacity 0.15s linear;}
+.fade.in{opacity:1;}
+.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#161b20;}
+.modal-backdrop.fade{filter:alpha(opacity=0);opacity:0;}
+.modal-backdrop.in{filter:alpha(opacity=95);opacity:0.95;}
+.modal-backdrop{z-index:1040;background-color:#161b20;}
+.modal-backdrop.in{filter:alpha(opacity=95);opacity:0.95;}
+.modal-backdrop,.modal-backdrop.fade.in{opacity:0.66!important;}
+.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;background-color:rgba(0, 0, 0, .66);}
+.modal-backdrop.fade{opacity:0;}
+.modal-backdrop,.modal-backdrop.fade.in{filter:alpha(opacity=8000);opacity:80;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+
+/*ifn style popup*/

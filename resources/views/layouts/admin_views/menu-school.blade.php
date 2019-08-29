@@ -1056,14 +1056,14 @@
                         <hr ng-if="::permissions.can('view_courses')">
                         <!---->
                         <!---->
-                        <h3 ng-if="::permissions.can('view_courses')" class="nav-section-title hide-on-expand"><a ui-sref="admin.courses" href="{{url('courses')}}">Courses</a><a ui-sref="admin.courses.new" class="plus" href="/schoolAdmin/{{$school->id}}/courses/create">+</a>
+                        <h3 ng-if="::permissions.can('view_courses')" class="nav-section-title hide-on-expand"><a ui-sref="admin.courses" href="/schoolAdmin/{{$school->id}}/courses">Cours</a><a ui-sref="admin.courses.new" class="plus" href="/schoolAdmin/{{$school->id}}/courses/create">+</a>
                         </h3>
                         <!---->
                         <!---->
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_courses')" text="Courses" icon="icon icon-book2" sref="admin.courses" show-on-expand="true" class="show-on-expand">
-                            <!----><a what="link" ui-sref="admin.courses" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/courses">
+                            <!----><a what="link" ui-sref="admin.courses" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/courses">
                                 <!----><i ng-if="::icon" ng-class="::icon" tooltip="Courses" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-book2"></i>
                                 <!---->
                                 <!---->
@@ -1076,20 +1076,22 @@
                         <!---->
                         <!---->
                         <!---->
+                        @foreach($school->courses as $course)
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_courses')" ng-repeat="course in courses | limitTo: 3" text="Développeur Web Junior" sref="admin.courses.course.information({id: '594160'})" minimal="true" hide-on-expand="true"
                           class="hide-on-expand">
                             <!----><a what="link" ui-sref="admin.courses.course.information({id: '594160'})" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }"
-                              href="/admin/courses/594160/information" class="text-only">
+                              href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/information" class="text-only">
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Développeur Web Junior</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">{{$course->name}}</span></a>
                             <!---->
                             <!---->
                             <!---->
                         </li>
+                        @endforeach
                         <!---->
                         <!---->
                         <!---->

@@ -14,7 +14,7 @@
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Information"
       sref="admin.courses.course.information" onboarding-tooltip-if="course.name == false || course.friendly_url == false || course.author_bio_id == false" onboarding-tooltip-text="Set a course name, author, and friendly URL to complete this step"
       class="active">
-        <!----><a what="link" ui-sref="admin.courses.course.information" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/courses/627895/information" class=""
+        <!----><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/information" class=""
           style="">
             <!---->
             <!---->
@@ -41,7 +41,7 @@
     <li what="nav item" ui-sref-active="active"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Curriculum"
       sref="admin.courses.course.curriculum" onboarding-tooltip-if="course.has_published_lecture == false &amp;&amp; course.bundled_courses_count == 0" onboarding-tooltip-text="Create and publish at least one lecture to complete this step" class="">
-        <!----><a what="link" ui-sref="admin.courses.course.curriculum" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/courses/627895/curriculum" class=""
+        <!----><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum" class=""
           style="">
             <!---->
             <!---->
@@ -49,7 +49,7 @@
             <!---->
             <div href="javascript:void(0)" ng-if="::onboardingTooltipIf" tooltip="Create and publish at least one lecture to complete this step" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
               class="tch-onboarding-sidebar-tooltip"></div>
-            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Curriculum</span>
+            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Programme du cours</span>
         </a>
         <!---->
         <!---->
@@ -60,11 +60,11 @@
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
       ng-if="::permissions.can('set_course_prices')" text="Pricing" sref="admin.courses.course.pricing" onboarding-tooltip-if="course.has_published_product == false" onboarding-tooltip-text="Create one or more pricing plans to complete this step"
       class="">
-        <!----><a what="link" ui-sref="admin.courses.course.pricing" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/courses/627895/pricing?page=1">
+        <!----><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing">
             <!---->
             <!---->
             <!---->
-            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Pricing</span></a>
+            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Offres de prix</span></a>
         <!---->
         <!---->
         <!---->
