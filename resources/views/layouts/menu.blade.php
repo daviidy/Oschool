@@ -65,7 +65,7 @@
       <div class="container">
         <div class="row">
           <a class="create-course" href="{{route('login')}}">Salle de classe</a>
-          <a class="teachable-logo" href="/" title="Teachable - Create a Course"></a>
+          <a class="teachable-logo" href="/" title="Teachable - Create a Course"><img src="/images/schools/logos/oschool.png" alt="" style="width: 130px;"></a>
           <a class="log-in" href="/login?src=nav">Entreprises</a>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -99,59 +99,63 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-2 first-section">
-        <ul class="new-homepage-footer-links">
-          <h4>Product</h4>
-          <li>
-            <a href="/examples">Examples</a>
-          </li>
-          <li>
-            <a href="/features">Features</a>
-          </li>
-          <li>
-            <a href="/pricing">Pricing</a>
-          </li>
-        </ul>
+
+          <h4> <img src="/images/schools/logos/oschool_2.png" alt="" style="width: 130px;"> </h4>
+          <p> <br> Oschool vous offre la possibilité de poursuivre des diplômes et certificats 100% en ligne, auprès des meilleures universités d’Afrique.</p>
+          <p>© 2019 OSCHOOL. TOUS DROITS RÉSERVÉS.</p>
       </div>
       <div class="col-sm-2 second-section">
         <ul class="new-homepage-footer-links">
-          <h4>Learn</h4>
+          <h4>Oschool</h4>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://teachable.zendesk.com/hc/en-us">Knowledge Base</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://teachable.zendesk.com/hc/en-us">Carrières</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/blog">Blog</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/blog">Devenez formateur</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/podcast/everything-is-teachable">Podcast</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/podcast/everything-is-teachable">FAQ</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/podcast/everything-is-teachable">La communauté</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/podcast/everything-is-teachable">Témoignages</a>
           </li>
         </ul>
       </div>
       <div class="col-sm-2 third-section">
         <ul class="new-homepage-footer-links">
-          <h4>Company</h4>
+          <h4>Plus</h4>
           <li>
-            <a href="/careers">Careers</a>
+            <a href="/careers">Conditions</a>
           </li>
           <li>
-            <a href="/experts">Experts</a>
+            <a href="/experts">Confidentialité</a>
           </li>
           <li>
-            <a href="/affiliates">Become an affiliate</a>
+            <a href="/affiliates">Contactez-nous</a>
+          </li>
+          <li>
+            <a href="/affiliates">Blog</a>
           </li>
         </ul>
       </div>
       <div class="col-sm-3">
         <ul class="new-homepage-footer-links">
-          <h4>Legal</h4>
+          <h4>Réseaux sociaux</h4>
           <li>
-            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/privacy-policy">Facebook</a>
           </li>
           <li>
-            <a href="/terms-of-use">Terms of Use</a>
+            <a href="/terms-of-use">Twiter Linkedin</a>
+          </li>
+          <li>
+            <a href="/terms-of-use">Linkedin</a>
           </li>
         </ul>
       </div>
-      <div class="col-sm-3">
+      <!--div class="col-sm-3">
         <ul class="new-homepage-footer-links">
           <h4>Get in touch</h4>
           <li>We're here if you need us:</li>
@@ -173,16 +177,16 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div-->
     </div>
-    <div class="row">
+    <!--div class="row">
       <div class="col-sm-12 new-homepage-footer-logo padding">
         <a href="/">
           <img alt="" src="https://teachable.com/assets/teachable-logo-orange-3ece80f83dd5fdb472495dd41735abbb3e685c351b2e54a84aaee8c56e9f1283.svg" class="new-homepage-footer-logo">
         </a>
         <span>All rights reserved Teachable™ 2019</span>
       </div>
-    </div>
+    </div-->
   </div>
 </footer>
 

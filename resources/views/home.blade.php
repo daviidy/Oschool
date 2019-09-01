@@ -7,7 +7,7 @@
     <section class="hero-partial _2">
         <style>
             ._2 {
-                margin-bottom: 105px;
+                margin-bottom: 50px;
             }
 
             @media (max-width: 991px) {
@@ -44,16 +44,16 @@
                 ._2 .container,
                 ._2 .row,
                 ._2 .col-xs-12 {
-                    min-height: 765px;
+                    min-height: 490px;
                 }
 
                 ._2 .container {
-                    padding-top: 85px;
+                    padding-top: 65px;
                 }
             }
         </style>
         <div id="segment-event" type="hidden" value="Submit Home Page Hero Form"></div>
-        <div class="hero-div" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/nvpceaUsR6m0RayBroe6_homepage-hero.jpg);">
+        <div class="hero-div" style="background-image: url(/images/divers/oschool_3.jpg);">
             <div class="container hero-container">
                 <div class="row">
                     <div class="col-xs-12 vertically-align-contents-except-xs">
@@ -429,7 +429,7 @@
             }
 
             ._5 .left-column {
-                background-color: #F4FAFA
+                background-color: #f3f9fa
             }
 
             ._5 .color {
@@ -584,7 +584,7 @@
                 <div class="col-md-5">
                     <h1 class="default-header">Accompagnement à l'emploi</h1>
                     <p class="default-paragraph">Vous aurez accès à des sessions de coaching en carrière, à des conseils de préparation aux entretiens, à des résumés de CV et à des critiques de profils professionnels en ligne pour vous aider à progresser dans votre carrière.</p>
-                    <a class="next-step green-button">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    <a class="next-step green-button" style="background: #FF6D2C;">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
                 </div>
             </div>
             <!--div class="row second-row" data-step="5">
@@ -802,7 +802,7 @@
         <div class="container">
             <div class="row header-row">
                 <div class="col-xs-12">
-                    <h1 class="default-header">Ils ont reussir avec Oschool</h1>
+                    <h1 class="default-header">Ils ont reussi avec Oschool</h1>
                     <p class="default-paragraph"></p>
                 </div>
             </div>

@@ -59,7 +59,7 @@
           @if($school->heading)
           <h1>{{$school->heading}}</h1>
           @else
-          <h1>The best creators in the world build their online courses on Teachable</h1>
+          <h1>Les meilleurs formateurs et Université d'afrique construisent leurs cours en ligne sur Oschool</h1>
           @endif
 
           <h2>Les meilleures écoles et universités d'Afrique enseignent sur Oschool</h2>
