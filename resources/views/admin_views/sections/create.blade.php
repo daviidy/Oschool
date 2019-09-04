@@ -1,49 +1,34 @@
-@extends('layouts.admin_views.menu-school')
+@extends('layouts.admin_views.menu-school-icon')
 @section('content')
 
 <style media="screen">
-/*course create form*/
-
 
 /*! CSS Used from: Embedded */
 .ng-hide:not(.ng-hide-animate){display:none!important;}
-/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-8126fa277249c04e853f.css ; media=screen */
+/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-79e90a8f89fd85fce9ba.css ; media=screen */
 @media screen{
-a{background-color:transparent;}
-a:active,a:hover{outline:0;}
-button,input,select{color:inherit;font:inherit;margin:0;}
+button,input{color:inherit;font:inherit;margin:0;}
 button{overflow:visible;}
-button,select{text-transform:none;}
+button{text-transform:none;}
 button{-webkit-appearance:button;cursor:pointer;}
-button[disabled]{cursor:default;}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 input{line-height:normal;}
 .fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-.fa-question-circle:before{content:"\F059";}
 .fa-bars:before{content:"\F0C9";}
-a{background-color:transparent;}
-a:active,a:hover{outline:0;}
-button,input,select{color:inherit;font:inherit;margin:0;}
+button,input{color:inherit;font:inherit;margin:0;}
 button{overflow:visible;}
-button,select{text-transform:none;}
+button{text-transform:none;}
 button{-webkit-appearance:button;cursor:pointer;}
-button[disabled]{cursor:default;}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 input{line-height:normal;}
 @media print{
 *,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
-a,a:visited{text-decoration:underline;}
-a[href]:after{content:" (" attr(href) ")";}
-a[href^="javascript:"]:after{content:"";}
 p,h2{orphans:3;widows:3;}
 h2{page-break-after:avoid;}
 }
 *{-webkit-box-sizing:border-box;box-sizing:border-box;}
 *:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
-input,button,select{font-family:inherit;font-size:inherit;line-height:inherit;}
-a{color:#30787d;text-decoration:none;}
-a:hover,a:focus{color:#09a59a;text-decoration:underline;}
-a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+input,button{font-family:inherit;font-size:inherit;line-height:inherit;}
 h2{font-family:inherit;font-weight:700;line-height:1.1;color:inherit;}
 h2 .small{font-weight:400;line-height:1;color:#e4e5e6;}
 h2{margin-top:22px;margin-bottom:11px;}
@@ -57,7 +42,7 @@ p{margin:0 0 11px;}
 .col-lg-3,.col-lg-9,.col-md-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
 @media (min-width: 992px){
 .col-md-12{float:left;}
-.col-md-12{width:66%;}
+.col-md-12{width:100%;}
 }
 @media (min-width: 1200px){
 .col-lg-3,.col-lg-9{float:left;}
@@ -72,21 +57,16 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .form-control::-webkit-input-placeholder{color:#999;}
 .form-control::-ms-expand{background-color:transparent;border:0;}
 .form-group{margin-bottom:15px;}
+.has-success .help-block,.has-success .control-label{color:#3c763d;}
+.has-success .form-control{border-color:#3c763d;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);}
+.has-success .form-control:focus{border-color:#2b542c;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168;box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168;}
 .help-block{display:block;margin-top:5px;margin-bottom:10px;color:#556878;}
-.btn{display:inline-block;margin-bottom:0;font-weight:normal;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;padding:6px 12px;font-size:13px;line-height:1.72222;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-.btn:focus,.btn:active:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
-.btn:hover,.btn:focus{color:white;text-decoration:none;}
-.btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);}
-.alert{padding:15px;margin-bottom:22px;border:1px solid transparent;border-radius:4px;}
-.alert-info{color:#3498db;background-color:#d9edf7;border-color:#bce8f1;}
-[disabled]{cursor:default!important;pointer-events:none;}
 .tch-btn-header-primary{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
 .tch-btn-header-primary:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
 .tch-btn-header-primary:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
 .tch-btn-header-primary:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
 .tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
 .tch-btn-header-primary:active{background-image:none;}
-.tch-btn-header-primary[disabled],.tch-btn-header-primary[disabled]:hover,.tch-btn-header-primary[disabled]:focus,.tch-btn-header-primary[disabled]:active{filter:alpha(opacity=65);opacity:0.65;background-color:#ff7f45;border-color:#ff7f45;cursor:not-allowed;-webkit-box-shadow:none;box-shadow:none;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
@@ -101,23 +81,6 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .tch-btn-header-icon:active:hover,.tch-btn-header-icon:active:focus,.tch-btn-header-icon:hover:hover,.tch-btn-header-icon:hover:focus,.tch-btn-header-icon:focus:hover,.tch-btn-header-icon:focus:focus{background:white;border-color:#ff7f45;color:#ff7f45;}
 .tch-btn-header-icon:focus{outline:0!important;}
 .tch-btn-header-icon:focus{outline:0!important;}
-.tch-btn-tooltip{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;padding:4px 5px!important;color:#ff7f45;}
-.tch-btn-tooltip:focus{outline:0!important;}
-.tch-btn-tooltip:hover,.tch-btn-tooltip:active,.tch-btn-tooltip:focus{color:#ff631c;-webkit-box-shadow:none;box-shadow:none;}
-@media screen and (max-width: 1000px){
-.tch-btn-tooltip{display:none;}
-}
-.alert{background:none;color:#20272d;padding:14px 25px 14px 25px;text-shadow:none;border-radius:3px;font-family:"TeachableSans";line-height:21px;letter-spacing:0.2px;margin-bottom:26px;font-weight:400;font-size:11px;font-weight:500;display:-webkit-box;display:-ms-flexbox;display:flex;position:relative;-webkit-box-align:center;-ms-flex-align:center;align-items:center;letter-spacing:0.5px;font-size:12px;}
-.alert a{color:#f1c40f;font-weight:bold;}
-.alert a:hover{text-decoration:underline;}
-.alert{padding:14px 25px 14px 47px;background:none;border:1px solid #e0e0e0;color:#6f6c6c;}
-.alert:before{font-family:FontAwesome;position:absolute;margin-left:-30px;display:block;top:calc(50% - 15px);padding:5px;font-size:20px;color:#809196;opacity:0.9;}
-.alert a{text-decoration:underline;font-weight:600;}
-.alert-info{background:#fff8f5;border:1px solid #ffccb5;color:#ea7e4d;}
-.alert-info:before{content:'\F059';color:#ea7e4d;}
-.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#ea7e4d;text-decoration:underline;}
-.tch-learn-more{text-align:center;}
-.tch-learn-more .alert{display:inline-block;margin:auto;}
 label{font-weight:normal;line-height:2.4;font-size:16px;color:#808080;line-height:30px;font-weight:600;margin-bottom:12px;}
 .control-label{font-size:13px!important;margin-bottom:5px;color:#47505e!important;line-height:22px;font-weight:500;letter-spacing:0.5px;}
 .form-control::-moz-placeholder{color:#97999b;opacity:1;}
@@ -125,7 +88,11 @@ label{font-weight:normal;line-height:2.4;font-size:16px;color:#808080;line-heigh
 .form-control::-webkit-input-placeholder{color:#97999b;}
 .form-control{border:1px solid #dbdbdb;color:#20272d;font-family:"TeachableSans", Helvetica, Arial, sans-serif;font-size:13px;line-height:1.467;padding:12px 14px;height:44px;border-radius:5px;-webkit-box-shadow:none;box-shadow:none;-webkit-transition:"border .25s linear, color .25s linear, background-color .25s linear";transition:"border .25s linear, color .25s linear, background-color .25s linear";}
 .form-control:focus{outline:0;border:1px solid rgba(0, 0, 0, .34)!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
-select.form-control{-moz-appearance:none;appearance:none;-webkit-appearance:none;background:url("//assets.teachablecdn.com/admin/assets/images/select-up-down.png") right 12px center #fff no-repeat;background-size:15px;font-size:13px;}
+.has-success .help-block,.has-success .control-label{color:#dbdbdb;}
+.has-success .form-control{border-color:#dbdbdb;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);}
+.has-success .form-control:focus{border-color:#c2c2c2;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px white;box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px white;}
+.has-success .form-control{-webkit-box-shadow:none!important;box-shadow:none!important;}
+.has-success .help-block{display:none;}
 .help-block{color:inherit;padding:0px 0px;font-size:13px;-webkit-box-shadow:none;box-shadow:none;display:none;}
 .form-group{position:relative;margin-bottom:28px;}
 h2{font-family:inherit;font-weight:700;line-height:1.1;color:inherit;}
@@ -144,8 +111,6 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
 .tch-page-header button i{margin-right:0;}
 .tch-page-header .tch-btn-header-icon{padding:10px 15px;}
 .control-label{font-size:14px;}
-a{color:#1ea69a;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
-a:hover,a:focus{color:#167b72;text-decoration:none;}
 .tch-section-heading h2.tch-subheading{margin-top:10px;padding-right:10px;color:#555765;}
 .tch-section-wrapper{display:block;height:auto;padding-bottom:20px;margin-left:0px;margin-right:0px;margin-bottom:35px;position:relative;border-bottom:1px solid #dbdbdb;}
 .tch-section-wrapper:target .tch-section-content{-webkit-animation:highlight 1s ease-out;animation:highlight 1s ease-out;}
@@ -175,19 +140,19 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .admin-content:not(.tch-sidebar-is-collapsed-by-default) .tch-btn-hamburger{display:none!important;}
 .admin-content:not(.tch-sidebar-is-collapsed-by-default) .tch-btn-hamburger i{display:none!important;}
 }
-.space::before{content:'\A0';}
 *,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
-.btn{font-family:'TeachableSans', sans-serif;}
 }
 /*! CSS Used from: Embedded */
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
 /*! CSS Used from: Embedded */
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+
+
 </style>
 
 
 <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
-    <div what="page header" class="tch-section-nav tch-page-header" icon="" text="New Course">
+    <div what="page header" class="tch-section-nav tch-page-header" icon="icon icon-list3" text="New Section">
         <div ng-class="{ 'has-sections': sections }" class="tch-section-nav-wrapper affixed">
             <div ng-class="{ 'extra-height': sections.length > 1, 'has-beta-banner': hasBetaBanner }" class="tch-section-nav-placeholder"></div>
             <div ng-class="{ 'fixed': fixed }" class="tch-section-nav-box dynamic-width">
@@ -195,7 +160,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Nouveau cours
+                    <!---->Nouvelle section
                 </div>
                 <!---->
                 <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -203,21 +168,20 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <!---->
         </div>
     </div>
-    <!---->
-    <form method="post" enctype="multipart/form-data" action="{{route('courses.store')}}" name="courseNewForm">
-        <div id="section-information" class="row tch-section-wrapper">
+    <form method="post" action="{{route('sections.store')}}" class="ng-valid-maxlength ng-dirty ng-valid-parse ng-valid ng-valid-required" style="">
+        <div ng-show="!section.if || section.if()" id="section-new_section" class="row tch-section-wrapper" form="newSectionForm" section="{ name: 'new_section' }" save="save" save-label="Create Section">
             <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
                 <!---->
                 <!---->
                 <h2 ng-if="section.name" class="tch-subheading">
-                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Information</span>
+                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">New Section</span>
                     <!---->
                     <!---->
                     <!---->
                     <!---->
                     <!----><br ng-if="!removeDescriptionLineBreak">
                     <!---->
-                    <p ng-bind-html="section.description" what="section-description" class="small">Ajoutez des informations de base sur le cours et le nom de l'auteur.<br><br>Pour ajouter un titre d'auteur, une image et une biographie, visitez le site bios</p>
+                    <p ng-bind-html="section.description" what="section-description" class="small"></p>
                     <!---->
                     <!---->
                 </h2>
@@ -225,26 +189,30 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             </div>
             @csrf
             <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
-                <div ng-transclude="" id="authorBlock">
-                    <div form="courseNewForm" label="Course Title" for="name">
+                <div ng-transclude="">
+                    <div form="newSectionForm" label="Section Name" for="name">
                         <!---->
-                        <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group">
+                        <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group has-success">
                             <label-block required-label="requiredLabel">
                                 <!---->
                                 <!----><label for="name" ng-if="label" class="control-label">
-                                    <!----><span ng-bind="label">Titre du cours</span>
+                                    <!----><span ng-bind="label">Nom de la section</span>
                                     <!----></label>
                                 <!---->
                                 <!---->
                                 <!---->
                             </label-block>
-                            <div ng-transclude=""><input id="course-name" what="name" ng-model="course.name" type="text" name="name" maxlength="100" placeholder="e.g. 'Techniques avancées en Photoshop'" autofocus="true"
-                                  required="" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"></div>
+                            <div ng-transclude=""><input name="title" maxlength="100" placeholder="e.g. Introduction" type="text" required=""
+                                  class="form-control ng-valid-maxlength ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" style="">
+                              </div>
+                              <input value="{{$course->id}}" name="course_id" maxlength="100" placeholder="e.g. Introduction" type="text" required=""
+                                    class="form-control ng-valid-maxlength ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" style="display: none;">
+                            <input value="{{$school->id}}" name="school_id" maxlength="100" placeholder="e.g. Introduction" type="text" required=""
+                                  class="form-control ng-valid-maxlength ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" style="display: none;">
                             <help-block>
-                                <ng-messages for="form[for].$error" role="alert" class="ng-active">
+                                <ng-messages for="form[for].$error" role="alert" class="ng-inactive" style="">
                                     <!---->
                                     <!---->
-                                    <ng-message when="required" class="help-block">Required field</ng-message>
                                     <!---->
                                     <!---->
                                     <!---->
@@ -263,147 +231,21 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <!---->
                         <!---->
                     </div>
-                    <div form="courseNewForm" label="Course Subtitle" for="heading">
-                        <!---->
-                        <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group">
-                            <label-block required-label="requiredLabel">
-                                <!---->
-                                <!----><label for="heading" ng-if="label" class="control-label">
-                                    <!----><span ng-bind="label">Description courte</span>
-                                    <!----></label>
-                                <!---->
-                                <!---->
-                                <!---->
-                            </label-block>
-                            <div ng-transclude=""><input id="course-heading" type="text" name="subtitle" maxlength="160" value="" placeholder="e.g. 'Tout ce que vous avez besoin de savoir sur le montage vidéo'"
-                                  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"><label ng-show="state.errors.heading" ng-bind="state.errors.heading" for="#course-heading" class="control-label ng-hide"></label>
-                            </div>
-                            <help-block>
-                                <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                </ng-messages>
-                                <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="heading" class="help-block ng-hide"></div>
-                            </help-block>
-                        </div>
-                        <!---->
-                        <!---->
-                    </div>
-                    <div style="display: none;" ng-transclude="">
-                        <input name="school_id" id="schoolId" type="text" maxlength="160" value="{{$school->id}}" placeholder="e.g. 'Tout ce que vous avez besoin de savir sur le montage vidéo'"
-                          class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
-                    </div>
-                    <div label="Select Category" tooltip-text="Displays on student curriculum side as &quot;Instructor&quot;" for="author">
-                        <!---->
-                        <!---->
-                        <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
-                            <label-block required-label="requiredLabel">
-                                <!---->
-                                <!----><label for="author" ng-if="label" class="control-label">
-                                    <!----><span ng-bind="label">Choisir la catégorie</span>
-                                    <!----></label>
-                                <!---->
-                                <!----><a href="javascript:void(0)" ng-if="tooltipText" tooltip="Displays on student curriculum side as &quot;Instructor&quot;" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
-                                  class="btn tch-btn-tooltip"><i class="fa fa-question-circle"></i></a>
-                                <!---->
-                                <!---->
-                            </label-block>
-                            <div ng-transclude="">
-                                <select name="category_id" what="author" ng-model="course.author_bio_id" ng-options="author.id as author.name for author in authors | orderBy:'name'" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
-                                    @foreach($categories as $category)
-                                    <option label="" value="{{$category->id}}">{{$category->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <help-block>
-                                <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                </ng-messages>
-                                <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="author" class="help-block ng-hide"></div>
-                            </help-block>
-                        </div>
-                        <!---->
-                    </div>
-                    <div id="selectAuthor" label="Select Author" tooltip-text="Displays on student curriculum side as &quot;Instructor&quot;" for="author">
-                        <!---->
-                        <!---->
-                        <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
-                            <label-block required-label="requiredLabel">
-                                <!---->
-                                <!----><label for="author" ng-if="label" class="control-label">
-                                    <!----><span ng-bind="label">Choisir l'auteur</span>
-                                    <!----></label>
-                                <!---->
-
-                            </label-block>
-                            <div ng-transclude="">
-                                <a style="cursor: pointer;" id="addAuthor">Ajouter nouvel auteur</a>
-                                @if($school->authors)
-                                <select id="listAuthor" name="author_id" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
-                                    @foreach($school->authors as $author)
-                                    <option label="davidy" value="{{$author->id}}">{{$author->name}}</option>
-                                    @endforeach
-                                </select>
-                                @endif
-                            </div>
-
-                        </div>
-                        <!---->
-                    </div>
-
-                    <div style="display: none;" id='inputCreateAuthor'>
-                        <div class='form-group'>
-                            <label-block required-label='requiredLabel'><label for='author' ng-if='label' class='control-label'><span ng-bind='label'>Ajouter nouvel auteur</span><a style='cursor: pointer;' id='cancelAddAuthor'>Annuler</a></label></label-block>
-                            <div ng-transclude=''>
-                                <input id='author-name' type='text' placeholder='Nom complet du prof'
-                                  class='form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength'></div>
-                        </div>
-                    </div>
-
-                    <a style='display: none; cursor: pointer;' id='createAuthor'>Ajouter</a>
-
-
-                    <!---->
                 </div>
                 <div ng-show="showButtonsBar" class="tab-bottom">
                     <!---->
                     <!---->
-                    <button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Créer le cours</button>                    <!---->
+                    <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Create Section</button>
+                    <!---->
                 </div>
             </div>
         </div>
     </form>
-    <div class="tch-learn-more" text="about creating a course in the Teachable Knowledge Base" label="admin.courses.new">
-        <div class="alert alert-info">
-            <!---->
-            <div ng-transclude="" ng-class="{ 'border-left': title }" class="alert-text-wrapper"><a ng-href="https://support.teachable.com/hc/en-us/articles/220340327-Create-and-Set-Up-Your-Course-?src=admin"
-                  href="https://support.teachable.com/hc/en-us/articles/220340327-Create-and-Set-Up-Your-Course-?src=admin" target="_blank">Learn more</a><span class="space"></span><span ng-bind="text">about creating a course in the Teachable
-                    Knowledge Base</span></div>
-        </div>
-    </div><br><br>
 </div>
+
+
+
+
+
 
 @endsection

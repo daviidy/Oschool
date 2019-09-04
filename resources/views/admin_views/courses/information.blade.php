@@ -806,7 +806,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                         <div class="row">
                                             <div class="col-lg-9 col-md-8 col-xs-12">
                                                 <div ng-show="form.image_url" class="ng-hide"><img ng-src="" width="480" what="thumbnail-image" class="course-image img-responsive"></div>
-                                                <div ng-hide="form.image_url" class=""><img src="/admin/assets/images/default-course-image.png" width="480" class="course-image img-responsive"></div>
+                                                <div ng-hide="form.image_url" class=""><img src="/images/courses/logos/{{$course->logo}}" width="480" class="course-image img-responsive"></div>
                                             </div>
                                             <div class="col-lg-3 col-md-4 col-xs-12">
                                                 <div

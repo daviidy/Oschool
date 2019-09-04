@@ -47,9 +47,10 @@
             <!---->
             <!---->
             <!---->
+            <!--
             <div href="javascript:void(0)" ng-if="::onboardingTooltipIf" tooltip="Create and publish at least one lecture to complete this step" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
-              class="tch-onboarding-sidebar-tooltip"></div>
-            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Programme du cours</span>
+              class="tch-onboarding-sidebar-tooltip"></div>-->
+            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Programme</span>
         </a>
         <!---->
         <!---->

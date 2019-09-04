@@ -298,11 +298,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     @foreach($school->courses as $course)
                     <div class="tch-course-listing col-lg-4 col-md-6 col-xs-6 ui-sortable-handle clearfix">
-                        <a href="/admin/courses/627895/information">
+                        <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/information">
                             <div class="tch-course-listing-wrapper">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div style="background-image: url(/images/courses/{{$course->image}});background-size: 40%;" class="tch-course-listing-image"></div>
+                                        <div style="background-image: url(/images/courses/logos/{{$course->logo}});background-size: 40%;" class="tch-course-listing-image"></div>
                                         <div what="course name" ng-bind="::course.name" class="tch-course-listing-title">{{$course->name}}</div>
                                     </div>
                                 </div>
