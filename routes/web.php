@@ -27,6 +27,10 @@ Route::resource('categories', 'CategoryController');
 
 Route::resource('pricings', 'PricingController');
 
+Route::resource('sections', 'SectionController');
+
+Route::resource('lessons', 'LessonController');
+
 
 /*
 
@@ -50,6 +54,7 @@ Route::post('/updateSchoolStatus', 'SchoolController@updateSchoolStatus');
 Route::post('/deleteSchool', 'SchoolController@deleteSchool');
 Route::post('/updateSchool', 'SchoolController@updateSchool');
 Route::post('/addAuthor', 'SchoolController@addAuthor');
+Route::post('/repositionLessons', 'LessonController@repositionLessons')->name('reposition-lessons');
 
 
 
@@ -97,6 +102,8 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pages', 'CourseController@pag
 
 //course curriculum
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum')->name('course');
+Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/new-section', 'SectionController@create')->name('course');
+Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/new-lecture', 'LessonController@create')->name('course');
 
 //course pricing
 Route::get('/schoolAdmin/{school}/courses/{course}/pricing', 'CourseController@pricing')->name('course');

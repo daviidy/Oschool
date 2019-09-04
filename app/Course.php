@@ -25,7 +25,7 @@ class Course extends Model
 
      /**
       * [users description]
-      * relationship many to many with User model
+      * relationship one to many with User model
       * @return [array] [description]
       */
       public function author()
@@ -36,7 +36,7 @@ class Course extends Model
 
       /**
        * [users description]
-       * relationship many to many with Category model
+       * relationship one to many with Category model
        * @return [array] [description]
        */
        public function category()
@@ -47,7 +47,7 @@ class Course extends Model
 
        /**
         * [users description]
-        * relationship many to many with School model
+        * relationship one to many with School model
         * @return [array] [description]
         */
         public function school()
@@ -58,12 +58,33 @@ class Course extends Model
 
         /**
          * [users description]
-         * relationship many to many with Pricing model
+         * relationship one to many with Pricing model
          * @return [array] [description]
          */
          public function pricings()
          {
              return $this->hasMany('App\Pricing');
          }
+
+
+         /**
+          * [users description]
+          * relationship one to many with Section model
+          * @return [array] [description]
+          */
+          public function sections()
+          {
+              return $this->hasMany('App\Section');
+          }
+
+          /**
+           * [users description]
+           * relationship one to many with Lesson model
+           * @return [array] [description]
+           */
+           public function lessons()
+           {
+               return $this->hasMany('App\Lesson');
+           }
 
 }

@@ -218,14 +218,14 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Curriculum
+                    <!---->Programme du cours
                 </div>
                 <!---->
-                <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"><a what="preview btn" ng-href="/courses/vr-course/?preview=logged_in" target="_blank" class="tch-btn-header-secondary"
-                      href="/courses/vr-course/?preview=logged_in">Preview</a><span class="space"></span>
-                    <div data-ng-transclude="" what="bulk upload btn" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" data-mimetype="video/*" ng-click="safariResize()"
-                      class="tch-btn-header-secondary fastclickable"><span>Bulk Upload</span></div><span class="space"></span><a what="new section btn" ui-sref="admin.courses.course.curriculum.new_section" class="tch-btn-header-primary"
-                      href="/admin/courses/627895/curriculum/new-section">New Section</a>
+                <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons">
+                    <a what="preview btn" ng-href="/courses/vr-course/?preview=logged_in" target="_blank" class="tch-btn-header-secondary"
+                      href="/courses/vr-course/?preview=logged_in">Aperçu</a><span class="space"></span>
+                    <span class="space"></span><a what="new section btn" ui-sref="admin.courses.course.curriculum.new_section" class="tch-btn-header-primary"
+                      href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/new-section">Nouvelle section</a>
                 </div>
             </div>
             <!---->
@@ -234,32 +234,41 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
     <div class="row">
         <!---->
         <div ng-show="selectedLectures.length == 0 &amp;&amp; selectedLectureSections.length > 0" class="bulk-actions cssFade ng-animate ng-hide"><span class="title">Bulk actions:</span>
+            <!----><button what="delete" ng-click="deleteLectures(selectedLectures)" confirm="Are you sure you want to delete 0 lecture sections?" tooltip="Delete selected sections" tooltip-placement="bottom" tooltip-trigger="mouseenter"
+              tooltip-append-to-body="true" ng-if="lectureSections.length > 1" class="tch-btn-icon-fa tch-btn-content-secondary fastclickable" style=""><i class="fa fa-trash-o"></i></button>
             <!----><button ng-click="togglePublishLectureSection()" tooltip="Toggle published setting" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
               class="tch-btn-icon-fa tch-btn-content-secondary fastclickable"><i class="fa fa-check-square-o"></i></button></div>
     </div>
     <div class="row">
         <div ui-tree="options" class="col-md-12 tch-ui-tree-curriculum angular-ui-tree">
-            <ol ui-tree-nodes="" ng-model="lectureSections" data-type="lectureSection" class="list-unstyled section-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty">
+            <ol ui-tree-nodes="" ng-model="lectureSections" data-type="lectureSection" class="list-unstyled section-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty" style="">
                 <!---->
-                <li ng-repeat="lectureSection in lectureSections track by lectureSection.id" ui-tree-node="" id="section-2320587" class="section-item angular-ui-tree-node" collapsed="false">
+                @if($course->sections)
+                @foreach($course->sections as $section)
+                <li ng-repeat="lectureSection in lectureSections track by lectureSection.id" ui-tree-node="" id="section-2320587" class="section-item angular-ui-tree-node" collapsed="false" style="">
                     <div what="section" ng-class="{ 'selected': lectureSection.allSelected, 'draft': !lectureSection.is_published}" class="section-heading angular-ui-tree-wrapper"><i ui-tree-handle=""
                           class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle"></i><span data-nodrag="" class="checkbox-container"><input what="checkbox" type="checkbox" ng-model="lectureSection.allSelected"
                               ng-change="selectLectureSection(lectureSection)" class="ng-pristine ng-untouched ng-valid ng-empty"></span><span class="title"><span what="section name" ng-bind="lectureSection.name" editable-text="lectureSection.name"
-                              e-form="lectureSectionNameEditForm" onbeforesave="$event.stopPropagation(); updateLectureSection(lectureSection, { name: $data })" class="lecture-section-name editable">First Section</span><button
+                              e-form="lectureSectionNameEditForm" onbeforesave="$event.stopPropagation(); updateLectureSection(lectureSection, { name: $data })" class="lecture-section-name editable">{{$section->title}}</span><button
                               what="edit section name" ng-click="$event.stopPropagation(); lectureSectionNameEditForm.$show()" ng-hide="lectureSectionNameEditForm.$visible" class="tch-btn-icon-fa icon-gray fastclickable"><i
                                   class="fa fa-pencil"></i></button>
                             <!----></span>
-                        <div class="pull-right"><a id="test-id-new-lecture-btn" ng-click="newLecture(lectureSection.id)" data-nodrag="" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">New Lecture</a></div>
+                        <div class="pull-right"><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/new-lecture" id="test-id-new-lecture-btn" ng-click="newLecture(lectureSection.id)" data-nodrag="" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">Nouvelle leçon</a></div>
                     </div>
                     <ol ui-tree-nodes="" ng-model="lectureSection.lectures" data-type="lecture" class="list-unstyled lecture-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty">
                         <!---->
-                        <li ng-repeat="lecture in lectureSection.lectures track by lecture.id" ui-tree-node="" ng-hide="deletedLectureIds.indexOf(lecture.id) != -1" ng-class="{'selected': lecture.isChecked, 'draft': !lecture.is_published}"
-                          id="lecture_11203304" ng-click="goToLecture(lecture)" class="lecture-item angular-ui-tree-wrapper angular-ui-tree-node fastclickable draft" collapsed="false"><i ui-tree-handle="" ng-click="$event.stopPropagation();"
-                              class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle fastclickable"></i><span data-nodrag="" ng-click="$event.stopPropagation();" class="checkbox-container fastclickable"><input type="checkbox"
+                        @if($section->lessons)
+                        @foreach($section->lessons as $lesson)
+                        <li
+                          id="lecture_11203304" ng-click="goToLecture(lecture)" class="lecture-item angular-ui-tree-wrapper angular-ui-tree-node fastclickable" collapsed="false" style=""><i ui-tree-handle="" ng-click="$event.stopPropagation();"
+                              class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle fastclickable {{$lesson->status == 'inactive' ? draft : ''}}"></i><span data-nodrag="" ng-click="$event.stopPropagation();" class="checkbox-container fastclickable">
+                                  <input type="checkbox"
                                   ng-model="lecture.isChecked" ng-change="selectLecture(lecture)" class="ng-pristine ng-untouched ng-valid ng-empty"></span><span class="title"><span ng-bind="lecture.name" editable-text="lecture.name"
                                   e-form="lectureNameEditForm" onbeforesave="$event.stopPropagation(); updateLecture(lecture, { name: $data });" class="lecture-name editable">New Lecture</span><button
                                   ng-click="lectureNameEditForm.$show(); $event.stopPropagation();" ng-hide="lectureNameEditForm.$visible" what="edit lecture name" class="tch-btn-icon-fa icon-gray fastclickable"><i class="fa fa-pencil"></i></button>
-                                <!----><label ng-if="!lecture.is_published" class="label label-default">DRAFT</label>
+                                  @if($lesson->status == 'inactive')
+                                  <label ng-if="!lecture.is_published" class="label label-default">DRAFT</label>
+                                  @endif
                                 <!----></span>
                             <div class="pull-right">
                                 <div class="btn-group"><button ng-click="$event.stopPropagation(); toggleLectureDownloadable(lecture)" tooltip="Make downloadable"
@@ -268,26 +277,30 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                                       ng-click="$event.stopPropagation(); toggleLectureFreePreview(lecture)" tooltip="Make free preview"
                                       ng-class="{ 'tch-btn-content-primary' : lecture.free_preview, 'tch-btn-content-secondary' : (lecture.free_preview==false || lecture.free_preview==null) }" tooltip-placement="bottom" tooltip-trigger="mouseenter"
                                       tooltip-append-to-body="true" what="preview lecture button" class="tch-btn-icon-fa fastclickable tch-btn-content-secondary"><i class="fa fa-eye"></i></button><button
-                                      ng-click="$event.stopPropagation(); toggleLecturePublished(lecture)" tooltip="Publish lecture"
+                                      ng-click="$event.stopPropagation(); toggleLecturePublished(lecture)" tooltip="Unpublish lecture"
                                       ng-class="{ 'tch-btn-content-primary' : lecture.is_published, 'tch-btn-content-secondary' : (lecture.is_published==false || lecture.is_published==null) }" tooltip-placement="left" tooltip-trigger="mouseenter"
-                                      tooltip-append-to-body="true" id="test-id-publish-lecture-icon" class="tch-btn-icon-fa fastclickable tch-btn-content-secondary"><i class="fa fa-check-square-o"></i></button></div>
+                                      tooltip-append-to-body="true" id="test-id-publish-lecture-icon" class="tch-btn-icon-fa fastclickable tch-btn-content-primary"><i class="fa fa-check-square-o"></i></button></div>
                             </div>
                         </li>
+                        @endforeach
+                        @endif
+                        <!---->
+
                         <!---->
                     </ol>
                 </li>
+                @endforeach
+                @endif
+                <!---->
+
                 <!---->
             </ol>
         </div>
     </div><br>
-    <div class="tch-learn-more" text="about creating your curriculum in the Teachable Knowledge Base" label="admin.courses.course.curriculum">
-        <div class="alert alert-info">
-            <!---->
-            <div ng-transclude="" ng-class="{ 'border-left': title }" class="alert-text-wrapper"><a ng-href="https://support.teachable.com/hc/en-us/articles/219441288-Sections-and-Lectures?src=admin"
-                  href="https://support.teachable.com/hc/en-us/articles/219441288-Sections-and-Lectures?src=admin" target="_blank">Learn more</a><span class="space"></span><span ng-bind="text">about creating your curriculum in the Teachable Knowledge
-                    Base</span></div>
-        </div>
-    </div>
+    @include('includes.information')
 </div>
+
+
+<script type="text/javascript" src="/js/admin_views/curriculum.js"></script>
 
 @endsection

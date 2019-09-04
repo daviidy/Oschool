@@ -473,7 +473,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <!---->
                     <!---->
-                    <div ng-if="planType == 'plan'" class="col-sm-12 text-center add-top-margin"><label class="for-checkbox"><input name="times" id="test-id-number-of-months" type="number" min="2"
+                    <div ng-if="planType == 'plan'" class="col-sm-12 text-center add-top-margin"><label class="for-checkbox"><input value="{{$pricing->times}}" name="times" id="test-id-number-of-months" type="number" min="2"
                               max="36" class="select-number form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-min ng-valid-max"><span ng-bind="'PRODUCT.monthly_payments' | translate">paiements mensuels</span></label>
                     </div>
                     <!---->

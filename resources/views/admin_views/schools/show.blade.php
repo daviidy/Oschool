@@ -47,8 +47,8 @@
                                 <!----><a ng-click="step.click()" ng-repeat="step in steps" ng-class="{ 'pill-completed': step.completed(), 'pill-active': step.active(), 'pill-disabled': step.disabled(), 'pill-highlighted': step.highlighted() }"
                                   class="tch-pill full-width fastclickable">
                                     <!----><span ng-if="step.liveWorkshop">
-                                        <!----><img ng-if="workshopState() == 'signup' || workshopState() == 'live' || workshopState() == 'pre'" ng-src="/admin/assets/images/icons/icon-webinar.svg" class="icon"
-                                          src="/admin/assets/images/icons/icon-webinar.svg">
+                                        <!----><img ng-if="workshopState() == 'signup' || workshopState() == 'live' || workshopState() == 'pre'" ng-src="/images/schools/icon-webinar.svg" class="icon"
+                                          src="/images/schools/icon-webinar.svg">
                                         <!---->
                                         <!----></span>
                                     <!---->
@@ -77,7 +77,7 @@
                                     <!---->
                                     <!----><span ng-if="!step.liveWorkshop">
                                         <!---->
-                                        <!----><img ng-src="/admin/assets/images/icons/icon-check.svg" ng-if="step.completed()" class="icon" src="/admin/assets/images/icons/icon-check.svg">
+                                        <!----><img ng-src="/images/schools/icon-check.svg" ng-if="step.completed()" class="icon" src="/images/schools/icon-check.svg">
                                         <!----></span>
                                     <!---->
                                     <!----><span ng-bind="step.text | translate">Create a course</span>
@@ -88,7 +88,7 @@
                                   class="tch-pill full-width fastclickable">
                                     <!---->
                                     <!----><span ng-if="!step.liveWorkshop">
-                                        <!----><img ng-if="!step.completed() &amp;&amp; !step.disabled()" ng-src="/admin/assets/images/icons/icon-customize.svg" class="icon" src="/admin/assets/images/icons/icon-customize.svg">
+                                        <!----><img ng-if="!step.completed() &amp;&amp; !step.disabled()" ng-src="/images/schools/icon-customize.svg" class="icon" src="/images/schools/icon-customize.svg">
                                         <!---->
                                         <!----></span>
                                     <!---->
@@ -110,7 +110,7 @@
                                   class="tch-pill full-width fastclickable">
                                     <!---->
                                     <!----><span ng-if="!step.liveWorkshop">
-                                        <!----><img ng-if="!step.completed() &amp;&amp; !step.disabled()" ng-src="/admin/assets/images/icons/icon-domain.svg" class="icon" src="/admin/assets/images/icons/icon-domain.svg">
+                                        <!----><img ng-if="!step.completed() &amp;&amp; !step.disabled()" ng-src="/images/schools/icon-domain.svg" class="icon" src="/images/schools/icon-domain.svg">
                                         <!---->
                                         <!----></span>
                                     <!---->
@@ -135,8 +135,8 @@
                                         <!---->
                                         <!----></span>
                                     <!---->
-                                    <!----><img ng-if="step.disabled()" ng-src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-lock.svg" class="icon more-faded"
-                                      src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-lock.svg">
+                                    <!----><img ng-if="step.disabled()" ng-src="https://fedora.teachablecdn.com/images/schools/icon-lock.svg" class="icon more-faded"
+                                      src="/images/schools/icon-lock.svg">
                                     <!----><span ng-bind="step.text | translate">Launch your school</span>
                                     <!---->
                                     <!---->

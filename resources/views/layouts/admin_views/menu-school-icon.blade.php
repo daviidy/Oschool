@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/admin/menu-school.css">
 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
       <link rel="stylesheet" href="/nProgress/nprogress.css">
       <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
 
@@ -398,7 +401,7 @@
   <script src="/js/quill/image-resize.min.js"></script>
   <script src="/js/quill/video-resize.min.js"></script>
 
-
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <!-- Initialize Quill editor -->
   <script>
