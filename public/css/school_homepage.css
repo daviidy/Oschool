@@ -130,9 +130,9 @@ input:not([type="submit"]){border:1px solid #E4E9ED;border-radius:3px;color:#5F5
 .vertically-align-contents-except-xs{display:flex;align-items:center;}
 }
 button.close{font-family:sans-serif;font-size:30px;float:none;position:absolute;text-align:center;}
-body.body-public .orange-button{font-family:'TeachableSans-Bold';display:inline-block;font-size:14px;border-radius:100px;padding:20px 70px;text-align:center;text-decoration:none!important;cursor:default;outline:none!important;box-shadow:none!important;background-color:#ff7f45;color:white;}
+body.body-public .orange-button{font-family:'TeachableSans-Bold';display:inline-block;font-size:14px;border-radius:100px;padding:20px 70px;text-align:center;text-decoration:none!important;cursor:default;outline:none!important;box-shadow:none!important;background-color:#4D90CC;color:white;}
 body.body-public .orange-button:not(.fake-button):not(.disabled):not([disabled]){cursor:pointer;}
-body.body-public .orange-button:not(.fake-button):not(.disabled):not([disabled]):hover,body.body-public .orange-button:not(.disabled):not([disabled]):focus{background-color:#FF6D2C;}
+body.body-public .orange-button:not(.fake-button):not(.disabled):not([disabled]):hover,body.body-public .orange-button:not(.disabled):not([disabled]):focus{background-color:#4D90CC;}
 .company-logos img{vertical-align:middle;}
 @media (max-width: 767px){
 .company-logos img{display:block;padding:0;margin:auto;margin-bottom:40px;}
@@ -960,9 +960,9 @@ body.body-public .green-button:not(.fake-button):hover{background-color:rgba(30,
 body.body-public .dark-green-button{font-family:'TeachableSans-Bold';display:inline-block;font-size:14px;border-radius:100px;padding:20px 70px;text-align:center;text-decoration:none!important;cursor:default;outline:none!important;box-shadow:none!important;background-color:#4D90CC;color:white;}
 body.body-public .dark-green-button:not(.fake-button):not(.disabled):not([disabled]){cursor:pointer;}
 body.body-public .dark-green-button:not(.fake-button):not(.disabled):hover,body.body-public .dark-green-button:not(.disabled):focus{background-color:#0F8D82;}
-body.body-public .orange-button{font-family:'TeachableSans-Bold';display:inline-block;font-size:14px;border-radius:100px;padding:20px 70px;text-align:center;text-decoration:none!important;cursor:default;outline:none!important;box-shadow:none!important;background-color:#FF6D2C;color:white;}
+body.body-public .orange-button{font-family:'TeachableSans-Bold';display:inline-block;font-size:14px;border-radius:100px;padding:20px 70px;text-align:center;text-decoration:none!important;cursor:default;outline:none!important;box-shadow:none!important;background-color:#4D90CC;color:white;}
 body.body-public .orange-button:not(.fake-button):not(.disabled):not([disabled]){cursor:pointer;}
-body.body-public .orange-button:not(.fake-button):not(.disabled):not([disabled]):hover,body.body-public .orange-button:not(.disabled):not([disabled]):focus{background-color:#FF6D2C;}
+body.body-public .orange-button:not(.fake-button):not(.disabled):not([disabled]):hover,body.body-public .orange-button:not(.disabled):not([disabled]):focus{background-color:#4D90CC;}
 .company-logos img{vertical-align:middle;}
 @media (max-width: 767px){
 .company-logos img{display:block;padding:0;margin:auto;margin-bottom:40px;}
