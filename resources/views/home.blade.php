@@ -44,11 +44,11 @@
                 ._2 .container,
                 ._2 .row,
                 ._2 .col-xs-12 {
-                    min-height: 490px;
+                    min-height: 765px;
                 }
 
                 ._2 .container {
-                    padding-top: 65px;
+                    padding-top: 85px;
                 }
             }
         </style>
@@ -538,12 +538,12 @@
                                 <p>Accompagnement à l'emploi</p>
                             </a>
                         </li>
-                        <!--li class="steps" data-step="5">
+                        <li class="steps" data-step="5">
                             <a href="#step5" data-scroll="false">
                                 <h2>5</h2>
-                                <p>Share knowledge and be rewarded</p>
+                                <p>Parcours diplômants et certifiants</p>
                             </a>
-                        </li-->
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -584,19 +584,19 @@
                 <div class="col-md-5">
                     <h1 class="default-header">Accompagnement à l'emploi</h1>
                     <p class="default-paragraph">Vous aurez accès à des sessions de coaching en carrière, à des conseils de préparation aux entretiens, à des résumés de CV et à des critiques de profils professionnels en ligne pour vous aider à progresser dans votre carrière.</p>
-                    <a class="next-step green-button" style="background: #FF6D2C;">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    <!--a class="next-step green-button" style="background: #FF6D2C;">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a-->
                 </div>
             </div>
-            <!--div class="row second-row" data-step="5">
+            <div class="row second-row" data-step="5" id="step5">
                 <div class="col-md-7 image-column">
                     <img src="https://teachable.com/assets/five-steps/step5-675f78f2901de7b19928570ae8cff205a4b34dc3c38e72adb8aad9b5a8bef953.svg">
                 </div>
                 <div class="col-md-5">
-                    <h1 class="default-header">Attract students and sell your online courses</h1>
+                    <h1 class="default-header">Parcours diplômants et certifiants</h1>
                     <p class="default-paragraph">Launch your course and join thousands of online instructors already making millions on Teachable. Accept payments and enrollments instantly.</p>
-                    <a class="next-step green-button">Get started&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    <a class="next-step green-button" style="background: #4D90CC;">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
                 </div>
-            </div-->
+            </div>
         </div>
     </section>
     <script type="text/javascript">
