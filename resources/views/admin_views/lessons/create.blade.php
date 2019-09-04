@@ -484,13 +484,7 @@ p.small a:hover{color:#67777c;}
                     <div class="tch-lecture-title"><a ng-click="backToSyllabus()" class="tch-section-back fastclickable"><i class="fa fa-angle-left"></i><span class="space"></span></a><a editable-text="lecture.name"
                           onbeforesave="setLectureName($data)" class="title edit-in-place editable editable-click editable-hide"><span ng-bind="lecture.name" class="editable-text">Titre leçon</span><button class="tch-btn-icon-fa icon-gray"><i
                                   class="fa fa-pencil"></i></button></a>
-                        <form class="form-inline editable-wrap editable-text ng-pristine ng-valid fastclickable" role="form" ng-click="$event.stopPropagation();" editable-form="$form" blur="cancel">
-                            <div class="editable-controls form-group" ng-class="{'has-error': $error}"><input type="text" class="editable-has-buttons editable-input form-control input-sm ng-pristine ng-valid ng-not-empty ng-touched" ng-model="$data"
-                                  style=""><span class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm fastclickable" ng-click="$event.stopPropagation();">OK</button><button
-                                      type="button" class="btn btn-default btn-sm fastclickable" ng-click="$event.stopPropagation(); $form.$cancel();"><span class="fa fa-edit"></span></button></span>
-                                <div class="editable-error help-block ng-hide" ng-show="$error" ng-bind="$error" style=""></div>
-                            </div>
-                        </form>
+
                         <div class="buttons pull-right"><button ng-disabled="!lecture.id" ng-click="createNewLectureInSectionAndRedirect()" class="tch-btn-header-secondary fastclickable">Nouvelle leçon</button><span class="space"></span><a
                               ng-href="/courses/vr-course/lectures/11599543?preview=logged_in" target="_blank" what="preview lecture" class="tch-btn-header-secondary" href="/courses/vr-course/lectures/11599543?preview=logged_in">Aperçu</a><span
                               class="space"></span><button ng-click="togglePublished()" ng-class="lecture.is_published ? 'tch-btn-header-danger' : 'tch-btn-header-primary'" ng-autodisable="" ng-bind="lecture.is_published ? 'Unpublish' : 'Publish'"

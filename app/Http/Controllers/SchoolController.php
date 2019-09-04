@@ -271,7 +271,7 @@ class SchoolController extends Controller
         else {
             $data = Author::create([
                 'school_id' => $req->id,
-                'name' => $req->name,
+                'full_name' => $req->full_name,
             ]);
         }
 

@@ -21,12 +21,13 @@ $('#createAuthor').on('click', function() {
         data: {
             '_token': $('input[name=_token]').val(),
             'id': $("#schoolId").val(),
-            'name': $('#author-name').val(),
+            'full_name': $('#author-name').val(),
 
         },
         success: function(data) {
             $("#selectAuthor").show();
-            $('#listAuthor').append("<option label='davidy' value='"+ data.id +"'>"+ data.name +"</option>")
+            $("#listAuthor option:selected").removeAttr("selected");
+            $('#listAuthor').append("<option selected value='"+ data.id +"'>"+ data.full_name +"</option>")
             $('#inputCreateAuthor').hide();
             $("#createAuthor").hide();
       $.amaran({'message':"Auteur bien ajouté!"});

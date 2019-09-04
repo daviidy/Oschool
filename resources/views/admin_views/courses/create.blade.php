@@ -364,7 +364,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 @if($school->authors)
                                 <select id="listAuthor" name="author_id" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
                                     @foreach($school->authors as $author)
-                                    <option label="davidy" value="{{$author->id}}">{{$author->name}}</option>
+                                    <option value="{{$author->id}}">{{$author->full_name}}</option>
                                     @endforeach
                                 </select>
                                 @endif

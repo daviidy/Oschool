@@ -302,7 +302,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <div class="tch-course-listing-wrapper">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div style="background-image: url(/images/courses/logos/{{$course->logo}});background-size: 40%;" class="tch-course-listing-image"></div>
+                                        <div style="background-image: url(/images/courses/logos/{{$course->logo}});background-size: 100%;" class="tch-course-listing-image"></div>
                                         <div what="course name" ng-bind="::course.name" class="tch-course-listing-title">{{$course->name}}</div>
                                     </div>
                                 </div>
