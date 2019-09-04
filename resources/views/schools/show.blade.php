@@ -167,11 +167,12 @@
       <div class="col-xs-12">
         <p class="default-paragraph">Market leaders use Teachable to enrich their brand &amp; business.</p>
         <div class="clearfix company-logos">
-          <img src="https://teachable.com/assets/showcase/logo1-492edcd6564167cc91a0162d028da0669ae87f2959ccf683b78b4a176e9338c4.png">
-          <img src="https://teachable.com/assets/showcase/logo2-d60d37fa3443fe00a9e47bc2c42a43799a0faf2f1f1d81b9f9441bcb77d17e60.png">
-          <img src="https://teachable.com/assets/showcase/logo3-459469bb472753db1c99486b03df57852e15959cc830efe60d984db56f171f9c.png">
-          <img src="https://teachable.com/assets/showcase/logo-pearson-42979f87ef26b43c43d1696ea250245731ebc4fecf738c3b0442bdec64a2475f.svg">
-          <img src="https://teachable.com/assets/showcase/logo5-522181dfddb7bfe3ab06b9b76d635dbb46fd77748a9b14a850a1cc6b0290bc60.png">
+          <img src="/images/divers/cinetpay.png">
+          <img src="/images/divers/Epistrophe.jpg">
+          <img src="/images/divers/bora.png">
+          <img src="/images/divers/final.png">
+          <img src="/images/divers/LogoM-1.png">
+          <img src="/images/divers/Logo-1.png">
         </div>
 
       </div>
