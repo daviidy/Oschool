@@ -246,7 +246,7 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                 @if($course->sections)
                 @foreach($course->sections as $section)
                 <li ng-repeat="lectureSection in lectureSections track by lectureSection.id" ui-tree-node="" id="section-2320587" class="section-item angular-ui-tree-node" collapsed="false" style="">
-                    <div what="section" ng-class="{ 'selected': lectureSection.allSelected, 'draft': !lectureSection.is_published}" class="section-heading angular-ui-tree-wrapper"><i ui-tree-handle=""
+                    <div what="section" class="section-heading angular-ui-tree-wrapper"><i ui-tree-handle=""
                           class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle"></i><span data-nodrag="" class="checkbox-container"><input what="checkbox" type="checkbox" ng-model="lectureSection.allSelected"
                               ng-change="selectLectureSection(lectureSection)" class="ng-pristine ng-untouched ng-valid ng-empty"></span><span class="title"><span what="section name" ng-bind="lectureSection.name" editable-text="lectureSection.name"
                               e-form="lectureSectionNameEditForm" onbeforesave="$event.stopPropagation(); updateLectureSection(lectureSection, { name: $data })" class="lecture-section-name editable">{{$section->title}}</span><button
@@ -261,25 +261,27 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                         @foreach($section->lessons as $lesson)
                         <li
                           id="lecture_11203304" ng-click="goToLecture(lecture)" class="lecture-item angular-ui-tree-wrapper angular-ui-tree-node fastclickable" collapsed="false" style=""><i ui-tree-handle="" ng-click="$event.stopPropagation();"
-                              class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle fastclickable {{$lesson->status == 'inactive' ? draft : ''}}"></i><span data-nodrag="" ng-click="$event.stopPropagation();" class="checkbox-container fastclickable">
+                              class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle fastclickable {{$lesson->status == 'inactive' ? 'draft' : ''}}"></i><span data-nodrag="" ng-click="$event.stopPropagation();" class="checkbox-container fastclickable">
                                   <input type="checkbox"
                                   ng-model="lecture.isChecked" ng-change="selectLecture(lecture)" class="ng-pristine ng-untouched ng-valid ng-empty"></span><span class="title"><span ng-bind="lecture.name" editable-text="lecture.name"
-                                  e-form="lectureNameEditForm" onbeforesave="$event.stopPropagation(); updateLecture(lecture, { name: $data });" class="lecture-name editable">New Lecture</span><button
+                                  e-form="lectureNameEditForm" onbeforesave="$event.stopPropagation(); updateLecture(lecture, { name: $data });" class="lecture-name editable"> {{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}</span><button
                                   ng-click="lectureNameEditForm.$show(); $event.stopPropagation();" ng-hide="lectureNameEditForm.$visible" what="edit lecture name" class="tch-btn-icon-fa icon-gray fastclickable"><i class="fa fa-pencil"></i></button>
                                   @if($lesson->status == 'inactive')
-                                  <label ng-if="!lecture.is_published" class="label label-default">DRAFT</label>
+                                  <label ng-if="!lecture.is_published" class="label label-default">Brouillon</label>
                                   @endif
                                 <!----></span>
                             <div class="pull-right">
-                                <div class="btn-group"><button ng-click="$event.stopPropagation(); toggleLectureDownloadable(lecture)" tooltip="Make downloadable"
-                                      ng-class="{ 'tch-btn-content-primary' : lecture.download, 'tch-btn-content-secondary' : (lecture.download==false || lecture.download==null) }" tooltip-placement="bottom" tooltip-trigger="mouseenter"
-                                      tooltip-append-to-body="true" what="downloadable lecture button" class="tch-btn-icon-fa fastclickable tch-btn-content-secondary"><i class="fa fa-cloud-download"></i></button><button
-                                      ng-click="$event.stopPropagation(); toggleLectureFreePreview(lecture)" tooltip="Make free preview"
-                                      ng-class="{ 'tch-btn-content-primary' : lecture.free_preview, 'tch-btn-content-secondary' : (lecture.free_preview==false || lecture.free_preview==null) }" tooltip-placement="bottom" tooltip-trigger="mouseenter"
-                                      tooltip-append-to-body="true" what="preview lecture button" class="tch-btn-icon-fa fastclickable tch-btn-content-secondary"><i class="fa fa-eye"></i></button><button
-                                      ng-click="$event.stopPropagation(); toggleLecturePublished(lecture)" tooltip="Unpublish lecture"
-                                      ng-class="{ 'tch-btn-content-primary' : lecture.is_published, 'tch-btn-content-secondary' : (lecture.is_published==false || lecture.is_published==null) }" tooltip-placement="left" tooltip-trigger="mouseenter"
-                                      tooltip-append-to-body="true" id="test-id-publish-lecture-icon" class="tch-btn-icon-fa fastclickable tch-btn-content-primary"><i class="fa fa-check-square-o"></i></button></div>
+                                <div class="btn-group">
+                                    <button
+                                       class="tch-btn-icon-fa fastclickable tch-btn-content-secondary"><i class="fa fa-cloud-download"></i>
+                                  </button>
+                                  <button
+                                      class="tch-btn-icon-fa fastclickable tch-btn-content-secondary"><i class="fa fa-eye"></i>
+                                  </button>
+                                  <button
+                                      id="test-id-publish-lecture-icon" class="tch-btn-icon-fa fastclickable tch-btn-content-primary"><i class="fa fa-check-square-o"></i>
+                                  </button>
+                              </div>
                             </div>
                         </li>
                         @endforeach

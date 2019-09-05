@@ -54,6 +54,7 @@ Route::post('/updateSchoolStatus', 'SchoolController@updateSchoolStatus');
 Route::post('/deleteSchool', 'SchoolController@deleteSchool');
 Route::post('/updateSchool', 'SchoolController@updateSchool');
 Route::post('/addAuthor', 'SchoolController@addAuthor');
+Route::post('/addLecture', 'LessonController@store');
 Route::post('/repositionLessons', 'LessonController@repositionLessons')->name('reposition-lessons');
 
 

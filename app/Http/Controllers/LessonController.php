@@ -6,6 +6,7 @@ use App\Lesson;
 use App\School;
 use App\Course;
 use App\Section;
+use Image;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -44,8 +45,38 @@ class LessonController extends Controller
      */
     public function store(Request $request)
     {
-        $lesson = Lesson::create($request->all());
+        $data = Lesson::create($request->all()
+            + ['position' => Lesson::where('course_id', $request->course_id)->where('section_id', $request->section_id)->max('position') + 1,
+               'slug' => $request->title,
+               'free_lesson' => 'no'
+          ]);
+          $images = [];
+        if ($request->hasFile('downloadable_files')) {
+          foreach ($request->file('downloadable_files') as $file) {
+            $filename = $file->getClientOriginalName();
+            $file->move(public_path().'/images/lessons/resources/', $filename);
+            array_push($images, $filename);
+          }
+
+
+
+        }
+        $data->downloadable_files = json_encode($images);
+        $data->save();
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->save(public_path('/images/lessons/images/' . $filename));
+          $data->image = $filename;
+          $data->save();
+
+        }
+
+        return response()->json($data);
+        /*
         return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
     }
 
     /**

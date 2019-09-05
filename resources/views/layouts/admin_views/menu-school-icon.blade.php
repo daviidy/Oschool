@@ -517,7 +517,66 @@ $('#submitNewAuthor').click(function(){
 
 
 
+$('#createLecture').on('click', function() {
+    var dataImage = new FormData();
+    dataImage.append('image', $("#image_lesson")[0].files[0]);
+    dataImage.append('_token', '{{csrf_token()}}');
+    dataImage.append('school_id', $("input[name=school_id]").val());
+    dataImage.append('course_id', $("input[name=course_id]").val());
+    dataImage.append('section_id', $("input[name=section_id]").val());
+    dataImage.append('title', $("input[name=title]").val());
+    dataImage.append('downloadable_files', $("#downloadable_files")[0].files[0]);
+    dataImage.append('full_text', quill.root.innerHTML);
 
+    $.ajax({
+        type: 'post',
+        url: '/addLecture',
+        contentType: false,
+        processData: false,
+        data: dataImage,
+        success: function(data) {
+            $.amaran({'message':"La leçon a bien été créée !"});
+            window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+data.course_id+'/curriculum';
+
+
+
+        },
+        error: function(){
+            alert('erreur');
+        }
+    });
+});
+
+
+$('#updateLecture').on('click', function() {
+    var dataImage = new FormData();
+    dataImage.append('image', $("#image_lesson")[0].files[0]);
+    dataImage.append('_token', '{{csrf_token()}}');
+    dataImage.append('school_id', $("input[name=school_id]").val());
+    dataImage.append('course_id', $("input[name=course_id]").val());
+    dataImage.append('section_id', $("input[name=section_id]").val());
+    dataImage.append('title', $("input[name=title]").val());
+    dataImage.append('downloadable_files', $("#downloadable_files")[0].files[0]);
+    dataImage.append('full_text', quill.root.innerHTML);
+
+    $.ajax({
+        type: 'post',
+        url: '/addLecture',
+        contentType: false,
+        processData: false,
+        data: dataImage,
+        success: function(data) {
+            $.amaran({'message':"La leçon a bien été créée !"});
+            window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+data.course_id+'/curriculum';
+
+
+
+        },
+        error: function(){
+            alert('erreur');
+        }
+    });
+});
 
 
 

@@ -484,10 +484,22 @@ p.small a:hover{color:#67777c;}
                     <div class="tch-lecture-title"><a ng-click="backToSyllabus()" class="tch-section-back fastclickable"><i class="fa fa-angle-left"></i><span class="space"></span></a><a editable-text="lecture.name"
                           onbeforesave="setLectureName($data)" class="title edit-in-place editable editable-click editable-hide"><span ng-bind="lecture.name" class="editable-text">Titre leçon</span><button class="tch-btn-icon-fa icon-gray"><i
                                   class="fa fa-pencil"></i></button></a>
+                        <form class="form-inline editable-wrap editable-text ng-pristine ng-valid fastclickable" role="form" ng-click="$event.stopPropagation();" editable-form="$form" blur="cancel">
+                            @csrf
+                            <div class="editable-controls form-group" ng-class="{'has-error': $error}">
+                                <input placeholder="Titre de la leçon" name="title" type="text" class="editable-has-buttons editable-input form-control input-sm ng-pristine ng-valid ng-not-empty ng-touched" ng-model="$data"
+                                  style="">
+                                  <input style="display: none;" type="text" name="school_id" value="{{$school->id}}">
+                                  <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
+                                  <input style="display: none;" type="text" name="section_id" value="{{$section->id}}">
 
+                                <div class="editable-error help-block ng-hide" ng-show="$error" ng-bind="$error" style=""></div>
+                            </div>
+                        </form>
                         <div class="buttons pull-right"><button ng-disabled="!lecture.id" ng-click="createNewLectureInSectionAndRedirect()" class="tch-btn-header-secondary fastclickable">Nouvelle leçon</button><span class="space"></span><a
                               ng-href="/courses/vr-course/lectures/11599543?preview=logged_in" target="_blank" what="preview lecture" class="tch-btn-header-secondary" href="/courses/vr-course/lectures/11599543?preview=logged_in">Aperçu</a><span
-                              class="space"></span><button ng-click="togglePublished()" ng-class="lecture.is_published ? 'tch-btn-header-danger' : 'tch-btn-header-primary'" ng-autodisable="" ng-bind="lecture.is_published ? 'Unpublish' : 'Publish'"
+                              class="space"></span>
+                              <button id="createLecture"
                               class="tch-btn-header-primary disable-animations fastclickable">Publier</button></div>
                     </div>
                 </div>
@@ -501,7 +513,10 @@ p.small a:hover{color:#67777c;}
                 <ul class="nav nav-tabs">
                     <!---->
                     <li class="tab fastclickable active"  heading="Add File"  style="">
-                        <a href="#resource"  class="fastclickable">Ressources</a>
+                        <a href="#image"  class="fastclickable">Image de la leçon</a>
+                    </li>
+                    <li class="tab fastclickable"  heading="Add File"  style="">
+                        <a href="#resource"  class="fastclickable">Ressources téléchargeables</a>
                     </li>
                     <li class="tab fastclickable"  heading="Add File"  style="">
                         <a href="#video"  class="fastclickable">Vidéo</a>
@@ -533,12 +548,23 @@ p.small a:hover{color:#67777c;}
         </div>
     </tabs>
     <!---->
-    <ui-view id="resource" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
+
+    <ui-view id="image" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
         <div class="tch-drop-wrapper">
-            <div filepicker-drag-drop="true" drag-over-class="drag-hover" on-upload-success="dropFilePickerSuccess" filepicker-multiple="true" filepicker-folder="true" target-type="attachment upload" class="drop-inner">Drop video, audio, PDF, or
-                other file(s) here or<span class="space"></span><span class="space"></span></div>
+            <div filepicker-drag-drop="true" drag-over-class="drag-hover" on-upload-success="dropFilePickerSuccess" filepicker-multiple="true" filepicker-folder="true" target-type="attachment upload" class="drop-inner">
+                Mettez une image pour cette leçon (facultatif)<span class="space"></span><span class="space"></span></div>
             <div data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
-              class="drop-button tch-btn-header-secondary pull-right fastclickable"><span> Choose files</span></div>
+              class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="image_lesson" type="file" name="image" value=""> <span> Choisissez une image</span></div>
+        </div>
+    </ui-view>
+
+    <ui-view style="display: none;" id="resource" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
+        <div class="tch-drop-wrapper">
+            <div filepicker-drag-drop="true" drag-over-class="drag-hover" on-upload-success="dropFilePickerSuccess" filepicker-multiple="true" filepicker-folder="true" target-type="attachment upload" class="drop-inner">
+                Mettez des ressources que les étudiants
+                pourront télécharger pour cette leçon (facultatif) <br> <span class="space"></span><span class="space"></span></div><br>
+            <div style="margin-left: -18%;" data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
+              class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="downloadable_files" type="file" name="downloadable_files[]" multiple value=""> <span> Choisir fichiers</span></div>
         </div>
     </ui-view>
 
@@ -568,10 +594,12 @@ p.small a:hover{color:#67777c;}
         <form what="form" ng-model="newQuestion" ng-submit="addQuestion(newQuestion)" class="well quiz-question ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse" style="">
 
             <div what="new question" class="quiz-question">
-                <div data-nodrag="" class="quiz-question-prompt"><input what="question text" id="question-prompt" ng-model="newQuestion.question" placeholder="Mettez le code d'intégration Viméo ou Youtube de votre vidéo"
+                <div data-nodrag="" class="quiz-question-prompt"><input type="text" name="video" what="question text" id="question-prompt" ng-model="newQuestion.question" placeholder="Mettez le code d'intégration Viméo ou Youtube de votre vidéo (facultatif)"
                       class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
                   </div><br><br>
+                  <!--
                 <input what="add question button" type="submit" value="Add Question" ng-disabled="!readyToAddQuestion(newQuestion)" class="tch-btn-header-primary-block">
+            -->
             </div>
         </form>
         <div class="row">
