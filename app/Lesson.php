@@ -12,10 +12,10 @@ class Lesson extends Model
                            'course_id',
                            'section_id',
                            'full_text',
-                           'downloadable_files',
                            'position',
                            'status',
                            'free_lesson',
+                           'video',
 
                          ];
 
@@ -39,4 +39,14 @@ class Lesson extends Model
        {
            return $this->belongsTo('App\Section');
        }
+
+       /**
+        * [users description]
+        * relationship one to many with Media model
+        * @return [array] [description]
+        */
+        public function medias()
+        {
+            return $this->hasMany('App\Media');
+        }
 }

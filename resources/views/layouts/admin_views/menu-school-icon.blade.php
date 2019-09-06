@@ -519,13 +519,22 @@ $('#submitNewAuthor').click(function(){
 
 $('#createLecture').on('click', function() {
     var dataImage = new FormData();
-    dataImage.append('image', $("#image_lesson")[0].files[0]);
+    var files = $("#downloadable_files")[0].files;
+    if ($("#image_lesson").val() !== '') {
+        dataImage.append('image', $("#image_lesson")[0].files[0]);
+    }
     dataImage.append('_token', '{{csrf_token()}}');
     dataImage.append('school_id', $("input[name=school_id]").val());
     dataImage.append('course_id', $("input[name=course_id]").val());
     dataImage.append('section_id', $("input[name=section_id]").val());
     dataImage.append('title', $("input[name=title]").val());
-    dataImage.append('downloadable_files', $("#downloadable_files")[0].files[0]);
+    dataImage.append('video', $("input[name=video]").val());
+    if(files.length !== 0){
+        for (var i = 0; i < files.length; i++)
+            {
+                dataImage.append('downloadable_files[]', files[i]);
+            }
+    }
     dataImage.append('full_text', quill.root.innerHTML);
 
     $.ajax({
@@ -550,23 +559,37 @@ $('#createLecture').on('click', function() {
 
 $('#updateLecture').on('click', function() {
     var dataImage = new FormData();
-    dataImage.append('image', $("#image_lesson")[0].files[0]);
+    if ($("#image_lesson").val() !== '') {
+        dataImage.append('image', $("#image_lesson")[0].files[0]);
+    }
+    var files = $("#downloadable_files")[0].files;
+
+
+
     dataImage.append('_token', '{{csrf_token()}}');
     dataImage.append('school_id', $("input[name=school_id]").val());
     dataImage.append('course_id', $("input[name=course_id]").val());
     dataImage.append('section_id', $("input[name=section_id]").val());
+    dataImage.append('lesson_id', $("input[name=lesson_id]").val());
     dataImage.append('title', $("input[name=title]").val());
-    dataImage.append('downloadable_files', $("#downloadable_files")[0].files[0]);
+    dataImage.append('video', $("input[name=video]").val());
+    if(files.length !== 0){
+        for (var i = 0; i < files.length; i++)
+            {
+                dataImage.append('downloadable_files[]', files[i]);
+            }
+    }
+
     dataImage.append('full_text', quill.root.innerHTML);
 
     $.ajax({
         type: 'post',
-        url: '/addLecture',
+        url: '/updateLecture',
         contentType: false,
         processData: false,
         data: dataImage,
         success: function(data) {
-            $.amaran({'message':"La leçon a bien été créée !"});
+            $.amaran({'message':"La leçon a bien été mise à jour !"});
             window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+data.course_id+'/curriculum';
 
 
@@ -582,6 +605,95 @@ $('#updateLecture').on('click', function() {
 
 
   </script>
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+      $('.lecture-list').sortable({
+          update: function(event, ui){
+              $(this).children().each(function(index){
+                  if ($(this).attr('data-position') != (index+1)) {
+                      $(this).attr('data-position', (index+1)).addClass('updated');
+                  }
+              });
+
+              saveNewPositions();
+          }
+      });
+  });
+
+  function saveNewPositions(){
+      var positions = [];
+      $('.updated').each(function(){
+          positions.push([$(this).attr('data-index'), $(this).attr('data-position')]);
+          $(this).removeClass('updated');
+      });
+console.log(JSON.stringify(positions));
+      $.ajax({
+          type: 'post',
+          url: '/saveNewPositions',
+          dataType: "json",
+          data: {
+              '_token': '{{csrf_token()}}',
+              'update': 1,
+              'positions': positions,
+          },
+          success: function() {
+              $.amaran({'message':"Programme enregistré"});
+          },
+          error: function (xhr, msg) {
+            console.log(msg + '\n' + xhr.responseText);
+        }
+      });
+  }
+
+  </script>
+
+
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+      $('.section-list').sortable({
+          update: function(event, ui){
+              $(this).children().each(function(index){
+                  if ($(this).attr('data-position') != (index+1)) {
+                      $(this).attr('data-position', (index+1)).addClass('updatedSections');
+                  }
+              });
+
+              saveNewSectionPositions();
+          }
+      });
+  });
+
+  function saveNewSectionPositions(){
+      var positions = [];
+      $('.updatedSections').each(function(){
+          positions.push([$(this).attr('data-index'), $(this).attr('data-position')]);
+          $(this).removeClass('updatedSections');
+      });
+console.log(JSON.stringify(positions));
+      $.ajax({
+          type: 'post',
+          url: '/saveNewSectionPositions',
+          dataType: "json",
+          data: {
+              '_token': '{{csrf_token()}}',
+              'update': 1,
+              'positions': positions,
+          },
+          success: function() {
+              $.amaran({'message':"Programme enregistré"});
+          },
+          error: function (xhr, msg) {
+            console.log(msg + '\n' + xhr.responseText);
+        }
+      });
+  }
+
+  </script>
+
 
   <!--fin quill js-->
 

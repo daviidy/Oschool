@@ -464,6 +464,239 @@ p.small a:hover{color:#67777c;}
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
 
 
+/*! CSS Used from: http://localhost:8000/css/admin/menu-school.css */
+.ng-hide:not(.ng-hide-animate){display:none!important;}
+@media screen{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{border:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+td{padding:0;}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{border:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+td{padding:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+a[href^="#"]:after{content:"";}
+tr,img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+button{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#30787d;text-decoration:none;}
+a:hover,a:focus{color:#09a59a;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+table{background-color:transparent;}
+a{color:#1ea69a;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
+a:hover,a:focus{color:#167b72;text-decoration:none;}
+.space::before{content:'\A0';}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+@media screen{
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+@media screen{
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+*,*:before,*:after{box-sizing:inherit;}
+:disabled *{pointer-events:none;}
+@media screen{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+a{color:#30787d;text-decoration:none;}
+a:hover,a:focus{color:#09a59a;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+a{color:#1ea69a;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
+a:hover,a:focus{color:#167b72;text-decoration:none;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+@media screen{
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{border:0;padding:0;}
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{border:0;padding:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+button{font-family:inherit;font-size:inherit;line-height:inherit;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+@media screen{
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+/*! CSS Used from: https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css */
+.ui-sortable-handle{-ms-touch-action:none;touch-action:none;}
+/*! CSS Used from: Embedded ; media=screen */
+@media screen{
+.ng-hide:not(.ng-hide-animate){display:none!important;}
+@media screen{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button[disabled]{cursor:default;}
+button::-moz-focus-inner{border:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+td,th{padding:0;}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.pull-right{float:right;}
+.fa-trash-o:before{content:"\F014";}
+.fa-edit:before{content:"\F044";}
+.fa-question-circle:before{content:"\F059";}
+.fa-angle-left:before{content:"\F104";}
+.fa-angle-right:before{content:"\F105";}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button[disabled]{cursor:default;}
+button::-moz-focus-inner{border:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+td,th{padding:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+a[href^="#"]:after{content:"";}
+thead{display:table-header-group;}
+tr,img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+button{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#30787d;text-decoration:none;}
+a:hover,a:focus{color:#09a59a;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+table{background-color:transparent;}
+th{text-align:left;}
+.tch-table-wrapper{min-height:.01%;overflow-x:auto;}
+@media screen and (max-width: 767px){
+.tch-table-wrapper{width:100%;margin-bottom:16.5px;overflow-y:hidden;-ms-overflow-style:-ms-autohiding-scrollbar;border:1px solid #eef0f0;}
+}
+.pull-right{float:right!important;}
+tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
+[disabled]{cursor:default!important;pointer-events:none;}
+.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#1ea69a;border:1px solid #1ea69a;}
+.tch-btn-content-primary:focus{outline:0!important;}
+.tch-btn-content-primary:focus{outline:0!important;}
+.tch-btn-content-primary:focus{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-btn-content-primary:hover{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-btn-content-primary:active{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-btn-content-primary:active:hover,.tch-btn-content-primary:active:focus{color:white;background-color:#146e66;border-color:#12655e;}
+.tch-btn-content-primary:active{background-image:none;}
+.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e6c6b8;color:#d4604b;}
+.tch-btn-content-danger:focus{outline:0!important;}
+.tch-btn-content-danger:focus{outline:0!important;}
+.tch-btn-content-danger:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
+.tch-btn-content-danger:hover{color:white;background-color:#ededed;border-color:#c3452e;}
+.tch-btn-content-danger:active{color:white;background-color:#ededed;border-color:#c3452e;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:#dedede;border-color:#aa3c29;}
+.tch-btn-content-danger:active{background-image:none;}
+.tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus,.tch-btn-content-danger:hover:hover,.tch-btn-content-danger:hover:focus,.tch-btn-content-danger:focus:hover,.tch-btn-content-danger:focus:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
+.tch-btn-content-danger:focus{outline:0!important;}
+.tch-btn-content-danger:focus{outline:0!important;}
+.tch-btn-icon{padding:6px 9px!important;font-size:11px;line-height:1.083;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;height:37px;width:37px;padding-top:8px!important;}
+.tch-btn-icon:focus{outline:0!important;}
+.tch-btn-icon .fa{font-size:16px;height:20px;width:15px;}
+.tch-btn-icon .fa.fa-edit{height:16px;width:13px;}
+.tch-table{width:100%;max-width:100%;margin-bottom:24px;}
+.tch-table > thead > tr > th,.tch-table > tbody > tr > td{padding:12px 25px;line-height:1.5em;border-top:0;border-top:0;letter-spacing:0.5px;font-size:13px;}
+.tch-table > tbody > tr > td .tch-btn-content-primary,.tch-table > tbody > tr > td .tch-btn-icon{margin-left:3px;margin-bottom:5px;}
+.tch-table > thead > tr > th{border-bottom:1px solid #eef0f0;color:#47505e;line-height:20px;text-transform:uppercase;font-size:11px;cursor:pointer;}
+.tch-table > thead > tr > th i{margin-left:5px;vertical-align:1px;font-size:13px;opacity:0.5;}
+.tch-table img{vertical-align:middle;}
+.tch-table-wrapper{-webkit-overflow-scrolling:touch;}
+.tch-table > tbody > tr:nth-child(even){background-color:transparent;}
+.tch-table > tbody > tr:hover{background:#f5f6f7;}
+.tch-table img.tch-table-thumb{width:22px;margin-right:10px;float:left;}
+.tch-btn-tooltip{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;padding:4px 5px!important;color:#ff7f45;}
+.tch-btn-tooltip:focus{outline:0!important;}
+.tch-btn-tooltip:hover,.tch-btn-tooltip:active,.tch-btn-tooltip:focus{color:#ff631c;-webkit-box-shadow:none;box-shadow:none;}
+@media screen and (max-width: 1000px){
+.tch-btn-tooltip{display:none;}
+}
+.tch-page-nav{margin-bottom:30px;height:30px;}
+.tch-page-nav-page-number{font-size:13px;color:#818181;margin-right:10px;display:block;float:left;letter-spacing:0.5px;margin-top:11px;}
+.tch-page-nav-btn{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#1ea69a;border:1px solid #1ea69a;padding:5px 20px 4px 20px!important;font-size:23px;font-weight:200;padding-top:2px;line-height:25px;}
+.tch-page-nav-btn:focus{outline:0!important;}
+.tch-page-nav-btn:focus{outline:0!important;}
+.tch-page-nav-btn:focus{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-page-nav-btn:hover{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-page-nav-btn:active{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-page-nav-btn:active:hover,.tch-page-nav-btn:active:focus{color:white;background-color:#146e66;border-color:#12655e;}
+.tch-page-nav-btn:active{background-image:none;}
+.tch-page-nav-btn[disabled],.tch-page-nav-btn[disabled]:hover,.tch-page-nav-btn[disabled]:focus,.tch-page-nav-btn[disabled]:active{filter:alpha(opacity=65);opacity:0.65;background-color:#1ea69a;border-color:#1ea69a;cursor:not-allowed;-webkit-box-shadow:none;box-shadow:none;}
+.draggable-products td:hover{cursor:move;}
+a{color:#1ea69a;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
+a:hover,a:focus{color:#167b72;text-decoration:none;}
+.tch-section-content{padding-top:0;background:#fff;display:block;margin-top:-1px;margin-bottom:20px;padding:30px 35px;border-radius:5px;border:1px solid #e7eaed;-webkit-box-shadow:1px 1px 1px 0px rgba(0, 0, 0, .04);box-shadow:1px 1px 1px 0px rgba(0, 0, 0, .04);-webkit-transition:0.2s all ease-in;transition:0.2s all ease-in;}
+.no-padding{padding:0px!important;}
+.gray-underline{color:#bfbfbf;text-decoration:underline;}
+.space::before{content:'\A0';}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+}
+
+
+
+
 
 </style>
 
@@ -487,11 +720,12 @@ p.small a:hover{color:#67777c;}
                         <form class="form-inline editable-wrap editable-text ng-pristine ng-valid fastclickable" role="form" ng-click="$event.stopPropagation();" editable-form="$form" blur="cancel">
                             @csrf
                             <div class="editable-controls form-group" ng-class="{'has-error': $error}">
-                                <input placeholder="Titre de la leçon" name="title" type="text" class="editable-has-buttons editable-input form-control input-sm ng-pristine ng-valid ng-not-empty ng-touched" ng-model="$data"
+                                <input value="{{$lesson->title}}" placeholder="Titre de la leçon" name="title" type="text" class="editable-has-buttons editable-input form-control input-sm ng-pristine ng-valid ng-not-empty ng-touched" ng-model="$data"
                                   style="">
                                   <input style="display: none;" type="text" name="school_id" value="{{$school->id}}">
                                   <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
                                   <input style="display: none;" type="text" name="section_id" value="{{$section->id}}">
+                                  <input style="display: none;" type="text" name="lesson_id" value="{{$lesson->id}}">
 
                                 <div class="editable-error help-block ng-hide" ng-show="$error" ng-bind="$error" style=""></div>
                             </div>
@@ -499,8 +733,8 @@ p.small a:hover{color:#67777c;}
                         <div class="buttons pull-right"><button ng-disabled="!lecture.id" ng-click="createNewLectureInSectionAndRedirect()" class="tch-btn-header-secondary fastclickable">Nouvelle leçon</button><span class="space"></span><a
                               ng-href="/courses/vr-course/lectures/11599543?preview=logged_in" target="_blank" what="preview lecture" class="tch-btn-header-secondary" href="/courses/vr-course/lectures/11599543?preview=logged_in">Aperçu</a><span
                               class="space"></span>
-                              <button id="createLecture"
-                              class="tch-btn-header-primary disable-animations fastclickable">Publier</button></div>
+                              <button id="updateLecture"
+                              class="tch-btn-header-primary disable-animations fastclickable">Mettre à jour</button></div>
                     </div>
                 </div>
             </div>
@@ -556,6 +790,7 @@ p.small a:hover{color:#67777c;}
             <div data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
               class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="image_lesson" type="file" name="image" value=""> <span> Choisissez une image</span></div>
         </div>
+        <img width="150" src="/images/lessons/images/{{$lesson->image}}" alt="">
     </ui-view>
 
     <ui-view style="display: none;" id="resource" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
@@ -564,8 +799,73 @@ p.small a:hover{color:#67777c;}
                 Mettez des ressources que les étudiants
                 pourront télécharger pour cette leçon (facultatif) <br> <span class="space"></span><span class="space"></span></div><br>
             <div style="margin-left: -18%;" data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
-              class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="downloadable_files" type="file" name="downloadable_files[]" multiple value=""> <span> Choisir fichiers</span></div>
+              class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="downloadable_files" type="file" name="downloadable_files[]" multiple> <span> Choisir fichiers</span></div>
         </div>
+
+        <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
+        <div class="tch-table-wrapper">
+            <!---->
+            <table ng-if="products.length > 0" class="tch-table">
+                <thead>
+                    <tr>
+                        <th>Nom du fichier</th>
+                        <th>Lien</th>
+
+
+                    </tr>
+                </thead>
+                <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
+                    <!---->
+                    @if($lesson->medias)
+                    @foreach($lesson->medias as $media)
+                                        <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
+                        <td what="id"><span ng-bind="'#' + product.id">{{$media->name}}</span><span class="space"></span><span class="space"></span>
+                            <!---->
+                        </td>
+                        <td what="type">
+                            <!---->
+                            <span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">
+                                <a download target="_blank" href="/images/lessons/resources/{{$media->name}}">
+                                Téléchargez
+                                </a>
+                            </span>
+                            <!---->
+                        </td>
+
+                        <td>
+                            <!---->
+                            <!---->
+                            <div ng-if="product.is_published" class="pull-right">
+
+                                <form action="http://localhost:8000/pricings/3" method="post">
+                                    <input type="hidden" name="_token" value="8mWFYoWez7Nk7t5NGawvDBY5P0J7UeNK368ybAVm">
+                                    <input type="hidden" name="_method" value="delete">
+                                    <button id="test-id-unpublish-btn" class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i></button>
+                                </form>
+                            </div>
+                            <!---->
+                        </td>
+                    </tr>
+                    @endforeach
+                    @endif
+
+
+                    <!---->
+                </tbody>
+            </table>
+            <!---->
+        </div>
+        <div ng-show="ctrl.meta.number_of_pages > 1" class="tch-page-nav ng-hide" meta="meta">
+            <!---->
+            <div class="pull-right"><span class="tch-page-nav-page-number">Page 1 of 1</span><span class="space"></span><button ng-click="ctrl.previousPage()" ng-disabled="ctrl.meta.page == 1" class="tch-page-nav-btn tch-back-button fastclickable" disabled="disabled"><i class="fa fa-angle-left"></i></button><button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page" class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"><i class="fa fa-angle-right"></i></button></div>
+        </div>
+        <!---->
+
+        <!---->
+    </div>
+
+
+
     </ui-view>
 
 
@@ -575,6 +875,10 @@ p.small a:hover{color:#67777c;}
     <!---->
         <div ng-if="hasNewTextEditor">
             <div id="site-description" class="">
+
+                @if($lesson->full_text)
+                {!!$lesson->full_text!!}
+                @endif
 
             </div>
             <!--
@@ -595,7 +899,7 @@ p.small a:hover{color:#67777c;}
 
             <div what="new question" class="quiz-question">
                 <div data-nodrag="" class="quiz-question-prompt">
-                    <input type="text" name="video" what="question text" id="question-prompt" ng-model="newQuestion.question" placeholder="Mettez le code d'intégration Viméo ou Youtube de votre vidéo (facultatif)"
+                    <input value="{{$lesson->video}}" type="text" name="video" what="question text" id="question-prompt" placeholder="Mettez le code d'intégration Viméo ou Youtube de votre vidéo (facultatif)"
                       class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
                   </div><br><br>
                   <!--

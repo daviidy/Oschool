@@ -176,6 +176,7 @@ class CourseController extends Controller
          return view('admin_views.courses.curriculum', ['school' => $school, 'course' => $course]);
      }
 
+
      /**
       * [pricing description]
       * @param  School $school [description]
