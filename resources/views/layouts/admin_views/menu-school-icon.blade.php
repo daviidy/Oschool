@@ -573,6 +573,8 @@ $('#updateLecture').on('click', function() {
     dataImage.append('lesson_id', $("input[name=lesson_id]").val());
     dataImage.append('title', $("input[name=title]").val());
     dataImage.append('video', $("input[name=video]").val());
+    dataImage.append('status', $("#status").children("option:selected").val());
+    dataImage.append('free_lesson', $("#free_lesson").children("option:selected").val());
     if(files.length !== 0){
         for (var i = 0; i < files.length; i++)
             {

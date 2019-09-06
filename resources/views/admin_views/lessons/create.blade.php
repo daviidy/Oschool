@@ -496,7 +496,12 @@ p.small a:hover{color:#67777c;}
                                 <div class="editable-error help-block ng-hide" ng-show="$error" ng-bind="$error" style=""></div>
                             </div>
                         </form>
-                        <div class="buttons pull-right"><button ng-disabled="!lecture.id" ng-click="createNewLectureInSectionAndRedirect()" class="tch-btn-header-secondary fastclickable">Nouvelle leçon</button><span class="space"></span><a
+                        <div class="buttons pull-right">
+                            <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/new-lecture">
+                            <button class="tch-btn-header-secondary fastclickable">Nouvelle leçon</button>
+                            </a>
+                            <span class="space"></span>
+                            <a
                               ng-href="/courses/vr-course/lectures/11599543?preview=logged_in" target="_blank" what="preview lecture" class="tch-btn-header-secondary" href="/courses/vr-course/lectures/11599543?preview=logged_in">Aperçu</a><span
                               class="space"></span>
                               <button id="createLecture"

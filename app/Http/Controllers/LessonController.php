@@ -118,7 +118,6 @@ class LessonController extends Controller
         $data->update($request->all()
             + [
                'slug' => $request->title,
-               'free_lesson' => 'no'
           ]);
           if ($request->hasFile('downloadable_files') ) {
             foreach ($request->file('downloadable_files') as $file) {
