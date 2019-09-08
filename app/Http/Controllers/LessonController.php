@@ -190,6 +190,7 @@ class LessonController extends Controller
      */
     public function destroy(Lesson $lesson)
     {
-        //
+        $lesson->delete();
+        return redirect('/schoolAdmin/'.$lesson->course->school_id.'/courses/'.$lesson->course_id.'/curriculum')->with('status', 'Leçon supprimée');
     }
 }

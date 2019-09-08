@@ -573,26 +573,17 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
 /*! CSS Used from: Embedded */
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
-
-/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-79e90a8f89fd85fce9ba.css ; media=screen */
-@media screen{
-@media print{
-*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
-}
-*{-webkit-box-sizing:border-box;box-sizing:border-box;}
-*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
-.fade{opacity:0;-webkit-transition:opacity 0.15s linear;transition:opacity 0.15s linear;}
-.fade.in{opacity:1;}
-.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#161b20;}
-.modal-backdrop.fade{filter:alpha(opacity=0);opacity:0;}
-.modal-backdrop.in{filter:alpha(opacity=95);opacity:0.95;}
-.modal-backdrop{z-index:1040;background-color:#161b20;}
-.modal-backdrop.in{filter:alpha(opacity=95);opacity:0.95;}
-.modal-backdrop,.modal-backdrop.fade.in{opacity:0.66!important;}
-.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;background-color:rgba(0, 0, 0, .66);}
-.modal-backdrop.fade{opacity:0;}
-.modal-backdrop,.modal-backdrop.fade.in{filter:alpha(opacity=8000);opacity:80;}
-*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
-}
+/*! CSS Used keyframes */
+@-webkit-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+/*! CSS Used fontfaces */
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-MediumItalic.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-MediumItalic.eot?#iefix") format("embedded-opentype"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-MediumItalic.woff2") format("woff2"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-MediumItalic.woff") format("woff"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-MediumItalic.ttf") format("truetype");font-weight:500;font-style:italic;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Italic.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Italic.eot?#iefix") format("embedded-opentype"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Italic.woff2") format("woff2"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Italic.woff") format("woff"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Italic.ttf") format("truetype");font-weight:normal;font-style:italic;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-BoldItalic.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-BoldItalic.woff2") format("woff2"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-BoldItalic.woff") format("woff"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-BoldItalic.ttf") format("truetype");font-weight:bold;font-style:italic;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Bold.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix") format("embedded-opentype"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Bold.woff2") format("woff2"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Bold.woff") format("woff"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Bold.ttf") format("truetype");font-weight:bold;font-style:normal;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBold.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBold.woff2") format("woff2"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBold.woff") format("woff"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Medium.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Medium.eot?#iefix") format("embedded-opentype"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Medium.woff2") format("woff2"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Medium.woff") format("woff"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Medium.ttf") format("truetype");font-weight:500;font-style:normal;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Regular.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Regular.eot?#iefix") format("embedded-opentype"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Regular.woff2") format("woff2"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Regular.woff") format("woff"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-Regular.ttf") format("truetype");font-weight:normal;font-style:normal;}
+@font-face{font-family:'TeachableSans';src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBoldItalic.eot");src:url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBoldItalic.woff2") format("woff2"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBoldItalic.woff") format("woff"), url("//assets.teachablecdn.com/fonts/teachable-sans/TeachableSans-SemiBoldItalic.ttf") format("truetype");font-weight:600;font-style:italic;}
 
 /*ifn style popup*/

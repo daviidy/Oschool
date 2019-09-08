@@ -41,12 +41,22 @@ class PricingController extends Controller
      */
     public function createSubscriptionPlan(School $school, Course $course)
     {
+        if (Auth::check()) {
         return view('admin_views.pricings.createSubscriptionPlan', ['school' => $school, 'course' => $course]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     public function editSubscriptionPlan(School $school, Course $course, Pricing $pricing)
     {
+        if (Auth::check()) {
         return view('admin_views.pricings.editSubscriptionPlan', ['school' => $school, 'course' => $course, 'pricing' => $pricing]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     /**
@@ -56,12 +66,22 @@ class PricingController extends Controller
      */
     public function createOnePurchasePlan(School $school, Course $course)
     {
+        if (Auth::check()) {
         return view('admin_views.pricings.createOnePurchasePlan', ['school' => $school, 'course' => $course]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     public function editOnePurchasePlan(School $school, Course $course, Pricing $pricing)
     {
+        if (Auth::check()) {
         return view('admin_views.pricings.editOnePurchasePlan', ['school' => $school, 'course' => $course, 'pricing' => $pricing]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     /**
@@ -71,12 +91,22 @@ class PricingController extends Controller
      */
     public function createPaymentPlan(School $school, Course $course)
     {
+        if (Auth::check()) {
         return view('admin_views.pricings.createPaymentPlan', ['school' => $school, 'course' => $course]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     public function editPaymentPlan(School $school, Course $course, Pricing $pricing)
     {
+        if (Auth::check()) {
         return view('admin_views.pricings.editPaymentPlan', ['school' => $school, 'course' => $course, 'pricing' => $pricing]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
 

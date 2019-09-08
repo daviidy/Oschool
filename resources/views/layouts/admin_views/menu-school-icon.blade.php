@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/admin/menu-school.css">
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="/nProgress/nprogress.css">
       <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
@@ -120,7 +120,7 @@
                                 <!---->
                                 <div href="javascript:void(0)" ng-if="::onboardingTooltipIf" tooltip="Complete the onboarding steps to launch your school." tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
                                   class="tch-onboarding-sidebar-tooltip"></div>
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Dashboard</span>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Tableau de bord</span>
                             </a>
                             <!---->
                             <!---->
@@ -604,6 +604,40 @@ $('#updateLecture').on('click', function() {
 });
 
 
+$('#delete-lecture').on('click', function() {
+
+
+    $.ajax({
+        type: 'post',
+        url: '/deleteLecture',
+        dataType: "json",
+        data: {
+            '_token': '{{csrf_token()}}',
+            'id': $(this).parents().eq(2).attr('data-index'),
+        },
+        success: function(data) {
+            $.amaran({'message':"La leçon a bien été supprimée"});
+        },
+        error: function (xhr, msg) {
+          console.log(msg + '\n' + xhr.responseText);
+      }
+    });
+});
+
+
+$("#delete").on('click', function(){
+
+    $('#popup-background').css('display', 'block');
+    $('#popup').css('display', 'block');
+
+});
+
+$("#cancel").on('click', function(){
+
+    $('#popup-background').css('display', 'none');
+    $('#popup').css('display', 'none');
+
+});
 
 
   </script>

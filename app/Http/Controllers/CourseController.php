@@ -38,8 +38,13 @@ class CourseController extends Controller
      */
     public function createAdmin(School $school)
     {
+        if (Auth::check()) {
         $categories = Category::orderby('id', 'asc')->paginate(100);
         return view('admin_views.courses.create', ['school' => $school, 'categories' => $categories]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     /**
@@ -118,8 +123,8 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
-        $formation->delete();
-        return redirect('home')->with('status', 'Cours supprimé définitivement de la base de données' );
+        $course->delete();
+        return redirect('/schoolAdmin/'.$course->school_id.'/courses')->with('status', 'Cours supprimé');
     }
 
 
@@ -136,7 +141,12 @@ class CourseController extends Controller
       */
      public function indexForAdmin(School $school)
      {
+         if (Auth::check()) {
          return view('admin_views.courses.index', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
      }
 
      /**
@@ -147,9 +157,13 @@ class CourseController extends Controller
       */
      public function information(School $school, Course $course)
      {
+         if (Auth::check()) {
          $categories = Category::orderby('id', 'asc')->paginate(100);
          return view('admin_views.courses.information', ['school' => $school,
-                                                        'course' => $course,
+        }
+        else {
+            return redirect('home');
+        }                                            'course' => $course,
                                                         'categories' => $categories
                                                     ]);
      }
@@ -162,7 +176,12 @@ class CourseController extends Controller
       */
      public function pages(School $school, Course $course)
      {
+         if (Auth::check()) {
          return view('admin_views.courses.pages', ['school' => $school, 'course' => $course]);
+        }
+        else {
+            return redirect('home');
+        }
      }
 
      /**
@@ -173,7 +192,12 @@ class CourseController extends Controller
       */
      public function curriculum(School $school, Course $course)
      {
+         if (Auth::check()) {
          return view('admin_views.courses.curriculum', ['school' => $school, 'course' => $course]);
+        }
+        else {
+            return redirect('home');
+        }
      }
 
 
@@ -185,7 +209,12 @@ class CourseController extends Controller
       */
      public function pricing(School $school, Course $course)
      {
+         if (Auth::check()) {
          return view('admin_views.courses.pricing', ['school' => $school, 'course' => $course]);
+        }
+        else {
+            return redirect('home');
+        }
      }
 
      /**
@@ -196,7 +225,12 @@ class CourseController extends Controller
       */
      public function certificates(School $school, Course $course)
      {
+         if (Auth::check()) {
          return view('admin_views.courses.certificates', ['school' => $school, 'course' => $course]);
+        }
+        else {
+            return redirect('home');
+        }
      }
 
 

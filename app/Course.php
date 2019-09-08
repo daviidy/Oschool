@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 class Course extends Model
 {
@@ -86,5 +87,25 @@ class Course extends Model
            {
                return $this->hasMany('App\Lesson');
            }
+
+
+           public static function boot() {
+           parent::boot();
+
+           static::deleting(function($course) { // before delete() method call this
+
+               if (File::exists(public_path('/images/courses/logos/' . $course->logo))) {
+                   File::delete(public_path('/images/courses/logos/' . $course->logo));
+               }
+                $course->sections()->delete();
+                $course->lessons()->delete();
+                // do the rest of the cleanup...
+           });
+       }
+
+
+
+
+
 
 }

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 class Lesson extends Model
 {
@@ -49,4 +50,24 @@ class Lesson extends Model
         {
             return $this->hasMany('App\Media');
         }
+
+
+        public static function boot() {
+        parent::boot();
+
+        static::deleting(function($lesson) { // before delete() method call this
+
+            $medias = $lesson->medias;
+            foreach ($medias as $media) {
+                if (File::exists(public_path('/images/lessons/resources/' . $media->name))) {
+                    File::delete(public_path('/images/lessons/resources/' . $media->name));
+                }
+            }
+            if (File::exists(public_path('/images/lessons/images/' . $lesson->image))) {
+                File::delete(public_path('/images/lessons/images/' . $lesson->image));
+            }
+             $lesson->medias()->delete();
+             // do the rest of the cleanup...
+        });
+    }
 }

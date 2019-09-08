@@ -253,7 +253,7 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                               what="edit section name" ng-click="$event.stopPropagation(); lectureSectionNameEditForm.$show()" ng-hide="lectureSectionNameEditForm.$visible" class="tch-btn-icon-fa icon-gray fastclickable"><i
                                   class="fa fa-pencil"></i></button>
                             <!----></span>
-                        <div class="pull-right"><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/new-lecture" id="test-id-new-lecture-btn" ng-click="newLecture(lectureSection.id)" data-nodrag="" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">Nouvelle leçon</a></div>
+                        <div class="pull-right"><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/new-lecture" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">Nouvelle leçon</a></div>
                     </div>
                     <ol ui-tree-nodes="" ng-model="lectureSection.lectures" data-type="lecture" class="list-unstyled lecture-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty">
                         <!---->
@@ -264,8 +264,10 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                           <i ui-tree-handle=""
                               class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle fastclickable {{$lesson->status == 'inactive' ? 'draft' : ''}}"></i>
                               <span data-nodrag="" ng-click="$event.stopPropagation();" class="checkbox-container fastclickable">
+                                  <!--
                                   <input type="checkbox"
                                   class="ng-pristine ng-untouched ng-valid ng-empty">
+                              -->
                               </span>
                               <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/lessons/{{$lesson->id}}/edit">
                                   <span class="title">
@@ -285,13 +287,18 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                                 </a>
                             <div class="pull-right">
                                 <div class="btn-group">
-
+                                    <!--
                                   <button
                                       class="tch-btn-icon-fa fastclickable tch-btn-content-secondary"><i class="fa fa-eye"></i>
                                   </button>
-                                  <button
-                                      id="test-id-publish-lecture-icon" class="tch-btn-icon-fa fastclickable tch-btn-content-primary"><i class="fa fa-check-square-o"></i>
+                              -->
+                              <form action="{{ route('lessons.destroy', $lesson) }}" method="post">
+                                  {{ csrf_field() }}
+                                  {{ method_field('delete') }}
+                                  <button style="background:#FF5A5F;"
+                                      class="tch-btn-icon-fa fastclickable tch-btn-content-primary"><i class="fa fa-trash"></i>
                                   </button>
+                              </form>
                               </div>
                             </div>
                         </li>
@@ -312,6 +319,9 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
     </div><br>
     @include('includes.information')
 </div>
+
+
+
 
 
 <script type="text/javascript" src="/js/admin_views/curriculum.js"></script>
