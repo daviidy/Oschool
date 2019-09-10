@@ -7,6 +7,7 @@ use App\School;
 use App\Category;
 use App\Pricing;
 use Illuminate\Http\Request;
+use Auth;
 use Image;
 
 class CourseController extends Controller
@@ -160,12 +161,13 @@ class CourseController extends Controller
          if (Auth::check()) {
          $categories = Category::orderby('id', 'asc')->paginate(100);
          return view('admin_views.courses.information', ['school' => $school,
+                                                         'course' => $course,
+                                                         'categories' => $categories
+                                                     ]);
         }
         else {
             return redirect('home');
-        }                                            'course' => $course,
-                                                        'categories' => $categories
-                                                    ]);
+        }
      }
 
      /**

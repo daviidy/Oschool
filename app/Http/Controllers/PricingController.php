@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Pricing;
 use App\School;
 use App\Course;
+use Auth;
 use Illuminate\Http\Request;
 
 class PricingController extends Controller

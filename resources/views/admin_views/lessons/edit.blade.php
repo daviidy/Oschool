@@ -1124,6 +1124,10 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <a href="#text"  class="fastclickable">Texte</a>
                     </li>
 
+                    <li class="tab fastclickable"  heading="Add Quiz" >
+                        <a href="#quiz"  class="fastclickable">Quiz</a>
+                    </li>
+
                     <!---->
 
                 </ul>
@@ -1284,7 +1288,59 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 </ui-view>
 
 
-<div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
+<ui-view style="display: none;" id="quiz" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
+    <div what="quiz wrapper" class="quiz-wrapper">
+        <!---->
+        <!---->
+        <div ng-if="hasQuiz()" class="" style="">
+            <form what="form" ng-model="newQuestion" ng-submit="addQuestion(newQuestion)" class="well quiz-question ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse" style="">
+                <!---->
+                <!---->
+
+                <!---->
+                <div what="new question" class="quiz-question">
+                    <div data-nodrag="" class="quiz-question-prompt"><input what="question text" id="question-prompt" ng-model="newQuestion.question" placeholder="Ecrivez votre question ici"
+                          class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style=""></div>
+                    <div class="multiple-choice">
+                        <!---->
+                        <div what="answer" ng-repeat="answer in newQuestion.answers track by $index">
+                            <p></p>
+                            <div class="input-group">
+                                <div tooltip="Correct Answer" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="input-group-addon">
+                                    <div class="checkbox checkbox-primary"><input what="answer correct" id="new-answer-0" type="checkbox" name="correctAnswers" ng-model="answer.correct" ng-value="true"
+                                          class="ng-pristine ng-untouched ng-valid ng-not-empty" value="true"><label for="new-answer-0"></label></div>
+                                </div><input what="answer text" ng-model="answer.value" placeholder="Choix de réponse" ng-keydown="addMultipleChoiceAnswer(newQuestion, $event)"
+                                  class="form-control multiple-choice-answer-input ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
+                                <!---->
+                                <div ng-if="newQuestion.answers.length > 1" class="input-group-btn left-10" style="">
+                                    <button id="answer-remove" type="button" tabindex="-1"
+                                      class="tch-btn-content-danger fastclickable"><i class="fa fa-remove"></i></button></div>
+                                <!---->
+                            </div>
+                            <p></p>
+                        </div>
+                        <!---->
+
+                    </div><input what="add question button" type="submit" value="Ajouter question" ng-disabled="!readyToAddQuestion(newQuestion)" class="tch-btn-header-primary-block">
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul ui-sortable="sortableOptions" ng-model="questions" class="list-unstyled question-added-wrapper ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
+                        <!---->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!---->
+    </div>
+</ui-view>
+
+
+
+
+
+<div style="margin-top: 30px;" ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
                     <div ng-transclude="">
 
                         <div label="Bio" for="author_bio_id" skip-validation="true" form="">
