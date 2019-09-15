@@ -12,6 +12,13 @@ $(document).ready(function(){
     $('#category-tabs a:first').trigger('click'); // Default
 
 
+//logique quiz
+
+    $('#add-option').on('click', function(){
+      $('#answer').clone().appendTo('.multiple-choice');
+    });
+
+
 
 
 

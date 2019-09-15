@@ -59,6 +59,7 @@ Route::post('/updateLecture', 'LessonController@update');
 Route::post('/saveNewPositions', 'LessonController@saveNewPositions');
 Route::post('/saveNewSectionPositions', 'LessonController@saveNewSectionPositions');
 Route::post('/deleteLecture', 'LessonController@destroy');
+Route::post('/addQuiz', 'LessonController@addQuiz');
 
 
 

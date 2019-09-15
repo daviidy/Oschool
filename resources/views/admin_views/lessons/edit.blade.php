@@ -299,7 +299,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .tch-editor-content-block .attachment-html{cursor:text;max-height:200px;overflow:hidden;}
 .add-lecture-attachment-nav-tabs .nav-tabs{position:inherit!important;margin-top:20px;}
 .add-lecture-attachment-wrapper{margin-top:-1px;padding:50px;display:block;background:#fff;}
-.state-admin-courses-course .ui-sortable-handle{cursor:move;}
+ .ui-sortable-handle{cursor:move;}
 .space::before{content:'\A0';}
 .unsortable{cursor:default!important;}
 .not-sortable{cursor:default!important;}
@@ -1057,6 +1057,141 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
 
 
+
+/*! CSS Used from: Embedded */
+.ng-hide:not(.ng-hide-animate){display:none!important;}
+/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-79e90a8f89fd85fce9ba.css ; media=screen */
+@media screen{
+strong{font-weight:bold;}
+button,input{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+input{line-height:normal;}
+input[type='checkbox']{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0;}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.pull-right{float:right;}
+.fa-remove:before{content:"\F00D";}
+.fa-trash-o:before{content:"\F014";}
+.fa-edit:before{content:"\F044";}
+.fa-check-square-o:before{content:"\F046";}
+strong{font-weight:bold;}
+button,input{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+input{line-height:normal;}
+input[type='checkbox']{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+p{orphans:3;widows:3;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+input,button{font-family:inherit;font-size:inherit;line-height:inherit;}
+p{margin:0 0 11px;}
+ul{margin-top:0;margin-bottom:11px;}
+ul ul{margin-bottom:0;}
+.row{margin-right:-15px;margin-left:-15px;}
+.row:before,.row:after{display:table;content:" ";}
+.row:after{clear:both;}
+.col-sm-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
+@media (min-width: 768px){
+.col-sm-12{float:left;}
+.col-sm-12{width:100%;}
+}
+label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
+input[type="checkbox"]{margin:4px 0 0;margin-top:1px \9;line-height:normal;}
+input[type="checkbox"]:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.form-control{display:block;width:100%;height:41px;padding:6px 12px;font-size:13px;line-height:1.72222;color:#95a5a6;background-color:white;background-image:none;border:1px solid #ccc;border-radius:5px;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);-webkit-transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;-webkit-transition:border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;}
+.form-control:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);}
+.form-control::-moz-placeholder{color:#999;opacity:1;}
+.form-control:-ms-input-placeholder{color:#999;}
+.form-control::-webkit-input-placeholder{color:#999;}
+.form-control::-ms-expand{background-color:transparent;border:0;}
+.checkbox{position:relative;display:block;margin-top:10px;margin-bottom:10px;}
+.checkbox label{min-height:22px;padding-left:20px;margin-bottom:0;font-weight:400;cursor:pointer;}
+.checkbox input[type="checkbox"]{position:absolute;margin-top:4px \9;margin-left:-20px;}
+.input-group{position:relative;display:table;border-collapse:separate;}
+.input-group .form-control{position:relative;z-index:2;float:left;width:100%;margin-bottom:0;}
+.input-group .form-control:focus{z-index:3;}
+.input-group-addon,.input-group-btn,.input-group .form-control{display:table-cell;}
+.input-group .form-control:not(:first-child):not(:last-child){border-radius:0;}
+.input-group-addon,.input-group-btn{width:1%;white-space:nowrap;vertical-align:middle;}
+.input-group-addon{padding:6px 12px;font-size:13px;font-weight:400;line-height:1;color:#95a5a6;text-align:center;background-color:#eeeeee;border:1px solid #ccc;border-radius:5px;}
+.input-group-addon input[type="checkbox"]{margin-top:0;}
+.input-group-addon:first-child{border-top-right-radius:0;border-bottom-right-radius:0;}
+.input-group-addon:first-child{border-right:0;}
+.input-group-btn{position:relative;font-size:0;white-space:nowrap;}
+.well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);}
+.pull-right{float:right!important;}
+.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#1ea69a;border:1px solid #1ea69a;}
+.tch-btn-content-primary:focus{outline:0!important;}
+.tch-btn-content-primary:focus{outline:0!important;}
+.tch-btn-content-primary:focus{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-btn-content-primary:hover{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-btn-content-primary:active{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-btn-content-primary:active:hover,.tch-btn-content-primary:active:focus{color:white;background-color:#146e66;border-color:#12655e;}
+.tch-btn-content-primary:active{background-image:none;}
+.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e6c6b8;color:#d4604b;}
+.tch-btn-content-danger:focus{outline:0!important;}
+.tch-btn-content-danger:focus{outline:0!important;}
+.tch-btn-content-danger:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
+.tch-btn-content-danger:hover{color:white;background-color:#ededed;border-color:#c3452e;}
+.tch-btn-content-danger:active{color:white;background-color:#ededed;border-color:#c3452e;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:#dedede;border-color:#aa3c29;}
+.tch-btn-content-danger:active{background-image:none;}
+.tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus,.tch-btn-content-danger:hover:hover,.tch-btn-content-danger:hover:focus,.tch-btn-content-danger:focus:hover,.tch-btn-content-danger:focus:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
+.tch-btn-content-danger:focus{outline:0!important;}
+.tch-btn-content-danger:focus{outline:0!important;}
+.tch-btn-icon{padding:6px 9px!important;font-size:11px;line-height:1.083;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;height:37px;width:37px;padding-top:8px!important;}
+.tch-btn-icon:focus{outline:0!important;}
+.tch-btn-icon .fa{font-size:16px;height:20px;width:15px;}
+.tch-btn-icon .fa.fa-edit{height:16px;width:13px;}
+label{font-weight:normal;line-height:2.4;font-size:16px;color:#808080;line-height:30px;font-weight:600;margin-bottom:12px;}
+.form-control::-moz-placeholder{color:#97999b;opacity:1;}
+.form-control:-ms-input-placeholder{color:#97999b;}
+.form-control::-webkit-input-placeholder{color:#97999b;}
+.form-control{border:1px solid #dbdbdb;color:#20272d;font-family:"TeachableSans", Helvetica, Arial, sans-serif;font-size:13px;line-height:1.467;padding:12px 14px;height:44px;border-radius:5px;-webkit-box-shadow:none;box-shadow:none;-webkit-transition:"border .25s linear, color .25s linear, background-color .25s linear";transition:"border .25s linear, color .25s linear, background-color .25s linear";}
+.form-control:focus{outline:0;border:1px solid rgba(0, 0, 0, .34)!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+.checkbox label{min-height:29px;padding-left:6px;font-size:14px;margin-bottom:0;font-weight:normal;cursor:pointer;}
+p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
+ul{margin-top:0;margin-bottom:11px;}
+ul ul{margin-bottom:0;}
+.input-group-addon{padding:10px 12px;font-size:13px;color:white;text-align:center;background-color:#9a9ea2;border:1px solid #9a9ea2;border-radius:6px;-webkit-transition:"border .25s linear, color .25s linear, background-color .25s linear";transition:"border .25s linear, color .25s linear, background-color .25s linear";}
+.well{min-height:20px;padding:10px 20px;margin-bottom:20px;background-color:#f9fafb;border:0px;border-radius:4px;-webkit-box-shadow:none;box-shadow:none;}
+.input-group-addon{background:#f9f9f9;padding:1px;color:#34495e;padding:0 10px;font-weight:200;font-size:13px;border:1px solid #dbdbdb;}
+ul.tch-arrow-list{list-style-type:none;margin-top:10px!important;padding-left:20px;text-align:left;}
+ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/images/tch-arrow.svg") no-repeat;background-position:0px 3px;font-size:13px;margin-bottom:10px;padding-left:31px;line-height:26px;background-size:17px;width:100%;font-weight:200;}
+ .input-group-addon{padding-right:35px;background-color:#ebf8f6;border-top:1px solid #dbdbdb;border-left:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;}
+ .input-group-addon .checkbox{margin:0;padding:0;top:12px;position:absolute;left:35px;}
+ #question-prompt{font-weight:bold;}
+ .quiz-wrapper .well{background:#fff;padding:0;margin:0;}
+ ul.question-added-wrapper > li{background-color:#f9f9f9!important;border-radius:5px;border:1px solid #dfdfdf;margin:7px;padding-bottom:15px;padding-left:20px;padding:14px 18px 15px 19px!important;}
+ ul.question-added-wrapper > li:hover{background:#fdfdfd;}
+ ul.question-added-wrapper > li .correct-answer{color:#278c7d;font-weight:bold;}
+ .question-answers{font-size:15px;}
+ .question-answers .fa.fa-check-square-o{color:#278c7d;margin-left:3px;}
+ .checkbox-primary input[type='checkbox']:checked + label::before{background-color:#2b9b8b;border-color:#2b9b8b;}
+ .ui-sortable-handle{cursor:move;}
+.space::before{content:'\A0';}
+.left-10{padding-left:10px!important;}
+.checkbox label{line-height:18px;}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
+}
+/*! CSS Used from: Embedded */
+.FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+/*! CSS Used from: Embedded */
+.FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
+/*! CSS Used fontfaces */
+
+
+
+
+
 </style>
 
 
@@ -1073,8 +1208,9 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 </div>
                 <!---->
                 <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons no-title">
-                    <div class="tch-lecture-title"><a ng-click="backToSyllabus()" class="tch-section-back fastclickable"><i class="fa fa-angle-left"></i><span class="space"></span></a><a editable-text="lecture.name"
-                          onbeforesave="setLectureName($data)" class="title edit-in-place editable editable-click editable-hide"><span ng-bind="lecture.name" class="editable-text">Titre leçon</span><button class="tch-btn-icon-fa icon-gray"><i
+                    <div class="tch-lecture-title">
+                      <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum" ng-click="backToSyllabus()" class="tch-section-back fastclickable"><i class="fa fa-angle-left"></i><span class="space"></span></a><a editable-text="lecture.name"
+                           class="title edit-in-place editable editable-click editable-hide"><span ng-bind="lecture.name" class="editable-text">Titre leçon</span><button class="tch-btn-icon-fa icon-gray"><i
                                   class="fa fa-pencil"></i></button></a>
                         <form class="form-inline editable-wrap editable-text ng-pristine ng-valid fastclickable" role="form" ng-click="$event.stopPropagation();" editable-form="$form" blur="cancel">
                             @csrf
@@ -1299,37 +1435,121 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                 <!---->
                 <div what="new question" class="quiz-question">
-                    <div data-nodrag="" class="quiz-question-prompt"><input what="question text" id="question-prompt" ng-model="newQuestion.question" placeholder="Ecrivez votre question ici"
+                    <div data-nodrag="" class="quiz-question-prompt">
+                      <input id="question-text" ng-model="newQuestion.question" placeholder="Ecrivez votre question ici"
                           class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style=""></div>
-                    <div class="multiple-choice">
+                    <div id="bloc-question" class="multiple-choice">
                         <!---->
-                        <div what="answer" ng-repeat="answer in newQuestion.answers track by $index">
-                            <p></p>
+                        <br>
+                        <p><a id="add-option" style="cursor: pointer;">Ajouter option de réponse</a></p>
+                        <div id="answer" ng-repeat="answer in newQuestion.answers track by $index">
+
+
                             <div class="input-group">
-                                <div tooltip="Correct Answer" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="input-group-addon">
-                                    <div class="checkbox checkbox-primary"><input what="answer correct" id="new-answer-0" type="checkbox" name="correctAnswers" ng-model="answer.correct" ng-value="true"
-                                          class="ng-pristine ng-untouched ng-valid ng-not-empty" value="true"><label for="new-answer-0"></label></div>
-                                </div><input what="answer text" ng-model="answer.value" placeholder="Choix de réponse" ng-keydown="addMultipleChoiceAnswer(newQuestion, $event)"
-                                  class="form-control multiple-choice-answer-input ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
+                                <div id="checkbox-correct" tooltip="Correct Answer" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="input-group-addon">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="correct"
+                                          class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                          <label for="new-answer-0"></label></div>
+                                </div>
+
+                                <input  placeholder="Choix de réponse"
+                                  name="text" class="form-control multiple-choice-answer-input ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
                                 <!---->
                                 <div ng-if="newQuestion.answers.length > 1" class="input-group-btn left-10" style="">
                                     <button id="answer-remove" type="button" tabindex="-1"
-                                      class="tch-btn-content-danger fastclickable"><i class="fa fa-remove"></i></button></div>
+                                      class="tch-btn-content-danger fastclickable"><i class="fa fa-remove"></i></button>
+                                  </div>
                                 <!---->
                             </div>
+
                             <p></p>
                         </div>
+
                         <!---->
 
-                    </div><input what="add question button" type="submit" value="Ajouter question" ng-disabled="!readyToAddQuestion(newQuestion)" class="tch-btn-header-primary-block">
+                    </div>
+                    <input id="add-question" value="Ajouter question" ng-disabled="!readyToAddQuestion(newQuestion)" class="tch-btn-header-primary-block">
                 </div>
             </form>
             <div class="row">
-                <div class="col-md-12">
-                    <ul ui-sortable="sortableOptions" ng-model="questions" class="list-unstyled question-added-wrapper ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
-                        <!---->
-                    </ul>
-                </div>
+              <div class="col-md-12">
+                  <ul ui-sortable="sortableOptions" ng-model="questions" class="list-unstyled question-added-wrapper ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
+                      @if($lesson->quizzes)
+                      @foreach($lesson->quizzes as $quiz)
+                      @foreach($quiz->questions as $question)
+
+                      <li what="question" ng-repeat="question in questions track by $index" ng-class="{ " question-edit-mode':="" question.editing="" }'="" class="well ui-sortable-handle">
+                        <div ng-show="!question.editing" class="pull-right"><button what="edit button" data-nodrag="" type="button" ng-show="!question.editing" ng-click="toggleEditMode(question)"
+                              class="tch-btn-content-primary tch-btn-icon disable-animations fastclickable"><i class="fa fa-edit"></i></button><span class="space"></span><button what="delete button" data-nodrag="" type="button" ng-click="deleteQuestion(question)"
+                              class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable"><i class="fa fa-trash-o"></i></button></div>
+                        <div what="edit box" ng-show="question.editing" ng-model="question" class="quiz-question ng-pristine ng-untouched ng-valid ng-not-empty ng-hide">
+                            <div class="quiz-question">
+                                <div data-nodrag="" class="quiz-question-prompt"><input what="question text" id="question-prompt" ng-model="question.question" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty"></div>
+                                <div class="multiple-choice">
+                                    <div what="answer" ng-repeat="answer in question.answers track by $index">
+                                        <p></p>
+                                        <div class="input-group">
+                                            <div tooltip="Correct Answer" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="input-group-addon">
+                                                <div class="checkbox checkbox-primary"><input id="answer-0-0-correct" type="checkbox" name="answer-0-0-correct" ng-model="answer.correct" ng-value="true" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                                                      value="true"><label for="answer-0-0-correct"></label></div>
+                                            </div><input what="answer text" ng-model="answer.value" placeholder="Answer choice" ng-keydown="addMultipleChoiceAnswer(question, $event)"
+                                              class="form-control multiple-choice-answer-input ng-pristine ng-untouched ng-valid ng-not-empty">
+                                            <div ng-if="question.answers.length > 1" class="input-group-btn left-10"><button type="button" ng-click="removeAnswer(question, answer)" tabindex="-1" class="tch-btn-content-danger fastclickable"><i
+                                                      class="fa fa-remove"></i></button></div>
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                    <div what="answer" ng-repeat="answer in question.answers track by $index">
+                                        <p></p>
+                                        <div class="input-group">
+                                            <div tooltip="Correct Answer" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="input-group-addon">
+                                                <div class="checkbox checkbox-primary"><input id="answer-1-0-correct" type="checkbox" name="answer-0-1-correct" ng-model="answer.correct" ng-value="true" class="ng-pristine ng-untouched ng-valid ng-empty"
+                                                      value="true"><label for="answer-1-0-correct"></label></div>
+                                            </div><input what="answer text" ng-model="answer.value" placeholder="Answer choice" ng-keydown="addMultipleChoiceAnswer(question, $event)"
+                                              class="form-control multiple-choice-answer-input ng-pristine ng-untouched ng-valid ng-not-empty">
+                                            <div ng-if="question.answers.length > 1" class="input-group-btn left-10"><button type="button" ng-click="removeAnswer(question, answer)" tabindex="-1" class="tch-btn-content-danger fastclickable"><i
+                                                      class="fa fa-remove"></i></button></div>
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div what="display box" ng-hide="question.editing" class="question">
+                          <strong what="question text" ng-bind-html="question.question">
+                            {{$question->text}}
+                          </strong>
+                            <ul class="question-answers tch-arrow-list">
+                              @foreach($question->options as $option)
+                                <li what="answer" ng-repeat="answer in question.answers track by $index" ng-class="{ " correct-answer'="" :="" answer.correct="" }'="" class="answers correct-answer">
+                                  <span what="answer text"
+                                      ng-bind-html="answer.value">
+                                      {{$option->text}}
+                                    </span>
+                                    <span class="space"></span><i what="answer correct" ng-show="answer.correct" class="fa fa-check-square-o"></i>
+                                </li>
+                                @endforeach
+
+                            </ul>
+                        </div>
+                        <div ng-show="question.editing" class="row ng-hide">
+                            <div class="col-sm-12">
+                                <div class="pull-right"><button id="test-id-save-btn" data-nodrag="" type="submit" ng-show="question.editing" ng-click="saveQuestion(question)"
+                                      class="tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide">Save</button><span class="space"></span><button what="delete button" data-nodrag="" type="button" ng-click="deleteQuestion(question)"
+                                      class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable"><i class="fa fa-trash-o"></i></button></div>
+                            </div>
+                        </div>
+                    </li>
+
+                      @endforeach
+                      @endforeach
+
+                      @endif
+
+
+                  </ul>
+              </div>
             </div>
         </div>
         <!---->

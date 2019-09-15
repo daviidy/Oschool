@@ -728,6 +728,117 @@ console.log(JSON.stringify(positions));
       });
   }
 
+
+
+
+  $('#add-question').on('click', function(event) {
+      event.preventDefault();
+
+      var dataImage = new FormData();
+      var tab = [];
+
+      var question = $('#question-text').val();
+      var options = $('#answer input[name=text]');
+      console.log(options);
+      $.each(options, function(index){
+          var correct = $(this).prev().find('input[name=correct]:checked').length > 0;
+          console.log(correct);
+          var obj = {
+              'option': $(this).val(),
+              'correct': correct,
+          };
+          tab.push(obj);
+      });
+      console.log(tab);
+      console.log(question);
+      console.log(JSON.stringify(tab));
+
+
+      dataImage.append('_token', '{{csrf_token()}}');
+      dataImage.append('school_id', $('input[name=school_id]').val());
+      dataImage.append('course_id', $('input[name=course_id]').val());
+      dataImage.append('lesson_id', $('input[name=lesson_id]').val());
+      dataImage.append('question', question);
+      dataImage.append('option', JSON.stringify(tab));
+
+      $.ajax({
+          type: 'post',
+          url: '/addQuiz',
+          contentType:false,
+          cache: false,
+          processData:false,
+          data: dataImage,
+          success: function(data) {
+              $.amaran({'message':'La question du quiz a bien été ajoutée'});
+
+              $('.list-unstyled').append("<li what='question' ng-repeat='question in questions track by $index' ng-class='{ 'question-edit-mode': question.editing }' class='well ui-sortable-handle'>\
+<div ng-show='!question.editing' class='pull-right'><button what='edit button' data-nodrag='' type='button' ng-show='!question.editing' ng-click='toggleEditMode(question)'\
+  class='tch-btn-content-primary tch-btn-icon disable-animations fastclickable'><i class='fa fa-edit'></i></button><span class='space'></span><button what='delete button' data-nodrag='' type='button'\
+  ng-click='deleteQuestion(question)' class='tch-btn-content-danger tch-btn-icon disable-animations fastclickable'><i class='fa fa-trash-o'></i></button></div>\
+<div what='edit box' ng-show='question.editing' ng-model='question' class='quiz-question ng-pristine ng-untouched ng-valid ng-not-empty ng-hide'>\
+<div class='quiz-question'>\
+    <div data-nodrag='' class='quiz-question-prompt'><input what='question text' id='question-prompt' ng-model='question.question' class='form-control ng-pristine ng-untouched ng-valid ng-not-empty'></div>\
+    <div class='multiple-choice'>\
+        <div what='answer' ng-repeat='answer in question.answers track by $index'>\
+            <p></p>\
+            <div class='input-group'>\
+                <div tooltip='Correct Answer' tooltip-placement='bottom' tooltip-trigger='mouseenter' tooltip-append-to-body='true' class='input-group-addon'>\
+                    <div class='checkbox checkbox-primary'><input id='answer-0-0-correct' type='checkbox' name='answer-0-0-correct' ng-model='answer.correct' ng-value='true' class='ng-pristine ng-untouched ng-valid ng-not-empty'\
+                          value='true'><label for='answer-0-0-correct'></label></div>\
+                </div><input what='answer text' ng-model='answer.value' placeholder='Answer choice' ng-keydown='addMultipleChoiceAnswer(question, $event)'\
+                  class='form-control multiple-choice-answer-input ng-pristine ng-untouched ng-valid ng-not-empty'>\
+                <div ng-if='question.answers.length > 1' class='input-group-btn left-10'><button type='button' ng-click='removeAnswer(question, answer)' tabindex='-1' class='tch-btn-content-danger fastclickable'><i\
+                          class='fa fa-remove'></i></button></div>\
+            </div>\
+            <p></p>\
+        </div>\
+        <div what='answer' ng-repeat='answer in question.answers track by $index'>\
+            <p></p>\
+            <div class='input-group'>\
+                <div tooltip='Correct Answer' tooltip-placement='bottom' tooltip-trigger='mouseenter' tooltip-append-to-body='true' class='input-group-addon'>\
+                    <div class='checkbox checkbox-primary'><input id='answer-1-0-correct' type='checkbox' name='answer-0-1-correct' ng-model='answer.correct' ng-value='true' class='ng-pristine ng-untouched ng-valid ng-empty'\
+                          value='true'><label for='answer-1-0-correct'></label></div>\
+                </div><input what='answer text' ng-model='answer.value' placeholder='Answer choice' ng-keydown='addMultipleChoiceAnswer(question, $event)'\
+                  class='form-control multiple-choice-answer-input ng-pristine ng-untouched ng-valid ng-not-empty'>\
+                <div ng-if='question.answers.length > 1' class='input-group-btn left-10'><button type='button' ng-click='removeAnswer(question, answer)' tabindex='-1' class='tch-btn-content-danger fastclickable'><i\
+                          class='fa fa-remove'></i></button></div>\
+            </div>\
+            <p></p>\
+        </div>\
+    </div>\
+</div>\
+</div>\
+<div what='display box' ng-hide='question.editing' class='question'>\
+<strong what='question text' ng-bind-html='question.question'>\
+"+data.text+"\
+</strong>\
+<ul class='question-answers tch-arrow-list'>\
+    <li what='answer' ng-repeat='answer in question.answers track by $index' ng-class='{ 'correct-answer' : answer.correct }' class='answers correct-answer'><span what='answer text'\
+          ng-bind-html='answer.value'>fvnfkbnfkobngf</span><span class='space'></span><i what='answer correct' ng-show='answer.correct' class='fa fa-check-square-o'></i></li>\
+    <li what='answer' ng-repeat='answer in question.answers track by $index' ng-class='{ 'correct-answer' : answer.correct }' class='answers'><span what='answer text' ng-bind-html='answer.value'>fkvjnfobfpebf</span><span\
+          class='space'></span><i what='answer correct' ng-show='answer.correct' class='fa fa-check-square-o ng-hide'></i></li>\
+</ul>\
+</div>\
+<div ng-show='question.editing' class='row ng-hide'>\
+<div class='col-sm-12'>\
+    <div class='pull-right'><button id='test-id-save-btn' data-nodrag='' type='submit' ng-show='question.editing' ng-click='saveQuestion(question)'\
+          class='tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide'>Save</button><span class='space'></span><button what='delete button' data-nodrag='' type='button' ng-click='deleteQuestion(question)'\
+          class='tch-btn-content-danger tch-btn-icon disable-animations fastclickable'><i class='fa fa-trash-o'></i></button></div>\
+</div>\
+</div>\
+</li>");
+
+          },
+          error: function (xhr, msg) {
+            console.log(msg + '\n' + xhr.responseText);
+        }
+      });
+
+  });
+
+
+
+
   </script>
 
 

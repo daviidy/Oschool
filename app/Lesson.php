@@ -51,6 +51,16 @@ class Lesson extends Model
             return $this->hasMany('App\Media');
         }
 
+        /**
+         * [users description]
+         * relationship one to many with Quiz model
+         * @return [array] [description]
+         */
+         public function quizzes()
+         {
+             return $this->hasMany('App\Quiz');
+         }
+
 
         public static function boot() {
         parent::boot();
