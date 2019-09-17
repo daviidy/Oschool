@@ -6,6 +6,9 @@ use App\Lesson;
 use App\School;
 use App\Course;
 use App\Section;
+use App\Quiz;
+use App\Question;
+use App\Option;
 use Image;
 use Auth;
 use App\Media;
@@ -31,13 +34,22 @@ class LessonController extends Controller
     public function create(School $school, Course $course, Section $section)
     {
         if (Auth::check()) {
-            return view('admin_views.lessons.create', ['school' => $school, 'course' => $course, 'section' => $section]);
+            $lesson = Lesson::create(['position' => Lesson::where('course_id', $course->id)->where('section_id', $section->id)->max('position') + 1,
+                                       'slug' => 'Nouvelle leçon',
+                                       'free_lesson' => 'no',
+                                       'title' => 'Nouvelle leçon',
+                                       'course_id' => $course->id,
+                                       'section_id' => $section->id
+                                   ]);
+            //return view('admin_views.lessons.edit', ['school' => $school, 'course' => $course, 'section' => $section, 'lesson' => $lesson]);
+            return redirect('/schoolAdmin/'.$school->id.'/courses/'.$course->id.'/curriculum/'.$section->id.'/lessons/'.$lesson->id.'/edit');
         }
         else {
             return redirect('home');
         }
     }
 
+    //cette fonction ne sert plus a grande chose car tout se gère dans le create()
     /**
      * Store a newly created resource in storage.
      *
@@ -192,5 +204,48 @@ class LessonController extends Controller
     {
         $lesson->delete();
         return redirect('/schoolAdmin/'.$lesson->course->school_id.'/courses/'.$lesson->course_id.'/curriculum')->with('status', 'Leçon supprimée');
+    }
+
+
+
+
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function addQuiz(Request $request)
+    {
+        $quiz = Quiz::where('lesson_id', $request->lesson_id)->where('course_id', $request->course_id)->first();
+        if ($quiz === null) {
+        $quiz = Quiz::create([
+                              'course_id' => $request->course_id,
+                              'lesson_id' => $request->lesson_id,
+          ]);
+      }
+
+
+      $question = Question::create([
+                            'quiz_id' => $quiz->id,
+                            'text' => $request->question,
+        ]);
+
+
+        $options = json_decode($request->option);
+        foreach ($options as $option_input) {
+            $option = Option::create([
+                                  'question_id' => $question->id,
+                                  'text' => $option_input->option,
+                                  'correct' => $option_input->correct,
+              ]);
+        }
+
+        return response()->json($question);
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
     }
 }

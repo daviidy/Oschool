@@ -224,8 +224,13 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                 <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons">
                     <a what="preview btn" ng-href="/courses/vr-course/?preview=logged_in" target="_blank" class="tch-btn-header-secondary"
                       href="/courses/vr-course/?preview=logged_in">Aperçu</a><span class="space"></span>
-                    <span class="space"></span><a what="new section btn" ui-sref="admin.courses.course.curriculum.new_section" class="tch-btn-header-primary"
+                    <span class="space"></span>
+                    <a what="new section btn" ui-sref="admin.courses.course.curriculum.new_section" class="tch-btn-header-primary"
                       href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/new-section">Nouvelle section</a>
+                      <!--
+                      <a style="background-color: #4D90CC;border: 1px solid #4D90CC;" what="new section btn" ui-sref="admin.courses.course.curriculum.new_section" class="tch-btn-header-primary"
+                        href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/new-section">Ajouter quiz</a>
+                    -->
                 </div>
             </div>
             <!---->
@@ -245,10 +250,15 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                 <!---->
                 @if($course->sections)
                 @foreach($course->sections->sortBy('position') as $section)
-                <li data-index="{{$section->id}}" data-position="{{$section->position}} class="section-item angular-ui-tree-node" collapsed="false" style="">
+                <li data-index="{{$section->id}}" data-position="{{$section->position}}" class="section-item angular-ui-tree-node" collapsed="false" style="">
                     <div what="section" class="section-heading angular-ui-tree-wrapper"><i ui-tree-handle=""
-                          class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle"></i><span data-nodrag="" class="checkbox-container"><input what="checkbox" type="checkbox" ng-model="lectureSection.allSelected"
-                              ng-change="selectLectureSection(lectureSection)" class="ng-pristine ng-untouched ng-valid ng-empty"></span><span class="title"><span what="section name" ng-bind="lectureSection.name" editable-text="lectureSection.name"
+                          class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle"></i>
+                          <span data-nodrag="" class="checkbox-container">
+                              <!--
+                              <input what="checkbox" type="checkbox" ng-model="lectureSection.allSelected"
+                              ng-change="selectLectureSection(lectureSection)" class="ng-pristine ng-untouched ng-valid ng-empty">
+                          -->
+                          </span><span class="title"><span what="section name" ng-bind="lectureSection.name" editable-text="lectureSection.name"
                               e-form="lectureSectionNameEditForm" onbeforesave="$event.stopPropagation(); updateLectureSection(lectureSection, { name: $data })" class="lecture-section-name editable">{{$section->title}}</span><button
                               what="edit section name" ng-click="$event.stopPropagation(); lectureSectionNameEditForm.$show()" ng-hide="lectureSectionNameEditForm.$visible" class="tch-btn-icon-fa icon-gray fastclickable"><i
                                   class="fa fa-pencil"></i></button>
@@ -260,9 +270,9 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                         @if($section->lessons)
                         @foreach($section->lessons->sortBy('position') as $lesson)
                         <li data-index="{{$lesson->id}}" data-position="{{$lesson->position}}"
-                           class="lecture-item angular-ui-tree-wrapper angular-ui-tree-node fastclickable" collapsed="false" style="">
+                           class="{{$lesson->status == 'inactive' ? 'draft' : ''}} lecture-item angular-ui-tree-wrapper angular-ui-tree-node fastclickable" collapsed="false" style="">
                           <i ui-tree-handle=""
-                              class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle fastclickable {{$lesson->status == 'inactive' ? 'draft' : ''}}"></i>
+                              class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle fastclickable"></i>
                               <span data-nodrag="" ng-click="$event.stopPropagation();" class="checkbox-container fastclickable">
                                   <!--
                                   <input type="checkbox"

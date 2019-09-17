@@ -481,7 +481,8 @@ p.small a:hover{color:#67777c;}
                 </div>
                 <!---->
                 <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons no-title">
-                    <div class="tch-lecture-title"><a ng-click="backToSyllabus()" class="tch-section-back fastclickable"><i class="fa fa-angle-left"></i><span class="space"></span></a><a editable-text="lecture.name"
+                    <div class="tch-lecture-title">
+                      <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum" ng-click="backToSyllabus()" class="tch-section-back fastclickable"><i class="fa fa-angle-left"></i><span class="space"></span></a><a editable-text="lecture.name"
                           onbeforesave="setLectureName($data)" class="title edit-in-place editable editable-click editable-hide"><span ng-bind="lecture.name" class="editable-text">Titre leçon</span><button class="tch-btn-icon-fa icon-gray"><i
                                   class="fa fa-pencil"></i></button></a>
                         <form class="form-inline editable-wrap editable-text ng-pristine ng-valid fastclickable" role="form" ng-click="$event.stopPropagation();" editable-form="$form" blur="cancel">
