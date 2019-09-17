@@ -31,6 +31,10 @@ Route::resource('sections', 'SectionController');
 
 Route::resource('lessons', 'LessonController');
 
+Route::resource('quizzes', 'QuizController');
+
+Route::resource('questions', 'QuestionController');
+
 
 /*
 

@@ -738,11 +738,12 @@ console.log(JSON.stringify(positions));
       var tab = [];
 
       var question = $('#question-text').val();
-      var options = $('#answer input[name=text]');
+      var options = $('.reponses.text_question_quiz');
       console.log(options);
-      $.each(options, function(index){
+      $.each(options, function(){
           var correct = $(this).prev().find('input[name=correct]:checked').length > 0;
           console.log(correct);
+          console.log($(this).val());
           var obj = {
               'option': $(this).val(),
               'correct': correct,

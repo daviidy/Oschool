@@ -30,4 +30,16 @@ class Question extends Model
       }
 
 
+
+      public static function boot() {
+        parent::boot();
+
+        static::deleting(function($question) { // before delete() method call this
+
+           $question->options()->delete();
+           // do the rest of the cleanup...
+        });
+        }
+
+
 }

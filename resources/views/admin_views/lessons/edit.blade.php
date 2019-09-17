@@ -1399,9 +1399,9 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
     <!---->
     <!---->
     <div ng-if="hasQuiz()" class="" style="">
-        <form what="form" ng-model="newQuestion" ng-submit="addQuestion(newQuestion)" class="well quiz-question ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse" style="">
+        <form class="well quiz-question ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse" style="">
 
-            <div what="new question" class="quiz-question">
+            <div class="quiz-question">
                 <div data-nodrag="" class="quiz-question-prompt">
                     <input value="{{$lesson->video}}" type="text" name="video" what="question text" id="question-prompt" placeholder="Mettez le code d'intégration Viméo ou Youtube de votre vidéo (facultatif)"
                       class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
@@ -1411,13 +1411,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
             -->
             </div>
         </form>
-        <div class="row">
-            <div class="col-md-12">
-                <ul ui-sortable="sortableOptions" ng-model="questions" class="list-unstyled question-added-wrapper ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
-                    <!---->
-                </ul>
-            </div>
-        </div>
+
     </div>
     <!---->
 </div>
@@ -1442,7 +1436,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                         <!---->
                         <br>
                         <p><a id="add-option" style="cursor: pointer;">Ajouter option de réponse</a></p>
-                        <div id="answer" ng-repeat="answer in newQuestion.answers track by $index">
+                        <div class="reponses">
 
 
                             <div class="input-group">
@@ -1454,7 +1448,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                                 </div>
 
                                 <input  placeholder="Choix de réponse"
-                                  name="text" class="form-control multiple-choice-answer-input ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
+                                  name="text_question" class="text_question_quiz form-control multiple-choice-answer-input ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
                                 <!---->
                                 <div ng-if="newQuestion.answers.length > 1" class="input-group-btn left-10" style="">
                                     <button id="answer-remove" type="button" tabindex="-1"
@@ -1480,9 +1474,20 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                       @foreach($quiz->questions as $question)
 
                       <li what="question" ng-repeat="question in questions track by $index" ng-class="{ " question-edit-mode':="" question.editing="" }'="" class="well ui-sortable-handle">
-                        <div ng-show="!question.editing" class="pull-right"><button what="edit button" data-nodrag="" type="button" ng-show="!question.editing" ng-click="toggleEditMode(question)"
-                              class="tch-btn-content-primary tch-btn-icon disable-animations fastclickable"><i class="fa fa-edit"></i></button><span class="space"></span><button what="delete button" data-nodrag="" type="button" ng-click="deleteQuestion(question)"
-                              class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable"><i class="fa fa-trash-o"></i></button></div>
+                        <div ng-show="!question.editing" class="pull-right">
+                              <button type="button"
+                                  class="tch-btn-content-primary tch-btn-icon disable-animations fastclickable"><i class="fa fa-edit"></i>
+                              </button>
+                              <span class="space"></span>
+                              <form action="{{ route('questions.destroy', $question) }}" method="post">
+                                  {{ csrf_field() }}
+                                  {{ method_field('delete') }}
+                                  <button type="submit"
+                                      class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable">
+                                      <i class="fa fa-trash-o"></i>
+                                  </button>
+                              </form>
+                          </div>
                         <div what="edit box" ng-show="question.editing" ng-model="question" class="quiz-question ng-pristine ng-untouched ng-valid ng-not-empty ng-hide">
                             <div class="quiz-question">
                                 <div data-nodrag="" class="quiz-question-prompt"><input what="question text" id="question-prompt" ng-model="question.question" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty"></div>
@@ -1527,7 +1532,9 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                                       ng-bind-html="answer.value">
                                       {{$option->text}}
                                     </span>
+                                    @if($option->correct === 1)
                                     <span class="space"></span><i what="answer correct" ng-show="answer.correct" class="fa fa-check-square-o"></i>
+                                    @endif
                                 </li>
                                 @endforeach
 
@@ -1535,9 +1542,15 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                         </div>
                         <div ng-show="question.editing" class="row ng-hide">
                             <div class="col-sm-12">
-                                <div class="pull-right"><button id="test-id-save-btn" data-nodrag="" type="submit" ng-show="question.editing" ng-click="saveQuestion(question)"
-                                      class="tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide">Save</button><span class="space"></span><button what="delete button" data-nodrag="" type="button" ng-click="deleteQuestion(question)"
-                                      class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable"><i class="fa fa-trash-o"></i></button></div>
+                                <div class="pull-right">
+                                    <button id="test-id-save-btn" data-nodrag="" type="submit" ng-show="question.editing" ng-click="saveQuestion(question)"
+                                      class="tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide">
+                                      Save
+                                  </button>
+                                      <span class="space"></span>
+                                      <button what="delete button" data-nodrag="" type="button" ng-click="deleteQuestion(question)"
+                                      class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable"><i class="fa fa-trash-o"></i>
+                                  </button></div>
                             </div>
                         </div>
                     </li>
