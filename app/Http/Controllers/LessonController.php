@@ -8,6 +8,7 @@ use App\Course;
 use App\Section;
 use Image;
 use Auth;
+use App\Media;
 use Illuminate\Http\Request;
 
 class LessonController extends Controller
@@ -50,19 +51,17 @@ class LessonController extends Controller
                'slug' => $request->title,
                'free_lesson' => 'no'
           ]);
-          $images = [];
-        if ($request->hasFile('downloadable_files')) {
-          foreach ($request->file('downloadable_files') as $file) {
-            $filename = $file->getClientOriginalName();
-            $file->move(public_path().'/images/lessons/resources/', $filename);
-            array_push($images, $filename);
-          }
-
-
-
+          if ($request->hasFile('downloadable_files') ) {
+            foreach ($request->file('downloadable_files') as $file) {
+              $filename = $file->getClientOriginalName();
+              $media = Media::create([
+                  'name' => $filename,
+                  'lesson_id' => $data->id,
+              ]);
+              $file->move(public_path().'/images/lessons/resources/', $filename);
+            }
         }
-        $data->downloadable_files = json_encode($images);
-        $data->save();
+
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -96,9 +95,14 @@ class LessonController extends Controller
      * @param  \App\Lesson  $lesson
      * @return \Illuminate\Http\Response
      */
-    public function edit(Lesson $lesson)
+    public function edit(School $school, Course $course, Section $section, Lesson $lesson)
     {
-        //
+        if (Auth::check()) {
+            return view('admin_views.lessons.edit', ['school' => $school, 'course' => $course, 'section' => $section, 'lesson' => $lesson]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     /**
@@ -110,7 +114,72 @@ class LessonController extends Controller
      */
     public function update(Request $request, Lesson $lesson)
     {
-        //
+        $data = Lesson::find($request->lesson_id);
+        $data->update($request->all()
+            + [
+               'slug' => $request->title,
+          ]);
+          if ($request->hasFile('downloadable_files') ) {
+            foreach ($request->file('downloadable_files') as $file) {
+              $filename = $file->getClientOriginalName();
+              $media = Media::create([
+                  'name' => $filename,
+                  'lesson_id' => $data->id,
+              ]);
+              $file->move(public_path().'/images/lessons/resources/', $filename);
+            }
+        }
+
+
+
+
+        if ($request->hasFile('image') ) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->save(public_path('/images/lessons/images/' . $filename));
+          $data->image = $filename;
+          $data->save();
+
+        }
+
+        return response()->json($data);
+    }
+
+    public function saveNewPositions(Request $request)
+    {
+            foreach ($request->positions as $position) {
+                $index = $position[0];
+                $newPosition = $position[1];
+
+                $data = Lesson::find($index);
+                $data->position = $newPosition;
+                $data->save();
+            }
+
+
+        return response()->json();
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
+    }
+
+
+    public function saveNewSectionPositions(Request $request)
+    {
+            foreach ($request->positions as $position) {
+                $index = $position[0];
+                $newPosition = $position[1];
+
+                $data = Section::find($index);
+                $data->position = $newPosition;
+                $data->save();
+            }
+
+
+        return response()->json();
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
     }
 
     /**
@@ -121,6 +190,7 @@ class LessonController extends Controller
      */
     public function destroy(Lesson $lesson)
     {
-        //
+        $lesson->delete();
+        return redirect('/schoolAdmin/'.$lesson->course->school_id.'/courses/'.$lesson->course_id.'/curriculum')->with('status', 'Leçon supprimée');
     }
 }

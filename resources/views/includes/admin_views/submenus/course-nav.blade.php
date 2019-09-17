@@ -4,9 +4,9 @@
         <!---->
         <div ng-if="!course.image_url" class="course-name-placeholder" style="">
             <div class="row">
-                <div ng-bind="course.name" class="placeholder-course-name">VR course</div>
+                <div ng-bind="course.name" class="placeholder-course-name">{{$course->name}}</div>
             </div>
-            <div class="row"><a ng-click="showPreviewModal()" ng-bind="'SIDEBAR.SUB_COURSE.PREVIEW' | translate" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Preview</a></div>
+            <div class="row"><a ng-click="showPreviewModal()" ng-bind="'SIDEBAR.SUB_COURSE.PREVIEW' | translate" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
         </div>
         <!---->
     </div>

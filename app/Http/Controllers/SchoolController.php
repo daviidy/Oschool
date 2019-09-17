@@ -77,7 +77,12 @@ class SchoolController extends Controller
      */
     public function showForAdmin(School $school)
     {
+        if (Auth::check()) {
         return view('admin_views.schools.show', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     /**
@@ -88,7 +93,12 @@ class SchoolController extends Controller
      */
     public function edit(School $school)
     {
+        if (Auth::check()) {
         return view('admin_views.schools.edit', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
 
@@ -100,7 +110,12 @@ class SchoolController extends Controller
      */
     public function schoolPayments(School $school)
     {
+        if (Auth::check()) {
         return view('admin_views.schools.payments', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     /**
@@ -111,7 +126,12 @@ class SchoolController extends Controller
      */
     public function schoolStudents(School $school)
     {
+        if (Auth::check()) {
         return view('admin_views.schools.students', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     /**
@@ -122,7 +142,12 @@ class SchoolController extends Controller
      */
     public function schoolOwners(School $school)
     {
+        if (Auth::check()) {
         return view('admin_views.schools.owners', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     /**
@@ -133,7 +158,12 @@ class SchoolController extends Controller
      */
     public function schoolTeachers(School $school)
     {
+        if (Auth::check()) {
         return view('admin_views.schools.teachers', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
     /**
@@ -144,7 +174,12 @@ class SchoolController extends Controller
      */
     public function schoolTransactions(School $school)
     {
+        if (Auth::check()) {
         return view('admin_views.schools.transactions', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
 
@@ -156,7 +191,12 @@ class SchoolController extends Controller
      */
     public function schoolStatements(School $school)
     {
+        if (Auth::check()) {
         return view('admin_views.schools.statements', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
     }
 
 

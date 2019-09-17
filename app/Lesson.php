@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 class Lesson extends Model
 {
@@ -12,10 +13,10 @@ class Lesson extends Model
                            'course_id',
                            'section_id',
                            'full_text',
-                           'downloadable_files',
                            'position',
                            'status',
                            'free_lesson',
+                           'video',
 
                          ];
 
@@ -39,4 +40,34 @@ class Lesson extends Model
        {
            return $this->belongsTo('App\Section');
        }
+
+       /**
+        * [users description]
+        * relationship one to many with Media model
+        * @return [array] [description]
+        */
+        public function medias()
+        {
+            return $this->hasMany('App\Media');
+        }
+
+
+        public static function boot() {
+        parent::boot();
+
+        static::deleting(function($lesson) { // before delete() method call this
+
+            $medias = $lesson->medias;
+            foreach ($medias as $media) {
+                if (File::exists(public_path('/images/lessons/resources/' . $media->name))) {
+                    File::delete(public_path('/images/lessons/resources/' . $media->name));
+                }
+            }
+            if (File::exists(public_path('/images/lessons/images/' . $lesson->image))) {
+                File::delete(public_path('/images/lessons/images/' . $lesson->image));
+            }
+             $lesson->medias()->delete();
+             // do the rest of the cleanup...
+        });
+    }
 }

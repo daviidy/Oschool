@@ -891,7 +891,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <!---->
             </div>
             <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
-                <div ng-transclude=""><a ng-click="deleteCourse()" confirm="Are you really, really sure you want to delete this course? This action is irreversible." id="test-id-delete-course" class="tch-btn-content-danger fastclickable"><i
+                <div ng-transclude=""><a ng-click="deleteCourse()" confirm="Are you really, really sure you want to delete this course? This action is irreversible." id="delete" class="tch-btn-content-danger fastclickable"><i
                           class="fa fa-trash-o"></i><span class="space"></span><span class="space"></span>Supprimer le cours définitivement</a></div>
                 <div ng-show="showButtonsBar" class="tab-bottom ng-hide">
                     <!---->
@@ -908,14 +908,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 </div>
 
 <!--popup-->
-<div style="display: none;" class="modal-backdrop fade in" modal-animation-class="fade" modal-in-class="in" modal-backdrop="modal-backdrop" modal-animation="true" style="z-index: 1040;"></div>
+<div style="display: none;" id="popup-background" class="modal-backdrop fade in" modal-animation-class="fade" modal-in-class="in" modal-backdrop="modal-backdrop" modal-animation="true" style="z-index: 1040;"></div>
 
-<div modal-render="true" tabindex="-1" role="dialog" class="modal fade fastclickable in" modal-animation-class="fade" modal-in-class="in" ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)" modal-window="modal-window"
-  trackid="1781" index="0" animate="animate" modal-animation="true" style="z-index: 1050; display: none;">
+<div id="popup" modal-render="true" tabindex="-1" role="dialog" class="modal fade fastclickable in" modal-animation-class="fade" modal-in-class="in" ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)" modal-window="modal-window"
+  index="0" animate="animate" modal-animation="true" style="z-index: 1050; display: none;">
     <div class="modal-dialog" ng-class="size ? 'modal-' + size : ''">
-        <div class="modal-content" modal-transclude="" trackid="1788">
+        <div class="modal-content" modal-transclude="">
             <div what="confirm modal">
-                <div class="modal-body angular-confirm-text" trackid="1786">
+                <div class="modal-body angular-confirm-text">
                     <!---->
                     <h4 ng-if="data.title" ng-bind="::data.title" class="angular-confirm-title" trackid="1804" style="">Confirmer</h4>
                     <!---->
@@ -924,6 +924,19 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <div class="modal-footer center angular-confirm-footer" trackid="1787">
                     <!----><button what="cancel button" ng-if="data.cancel" ng-click="cancel()" ng-bind="::data.cancel || 'Cancel'" class="tch-btn-header-secondary fastclickable" trackid="1806" style="">Annuler</button>
                     <!----><button what="ok button" ng-click="ok()" ng-bind="::data.ok || 'OK'" class="tch-btn-header-primary fastclickable" trackid="1789">OK</button></div>
+                    <h4 ng-if="data.title" ng-bind="::data.title" class="angular-confirm-title" style="">Confirm</h4>
+                    <!---->
+                    <p what="text" ng-bind="::data.text" class="angular-confirm-copy">Are you really, really sure you want to delete this course? This action is irreversible.</p>
+                </div>
+                <div class="modal-footer center angular-confirm-footer">
+                    <!----><button id="cancel" what="cancel button" ng-if="data.cancel" ng-click="cancel()" ng-bind="::data.cancel || 'Cancel'" class="tch-btn-header-secondary fastclickable" style="">Annuler</button>
+                    <form action="{{ route('courses.destroy', $course) }}" method="post">
+                        {{ csrf_field() }}
+                        {{ method_field('delete') }}
+                    <!----><button what="ok button" ng-click="ok()" ng-bind="::data.ok || 'OK'" class="tch-btn-header-primary fastclickable">OK</button>
+                </form>
+                </div>
+
             </div>
         </div>
     </div>

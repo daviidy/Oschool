@@ -496,7 +496,12 @@ p.small a:hover{color:#67777c;}
                                 <div class="editable-error help-block ng-hide" ng-show="$error" ng-bind="$error" style=""></div>
                             </div>
                         </form>
-                        <div class="buttons pull-right"><button ng-disabled="!lecture.id" ng-click="createNewLectureInSectionAndRedirect()" class="tch-btn-header-secondary fastclickable">Nouvelle leçon</button><span class="space"></span><a
+                        <div class="buttons pull-right">
+                            <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/new-lecture">
+                            <button class="tch-btn-header-secondary fastclickable">Nouvelle leçon</button>
+                            </a>
+                            <span class="space"></span>
+                            <a
                               ng-href="/courses/vr-course/lectures/11599543?preview=logged_in" target="_blank" what="preview lecture" class="tch-btn-header-secondary" href="/courses/vr-course/lectures/11599543?preview=logged_in">Aperçu</a><span
                               class="space"></span>
                               <button id="createLecture"
@@ -594,7 +599,8 @@ p.small a:hover{color:#67777c;}
         <form what="form" ng-model="newQuestion" ng-submit="addQuestion(newQuestion)" class="well quiz-question ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse" style="">
 
             <div what="new question" class="quiz-question">
-                <div data-nodrag="" class="quiz-question-prompt"><input type="text" name="video" what="question text" id="question-prompt" ng-model="newQuestion.question" placeholder="Mettez le code d'intégration Viméo ou Youtube de votre vidéo (facultatif)"
+                <div data-nodrag="" class="quiz-question-prompt">
+                    <input type="text" name="video" what="question text" id="question-prompt" ng-model="newQuestion.question" placeholder="Mettez le code d'intégration Viméo ou Youtube de votre vidéo (facultatif)"
                       class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
                   </div><br><br>
                   <!--

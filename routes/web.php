@@ -55,7 +55,10 @@ Route::post('/deleteSchool', 'SchoolController@deleteSchool');
 Route::post('/updateSchool', 'SchoolController@updateSchool');
 Route::post('/addAuthor', 'SchoolController@addAuthor');
 Route::post('/addLecture', 'LessonController@store');
-Route::post('/repositionLessons', 'LessonController@repositionLessons')->name('reposition-lessons');
+Route::post('/updateLecture', 'LessonController@update');
+Route::post('/saveNewPositions', 'LessonController@saveNewPositions');
+Route::post('/saveNewSectionPositions', 'LessonController@saveNewSectionPositions');
+Route::post('/deleteLecture', 'LessonController@destroy');
 
 
 
@@ -105,6 +108,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pages', 'CourseController@pag
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/new-section', 'SectionController@create')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/new-lecture', 'LessonController@create')->name('course');
+Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/lessons/{lesson}/edit', 'LessonController@edit')->name('course');
 
 //course pricing
 Route::get('/schoolAdmin/{school}/courses/{course}/pricing', 'CourseController@pricing')->name('course');
@@ -121,7 +125,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pricing/{pricing}/editOnePurc
 Route::get('/schoolAdmin/{school}/courses/{course}/pricing/createPaymentPlan', 'PricingController@createPaymentPlan')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/pricing/{pricing}/editPaymentPlan', 'PricingController@editPaymentPlan')->name('course');
 
-//course crtificates
+//course certificates
 Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseController@certificates')->name('course');
 /*
 
