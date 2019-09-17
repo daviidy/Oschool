@@ -377,7 +377,16 @@
             <div class="cfp-hotkeys-close fastclickable" ng-click="toggleCheatSheet()">×</div>
         </div>
     </div>
-
+    <script type="text/javascript">
+      $(document).ready(function (e) {
+         $(".tch-btn-hamburger").click(function (e) {
+           $('.admin-sidebar').toggle(.css({
+             'transform':'translate3d(-6px, 55px, 55px)',
+             'height':'95%',
+           });)
+         });
+      });
+    </script>
 
 
     <script type="text/javascript" src="/notifs/amaran/jquery.amaran.js"></script>

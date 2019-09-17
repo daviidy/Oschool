@@ -5,6 +5,7 @@
     <title>@yield('title | Oschool')</title>
     <link rel="stylesheet" href="/css/school_homepage.css">
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript" src="/js/index.js"></script>
   </head>
 
   <body class="body-public  " cz-shortcut-listen="true">
@@ -65,7 +66,7 @@
       <div class="container">
         <div class="row">
           <a class="create-course" href="{{route('login')}}">Salle de classe</a>
-          <a class="teachable-logo" href="/" title="Teachable - Create a Course"><img src="/images/schools/logos/oschool.png" alt="" style="width: 130px;"></a>
+          <a class="teachable-logo" href="/" title="Teachable - Create a Course"><img src="/images/schools/logos/logo_oschool_blanc.png" alt="" style="width: 130px;"></a>
           <a class="log-in" href="/login?src=nav">Entreprises</a>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>

@@ -91,13 +91,13 @@ h1,h2{color:#2b3636;}
 .my-teachable-layout{font-family:'TeachableSans', 'Helvetica', 'Arial';min-width:330px;background:#f5f6f7;}
 .my-teachable-layout .sidebar{width:276px;}
 .my-teachable-layout .sidebar .profile-card{height:353px;text-align:center;padding:30px;}
-.my-teachable-layout .sidebar .profile-card .logo-wrapper{position:absolute;left:0;top:22px;}
-.my-teachable-layout .sidebar .profile-card .logo-wrapper .logo{display:inline-block;}
+.my-teachable-layout .sidebar .profile-card .logo-wrapper{position:absolute;left:55px;top:22px;}
+.my-teachable-layout .sidebar .profile-card .logo-wrapper .logo{display:inline-block;width: 150px;}
 .my-teachable-layout .sidebar .profile-card .mobile-settings{position:absolute;right:20px;top:27px;display:none;}
 .my-teachable-layout .sidebar .profile-card .mobile-settings img{width:21px;}
 .my-teachable-layout .sidebar .profile-card .mobile-logout{font-size:11px;color:rgba(255,255,255,0.68);text-decoration:underline;margin-top:0;display:none;}
 .my-teachable-layout .sidebar .profile-card .navbar-toggle{position:absolute;left:30px;top:12px;display:none;}
-.my-teachable-layout .sidebar .profile-card .navbar-toggle .icon-bar{background:#fff;}
+.my-teachable-layout .sidebar .profile-card .navbar-toggle .icon-bar{background:#33353a;}
 .my-teachable-layout .sidebar .profile-card .mobile-navbar{background:#fff;height:279px;left:0px;padding-left:30px;position:absolute;text-align:left;top:74px;-webkit-transition:0.2s all ease-in;transition:0.2s all ease-in;width:100%;z-index:1000;}
 .my-teachable-layout .sidebar .profile-card .mobile-navbar .navbar-nav{margin-top:14px;}
 .my-teachable-layout .sidebar .profile-card .mobile-navbar .navbar-nav a{font-weight:600;color:#8f9da5;}
@@ -111,7 +111,7 @@ h1,h2{color:#2b3636;}
 .my-teachable-layout .sidebar .nav-sidebar>li a{padding-right:0;margin-left:30px;text-transform:uppercase;font-weight:500;font-size:13px;color:#8592a6;letter-spacing:1px;line-height:35px;background:#fff;}
 .my-teachable-layout .sidebar .nav-sidebar>li a:focus{background:#fff!important;}
 .my-teachable-layout .sidebar .nav-sidebar>li:hover,.my-teachable-layout .sidebar .nav-sidebar>li:focus,.my-teachable-layout .sidebar .nav-sidebar>li.selected{background-position:-24px 16px;}
-.my-teachable-layout .sidebar .nav-sidebar>li:hover a,.my-teachable-layout .sidebar .nav-sidebar>li:focus a,.my-teachable-layout .sidebar .nav-sidebar>li.selected a{color:#ff7f45;}
+.my-teachable-layout .sidebar .nav-sidebar>li:hover a,.my-teachable-layout .sidebar .nav-sidebar>li:focus a,.my-teachable-layout .sidebar .nav-sidebar>li.selected a{color:#428bca;}
 .my-teachable-layout .sidebar .nav-sidebar>li.selected a{font-weight:600;}
 .my-teachable-layout .sidebar .nav-sidebar>li.nav-item-profile{background-image:url("//assets.teachablecdn.com/icons/icon-school.svg");}
 .my-teachable-layout .sidebar .nav-sidebar>li.nav-item-create{background-image:url("//assets.teachablecdn.com/icons/icon-plus.svg");}

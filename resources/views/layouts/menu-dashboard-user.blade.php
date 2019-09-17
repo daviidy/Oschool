@@ -71,7 +71,7 @@
                         </ul>
                     </div>
                     <a class="mobile-settings" href="http://sso.teachable.com/secure/teachable_accounts/profile/edit"><img src="https://assets.teachablecdn.com/icons/icon-settings-white.svg" alt="Icon settings white"></a>
-                    <a class="logo-wrapper" href="http://sso.teachable.com/secure/teachable_accounts/profile"><img class="logo" src="https://assets.teachablecdn.com/icons/my-teachable-badge.svg" alt="My teachable badge"></a>
+                    <a class="logo-wrapper" href="/"><img class="logo" src="/images/schools/logos/oschool_2.png" alt="Oschool badge"></a>
                     <div class="user-info">
                         <a href="http://sso.teachable.com/secure/teachable_accounts/profile/edit"><img width="100" height="100" class="avatar" src="https://s.gravatar.com/avatar/9c275cba24f7c939201cda28f832f8e0?d=mm"
                               alt="9c275cba24f7c939201cda28f832f8e0?d=mm"></a>

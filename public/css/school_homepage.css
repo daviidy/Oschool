@@ -89,8 +89,11 @@ ul{margin-top:0;margin-bottom:10px;}
 .navbar-collapse:after{clear:both;}
 @media (min-width: 768px){
 .navbar-collapse{width:auto;border-top:0;box-shadow:none;}
-.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important;}
+.navbar-collapse.collapse{display:block;height:auto!important;padding-bottom:0;overflow:visible!important;}
 }
+/*@media (max-width:760px){
+  .navbar-collapse.collapse{position: relative;top: 50px;display:block;height:auto!important;padding-bottom:0;overflow:visible!important; font-size: xx-large;}
+}*/
 .navbar-toggle{position:relative;float:right;padding:9px 10px;margin-right:15px;margin-top:8px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px;}
 .navbar-toggle:focus{outline:0;}
 .navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px;}
@@ -329,7 +332,7 @@ hr{border-color:#ececec;}
 .nav-menu .navbar-toggle{padding:0;margin:0;margin-top:24px;margin-right:24px;transition:all 0.5s ease;}
 .nav-menu .navbar-toggle .icon-bar{background:white;}
 @media (min-width: 768px) and (max-width: 991px){
-.nav-menu .navbar-collapse{display:none!important;}
+.nav-menu .navbar-collapse{display:none;}
 .nav-menu .navbar-toggle{display:block;}
 }
 .nav-menu.transparent{position:absolute;width:100%;background:transparent;}
@@ -1235,7 +1238,7 @@ footer .container .row .new-homepage-footer-logo a img{width:94px;height:auto;ma
 @media (min-width: 768px){
 .hero-partial .hero-container .hero-text.hero-text-left{width:60%;}
 }
-.hero-partial .hero-container .hero-text.hero-text-left h2{margin-top:20px;}
+.hero-partial .hero-container .hero-text.hero-text-left h2{margin-top:20px; text-align: justify;}
 .hero-partial .hero-container .hero-text h1{font-family:'TeachableSans-Bold';}
 .hero-partial .hero-container .hero-text h1{font-size:32px;line-height:44px;}
 .hero-partial .input-container{position:relative;margin-top:60px;}
@@ -1352,7 +1355,7 @@ footer .container .row .new-homepage-footer-logo a img{width:94px;height:auto;ma
 .nav-menu .navbar-toggle{padding:0;margin:0;margin-top:24px;margin-right:24px;transition:all 0.5s ease;}
 .nav-menu .navbar-toggle .icon-bar{background:white;}
 @media (min-width: 768px) and (max-width: 991px){
-.nav-menu .navbar-collapse{display:none!important;}
+.nav-menu .navbar-collapse{display:none;position: relative;top: 50px;font-size: xx-large;}
 .nav-menu .navbar-toggle{display:block;}
 }
 .nav-menu.transparent{position:absolute;width:100%;background:transparent;}

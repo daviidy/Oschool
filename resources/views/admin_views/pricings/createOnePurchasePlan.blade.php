@@ -150,9 +150,9 @@ tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
 .alert{padding:14px 25px 14px 47px;background:none;border:1px solid #e0e0e0;color:#6f6c6c;}
 .alert:before{font-family:FontAwesome;position:absolute;margin-left:-30px;display:block;top:calc(50% - 15px);padding:5px;font-size:20px;color:#809196;opacity:0.9;}
 .alert a{text-decoration:underline;font-weight:600;}
-.alert-info{background:#fff8f5;border:1px solid #ffccb5;color:#ea7e4d;}
-.alert-info:before{content:'\F059';color:#ea7e4d;}
-.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#ea7e4d;text-decoration:underline;}
+.alert-info{background:#4d90cc3b;border:1px solid #4d90cc3b;color:#4D90CC;}
+.alert-info:before{content:'\F059';color:#4D90CC;}
+.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#4D90CC;text-decoration:underline;}
 .tch-learn-more{text-align:center;}
 .tch-learn-more .alert{display:inline-block;margin:auto;}
 .tch-page-header .tch-btn-hamburger{margin-right:9px!important;float:left;margin-top:-6px!important;padding:5px 1px;margin-top:3px;text-align:center;}
@@ -341,13 +341,13 @@ ul{margin-top:0;margin-bottom:11px;}
 .input-group .form-control:last-child,.input-group-addon:last-child{border-top-left-radius:0;border-bottom-left-radius:0;}
 .input-group-addon:last-child{border-left:0;}
 [disabled]{cursor:default!important;pointer-events:none;}
-.tch-btn-header-primary-block{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
-.tch-btn-header-primary-block:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:active:hover,.tch-btn-header-primary-block:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
+.tch-btn-header-primary-block{color:white;background-color:#6aace6;border:1px solid #6aace6;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
+.tch-btn-header-primary-block:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary-block:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary-block:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary-block:active:hover,.tch-btn-header-primary-block:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-header-primary-block:active{background-image:none;}
-.tch-btn-header-primary-block[disabled],.tch-btn-header-primary-block[disabled]:hover,.tch-btn-header-primary-block[disabled]:focus,.tch-btn-header-primary-block[disabled]:active{filter:alpha(opacity=65);opacity:0.65;background-color:#ff7f45;border-color:#ff7f45;cursor:not-allowed;-webkit-box-shadow:none;box-shadow:none;}
+.tch-btn-header-primary-block[disabled],.tch-btn-header-primary-block[disabled]:hover,.tch-btn-header-primary-block[disabled]:focus,.tch-btn-header-primary-block[disabled]:active{filter:alpha(opacity=65);opacity:0.65;background-color:#4D90CC;border-color:#4D90CC;cursor:not-allowed;-webkit-box-shadow:none;box-shadow:none;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
