@@ -98,8 +98,8 @@ h1,h2{color:#2b3636;}
 .my-teachable-layout .sidebar .profile-card .mobile-logout{font-size:11px;color:rgba(255,255,255,0.68);text-decoration:underline;margin-top:0;display:none;}
 .my-teachable-layout .sidebar .profile-card .navbar-toggle{position:absolute;left:30px;top:12px;display:none;}
 .my-teachable-layout .sidebar .profile-card .navbar-toggle .icon-bar{background:#33353a;}
-.my-teachable-layout .sidebar .profile-card .mobile-navbar{background:#fff;height:279px;left:0px;padding-left:30px;position:absolute;text-align:left;top:74px;-webkit-transition:0.2s all ease-in;transition:0.2s all ease-in;width:100%;z-index:1000;}
-.my-teachable-layout .sidebar .profile-card .mobile-navbar .navbar-nav{margin-top:14px;}
+.my-teachable-layout .sidebar .profile-card .mobile-navbar{background:#fff;height:300px;left:0px;padding-left:30px;position:absolute;text-align:left;top:74px;-webkit-transition:0.2s all ease-in;transition:0.2s all ease-in;width:100%;z-index:1000;}
+.my-teachable-layout .sidebar .profile-card .mobile-navbar .navbar-nav{margin-top:-2px;}
 .my-teachable-layout .sidebar .profile-card .mobile-navbar .navbar-nav a{font-weight:600;color:#8f9da5;}
 .my-teachable-layout .sidebar .profile-card .mobile-navbar .navbar-nav a:hover{color:#09a59a;background:none;}
 .my-teachable-layout .sidebar .profile-card .user-info{margin-top:40px;}
@@ -237,8 +237,8 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 }
 .btn-md,.btn-md:active,.btn-md:focus{display:inline-block;border-radius:50px!important;font-size:13px!important;letter-spacing:0.49px;padding-top:16px!important;padding-bottom:16px!important;padding-left:30px!important;padding-right:30px!important;}
 .btn-teachable-block{min-width:200px;}
-.btn-orange,.btn-orange:hover,.btn-orange:active,.btn-orange:focus{border-color:#ff7f45!important;background-color:#ff7f45!important;}
-.btn-orange:hover,.btn-orange:active,.btn-orange:focus,.btn-orange:hover:hover,.btn-orange:hover:active,.btn-orange:hover:focus,.btn-orange:active:hover,.btn-orange:active:active,.btn-orange:active:focus,.btn-orange:focus:hover,.btn-orange:focus:active,.btn-orange:focus:focus{border-color:#ff6d2c!important;background-color:#ff6d2c!important;}
+.btn-orange,.btn-orange:hover,.btn-orange:active,.btn-orange:focus{border-color:#4D90CC!important;background-color:#4D90CC!important;}
+.btn-orange:hover,.btn-orange:active,.btn-orange:focus,.btn-orange:hover:hover,.btn-orange:hover:active,.btn-orange:hover:focus,.btn-orange:active:hover,.btn-orange:active:active,.btn-orange:active:focus,.btn-orange:focus:hover,.btn-orange:focus:active,.btn-orange:focus:focus{border-color:#6aace6!important;background-color:#6aace6!important;}
 input.form-control{padding:5px 10px;height:40px;font-weight:200;margin-bottom:14px;-webkit-transition:all 0.3s ease;transition:all 0.3s ease;box-shadow:none;}
 input.form-control:focus{border-color:#4bdfd2;outline:0;box-shadow:none;}
 input.form-control::-webkit-input-placeholder{opacity:0.7;}
@@ -246,8 +246,8 @@ input.form-control::-webkit-input-placeholder{opacity:0.7;}
 .content-box .button-group{margin-top:45px;display:block;}
 .content-box .control-input{font-size:13px;line-height:21px;}
 .content-box .form-group{margin-bottom:20px;}
-.content-box .form-control{background-color:#f4f9fb;border:0;box-shadow:0px 1px 1px 0px #e6e9ec;}
-.content-box .form-control:focus{background-color:#fff8e6;color:#333;box-shadow:0px 1px 1px 0px #f9c4ad;border:0;}
+.content-box .form-control{background-color:#4d90cc3b;border:0;box-shadow:0px 1px 1px 0px #4D90CC;}
+.content-box .form-control:focus{background-color:#4d90cc3b;color:#333;box-shadow:0px 1px 1px 0px #4D90CC;border:0;}
 .content-box label{color:#47505e;font-size:13px;font-weight:500;line-height:29px;letter-spacing:0.61px;}
 .content-box label.description{color:#8592a6;font-size:12px;line-height:20px;}
 .content-box label.description .highlight-text{color:#47505e;}
@@ -294,4 +294,7 @@ a,a:active,a:hover,a:focus{text-decoration:none;}
 .alert-header .green,.alert-header .green a{color:#789b71;}
 @media screen and (min-width: 768px){
 .alert-header{display:block;}
+}
+.active{
+  display: block;
 }

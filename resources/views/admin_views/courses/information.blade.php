@@ -186,14 +186,14 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
-.tch-btn-header-secondary{min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;color:white;background-color:#fff;border:1px solid #a9a9a9;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e1e3e4;color:#0f8d82;}
-.tch-btn-header-secondary:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
-.tch-btn-header-secondary:hover{color:white;background-color:#ededed;border-color:#929292;}
-.tch-btn-header-secondary:active{color:white;background-color:#ededed;border-color:#929292;}
-.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus{color:white;background-color:#dedede;border-color:#838383;}
+.tch-btn-header-secondary{min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;color:white;background-color:#fff;border:1px solid #6aace6;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#6aace6;color:#6aace6;}
+.tch-btn-header-secondary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-secondary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-secondary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-header-secondary:active{background-image:none;}
-.tch-btn-header-secondary:active,.tch-btn-header-secondary:hover,.tch-btn-header-secondary:focus{background:#fff;border-color:#1ea69a;color:#1ea69a;}
-.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus,.tch-btn-header-secondary:hover:hover,.tch-btn-header-secondary:hover:focus,.tch-btn-header-secondary:focus:hover,.tch-btn-header-secondary:focus:focus{background:#fff;border-color:#1ea69a;color:#1ea69a;}
+.tch-btn-header-secondary:active,.tch-btn-header-secondary:hover,.tch-btn-header-secondary:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
+.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus,.tch-btn-header-secondary:hover:hover,.tch-btn-header-secondary:hover:focus,.tch-btn-header-secondary:focus:hover,.tch-btn-header-secondary:focus:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
 .tch-btn-header-secondary:focus{outline:0!important;}
 .tch-btn-header-secondary:focus{outline:0!important;}
 .tch-btn-header-secondary:focus{outline:0!important;}
@@ -764,12 +764,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <ul ng-if="section.sectionTabs &amp;&amp; section.sectionTabs.length > 0" class="section-tabs">
                         <!---->
                         <li ng-repeat="tab in section.sectionTabs" id="section-tab-desktop" ng-class="{'faded-out': (section.selectedTab.value != tab.value)}"><a ng-click="setTab(tab)" what="section tab desktop" class="fastclickable"><img
-                                  ng-src="/admin/assets/images/icon-preview-desktop.svg" src="/admin/assets/images/icon-preview-desktop.svg">
+                                  ng-src="/images/courses/logos/web-os.png" src="/images/courses/logos/web-os.png" width="30">
                                 <space></space>Web
                             </a></li>
                         <!---->
                         <li ng-repeat="tab in section.sectionTabs" id="section-tab-mobile" ng-class="{'faded-out': (section.selectedTab.value != tab.value)}" class="faded-out"><a ng-click="setTab(tab)" what="section tab mobile"
-                              class="fastclickable"><img ng-src="/admin/assets/images/icon-preview-ios.svg" src="/admin/assets/images/icon-preview-ios.svg">
+                              class="fastclickable"><img ng-src="/images/courses/logos/images.png" src="/images/courses/logos/images.png" width="30">
                                 <space></space>iOS
                             </a></li>
                         <!----><span class="space"></span>
@@ -914,23 +914,24 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
   index="0" animate="animate" modal-animation="true" style="z-index: 1050; display: none;">
     <div class="modal-dialog" ng-class="size ? 'modal-' + size : ''">
         <div class="modal-content" modal-transclude="">
-            <div what="confirm modal">
-                <div class="modal-body angular-confirm-text">
-                    <!---->
+            <div what="confirm modal" class="confirm-modal" style="text-align: center;">
+              <!--  <div class="modal-body angular-confirm-text">
+
                     <h4 ng-if="data.title" ng-bind="::data.title" class="angular-confirm-title" trackid="1804" style="">Confirmer</h4>
-                    <!---->
+                    <!----
                     <p what="text" ng-bind="::data.text" class="angular-confirm-copy" trackid="1805">Êtes-vous vraiment sûr de vouloir supprimer ce cours? Cette action est irréversible.</p>
                 </div>
                 <div class="modal-footer center angular-confirm-footer" trackid="1787">
-                    <!----><button what="cancel button" ng-if="data.cancel" ng-click="cancel()" ng-bind="::data.cancel || 'Cancel'" class="tch-btn-header-secondary fastclickable" trackid="1806" style="">Annuler</button>
-                    <!----><button what="ok button" ng-click="ok()" ng-bind="::data.ok || 'OK'" class="tch-btn-header-primary fastclickable" trackid="1789">OK</button></div>
-                    <h4 ng-if="data.title" ng-bind="::data.title" class="angular-confirm-title" style="">Confirm</h4>
+                    <!----<button what="cancel button" ng-if="data.cancel" ng-click="cancel()" ng-bind="::data.cancel || 'Cancel'" class="tch-btn-header-secondary fastclickable" trackid="1806" style="">Annuler</button>
+                    <!----<button what="ok button" ng-click="ok()" ng-bind="::data.ok || 'OK'" class="tch-btn-header-primary fastclickable" trackid="1789">OK</button></div>
+                    -->
+                    <h4 ng-if="data.title" ng-bind="::data.title" class="angular-confirm-title" style="">Confirmer</h4>
                     <!---->
-                    <p what="text" ng-bind="::data.text" class="angular-confirm-copy">Are you really, really sure you want to delete this course? This action is irreversible.</p>
+                    <p what="text" ng-bind="::data.text" class="angular-confirm-copy">Êtes-vous vraiment sûr de vouloir supprimer ce cours? Cette action est irréversible.</p>
                 </div>
                 <div class="modal-footer center angular-confirm-footer">
                     <!----><button id="cancel" what="cancel button" ng-if="data.cancel" ng-click="cancel()" ng-bind="::data.cancel || 'Cancel'" class="tch-btn-header-secondary fastclickable" style="">Annuler</button>
-                    <form action="{{ route('courses.destroy', $course) }}" method="post">
+                    <form action="{{ route('courses.destroy', $course) }}" method="post" style="margin-bottom: inherit;">
                         {{ csrf_field() }}
                         {{ method_field('delete') }}
                     <!----><button what="ok button" ng-click="ok()" ng-bind="::data.ok || 'OK'" class="tch-btn-header-primary fastclickable">OK</button>

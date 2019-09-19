@@ -1308,7 +1308,7 @@ footer .container .row .new-homepage-footer-logo a img{width:94px;height:auto;ma
 .image-text-column-wide a.default-paragraph.orange:hover{color:#FF6D2C;}
 .image-text-column-wide p.orange{margin-top:20px;}
 .nav-menu{box-sizing:content-box;color:white;font-family:'TeachableSans-Regular';font-size:14px;-webkit-font-smoothing:antialiased;letter-spacing:0.7px;height:92px;padding-top:25px;z-index:10;background:#1ea69a;background:-moz-linear-gradient(left, #1ea69a 24%, #e9723d 100%);background:-webkit-linear-gradient(left, #1ea69a 24%, #e9723d 100%);background:linear-gradient(to right, #1ea69a 24%, #e9723d 100%);}
-.nav-menu .container{position:relative;padding-left:30px;padding-right:30px;}
+.nav-menu .container{position:relative;padding-left:0px;padding-right:0px;}
 .nav-menu .teachable-logo{margin-top:17px;float:left;width:142px;height:27px;background-image:url(/images/schools/logos/oschool_1.svg);background-repeat:no-repeat;}
 @media (max-width: 767px){
 .nav-menu .teachable-logo{text-align:center;display:inline-block;}

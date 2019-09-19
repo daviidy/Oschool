@@ -1008,7 +1008,7 @@ p{margin:0 0 11px;}
 .modal-dialog{display:inline-block;text-align:left;vertical-align:middle;-webkit-animation:fadeIn 0.2s ease-out;animation:fadeIn 0.2s ease-out;-webkit-perspective:1000;perspective:1000;}
 .modal{z-index:1050;text-align:center;}
 .modal .tch-btn-header-primary,.modal .tch-btn-header-secondary{font-size:13px;}
-.modal-content{border-radius:7px;background-color:#fff!important;background-clip:padding-box;-webkit-box-shadow:0px 0px 10px -2px #2a2a2a;box-shadow:0px 0px 10px -2px #2a2a2a;border-radius:4px;}
+.modal-content{border-radius:7px;background-color:#fff!important;background-clip:padding-box;-webkit-box-shadow:0px 0px 10px -2px #2a2a2a;box-shadow:0px 0px 10px -2px #2a2a2a;border-radius:4px;padding: 50px 50px;}
 .modal-body{padding:20px 45px 0px 45px;background:#fff;border-radius:5px;}
 .modal-body p{font-size:13px;line-height:24px;margin-bottom:21px;text-align:left;color:#67777c;}
 .modal-footer{padding:20px 0px 40px;margin-top:0;background-color:#fff;border-top:none;border-radius:0 0 7px 7px;text-align:center;}
@@ -1023,7 +1023,7 @@ p{margin:0 0 11px;}
 }
 .angular-confirm-text{padding-bottom:3px;border-top-left-radius:10px;border-top-right-radius:10px;padding-top:30px;}
 .angular-confirm-text > p{font-size:16px;font-family:"TeachableSans", Helvetica, Arial, sans-serif;}
-.modal-footer.angular-confirm-footer{border-top:0px!important;padding-top:0px!important;margin-top:22px!important;text-align:center!important;}
+.modal-footer.angular-confirm-footer{border-top:0px!important;padding-top:0px!important;margin-top:22px!important;text-align:center!important;display: flex;justify-content: center;}
 h4{font-family:inherit;font-weight:700;line-height:1.1;color:inherit;}
 h4{margin-top:11px;margin-bottom:11px;}
 h4{font-size:21px;}

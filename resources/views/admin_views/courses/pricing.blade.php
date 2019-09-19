@@ -307,11 +307,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <td what="id"><span ng-bind="'#' + product.id">#{{$pricing->id}}</span><span class="space"></span><span class="space"></span>
                             <!---->
                         </td>
-                        <td what="type"><img ng-src="/admin/assets/images/pricing-free.svg" class="tch-table-thumb" src="/admin/assets/images/pricing-free.svg">
+                        <td what="type"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg">
                             <!---->
                             <!---->
                             <!---->
-                            <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Free</span>
+                            <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Gratuit</span>
                             <!---->
                         </td>
                         <td what="name">{{$pricing->name}}</td>

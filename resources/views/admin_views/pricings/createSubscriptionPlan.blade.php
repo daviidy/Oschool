@@ -446,7 +446,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <!---->
                     <div ng-if="planType != 'free'" class="col-sm-12">
-                        <div class="input-group input-group-image"><img ng-src="/admin/assets/images/icons/icon-pricing-subscription.svg" class="tch-table-thumb" src="/admin/assets/images/icons/icon-pricing-subscription.svg"></div>
+                        <div class="input-group input-group-image"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg"></div>
                         <div class="input-group input-group-select">
                           <select what="currency" ng-disabled="product.id" ng-model="product.currency" ng-options="currency.iso as currency.iso for (key, currency) in currencies" required=""
                               class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">

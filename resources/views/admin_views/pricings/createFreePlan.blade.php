@@ -412,7 +412,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <div class="inline-form-container col-sm-6 col-sm-offset-3">
                     <!---->
                     <div ng-if="planType == 'free'" class="col-sm-12">
-                        <div class="input-group input-group-image"><img ng-src="/admin/assets/images/icons/icon-pricing-free.svg" class="tch-table-thumb" src="/admin/assets/images/icons/icon-pricing-free.svg"></div>
+                        <div class="input-group input-group-image"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg"></div>
                         <div class="input-group input-group-label"><span>GRATUIT</span></div>
                     </div>
                     <!---->
@@ -422,6 +422,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div ng-show="products.length > 0" class="">
                         <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" maxlength="100" placeholder="Nom de l'offre"
                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
+                              
                           </div>
 
                          <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
