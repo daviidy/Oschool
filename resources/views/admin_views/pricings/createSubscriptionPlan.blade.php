@@ -467,8 +467,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div ng-if="planType == 'subscription'" class="col-sm-12 text-center add-top-margin"><label class="for-checkbox"><span ng-bind="'PRODUCT.per' | translate">per</span>
                       <select name="per" id="test-id-recurring"
                               ng-model="product.billing_interval" class="form-control small-inline disable-animations ng-pristine ng-untouched ng-valid ng-not-empty">
-                                <option value="month" ng-bind="'PRODUCT.month' | translate">month</option>
-                                <option value="year" ng-bind="'PRODUCT.year' | translate">year</option>
+                                <option value="month" ng-bind="'PRODUCT.month' | translate">Mois</option>
+                                <option value="year" ng-bind="'PRODUCT.year' | translate">année</option>
                             </select></label>
 
                             <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
