@@ -1473,10 +1473,10 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                       @foreach($lesson->quizzes as $quiz)
                       @foreach($quiz->questions as $question)
 
-                      <li what="question" ng-repeat="question in questions track by $index" ng-class="{ " question-edit-mode':="" question.editing="" }'="" class="well ui-sortable-handle">
+                      <li class="well ui-sortable-handle">
                         <div ng-show="!question.editing" class="pull-right">
                               <button type="button"
-                                  class="tch-btn-content-primary tch-btn-icon disable-animations fastclickable"><i class="fa fa-edit"></i>
+                                  class="edit_quiz tch-btn-content-primary tch-btn-icon disable-animations fastclickable"><i class="fa fa-edit"></i>
                               </button>
                               <span class="space"></span>
                               <form action="{{ route('questions.destroy', $question) }}" method="post">

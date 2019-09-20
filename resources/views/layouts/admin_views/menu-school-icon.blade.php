@@ -738,17 +738,21 @@ console.log(JSON.stringify(positions));
       var tab = [];
 
       var question = $('#question-text').val();
-      var options = $('.reponses.text_question_quiz');
+      var options = $('.text_question_quiz');
       console.log(options);
       $.each(options, function(){
-          var correct = $(this).prev().find('input[name=correct]:checked').length > 0;
-          console.log(correct);
-          console.log($(this).val());
-          var obj = {
-              'option': $(this).val(),
-              'correct': correct,
-          };
-          tab.push(obj);
+          if ($(this).val() !== "") {
+
+              var correct = $(this).prev().find('input[name=correct]:checked').length > 0;
+              console.log(correct);
+              console.log($(this).val());
+              var obj = {
+                  'option': $(this).val(),
+                  'correct': correct,
+              };
+              tab.push(obj);
+
+          }
       });
       console.log(tab);
       console.log(question);
