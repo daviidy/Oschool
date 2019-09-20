@@ -80,7 +80,7 @@ th{text-align:left;}
 .alert{padding:15px;margin-bottom:22px;border:1px solid transparent;border-radius:4px;}
 .alert-info{color:#3498db;background-color:#d9edf7;border-color:#bce8f1;}
 .pull-right{float:right!important;}
-tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
+tr.border-bottom td{border-bottom:1pt solid #4D90DC;}
 [disabled]{cursor:default!important;pointer-events:none;}
 .tch-btn-header-icon{color:white;background-color:#fff;border:1px solid #a9a9a9;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:#0f8d82;}
 .tch-btn-header-icon:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
@@ -92,13 +92,13 @@ tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
 .tch-btn-header-icon:active:hover,.tch-btn-header-icon:active:focus,.tch-btn-header-icon:hover:hover,.tch-btn-header-icon:hover:focus,.tch-btn-header-icon:focus:hover,.tch-btn-header-icon:focus:focus{background:white;border-color:#ff7f45;color:#ff7f45;}
 .tch-btn-header-icon:focus{outline:0!important;}
 .tch-btn-header-icon:focus{outline:0!important;}
-.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#1ea69a;border:1px solid #1ea69a;}
+.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#6aace6;border:1px solid #6aace6;}
 .tch-btn-content-primary:focus{outline:0!important;}
 .tch-btn-content-primary:focus{outline:0!important;}
-.tch-btn-content-primary:focus{color:white;background-color:#19887e;border-color:#177f76;}
-.tch-btn-content-primary:hover{color:white;background-color:#19887e;border-color:#177f76;}
-.tch-btn-content-primary:active{color:white;background-color:#19887e;border-color:#177f76;}
-.tch-btn-content-primary:active:hover,.tch-btn-content-primary:active:focus{color:white;background-color:#146e66;border-color:#12655e;}
+.tch-btn-content-primary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-primary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-primary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-primary:active:hover,.tch-btn-content-primary:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-content-primary:active{background-image:none;}
 .tch-btn-content-secondary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #a9a9a9;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e1e3e4;color:#0f8d82;}
 .tch-btn-content-secondary:focus{outline:0!important;}
@@ -112,12 +112,12 @@ tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
 .tch-btn-content-secondary:active:hover,.tch-btn-content-secondary:active:focus,.tch-btn-content-secondary:hover:hover,.tch-btn-content-secondary:hover:focus,.tch-btn-content-secondary:focus:hover,.tch-btn-content-secondary:focus:focus{background:#fff;border-color:#1ea69a;color:#1ea69a;}
 .tch-btn-content-secondary:focus{outline:0!important;}
 .tch-btn-content-secondary:focus{outline:0!important;}
-.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e6c6b8;color:#d4604b;}
+.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#6aace6;color:#6aace6;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-content-danger:focus{outline:0!important;}
-.tch-btn-content-danger:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
-.tch-btn-content-danger:hover{color:white;background-color:#ededed;border-color:#c3452e;}
-.tch-btn-content-danger:active{color:white;background-color:#ededed;border-color:#c3452e;}
+.tch-btn-content-danger:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-danger:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-danger:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:#dedede;border-color:#aa3c29;}
 .tch-btn-content-danger:active{background-image:none;}
 .tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
@@ -138,7 +138,7 @@ tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
 .tch-table > tbody > tr:nth-child(even){background-color:transparent;}
 .tch-table > tbody > tr:hover{background:#f5f6f7;}
 .tch-table img.tch-table-thumb{width:22px;margin-right:10px;float:left;}
-.tch-btn-tooltip{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;padding:4px 5px!important;color:#ff7f45;}
+.tch-btn-tooltip{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;padding:4px 5px!important;color:#4D90DC;}
 .tch-btn-tooltip:focus{outline:0!important;}
 .tch-btn-tooltip:hover,.tch-btn-tooltip:active,.tch-btn-tooltip:focus{color:#ff631c;-webkit-box-shadow:none;box-shadow:none;}
 @media screen and (max-width: 1000px){
@@ -150,9 +150,9 @@ tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
 .alert{padding:14px 25px 14px 47px;background:none;border:1px solid #e0e0e0;color:#6f6c6c;}
 .alert:before{font-family:FontAwesome;position:absolute;margin-left:-30px;display:block;top:calc(50% - 15px);padding:5px;font-size:20px;color:#809196;opacity:0.9;}
 .alert a{text-decoration:underline;font-weight:600;}
-.alert-info{background:#fff8f5;border:1px solid #ffccb5;color:#ea7e4d;}
-.alert-info:before{content:'\F059';color:#ea7e4d;}
-.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#ea7e4d;text-decoration:underline;}
+.alert-info{background:#4d90cc3b;border:1px solid #4d90cc3b;color:#4D90CC;}
+.alert-info:before{content:'\F059';color:#4D90CC;}
+.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#4D90CC;text-decoration:underline;}
 .tch-learn-more{text-align:center;}
 .tch-learn-more .alert{display:inline-block;margin:auto;}
 .tch-page-header .tch-btn-hamburger{margin-right:9px!important;float:left;margin-top:-6px!important;padding:5px 1px;margin-top:3px;text-align:center;}
@@ -175,8 +175,8 @@ tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
 .tch-inline-form{margin-right:-15px;margin-left:-15px;margin:0;margin-bottom:2px!important;background:#fff;border:1px solid #dbdbdb;border-radius:30px;position:relative;}
 .tch-inline-form:before,.tch-inline-form:after{display:table;content:" ";}
 .tch-inline-form:after{clear:both;}
-.tch-inline-form div.btn-attached{padding-top:13px;font-weight:bold;-webkit-box-shadow:none!important;box-shadow:none!important;color:#0f8d82;height:49px;border-top-left-radius:4px;border-top-right-radius:4px;font-size:13px!important;-webkit-transition:0.1s all ease-in;transition:0.1s all ease-in;}
-.tch-inline-form div.btn-attached:hover{color:#ff7f45;}
+.tch-inline-form div.btn-attached{padding-top:13px;font-weight:bold;-webkit-box-shadow:none!important;box-shadow:none!important;color:#4D90CC;height:49px;border-top-left-radius:4px;border-top-right-radius:4px;font-size:13px!important;-webkit-transition:0.1s all ease-in;transition:0.1s all ease-in;}
+.tch-inline-form div.btn-attached:hover{color:#6aace6;}
 .tch-inline-form div.btn-attached:focus,.tch-inline-form div.btn-attached:active{outline:none;}
 .tch-inline-form .inline-form-wrapper{padding-left:50px;padding-right:50px;}
 .tch-inline-form-select{padding-bottom:70px;padding-top:40px;}
@@ -264,17 +264,17 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div ng-if="!planType" class="row">
                         <div class="col-sm-10 col-sm-offset-1 tch-inline-form-select">
                             <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createFreePlan" id="test-id-add-free-plan" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img
-                                  src="/admin/assets/images/icons/icon-pricing-free.svg" class="tch-table-thumb"><br>
+                                  src="/images/divers/icon-pricing-free.svg" class="tch-table-thumb"><br>
                                 <div ng-bind="'PRODUCT.free.name' | translate" class="inline-form-option-name">Gratuit</div>
                                 <div ng-bind="'PRODUCT.free.description' | translate" class="inline-form-option-subtitle">Aucun paiement</div>
-                            </a><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createSubscriptionPlan" id="test-id-add-subscription" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/admin/assets/images/icons/icon-pricing-subscription.svg"
+                            </a><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createSubscriptionPlan" id="test-id-add-subscription" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/images/divers/icon-pricing-subscription.svg"
                                   class="tch-table-thumb"><br>
                                 <div ng-bind="'PRODUCT.subscription.name' | translate" class="inline-form-option-name">Abonnement</div>
                                 <div ng-bind="'PRODUCT.subscription.description' | translate" class="inline-form-option-subtitle">Paiement mensuel ou annuel</div>
-                            </a><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createOnePurchasePlan" id="test-id-add-one-off" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/admin/assets/images/icons/icon-pricing-purchase.svg" class="tch-table-thumb"><br>
+                            </a><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createOnePurchasePlan" id="test-id-add-one-off" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/images/divers/icon-pricing-purchase.svg" class="tch-table-thumb"><br>
                                 <div ng-bind="'PRODUCT.purchase.name' | translate" class="inline-form-option-name">Paiment en une fois</div>
                                 <div ng-bind="'PRODUCT.purchase.description' | translate" class="inline-form-option-subtitle">Un seul paiement</div>
-                            </a><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createPaymentPlan" id="test-id-add-pricing-plan" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/admin/assets/images/icons/icon-pricing-plan.svg" class="tch-table-thumb"><br>
+                            </a><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing/createPaymentPlan" id="test-id-add-pricing-plan" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/images/divers/icon-pricing-plan.svg" class="tch-table-thumb"><br>
                                 <div ng-bind="'PRODUCT.plan.name' | translate" class="inline-form-option-name">Plan de paiement</div>
                                 <div ng-bind="'PRODUCT.plan.description' | translate" class="inline-form-option-subtitle">Un nombre fixé de paiement</div>
                             </a></div>
@@ -307,11 +307,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <td what="id"><span ng-bind="'#' + product.id">#{{$pricing->id}}</span><span class="space"></span><span class="space"></span>
                             <!---->
                         </td>
-                        <td what="type"><img ng-src="/admin/assets/images/pricing-free.svg" class="tch-table-thumb" src="/admin/assets/images/pricing-free.svg">
+                        <td what="type"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg">
                             <!---->
                             <!---->
                             <!---->
-                            <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Free</span>
+                            <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Gratuit</span>
                             <!---->
                         </td>
                         <td what="name">{{$pricing->name}}</td>

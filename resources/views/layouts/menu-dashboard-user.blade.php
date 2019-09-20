@@ -19,6 +19,8 @@
     <script
       src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/959285871/?random=1564082424779&amp;cv=9&amp;fst=1564082424779&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=3&amp;u_tz=0&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;sendb=1&amp;data=path%3D%2Fsecure%2Fteachable_accounts%2Fprofile%3Breferrer%3D%3Bsearch%3D%3Btitle%3DmyTeachable%3Burl%3Dhttps%3A%2F%2Fsso.teachable.com%2Fsecure%2Fteachable_accounts%2Fprofile&amp;frm=0&amp;url=https%3A%2F%2Fsso.teachable.com%2Fsecure%2Fteachable_accounts%2Fprofile&amp;tiba=myTeachable&amp;async=1&amp;rfmt=3&amp;fmt=4">
     </script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
 
 </head>
 
@@ -71,7 +73,7 @@
                         </ul>
                     </div>
                     <a class="mobile-settings" href="http://sso.teachable.com/secure/teachable_accounts/profile/edit"><img src="https://assets.teachablecdn.com/icons/icon-settings-white.svg" alt="Icon settings white"></a>
-                    <a class="logo-wrapper" href="http://sso.teachable.com/secure/teachable_accounts/profile"><img class="logo" src="https://assets.teachablecdn.com/icons/my-teachable-badge.svg" alt="My teachable badge"></a>
+                    <a class="logo-wrapper" href="/"><img class="logo" src="/images/schools/logos/oschool_2.png" alt="Oschool badge"></a>
                     <div class="user-info">
                         <a href="http://sso.teachable.com/secure/teachable_accounts/profile/edit"><img width="100" height="100" class="avatar" src="https://s.gravatar.com/avatar/9c275cba24f7c939201cda28f832f8e0?d=mm"
                               alt="9c275cba24f7c939201cda28f832f8e0?d=mm"></a>
@@ -110,6 +112,14 @@
 
                 </ul>
             </div>
+
+            <script>
+            $('.navbar-toggle').click(function(e){
+          e.preventDefault();
+          $('.navbar-collapse').slideToggle();
+          $(this).toggleClass('active');
+        });
+            </script>
 
             @yield('content')
 

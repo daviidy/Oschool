@@ -10,7 +10,8 @@
                         <div class="tch-school-onboarding-header-icons"></div>
                         <div class="tch-school-onboarding-header-text">
                             <h3><span>Bienvenue à {{$school->name}}!</span></h3><a href="/?preview=logged_out" target="_blank" class="tch-btn-header-primary">Voir l'école</a><span class="space"></span>
-                            <div dropdown="" class="btn-group dropdown"><a dropdown-toggle="" type="button" class="tch-btn-header-dropdown dropdown-toggle" aria-haspopup="true" aria-expanded="false">Comment puis-je<span class="space"></span><i
+                            <div dropdown="" class="btn-group dropdown">
+                              <a href="#" dropdown-toggle="" type="button" class="tch-btn-header-dropdown dropdown-toggle" aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Comment puis-je<span class="space"></span><i
                                       class="fa fa-angle-down no-margin"></i></a>
                                 <div class="dropdown-menu-arrow"></div>
                                 <ul role="menu" class="dropdown-menu dropdown-menu-left">
@@ -33,6 +34,17 @@
                             </div>
                         </div>
                     </div>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <script src='http://code.jquery.com/jquery-latest.js'></script>
+
+                    <script>
+                    $('.tch-btn-header-dropdown').click(function(e){
+                  e.preventDefault();
+                  $('.dropdown-menu').slideToggle();
+                  $(this).toggleClass('active');
+                });
+                    </script>
+
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-xs-12">
                             <div class="tch-pills-wrapper">
