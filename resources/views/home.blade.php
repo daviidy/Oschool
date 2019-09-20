@@ -748,6 +748,8 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="/js/index.js"></script>
+
         <div class="container container-beneath-slider">
             <div class="row">
                 <div class="col-xs-12 col-md-4 column">

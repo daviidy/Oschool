@@ -16,7 +16,7 @@
         </div>
         <div class="left-box">
           <h1>Démarrez avec Oschool</h1>
-          <img src="https://s3-us-west-2.amazonaws.com/static-css-assets/bg/background-school-signup.svg">
+          <img src="">
           <ol class="signup-step-anchor">
             <li class="selected"><span class="step-number">1</span> Inscrivez-vous</li>
           </ol>

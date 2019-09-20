@@ -6,7 +6,11 @@
             <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
                 <div ng-hide="firstTimeUpsell" class="tch-school-onboarding-wrapper">
                     <div class="tch-school-onboarding-header">
-                        <div class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
+                        <div class="tch-btn-hamburger">
+                          <button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable">
+                            <i class="fa fa-bars"></i>
+                          </button>
+                        </div>
                         <div class="tch-school-onboarding-header-icons"></div>
                         <div class="tch-school-onboarding-header-text">
                             <h3><span>Bienvenue à {{$school->name}}!</span></h3><a href="{{url('schools', $school)}}" target="_blank" class="tch-btn-header-primary">Voir l'école</a><span class="space"></span>
@@ -33,6 +37,26 @@
                             </div>
                         </div>
                     </div>
+
+                    <script>
+                    (function() {
+
+                        	var hamburger = {
+                        		navToggle: document.querySelector('.tch-btn-hamburger'),
+                        		nav: document.querySelector('.navs'),
+
+                        		doToggle: function(e) {
+                        			e.preventDefault();
+                        			this.navToggle.classList.toggle('active');
+                        			this.nav.classList.toggle('active');
+                        		}
+                        	};
+
+                        	hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+
+                        }());
+
+                    </script>
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-xs-12">
                             <div class="tch-pills-wrapper">

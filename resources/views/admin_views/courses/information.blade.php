@@ -167,45 +167,45 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .alert{padding:15px;margin-bottom:22px;border:1px solid transparent;border-radius:4px;}
 .alert-info{color:#3498db;background-color:#d9edf7;border-color:#bce8f1;}
 [disabled]{cursor:default!important;pointer-events:none;}
-.tch-btn-header-primary{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
-.tch-btn-header-primary:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
+.tch-btn-header-primary{color:white;background-color:#6aace6;border:1px solid #6aace6;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
+.tch-btn-header-primary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#6aace6;border-color:#6aace6;}
 .tch-btn-header-primary:active{background-image:none;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
-.tch-btn-header-primary-block{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
-.tch-btn-header-primary-block:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block{color:white;background-color:#6aace6;border:1px solid #6aace6;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
+.tch-btn-header-primary-block:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary-block:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary-block:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-header-primary-block:active:hover,.tch-btn-header-primary-block:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
 .tch-btn-header-primary-block:active{background-image:none;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
-.tch-btn-header-secondary{min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;color:white;background-color:#fff;border:1px solid #a9a9a9;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e1e3e4;color:#0f8d82;}
-.tch-btn-header-secondary:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
-.tch-btn-header-secondary:hover{color:white;background-color:#ededed;border-color:#929292;}
-.tch-btn-header-secondary:active{color:white;background-color:#ededed;border-color:#929292;}
-.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus{color:white;background-color:#dedede;border-color:#838383;}
+.tch-btn-header-secondary{min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;color:white;background-color:#fff;border:1px solid #6aace6;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#6aace6;color:#6aace6;}
+.tch-btn-header-secondary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-secondary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-secondary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-header-secondary:active{background-image:none;}
-.tch-btn-header-secondary:active,.tch-btn-header-secondary:hover,.tch-btn-header-secondary:focus{background:#fff;border-color:#1ea69a;color:#1ea69a;}
-.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus,.tch-btn-header-secondary:hover:hover,.tch-btn-header-secondary:hover:focus,.tch-btn-header-secondary:focus:hover,.tch-btn-header-secondary:focus:focus{background:#fff;border-color:#1ea69a;color:#1ea69a;}
+.tch-btn-header-secondary:active,.tch-btn-header-secondary:hover,.tch-btn-header-secondary:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
+.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus,.tch-btn-header-secondary:hover:hover,.tch-btn-header-secondary:hover:focus,.tch-btn-header-secondary:focus:hover,.tch-btn-header-secondary:focus:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
 .tch-btn-header-secondary:focus{outline:0!important;}
 .tch-btn-header-secondary:focus{outline:0!important;}
 .tch-btn-header-secondary:focus{outline:0!important;}
 .tch-btn-header-secondary:focus{outline:0!important;}
-.tch-btn-header-danger{min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e6c6b8;color:#d4604b;}
-.tch-btn-header-danger:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
-.tch-btn-header-danger:hover{color:white;background-color:#ededed;border-color:#c3452e;}
-.tch-btn-header-danger:active{color:white;background-color:#ededed;border-color:#c3452e;}
-.tch-btn-header-danger:active:hover,.tch-btn-header-danger:active:focus{color:white;background-color:#dedede;border-color:#aa3c29;}
+.tch-btn-header-danger{min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;color:white;background-color:#fff;border:1px solid #4D90CC;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#64aff3;color:#4D90CC;}
+.tch-btn-header-danger:focus{color:white;background-color:#ededed;border-color:#64aff3;}
+.tch-btn-header-danger:hover{color:white;background-color:#ededed;border-color:#64aff3;}
+.tch-btn-header-danger:active{color:white;background-color:#ededed;border-color:#64aff3;}
+.tch-btn-header-danger:active:hover,.tch-btn-header-danger:active:focus{color:white;background-color:#64aff3;border-color:#64aff3;}
 .tch-btn-header-danger:active{background-image:none;}
-.tch-btn-header-danger:active,.tch-btn-header-danger:hover,.tch-btn-header-danger:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
-.tch-btn-header-danger:active:hover,.tch-btn-header-danger:active:focus,.tch-btn-header-danger:hover:hover,.tch-btn-header-danger:hover:focus,.tch-btn-header-danger:focus:hover,.tch-btn-header-danger:focus:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
+.tch-btn-header-danger:active,.tch-btn-header-danger:hover,.tch-btn-header-danger:focus{background:#fff;border-color:#64aff3;color:#64aff3;}
+.tch-btn-header-danger:active:hover,.tch-btn-header-danger:active:focus,.tch-btn-header-danger:hover:hover,.tch-btn-header-danger:hover:focus,.tch-btn-header-danger:focus:hover,.tch-btn-header-danger:focus:focus{background:#fff;border-color:#64aff3;color:#64aff3;}
 .tch-btn-header-danger:focus{outline:0!important;}
 .tch-btn-header-danger:focus{outline:0!important;}
 .tch-btn-header-danger:focus{outline:0!important;}
@@ -220,13 +220,13 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .tch-btn-header-icon:active:hover,.tch-btn-header-icon:active:focus,.tch-btn-header-icon:hover:hover,.tch-btn-header-icon:hover:focus,.tch-btn-header-icon:focus:hover,.tch-btn-header-icon:focus:focus{background:white;border-color:#ff7f45;color:#ff7f45;}
 .tch-btn-header-icon:focus{outline:0!important;}
 .tch-btn-header-icon:focus{outline:0!important;}
-.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#1ea69a;border:1px solid #1ea69a;}
+.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#6aace6;border:1px solid #6aace6;}
 .tch-btn-content-primary:focus{outline:0!important;}
 .tch-btn-content-primary:focus{outline:0!important;}
-.tch-btn-content-primary:focus{color:white;background-color:#19887e;border-color:#177f76;}
-.tch-btn-content-primary:hover{color:white;background-color:#19887e;border-color:#177f76;}
-.tch-btn-content-primary:active{color:white;background-color:#19887e;border-color:#177f76;}
-.tch-btn-content-primary:active:hover,.tch-btn-content-primary:active:focus{color:white;background-color:#146e66;border-color:#12655e;}
+.tch-btn-content-primary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-primary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-primary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-primary:active:hover,.tch-btn-content-primary:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-content-primary:active{background-image:none;}
 .tch-btn-content-secondary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #a9a9a9;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e1e3e4;color:#0f8d82;}
 .tch-btn-content-secondary:focus{outline:0!important;}
@@ -240,22 +240,22 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .tch-btn-content-secondary:active:hover,.tch-btn-content-secondary:active:focus,.tch-btn-content-secondary:hover:hover,.tch-btn-content-secondary:hover:focus,.tch-btn-content-secondary:focus:hover,.tch-btn-content-secondary:focus:focus{background:#fff;border-color:#1ea69a;color:#1ea69a;}
 .tch-btn-content-secondary:focus{outline:0!important;}
 .tch-btn-content-secondary:focus{outline:0!important;}
-.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e6c6b8;color:#d4604b;}
+.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #6aace6;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#6aace6;color:#6aace6;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-content-danger:focus{outline:0!important;}
-.tch-btn-content-danger:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
-.tch-btn-content-danger:hover{color:white;background-color:#ededed;border-color:#c3452e;}
-.tch-btn-content-danger:active{color:white;background-color:#ededed;border-color:#c3452e;}
-.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:#dedede;border-color:#aa3c29;}
+.tch-btn-content-danger:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-danger:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-danger:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-content-danger:active{background-image:none;}
-.tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
-.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus,.tch-btn-content-danger:hover:hover,.tch-btn-content-danger:hover:focus,.tch-btn-content-danger:focus:hover,.tch-btn-content-danger:focus:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
+.tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus,.tch-btn-content-danger:hover:hover,.tch-btn-content-danger:hover:focus,.tch-btn-content-danger:focus:hover,.tch-btn-content-danger:focus:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .dropdown-menu{-webkit-box-shadow:2px 2px 9px 2px rgba(0, 0, 0, .05);box-shadow:2px 2px 9px 2px rgba(0, 0, 0, .05);border:1px solid #dcdcdc;border-radius:5px;position:absolute;display:block;z-index:1000;background:#fff;opacity:0;pointer-events:none;-webkit-transform:scale(0);transform:scale(0);margin-top:10px;-webkit-transition:opacity 0.3s cubic-bezier(0.23, 1.5, 0.32, 1), -webkit-transform 0.3s cubic-bezier(0.23, 1.5, 0.32, 1);transition:opacity 0.3s cubic-bezier(0.23, 1.5, 0.32, 1), -webkit-transform 0.3s cubic-bezier(0.23, 1.5, 0.32, 1);transition:transform 0.3s cubic-bezier(0.23, 1.5, 0.32, 1), opacity 0.3s cubic-bezier(0.23, 1.5, 0.32, 1);transition:transform 0.3s cubic-bezier(0.23, 1.5, 0.32, 1), opacity 0.3s cubic-bezier(0.23, 1.5, 0.32, 1), -webkit-transform 0.3s cubic-bezier(0.23, 1.5, 0.32, 1);-webkit-transform-origin:0% 0%;transform-origin:0% 0%;max-height:400px;overflow:auto;overflow-x:hidden;min-width:300px;}
-.tch-btn-tooltip{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;padding:4px 5px!important;color:#ff7f45;}
+.tch-btn-tooltip{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;padding:4px 5px!important;color:#4D90CC;}
 .tch-btn-tooltip:focus{outline:0!important;}
-.tch-btn-tooltip:hover,.tch-btn-tooltip:active,.tch-btn-tooltip:focus{color:#ff631c;-webkit-box-shadow:none;box-shadow:none;}
+.tch-btn-tooltip:hover,.tch-btn-tooltip:active,.tch-btn-tooltip:focus{color:#4D90CC;-webkit-box-shadow:none;box-shadow:none;}
 @media screen and (max-width: 1000px){
 .tch-btn-tooltip{display:none;}
 }
@@ -265,9 +265,9 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .alert{padding:14px 25px 14px 47px;background:none;border:1px solid #e0e0e0;color:#6f6c6c;}
 .alert:before{font-family:FontAwesome;position:absolute;margin-left:-30px;display:block;top:calc(50% - 15px);padding:5px;font-size:20px;color:#809196;opacity:0.9;}
 .alert a{text-decoration:underline;font-weight:600;}
-.alert-info{background:#fff8f5;border:1px solid #ffccb5;color:#ea7e4d;}
-.alert-info:before{content:'\F059';color:#ea7e4d;}
-.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#ea7e4d;text-decoration:underline;}
+.alert-info{background:#4d90cc3b;border:1px solid #4d90cc3b;color:#4D90CC;}
+.alert-info:before{content:'\F059';color:#4D90CC;}
+.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#4D90CC;text-decoration:underline;}
 .tch-learn-more{text-align:center;}
 .tch-learn-more .alert{display:inline-block;margin:auto;}
 textarea{font-size:14px;line-height:24px;padding:5px 11px;}
@@ -303,18 +303,18 @@ ul{margin-top:0;margin-bottom:11px;}
 .tch-inline-form{margin-right:-15px;margin-left:-15px;margin:0;margin-bottom:2px!important;background:#fff;border:1px solid #dbdbdb;border-radius:30px;position:relative;}
 .tch-inline-form:before,.tch-inline-form:after{display:table;content:" ";}
 .tch-inline-form:after{clear:both;}
-.tch-inline-form div.btn-attached{padding-top:13px;font-weight:bold;-webkit-box-shadow:none!important;box-shadow:none!important;color:#0f8d82;height:49px;border-top-left-radius:4px;border-top-right-radius:4px;font-size:13px!important;-webkit-transition:0.1s all ease-in;transition:0.1s all ease-in;}
-.tch-inline-form div.btn-attached:hover{color:#ff7f45;}
+.tch-inline-form div.btn-attached{padding-top:13px;font-weight:bold;-webkit-box-shadow:none!important;box-shadow:none!important;color:#4D90CC;height:49px;border-top-left-radius:4px;border-top-right-radius:4px;font-size:13px!important;-webkit-transition:0.1s all ease-in;transition:0.1s all ease-in;}
+.tch-inline-form div.btn-attached:hover{color:#6aace6;}
 .tch-inline-form div.btn-attached:focus,.tch-inline-form div.btn-attached:active{outline:none;}
 .input-group-addon{background:#f9f9f9;padding:1px;color:#34495e;padding:0 10px;font-weight:200;font-size:13px;border:1px solid #dbdbdb;}
 .tch-inline-form .author-form .row{margin-left:auto!important;margin-right:auto!important;}
 .tch-inline-form .author-form .inline-form-container{width:360px;margin:0 auto;padding-top:20px;padding-bottom:40px;}
 .tch-thumbnail-link-wrapper{margin-right:20px;max-width:220px;}
 .tch-thumbnail-link-wrapper .tch-thumbnail-link{display:block;line-height:16px;color:#47505e;font-size:12px;}
-.tch-thumbnail-link-wrapper .tch-thumbnail-link strong{font-weight:600;letter-spacing:0.8px;color:#0f8d82;}
+.tch-thumbnail-link-wrapper .tch-thumbnail-link strong{font-weight:600;letter-spacing:0.8px;color:#4D90CC;}
 .tch-thumbnail-link-wrapper .tch-thumbnail-link i.fa{font-size:20px;left:75%;opacity:0;position:absolute;top:12%;background:#fff;padding:0px 3px;border-radius:3px;}
-.tch-thumbnail-link-wrapper .tch-thumbnail-link:hover{color:#ff7f45;}
-.tch-thumbnail-link-wrapper .tch-thumbnail-link:hover strong{color:#ff7f45;}
+.tch-thumbnail-link-wrapper .tch-thumbnail-link:hover{color:#6aace6;}
+.tch-thumbnail-link-wrapper .tch-thumbnail-link:hover strong{color:#4D90CC;}
 .tch-thumbnail-link-wrapper .tch-thumbnail-link:hover i.fa{opacity:1;}
 .tch-thumbnail-link-wrapper .tch-thumbnail-link img{margin-bottom:15px;width:100%;}
 .tch-thumbnail-link-wrapper .tch-thumbnail-link .muted{color:#ababab;font-size:12px;line-height:24px;font-family:"TeachableSans";}
@@ -431,14 +431,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <!---->
                 <!---->
                 <h2 ng-if="section.name" class="tch-subheading">
-                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Publish</span>
+                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Publier</span>
                     <!---->
                     <!---->
                     <!---->
                     <!---->
                     <!----><br ng-if="!removeDescriptionLineBreak">
                     <!---->
-                    <p ng-bind-html="section.description" what="section-description" class="small">Publish or unpublish your course.</p>
+                    <p ng-bind-html="section.description" what="section-description" class="small">Publiez ou annulez la publication de votre cours.</p>
                     <!---->
                     <!---->
                 </h2>
@@ -447,7 +447,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
                 <div ng-transclude="">
                     <!---->
-                    <!----><a ng-if="course.is_published" ng-click="unpublish()" id="test-id-unpublish-course-btn" class="tch-btn-header-danger disable-animations fastclickable">Unpublish Course</a>
+                    <!----><a ng-if="course.is_published" ng-click="unpublish()" id="test-id-unpublish-course-btn" class="tch-btn-header-danger disable-animations fastclickable">Annuler la publication du cours</a>
                     <!---->
                 </div>
                 <div ng-show="showButtonsBar" class="tab-bottom ng-hide">
@@ -463,17 +463,17 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     <ng-include src="'courses/course/information/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-preview">
         <div class="row tch-section-wrapper">
             <div class="tch-section-heading col-md-12 col-lg-3">
-                <h2 class="tch-subheading">Preview<br>
-                    <p class="small">See what your course looks like to visitors or enrolled students.</p>
+                <h2 class="tch-subheading">Aperçu<br>
+                    <p class="small">Voyez à quoi ressemble votre cours pour les visiteurs ou les étudiants inscrits.</p>
                 </h2>
             </div>
             <div class="tch-section-content tch-thumbnail-link-wrapper col-lg-3 col-md-5 col-sm-5 col-xs-5"><a ng-click="cancel()" href="/courses/vr-course/?preview=logged_out" target="_blank" id="test-id-preview-sales-page"
-                  class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-visitor.jpg"><i class="fa fa-external-link"></i><br><strong>Sales Page&nbsp;</strong>
-                    <div class="muted">as a visitor</div>
+                  class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-visitor.jpg"><i class="fa fa-external-link"></i><br><strong>Page de vente&nbsp;</strong>
+                    <div class="muted">en tant que visiteur</div>
                 </a></div>
             <div class="tch-section-content tch-thumbnail-link-wrapper col-lg-3 col-md-5 col-sm-5 col-xs-5 shift-right"><a ng-click="cancel()" href="/courses/vr-course/?preview=logged_in" target="_blank" id="test-id-preview-curriculum-btn"
-                  class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-enrolled-student.jpg"><i class="fa fa-external-link"></i><br><strong>Course Curriculum&nbsp;</strong>
-                    <div class="muted">as an enrolled student</div>
+                  class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-enrolled-student.jpg"><i class="fa fa-external-link"></i><br><strong>Programme de cours&nbsp;</strong>
+                    <div class="muted">en tant qu'étudiant inscrit</div>
                 </a></div>
         </div>
     </ng-include>
@@ -488,14 +488,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <!---->
                     <h2 ng-if="section.name" class="tch-subheading">
-                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Details</span>
+                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Détails</span>
                         <!---->
                         <!---->
                         <!---->
                         <!---->
                         <!----><br ng-if="!removeDescriptionLineBreak">
                         <!---->
-                        <p ng-bind-html="section.description" what="section-description" class="small">Change information about your course.</p>
+                        <p ng-bind-html="section.description" what="section-description" class="small">Changer les informations sur votre cours.</p>
                         <!---->
                         <!---->
                     </h2>
@@ -752,25 +752,24 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <!---->
                 <!---->
                 <h2 ng-if="section.name" class="tch-subheading">
-                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Branding</span>
+                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">l'image de marque</span>
                     <!---->
                     <!---->
                     <!---->
                     <!---->
                     <!----><br ng-if="!removeDescriptionLineBreak">
                     <!---->
-                    <p ng-bind-html="section.description" what="section-description" class="small">Brand your course by setting a custom thumbnail logo, featured background, and/or promo video. You can set different images to use on the iOS app (as
-                        different dimensions are recommended).</p>
+                    <p ng-bind-html="section.description" what="section-description" class="small">Marquez votre parcours en définissant un logo miniature personnalisé, un arrière-plan et / ou une vidéo promotionnelle. Vous pouvez définir différentes images à utiliser sur l'application iOS (différentes dimensions étant recommandées).</p>
                     <!---->
                     <ul ng-if="section.sectionTabs &amp;&amp; section.sectionTabs.length > 0" class="section-tabs">
                         <!---->
                         <li ng-repeat="tab in section.sectionTabs" id="section-tab-desktop" ng-class="{'faded-out': (section.selectedTab.value != tab.value)}"><a ng-click="setTab(tab)" what="section tab desktop" class="fastclickable"><img
-                                  ng-src="/admin/assets/images/icon-preview-desktop.svg" src="/admin/assets/images/icon-preview-desktop.svg">
+                                  ng-src="/images/courses/logos/web-os.png" src="/images/courses/logos/web-os.png" width="30">
                                 <space></space>Web
                             </a></li>
                         <!---->
                         <li ng-repeat="tab in section.sectionTabs" id="section-tab-mobile" ng-class="{'faded-out': (section.selectedTab.value != tab.value)}" class="faded-out"><a ng-click="setTab(tab)" what="section tab mobile"
-                              class="fastclickable"><img ng-src="/admin/assets/images/icon-preview-ios.svg" src="/admin/assets/images/icon-preview-ios.svg">
+                              class="fastclickable"><img ng-src="/images/courses/logos/images.png" src="/images/courses/logos/images.png" width="30">
                                 <space></space>iOS
                             </a></li>
                         <!----><span class="space"></span>
@@ -878,14 +877,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <!---->
                 <!---->
                 <h2 ng-if="section.name" class="tch-subheading">
-                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Delete</span>
+                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Supprimer</span>
                     <!---->
                     <!---->
                     <!---->
                     <!---->
                     <!----><br ng-if="!removeDescriptionLineBreak">
                     <!---->
-                    <p ng-bind-html="section.description" what="section-description" class="small">Permanently delete all course content, including student enrollment records.</p>
+                    <p ng-bind-html="section.description" what="section-description" class="small">Supprimer définitivement tout le contenu du cours, y compris les enregistrements d'inscription des étudiants.</p>
                     <!---->
                     <!---->
                 </h2>
@@ -915,16 +914,24 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
   index="0" animate="animate" modal-animation="true" style="z-index: 1050; display: none;">
     <div class="modal-dialog" ng-class="size ? 'modal-' + size : ''">
         <div class="modal-content" modal-transclude="">
-            <div what="confirm modal">
-                <div class="modal-body angular-confirm-text">
+            <div what="confirm modal" class="confirm-modal" style="text-align: center;">
+              <!--  <div class="modal-body angular-confirm-text">
+
+                    <h4 ng-if="data.title" ng-bind="::data.title" class="angular-confirm-title" trackid="1804" style="">Confirmer</h4>
+                    <!----
+                    <p what="text" ng-bind="::data.text" class="angular-confirm-copy" trackid="1805">Êtes-vous vraiment sûr de vouloir supprimer ce cours? Cette action est irréversible.</p>
+                </div>
+                <div class="modal-footer center angular-confirm-footer" trackid="1787">
+                    <!----<button what="cancel button" ng-if="data.cancel" ng-click="cancel()" ng-bind="::data.cancel || 'Cancel'" class="tch-btn-header-secondary fastclickable" trackid="1806" style="">Annuler</button>
+                    <!----<button what="ok button" ng-click="ok()" ng-bind="::data.ok || 'OK'" class="tch-btn-header-primary fastclickable" trackid="1789">OK</button></div>
+                    -->
+                    <h4 ng-if="data.title" ng-bind="::data.title" class="angular-confirm-title" style="">Confirmer</h4>
                     <!---->
-                    <h4 ng-if="data.title" ng-bind="::data.title" class="angular-confirm-title" style="">Confirm</h4>
-                    <!---->
-                    <p what="text" ng-bind="::data.text" class="angular-confirm-copy">Are you really, really sure you want to delete this course? This action is irreversible.</p>
+                    <p what="text" ng-bind="::data.text" class="angular-confirm-copy">Êtes-vous vraiment sûr de vouloir supprimer ce cours? Cette action est irréversible.</p>
                 </div>
                 <div class="modal-footer center angular-confirm-footer">
                     <!----><button id="cancel" what="cancel button" ng-if="data.cancel" ng-click="cancel()" ng-bind="::data.cancel || 'Cancel'" class="tch-btn-header-secondary fastclickable" style="">Annuler</button>
-                    <form action="{{ route('courses.destroy', $course) }}" method="post">
+                    <form action="{{ route('courses.destroy', $course) }}" method="post" style="margin-bottom: inherit;">
                         {{ csrf_field() }}
                         {{ method_field('delete') }}
                     <!----><button what="ok button" ng-click="ok()" ng-bind="::data.ok || 'OK'" class="tch-btn-header-primary fastclickable">OK</button>

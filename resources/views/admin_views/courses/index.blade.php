@@ -84,16 +84,16 @@ ul{margin-top:0;margin-bottom:11px;}
 .btn-group{position:relative;display:inline-block;vertical-align:middle;}
 .btn-group .dropdown-toggle:active{outline:0;}
 .alert{padding:15px;margin-bottom:22px;border:1px solid transparent;border-radius:4px;}
-.alert-info{color:#3498db;background-color:#d9edf7;border-color:#bce8f1;}
+.alert-info{color:#4D90CC;background-color:#4d90cc3b;border-color:#4d90cc3b;}
 .clearfix:before,.clearfix:after{display:table;content:" ";}
 .clearfix:after{clear:both;}
 .pull-right{float:right!important;}
 [disabled]{cursor:default!important;pointer-events:none;}
-.tch-btn-header-primary{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
-.tch-btn-header-primary:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
+.tch-btn-header-primary{color:white;background-color:#6aace6;border:1px solid #6aace6;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
+.tch-btn-header-primary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-header-primary:active{background-image:none;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
@@ -126,9 +126,9 @@ ul{margin-top:0;margin-bottom:11px;}
 .alert{padding:14px 25px 14px 47px;background:none;border:1px solid #e0e0e0;color:#6f6c6c;}
 .alert:before{font-family:FontAwesome;position:absolute;margin-left:-30px;display:block;top:calc(50% - 15px);padding:5px;font-size:20px;color:#809196;opacity:0.9;}
 .alert a{text-decoration:underline;font-weight:600;}
-.alert-info{background:#fff8f5;border:1px solid #ffccb5;color:#ea7e4d;}
-.alert-info:before{content:'\F059';color:#ea7e4d;}
-.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#ea7e4d;text-decoration:underline;}
+.alert-info{background:#4d90cc3b;border:1px solid #4d90cc3b;color:#4D90CC;}
+.alert-info:before{content:'\F059';color:#4D90CC;}
+.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#4D90CC;text-decoration:underline;}
 .tch-learn-more{text-align:center;}
 .tch-learn-more .alert{display:inline-block;margin:auto;}
 .form-control::-moz-placeholder{color:#97999b;opacity:1;}
@@ -172,7 +172,7 @@ ul{margin-top:0;margin-bottom:11px;}
 .tch-course-listing .tch-course-listing-image{max-height:208px;}
 }
 .tch-course-listing-wrapper{-webkit-box-shadow:1px 1px 1px 0px rgba(0, 0, 0, .04);box-shadow:1px 1px 1px 0px rgba(0, 0, 0, .04);border-radius:2px;background-color:#fff;padding:0px;cursor:pointer;}
-.tch-course-listing-wrapper:hover{-webkit-box-shadow:0px 0px 0px 2px #97b9bb;box-shadow:0px 0px 0px 2px #97b9bb;}
+.tch-course-listing-wrapper:hover{-webkit-box-shadow:0px 0px 0px 2px #4D90CC;box-shadow:0px 0px 0px 2px #4D90CC;}
 .tch-course-listing-image{width:100%;height:192px;background-size:cover;background-position:center;background-repeat:no-repeat;border-top-left-radius:2px;border-top-right-radius:2px;}
 .tch-course-listing-title{background-color:#fff;border-top:1px solid #eee;font-size:18px;font-weight:600;padding:20px;color:#20272d;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .tch-course-listing-footer-section{padding:0px 0px 15px 10px;float:left;margin-left:30px;float:left;font-size:18px;color:#728e8d;}
@@ -181,10 +181,10 @@ ul{margin-top:0;margin-bottom:11px;}
 .tch-course-listing-sales-total,.tch-course-listing-enrollment-total{font-size:19px;margin-right:3px;}
 .tch-course-listing-sales-label,.tch-course-listing-enrollment-label{font-size:16px;text-transform:lowercase;vertical-align:0px;opacity:0.7;}
 .tch-filters{padding-top:0;background:#ffffff;position:relative;border-radius:5px;-webkit-box-shadow:1px 1px 1px 0px rgba(0, 0, 0, .04);box-shadow:1px 1px 1px 0px rgba(0, 0, 0, .04);border:1px solid #e7eaed;display:-webkit-box;display:-ms-flexbox;display:flex;margin-bottom:10px;z-index:100;}
-.tch-filters a{color:#809196;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-.tch-filters a:hover,.tch-filters a:active,.tch-filters a:focus{color:#ff7f45;}
-.tch-filters a.dropdown-link{padding:0 20px;line-height:48px;display:block;font-weight:600;font-size:13px;cursor:pointer;color:#0f8d82;}
-.tch-filters a.dropdown-link:hover{color:#ff7f45;}
+.tch-filters a{color:#4D90CC;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.tch-filters a:hover,.tch-filters a:active,.tch-filters a:focus{color:#4D90CC;}
+.tch-filters a.dropdown-link{padding:0 20px;line-height:48px;display:block;font-weight:600;font-size:13px;cursor:pointer;color:#4D90CC;}
+.tch-filters a.dropdown-link:hover{color:#4D90CC;}
 .tch-filters a.dropdown-link i.fa{font-size:9px;vertical-align:1px;margin-left:3px;}
 .tch-filters .filter-add{border-right:1px solid #e7eaed;}
 .tch-filters .filter-search{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;position:relative;}
@@ -256,7 +256,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     <div ng-if="hasOne">
         <div options="options.filters" search="options.search" sort-keys="options.sortKeys" per-page="24" enable-reordering="permissions.can('reorder_courses')" default-sort-direction="ASC">
             <div class="tch-filters">
-                <div class="filter-add"><a href="#" what="filter-add" popover-placement="bottom" popover-animation="false" popover-template="'common/filter-section/add-filter-popover.html'" class="dropdown-link"><span>Add Filter</span><span
+                <div class="filter-add"><a href="#" what="filter-add" popover-placement="bottom" popover-animation="false" popover-template="'common/filter-section/add-filter-popover.html'" class="dropdown-link"><span>Ajouter un filtre</span><span
                           class="space"></span><i class="fa fa-chevron-down"></i></a></div>
                 <!---->
                 <div ng-if="ctrl.search" class="filter-search">
@@ -267,17 +267,17 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                 </div>
                 <!---->
-                <div class="filter-sort-by--label"><span>Sort by</span></div>
+                <div class="filter-sort-by--label"><span>Trier par</span></div>
                 <div dropdown="" data-test="sort-by-drop-down" class="btn-group tch-dropdown-group filter-sort-by--dropdown dropdown"><a dropdown-toggle="" type="button" class="dropdown-link dropdown-toggle" aria-haspopup="true"
-                      aria-expanded="false"><span ng-bind="ctrl.currentSortKey.label || ctrl.defaultSortKey.label">Directory Order</span><span class="space"></span><i class="fa fa-angle-down"></i></a>
+                      aria-expanded="false"><span ng-bind="ctrl.currentSortKey.label || ctrl.defaultSortKey.label">Commande de répertoire</span><span class="space"></span><i class="fa fa-angle-down"></i></a>
                     <div class="dropdown-menu-arrow"></div>
                     <ul role="menu" class="dropdown-menu dropdown-menu-left">
                         <!---->
-                        <li ng-repeat="sortKey in ctrl.sortKeys"><a href="#" ng-click="ctrl.setSortKey(sortKey)" data-test="sort-by-drop-down-item" ng-bind="sortKey.label" class="fastclickable">Directory Order</a></li>
+                        <li ng-repeat="sortKey in ctrl.sortKeys"><a href="#" ng-click="ctrl.setSortKey(sortKey)" data-test="sort-by-drop-down-item" ng-bind="sortKey.label" class="fastclickable">Commande de répertoire</a></li>
                         <!---->
-                        <li ng-repeat="sortKey in ctrl.sortKeys"><a href="#" ng-click="ctrl.setSortKey(sortKey)" data-test="sort-by-drop-down-item" ng-bind="sortKey.label" class="fastclickable">Name</a></li>
+                        <li ng-repeat="sortKey in ctrl.sortKeys"><a href="#" ng-click="ctrl.setSortKey(sortKey)" data-test="sort-by-drop-down-item" ng-bind="sortKey.label" class="fastclickable">Nom</a></li>
                         <!---->
-                        <li ng-repeat="sortKey in ctrl.sortKeys"><a href="#" ng-click="ctrl.setSortKey(sortKey)" data-test="sort-by-drop-down-item" ng-bind="sortKey.label" class="fastclickable">Creation Date</a></li>
+                        <li ng-repeat="sortKey in ctrl.sortKeys"><a href="#" ng-click="ctrl.setSortKey(sortKey)" data-test="sort-by-drop-down-item" ng-bind="sortKey.label" class="fastclickable">Date de création</a></li>
                         <!---->
                     </ul>
                 </div><a href="#" ng-click="ctrl.toggleSortDirection()" class="filter-sort-direction fastclickable"><i
@@ -309,11 +309,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 <div class="row">
                                     <div class="tch-course-listing-sales tch-course-listing-footer-section">$<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
                                           class="tch-course-listing-sales-total">0</div>
-                                        <div class="tch-course-listing-sales-label">Sales</div>
+                                        <div class="tch-course-listing-sales-label">Ventes</div>
                                     </div>
                                     <div class="tch-course-listing-enrollment tch-course-listing-footer-section">
                                         <div ng-bind="::courseStats[course.id].enrolled" what="course-total-enrolled" class="tch-course-listing-enrollment-total">0</div>
-                                        <div class="tch-course-listing-enrollment-label">Enrolled</div>
+                                        <div class="tch-course-listing-enrollment-label">Inscrit</div>
                                     </div>
                                 </div>
                             </div>
@@ -332,11 +332,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 <div class="row">
                                     <div class="tch-course-listing-sales tch-course-listing-footer-section">$<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
                                           class="tch-course-listing-sales-total">0</div>
-                                        <div class="tch-course-listing-sales-label">Sales</div>
+                                        <div class="tch-course-listing-sales-label">Ventes</div>
                                     </div>
                                     <div class="tch-course-listing-enrollment tch-course-listing-footer-section">
                                         <div ng-bind="::courseStats[course.id].enrolled" what="course-total-enrolled" class="tch-course-listing-enrollment-total">0</div>
-                                        <div class="tch-course-listing-enrollment-label">Enrolled</div>
+                                        <div class="tch-course-listing-enrollment-label">Inscrit</div>
                                     </div>
                                 </div>
                             </div>
@@ -361,7 +361,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <div class="alert alert-info">
             <!---->
             <div ng-transclude="" ng-class="{ 'border-left': title }" class="alert-text-wrapper"><a ng-href="https://support.teachable.com/hc/en-us/articles/223117407-Courses?src=admin"
-                  href="https://support.teachable.com/hc/en-us/articles/223117407-Courses?src=admin" target="_blank">Learn more</a><span class="space"></span><span ng-bind="text">about courses in the Teachable Knowledge Base</span></div>
+                  href="https://support.teachable.com/hc/en-us/articles/223117407-Courses?src=admin" target="_blank">Apprendre encore plus</a><span class="space"></span><span ng-bind="text">à propos des informations sur la connaissance de base des cours.</span></div>
         </div>
     </div>
 </div>
