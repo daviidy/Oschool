@@ -77,6 +77,7 @@ class Lesson extends Model
                 File::delete(public_path('/images/lessons/images/' . $lesson->image));
             }
              $lesson->medias()->delete();
+             $lesson->quizzes()->delete();
              // do the rest of the cleanup...
         });
     }

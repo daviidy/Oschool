@@ -52,6 +52,17 @@ class Quiz extends Model
             return $this->belongsTo('App\Lesson');
         }
 
+        public static function boot() {
+        parent::boot();
+
+        static::deleting(function($quiz) { // before delete() method call this
+
+
+             $quiz->questions()->delete();
+             // do the rest of the cleanup...
+        });
+    }
+
 
 
 

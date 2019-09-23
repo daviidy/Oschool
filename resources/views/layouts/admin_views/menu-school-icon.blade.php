@@ -658,7 +658,7 @@ $("#cancel").on('click', function(){
           update: function(event, ui){
               $(this).children().each(function(index){
                   if ($(this).attr('data-position') != (index+1)) {
-                      $(this).attr('data-position', (index+1)).addClass('updated');
+                      $(this).attr('data-position', (index+1)).addClass('updated_lesson');
                   }
               });
 
@@ -669,9 +669,9 @@ $("#cancel").on('click', function(){
 
   function saveNewPositions(){
       var positions = [];
-      $('.updated').each(function(){
+      $('.updated_lesson').each(function(){
           positions.push([$(this).attr('data-index'), $(this).attr('data-position')]);
-          $(this).removeClass('updated');
+          $(this).removeClass('updated_lesson');
       });
 console.log(JSON.stringify(positions));
       $.ajax({
@@ -685,6 +685,51 @@ console.log(JSON.stringify(positions));
           },
           success: function() {
               $.amaran({'message':"Programme enregistré"});
+          },
+          error: function (xhr, msg) {
+            console.log(msg + '\n' + xhr.responseText);
+        }
+      });
+  }
+
+  </script>
+
+
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+      $('.question-added-wrapper').sortable({
+          update: function(event, ui){
+              $(this).children().each(function(index){
+                  if ($(this).attr('data-position') != (index+1)) {
+                      $(this).attr('data-position', (index+1)).addClass('updated_question');
+                  }
+              });
+
+              saveNewQuestionPositions();
+          }
+      });
+  });
+
+  function saveNewQuestionPositions(){
+      var positions = [];
+      $('.updated_question').each(function(){
+          positions.push([$(this).attr('data-index'), $(this).attr('data-position')]);
+          $(this).removeClass('updated_question');
+      });
+console.log(JSON.stringify(positions));
+      $.ajax({
+          type: 'post',
+          url: '/saveNewQuestionPositions',
+          dataType: "json",
+          data: {
+              '_token': '{{csrf_token()}}',
+              'update': 1,
+              'positions': positions,
+          },
+          success: function() {
+              $.amaran({'message':"Ordre sauvegardé"});
           },
           error: function (xhr, msg) {
             console.log(msg + '\n' + xhr.responseText);
@@ -738,8 +783,13 @@ console.log(JSON.stringify(positions));
   }
 
 
+  </script>
 
 
+
+<script type="text/javascript">
+
+//ajouter une question au quiz
   $('#add-question').on('click', function(event) {
       event.preventDefault();
 
@@ -747,17 +797,21 @@ console.log(JSON.stringify(positions));
       var tab = [];
 
       var question = $('#question-text').val();
-      var options = $('.reponses.text_question_quiz');
+      var options = $('.text_question_quiz');
       console.log(options);
       $.each(options, function(){
-          var correct = $(this).prev().find('input[name=correct]:checked').length > 0;
-          console.log(correct);
-          console.log($(this).val());
-          var obj = {
-              'option': $(this).val(),
-              'correct': correct,
-          };
-          tab.push(obj);
+          if ($(this).val() !== "") {
+
+              var correct = $(this).prev().find('input[name=correct]:checked').length > 0;
+              console.log(correct);
+              console.log($(this).val());
+              var obj = {
+                  'option': $(this).val(),
+                  'correct': correct,
+              };
+              tab.push(obj);
+
+          }
       });
       console.log(tab);
       console.log(question);
@@ -780,63 +834,8 @@ console.log(JSON.stringify(positions));
           data: dataImage,
           success: function(data) {
               $.amaran({'message':'La question du quiz a bien été ajoutée'});
+              window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+$("input[name=course_id]").val()+'/curriculum/'+$("input[name=section_id]").val()+'/lessons/'+$("input[name=lesson_id]").val()+'/edit/#quiz';
 
-              $('.list-unstyled').append("<li what='question' ng-repeat='question in questions track by $index' ng-class='{ 'question-edit-mode': question.editing }' class='well ui-sortable-handle'>\
-<div ng-show='!question.editing' class='pull-right'><button what='edit button' data-nodrag='' type='button' ng-show='!question.editing' ng-click='toggleEditMode(question)'\
-  class='tch-btn-content-primary tch-btn-icon disable-animations fastclickable'><i class='fa fa-edit'></i></button><span class='space'></span><button what='delete button' data-nodrag='' type='button'\
-  ng-click='deleteQuestion(question)' class='tch-btn-content-danger tch-btn-icon disable-animations fastclickable'><i class='fa fa-trash-o'></i></button></div>\
-<div what='edit box' ng-show='question.editing' ng-model='question' class='quiz-question ng-pristine ng-untouched ng-valid ng-not-empty ng-hide'>\
-<div class='quiz-question'>\
-    <div data-nodrag='' class='quiz-question-prompt'><input what='question text' id='question-prompt' ng-model='question.question' class='form-control ng-pristine ng-untouched ng-valid ng-not-empty'></div>\
-    <div class='multiple-choice'>\
-        <div what='answer' ng-repeat='answer in question.answers track by $index'>\
-            <p></p>\
-            <div class='input-group'>\
-                <div tooltip='Correct Answer' tooltip-placement='bottom' tooltip-trigger='mouseenter' tooltip-append-to-body='true' class='input-group-addon'>\
-                    <div class='checkbox checkbox-primary'><input id='answer-0-0-correct' type='checkbox' name='answer-0-0-correct' ng-model='answer.correct' ng-value='true' class='ng-pristine ng-untouched ng-valid ng-not-empty'\
-                          value='true'><label for='answer-0-0-correct'></label></div>\
-                </div><input what='answer text' ng-model='answer.value' placeholder='Answer choice' ng-keydown='addMultipleChoiceAnswer(question, $event)'\
-                  class='form-control multiple-choice-answer-input ng-pristine ng-untouched ng-valid ng-not-empty'>\
-                <div ng-if='question.answers.length > 1' class='input-group-btn left-10'><button type='button' ng-click='removeAnswer(question, answer)' tabindex='-1' class='tch-btn-content-danger fastclickable'><i\
-                          class='fa fa-remove'></i></button></div>\
-            </div>\
-            <p></p>\
-        </div>\
-        <div what='answer' ng-repeat='answer in question.answers track by $index'>\
-            <p></p>\
-            <div class='input-group'>\
-                <div tooltip='Correct Answer' tooltip-placement='bottom' tooltip-trigger='mouseenter' tooltip-append-to-body='true' class='input-group-addon'>\
-                    <div class='checkbox checkbox-primary'><input id='answer-1-0-correct' type='checkbox' name='answer-0-1-correct' ng-model='answer.correct' ng-value='true' class='ng-pristine ng-untouched ng-valid ng-empty'\
-                          value='true'><label for='answer-1-0-correct'></label></div>\
-                </div><input what='answer text' ng-model='answer.value' placeholder='Answer choice' ng-keydown='addMultipleChoiceAnswer(question, $event)'\
-                  class='form-control multiple-choice-answer-input ng-pristine ng-untouched ng-valid ng-not-empty'>\
-                <div ng-if='question.answers.length > 1' class='input-group-btn left-10'><button type='button' ng-click='removeAnswer(question, answer)' tabindex='-1' class='tch-btn-content-danger fastclickable'><i\
-                          class='fa fa-remove'></i></button></div>\
-            </div>\
-            <p></p>\
-        </div>\
-    </div>\
-</div>\
-</div>\
-<div what='display box' ng-hide='question.editing' class='question'>\
-<strong what='question text' ng-bind-html='question.question'>\
-"+data.text+"\
-</strong>\
-<ul class='question-answers tch-arrow-list'>\
-    <li what='answer' ng-repeat='answer in question.answers track by $index' ng-class='{ 'correct-answer' : answer.correct }' class='answers correct-answer'><span what='answer text'\
-          ng-bind-html='answer.value'>fvnfkbnfkobngf</span><span class='space'></span><i what='answer correct' ng-show='answer.correct' class='fa fa-check-square-o'></i></li>\
-    <li what='answer' ng-repeat='answer in question.answers track by $index' ng-class='{ 'correct-answer' : answer.correct }' class='answers'><span what='answer text' ng-bind-html='answer.value'>fkvjnfobfpebf</span><span\
-          class='space'></span><i what='answer correct' ng-show='answer.correct' class='fa fa-check-square-o ng-hide'></i></li>\
-</ul>\
-</div>\
-<div ng-show='question.editing' class='row ng-hide'>\
-<div class='col-sm-12'>\
-    <div class='pull-right'><button id='test-id-save-btn' data-nodrag='' type='submit' ng-show='question.editing' ng-click='saveQuestion(question)'\
-          class='tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide'>Save</button><span class='space'></span><button what='delete button' data-nodrag='' type='button' ng-click='deleteQuestion(question)'\
-          class='tch-btn-content-danger tch-btn-icon disable-animations fastclickable'><i class='fa fa-trash-o'></i></button></div>\
-</div>\
-</div>\
-</li>");
 
           },
           error: function (xhr, msg) {
@@ -849,8 +848,108 @@ console.log(JSON.stringify(positions));
 
 
 
-  </script>
+  $('.edit-question').on('click', function(event) {
+      event.preventDefault();
 
+      var dataImage = new FormData();
+      var tab = [];
+
+      var question = $(this).parents(2).siblings('.quiz-question').find('#question-text-edit').val();
+      var question_id = $(this).parents(2).siblings('.quiz-question').find('#question-id').val();
+      var options = $(this).parents(2).siblings('.quiz-question').find('.text_question_quiz_edit');
+      console.log(options);
+      $.each(options, function(){
+          if ($(this).val() !== "") {
+
+              var correct = $(this).prev().find('input[name=correct]:checked').length > 0;
+              console.log(correct);
+              console.log($(this).val());
+              var obj = {
+                  'id': $(this).siblings('input[name=option_id]').val(),
+                  'option': $(this).val(),
+                  'correct': correct,
+              };
+              tab.push(obj);
+
+          }
+      });
+      console.log(tab);
+      console.log(question);
+      console.log(JSON.stringify(tab));
+
+
+
+
+      dataImage.append('_token', '{{csrf_token()}}');
+      dataImage.append('school_id', $('input[name=school_id]').val());
+      dataImage.append('course_id', $('input[name=course_id]').val());
+      dataImage.append('lesson_id', $('input[name=lesson_id]').val());
+      dataImage.append('quiz_id', $('input[name=quiz_id]').val());
+      dataImage.append('question', question);
+      dataImage.append('question_id', question_id);
+      dataImage.append('option', JSON.stringify(tab));
+
+      $.ajax({
+          type: 'post',
+          url: '/editQuiz',
+          contentType:false,
+          cache: false,
+          processData:false,
+          data: dataImage,
+          success: function(data) {
+              $.amaran({'message':'La question du quiz a bien été modifiée'});
+              window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+$("input[name=course_id]").val()+'/curriculum/'+$("input[name=section_id]").val()+'/lessons/'+$("input[name=lesson_id]").val()+'/edit/';
+
+
+          },
+          error: function (xhr, msg) {
+            console.log(msg + '\n' + xhr.responseText);
+        }
+      });
+
+  });
+
+
+
+
+  //si on clique sur la croix
+  //pour supprimer une option
+  //pour le mode d'edition)
+
+  $('.answer-remove-edit').on('click', function(){
+      var option_id = $(this).parents().eq(1).find("input[name=option_id]").val();
+      $(this).parents().eq(2).remove();
+
+      $.ajax({
+          type: 'post',
+          url: '/deleteOption',
+
+          data: {
+              '_token': '{{csrf_token()}}',
+              'id': option_id,
+          },
+          success: function() {
+              $.amaran({'message':'L\'option a bien été supprimée'});
+          },
+          error: function (xhr, msg) {
+            console.log(msg + '\n' + xhr.responseText);
+        }
+      });
+  });
+
+
+  //suppression d'options qu'on vient
+  //de rajouter
+
+  $('.multiple-choice').on('click', '.answer-remove', function(e) {
+    e.preventDefault();
+      $(this).parents('.reponses').remove();
+  });
+
+
+
+
+</script>
 
   <!--fin quill js-->
 

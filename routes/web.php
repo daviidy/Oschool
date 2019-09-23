@@ -62,8 +62,11 @@ Route::post('/addLecture', 'LessonController@store');
 Route::post('/updateLecture', 'LessonController@update');
 Route::post('/saveNewPositions', 'LessonController@saveNewPositions');
 Route::post('/saveNewSectionPositions', 'LessonController@saveNewSectionPositions');
+Route::post('/saveNewQuestionPositions', 'LessonController@saveNewQuestionPositions');
 Route::post('/deleteLecture', 'LessonController@destroy');
 Route::post('/addQuiz', 'LessonController@addQuiz');
+Route::post('/editQuiz', 'LessonController@editQuiz');
+Route::post('/deleteOption', 'LessonController@deleteOption');
 
 
 
@@ -114,6 +117,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseControlle
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/new-section', 'SectionController@create')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/new-lecture', 'LessonController@create')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/lessons/{lesson}/edit', 'LessonController@edit')->name('course');
+Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/lessons/{lesson}/quiz/{quiz}/edit', 'QuizController@edit')->name('course');
 
 //course pricing
 Route::get('/schoolAdmin/{school}/courses/{course}/pricing', 'CourseController@pricing')->name('course');
