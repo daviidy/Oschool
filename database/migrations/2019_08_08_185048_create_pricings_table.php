@@ -21,7 +21,7 @@ class CreatePricingsTable extends Migration
             $table->string('recurring')->nullable();
             $table->string('per')->nullable();
             $table->integer('times')->unsigned()->nullable();
-            $table->integer('course_id')->unsigned()->nullable();
+            $table->bigInteger('course_id')->unsigned()->nullable();
             $table->foreign('course_id')->references('id')->on('courses');
             $table->timestamps();
         });

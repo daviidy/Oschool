@@ -14,8 +14,9 @@ class AddAuthorIdToCoursesTable extends Migration
     public function up()
     {
         Schema::table('courses', function (Blueprint $table) {
+            $table->dropForeign('courses_user_id_foreign');
             $table->dropColumn('user_id');
-            $table->integer('author_id')->unsigned()->nullable();
+            $table->bigInteger('author_id')->unsigned()->nullable();
             $table->foreign('author_id')->references('id')->on('authors');
         });
     }

@@ -14,7 +14,7 @@ class AddSchoolIdToAuthorsTable extends Migration
     public function up()
     {
         Schema::table('authors', function (Blueprint $table) {
-            $table->integer('school_id')->unsigned()->nullable();
+            $table->bigInteger('school_id')->unsigned()->nullable();
             $table->foreign('school_id')->references('id')->on('schools');
         });
     }

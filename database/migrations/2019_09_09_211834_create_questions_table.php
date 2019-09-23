@@ -15,7 +15,7 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('quiz_id')->unsigned()->nullable();
+            $table->bigInteger('quiz_id')->unsigned()->nullable();
             $table->foreign('quiz_id')->references('id')->on('quizzes');
             $table->string('text')->nullable();
             $table->string('image')->default('image.jpg');
