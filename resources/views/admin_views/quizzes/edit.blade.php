@@ -1170,7 +1170,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
  .input-group-addon .checkbox{margin:0;padding:0;top:12px;position:absolute;left:35px;}
  #question-prompt{font-weight:bold;}
  .quiz-wrapper .well{background:#fff;padding:0;margin:0;}
- ul.question-added-wrapper > li{background-color:#f9f9f9!important;border-radius:5px;border:1px solid #dfdfdf;margin:7px;padding-bottom:15px;padding-left:20px;padding:14px 18px 15px 19px!important;}
+ ul.question-added-wrapper > li{background-color:#fff!important;border-radius:5px;border:1px solid #dfdfdf;margin:7px;padding-bottom:15px;padding-left:20px;padding:14px 18px 15px 19px!important;}
  ul.question-added-wrapper > li:hover{background:#fdfdfd;}
  ul.question-added-wrapper > li .correct-answer{color:#278c7d;font-weight:bold;}
  .question-answers{font-size:15px;}
@@ -1245,23 +1245,10 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
         <div>
             <div class="tab-container" type="tabs" vertical="" justified="">
                 <ul class="nav nav-tabs">
-                    <!---->
-                    <li class="tab fastclickable active"  heading="Add File"  style="">
-                        <a href="#image"  class="fastclickable">Image de la leçon</a>
-                    </li>
-                    <li class="tab fastclickable"  heading="Add File"  style="">
-                        <a href="#resource"  class="fastclickable">Ressources téléchargeables</a>
-                    </li>
-                    <li class="tab fastclickable"  heading="Add File"  style="">
-                        <a href="#video"  class="fastclickable">Vidéo</a>
-                    </li>
-                    <!---->
-                    <li class="tab fastclickable"  heading="Add Text" >
-                        <a href="#text"  class="fastclickable">Texte</a>
-                    </li>
 
-                    <li class="tab fastclickable"  heading="Add Quiz" >
-                        <a href="#quiz"  class="fastclickable">Quiz</a>
+
+                    <li class="tab fastclickable active"  heading="Add Quiz" >
+                        <a href="#quiz"  class="fastclickable">Modifier Question</a>
                     </li>
 
                     <!---->
@@ -1287,138 +1274,8 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
     </tabs>
     <!---->
 
-    <ui-view id="image" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
-        <div class="tch-drop-wrapper">
-            <div filepicker-drag-drop="true" drag-over-class="drag-hover" on-upload-success="dropFilePickerSuccess" filepicker-multiple="true" filepicker-folder="true" target-type="attachment upload" class="drop-inner">
-                Mettez une image pour cette leçon (facultatif)<span class="space"></span><span class="space"></span></div>
-            <div data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
-              class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="image_lesson" type="file" name="image" value=""> <span> Choisissez une image</span></div>
-        </div>
-        <img width="150" src="/images/lessons/images/{{$lesson->image}}" alt="">
-    </ui-view>
 
-    <ui-view style="display: none;" id="resource" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
-        <div class="tch-drop-wrapper">
-            <div filepicker-drag-drop="true" drag-over-class="drag-hover" on-upload-success="dropFilePickerSuccess" filepicker-multiple="true" filepicker-folder="true" target-type="attachment upload" class="drop-inner">
-                Mettez des ressources que les étudiants
-                pourront télécharger pour cette leçon (facultatif) <br> <span class="space"></span><span class="space"></span></div><br>
-            <div style="margin-left: -18%;" data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
-              class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="downloadable_files" type="file" name="downloadable_files[]" multiple> <span> Choisir fichiers</span></div>
-        </div>
-
-        <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
-        <div class="tch-table-wrapper">
-            <!---->
-            <table ng-if="products.length > 0" class="tch-table">
-                <thead>
-                    <tr>
-                        <th>Nom du fichier</th>
-                        <th>Lien</th>
-
-
-                    </tr>
-                </thead>
-                <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
-                    <!---->
-                    @if($lesson->medias)
-                    @foreach($lesson->medias as $media)
-                                        <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
-                        <td what="id"><span ng-bind="'#' + product.id">{{$media->name}}</span><span class="space"></span><span class="space"></span>
-                            <!---->
-                        </td>
-                        <td what="type">
-                            <!---->
-                            <span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">
-                                <a download target="_blank" href="/images/lessons/resources/{{$media->name}}">
-                                Téléchargez
-                                </a>
-                            </span>
-                            <!---->
-                        </td>
-
-                        <td>
-                            <!---->
-                            <!---->
-                            <div ng-if="product.is_published" class="pull-right">
-
-                                <form action="http://localhost:8000/pricings/3" method="post">
-                                    <input type="hidden" name="_token" value="8mWFYoWez7Nk7t5NGawvDBY5P0J7UeNK368ybAVm">
-                                    <input type="hidden" name="_method" value="delete">
-                                    <button id="test-id-unpublish-btn" class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i></button>
-                                </form>
-                            </div>
-                            <!---->
-                        </td>
-                    </tr>
-                    @endforeach
-                    @endif
-
-
-                    <!---->
-                </tbody>
-            </table>
-            <!---->
-        </div>
-        <div ng-show="ctrl.meta.number_of_pages > 1" class="tch-page-nav ng-hide" meta="meta">
-            <!---->
-            <div class="pull-right"><span class="tch-page-nav-page-number">Page 1 of 1</span><span class="space"></span><button ng-click="ctrl.previousPage()" ng-disabled="ctrl.meta.page == 1" class="tch-page-nav-btn tch-back-button fastclickable" disabled="disabled"><i class="fa fa-angle-left"></i></button><button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page" class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"><i class="fa fa-angle-right"></i></button></div>
-        </div>
-        <!---->
-
-        <!---->
-    </div>
-
-
-
-    </ui-view>
-
-
-    <ui-view style="display: none;" id="text" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
-
-    <!---->
-    <!---->
-        <div ng-if="hasNewTextEditor">
-            <div id="site-description" class="">
-
-                @if($lesson->full_text)
-                {!!$lesson->full_text!!}
-                @endif
-
-            </div>
-            <!--
-            <div class="add-btn-wrapper"><button ng-click="addAttachment('text')" what="save text button" class="tch-btn-header-primary-block pull-right add-btn fastclickable">Enregistrer</button></div>
-        -->
-        </div>
-        <!---->
-    </ui-view>
-
-
-
-<ui-view style="display: none;" id="video" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
-<div what="quiz wrapper" class="quiz-wrapper">
-    <!---->
-    <!---->
-    <div ng-if="hasQuiz()" class="" style="">
-        <form class="well quiz-question ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse" style="">
-
-            <div class="quiz-question">
-                <div data-nodrag="" class="quiz-question-prompt">
-                    <input value="{{$lesson->video}}" type="text" name="video" what="question text" id="question-prompt" placeholder="Mettez le code d'intégration Viméo ou Youtube de votre vidéo (facultatif)"
-                      class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
-                  </div><br><br>
-                  <!--
-                <input what="add question button" type="submit" value="Add Question" ng-disabled="!readyToAddQuestion(newQuestion)" class="tch-btn-header-primary-block">
-            -->
-            </div>
-        </form>
-
-    </div>
-    <!---->
-</div>
-</ui-view>
-
-
-<ui-view style="display: none;" id="quiz" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
+<ui-view id="quiz" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
     <div what="quiz wrapper" class="quiz-wrapper">
         <!---->
         <!---->
@@ -1435,7 +1292,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                     <div id="bloc-question" class="multiple-choice">
                         <!---->
                         <br>
-                        <p><a class="add-option" style="cursor: pointer;">Ajouter option de réponse</a></p>
+                        <p><a id="add-option" style="cursor: pointer;">Ajouter option de réponse</a></p>
                         <div class="reponses">
 
 
@@ -1451,10 +1308,8 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                                   name="text_question" class="text_question_quiz form-control multiple-choice-answer-input ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
                                 <!---->
                                 <div ng-if="newQuestion.answers.length > 1" class="input-group-btn left-10" style="">
-                                    <button type="button" tabindex="-1"
-                                          class="answer-remove tch-btn-content-danger fastclickable">
-                                          <i class="fa fa-remove"></i>
-                                      </button>
+                                    <button id="answer-remove" type="button" tabindex="-1"
+                                      class="tch-btn-content-danger fastclickable"><i class="fa fa-remove"></i></button>
                                   </div>
                                 <!---->
                             </div>
@@ -1471,54 +1326,32 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
             <div class="row">
               <div class="col-md-12">
                   <ul ui-sortable="sortableOptions" ng-model="questions" class="list-unstyled question-added-wrapper ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
-                      @if($lesson->quizzes)
-                      @foreach($lesson->quizzes as $quiz)
-                      <input type="hidden" name="quiz_id" value="{{$quiz->id}}">
-                      @foreach($quiz->questions->sortBy('position') as $question)
-
-                      <li data-index="{{$question->id}}" data-position="{{$question->position}}" class="well ui-sortable-handle">
-                        <div id="question-save-1" ng-show="!question.editing" class="pull-right">
-                            <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/lessons/{{$lesson->id}}/quiz/{{$quiz->id}}/edit"></a>
-                                <button type="button"
-                                    class="edit_quiz tch-btn-content-primary tch-btn-icon disable-animations fastclickable"><i class="fa fa-edit"></i>
-                                </button>
 
 
-                              <span class="space"></span>
-                              <form action="{{ route('questions.destroy', $question) }}" method="post">
-                                  {{ csrf_field() }}
-                                  {{ method_field('delete') }}
-                                  <button type="submit"
-                                          class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable">
-                                      <i class="fa fa-trash-o"></i>
-                                  </button>
-                              </form>
+
+                      @foreach($quiz->questions as $question)
+                      <li class="well ui-sortable-handle">
+                        <div ng-show="!question.editing" class="pull-right">
+
                           </div>
-                        <div what="edit box" ng-show="question.editing" ng-model="question" class="quiz-question ng-pristine ng-untouched ng-valid ng-not-empty ng-hide">
+                        <div what="edit box" ng-show="question.editing" ng-model="question" class="quiz-question ng-pristine ng-untouched ng-valid ng-not-empty ng-valid">
                             <div class="quiz-question">
                                 <div data-nodrag="" class="quiz-question-prompt">
-                                    <input value="{{$question->text}}" id="question-text-edit" ng-model="question.question" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
-                                    <input type="hidden" value="{{$question->id}}" id="question-id" ng-model="question.question" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
-                                </div>
+                                    <input value="{{$question->text}}" what="question text" id="question-prompt" ng-model="question.question" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty"></div>
                                 <div class="multiple-choice">
-                                    <p><a class="edit-option" style="cursor: pointer;">Ajouter option de réponse</a></p>
                                     @foreach($question->options as $option)
                                     <div what="answer" ng-repeat="answer in question.answers track by $index">
                                         <p></p>
                                         <div class="input-group">
                                             <div tooltip="Correct Answer" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="input-group-addon">
                                                 <div class="checkbox checkbox-primary">
-                                                    <input name="correct" type="checkbox" class="ng-pristine ng-untouched ng-valid ng-not-empty" {{$option->correct == 1 ? 'checked' : ''}}
-                                                      value="{{$option->correct == 0 ? 'false' : 'true'}}"><label for="answer-0-0-correct"></label></div>
+                                                    <input id="answer-0-0-correct" type="checkbox" name="answer-0-0-correct" ng-model="answer.correct" ng-value="true" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                                                      value="{{$option->correct == 0 ? 'true' : 'false'}}" {{$option->correct == 0 ? 'checked' : ''}}><label for="answer-0-0-correct"></label></div>
                                             </div>
-                                            <input value="{{$option->text}}" placeholder="Answer choice"
-                                              class="text_question_quiz_edit form-control multiple-choice-answer-input ng-pristine ng-untouched ng-valid ng-not-empty">
-                                             <input type="hidden" name="option_id" value="{{$option->id ? $option->id : ''}}">
-                                            <div ng-if="question.answers.length > 1" class="input-group-btn left-10">
-                                                <button type="button" tabindex="-1" class="answer-remove-edit tch-btn-content-danger fastclickable"><i
-                                                      class="fa fa-remove"></i>
-                                                  </button>
-                                              </div>
+                                            <input value="{{$question->text}}" what="answer text" ng-model="answer.value" placeholder="Answer choice" ng-keydown="addMultipleChoiceAnswer(question, $event)"
+                                              class="form-control multiple-choice-answer-input ng-pristine ng-untouched ng-valid ng-not-empty">
+                                            <div ng-if="question.answers.length > 1" class="input-group-btn left-10"><button type="button" ng-click="removeAnswer(question, answer)" tabindex="-1" class="tch-btn-content-danger fastclickable"><i
+                                                      class="fa fa-remove"></i></button></div>
                                         </div>
                                         <p></p>
                                     </div>
@@ -1527,45 +1360,29 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                                 </div>
                             </div>
                         </div>
-                        <div what="display box" ng-hide="question.editing" class="question">
-                          <strong what="question text" ng-bind-html="question.question">
-                            {{$question->text}}
-                          </strong>
-                            <ul class="question-answers tch-arrow-list">
-                              @foreach($question->options as $option)
-                                <li what="answer" ng-repeat="answer in question.answers track by $index"  class="answers correct-answer">
-                                  <span what="answer text"
-                                      ng-bind-html="answer.value">
-                                      {{$option->text}}
-                                    </span>
-                                    @if($option->correct === 1)
-                                    <span class="space"></span><i what="answer correct" ng-show="answer.correct" class="fa fa-check-square-o"></i>
-                                    @endif
-                                </li>
-                            @endforeach
 
-                            </ul>
-                        </div>
-                        <div ng-show="question.editing" class="question-save-2 row ng-hide">
+                        <div ng-show="question.editing" class="row ng-valid">
                             <div class="col-sm-12">
                                 <div class="pull-right">
-                                  <button type="submit"
-                                      class="edit-question tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide">
+                                    <button id="test-id-save-btn" data-nodrag="" type="submit" ng-show="question.editing" ng-click="saveQuestion(question)"
+                                      class="tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-valid">
                                       Save
                                   </button>
                                       <span class="space"></span>
-                                  <button what="delete button" data-nodrag="" type="button" ng-click="deleteQuestion(question)"
-                                      class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable"><i class="fa fa-trash-o"></i>
-                                  </button>
-                              </div>
+                                      <form style="float: right;" action="{{ route('questions.destroy', $question) }}" method="post">
+                                          {{ csrf_field() }}
+                                          {{ method_field('delete') }}
+                                          <button type="submit"
+                                              class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable">
+                                              <i class="fa fa-trash-o"></i>
+                                          </button>
+                                      </form>
+                                      </div>
                             </div>
                         </div>
                     </li>
+                    @endforeach
 
-                      @endforeach
-                      @endforeach
-
-                      @endif
 
 
                   </ul>
@@ -1580,78 +1397,6 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
 
 
 
-<div style="margin-top: 30px;" ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
-                    <div ng-transclude="">
-
-                        <div label="Bio" for="author_bio_id" skip-validation="true" form="">
-                            <!---->
-                            <!---->
-                            <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
-                                <label-block required-label="requiredLabel">
-                                    <!---->
-                                    <!----><label for="status" ng-if="label" class="control-label">
-                                        <!----><span ng-bind="label">Statut de la leçon</span>
-                                        <!----></label>
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                </label-block>
-                                <div ng-transclude="">
-                                    <select name="status" id="status" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-api-validate">
-                                        @if($lesson->status == 'inactive')
-                                        <option selected label="" value="inactive">Brouillon</option>
-                                        <option label="" value="active">Public</option>
-                                        @else
-                                        <option label="" value="inactive">Brouillon</option>
-                                        <option selected label="" value="active">Public</option>
-                                        @endif
-                                    </select>
-                                    <br>
-
-                                </div>
-
-                            </div>
-                            <!---->
-                        </div>
-
-                        <!---->
-                        <div label="Type" for="free_lesson" form="" tooltip-text="Add these to your course so students can sort by category in your school's course directory.">
-                            <!---->
-                            <!---->
-                            <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
-                                <label-block required-label="requiredLabel">
-                                    <!---->
-                                    <!----><label for="categories" ng-if="label" class="control-label">
-                                        <!----><span ng-bind="label">Type</span>
-                                        <!----></label>
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                </label-block>
-                                <div ng-transclude="">
-                                    <select id="free_lesson" name="free_lesson" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-api-validate">
-                                        @if($lesson->free_lesson == 'no')
-                                        <option selected label="" value="no">Pas gratuit</option>
-                                        <option label="" value="yes">Aperçu gratuti</option>
-                                        @else
-                                        <option label="" value="no">Pas gratuti</option>
-                                        <option selected label="" value="yes">Aperçu gratuit</option>
-                                        @endif
-                                    </select>
-                                </div>
-
-
-                                </help-block>
-                            </div>
-                            <!---->
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-</div>
 
 <script type="text/javascript" src="/js/admin_views/lesson.js"></script>
 
