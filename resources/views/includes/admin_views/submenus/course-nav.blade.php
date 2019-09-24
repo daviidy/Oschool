@@ -2,11 +2,11 @@
     <div id="course-card-test-id" class="tch-course-card" course="course" show-preview-modal="showPreviewModal">
         <!---->
         <!---->
-        <div ng-if="!course.image_url" class="course-name-placeholder" style="">
+        <div style="background-image: url(/images/courses/logos/{{$course->logo}})" class="course-name-placeholder" style="">
             <div class="row">
                 <div ng-bind="course.name" class="placeholder-course-name">{{$course->name}}</div>
             </div>
-            <div class="row"><a ng-click="showPreviewModal()" ng-bind="'SIDEBAR.SUB_COURSE.PREVIEW' | translate" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
+            <div class="row"><a href="{{url('courses', $course)}}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
         </div>
         <!---->
     </div>
