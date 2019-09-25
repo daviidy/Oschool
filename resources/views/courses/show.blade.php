@@ -25,7 +25,7 @@
               {{$course->subtitle}}
             </h2>
 
-            <form accept-charset="UTF-8" action="/purchase" class="sale_default" id="sale_default2" method="get">
+            <form accept-charset="UTF-8" action="/signin" class="sale_default" id="sale_default2" method="get">
               <input type="hidden" name="authenticity_token" value="pVRA1TV9i6aJ3KRPnzs+luQeNZAmaLfgTnC8167/bBu2+9ydKOjVrpatv+3GdUGcIcbLBN9bGoYhH1XLXmjKYg==">
               <input type="hidden" name="utf8" value="✓">
               <input type="hidden" name="course_id" value="7169" id="course_id">
@@ -35,8 +35,8 @@
               <input type="hidden" name="user_src" value="teachable-examples" id="user_src">
               <button id="enroll-button-top" data-course-id="7169" class="btn btn-hg btn-primary btn-header-enroll" type="submit">
                 <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
-                Enroll in Course for
-                <span class="default-product-price product_7141">$52</span>
+                S'inscrire au cours
+                {{-- <span class="default-product-price product_7141">$52</span> --}}
                 <span class="coupon-price product_7141"></span>
               </button>
             </form>
@@ -71,28 +71,6 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-2 col-md-2 hidden-sm hidden-xs" style="">
-          <center>
-            <a href="https://www.facebook.com/52Kards" target="_blank">
-            </a>
-            <br>
-            <a aria-label="Share on facebook" href="https://www.facebook.com/sharer.php?u=https://courses.52kards.com/courses/7169"
-              onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-              <i class="fa fa-facebook-square facebook-button"></i>
-            </a>
-            <br>
-            <a aria-label="Share on twitter" href="https://twitter.com/intent/tweet/?url=https://courses.52kards.com/courses/7169&amp;text=The Foundations of Card Magic:"
-              onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-              <i class="fa fa-twitter-square twitter-button"></i>
-            </a>
-            <br>
-            <a aria-label="Share on google plus" href="https://plus.google.com/share?url=https://courses.52kards.com/courses/7169"
-              onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-              <i class="fa fa-google-plus-square google-plus-button"></i></a>
-            <br>
-            <a aria-label="Share on linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://courses.52kards.com/courses/7169&amp;title=The Foundations of Card Magic"
-              onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-              <i class="fa fa-linkedin-square linkedin-button"></i></a>
-          </center>
         </div>
         <div class="col-xs-1 visible-xs"></div>
         <div class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-0 col-md-offset-0 col-sm-offset-1 col-xs-10 course-description">
@@ -100,51 +78,17 @@
 
           </p>
           <h2 style="text-align: center;"></h2>
-          <h2 style="text-align: center;">About The Course<br>
+          <h2 style="text-align: center;">Apropos du cours<br>
           </h2>
           <hr>
           <p style="text-align: center;">
-            <span style="font-size: 18px;">The Foundations of Card Magic is an in-depth structured lesson plan for learning the fundamentals of this craft. Sleight of hand card magic is an incredibly rewarding pursuit that can provide a great
-              deal of joy and wonder. T</span>his course includes the strongest and most practical card magic that I have come across.
-          </p>
-          <p style="text-align: center;">When learning a new skill it is common for people to jump ahead of themselves and attempt to learn very complicated and advanced stuff before mastering the basics. Why? Because we are impatient and lack
-            the foresight to take baby steps towards an end goal. Do yourself a favor and LEARN THE FOUNDATIONS FIRST. This will prevent you from picking up any bad habits, and will help attain the level of skill you want more quickly and
-            effectively.
-          </p>
-          <p style="text-align: center;"><span></span>The goal of this course is to be easily approachable for complete beginners, and also provide value for more experienced students. Get ready to practice!
+            <span style="font-size: 18px;">
+              {{$course->description}}
           </p>
           <p style="text-align: center;">
             <br>
           </p>
           <hr>
-          <h2 style="text-align: center;">Experience Online Learning at its Best</h2>
-          <hr>
-          <p>
-            <img class="img-responsive" src="https://d2vvqscadf4c1f.cloudfront.net/RNRi4fZSTaEGgNHEPkLP_Courses%20Mockup2.png" alt="" style="margin: auto; display: block;">
-          </p>
-          <p style="text-align: center;">The Foundations of Card Magic is available instantly on all of your devices. Stream the videos, or download them to your computer.
-          </p>
-          <hr>
-          <h2 style="text-align: center;">Proudly Funded With Kickstarter<br>
-          </h2>
-          <hr>
-          <p>
-            <a href="https://www.kickstarter.com/projects/asadchaudhry/the-foundations-of-card-magic" target="_blank"><img src="https://d2vvqscadf4c1f.cloudfront.net/w9yBA51MRTaVpsFuhzVw_Funded%20with%20Kickstarter.png" alt=""
-                style="display: block; margin: auto;"></a>
-          </p>
-          <p style="text-align: center;">
-            After a few years of creating free content for the magic community I decided I wanted to create a full length premium product for dedicated students who want to invest in their magic and take it to the next level. I took the project
-            idea to Kickstarter to see if I would get support from my students, and the answer was a resounding YES! This project was completely funded in just a few hours after launching the campaign and it ended up reaching 1300% of its funding
-            goal! You can see the Kickstarter campaign here:
-            <a href="http://kck.st/1svJiEF">http://kck.st/1svJiEF</a><br>
-          </p>
-          <hr>
-          <h2 style="text-align: center;">Over 4.5 Hours of In-Depth Video Instruction</h2>
-          <hr>
-          <p style="text-align: center;">
-            The course consists of over 70 bite sized lesson modules. I film in high definition with an over-the-shoulder angle so that you can clearly see what I'm teaching from your own perspective. Follow along with deck in hand as I break
-            down various moves and tricks. I teach the material with depth and clarity and aim to equip students with the tools needed to create great magic.
-          </p>
           <p></p>
           <br>
         </div>
@@ -158,20 +102,20 @@
         <div class="col-xs-1 visible-xs"></div>
         <div class="col-lg-8 col-lg-offset-2 col-xs-10 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
           <h2>
-            The Instructor
+            L'instructeur
           </h2>
           <br>
           <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-4 text-center">
-              <img class="large-img-rounded img-responsive" src="https://d2vvqscadf4c1f.cloudfront.net/gyZG8vl9SEIp5yAiSiNZ_11082416_10103026567301763_5515573656379401736_o.jpg" alt="Asad">
+            
+            <img class="large-img-rounded img-responsive" src="{{$course->author->image}}" alt="{{$course->author->full_name}}">
               <div class="author-name">
-                Asad
+                {{$course->author->full_name}}
               </div>
             </div>
             <div class="col-lg-9 col-md-8 col-sm-8">
               <p>
-                Asad is the founder and lead instructor for 52Kards. He has been studying magic for over a decade and has spent the last several years teaching thousands of magicians world wide. His focus is on close up sleight of hand magic with
-                playing cards.
+                {{$course->author->description}}
               </p>
               <p>
                 <br>
