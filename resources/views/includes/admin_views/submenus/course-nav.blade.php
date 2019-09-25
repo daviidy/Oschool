@@ -2,7 +2,8 @@
     <div id="course-card-test-id" class="tch-course-card" course="course" show-preview-modal="showPreviewModal">
         <!---->
         <!---->
-        <div style="background-image: url(/images/courses/logos/{{$course->logo}})" class="course-name-placeholder" style="">
+        {{-- style="background-image: url(/images/courses/logos/{{$course->logo}})" --}}
+        <div  class="course-name-placeholder" style="">
             <div class="row">
                 <div ng-bind="course.name" class="placeholder-course-name">{{$course->name}}</div>
             </div>
