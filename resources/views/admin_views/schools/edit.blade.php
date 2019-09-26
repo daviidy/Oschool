@@ -1010,7 +1010,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div ng-show="showButtonsBar" class="tab-bottom">
                         <!---->
                         <!---->
-                        <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Save</button>
+                        <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Enregistrer</button>
                         <!---->
                     </div>
                 </div>
@@ -1027,7 +1027,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <!---->
                     <h2 ng-if="section.name" class="tch-subheading">
-                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Authors</span>
+                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Auteurs</span>
                         <!---->
                         <!---->
                         <!---->
@@ -1268,7 +1268,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div ng-show="showButtonsBar" class="tab-bottom">
                         <!---->
                         <!---->
-                        <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Save</button>
+                        <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Enregitrez</button>
                         <!---->
                     </div>
                 </div>
@@ -1390,7 +1390,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <div ng-show="showButtonsBar" class="tab-bottom">
                     <!---->
                     <!---->
-                    <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Save</button>
+                    <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Enregistrez</button>
                     <!---->
                 </div>
             </div>

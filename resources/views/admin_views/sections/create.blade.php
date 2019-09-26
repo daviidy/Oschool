@@ -174,7 +174,7 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                 <!---->
                 <!---->
                 <h2 ng-if="section.name" class="tch-subheading">
-                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">New Section</span>
+                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Nouvelle section</span>
                     <!---->
                     <!---->
                     <!---->
@@ -235,7 +235,7 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                 <div ng-show="showButtonsBar" class="tab-bottom">
                     <!---->
                     <!---->
-                    <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Create Section</button>
+                    <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Créer une section</button>
                     <!---->
                 </div>
             </div>

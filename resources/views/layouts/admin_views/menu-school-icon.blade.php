@@ -14,7 +14,6 @@
       <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
 
       <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
       <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -334,6 +333,8 @@
                 </div>
             </div>
 
+
+
             @yield('content')
 
 
@@ -379,16 +380,7 @@
             <div class="cfp-hotkeys-close fastclickable" ng-click="toggleCheatSheet()">×</div>
         </div>
     </div>
-    <script type="text/javascript">
-      $(document).ready(function (e) {
-         $(".tch-btn-hamburger").click(function (e) {
-           $('.admin-sidebar').toggle(.css({
-             'transform':'translate3d(-6px, 55px, 55px)',
-             'height':'95%',
-           });)
-         });
-      });
-    </script>
+
 
 
     <script type="text/javascript" src="/notifs/amaran/jquery.amaran.js"></script>

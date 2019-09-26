@@ -439,7 +439,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <form method="post" action="{{url('pricings', $pricing)}}" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required ng-valid-min ng-valid-max" style="">
             <!---->
             <!---->
-            <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="#" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+            <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
                 <!---->
                 <!---->
                 <!----><a what="learn-more-about-payment-plan" ng-href="https://teachable.zendesk.com/hc/en-us/articles/219442088-Overview-of-Course-Pricing-Options" target="_blank" ng-if="planType == 'plan'" class="tch-inline-support-article"

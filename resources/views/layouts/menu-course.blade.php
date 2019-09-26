@@ -5,7 +5,6 @@
 
 
   <meta charset="UTF-8">
-
   <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-fb144454ae2d6daf41829e849802fb78e65ccf7a89947805dd103de5cb97d355.css" data-turbolinks-track="true">
   <link
     href="https://themes.teachablecdn.com/themecss/production.css?_=f7b687444024&amp;brand_course_heading=%23ffffff&amp;brand_heading=%232b3636&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%23000000&amp;brand_secondary=%2339719a&amp;brand_text=%232b3636&amp;logged_out_homepage_background_image_overlay=0.84&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fd2vvqscadf4c1f.cloudfront.net%2Fb7yh7DKMSKeGh9UPYbDI_CardSpring.jpg"
@@ -294,8 +293,8 @@ footer .container .row ul li a:hover{text-decoration:underline;}
 /*! CSS Used fontfaces */
 @font-face{font-family:'TeachableSans-Regular';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.ttf") format("truetype");}
 @font-face{font-family:'TeachableSans-Bold';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.ttf") format("truetype");}
-  
-  
+
+
   </style>
 
 
@@ -419,8 +418,8 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand header-logo" href="http://52kards.com">
-            <span class="sr-only">52Kards</span>
+          <a class="navbar-brand header-logo" href="/">
+            <span class="sr-only">Oschool</span>
             <img src="/images/schools/logos/logo_oschool_blanc.png" alt="Ito9a193qaqy32ndydwc transparent%20logo">
           </a>
 
@@ -451,7 +450,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
                   Blog
                 </a>
               </li>
-              
+
               <li>
                 <a class="navbar-link fedora-navbar-link" href="/sign_in">
                   Entreprises
@@ -476,7 +475,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
     <div class="container">
       <div class="row">
         <div class="col-sm-2 first-section">
-  
+
             <h4> <img src="/images/schools/logos/oschool_2.png" alt="" style="width: 130px;"> </h4>
             <p> <br> Oschool vous offre la possibilité de poursuivre des diplômes et certificats 100% en ligne, auprès des meilleures universités d’Afrique.</p>
             <p>© 2019 OSCHOOL. TOUS DROITS RÉSERVÉS.</p>

@@ -10,8 +10,6 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
 
-
-
     <link rel="stylesheet" href="/nProgress/nprogress.css">
 
     <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
@@ -1101,7 +1099,7 @@
 
                     <ul id="users-nav" what="site nav" state="admin.users" class="nav nav-stacked secondary-nav ng-animate-disabled"
                       style="-webkit-transform: translate3d(230px, 0, 0) !important; transform: translate3d(230px, 0, 0) !important;-moz-transform: translate3d(230px, 0, 0) !important;">
-                        <h3 class="nav-section-title">Users</h3>
+                        <h3 class="nav-section-title">Utilisateurs</h3>
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Students"
                           sref="admin.users.students">
@@ -1109,7 +1107,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Students</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Élèves</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1122,7 +1120,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Owners</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Les propriétaires</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1136,7 +1134,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Authors</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Auteurs</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1150,7 +1148,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Affiliates</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Les affiliés</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1164,7 +1162,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Custom</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Douane</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1182,7 +1180,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">General</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Général</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1196,7 +1194,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Payments</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Paiements</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1210,7 +1208,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Taxes</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Les taxes</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1223,7 +1221,7 @@
                             <!---->
                             <!---->
                             <!----><a ng-if="migrated" href="/admin-app/settings/notifications">
-                                <!----><span class="menu-item-label"><span ng-bind="::text" ng-class="textClass">Notifications</span></span></a>
+                                <!----><span class="menu-item-label"><span ng-bind="::text" ng-class="textClass">Les notifications</span></span></a>
                             <!---->
                         </li>
                         <!---->
@@ -1249,7 +1247,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Billing</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Facturation</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1263,7 +1261,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Integrations</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Intégrations</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1291,7 +1289,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Roles</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Les rôles</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1305,7 +1303,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Beta Program</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Programme bêta</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1323,7 +1321,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Compose</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Composer</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1338,7 +1336,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">History</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Histoire</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1353,7 +1351,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Template Editor</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Éditeur de modèles</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -1378,30 +1376,31 @@
                             <div class="myteachable-icon-overlay">&nbsp;</div>
                             <div ng-bind="::user.name" class="user-name">David Yao</div>
                         </a>
-                        <!----><a what="dropdown-toggle" dropdown-toggle="" type="button" href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa fa-angle-up"></i></a>
-                        <ul role="menu" class="dropdown-menu dropdown-menu-left">
+                        <!----><a what="dropdown-toggle" onclick="show2()" dropdown-toggle="" type="button" href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa fa-angle-up"></i></a>
+                        <ul role="menu" class="dropdown-menu dropdown-menu-left" id="dropA">
                             <!---->
-                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.com/experts?src=in-app-menu" target="_blank" what="experts-marketplace">Teachable Experts</a></li>
-                            <!---->
-                            <!---->
-                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://www.facebook.com/groups/496090827168552/" target="_blank" what="instructor-community">Instructor Community</a></li>
+                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.com/experts?src=in-app-menu" target="_blank" what="experts-marketplace">Enseignan Oschool</a></li>
                             <!---->
                             <!---->
-                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.zendesk.com/" target="_blank" what="knowledge-base">Knowledge Base</a></li>
+                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://www.facebook.com/groups/496090827168552/" target="_blank" what="instructor-community">Communauté d'instructeurs</a></li>
+                            <!---->
+                            <!---->
+                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.zendesk.com/" target="_blank" what="knowledge-base">Connaissances de base</a></li>
                             <!---->
                             <!---->
                             <li ng-if="::permissions.can('view_fedora_references')" role="presentation" class="divider"></li>
                             <!---->
                             <!---->
-                            <li ng-if="::currentUser.is_teachable_account"><a href="/my_teachable_profile" target="_blank" translate="FOOTER.MYTEACHABLE_PROFILE">myTeachable Profile</a></li>
+                            <li ng-if="::currentUser.is_teachable_account"><a href="/my_teachable_profile" target="_blank" translate="FOOTER.MYTEACHABLE_PROFILE">Mon profil Oschool</a></li>
                             <!---->
                             <!---->
                             <!---->
-                            <li><a href="/sign_out" translate="FOOTER.LOG_OUT" what="logout">Log Out</a></li>
+                            <li><a href="/sign_out" translate="FOOTER.LOG_OUT" what="logout">Se déconnecter</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <script type="text/javascript" src="/js/admin_views/menu.js"></script>
 
             @yield('content')
 
@@ -1420,7 +1419,7 @@
     <div class="cfp-hotkeys-container fade" ng-class="{in: helpVisible}" style="display: none;">
         <div class="cfp-hotkeys">
             <!---->
-            <h4 class="cfp-hotkeys-title" ng-if="!header">Keyboard Shortcuts:</h4>
+            <h4 class="cfp-hotkeys-title" ng-if="!header">Raccourcis clavier:</h4>
             <!---->
             <!---->
             <table>
@@ -1431,7 +1430,7 @@
                             <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">?</span>
                             <!---->
                         </td>
-                        <td class="cfp-hotkeys-text">Show / hide this help menu</td>
+                        <td class="cfp-hotkeys-text">Afficher / masquer ce menu d'aide</td>
                     </tr>
                     <!---->
                     <tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="" style="">
@@ -1439,7 +1438,7 @@
                             <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">f</span>
                             <!---->
                         </td>
-                        <td class="cfp-hotkeys-text">Search your school</td>
+                        <td class="cfp-hotkeys-text">Cherchez votre école</td>
                     </tr>
                     <!---->
                 </tbody>

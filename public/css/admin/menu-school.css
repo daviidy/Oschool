@@ -9,6 +9,7 @@
 @media screen{
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 body{margin:0;}
+
 section{display:block;}
 a{background-color:transparent;}
 a:active,a:hover{outline:0;}
@@ -71,6 +72,9 @@ h2{font-size:38px;}
 h3{font-size:29px;}
 h4{font-size:21px;}
 .text-left{text-align:left;}
+.tch-school-onboarding-header-text ul.visible {
+    display: block;
+}
 ul{margin-top:0;margin-bottom:11px;}
 .row{margin-right:-15px;margin-left:-15px;}
 .row:before,.row:after{display:table;content:" ";}
@@ -104,7 +108,7 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .dropup .dropdown-menu{top:auto;bottom:100%;margin-bottom:2px;}
 .btn-group{position:relative;display:inline-block;vertical-align:middle;}
 .btn-group > .dropdown-toggle:not(:first-child){border-top-left-radius:0;border-bottom-left-radius:0;}
-.btn-group .dropdown-toggle:active{outline:0;}
+.btn-group .dropdown-toggle:active{outline:1;}
 .nav{padding-left:0;margin-bottom:0;list-style:none;}
 .nav:before,.nav:after{display:table;content:" ";}
 .nav:after{clear:both;}
@@ -288,6 +292,13 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .admin-sidebar .nav-section-title a:hover{color:#fff;}
 .admin-sidebar .nav-section-title .plus{float:right;color:#b2bbba;border:1px solid #abb4b3;width:15px;height:15px;font-size:19px;text-align:center;line-height:15px;border-radius:50%;font-weight:400;margin-top:-3px;}
 .admin-sidebar .nav-section-title .plus:hover{border-color:#fff;}
+.show {
+  display: block!important;
+  opacity: 1!important;
+  pointer-events: visible!important;
+  transform: scale(1)!important;
+  -webkit-transform: scale(1)!important;
+}
 .admin-sidebar .misc-buttons{position:fixed;bottom:0;width:225px;z-index:2;}
 .admin-sidebar .misc-buttons .myteachable-icon-overlay{margin-left:19px;}
 .admin-sidebar .misc-buttons .tch-dropdown-group{width:100%;margin:0;}
@@ -319,6 +330,13 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .state-admin-onboarding .admin-sidebar a[ui-sref='admin.dashboard']{color:#fff!important;}
 .state-admin-onboarding .tch-school-onboarding-wrapper{text-align:center;}
 .state-admin-onboarding .tch-school-onboarding-wrapper .tch-btn-hamburger{left:25px;position:absolute;top:25px;z-index:10000;}
+.state-admin-onboarding .tch-school-onboarding-wrapper .tch-btn-hamburger-2 {
+    left: 207px;
+    position: absolute;
+    top: 1px;
+    z-index: 10000;
+    display: none;
+}
 .state-admin-onboarding .tch-school-onboarding-wrapper .tch-school-onboarding-header{color:#fff;height:200px;margin-bottom:12px;margin-left:-40px;margin-right:-40px;margin-top:-30px;padding-top:35px;position:relative;}
 .state-admin-onboarding .tch-school-onboarding-wrapper .tch-school-onboarding-header .tch-school-onboarding-header-icons{background:url("//assets.teachablecdn.com/admin/assets/images/welcome-banner.svg") no-repeat;height:200px;position:absolute;background-position:bottom;width:100%;top:0;z-index:1;}
 @media screen and (min-width: 1456px){
@@ -689,7 +707,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .w3-panel:after,.w3-panel:before{content:"";display:table;clear:both;}
 .w3-panel{padding:0.01em 16px;}
 .w3-panel{margin-top:16px;margin-bottom:16px;}
-.w3-red{color:#fff!important;background-color:#f44336!important;}
+.w3-red{color:#fff!important;background-color:#f44336!important;text-align: center;font-size: large;}
 
 /*pour l'éditeur ql editor*/
 
