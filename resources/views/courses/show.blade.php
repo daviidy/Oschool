@@ -107,8 +107,8 @@
           <br>
           <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-4 text-center">
-            
-            <img class="large-img-rounded img-responsive" src="{{$course->author->image}}" alt="{{$course->author->full_name}}">
+
+            <img class="large-img-rounded img-responsive" src="/images/authors/{{$course->author->image}}" alt="{{$course->author->full_name}}">
               <div class="author-name">
                 {{$course->author->full_name}}
               </div>
