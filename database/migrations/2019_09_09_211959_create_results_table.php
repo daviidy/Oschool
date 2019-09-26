@@ -15,9 +15,9 @@ class CreateResultsTable extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('quiz_id')->unsigned()->nullable();
+            $table->bigInteger('quiz_id')->unsigned()->nullable();
             $table->foreign('quiz_id')->references('id')->on('quizzes');
-            $table->integer('user_id')->unsigned()->nullable();
+            $table->bigInteger('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('quiz_result')->nullable();
             $table->timestamps();

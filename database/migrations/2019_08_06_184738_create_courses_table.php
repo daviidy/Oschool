@@ -21,9 +21,9 @@ class CreateCoursesTable extends Migration
             $table->string('slug')->nullable();
             $table->string('description')->nullable();
             $table->string('video')->nullable();
-            $table->integer('user_id')->unsigned()->nullable();
+            $table->bigInteger('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('school_id')->unsigned()->nullable();
+            $table->bigInteger('school_id')->unsigned()->nullable();
             $table->foreign('school_id')->references('id')->on('schools');
 
             $table->timestamps();

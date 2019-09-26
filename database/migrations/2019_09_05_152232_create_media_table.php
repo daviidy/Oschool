@@ -15,7 +15,7 @@ class CreateMediaTable extends Migration
     {
         Schema::create('media', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('lesson_id')->unsigned()->nullable();
+            $table->bigInteger('lesson_id')->unsigned()->nullable();
             $table->foreign('lesson_id')->references('id')->on('lessons');
             $table->string('name')->nullable();
             $table->timestamps();

@@ -194,6 +194,32 @@ class LessonController extends Controller
         */
     }
 
+
+
+
+
+    public function saveNewQuestionPositions(Request $request)
+    {
+            foreach ($request->positions as $position) {
+                $index = $position[0];
+                $newPosition = $position[1];
+
+                $data = Question::find($index);
+                $data->position = $newPosition;
+                $data->save();
+            }
+
+
+        return response()->json();
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
+    }
+
+
+
+
+
     /**
      * Remove the specified resource from storage.
      *
@@ -225,12 +251,13 @@ class LessonController extends Controller
                               'course_id' => $request->course_id,
                               'lesson_id' => $request->lesson_id,
           ]);
-      }
+        }
 
 
       $question = Question::create([
                             'quiz_id' => $quiz->id,
                             'text' => $request->question,
+                            'position' => Question::where('quiz_id', $quiz->id)->max('position') + 1,
         ]);
 
 
@@ -248,4 +275,80 @@ class LessonController extends Controller
         return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
         */
     }
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function editQuiz(Request $request)
+    {
+        $quiz = Quiz::where('id', $request->quiz_id)->where('lesson_id', $request->lesson_id)->where('course_id', $request->course_id)->first();
+        if ($quiz === null) {
+        $quiz = Quiz::create([
+                              'course_id' => $request->course_id,
+                              'lesson_id' => $request->lesson_id,
+          ]);
+      }
+
+        $question = Question::find($request->question_id);
+        $question->text = $request->question;
+        $question->save();
+
+
+
+        $options = json_decode($request->option);
+        foreach ($options as $option_input) {
+            if ($option_input->id == "") {
+                $option = Option::create([
+                                      'question_id' => $question->id,
+                                      'text' => $option_input->option,
+                                      'correct' => $option_input->correct,
+                  ]);
+
+            }
+            else {
+
+                $option = Option::find($option_input->id);
+                $option->text = $option_input->option;
+                $option->correct = $option_input->correct;
+                $option->save();
+
+            }
+
+        }
+
+        return response()->json($question);
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
+    }
+
+
+
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function deleteOption(Request $request)
+    {
+
+        $option = Option::find($request->id);
+        $option->delete();
+
+
+        return response()->json();
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
+    }
+
+
+
 }

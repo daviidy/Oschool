@@ -15,7 +15,7 @@ class CreateOptionsTable extends Migration
     {
         Schema::create('options', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('question_id')->unsigned()->nullable();
+            $table->bigInteger('question_id')->unsigned()->nullable();
             $table->foreign('question_id')->references('id')->on('questions');
             $table->string('text')->nullable();
             $table->tinyInteger('correct')->default(0);

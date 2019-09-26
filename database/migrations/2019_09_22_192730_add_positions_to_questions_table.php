@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUserIdToSchoolsTable extends Migration
+class AddPositionsToQuestionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AddUserIdToSchoolsTable extends Migration
      */
     public function up()
     {
-        Schema::table('schools', function (Blueprint $table) {
-            $table->bigInteger('user_id')->unsigned()->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+        Schema::table('questions', function (Blueprint $table) {
+            $table->integer('position')->nullable()->unsigned();
         });
     }
 
@@ -26,7 +25,7 @@ class AddUserIdToSchoolsTable extends Migration
      */
     public function down()
     {
-        Schema::table('schools', function (Blueprint $table) {
+        Schema::table('questions', function (Blueprint $table) {
             //
         });
     }

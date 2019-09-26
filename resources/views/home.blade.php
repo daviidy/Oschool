@@ -6,6 +6,10 @@
 
     <section class="hero-partial _2">
         <style>
+
+            {
+
+            }
             ._2 {
                 margin-bottom: 50px;
             }
@@ -262,7 +266,7 @@
                     <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
                         <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
                             <div class="wistia_embed wistia_async_qgdtbummf6 videoFoam=true wistia_embed_initialized" style="height:100%;width:100%" id="wistia-qgdtbummf6-1">
-                                <div id="wistia_chrome_25" class="w-chrome" tabindex="-1"
+                                <div id="wistia_chrome_25" class="w-chrome"
                                   style="display: inline-block; height: 100%; margin: 0px; padding: 0px; position: relative; vertical-align: top; width: 100%; zoom: 1; outline: none; overflow: hidden; box-sizing: content-box;">
                                     <div id="wistia_grid_31_wrapper" style="display: block;">
                                         <div id="wistia_grid_31_above"></div>
@@ -614,6 +618,33 @@
     </script>
     <section class="showcase _7">
         <style>
+
+        .slick-active + .slick-center{
+
+            img{
+                opacity: 1;
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+                margin-left: -105%;
+                transition: all 0.5s ease;
+                }
+            }
+
+            .slick-active{
+                img{
+                    opacity: .8;
+                    transition: all 0.5s ease;
+                    width: 200px;
+                    margin: 150px 0px 0px 88px;
+
+                }
+            }
+
+
+
+
+
             ._7 {
                 margin-bottom: 150px;
             }
@@ -636,93 +667,99 @@
                 <p class="default-paragraph subheader">Apprenez les compétences qu'il vous faut pour réussir votre carrière</p>
             </div>
             <div class="slider-parent">
-                <div class="slider homepage-slider slick-initialized slick-slider"><button type="button" class="slick-prev slick-arrow" style="display: block;">‹</button>
-                    <div aria-live="polite" class="slick-list draggable">
-                        <div class="slick-track" style="opacity: 1; width: 4840px; transform: translate3d(-1320px, 0px, 0px);" role="listbox">
-                            <div class="item slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 440px;">
+                <div class="homepage-slider">
+                            <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
+
                                 <div class="text big-image-text">
                                     <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
                                     <p class="default-paragraph">Nicole Walters, $1k dans une académie d'un jour</p>
                                 </div>
+
                             </div>
-                            <div class="item slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 440px;">
+                            <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/lsfYuKBpSFOdaK4QQ3n2_homepage-featured-everytuesday.jpg">
+
                                 <div class="text big-image-text">
                                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jRczQFwrTHGEeyIgTWJG">
                                     <p class="default-paragraph">Teela Cunningham, Tous les mardis</p>
                                 </div>
+
                             </div>
-                            <div class="item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 440px;">
+                            <div class="item">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/XKMKaKhXSniPF7Ok6xh3">
-                                <div class="text big-image-text">
-                                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IgamM6IzTySKfgHAeNUV">
-                                    <p class="default-paragraph">Melyssa Griffin, melyssagriffin.com</p>
-                                </div>
+
                             </div>
-                            <div class="item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide00" style="width: 440px;">
+                            <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/HodQVq0YS7qSVCtXSNHK_homepage-featured-sketchmaster.jpg">
+
                                 <div class="text big-image-text">
                                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jT5L8vR1qWrKfiUg3gCQ">
                                     <p class="default-paragraph">Peter Nowell, Esquisser maître</p>
                                 </div>
+
                             </div>
-                            <div class="item slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide01" style="width: 440px;">
+                            <div class="item">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IC5in4HlQB23O5MEj7nu">
+
                                 <div class="text big-image-text active">
                                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/UQ2vDQcTQq88XYQlisDg">
                                     <p class="default-paragraph">Pat Flynn, Revenu passif intelligent</p>
                                 </div>
+
                             </div>
-                            <div class="item slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide02" style="width: 440px;">
+                            <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
+
                                 <div class="text big-image-text">
                                     <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
                                     <p class="default-paragraph">Nicole Walters, $1k dans une académie d'un jour</p>
                                 </div>
+
                             </div>
-                            <div class="item slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 440px;">
+                            <div class="item ">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/lsfYuKBpSFOdaK4QQ3n2_homepage-featured-everytuesday.jpg">
+
                                 <div class="text big-image-text">
                                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jRczQFwrTHGEeyIgTWJG">
                                     <p class="default-paragraph">Teela Cunningham, Tous les mardis</p>
                                 </div>
+
                             </div>
-                            <div class="item slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide04" style="width: 440px;">
+                            <div class="item ">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/XKMKaKhXSniPF7Ok6xh3">
                                 <div class="text big-image-text">
                                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IgamM6IzTySKfgHAeNUV">
-                                    <p class="default-paragraph">Melyssa Griffin, melyssagriffin.com</p>
                                 </div>
                             </div>
-                            <div class="item slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 440px;">
+                            <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/HodQVq0YS7qSVCtXSNHK_homepage-featured-sketchmaster.jpg">
+
                                 <div class="text big-image-text">
                                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jT5L8vR1qWrKfiUg3gCQ">
                                     <p class="default-paragraph">Peter Nowell, Esquisser maître</p>
                                 </div>
+
                             </div>
-                            <div class="item slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 440px;">
+                            <div class="item">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IC5in4HlQB23O5MEj7nu">
+
                                 <div class="text big-image-text active">
                                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/UQ2vDQcTQq88XYQlisDg">
                                     <p class="default-paragraph">Pat Flynn, Revenu passif intelligent</p>
                                 </div>
+
                             </div>
-                            <div class="item slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 440px;">
+                            {{-- <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
                                 <div class="text big-image-text">
                                     <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
                                     <p class="default-paragraph">Nicole Walters, $1k dans une académie d'un jour</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </div> --}}
 
 
 
-
-                    <button type="button" class="slick-next slick-arrow" style="display: block;">›</button>
                 </div>
             </div>
             <div class="small-text">

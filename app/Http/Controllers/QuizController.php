@@ -3,6 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Quiz;
+use App\Lesson;
+use App\School;
+use App\Course;
+use App\Section;
+use App\Question;
+use App\Option;
+use Image;
+use Auth;
 use Illuminate\Http\Request;
 
 class QuizController extends Controller
@@ -55,10 +63,15 @@ class QuizController extends Controller
      * @param  \App\Quiz  $quiz
      * @return \Illuminate\Http\Response
      */
-    public function edit(Quiz $quiz)
-    {
-        //
-    }
+     public function edit(School $school, Course $course, Section $section, Lesson $lesson, Quiz $quiz)
+     {
+         if (Auth::check()) {
+             return view('admin_views.quizzes.edit', ['school' => $school, 'course' => $course, 'section' => $section, 'lesson' => $lesson, 'quiz' => $quiz]);
+         }
+         else {
+             return redirect('home');
+         }
+     }
 
     /**
      * Update the specified resource in storage.

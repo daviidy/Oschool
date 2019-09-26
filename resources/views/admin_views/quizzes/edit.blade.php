@@ -28,8 +28,8 @@
 .editable-buttons button{margin-left:5px;}
 .editable-input.editable-has-buttons{width:auto;}
 .editable-hide{display:none!important;}
-.editable-click,a.editable-click{text-decoration:none;color:#4D90CC;border-bottom:dashed 1px #428bca;}
-.editable-click:hover,a.editable-click:hover{text-decoration:none;color:#4D90CC;border-bottom-color:#2a6496;}
+.editable-click,a.editable-click{text-decoration:none;color:#428bca;border-bottom:dashed 1px #428bca;}
+.editable-click:hover,a.editable-click:hover{text-decoration:none;color:#2a6496;border-bottom-color:#2a6496;}
 a{background-color:transparent;}
 a:active,a:hover{outline:0;}
 button,input{color:inherit;font:inherit;margin:0;}
@@ -140,14 +140,14 @@ input[type="checkbox"]:focus{outline:5px auto -webkit-focus-ring-color;outline-o
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
-.tch-btn-header-secondary{min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;color:white;background-color:#fff;border:1px solid #a9a9a9;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e1e3e4;color:#6aace6;}
-.tch-btn-header-secondary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-secondary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-secondary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-secondary{min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;color:white;background-color:#fff;border:1px solid #a9a9a9;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e1e3e4;color:#0f8d82;}
+.tch-btn-header-secondary:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
+.tch-btn-header-secondary:hover{color:white;background-color:#ededed;border-color:#929292;}
+.tch-btn-header-secondary:active{color:white;background-color:#ededed;border-color:#929292;}
+.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus{color:white;background-color:#dedede;border-color:#838383;}
 .tch-btn-header-secondary:active{background-image:none;}
-.tch-btn-header-secondary:active,.tch-btn-header-secondary:hover,.tch-btn-header-secondary:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
-.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus,.tch-btn-header-secondary:hover:hover,.tch-btn-header-secondary:hover:focus,.tch-btn-header-secondary:focus:hover,.tch-btn-header-secondary:focus:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
+.tch-btn-header-secondary:active,.tch-btn-header-secondary:hover,.tch-btn-header-secondary:focus{background:#fff;border-color:#1ea69a;color:#1ea69a;}
+.tch-btn-header-secondary:active:hover,.tch-btn-header-secondary:active:focus,.tch-btn-header-secondary:hover:hover,.tch-btn-header-secondary:hover:focus,.tch-btn-header-secondary:focus:hover,.tch-btn-header-secondary:focus:focus{background:#fff;border-color:#1ea69a;color:#1ea69a;}
 .tch-btn-header-secondary:focus{outline:0!important;}
 .tch-btn-header-secondary:focus{outline:0!important;}
 .tch-btn-header-secondary:focus{outline:0!important;}
@@ -202,7 +202,7 @@ input[type="checkbox"]:focus{outline:5px auto -webkit-focus-ring-color;outline-o
 .nav-tabs > li.active{z-index:2;}
 .nav-tabs > li.active > a,.nav-tabs > li.active > a:hover,.nav-tabs > li.active > a:focus{border-radius:0;font-weight:bold;font-size:13px;padding:15px 25px;color:#809196;border-bottom:0;border-top:1px solid #ededea;border-right:1px solid #ededea;border-left:1px solid #ededea;background:#fff;-webkit-box-shadow:1px 0px 0px 0px rgba(0, 0, 0, .04);box-shadow:1px 0px 0px 0px rgba(0, 0, 0, .04);}
 .nav-tabs > li > a{border-width:2px;font-size:13px;padding:14px 24px;font-size:13px;color:#73777b;border-radius:6px 6px 0 0;-webkit-transition:none;transition:none;}
-.nav-tabs > li > a:hover,.nav-tabs > li > a:focus{background-color:transparent;border-color:transparent;border-bottom-color:transparent;outline:none;color:#4D90CC;}
+.nav-tabs > li > a:hover,.nav-tabs > li > a:focus{background-color:transparent;border-color:transparent;border-bottom-color:transparent;outline:none;color:#ff7f45;}
 p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
 ul{margin-top:0;margin-bottom:11px;}
 .tch-page-header .tch-btn-hamburger{margin-right:9px!important;float:left;margin-top:-6px!important;padding:5px 1px;margin-top:3px;text-align:center;}
@@ -210,7 +210,7 @@ ul{margin-top:0;margin-bottom:11px;}
 .tch-page-header .tch-btn-hamburger i{margin-right:0px;}
 .tch-page-header i{margin-right:10px;}
 .tch-page-header button i{margin-right:0;}
-.tch-page-header .editable-click,.tch-page-header a.editable-click{color:#4D90CC;border-bottom:dashed 1px #d8d8d8;font-size:24px;vertical-align:3px;}
+.tch-page-header .editable-click,.tch-page-header a.editable-click{color:#2b3636;border-bottom:dashed 1px #d8d8d8;font-size:24px;vertical-align:3px;}
 .tch-page-header .editable-controls{padding-bottom:4px;}
 .tch-page-header .editable-controls input{width:300px;height:44px;font-size:19px;}
 .tch-page-header .tch-btn-header-icon{padding:10px 15px;}
@@ -251,7 +251,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .tch-section-nav .tch-section-nav-wrapper .tch-section-nav-box .tch-section-nav-buttons .tch-lecture-title > .editable-text > .editable-controls{display:block;margin-right:120px;}
 .tch-section-nav .tch-section-nav-wrapper .tch-section-nav-box .tch-section-nav-buttons .tch-lecture-title > .editable-text > .editable-controls > .editable-input{width:100%;margin:1px 0 0 0;height:34px;font-size:13px;}
 .tch-section-nav .tch-section-nav-wrapper .tch-section-nav-box .tch-section-nav-buttons .tch-lecture-title > .editable-text > .editable-controls .editable-buttons button{margin-top:2px!important;height:32px;}
-.tch-section-nav .tch-section-nav-wrapper .tch-section-nav-box .tch-section-nav-buttons .tch-lecture-title > .editable-text > .editable-controls .editable-buttons button.btn-default{background-color:#fff;border:2px solid #e0e0e0;color:#4D90CC;}
+.tch-section-nav .tch-section-nav-wrapper .tch-section-nav-box .tch-section-nav-buttons .tch-lecture-title > .editable-text > .editable-controls .editable-buttons button.btn-default{background-color:#fff;border:2px solid #e0e0e0;color:#809196;}
 .tch-section-nav .tch-section-nav-wrapper .tch-section-nav-box .tch-section-nav-buttons .tch-lecture-title > .buttons{-ms-flex-negative:0;flex-shrink:0;}
 .state-admin.state-hello-bar .tch-section-nav .tch-section-nav-box{top:50px!important;}
 .state-admin.state-hello-bar .admin-content{padding:80px 40px 30px 40px;}
@@ -750,11 +750,11 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .btn:focus,.btn:active:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 .btn:hover,.btn:focus{color:white;text-decoration:none;}
 .btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);}
-.tch-btn-header-primary{color:white;background-color:#6aace6;border:1px solid #6aace6;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
-.tch-btn-header-primary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
+.tch-btn-header-primary:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
 .tch-btn-header-primary:active{background-image:none;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
@@ -824,11 +824,11 @@ p{orphans:3;widows:3;}
 *:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
 button{font-family:inherit;font-size:inherit;line-height:inherit;}
 p{margin:0 0 11px;}
-.tch-btn-header-primary{color:white;background-color:#6aace6;border:1px solid #6aace6;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
-.tch-btn-header-primary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
+.tch-btn-header-primary:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
 .tch-btn-header-primary:active{background-image:none;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
@@ -979,21 +979,21 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);}
 .btn-block{display:block;width:100%;}
 [disabled]{cursor:default!important;pointer-events:none;}
-.tch-btn-header-primary{color:white;background-color:#6aace6;border:1px solid #6aace6;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
-.tch-btn-header-primary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
+.tch-btn-header-primary:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
 .tch-btn-header-primary:active{background-image:none;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
-.tch-btn-header-primary-block{color:white;background-color:#6aace6;border:1px solid #6aace6;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
-.tch-btn-header-primary-block:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary-block:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary-block:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-header-primary-block:active:hover,.tch-btn-header-primary-block:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary-block{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
+.tch-btn-header-primary-block:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block:active:hover,.tch-btn-header-primary-block:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
 .tch-btn-header-primary-block:active{background-image:none;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
@@ -1135,16 +1135,16 @@ input[type="checkbox"]:focus{outline:5px auto -webkit-focus-ring-color;outline-o
 .tch-btn-content-primary:active{color:white;background-color:#19887e;border-color:#177f76;}
 .tch-btn-content-primary:active:hover,.tch-btn-content-primary:active:focus{color:white;background-color:#146e66;border-color:#12655e;}
 .tch-btn-content-primary:active{background-image:none;}
-.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#4d90cc3b;color:#6aace6;}
+.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e6c6b8;color:#d4604b;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-content-danger:focus{outline:0!important;}
-.tch-btn-content-danger:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-content-danger:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-content-danger:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-danger:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
+.tch-btn-content-danger:hover{color:white;background-color:#ededed;border-color:#c3452e;}
+.tch-btn-content-danger:active{color:white;background-color:#ededed;border-color:#c3452e;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:#dedede;border-color:#aa3c29;}
 .tch-btn-content-danger:active{background-image:none;}
-.tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
-.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus,.tch-btn-content-danger:hover:hover,.tch-btn-content-danger:hover:focus,.tch-btn-content-danger:focus:hover,.tch-btn-content-danger:focus:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
+.tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus,.tch-btn-content-danger:hover:hover,.tch-btn-content-danger:hover:focus,.tch-btn-content-danger:focus:hover,.tch-btn-content-danger:focus:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-icon{padding:6px 9px!important;font-size:11px;line-height:1.083;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;height:37px;width:37px;padding-top:8px!important;}
@@ -1170,7 +1170,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
  .input-group-addon .checkbox{margin:0;padding:0;top:12px;position:absolute;left:35px;}
  #question-prompt{font-weight:bold;}
  .quiz-wrapper .well{background:#fff;padding:0;margin:0;}
- ul.question-added-wrapper > li{background-color:#f9f9f9!important;border-radius:5px;border:1px solid #dfdfdf;margin:7px;padding-bottom:15px;padding-left:20px;padding:14px 18px 15px 19px!important;}
+ ul.question-added-wrapper > li{background-color:#fff!important;border-radius:5px;border:1px solid #dfdfdf;margin:7px;padding-bottom:15px;padding-left:20px;padding:14px 18px 15px 19px!important;}
  ul.question-added-wrapper > li:hover{background:#fdfdfd;}
  ul.question-added-wrapper > li .correct-answer{color:#278c7d;font-weight:bold;}
  .question-answers{font-size:15px;}
@@ -1245,23 +1245,10 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
         <div>
             <div class="tab-container" type="tabs" vertical="" justified="">
                 <ul class="nav nav-tabs">
-                    <!---->
-                    <li class="tab fastclickable active"  heading="Add File"  style="">
-                        <a href="#image"  class="fastclickable">Image de la leçon</a>
-                    </li>
-                    <li class="tab fastclickable"  heading="Add File"  style="">
-                        <a href="#resource"  class="fastclickable">Ressources téléchargeables</a>
-                    </li>
-                    <li class="tab fastclickable"  heading="Add File"  style="">
-                        <a href="#video"  class="fastclickable">Vidéo</a>
-                    </li>
-                    <!---->
-                    <li class="tab fastclickable"  heading="Add Text" >
-                        <a href="#text"  class="fastclickable">Texte</a>
-                    </li>
 
-                    <li class="tab fastclickable"  heading="Add Quiz" >
-                        <a href="#quiz"  class="fastclickable">Quiz</a>
+
+                    <li class="tab fastclickable active"  heading="Add Quiz" >
+                        <a href="#quiz"  class="fastclickable">Modifier Question</a>
                     </li>
 
                     <!---->
@@ -1287,138 +1274,8 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
     </tabs>
     <!---->
 
-    <ui-view id="image" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
-        <div class="tch-drop-wrapper">
-            <div filepicker-drag-drop="true" drag-over-class="drag-hover" on-upload-success="dropFilePickerSuccess" filepicker-multiple="true" filepicker-folder="true" target-type="attachment upload" class="drop-inner">
-                Mettez une image pour cette leçon (facultatif)<span class="space"></span><span class="space"></span></div>
-            <div data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
-              class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="image_lesson" type="file" name="image" value=""> <span> Choisissez une image</span></div>
-        </div>
-        <img width="150" src="/images/lessons/images/{{$lesson->image}}" alt="">
-    </ui-view>
 
-    <ui-view style="display: none;" id="resource" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
-        <div class="tch-drop-wrapper">
-            <div filepicker-drag-drop="true" drag-over-class="drag-hover" on-upload-success="dropFilePickerSuccess" filepicker-multiple="true" filepicker-folder="true" target-type="attachment upload" class="drop-inner">
-                Mettez des ressources que les étudiants
-                pourront télécharger pour cette leçon (facultatif) <br> <span class="space"></span><span class="space"></span></div><br>
-            <div style="margin-left: -18%;" data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
-              class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="downloadable_files" type="file" name="downloadable_files[]" multiple> <span> Choisir fichiers</span></div>
-        </div>
-
-        <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
-        <div class="tch-table-wrapper">
-            <!---->
-            <table ng-if="products.length > 0" class="tch-table">
-                <thead>
-                    <tr>
-                        <th>Nom du fichier</th>
-                        <th>Lien</th>
-
-
-                    </tr>
-                </thead>
-                <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
-                    <!---->
-                    @if($lesson->medias)
-                    @foreach($lesson->medias as $media)
-                                        <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
-                        <td what="id"><span ng-bind="'#' + product.id">{{$media->name}}</span><span class="space"></span><span class="space"></span>
-                            <!---->
-                        </td>
-                        <td what="type">
-                            <!---->
-                            <span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">
-                                <a download target="_blank" href="/images/lessons/resources/{{$media->name}}">
-                                Téléchargez
-                                </a>
-                            </span>
-                            <!---->
-                        </td>
-
-                        <td>
-                            <!---->
-                            <!---->
-                            <div ng-if="product.is_published" class="pull-right">
-
-                                <form action="http://localhost:8000/pricings/3" method="post">
-                                    <input type="hidden" name="_token" value="8mWFYoWez7Nk7t5NGawvDBY5P0J7UeNK368ybAVm">
-                                    <input type="hidden" name="_method" value="delete">
-                                    <button id="test-id-unpublish-btn" class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i></button>
-                                </form>
-                            </div>
-                            <!---->
-                        </td>
-                    </tr>
-                    @endforeach
-                    @endif
-
-
-                    <!---->
-                </tbody>
-            </table>
-            <!---->
-        </div>
-        <div ng-show="ctrl.meta.number_of_pages > 1" class="tch-page-nav ng-hide" meta="meta">
-            <!---->
-            <div class="pull-right"><span class="tch-page-nav-page-number">Page 1 of 1</span><span class="space"></span><button ng-click="ctrl.previousPage()" ng-disabled="ctrl.meta.page == 1" class="tch-page-nav-btn tch-back-button fastclickable" disabled="disabled"><i class="fa fa-angle-left"></i></button><button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page" class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"><i class="fa fa-angle-right"></i></button></div>
-        </div>
-        <!---->
-
-        <!---->
-    </div>
-
-
-
-    </ui-view>
-
-
-    <ui-view style="display: none;" id="text" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
-
-    <!---->
-    <!---->
-        <div ng-if="hasNewTextEditor">
-            <div id="site-description" class="">
-
-                @if($lesson->full_text)
-                {!!$lesson->full_text!!}
-                @endif
-
-            </div>
-            <!--
-            <div class="add-btn-wrapper"><button ng-click="addAttachment('text')" what="save text button" class="tch-btn-header-primary-block pull-right add-btn fastclickable">Enregistrer</button></div>
-        -->
-        </div>
-        <!---->
-    </ui-view>
-
-
-
-<ui-view style="display: none;" id="video" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
-<div what="quiz wrapper" class="quiz-wrapper">
-    <!---->
-    <!---->
-    <div ng-if="hasQuiz()" class="" style="">
-        <form class="well quiz-question ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse" style="">
-
-            <div class="quiz-question">
-                <div data-nodrag="" class="quiz-question-prompt">
-                    <input value="{{$lesson->video}}" type="text" name="video" what="question text" id="question-prompt" placeholder="Mettez le code d'intégration Viméo ou Youtube de votre vidéo (facultatif)"
-                      class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
-                  </div><br><br>
-                  <!--
-                <input what="add question button" type="submit" value="Add Question" ng-disabled="!readyToAddQuestion(newQuestion)" class="tch-btn-header-primary-block">
-            -->
-            </div>
-        </form>
-
-    </div>
-    <!---->
-</div>
-</ui-view>
-
-
-<ui-view style="display: none;" id="quiz" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
+<ui-view id="quiz" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
     <div what="quiz wrapper" class="quiz-wrapper">
         <!---->
         <!---->
@@ -1435,7 +1292,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                     <div id="bloc-question" class="multiple-choice">
                         <!---->
                         <br>
-                        <p><a class="add-option" style="cursor: pointer;">Ajouter option de réponse</a></p>
+                        <p><a id="add-option" style="cursor: pointer;">Ajouter option de réponse</a></p>
                         <div class="reponses">
 
 
@@ -1451,10 +1308,8 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                                   name="text_question" class="text_question_quiz form-control multiple-choice-answer-input ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
                                 <!---->
                                 <div ng-if="newQuestion.answers.length > 1" class="input-group-btn left-10" style="">
-                                    <button type="button" tabindex="-1"
-                                          class="answer-remove tch-btn-content-danger fastclickable">
-                                          <i class="fa fa-remove"></i>
-                                      </button>
+                                    <button id="answer-remove" type="button" tabindex="-1"
+                                      class="tch-btn-content-danger fastclickable"><i class="fa fa-remove"></i></button>
                                   </div>
                                 <!---->
                             </div>
@@ -1471,54 +1326,32 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
             <div class="row">
               <div class="col-md-12">
                   <ul ui-sortable="sortableOptions" ng-model="questions" class="list-unstyled question-added-wrapper ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
-                      @if($lesson->quizzes)
-                      @foreach($lesson->quizzes as $quiz)
-                      <input type="hidden" name="quiz_id" value="{{$quiz->id}}">
-                      @foreach($quiz->questions->sortBy('position') as $question)
-
-                      <li data-index="{{$question->id}}" data-position="{{$question->position}}" class="well ui-sortable-handle">
-                        <div id="question-save-1" ng-show="!question.editing" class="pull-right">
-                            <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/lessons/{{$lesson->id}}/quiz/{{$quiz->id}}/edit"></a>
-                                <button type="button"
-                                    class="edit_quiz tch-btn-content-primary tch-btn-icon disable-animations fastclickable"><i class="fa fa-edit"></i>
-                                </button>
 
 
-                              <span class="space"></span>
-                              <form action="{{ route('questions.destroy', $question) }}" method="post">
-                                  {{ csrf_field() }}
-                                  {{ method_field('delete') }}
-                                  <button type="submit"
-                                          class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable">
-                                      <i class="fa fa-trash-o"></i>
-                                  </button>
-                              </form>
+
+                      @foreach($quiz->questions as $question)
+                      <li class="well ui-sortable-handle">
+                        <div ng-show="!question.editing" class="pull-right">
+
                           </div>
-                        <div what="edit box" ng-show="question.editing" ng-model="question" class="quiz-question ng-pristine ng-untouched ng-valid ng-not-empty ng-hide">
+                        <div what="edit box" ng-show="question.editing" ng-model="question" class="quiz-question ng-pristine ng-untouched ng-valid ng-not-empty ng-valid">
                             <div class="quiz-question">
                                 <div data-nodrag="" class="quiz-question-prompt">
-                                    <input value="{{$question->text}}" id="question-text-edit" ng-model="question.question" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
-                                    <input type="hidden" value="{{$question->id}}" id="question-id" ng-model="question.question" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
-                                </div>
+                                    <input value="{{$question->text}}" what="question text" id="question-prompt" ng-model="question.question" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty"></div>
                                 <div class="multiple-choice">
-                                    <p><a class="edit-option" style="cursor: pointer;">Ajouter option de réponse</a></p>
                                     @foreach($question->options as $option)
                                     <div what="answer" ng-repeat="answer in question.answers track by $index">
                                         <p></p>
                                         <div class="input-group">
                                             <div tooltip="Correct Answer" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="input-group-addon">
                                                 <div class="checkbox checkbox-primary">
-                                                    <input name="correct" type="checkbox" class="ng-pristine ng-untouched ng-valid ng-not-empty" {{$option->correct == 1 ? 'checked' : ''}}
-                                                      value="{{$option->correct == 0 ? 'false' : 'true'}}"><label for="answer-0-0-correct"></label></div>
+                                                    <input id="answer-0-0-correct" type="checkbox" name="answer-0-0-correct" ng-model="answer.correct" ng-value="true" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                                                      value="{{$option->correct == 0 ? 'true' : 'false'}}" {{$option->correct == 0 ? 'checked' : ''}}><label for="answer-0-0-correct"></label></div>
                                             </div>
-                                            <input value="{{$option->text}}" placeholder="Answer choice"
-                                              class="text_question_quiz_edit form-control multiple-choice-answer-input ng-pristine ng-untouched ng-valid ng-not-empty">
-                                             <input type="hidden" name="option_id" value="{{$option->id ? $option->id : ''}}">
-                                            <div ng-if="question.answers.length > 1" class="input-group-btn left-10">
-                                                <button type="button" tabindex="-1" class="answer-remove-edit tch-btn-content-danger fastclickable"><i
-                                                      class="fa fa-remove"></i>
-                                                  </button>
-                                              </div>
+                                            <input value="{{$question->text}}" what="answer text" ng-model="answer.value" placeholder="Answer choice" ng-keydown="addMultipleChoiceAnswer(question, $event)"
+                                              class="form-control multiple-choice-answer-input ng-pristine ng-untouched ng-valid ng-not-empty">
+                                            <div ng-if="question.answers.length > 1" class="input-group-btn left-10"><button type="button" ng-click="removeAnswer(question, answer)" tabindex="-1" class="tch-btn-content-danger fastclickable"><i
+                                                      class="fa fa-remove"></i></button></div>
                                         </div>
                                         <p></p>
                                     </div>
@@ -1527,51 +1360,29 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                                 </div>
                             </div>
                         </div>
-                        <div what="display box" ng-hide="question.editing" class="question">
-                          <strong what="question text" ng-bind-html="question.question">
-                            {{$question->text}}
-                          </strong>
-                            <ul class="question-answers tch-arrow-list">
-                              @foreach($question->options as $option)
-                                <li what="answer" ng-repeat="answer in question.answers track by $index"  class="answers correct-answer">
-                                  <span what="answer text"
-                                      ng-bind-html="answer.value">
-                                      {{$option->text}}
-                                    </span>
-                                    @if($option->correct === 1)
-                                    <span class="space"></span><i what="answer correct" ng-show="answer.correct" class="fa fa-check-square-o"></i>
-                                    @endif
-                                </li>
-                            @endforeach
 
-                            </ul>
-                        </div>
-                        <div ng-show="question.editing" class="question-save-2 row ng-hide">
+                        <div ng-show="question.editing" class="row ng-valid">
                             <div class="col-sm-12">
                                 <div class="pull-right">
-<<<<<<< HEAD
                                     <button id="test-id-save-btn" data-nodrag="" type="submit" ng-show="question.editing" ng-click="saveQuestion(question)"
-                                      class="tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide">
-                                      Enregistrez
-=======
-                                  <button type="submit"
-                                      class="edit-question tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide">
+                                      class="tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-valid">
                                       Save
->>>>>>> c0a58874570a8e799889b8f14ad78792d63dae89
                                   </button>
                                       <span class="space"></span>
-                                  <button what="delete button" data-nodrag="" type="button" ng-click="deleteQuestion(question)"
-                                      class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable"><i class="fa fa-trash-o"></i>
-                                  </button>
-                              </div>
+                                      <form style="float: right;" action="{{ route('questions.destroy', $question) }}" method="post">
+                                          {{ csrf_field() }}
+                                          {{ method_field('delete') }}
+                                          <button type="submit"
+                                              class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable">
+                                              <i class="fa fa-trash-o"></i>
+                                          </button>
+                                      </form>
+                                      </div>
                             </div>
                         </div>
                     </li>
+                    @endforeach
 
-                      @endforeach
-                      @endforeach
-
-                      @endif
 
 
                   </ul>
@@ -1586,78 +1397,6 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
 
 
 
-<div style="margin-top: 30px;" ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
-                    <div ng-transclude="">
-
-                        <div label="Bio" for="author_bio_id" skip-validation="true" form="">
-                            <!---->
-                            <!---->
-                            <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
-                                <label-block required-label="requiredLabel">
-                                    <!---->
-                                    <!----><label for="status" ng-if="label" class="control-label">
-                                        <!----><span ng-bind="label">Statut de la leçon</span>
-                                        <!----></label>
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                </label-block>
-                                <div ng-transclude="">
-                                    <select name="status" id="status" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-api-validate">
-                                        @if($lesson->status == 'inactive')
-                                        <option selected label="" value="inactive">Brouillon</option>
-                                        <option label="" value="active">Public</option>
-                                        @else
-                                        <option label="" value="inactive">Brouillon</option>
-                                        <option selected label="" value="active">Public</option>
-                                        @endif
-                                    </select>
-                                    <br>
-
-                                </div>
-
-                            </div>
-                            <!---->
-                        </div>
-
-                        <!---->
-                        <div label="Type" for="free_lesson" form="" tooltip-text="Add these to your course so students can sort by category in your school's course directory.">
-                            <!---->
-                            <!---->
-                            <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
-                                <label-block required-label="requiredLabel">
-                                    <!---->
-                                    <!----><label for="categories" ng-if="label" class="control-label">
-                                        <!----><span ng-bind="label">Type</span>
-                                        <!----></label>
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                </label-block>
-                                <div ng-transclude="">
-                                    <select id="free_lesson" name="free_lesson" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-api-validate">
-                                        @if($lesson->free_lesson == 'no')
-                                        <option selected label="" value="no">Pas gratuit</option>
-                                        <option label="" value="yes">Aperçu gratuti</option>
-                                        @else
-                                        <option label="" value="no">Pas gratuti</option>
-                                        <option selected label="" value="yes">Aperçu gratuit</option>
-                                        @endif
-                                    </select>
-                                </div>
-
-
-                                </help-block>
-                            </div>
-                            <!---->
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-</div>
 
 <script type="text/javascript" src="/js/admin_views/lesson.js"></script>
 
