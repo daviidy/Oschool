@@ -4,7 +4,6 @@
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/admin/menu-school.css">
-    <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
