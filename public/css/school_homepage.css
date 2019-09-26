@@ -502,11 +502,11 @@
   @font-face{font-family:'TeachableSans-Bold';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.ttf") format("truetype");}
   @font-face{font-family:'TeachableSans-SemiBold';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-SemiBold.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-SemiBold.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-SemiBold.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-SemiBold.ttf") format("truetype");}
   @font-face{font-family:"TeachableSans-Medium";src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Medium.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Medium.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Medium.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Medium.ttf") format("truetype");}
-  
-  
+
+
   /*school advantages zone*/
-  
-  
+
+
   /*! CSS Used from: https://code.oschool.ci/css/hackr.css */
   .contain{max-width:73.75rem;margin-left:auto;margin-right:auto;padding-top:3rem;padding-bottom:3rem;padding-left:0.75rem;padding-right:0.75rem;}
   .contain::after{clear:both;content:"";display:table;}
@@ -801,10 +801,10 @@
   div,span{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
   body *{box-sizing:border-box;}
   }
-  
-  
+
+
   /*pour la page d'accueil*/
-  
+
   /*! CSS Used from: https://teachable.com/assets/application-d6ea1ece356673db3205a43a20d3b3bf3e218b8cb1ad0db8e3b896f6e39bfa2e.css ; media=all */
   @media all{
   body{margin:0;}
@@ -1409,7 +1409,7 @@
 
 
 
-<<<<<<< HEAD
+
 /*! CSS Used from: https://code.oschool.ci/css/hackr.css */
 .contain{max-width:73.75rem;margin-left:auto;margin-right:auto;padding-top:3rem;padding-bottom:3rem;padding-left:0.75rem;padding-right:0.75rem;}
 .contain::after{clear:both;content:"";display:table;}
@@ -1680,7 +1680,7 @@ img{border:0;}
 *,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
 img{page-break-inside:avoid;}
 img{max-width:100%!important;}
-=======
+
   .showcase .container-fluid .homepage-slider .slick-slide .big-image {
     width: 60%;
     display: block;
@@ -1688,7 +1688,6 @@ img{max-width:100%!important;}
     margin-right: auto;
     height: auto;
     transition: all 0.5s ease;
->>>>>>> c0a58874570a8e799889b8f14ad78792d63dae89
 }
 
 
@@ -2051,9 +2050,9 @@ img{max-width:100%!important;}
   @media (max-width: 767px){
   ._12{padding-bottom:0px;}
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   /*ifn page d'accueil*/

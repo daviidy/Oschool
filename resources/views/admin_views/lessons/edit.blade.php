@@ -1549,15 +1549,14 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                         <div ng-show="question.editing" class="question-save-2 row ng-hide">
                             <div class="col-sm-12">
                                 <div class="pull-right">
-<<<<<<< HEAD
+
                                     <button id="test-id-save-btn" data-nodrag="" type="submit" ng-show="question.editing" ng-click="saveQuestion(question)"
                                       class="tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide">
                                       Enregistrez
-=======
+
                                   <button type="submit"
                                       class="edit-question tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide">
                                       Save
->>>>>>> c0a58874570a8e799889b8f14ad78792d63dae89
                                   </button>
                                       <span class="space"></span>
                                   <button what="delete button" data-nodrag="" type="button" ng-click="deleteQuestion(question)"
