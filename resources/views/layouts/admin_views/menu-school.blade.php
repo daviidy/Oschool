@@ -10,8 +10,6 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
 
-<meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
-
     <link rel="stylesheet" href="/nProgress/nprogress.css">
 
     <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />

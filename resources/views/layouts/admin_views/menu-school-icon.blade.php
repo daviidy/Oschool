@@ -14,7 +14,6 @@
       <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
 
       <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-      <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
       <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
