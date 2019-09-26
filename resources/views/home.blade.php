@@ -484,7 +484,7 @@
                     <div class="image" style="background-image: url(https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/0tTy4z3lTbCkw18ehjQ8);"></div>
                     <div class="quote">
                         <img class="orange-circle" src="https://teachable.com/assets/blockquote-orange-d24380ebe646a526fc1fa70b279fa6531394ee3ddc19bf7bca406c709a6f08f3.svg">
-                        <blockquote>“J'ai utilisé Oschool pour vendre des centaines de milliers de dollars dans des cours en ligne. Si vous envisagez de créer votre propre cours en ligne, Oschool est le lieu idéal.”</blockquote>
+                        <blockquote>“I've used Teachable to sell hundreds of thousands of dollars in online courses. If you are thinking of creating your own online course, Teachable is the place to be.”</blockquote>
                         <cite>
                             Melyssa Griffin, <a href="http://melyssagriffin.com" target="_blank" rel="noopener noreferrer">melyssagriffin.com</a>
                         </cite>
@@ -597,7 +597,7 @@
                 </div>
                 <div class="col-md-5">
                     <h1 class="default-header">Parcours diplômants et certifiants</h1>
-                    <p class="default-paragraph">Lancez votre cours et rejoignez des milliers d'instructeurs en ligne qui gagnent déjà des millions de dollars sur Oschool. Acceptez les paiements et les inscriptions instantanément.</p>
+                    <p class="default-paragraph">Launch your course and join thousands of online instructors already making millions on Teachable. Accept payments and enrollments instantly.</p>
                     <a class="next-step green-button" style="background: #4D90CC;">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
                 </div>
             </div>
@@ -671,19 +671,9 @@
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
 
-                                <div class="text big-image-text">
-                                    <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
-                                    <p class="default-paragraph">Nicole Walters, $1k dans une académie d'un jour</p>
-                                </div>
-
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/lsfYuKBpSFOdaK4QQ3n2_homepage-featured-everytuesday.jpg">
-
-                                <div class="text big-image-text">
-                                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jRczQFwrTHGEeyIgTWJG">
-                                    <p class="default-paragraph">Teela Cunningham, Tous les mardis</p>
-                                </div>
 
                             </div>
                             <div class="item">
@@ -693,37 +683,17 @@
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/HodQVq0YS7qSVCtXSNHK_homepage-featured-sketchmaster.jpg">
 
-                                <div class="text big-image-text">
-                                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jT5L8vR1qWrKfiUg3gCQ">
-                                    <p class="default-paragraph">Peter Nowell, Esquisser maître</p>
-                                </div>
-
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IC5in4HlQB23O5MEj7nu">
-
-                                <div class="text big-image-text active">
-                                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/UQ2vDQcTQq88XYQlisDg">
-                                    <p class="default-paragraph">Pat Flynn, Revenu passif intelligent</p>
-                                </div>
 
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
 
-                                <div class="text big-image-text">
-                                    <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
-                                    <p class="default-paragraph">Nicole Walters, $1k dans une académie d'un jour</p>
-                                </div>
-
                             </div>
                             <div class="item ">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/lsfYuKBpSFOdaK4QQ3n2_homepage-featured-everytuesday.jpg">
-
-                                <div class="text big-image-text">
-                                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jRczQFwrTHGEeyIgTWJG">
-                                    <p class="default-paragraph">Teela Cunningham, Tous les mardis</p>
-                                </div>
 
                             </div>
                             <div class="item ">
@@ -735,26 +705,16 @@
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/HodQVq0YS7qSVCtXSNHK_homepage-featured-sketchmaster.jpg">
 
-                                <div class="text big-image-text">
-                                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jT5L8vR1qWrKfiUg3gCQ">
-                                    <p class="default-paragraph">Peter Nowell, Esquisser maître</p>
-                                </div>
-
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IC5in4HlQB23O5MEj7nu">
-
-                                <div class="text big-image-text active">
-                                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/UQ2vDQcTQq88XYQlisDg">
-                                    <p class="default-paragraph">Pat Flynn, Revenu passif intelligent</p>
-                                </div>
 
                             </div>
                             {{-- <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
                                 <div class="text big-image-text">
                                     <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
-                                    <p class="default-paragraph">Nicole Walters, $1k dans une académie d'un jour</p>
+                                    <p class="default-paragraph">Nicole Walters, $1k in 1 Day Academy</p>
                                 </div>
                             </div> --}}
 
@@ -765,15 +725,15 @@
             <div class="small-text">
                 <div class="text active">
                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/UQ2vDQcTQq88XYQlisDg">
-                    <p class="default-paragraph">Pat Flynn, Revenu passif intelligent</p>
+                    <p class="default-paragraph">Pat Flynn, Smart Passive Income</p>
                 </div>
                 <div class="text">
                     <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
-                    <p class="default-paragraph">Nicole Walters, $1k dans une académie d'un jour</p>
+                    <p class="default-paragraph">Nicole Walters, $1k in 1 Day Academy</p>
                 </div>
                 <div class="text">
                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jRczQFwrTHGEeyIgTWJG">
-                    <p class="default-paragraph">Teela Cunningham, Tous les mardis</p>
+                    <p class="default-paragraph">Teela Cunningham, Every Tuesday</p>
                 </div>
                 <div class="text">
                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IgamM6IzTySKfgHAeNUV">
@@ -781,7 +741,7 @@
                 </div>
                 <div class="text">
                     <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jT5L8vR1qWrKfiUg3gCQ">
-                    <p class="default-paragraph">Peter Nowell, Esquisser maître</p>
+                    <p class="default-paragraph">Peter Nowell, Sketch Master</p>
                 </div>
             </div>
         </div>
@@ -791,15 +751,15 @@
             <div class="row">
                 <div class="col-xs-12 col-md-4 column">
                     <h1 class="default-green-header">Une communauté engagée</h1>
-                    <p class="default-paragraph">Personnalisez votre école en ligne avec une interface utilisateur intuitive. Concevez votre page d'accueil, vos conférences et vos pages de vente pour répondre à vos besoins spécifiques.</p>
+                    <p class="default-paragraph">Customize your online school with an intuitive user interface. Design your homepage, lectures, and sales pages to fit your specific needs.</p>
                 </div>
                 <div class="col-xs-12 col-md-4 column">
                     <h1 class="default-green-header">Une équipe prête pour vous.</h1>
-                    <p class="default-paragraph">Offrez à vos étudiants une expérience d’apprentissage cohérente et captivante sur les ordinateurs de bureau, les tablettes et les smartphones. Présentez un site Web qui a fière allure sur tout appareil.</p>
+                    <p class="default-paragraph">Provide your students a consistent and captivating learning experience across desktops, tablets, and smartphones. Present a website that looks great on any device.</p>
                 </div>
                 <div class="col-xs-12 col-md-4 column">
                     <h1 class="default-green-header">Une présence dans la semaine</h1>
-                    <p class="default-paragraph">Avec notre Power Editor, vous ou votre équipe pouvez consulter le code et modifier n’importe quel aspect de votre école en ligne. Votre ambition est la seule limite à ce que vous pouvez accomplir.</p>
+                    <p class="default-paragraph">With our Power Editor, you or your team can dig into the code and modify any aspect of your online school. Your ambition is the only limit to what you can accomplish.</p>
                 </div>
             </div>
             <div class="row last-row">
@@ -854,18 +814,18 @@
                                     CS Lakin
                                 </div>
                                 <div class="course-name">
-                                    <em>Vivre. Écrire. Prospérer.</em>
+                                    <em>Live. Write. Thrive.</em>
                                 </div>
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“Ce qui l’a vraiment convaincu, pourquoi j’ai choisi Oschool, et pourquoi je l’aime et continue de faire mes cours en ligne avec Oschool, c’est le formidable soutien dont ils disposent.”</p>
+                            <p class="testimonial-text">“What really has clinched it for me, why I chose Teachable, and why I love it and will continue to do my online courses with Teachable, is the great support that they have.”</p>
                             <div class="card-bottom">
                                 <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/1Q8XrSq5SbWFgfqocPw2">
                                 <div class="card-bottom-attribution">
                                     <div class="card-bottom-attribution-bottom ">
                                         <div class="name">CS Lakin</div>
-                                        <a href="http://cslakin.teachable.com" target="_blank" rel="noopener noreferrer">Voir le cours</a>
+                                        <a href="http://cslakin.teachable.com" target="_blank" rel="noopener noreferrer">View course</a>
                                     </div>
                                 </div>
                             </div>
@@ -880,18 +840,18 @@
                                     Alan Perlman
                                 </div>
                                 <div class="course-name">
-                                    <em>Entraîneur d'UAV</em>
+                                    <em>UAV Coach</em>
                                 </div>
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“J'avais du mal à décoller, mais j'ai découvert Oschool et il était si facile de tout configurer, une excellente équipe d'assistance et, dans l'ensemble, une expérience extraordinaire.”</p>
+                            <p class="testimonial-text">“I was struggling to get my course off the ground, but I discovered Teachable and it was so easy to set everything up, great support team, and overall an awesome experience.”</p>
                             <div class="card-bottom">
                                 <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/7xttxlETVOIUtnNtDWC5">
                                 <div class="card-bottom-attribution">
                                     <div class="card-bottom-attribution-bottom ">
                                         <div class="name">Alan Perlman</div>
-                                        <a href="http://learn.uavcoach.com" target="_blank" rel="noopener noreferrer">Voir le cours</a>
+                                        <a href="http://learn.uavcoach.com" target="_blank" rel="noopener noreferrer">View course</a>
                                     </div>
                                 </div>
                             </div>
@@ -906,18 +866,19 @@
                                     Julie Stoian
                                 </div>
                                 <div class="course-name">
-                                    <em>Initiés numériques pour la vie</em>
+                                    <em>Digital Insiders For Life</em>
                                 </div>
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“Je suis passé de la création de petits cours peu coûteux à de grands cours qui ont abouti à un revenu à 5 chiffres. C'est la solution idéale pour les entrepreneurs de services qui souhaitent faire évoluer leur activité.”</p>
+                            <p class="testimonial-text">“I went from creating small, inexpensive courses to large courses that resulted in 5-figure income months. This is the perfect solution for service-based entrepreneurs who want to scale their
+                                business.”</p>
                             <div class="card-bottom">
                                 <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/HfVh1POeQCaTQbrr0D3r">
                                 <div class="card-bottom-attribution">
                                     <div class="card-bottom-attribution-bottom ">
                                         <div class="name">Julie Stoian</div>
-                                        <a href="http://school.juliestoian.com" target="_blank" rel="noopener noreferrer">Voir le cours</a>
+                                        <a href="http://school.juliestoian.com" target="_blank" rel="noopener noreferrer">View course</a>
                                     </div>
                                 </div>
                             </div>
@@ -1012,7 +973,7 @@
                 }
             }
         </style>
-        <div class="url-string hidden">démarrage rapide1</div>
+        <div class="url-string hidden">quickstart1</div>
         <div class="background" style="background-image: url(https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/97mKmvzDR5auFMsSHTFG);" onload="$(this).fadeIn();">
             <div class="container">
                 <div class="row">
