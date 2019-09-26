@@ -294,8 +294,8 @@ footer .container .row ul li a:hover{text-decoration:underline;}
 /*! CSS Used fontfaces */
 @font-face{font-family:'TeachableSans-Regular';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.ttf") format("truetype");}
 @font-face{font-family:'TeachableSans-Bold';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.ttf") format("truetype");}
-
-
+  
+  
   </style>
 
 
@@ -451,14 +451,14 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
                   Blog
                 </a>
               </li>
-
+              
               <li>
-                <a class="navbar-link fedora-navbar-link" href="/home">
+                <a class="navbar-link fedora-navbar-link" href="/sign_in">
                   Entreprises
                 </a>
               </li>
               <li>
-                <a class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn" href="/home">
+                <a class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn" href="/signin">
                   Salle de classe
                 </a>
               </li>
@@ -476,7 +476,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
     <div class="container">
       <div class="row">
         <div class="col-sm-2 first-section">
-
+  
             <h4> <img src="/images/schools/logos/oschool_2.png" alt="" style="width: 130px;"> </h4>
             <p> <br> Oschool vous offre la possibilité de poursuivre des diplômes et certificats 100% en ligne, auprès des meilleures universités d’Afrique.</p>
             <p>© 2019 OSCHOOL. TOUS DROITS RÉSERVÉS.</p>
