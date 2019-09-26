@@ -6,9 +6,9 @@
 
     <section class="hero-partial _2">
         <style>
-                
+
             {
-            
+
             }
             ._2 {
                 margin-bottom: 50px;
@@ -620,7 +620,7 @@
         <style>
 
         .slick-active + .slick-center{
-            
+
             img{
                 opacity: 1;
                 width: 100%;
@@ -640,7 +640,7 @@
 
                 }
             }
-        
+
 
 
 
@@ -670,31 +670,31 @@
                 <div class="homepage-slider">
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
-                                
+
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/lsfYuKBpSFOdaK4QQ3n2_homepage-featured-everytuesday.jpg">
-                                
+
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/XKMKaKhXSniPF7Ok6xh3">
-                                
+
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/HodQVq0YS7qSVCtXSNHK_homepage-featured-sketchmaster.jpg">
-                                
+
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IC5in4HlQB23O5MEj7nu">
-                                
+
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
-                                
+
                             </div>
                             <div class="item ">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/lsfYuKBpSFOdaK4QQ3n2_homepage-featured-everytuesday.jpg">
-                               
+
                             </div>
                             <div class="item ">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/XKMKaKhXSniPF7Ok6xh3">
@@ -704,11 +704,11 @@
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/HodQVq0YS7qSVCtXSNHK_homepage-featured-sketchmaster.jpg">
-                                
+
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IC5in4HlQB23O5MEj7nu">
-                                
+
                             </div>
                             {{-- <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
