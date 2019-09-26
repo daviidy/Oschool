@@ -80,13 +80,13 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .alert{padding:15px;margin-bottom:22px;border:1px solid transparent;border-radius:4px;}
 .alert-info{color:#3498db;background-color:#d9edf7;border-color:#bce8f1;}
 [disabled]{cursor:default!important;pointer-events:none;}
-.tch-btn-header-primary{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
-.tch-btn-header-primary:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
+.tch-btn-header-primary{color:white;background-color:#6aace6;border:1px solid #6aace6;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
+.tch-btn-header-primary:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-header-primary:active:hover,.tch-btn-header-primary:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-header-primary:active{background-image:none;}
-.tch-btn-header-primary[disabled],.tch-btn-header-primary[disabled]:hover,.tch-btn-header-primary[disabled]:focus,.tch-btn-header-primary[disabled]:active{filter:alpha(opacity=65);opacity:0.65;background-color:#ff7f45;border-color:#ff7f45;cursor:not-allowed;-webkit-box-shadow:none;box-shadow:none;}
+.tch-btn-header-primary[disabled],.tch-btn-header-primary[disabled]:hover,.tch-btn-header-primary[disabled]:focus,.tch-btn-header-primary[disabled]:active{filter:alpha(opacity=65);opacity:0.65;background-color:#4D90CC;border-color:#4D90CC;cursor:not-allowed;-webkit-box-shadow:none;box-shadow:none;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
 .tch-btn-header-primary:focus{outline:0!important;}
@@ -113,9 +113,9 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .alert{padding:14px 25px 14px 47px;background:none;border:1px solid #e0e0e0;color:#6f6c6c;}
 .alert:before{font-family:FontAwesome;position:absolute;margin-left:-30px;display:block;top:calc(50% - 15px);padding:5px;font-size:20px;color:#809196;opacity:0.9;}
 .alert a{text-decoration:underline;font-weight:600;}
-.alert-info{background:#fff8f5;border:1px solid #ffccb5;color:#ea7e4d;}
-.alert-info:before{content:'\F059';color:#ea7e4d;}
-.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#ea7e4d;text-decoration:underline;}
+.alert-info{background:#4d90cc3b;border:1px solid #4d90cc3b;color:#4D90CC;}
+.alert-info:before{content:'\F059';color:#4D90CC;}
+.alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#4D90CC;text-decoration:underline;}
 .tch-learn-more{text-align:center;}
 .tch-learn-more .alert{display:inline-block;margin:auto;}
 label{font-weight:normal;line-height:2.4;font-size:16px;color:#808080;line-height:30px;font-weight:600;margin-bottom:12px;}
@@ -400,8 +400,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <div class="alert alert-info">
             <!---->
             <div ng-transclude="" ng-class="{ 'border-left': title }" class="alert-text-wrapper"><a ng-href="https://support.teachable.com/hc/en-us/articles/220340327-Create-and-Set-Up-Your-Course-?src=admin"
-                  href="https://support.teachable.com/hc/en-us/articles/220340327-Create-and-Set-Up-Your-Course-?src=admin" target="_blank">Learn more</a><span class="space"></span><span ng-bind="text">about creating a course in the Teachable
-                    Knowledge Base</span></div>
+                  href="https://support.teachable.com/hc/en-us/articles/220340327-Create-and-Set-Up-Your-Course-?src=admin" target="_blank">En savoir plus sur</a><span class="space"></span><span ng-bind="text"> la création d'un cours dans la base de connaissances</span></div>
         </div>
     </div><br><br>
 </div>

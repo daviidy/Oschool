@@ -183,7 +183,7 @@ tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
 .tch-inline-form-select .inline-form-option{text-align:center;color:#ff7f45;}
 .tch-inline-form-select .inline-form-option img{width:100px;height:100px;}
 .tch-inline-form-select .inline-form-option:hover{cursor:pointer;}
-.tch-inline-form-select .inline-form-option:hover .inline-form-option-name{color:#1ea69a;}
+.tch-inline-form-select .inline-form-option:hover .inline-form-option-name{color:#4D90CC;}
 .inline-form-option-name{color:#47505e;font-size:12px;font-weight:600;letter-spacing:0.8px;margin-top:10px;}
 .tch-inline-form-select .inline-form-option .inline-form-option-subtitle{color:#ababab;font-size:12px;line-height:18px;margin-top:7px;font-family:"TeachableSans";}
 @media screen and (max-width: 1000px){
@@ -404,7 +404,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
             <!---->
             <!---->
-            <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="#" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+            <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
                 <!---->
                 <!---->
                 <!---->
@@ -422,7 +422,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div ng-show="products.length > 0" class="">
                         <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" maxlength="100" placeholder="Nom de l'offre"
                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
-                              
+
                           </div>
 
                          <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">

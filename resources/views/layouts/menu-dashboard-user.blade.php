@@ -7,6 +7,7 @@
     <meta name="csrf-param" content="authenticity_token">
     <meta name="csrf-token" content="ildpJPED1QZAA6S9PlLQu8LcX5Nhm1HCzRtimwNod32RzV1uu8EjrhmTwF2Q0i/FqGTOdZ35d2f4wJXvM7/gFQ==">
     <link rel="stylesheet" type="text/css" href="chrome-extension://immhpnclomdloikkpcefncmfgjbkojmh/css/emoji.css">
+<meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
     <script
       src="https://www.googleadservices.com/pagead/conversion/959285871/?random=1564082424761&amp;cv=9&amp;fst=1564082424761&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=3&amp;u_tz=0&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fsso.teachable.com%2Fsecure%2Fteachable_accounts%2Fprofile&amp;tiba=myTeachable&amp;async=1&amp;rfmt=3&amp;fmt=4">
     </script>
