@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>@yield('title | Oschool')</title>
     <link rel="stylesheet" href="/css/school_homepage.css">
+    <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
