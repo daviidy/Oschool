@@ -290,7 +290,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <div dropdown="" data-test="sort-by-drop-down" onclick="show3()" class="btn-group tch-dropdown-group filter-sort-by--dropdown dropdown"><a dropdown-toggle="" type="button" class="dropdown-link dropdown-toggle" aria-haspopup="true"
                       aria-expanded="false" ><span ng-bind="ctrl.currentSortKey.label || ctrl.defaultSortKey.label">Commande de répertoire</span><span class="space"></span><i class="fa fa-angle-down"></i></a>
                     <div class="dropdown-menu-arrow"></div>
-                    <ul role="menu" class="dropdown-menu dropdown-menu-left" id="drop2">
+                    <ul role="menu" class="dropdown-menu dropdown-menu-left" id="drop_2">
                         <!---->
                         <li ng-repeat="sortKey in ctrl.sortKeys"><a href="#" ng-click="ctrl.setSortKey(sortKey)" data-test="sort-by-drop-down-item" ng-bind="sortKey.label" class="fastclickable">Commande de répertoire</a></li>
                         <!---->
