@@ -20,7 +20,7 @@
                             <div dropdown="" class="btn-group dropdown" onclick="show()" ><a dropdown-toggle="" type="button" class="tch-btn-header-dropdown dropdown-toggle" aria-haspopup="true" aria-expanded="false">Comment puis-je<span class="space"></span><i
                                       class="fa fa-angle-down no-margin"></i></a>
                                 <div class="dropdown-menu-arrow"></div>
-                                <ul role="menu" class="dropdown-menu dropdown-menu-left" id="drop1">
+                                <ul role="menu" class="dropdown-menu dropdown-menu-left" id="drop">
                                     <li><a ng-href="https://teachable.zendesk.com/hc/en-us/articles/222806647-Complimenting-Your-Site-With-Teachable?src=admin?src=admin" ng-bind="'SUPPORT.integrate_website.title' | translate" target="_blank"
                                           href="https://teachable.zendesk.com/hc/en-us/articles/222806647-Complimenting-Your-Site-With-Teachable?src=admin?src=admin">Comment intégrer Oschool à mon site web?</a></li>
                                     <li><a ng-href="https://teachable.zendesk.com/hc/en-us/articles/220340327-Creating-a-Course-?src=admin?src=admin" ng-bind="'SUPPORT.create_course.title' | translate" target="_blank"

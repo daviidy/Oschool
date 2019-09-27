@@ -80,17 +80,17 @@ $(".tch-btn-header-icon-2").click(function() {
 //dROPDOWS MENU ADMIN
 
 function show() {
-   var element = document.getElementById("drop1");
+   var element = document.getElementById("drop");
    element.classList.toggle("show");
 }
 
 function show2() {
-   var element = document.getElementById("dropA");
+   var element = document.getElementById("drop1");
    element.classList.toggle("show");
 }
 // dropdown parge course
 function show3() {
-   var element = document.getElementById("drop2");
+   var element = document.getElementById("drop_2");
    element.classList.toggle("show");
 }
 //
