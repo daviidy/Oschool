@@ -55,6 +55,7 @@ Route::get('/owner', 'OwnerController@owner')
 //Ajax Routes
 
 Route::post('/updateSchoolStatus', 'SchoolController@updateSchoolStatus');
+Route::post('/updateCourseDescription', 'CourseController@updateCourseDescription');
 Route::post('/deleteSchool', 'SchoolController@deleteSchool');
 Route::post('/updateSchool', 'SchoolController@updateSchool');
 Route::post('/addAuthor', 'SchoolController@addAuthor');

@@ -94,6 +94,25 @@ class CourseController extends Controller
         //
     }
 
+
+
+
+    public function updateCourseDescription(Request $request)
+    {
+        //$result = json_decode($request->getContent());
+
+        $data = Course::find($request->id);
+
+        $data->description = $request->description;
+
+        $data->save();
+
+        return response()->json($data);
+    }
+
+
+
+
     /**
      * Update the specified resource in storage.
      *
