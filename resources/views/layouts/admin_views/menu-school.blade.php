@@ -1376,7 +1376,7 @@
                             <div ng-bind="::user.name" class="user-name">David Yao</div>
                         </a>
                         <!----><a what="dropdown-toggle" onclick="show2()" dropdown-toggle="" type="button" href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa fa-angle-up"></i></a>
-                        <ul role="menu" class="dropdown-menu dropdown-menu-left" id="dropA">
+                        <ul role="menu" class="dropdown-menu dropdown-menu-left" id="drop1">
                             <!---->
                             <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.com/experts?src=in-app-menu" target="_blank" what="experts-marketplace">Enseignan Oschool</a></li>
                             <!---->

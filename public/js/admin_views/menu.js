@@ -60,7 +60,7 @@ $(".tch-btn-hamburger-2").click(function() {
   $(".tch-btn-hamburger-2").css("display","none");
   $(".tch-btn-header-icon").css("display","block");
 });
-////
+//////responsive menu admin2
 $(".tch-btn-header-icon").click(function() {
   $(".navs").toggleClass("active");
   $(".admin-sidebar").css({ "-webkit-transform":"translate3d(0px, 0, 0)","transform":"translate3d(0px, 0, 0)"});
@@ -80,17 +80,17 @@ $(".tch-btn-header-icon-2").click(function() {
 //dROPDOWS MENU ADMIN
 
 function show() {
-   var element = document.getElementById("drop1");
+   var element = document.getElementById("drop");
    element.classList.toggle("show");
 }
 
 function show2() {
-   var element = document.getElementById("dropA");
+   var element = document.getElementById("drop1");
    element.classList.toggle("show");
 }
-
+// dropdown parge course
 function show3() {
-   var element = document.getElementById("drop2");
+   var element = document.getElementById("drop_2");
    element.classList.toggle("show");
 }
 //
