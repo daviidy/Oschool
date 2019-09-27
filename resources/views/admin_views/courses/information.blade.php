@@ -762,6 +762,90 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     <!---->
     <!---->
 
+        {{-- Description longue  --}}
+
+    <ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-school">
+        <form id="formId" method="post" enctype="multipart/form-data" action="{{url('courses', $course)}}" name="settingsCourseForm" class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength">
+            <div ng-show="!section.if || section.if()" id="section-school" class="row tch-section-wrapper" section="section" save="true">
+                {{ csrf_field() }}
+                {{ method_field('patch') }}
+                <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
+                    <!---->
+                    <!---->
+                    <h2 ng-if="section.name" class="tch-subheading">
+                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Description du cours</span>
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!----><br ng-if="!removeDescriptionLineBreak">
+                        <!---->
+                        <p ng-bind-html="section.description" what="section-description" class="small">Présentez votre cours comme il se doit ;)</p>
+                        <!---->
+                        <!---->
+                    </h2>
+                    <!---->
+                </div>
+                <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
+                    <div ng-transclude="">
+
+                        <div form="settingsSchoolForm" label="Homepage Description" for="homepage_description">
+                            <!---->
+                            <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group">
+                                <label-block required-label="requiredLabel">
+                                    <!---->
+                                    <!----><label for="homepage_description" ng-if="label" class="control-label">
+                                        <!----><span ng-bind="label">Description du cours</span>
+                                        <!----></label>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </label-block>
+                                <input name="description" type="hidden">
+                                <input style="display: none;" id="courseDescription" type="text" name="id" value="{{$course->id}}">
+                                <div class="editor-container">
+
+                                    <div id="course-description">
+
+                                        @if($course->description)
+                                        {!!$course->description!!}
+                                        @endif
+
+                                     </div>
+
+                                </div>
+
+                                <help-block>
+                                    <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+
+                                    </ng-messages>
+                                    <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="homepage_description" class="help-block ng-hide"></div>
+                                </help-block>
+                            </div>
+                            <!---->
+                            <!---->
+                        </div>
+
+
+
+
+                    </div>
+                    <div ng-show="showButtonsBar" class="tab-bottom">
+                        <!---->
+                        <!---->
+                        <!----><button id="save-course-basic-infos"  type="submit" class="tch-btn-header-primary">Enregistrer</button>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ng-include>
+
+
+ {{-- Fin de la description longue --}}
+
+
+
     <ng-include src="'courses/course/information/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-branding">
         <div ng-show="!section.if || section.if()" id="section-branding" class="row tch-section-wrapper" section="section">
             <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
@@ -959,6 +1043,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
 </div>
 
-<!--fin popup-->
+
+
+
+
+
+
+
 
 @endsection

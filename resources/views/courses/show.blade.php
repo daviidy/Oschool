@@ -83,7 +83,7 @@
           <hr>
           <p style="text-align: center;">
             <span style="font-size: 18px;">
-              {{$course->description}}
+                {!!$course->description!!}
           </p>
           <p style="text-align: center;">
             <br>
