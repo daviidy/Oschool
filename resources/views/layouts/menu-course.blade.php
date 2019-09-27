@@ -472,7 +472,11 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 
   @yield('content')
 
-  <footer>
+
+  </div>
+
+
+  <footer style="bottom: 0 !important;position: relative;">
     <div class="container">
       <div class="row">
         <div class="col-sm-2 first-section">
@@ -566,7 +570,6 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
       </div-->
     </div>
   </footer>
-  </div>
 
 
 
