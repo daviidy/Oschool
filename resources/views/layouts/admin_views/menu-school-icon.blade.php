@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/admin/menu-school.css">
 
-
-
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -308,33 +306,32 @@
                             <div class="myteachable-icon-overlay">&nbsp;</div>
                             <div ng-bind="::user.name" class="user-name">David Yao</div>
                         </a>
-                        <!----><a what="dropdown-toggle" dropdown-toggle="" type="button" href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa fa-angle-up"></i></a>
-                        <ul role="menu" class="dropdown-menu dropdown-menu-left">
+                        <!----><a what="dropdown-toggle" onclick="show2()" dropdown-toggle="" type="button" href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa fa-angle-up"></i></a>
+                        <ul role="menu" class="dropdown-menu dropdown-menu-left" id="drop1">
                             <!---->
-                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.com/experts?src=in-app-menu" target="_blank" what="experts-marketplace">Teachable Experts</a></li>
-                            <!---->
-                            <!---->
-                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://www.facebook.com/groups/496090827168552/" target="_blank" what="instructor-community">Instructor Community</a></li>
+                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.com/experts?src=in-app-menu" target="_blank" what="experts-marketplace">Oschool Experts</a></li>
                             <!---->
                             <!---->
-                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.zendesk.com/" target="_blank" what="knowledge-base">Knowledge Base</a></li>
+                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://www.facebook.com/groups/496090827168552/" target="_blank" what="instructor-community">Communauté d'instructeurs</a></li>
+                            <!---->
+                            <!---->
+                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.zendesk.com/" target="_blank" what="knowledge-base">Connaissances de base</a></li>
                             <!---->
                             <!---->
                             <li ng-if="::permissions.can('view_fedora_references')" role="presentation" class="divider"></li>
                             <!---->
                             <!---->
-                            <li ng-if="::currentUser.is_teachable_account"><a href="/my_teachable_profile" target="_blank" translate="FOOTER.MYTEACHABLE_PROFILE">myTeachable Profile</a></li>
+                            <li ng-if="::currentUser.is_teachable_account"><a href="/my_teachable_profile" target="_blank" translate="FOOTER.MYTEACHABLE_PROFILE">Mon profil Oschool</a></li>
                             <!---->
                             <!---->
                             <!---->
-                            <li><a href="/sign_out" translate="FOOTER.LOG_OUT" what="logout">Log Out</a></li>
+                            <li><a href="/sign_out" translate="FOOTER.LOG_OUT" what="logout">Se déconnecter</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-
-
+            <script type="text/javascript" src="/js/admin_views/menu.js"></script>
             @yield('content')
 
 
