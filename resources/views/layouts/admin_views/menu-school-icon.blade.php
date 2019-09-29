@@ -471,7 +471,7 @@
 
 
 
-  //description longue course 
+  //description longue course
 
 
   //recuperation de la description ecole
@@ -636,9 +636,9 @@ $('#updateLecture').on('click', function() {
 
 
         },
-        error: function(){
-            alert('erreur');
-        }
+        error: function (xhr, msg) {
+          console.log(msg + '\n' + xhr.responseText);
+      }
     });
 });
 

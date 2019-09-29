@@ -59,13 +59,11 @@ class CourseController extends Controller
     {
         $course = Course::where('name', $request->name)->first();
         if ($course === null) {
-            $course = Course::create($request->all()
-            + [
-               'slug' => $request->name,
-          ]);
+            $course = Course::create($request->all());
 
           $slug = new SlugCourse();
-          $course->slug = $slug->createSlug($request['name']);
+          $course->slug = $slug->createSlug($request->name);
+          $course->save();
             /*
             $category_id = Category::find($request->category_id);
             $course->categories()->attach($category_id);

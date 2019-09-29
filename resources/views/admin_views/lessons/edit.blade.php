@@ -1231,7 +1231,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                         </a>
                             <span class="space"></span>
                             <a
-                              ng-href="/courses/vr-course/lectures/11599543?preview=logged_in" target="_blank" what="preview lecture" class="tch-btn-header-secondary" href="/courses/vr-course/lectures/11599543?preview=logged_in">Aperçu</a><span
+                              ng-href="/courses/vr-course/lectures/11599543?preview=logged_in" target="_blank" what="preview lecture" class="tch-btn-header-secondary" href="/course/{{$course->slug}}/lessons/{{$lesson->slug}}">Aperçu</a><span
                               class="space"></span>
                               <button id="updateLecture"
                               class="tch-btn-header-primary disable-animations fastclickable">Mettre à jour</button></div>

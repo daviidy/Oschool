@@ -39,7 +39,7 @@ class SlugLesson
 
     protected function getRelatedSlugs($slug, $id = 0)
     {
-        return Course::select('slug')->where('slug', 'like', $slug.'%')
+        return Lesson::select('slug')->where('slug', 'like', $slug.'%')
             ->where('id', '<>', $id)
             ->get();
     }

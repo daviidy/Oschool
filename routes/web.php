@@ -156,4 +156,4 @@ Route::get('/schoolAdmin/{school}/courses/{course}/certificate', 'CourseControll
 //vue pour le front end
 Route::get('/course/{slug}', 'CourseController@showSlug')->name('course.slug');
 Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('enrolled.slug');
-Route::get('/course/{slug}/lectures', 'CourseController@showSlug')->name('lecture.slug');
+Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');
