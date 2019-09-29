@@ -101,6 +101,24 @@ class LessonController extends Controller
         //
     }
 
+
+    /**
+     * Display the specified resource, this time with slug.
+     *
+     * @param  \App\Course  $formation
+     * @return \Illuminate\Http\Response
+     */
+    public function showSlug($slug)
+    {
+        $lesson = Lesson::where('slug', $slug)->firstOrFail();
+
+        return view('lessons.show', ['lesson' => $lesson]);
+    }
+
+
+
+
+
     /**
      * Show the form for editing the specified resource.
      *

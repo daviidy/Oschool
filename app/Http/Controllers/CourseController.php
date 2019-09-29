@@ -9,6 +9,7 @@ use App\Pricing;
 use Illuminate\Http\Request;
 use Auth;
 use Image;
+use App\Services\SlugCourse;
 
 class CourseController extends Controller
 {
@@ -58,7 +59,13 @@ class CourseController extends Controller
     {
         $course = Course::where('name', $request->name)->first();
         if ($course === null) {
-            $course = Course::create($request->all());
+            $course = Course::create($request->all()
+            + [
+               'slug' => $request->name,
+          ]);
+
+          $slug = new SlugCourse();
+          $course->slug = $slug->createSlug($request['name']);
             /*
             $category_id = Category::find($request->category_id);
             $course->categories()->attach($category_id);
@@ -81,6 +88,35 @@ class CourseController extends Controller
     public function show(Course $course)
     {
         return view('courses.show', ['course' => $course]);
+    }
+
+
+    /**
+     * Display the specified resource, this time with slug.
+     *
+     * @param  \App\Course  $formation
+     * @return \Illuminate\Http\Response
+     */
+    public function showSlug($slug)
+    {
+        $course = Course::where('slug', $slug)->firstOrFail();
+
+        return view('courses.show', ['course' => $course]);
+    }
+
+
+
+    /**
+     * Display the specified resource, this time with slug.
+     *
+     * @param  \App\Course  $formation
+     * @return \Illuminate\Http\Response
+     */
+    public function showCurriculum($slug)
+    {
+        $course = Course::where('slug', $slug)->firstOrFail();
+
+        return view('courses.curriculum', ['course' => $course]);
     }
 
     /**

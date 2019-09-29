@@ -1,0 +1,292 @@
+/*! CSS Used from: https://fedora.teachablecdn.com/assets/bootstrap-fb144454ae2d6daf41829e849802fb78e65ccf7a89947805dd103de5cb97d355.css ; media=screen */
+@media screen{
+html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body{margin:0;}
+header{display:block;}
+canvas,video{display:inline-block;vertical-align:baseline;}
+a{background:0 0;}
+a:active,a:hover{outline:0;}
+strong{font-weight:700;}
+img{border:0;}
+svg:not(:root){overflow:hidden;}
+button,input{margin:0;font:inherit;color:inherit;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0;}
+input{line-height:normal;}
+input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}
+@media print{
+*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+a[href^="#"]:after{content:"";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+p,h2{orphans:3;widows:3;}
+h2{page-break-after:avoid;}
+}
+.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.glyphicon-forward:before{content:"\e075";}
+*{box-sizing:border-box;}
+:before,:after{box-sizing:border-box;}
+html{font-size:10px;-webkit-tap-highlight-color:transparent;}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
+input,button{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#428bca;text-decoration:none;}
+a:hover,a:focus{color:#2a6496;text-decoration:underline;}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+h2{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h2{margin-top:20px;margin-bottom:10px;}
+h2{font-size:30px;}
+p{margin:0 0 10px;}
+.small{font-size:85%;}
+ul{margin-top:0;margin-bottom:10px;}
+.row{margin-right:-15px;margin-left:-15px;}
+.col-sm-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
+@media (min-width: 768px){
+.col-sm-12{float:left;}
+.col-sm-12{width:100%;}
+}
+label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
+input[type=radio],input[type=checkbox]{margin:4px 0 0;margin-top:1px \9;line-height:normal;}
+input[type=radio]:focus,input[type=checkbox]:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px;}
+.btn:focus,.btn:active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.btn:hover,.btn:focus{color:#333;text-decoration:none;}
+.btn:active{background-image:none;outline:0;box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);}
+.btn-primary{color:#fff;background-color:#428bca;border-color:#357ebd;}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active{color:#fff;background-color:#3071a9;border-color:#285e8e;}
+.btn-primary:active{background-image:none;}
+.collapse{display:none;}
+.dropdown{position:relative;}
+.dropdown-toggle:focus{outline:0;}
+.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:14px;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid #ccc;border:1px solid rgba(0,0,0,0.15);border-radius:4px;box-shadow:0 6px 12px rgba(0,0,0,0.175);}
+.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);}
+@media (min-width: 991px){
+.navbar-collapse{width:auto;border-top:0;box-shadow:none;}
+.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important;}
+}
+.well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,0.05);}
+.row:before,.row:after,.navbar-collapse:before,.navbar-collapse:after{display:table;content:" ";}
+.row:after,.navbar-collapse:after{clear:both;}
+.pull-right{float:right!important;}
+@media (min-width: 768px) and (max-width: 991px){
+.hidden-sm{display:none!important;}
+}
+@media (min-width: 992px) and (max-width: 1199px){
+.hidden-md{display:none!important;}
+}
+@media (min-width: 1200px){
+.hidden-lg{display:none!important;}
+}
+}
+/*! CSS Used from: https://themes.teachablecdn.com/themecss/production.css?_=56db37594f88&brand_course_heading=%23ffffff&brand_heading=%23000000&brand_homepage_heading=%23ffffff&brand_navbar_fixed_text=%23e3e3e3&brand_navbar_text=%23ffffff&brand_primary=%234d4d4d&brand_secondary=%230071bc&brand_text=%234d4d4d&font=Arial&logged_out_homepage_background_image_overlay=0.0&logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FU4pfmJMDQ9mzsRTQHFQ2 */
+.btn-primary,.btn-primary:active,.btn-primary:focus{background:#0071bc!important;border:1px solid #0071bc!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
+.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#0062a3!important;border:1px solid #0062a3!important;color:#fff;}
+@media screen and (max-width: 767px){
+.btn-primary,.btn-primary:active,.btn-primary:focus{font-size:15px;}
+}
+a.btn,a.btn:hover,a.btn:focus{display:inline-block;}
+.dropdown-menu li a{color:#fff;}
+.dropdown-menu{-webkit-transform-origin:top;transform-origin:top;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-transform:scale(1, 0);transition:all 0.2s ease-out;-webkit-transition:all 0.2s ease-out;}
+@media screen and (-webkit-min-device-pixel-ratio: 0){
+.dropdown-menu{display:none;}
+}
+.dropdown-menu.left-caret:before{position:absolute;top:-7px;left:9px;display:inline-block;border-right:7px solid transparent;border-bottom:7px solid #ccc;border-left:7px solid transparent;border-bottom-color:rgba(0,0,0,0.2);content:'';}
+.dropdown-menu.left-caret:after{position:absolute;top:-6px;left:10px;display:inline-block;border-right:6px solid transparent;border-bottom:6px solid white;border-left:6px solid transparent;content:'';}
+.dropdown-menu.left-caret:before{left:17px;right:auto;}
+.dropdown-menu.left-caret::after{left:18px;right:auto;}
+.custom-toggle{position:absolute;margin-left:-9999px;opacity:0;}
+.custom-toggle+label{display:block;position:relative;cursor:pointer;outline:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+input.custom-toggle-round+label{padding:2px;width:35px;height:18px;background-color:#dddddd;border-radius:60px;}
+input.custom-toggle-round+label:before,input.custom-toggle-round+label:after{display:block;position:absolute;top:1px;left:1px;bottom:1px;content:'';}
+input.custom-toggle-round+label:before{right:1px;background-color:#f1f1f1;border-radius:30px;transition:background 0.2s ease-out;}
+input.custom-toggle-round+label:after{width:17px;border-radius:100%;box-shadow:0 2px 5px rgba(0,0,0,0.3);background-color:#fafafa;transition:margin 0.2s ease-out;}
+input.custom-toggle-round:checked+label:before{background-color:#e2fce5;}
+input.custom-toggle-round:checked+label:after{margin-left:17px;background:#8ce196;border:1px solid #76cd81;}
+.switch-toggle a{display:none;}
+@media only screen{
+.switch-toggle{display:block;height:23px;position:relative;padding:0!important;border-radius:14px;margin-top:-1px;margin-bottom:14px;}
+.switch-toggle *{box-sizing:border-box;padding:0px 10px 1px 9px;}
+.switch-toggle a{display:block;transition:all 0.2s ease-out;}
+.switch-toggle label{line-height:1.875em;vertical-align:middle;}
+.switch-toggle input:focus ~ a,.switch-toggle input:focus+label{outline:1px dotted #888;}
+.switch-toggle input{position:absolute;opacity:0;}
+.switch-toggle input+label{position:relative;z-index:2;float:left;width:50%;height:100%;margin:0;text-align:center;font-weight:200;font-size:11px;cursor:pointer;color:#ababab;}
+.switch-toggle input:checked+label{color:#42804a;outline:0;}
+.switch-toggle a{position:absolute;top:0;left:0;padding:0;z-index:1;width:50%;height:100%;background:#8ce196;box-shadow:0 2px 5px rgba(0,0,0,0.3);border:1px solid #76cd81;}
+.switch-toggle input:last-of-type:checked ~ a{left:50%;}
+}
+@media only screen and (-webkit-max-device-pixel-ratio: 2) and (max-device-width: 80em){
+.switch-toggle{-webkit-animation:webkitSiblingBugfix infinite 1s;}
+}
+html{min-height:100%;position:relative;}
+body{background-image:none;background-size:none;background:none;font-family:"Arial";margin:0!important;color:#4d4d4d;}
+a{color:#0071bc;}
+a:hover,a:active{color:#003456;}
+a,a:active,a:hover,a:focus{text-decoration:none;}
+p{font-size:18px;font-weight:200;line-height:28px;}
+h2{color:#000;}
+.lecture-attachment p{font-size:17px;font-weight:normal;line-height:30px;margin-bottom:22px;letter-spacing:0.1px;}
+.lecture-attachment p:empty{margin:0;}
+.lecture-attachment p:empty::after{clear:both;content:'';display:table;}
+.lecture-attachment img{max-width:100%;}
+.section-title{margin-bottom:30px;font-size:22px;font-weight:600;}
+.full-width{background-color:#4d4d4d;height:60px;top:0;position:fixed;width:100%;z-index:100;}
+.full-width .nav-icon-back{width:40px;font-size:29px;padding:20px;padding-left:15px;padding-right:15px;cursor:pointer;color:#eeeeee;line-height:66px;vertical-align:middle;opacity:0.9;}
+.full-width .nav-icon-back:hover{opacity:1;}
+.full-width .nav-icon-back i{background:#fff;width:40px;height:40px;padding:0px;text-align:center;font-size:26px;padding-top:6px;border-radius:25px;font-weight:200;color:#4d4d4d;}
+[data-imageloader]{opacity:0;transition:opacity 800ms ease-out;will-change:opacity;}
+[data-imageloader].is-loaded{opacity:1;}
+.course-section{margin-bottom:10px;}
+.course-section .section-lock{display:none;}
+.course-section .section-title{background:#e8e8e8;padding:10px 16px;margin:0;font-size:15px;font-weight:bold;border-bottom:1px solid #fff;}
+.course-section ul.section-list{margin:0;padding:0;}
+.course-section ul.section-list .section-item{margin:0;padding:0;list-style-type:none;border-bottom:1px solid #fff;}
+.course-section ul.section-list .section-item .item{display:block;padding:11px 16px;background:#f0f0f0;list-style-type:none;font-size:15px;letter-spacing:0px;color:#676767;text-decoration:none;font-weight:200;}
+.course-section ul.section-list .section-item .item:hover{color:#005289;background:#d2e3ee;}
+.course-section ul.section-list .section-item .item .lecture-icon{padding-right:5px;}
+.course-section ul.section-list .section-item .status-container{margin-top:-11px;float:left;height:45px;margin-left:5px;padding-top:11px;margin-right:20px;padding-right:16px;}
+.course-section ul.section-list .section-item .title-container{border-left:1px solid rgba(0,113,188,0.1);margin:-11px;padding:10px;margin-left:41px;padding-right:70px;}
+.course-section ul.section-list .section-item .status-icon{width:20px;height:20px;float:left;border-radius:14px;}
+.course-section ul.section-list .section-item .lecture-name{font-weight:200;}
+.course-section ul.section-list .section-item.completed .item{color:#b8b8b8;background:#f0f0f0;}
+.course-section ul.section-list .section-item.completed .item:hover{color:#ababab;background:#e6e6e6;}
+.course-section ul.section-list .section-item.completed .item:hover .status-icon{background-color:#ababab;}
+.course-section ul.section-list .section-item.completed .status-icon{background:url("//assets.teachablecdn.com/icons/course-complete.png") 1px 0px #b8b8b8;background-size:96%;}
+.course-section ul.section-list .section-item.incomplete .status-icon{background:none;box-shadow:inset 0px 0px 0px 2px #0071bc;}
+.course-section ul.section-list .section-item.incomplete .item:hover .status-icon{box-shadow:inset 0px 0px 0px 2px #005289;}
+.course-section ul.section-list .section-item.next-lecture .item{color:#4d4d4d;background:#d2e3ee;}
+.course-section ul.section-list .section-item.next-lecture .status-icon{background:url("//assets.teachablecdn.com/icons/course-incomplete.png") 1px 0px #4d4d4d;box-shadow:inset 0px 0px 0px 2px #4d4d4d;}
+.course-section ul.section-list .section-item.next-lecture .item:hover{color:#4d4d4d;background:#d2e3ee;}
+.course-section ul.section-list .section-item.next-lecture .item:hover .status-icon{box-shadow:inset 0px 0px 0px 2px #4d4d4d!important;}
+.progressbar{width:100%;border-radius:99px;-moz-border-radius:99px;-webkit-border-radius:99px;margin-top:15px;text-align:right;font-size:0.7em;height:15px;line-height:40px;padding:0px;background:#e6e6e6;}
+.progressbar .progressbar-fill{float:left;-webkit-border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;-webkit-border-top-left-radius:99px;-webkit-border-bottom-left-radius:99px;-moz-border-radius-topleft:99px;-moz-border-radius-bottomleft:99px;border-top-left-radius:99px;border-bottom-left-radius:99px;border-radius:99px;-moz-border-radius:99px;-webkit-border-radius:99px;background-color:#0071bc;text-align:left;height:15px;background:#0071bc;}
+.course-mainbar{margin-left:350px;background:#fff;padding:40px;padding-top:55px;height:auto;}
+.course-mainbar h2.section-title{margin-bottom:30px;font-weight:bold;}
+.course-sidebar{width:350px;margin-top:46px;background-color:#f7f7f7;height:100%;padding-left:0px;padding-right:0px;border-right:1px solid #d7dadb;padding-bottom:30px;position:fixed;overflow:scroll;display:inline-block;}
+.course-sidebar h2{font-size:20px;padding-left:25px;padding-right:25px;font-weight:bold;margin-top:25px;line-height:29px;}
+.course-sidebar .course-progress{padding-left:25px;padding-right:25px;text-align:center;margin-top:10px!important;margin-bottom:25px;font-size:13px;color:#0071bc;}
+.course-sidebar .course-progress .course-progress-percentage{margin-top:10px!important;margin-bottom:25px;}
+.course-sidebar .course-progress .percentage{font-size:20px;font-weight:bold;}
+@media screen and (max-width: 767px){
+.course-mainbar{margin-left:0;padding-left:25px;padding-right:25px;padding-top:85px;}
+.course-mainbar h2.section-title{margin-top:0px;}
+.course-sidebar{display:none;width:100%;}
+}
+@media screen and (min-width: 767px) and (max-width: 991px){
+.course-mainbar{margin-left:300px!important;}
+.course-sidebar{width:300px!important;}
+}
+@media screen and (min-width: 767px){
+.course-sidebar.collapse{height:100%!important;overflow:scroll!important;}
+}
+.lecture-icon{font-size:16px;}
+header.half-height{height:46px!important;z-index:101;}
+header.half-height .lecture-left{width:349px;height:46px!important;float:left;}
+header.half-height .lecture-left .nav-icon-back{width:50px!important;height:50px;padding:10px;line-height:20px;display:block;float:left;text-align:center;}
+header.half-height .lecture-left .nav-icon-back i{width:25px;height:25px;font-size:20px;padding-top:2px;}
+header.half-height .lecture-left .nav-icon-back:hover{text-decoration:none;}
+header.half-height .lecture-left .nav-icon-settings,header.half-height .lecture-left .nav-icon-list{width:50px;padding:10px;background:none;color:#fff;float:right;text-align:center;height:100%;display:block;}
+header.half-height .lecture-left .nav-icon-list.nav-icon-list{background:#0071bc;}
+header.half-height .lecture-left .nav-icon-list.nav-icon-list.collapsed{background:none;}
+header.half-height .lecture-left .nav-icon-settings i,header.half-height .lecture-left .nav-icon-list i{width:25px;height:25px;font-size:20px;padding-top:4px;}
+header.half-height .lecture-left .nav-icon-settings:hover,header.half-height .lecture-left .nav-icon-list:hover{text-decoration:none;background:#0071bc!important;color:#fff;}
+header.half-height .lecture-left .settings-dropdown{float:right;}
+header.half-height .lecture-left .settings-dropdown ul.dropdown-menu{margin-top:0px;width:220px;border:1px solid #d5d5d5;padding:0px;}
+header.half-height .lecture-left .settings-dropdown ul.dropdown-menu li{padding:18px 15px;border-bottom:1px solid #e4e5e5;color:#6c6c6c;font-size:13px;}
+header.half-height .lecture-left .settings-dropdown ul.dropdown-menu li .switch{float:right;margin-top:3px;}
+header.half-height .lecture-left .settings-dropdown ul.dropdown-menu li:last-child{border-bottom:0;}
+header.half-height .lecture-left .settings-dropdown ul.dropdown-menu li .playback-speed{color:#0071bc;border:0;}
+header.half-height .lecture-left .settings-dropdown ul.dropdown-menu li .playback-speed:hover{color:#005289;cursor:pointer;}
+header.half-height .lecture-nav{display:flex;height:100%;margin-left:349px;}
+header.half-height .lecture-nav a.nav-btn{align-items:center;color:#fff;display:flex;flex:1;font-size:16px;justify-content:center;border-left:1px solid rgba(215,218,219,0.3);}
+header.half-height .lecture-nav a.nav-btn.complete,header.half-height .lecture-nav a.nav-btn:hover{background:#0071bc;color:#fff;text-decoration:none;}
+@media screen and (min-width: 768px) and (max-width: 991px){
+header.half-height .lecture-left{width:300px;}
+header.half-height .lecture-nav{margin-left:300px;}
+}
+@media screen and (max-width: 767px){
+header.half-height .lecture-left{width:150px;}
+header.half-height .lecture-nav{margin-left:150px;}
+header.half-height .lecture-nav .nav-text{display:none;}
+header.half-height .nav-icon-settings,header.half-height .nav-icon-list{border-left:1px solid rgba(215,218,219,0.3);}
+header.half-height a.nav-btn{width:50%;}
+}
+.course-sidebar .row.lecture-sidebar{margin-right:0px!important;padding-right:0px;padding-bottom:100px;}
+.course-sidebar .row.lecture-sidebar .course-section{margin-bottom:20px;padding-right:0px;}
+.course-sidebar .row.lecture-sidebar .course-section .section-title{border-bottom:1px solid rgba(0,113,188,0.1);}
+.course-sidebar .row.lecture-sidebar .course-section .section-item{border-bottom:1px solid rgba(0,113,188,0.1)!important;}
+.course-sidebar .row.lecture-sidebar .course-section .section-item.next-lecture{border-bottom:none!important;}
+.course-sidebar .row.lecture-sidebar .course-section .title-container{padding-right:0px!important;}
+.course-sidebar.navbar-sidebar-collapse{margin-top:46px;transition:0.5s height ease;}
+.lecture-content{padding-top:60px;}
+.lecture-content h2.section-title{line-height:41px;margin-bottom:18px;margin-top:10px;}
+.lecture-content .lecture-attachment{margin-bottom:20px;margin-top:30px;}
+.lecture-content .lecture-attachment .attachment-wistia-player{margin:auto;height:100%;width:100%;}
+@media screen and (max-width: 991px){
+.lecture-content h2.section-title{font-size:24px!important;line-height:34px;}
+}
+.ql-align-center{text-align:center;}
+.wistia_responsive_padding{height:0;padding-bottom:56.25%;position:relative;}
+.wistia_responsive_wrapper{position:absolute;top:0;left:0;height:100%;width:100%;}
+/*! CSS Used from: https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css */
+.fa{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.pull-right{float:right;}
+.fa-cog:before{content:"\f013";}
+.fa-lock:before{content:"\f023";}
+.fa-list:before{content:"\f03a";}
+.fa-arrow-left:before{content:"\f060";}
+.fa-arrow-right:before{content:"\f061";}
+.fa-angle-left:before{content:"\f104";}
+.fa-file-text:before{content:"\f15c";}
+.fa-youtube-play:before{content:"\f16a";}
+/*! CSS Used from: Embedded */
+#wistia_chrome_28 #wistia_grid_34_wrapper .w-css-reset{font-size:14px;}
+#wistia_chrome_28 #wistia_grid_34_wrapper div.w-css-reset{box-sizing:inherit;box-shadow:none;color:inherit;display:block;float:none;font:inherit;font-family:inherit;font-style:normal;font-weight:normal;font-size:inherit;letter-spacing:0;line-height:inherit;margin:0;max-height:none;max-width:none;min-height:none;min-width:none;padding:0;position:static;text-decoration:none;text-transform:none;text-shadow:none;transition:none;word-wrap:normal;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-font-smoothing:antialiased;}
+#wistia_chrome_28 #wistia_grid_34_wrapper button.w-css-reset{box-sizing:inherit;box-shadow:none;color:inherit;display:block;float:none;font:inherit;font-family:inherit;font-style:normal;font-weight:normal;font-size:inherit;letter-spacing:0;line-height:inherit;margin:0;max-height:none;max-width:none;min-height:none;min-width:none;padding:0;position:static;text-decoration:none;text-transform:none;text-shadow:none;transition:none;word-wrap:normal;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-font-smoothing:antialiased;}
+#wistia_chrome_28 #wistia_grid_34_wrapper img.w-css-reset{box-sizing:inherit;box-shadow:none;color:inherit;display:block;float:none;font:inherit;font-family:inherit;font-style:normal;font-weight:normal;font-size:inherit;letter-spacing:0;line-height:inherit;margin:0;max-height:none;max-width:none;min-height:none;min-width:none;padding:0;position:static;text-decoration:none;text-transform:none;text-shadow:none;transition:none;word-wrap:normal;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-font-smoothing:antialiased;}
+#wistia_chrome_28 #wistia_grid_34_wrapper svg.w-css-reset{box-sizing:inherit;box-shadow:none;color:inherit;display:block;float:none;font:inherit;font-family:inherit;font-style:normal;font-weight:normal;font-size:inherit;letter-spacing:0;line-height:inherit;margin:0;max-height:none;max-width:none;min-height:none;min-width:none;padding:0;position:static;text-decoration:none;text-transform:none;text-shadow:none;transition:none;word-wrap:normal;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-font-smoothing:antialiased;}
+#wistia_chrome_28 #wistia_grid_34_wrapper svg.w-css-reset{display:inline;}
+#wistia_chrome_28 #wistia_grid_34_wrapper button.w-css-reset{background-attachment:scroll;background-color:transparent;background-image:none;background-position:0 0;background-repeat:no-repeat;background-size:100% 100%;border:0;border-radius:0;outline:none;position:static;}
+#wistia_chrome_28 #wistia_grid_34_wrapper img.w-css-reset{border:0;display:inline-block;vertical-align:top;border-radius:0;outline:none;position:static;}
+#wistia_chrome_28 #wistia_grid_34_wrapper .w-css-reset button::-moz-focus-inner{border:0;}
+#wistia_chrome_28 #wistia_grid_34_wrapper .w-css-reset-tree{font-size:14px;}
+#wistia_chrome_28 #wistia_grid_34_wrapper .w-css-reset-tree div{box-sizing:inherit;box-shadow:none;color:inherit;display:block;float:none;font:inherit;font-family:inherit;font-style:normal;font-weight:normal;font-size:inherit;letter-spacing:0;line-height:inherit;margin:0;max-height:none;max-width:none;min-height:none;min-width:none;padding:0;position:static;text-decoration:none;text-transform:none;text-shadow:none;transition:none;word-wrap:normal;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-font-smoothing:antialiased;}
+#wistia_chrome_28 #wistia_grid_34_wrapper .w-css-reset-tree button{box-sizing:inherit;box-shadow:none;color:inherit;display:block;float:none;font:inherit;font-family:inherit;font-style:normal;font-weight:normal;font-size:inherit;letter-spacing:0;line-height:inherit;margin:0;max-height:none;max-width:none;min-height:none;min-width:none;padding:0;position:static;text-decoration:none;text-transform:none;text-shadow:none;transition:none;word-wrap:normal;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-font-smoothing:antialiased;}
+#wistia_chrome_28 #wistia_grid_34_wrapper .w-css-reset-tree svg{box-sizing:inherit;box-shadow:none;color:inherit;display:block;float:none;font:inherit;font-family:inherit;font-style:normal;font-weight:normal;font-size:inherit;letter-spacing:0;line-height:inherit;margin:0;max-height:none;max-width:none;min-height:none;min-width:none;padding:0;position:static;text-decoration:none;text-transform:none;text-shadow:none;transition:none;word-wrap:normal;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-font-smoothing:antialiased;}
+#wistia_chrome_28 #wistia_grid_34_wrapper .w-css-reset-tree svg{display:inline;}
+#wistia_chrome_28 #wistia_grid_34_wrapper .w-css-reset-tree button{background-attachment:scroll;background-color:transparent;background-image:none;background-position:0 0;background-repeat:no-repeat;background-size:100% 100%;border:0;border-radius:0;outline:none;position:static;}
+#wistia_chrome_28 #wistia_grid_34_wrapper .w-css-reset-tree  button::-moz-focus-inner{border:0;}
+#wistia_chrome_28 #wistia_grid_34_wrapper .w-css-reset-button-important{border-radius:0!important;color:#fff!important;}
+/*! CSS Used from: Embedded ; media=all */
+@media all{
+.volume__small-wave{animation:VOLUME_SMALL_WAVE_FLASH 2s infinite;opacity:0;}
+.volume__large-wave{animation:VOLUME_LARGE_WAVE_FLASH 2s infinite .3s;opacity:0;}
+}
+/*! CSS Used from: Embedded */
+#wistia_grid_34_wrapper{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;font-family:Arial,sans-serif;font-size:14px;height:100%;position:relative;text-align:left;width:100%;}
+#wistia_grid_34_wrapper *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+#wistia_grid_34_above{position:relative;}
+#wistia_grid_34_main{display:block;height:100%;position:relative;}
+#wistia_grid_34_behind{height:100%;left:0;position:absolute;top:0;width:100%;}
+#wistia_grid_34_center{height:100%;overflow:hidden;position:relative;width:100%;}
+#wistia_grid_34_front{display:none;height:100%;left:0;position:absolute;top:0;width:100%;}
+#wistia_grid_34_top_inside{position:absolute;left:0;top:0;width:100%;}
+#wistia_grid_34_top{width:100%;position:absolute;bottom:0;left:0;}
+#wistia_grid_34_bottom_inside{position:absolute;left:0;bottom:0;width:100%;}
+#wistia_grid_34_bottom{width:100%;position:absolute;top:0;left:0;}
+#wistia_grid_34_left_inside{height:100%;position:absolute;left:0;top:0;}
+#wistia_grid_34_left{height:100%;position:absolute;right:0;top:0;}
+#wistia_grid_34_right_inside{height:100%;right:0;position:absolute;top:0;}
+#wistia_grid_34_right{height:100%;left:0;position:absolute;top:0;}
+#wistia_grid_34_below{position:relative;}
+/*! CSS Used keyframes */
+@-webkit-keyframes webkitSiblingBugfix{from{-webkit-transform:translate3d(0, 0, 0);}to{-webkit-transform:translate3d(0, 0, 0);}}
+@keyframes VOLUME_SMALL_WAVE_FLASH{0%{opacity:0;}33%{opacity:1;}66%{opacity:1;}100%{opacity:0;}}
+@keyframes VOLUME_LARGE_WAVE_FLASH{0%{opacity:0;}33%{opacity:1;}66%{opacity:1;}100%{opacity:0;}}
+/*! CSS Used fontfaces */
+@font-face{font-family:'Glyphicons Halflings';src:url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.eot");src:url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"),url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"),url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");}
+@font-face{font-family:'FontAwesome';src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot#iefix&v=4.1.0') format('embedded-opentype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}

@@ -1,0 +1,233 @@
+/*! CSS Used from: https://fedora.teachablecdn.com/assets/bootstrap-fb144454ae2d6daf41829e849802fb78e65ccf7a89947805dd103de5cb97d355.css ; media=screen */
+@media screen{
+html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body{margin:0;}
+header{display:block;}
+a{background:0 0;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+button{margin:0;font:inherit;color:inherit;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+@media print{
+*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+h2{orphans:3;widows:3;}
+h2{page-break-after:avoid;}
+.navbar{display:none;}
+}
+*{box-sizing:border-box;}
+:before,:after{box-sizing:border-box;}
+html{font-size:10px;-webkit-tap-highlight-color:transparent;}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
+button{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#428bca;text-decoration:none;}
+a:hover,a:focus{color:#2a6496;text-decoration:underline;}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0;}
+h2{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h2{margin-top:20px;margin-bottom:10px;}
+h2{font-size:30px;}
+.small{font-size:85%;}
+ul{margin-top:0;margin-bottom:10px;}
+ul ul{margin-bottom:0;}
+.row{margin-right:-15px;margin-left:-15px;}
+.col-sm-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
+@media (min-width: 768px){
+.col-sm-12{float:left;}
+.col-sm-12{width:100%;}
+}
+.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px;}
+.btn:focus,.btn:active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.btn:hover,.btn:focus{color:#333;text-decoration:none;}
+.btn:active{background-image:none;outline:0;box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);}
+.btn-primary{color:#fff;background-color:#428bca;border-color:#357ebd;}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active{color:#fff;background-color:#3071a9;border-color:#285e8e;}
+.btn-primary:active{background-image:none;}
+.btn-sm{padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px;}
+.collapse{display:none;}
+.dropdown{position:relative;}
+.dropdown-toggle:focus{outline:0;}
+.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:14px;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid #ccc;border:1px solid rgba(0,0,0,0.15);border-radius:4px;box-shadow:0 6px 12px rgba(0,0,0,0.175);}
+.dropdown-menu>li>a{display:block;padding:3px 20px;clear:both;font-weight:400;line-height:1.42857143;color:#333;white-space:nowrap;}
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus{color:#262626;text-decoration:none;background-color:#f5f5f5;}
+@media (min-width: 991px){
+.navbar-right .dropdown-menu{right:0;left:auto;}
+}
+.nav{padding-left:0;margin-bottom:0;list-style:none;}
+.nav>li{position:relative;display:block;}
+.nav>li>a{position:relative;display:block;padding:10px 15px;}
+.nav>li>a:hover,.nav>li>a:focus{text-decoration:none;background-color:#eee;}
+.nav>li>a>img{max-width:none;}
+.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent;}
+@media (min-width: 768px){
+.navbar{border-radius:4px;}
+}
+@media (min-width: 768px){
+.navbar-header{float:left;}
+}
+.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);}
+@media (min-width: 991px){
+.navbar-collapse{width:auto;border-top:0;box-shadow:none;}
+.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important;}
+}
+.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px;}
+.navbar-toggle:focus{outline:0;}
+.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px;}
+.navbar-toggle .icon-bar+.icon-bar{margin-top:4px;}
+@media (min-width: 991px){
+.navbar-toggle{display:none;}
+}
+.navbar-nav{margin:7.5px -15px;}
+.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px;}
+@media (min-width: 991px){
+.navbar-nav{float:left;margin:0;}
+.navbar-nav>li{float:left;}
+.navbar-nav>li>a{padding-top:15px;padding-bottom:15px;}
+.navbar-nav.navbar-right:last-child{margin-right:-15px;}
+}
+@media (min-width: 991px){
+.navbar-right{float:right!important;}
+}
+.navbar-nav>li>.dropdown-menu{margin-top:0;border-top-left-radius:0;border-top-right-radius:0;}
+.row:before,.row:after,.nav:before,.nav:after,.navbar:before,.navbar:after,.navbar-header:before,.navbar-header:after,.navbar-collapse:before,.navbar-collapse:after{display:table;content:" ";}
+.row:after,.nav:after,.navbar:after,.navbar-header:after,.navbar-collapse:after{clear:both;}
+.pull-right{float:right!important;}
+@media (min-width: 768px) and (max-width: 991px){
+.hidden-sm{display:none!important;}
+}
+}
+/*! CSS Used from: https://themes.teachablecdn.com/themecss/production.css?_=56db37594f88&brand_course_heading=%23ffffff&brand_heading=%23000000&brand_homepage_heading=%23ffffff&brand_navbar_fixed_text=%23e3e3e3&brand_navbar_text=%23ffffff&brand_primary=%234d4d4d&brand_secondary=%230071bc&brand_text=%234d4d4d&font=Arial&logged_out_homepage_background_image_overlay=0.0&logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FU4pfmJMDQ9mzsRTQHFQ2 */
+.btn-primary,.btn-primary:active,.btn-primary:focus{background:#0071bc!important;border:1px solid #0071bc!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
+.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#0062a3!important;border:1px solid #0062a3!important;color:#fff;}
+@media screen and (max-width: 767px){
+.btn-primary,.btn-primary:active,.btn-primary:focus{font-size:15px;}
+}
+.btn-sm,.btn-sm:active,.btn-sm:focus{border-radius:5px!important;padding:0px 13px!important;font-weight:400!important;font-size:13px!important;line-height:26px!important;}
+a.btn,a.btn:hover,a.btn:focus{display:inline-block;}
+.dropdown-menu li a{color:#fff;}
+.dropdown-menu{-webkit-transform-origin:top;transform-origin:top;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-transform:scale(1, 0);transition:all 0.2s ease-out;-webkit-transition:all 0.2s ease-out;}
+@media screen and (-webkit-min-device-pixel-ratio: 0){
+.dropdown-menu{display:none;}
+}
+html{min-height:100%;position:relative;}
+body{background-image:none;background-size:none;background:none;font-family:"Arial";margin:0!important;color:#4d4d4d;}
+a{color:#0071bc;}
+a:hover,a:active{color:#003456;}
+a,a:active,a:hover,a:focus{text-decoration:none;}
+h2{color:#000;}
+.nav>li>a:focus{background:none!important;outline:0;}
+.section-title{margin-bottom:30px;font-size:22px;font-weight:600;}
+.navbar-fedora{background-color:#4d4d4d;position:absolute;margin-bottom:0px;top:0px;transition:none;}
+.navbar-fedora .gravatar{width:30px;height:30px;border-radius:15px;}
+.navbar-fedora .navbar-current-user{display:none;}
+.navbar-fedora .navbar-enrolled{display:none;}
+.navbar-fedora .navbar-header{height:60px;width:100%;}
+.navbar-fedora .navbar-toggle{margin-top:14px;}
+.navbar-fedora .navbar-toggle .icon-bar{background:#fff!important;}
+.navbar-fedora .navbar-collapse{box-shadow:none!important;max-height:none!important;}
+.nav.navbar-nav>li>a{line-height:30px;font-weight:200;}
+.nav.navbar-nav>li .fedora-navbar-link{padding-top:16px!important;font-size:15px;max-height:60px;color:#fff!important;cursor:pointer;}
+.nav.navbar-nav>li .fedora-navbar-link:hover{background-color:#404040!important;color:#fff!important;}
+.full-width{background-color:#4d4d4d;height:60px;top:0;position:fixed;width:100%;z-index:100;}
+.full-width .nav-icon-back{width:40px;font-size:29px;padding:20px;padding-left:15px;padding-right:15px;cursor:pointer;color:#eeeeee;line-height:66px;vertical-align:middle;opacity:0.9;}
+.full-width .nav-icon-back:hover{opacity:1;}
+.full-width .nav-icon-back i{background:#fff;width:40px;height:40px;padding:0px;text-align:center;font-size:26px;padding-top:6px;border-radius:25px;font-weight:200;color:#4d4d4d;}
+.full-width .navbar-fedora{width:101%;left:-1px;min-height:0!important;}
+.full-width .navbar-fedora .navbar-header{height:auto;}
+.full-width .navbar-fedora .navbar-header-collapse{float:right;padding-right:40px;}
+.full-width .navbar-fedora .navbar-nav{width:100%;margin:0px!important;padding:0px!important;}
+.full-width .navbar-toggle{margin-top:6px;margin-right:15px;}
+@media screen and (max-width: 480px){
+.navbar-fedora{min-height:60px;}
+.navbar-fedora .dropdown-menu{background-color:#292e2e;}
+.navbar-fedora .navbar-current-user{display:inline-block;padding-left:5px;}
+.navbar-fedora .navbar-enrolled{display:block;}
+.navbar-fedora .navbar-enrolled .sidebar-nav-link{color:#fff;}
+.navbar-fedora .navbar-enrolled .lecture-sidebar-icon{display:none;}
+}
+.course-section{margin-bottom:10px;}
+.course-section .section-lock,.course-section .section-days-to-drip,.course-section .section-days-logged-in,.course-section .section-days-logged-out{display:none;}
+.course-section .section-title{background:#e8e8e8;padding:10px 16px;margin:0;font-size:15px;font-weight:bold;border-bottom:1px solid #fff;}
+.course-section ul.section-list{margin:0;padding:0;}
+.course-section ul.section-list .section-item{margin:0;padding:0;list-style-type:none;border-bottom:1px solid #fff;}
+.course-section ul.section-list .section-item .item{display:block;padding:11px 16px;background:#f0f0f0;list-style-type:none;font-size:15px;letter-spacing:0px;color:#676767;text-decoration:none;font-weight:200;}
+.course-section ul.section-list .section-item .item:hover{color:#005289;background:#d2e3ee;}
+.course-section ul.section-list .section-item .item .lecture-icon{padding-right:5px;}
+.course-section ul.section-list .section-item .item .btn-primary{margin-top:-3px;margin-right:-5px;}
+.course-section ul.section-list .section-item .status-container{margin-top:-11px;float:left;height:45px;margin-left:5px;padding-top:11px;margin-right:20px;padding-right:16px;}
+.course-section ul.section-list .section-item .title-container{border-left:1px solid rgba(0,113,188,0.1);margin:-11px;padding:10px;margin-left:41px;padding-right:70px;}
+.course-section ul.section-list .section-item .status-icon{width:20px;height:20px;float:left;border-radius:14px;}
+.course-section ul.section-list .section-item .lecture-name{font-weight:200;}
+.course-section ul.section-list .section-item.completed .item{color:#b8b8b8;background:#f0f0f0;}
+.course-section ul.section-list .section-item.completed .item:hover{color:#ababab;background:#e6e6e6;}
+.course-section ul.section-list .section-item.completed .item:hover .status-icon{background-color:#ababab;}
+.course-section ul.section-list .section-item.completed .status-icon{background:url("//assets.teachablecdn.com/icons/course-complete.png") 1px 0px #b8b8b8;background-size:96%;}
+.course-section ul.section-list .section-item.completed .btn-primary{display:none;}
+.course-section ul.section-list .section-item.incomplete .status-icon{background:none;box-shadow:inset 0px 0px 0px 2px #0071bc;}
+.course-section ul.section-list .section-item.incomplete .item:hover .status-icon{box-shadow:inset 0px 0px 0px 2px #005289;}
+.course-section ul.section-list .section-item.next-lecture .item{color:#4d4d4d;background:#d2e3ee;}
+.course-section ul.section-list .section-item.next-lecture .status-icon{background:url("//assets.teachablecdn.com/icons/course-incomplete.png") 1px 0px #4d4d4d;box-shadow:inset 0px 0px 0px 2px #4d4d4d;}
+.course-section ul.section-list .section-item.next-lecture .item:hover{color:#4d4d4d;background:#d2e3ee;}
+.course-section ul.section-list .section-item.next-lecture .item:hover .status-icon{box-shadow:inset 0px 0px 0px 2px #4d4d4d!important;}
+.progressbar{width:100%;border-radius:99px;-moz-border-radius:99px;-webkit-border-radius:99px;margin-top:15px;text-align:right;font-size:0.7em;height:15px;line-height:40px;padding:0px;background:#e6e6e6;}
+.progressbar .progressbar-fill{float:left;-webkit-border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;-webkit-border-top-left-radius:99px;-webkit-border-bottom-left-radius:99px;-moz-border-radius-topleft:99px;-moz-border-radius-bottomleft:99px;border-top-left-radius:99px;border-bottom-left-radius:99px;border-radius:99px;-moz-border-radius:99px;-webkit-border-radius:99px;background-color:#0071bc;text-align:left;height:15px;background:#0071bc;}
+.course-mainbar{margin-left:350px;background:#fff;padding:40px;padding-top:55px;height:auto;}
+.course-mainbar h2.section-title{margin-bottom:30px;font-weight:bold;}
+.course-mainbar .next-lecture-wrapper{background:#d2e3ee;border-radius:40px;margin-bottom:20px;}
+.course-mainbar .next-lecture-wrapper .start-next-lecture{margin-right:12px;line-height:35px;font-size:19px;border-radius:40px;}
+.course-mainbar .course-section .btn-primary{margin-right:-65px!important;}
+.course-sidebar{width:350px;margin-top:46px;background-color:#f7f7f7;height:100%;padding-left:0px;padding-right:0px;border-right:1px solid #d7dadb;padding-bottom:30px;position:fixed;overflow:scroll;display:inline-block;}
+.course-sidebar img.course-image{display:block;width:100%;margin:0;}
+.course-sidebar h2{font-size:20px;padding-left:25px;padding-right:25px;font-weight:bold;margin-top:25px;line-height:29px;}
+.course-sidebar .course-progress{padding-left:25px;padding-right:25px;text-align:center;margin-top:10px!important;margin-bottom:25px;font-size:13px;color:#0071bc;}
+.course-sidebar .course-progress .percentage{font-size:20px;font-weight:bold;}
+.course-sidebar ul.sidebar-nav{margin:0;padding:0;}
+.course-sidebar ul.sidebar-nav li{font-size:17px;padding:0px;}
+.course-sidebar ul.sidebar-nav li a{font-size:16px;padding:13px 18px;color:#4d4d4d;display:block;margin-top:1px;}
+.course-sidebar ul.sidebar-nav li a i{margin-top:4px;vertical-align:-1px;font-size:22px;margin-right:10px;}
+.course-sidebar ul.sidebar-nav li a:hover{text-decoration:none;background:#e6e6e6;}
+.course-sidebar ul.sidebar-nav li.selected{border-left:3px #000 solid;font-weight:600;}
+.course-sidebar ul.sidebar-nav li.selected a{background:#ffffff;border-right:1px solid #fff;}
+@media screen and (max-width: 767px){
+.course-mainbar{margin-left:0;padding-left:25px;padding-right:25px;padding-top:85px;}
+.course-mainbar h2.section-title{margin-top:0px;}
+.course-mainbar .next-lecture-name{display:none;}
+.course-sidebar{display:none;width:100%;}
+.sidebar-nav-link{font-size:15px;padding:10px 15px;color:#4d4d4d;display:block;line-height:30px;font-weight:200;}
+}
+@media screen and (min-width: 767px) and (max-width: 991px){
+.course-mainbar{margin-left:300px!important;}
+.course-sidebar{width:300px!important;}
+}
+.lecture-icon{font-size:16px;}
+header.half-height{height:46px!important;z-index:101;}
+header.half-height .navbar-nav{margin-right:30px!important;float:right;margin-top:0px;}
+header.half-height .nav.navbar-nav>li .fedora-navbar-link{padding-top:8px!important;max-height:45px;}
+header.half-height .lecture-left{width:349px;height:46px!important;float:left;}
+header.half-height .lecture-left .nav-icon-back{width:50px!important;height:50px;padding:10px;line-height:20px;display:block;float:left;text-align:center;}
+header.half-height .lecture-left .nav-icon-back i{width:25px;height:25px;font-size:20px;padding-top:2px;}
+header.half-height .lecture-left .nav-icon-back:hover{text-decoration:none;}
+@media screen and (min-width: 768px) and (max-width: 991px){
+header.half-height .lecture-left{width:300px;}
+}
+@media screen and (max-width: 767px){
+header.half-height .lecture-left{width:150px;}
+}
+/*! CSS Used from: https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css */
+.fa{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.pull-right{float:right;}
+.fa-user:before{content:"\f007";}
+.fa-list-alt:before{content:"\f022";}
+.fa-lock:before{content:"\f023";}
+.fa-angle-left:before{content:"\f104";}
+.fa-file-text:before{content:"\f15c";}
+.fa-youtube-play:before{content:"\f16a";}
+/*! CSS Used fontfaces */
+@font-face{font-family:'FontAwesome';src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot#iefix&v=4.1.0') format('embedded-opentype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}
