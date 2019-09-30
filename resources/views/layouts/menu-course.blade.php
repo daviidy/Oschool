@@ -1,6 +1,7 @@
 <html class=" video no-videoautoplay">
 
 <head>
+
   <link rel="stylesheet" href="/css/course_single.css">
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
 
@@ -392,6 +393,11 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 }
 
 </style>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
 </head>
 
