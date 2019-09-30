@@ -152,7 +152,7 @@ button{line-height:inherit;}
 .Col_i9j08c-o_O-xsCol12_1m1ceo5-o_O-mdCol6_1rbv01c:after{display:table;clear:both;}
 @media (min-width: 320px){
   .EnrollSectionSCDP{
-    margin-bottom: 500px;
+    /* margin-bottom: 500px; */
   }
 
 .Col_i9j08c-o_O-xsCol12_1m1ceo5-o_O-mdCol6_1rbv01c{width:100%;}
@@ -184,11 +184,6 @@ button{line-height:inherit;}
 
 
 <style>
-
-section.pricing {
-  /* background: #007bff; */
-  /* background: linear-gradient(to right, #0062E6, #33AEFF); */
-}
 
 .row{
   padding: 20px 0;
@@ -258,10 +253,11 @@ section.pricing {
 .fa-ul li{
   font-size: 1.5rem;
 }
+
+.title-price{
+  text-align: center;
+}
 </style>
-
-{{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> --}}
-
 
 
 <div class="blocks-page blocks-page-course_sales_page " id="blocks-page-164508">
@@ -294,12 +290,12 @@ section.pricing {
               <input type="hidden" name="school_domain" value="https://courses.52kards.com" id="school_domain">
               <input type="hidden" name="product_id" value="7141" id="product_id">
               <input type="hidden" name="user_src" value="teachable-examples" id="user_src">
-              <button id="enroll-button-top" data-course-id="7169" class="btn btn-hg btn-primary btn-header-enroll" type="submit">
+              <a id="enroll-button-top" data-course-id="7169" class="btn btn-hg btn-primary btn-header-enroll" href="#price">
                 <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
                 S'inscrire au cours
                 {{-- <span class="default-product-price product_7141">$52</span> --}}
                 <span class="coupon-price product_7141"></span>
-              </button>
+              </a>
             </form>
           </div>
         </div>
@@ -587,13 +583,13 @@ section.pricing {
     <div class="checkout-cta">
       <h2>
 
-        Get started now!
+        Commencez maintenant !
       </h2>
     </div>
     <div class="container" id="pricing-options">
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-          <form action="/purchase" class="new_sale" id="new_sale" method="get">
+          <form action="purchase" class="new_sale" id="new_sale" method="get">
             <input type="hidden" name="utf8" value="✓">
             <input type="hidden" name="course_id" value="7169" id="course_id">
             <input type="hidden" name="coupon_code" value="" id="coupon_code">
@@ -636,12 +632,11 @@ section.pricing {
               margin: 0 auto;
           ">
                 <br>
-                <button id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" type="submit" value="Enroll in Course for $52">
+                <a id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" href="#price"value="Enroll in Course for $52">
                   <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
-                  Inscrit toi au cours pour
-                  <span class="default-product-price product_7141">$52</span>
+                  Inscrit toi
                   <span class="coupon-price product_7141"></span>
-                </button>
+                </a>
                 <br>
               </center>
             </div>
@@ -651,8 +646,9 @@ section.pricing {
     </div>
 
   </div>
-  <section class="pricing py-5">
+  <section class="pricing py-5" id="price">
     <div class="container">
+      <h1 class="title-price">Nos offres de prix</h1>
       <div class="row">
         <!-- Free Tier -->
         @foreach($course->pricings as $pricing)
@@ -660,7 +656,7 @@ section.pricing {
           <div class="card mb-5 mb-lg-0">
             <div class="card-body">
               <h5 class="card-title text-muted text-uppercase text-center">{{$pricing->name}}</h5>
-              <h6 class="card-price text-center">{{$pricing->price}} FCFA <span class="period">/month</span></h6>
+            <h6 class="card-price text-center">{{$pricing->price}} FCFA <span class="period">/ {{$pricing->per == 'month' ? 'Mois' : ''}}</span></h6>
               <hr>
               <ul class="fa-ul">
                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Un seul utilisateur</li>
