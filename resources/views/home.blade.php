@@ -62,7 +62,7 @@
                 <div class="row">
                     <div class="col-xs-12 vertically-align-contents-except-xs">
                         <div class="hero-text hero-text-left">
-                            <h1>On ne vas pas à l'école, on y est dèja.</h1>
+                            <h1>On ne va pas à l'école, on y est dèja.</h1>
                             <h2>Faites vous accompagner par nos mentors pendant votre apprentissage et réalisez des projets professionnalisants.</h2>
                             <div class="input-container left">
                                 <div class="hidden redirect">/create-account</div>
@@ -484,7 +484,7 @@
                     <div class="image" style="background-image: url(https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/0tTy4z3lTbCkw18ehjQ8);"></div>
                     <div class="quote">
                         <img class="orange-circle" src="https://teachable.com/assets/blockquote-orange-d24380ebe646a526fc1fa70b279fa6531394ee3ddc19bf7bca406c709a6f08f3.svg">
-                        <blockquote>“I've used Teachable to sell hundreds of thousands of dollars in online courses. If you are thinking of creating your own online course, Teachable is the place to be.”</blockquote>
+                        <blockquote>“J'ai utilisé Oschool pour vendre des centaines de milliers de dollars en cours en ligne. Si vous envisagez de créer votre propre cours en ligne, Oschool est le lieu idéal.”</blockquote>
                         <cite>
                             Melyssa Griffin, <a href="http://melyssagriffin.com" target="_blank" rel="noopener noreferrer">melyssagriffin.com</a>
                         </cite>
@@ -751,15 +751,15 @@
             <div class="row">
                 <div class="col-xs-12 col-md-4 column">
                     <h1 class="default-green-header">Une communauté engagée</h1>
-                    <p class="default-paragraph">Customize your online school with an intuitive user interface. Design your homepage, lectures, and sales pages to fit your specific needs.</p>
+                    <p class="default-paragraph">Personnalisez votre école en ligne avec une interface utilisateur intuitive. Concevez votre page d'accueil, vos conférences et vos pages de vente pour répondre à vos besoins spécifiques.</p>
                 </div>
                 <div class="col-xs-12 col-md-4 column">
                     <h1 class="default-green-header">Une équipe prête pour vous.</h1>
-                    <p class="default-paragraph">Provide your students a consistent and captivating learning experience across desktops, tablets, and smartphones. Present a website that looks great on any device.</p>
+                    <p class="default-paragraph">Offrez à vos étudiants une expérience d’apprentissage cohérente et captivante sur les ordinateurs de bureau, les tablettes et les smartphones. Présentez un site Web qui a fière allure sur n'importe quel appareil.</p>
                 </div>
                 <div class="col-xs-12 col-md-4 column">
                     <h1 class="default-green-header">Une présence dans la semaine</h1>
-                    <p class="default-paragraph">With our Power Editor, you or your team can dig into the code and modify any aspect of your online school. Your ambition is the only limit to what you can accomplish.</p>
+                    <p class="default-paragraph">Avec notre Power Editor, vous ou votre équipe pouvez consulter le code et modifier n’importe quel aspect de votre école en ligne. Votre ambition est la seule limite à ce que vous pouvez accomplir.</p>
                 </div>
             </div>
             <div class="row last-row">
@@ -814,18 +814,18 @@
                                     CS Lakin
                                 </div>
                                 <div class="course-name">
-                                    <em>Live. Write. Thrive.</em>
+                                    <em>Vivre. Écrire. Prospérer.</em>
                                 </div>
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“What really has clinched it for me, why I chose Teachable, and why I love it and will continue to do my online courses with Teachable, is the great support that they have.”</p>
+                            <p class="testimonial-text">“Ce qui l’a vraiment convaincu, pourquoi j’ai choisi l’école et pourquoi je l’aime et continuerai à suivre mes cours en ligne avec Oschool, c’est le formidable soutien dont ils bénéficient.”</p>
                             <div class="card-bottom">
                                 <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/1Q8XrSq5SbWFgfqocPw2">
                                 <div class="card-bottom-attribution">
                                     <div class="card-bottom-attribution-bottom ">
                                         <div class="name">CS Lakin</div>
-                                        <a href="http://cslakin.teachable.com" target="_blank" rel="noopener noreferrer">View course</a>
+                                        <a href="http://cslakin.teachable.com" target="_blank" rel="noopener noreferrer">Voir le cours</a>
                                     </div>
                                 </div>
                             </div>
@@ -845,13 +845,13 @@
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“I was struggling to get my course off the ground, but I discovered Teachable and it was so easy to set everything up, great support team, and overall an awesome experience.”</p>
+                            <p class="testimonial-text">“J'avais du mal à décoller, mais j'ai découvert Teachable et il était si facile de tout configurer, une excellente équipe d'assistance et, dans l'ensemble, une expérience extraordinaire.”</p>
                             <div class="card-bottom">
                                 <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/7xttxlETVOIUtnNtDWC5">
                                 <div class="card-bottom-attribution">
                                     <div class="card-bottom-attribution-bottom ">
                                         <div class="name">Alan Perlman</div>
-                                        <a href="http://learn.uavcoach.com" target="_blank" rel="noopener noreferrer">View course</a>
+                                        <a href="http://learn.uavcoach.com" target="_blank" rel="noopener noreferrer">Voir le cours</a>
                                     </div>
                                 </div>
                             </div>
@@ -871,14 +871,13 @@
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“I went from creating small, inexpensive courses to large courses that resulted in 5-figure income months. This is the perfect solution for service-based entrepreneurs who want to scale their
-                                business.”</p>
+                            <p class="testimonial-text">“Je suis passé de la création de petits cours peu coûteux à de grands cours qui ont abouti à un revenu à 5 chiffres. C'est la solution idéale pour les entrepreneurs de services qui souhaitent faire évoluer leur activité.”</p>
                             <div class="card-bottom">
                                 <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/HfVh1POeQCaTQbrr0D3r">
                                 <div class="card-bottom-attribution">
                                     <div class="card-bottom-attribution-bottom ">
                                         <div class="name">Julie Stoian</div>
-                                        <a href="http://school.juliestoian.com" target="_blank" rel="noopener noreferrer">View course</a>
+                                        <a href="http://school.juliestoian.com" target="_blank" rel="noopener noreferrer">Voir le cours</a>
                                     </div>
                                 </div>
                             </div>

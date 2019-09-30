@@ -13,6 +13,7 @@ use Image;
 use Auth;
 use App\Media;
 use Illuminate\Http\Request;
+use App\Services\SlugLesson;
 
 class LessonController extends Controller
 {
@@ -35,12 +36,13 @@ class LessonController extends Controller
     {
         if (Auth::check()) {
             $lesson = Lesson::create(['position' => Lesson::where('course_id', $course->id)->where('section_id', $section->id)->max('position') + 1,
-                                       'slug' => 'Nouvelle leçon',
                                        'free_lesson' => 'no',
                                        'title' => 'Nouvelle leçon',
                                        'course_id' => $course->id,
                                        'section_id' => $section->id
                                    ]);
+           $slug = new SlugLesson();
+           $lesson->slug = $slug->createSlug('Nouvelle leçon');
             //return view('admin_views.lessons.edit', ['school' => $school, 'course' => $course, 'section' => $section, 'lesson' => $lesson]);
             return redirect('/schoolAdmin/'.$school->id.'/courses/'.$course->id.'/curriculum/'.$section->id.'/lessons/'.$lesson->id.'/edit');
         }
@@ -60,7 +62,6 @@ class LessonController extends Controller
     {
         $data = Lesson::create($request->all()
             + ['position' => Lesson::where('course_id', $request->course_id)->where('section_id', $request->section_id)->max('position') + 1,
-               'slug' => $request->title,
                'free_lesson' => 'no'
           ]);
           if ($request->hasFile('downloadable_files') ) {
@@ -101,6 +102,24 @@ class LessonController extends Controller
         //
     }
 
+
+    /**
+     * Display the specified resource, this time with slug.
+     *
+     * @param  \App\Course  $formation
+     * @return \Illuminate\Http\Response
+     */
+    public function showSlug($slugCourse, $slug)
+    {
+        $lesson = Lesson::where('slug', $slug)->firstOrFail();
+
+        return view('lessons.show', ['lesson' => $lesson]);
+    }
+
+
+
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -127,10 +146,12 @@ class LessonController extends Controller
     public function update(Request $request, Lesson $lesson)
     {
         $data = Lesson::find($request->lesson_id);
-        $data->update($request->all()
-            + [
-               'slug' => $request->title,
-          ]);
+        $data->update($request->all());
+
+          $slug = new SlugLesson();
+          $data->slug = $slug->createSlug($request->title);
+          $data->save();
+
           if ($request->hasFile('downloadable_files') ) {
             foreach ($request->file('downloadable_files') as $file) {
               $filename = $file->getClientOriginalName();

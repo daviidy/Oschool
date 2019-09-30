@@ -165,7 +165,7 @@
     @include('includes.default.school_page.advantages')
     <div class="row logos">
       <div class="col-xs-12">
-        <p class="default-paragraph">Market leaders use Teachable to enrich their brand &amp; business.</p>
+        <p class="default-paragraph">Les leaders du marché utilisent Oschool pour la formation du personnel.</p>
         <div class="clearfix company-logos">
           <img src="/images/divers/cinetpay.png">
           <img src="/images/divers/Epistrophe.jpg">

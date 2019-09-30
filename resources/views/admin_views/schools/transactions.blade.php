@@ -40,7 +40,7 @@
                                 <div ng-if="percentComplete() > 0">
                                     <div ng-class="{ 'progress-completed': percentComplete() == 100 }" class="progress">
                                         <div ng-style="{ 'width': percentComplete() + '%' }" ng-class="{ 'progress-bar-completed': percentComplete() == 100 }" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                                          class="progress-bar" style="width: 25%;"><span ng-bind="percentComplete() | number:0">25</span>% complete</div>
+                                          class="progress-bar" style="width: 25%;"><span ng-bind="percentComplete() | number:0">25</span>% achevé</div>
                                     </div><br>
                                 </div>
                                 <!---->
@@ -53,7 +53,7 @@
                                         <!----></span>
                                     <!---->
                                     <!---->
-                                    <!----><span ng-bind="step.text | translate">Sign up for our free live webinar</span>
+                                    <!----><span ng-bind="step.text | translate">Inscrivez-vous à notre webinaire gratuit en direct</span>
                                     <!----><span ng-if="!step.completed() &amp;&amp; !step.disabled()" class="right-arrow">›</span>
                                     <!---->
                                     <!---->
@@ -62,7 +62,7 @@
                                         <!---->
                                         <!---->
                                         <div ng-if="step.liveWorkshop" ng-click="step.click()" class="tch-pill-sidelink fastclickable">
-                                            <!----><span ng-if="workshopState() == 'signup'">Claim My Spot</span>
+                                            <!----><span ng-if="workshopState() == 'signup'">Revendiquez mon spot</span>
                                             <!---->
                                             <!---->
                                             <!---->
@@ -80,7 +80,7 @@
                                         <!----><img ng-src="/admin/assets/images/icons/icon-check.svg" ng-if="step.completed()" class="icon" src="/admin/assets/images/icons/icon-check.svg">
                                         <!----></span>
                                     <!---->
-                                    <!----><span ng-bind="step.text | translate">Create a course</span>
+                                    <!----><span ng-bind="step.text | translate">Créer un cours</span>
                                     <!---->
                                     <!---->
                                     <!----></a>
@@ -92,13 +92,13 @@
                                         <!---->
                                         <!----></span>
                                     <!---->
-                                    <!----><span ng-bind="step.text | translate">Customize look and feel</span>
+                                    <!----><span ng-bind="step.text | translate">Personnaliser l'apparence</span>
                                     <!----><span ng-if="!step.completed() &amp;&amp; !step.disabled()" class="right-arrow">›</span>
                                     <!---->
                                     <!---->
                                     <div ng-if="!step.completed() &amp;&amp; !step.disabled()">
                                         <!---->
-                                        <div ng-if="step.supportLink" ng-click="openTab(step.supportLink); $event.stopPropagation();" class="tch-pill-sidelink fastclickable"><span>Read Tutorial</span></div>
+                                        <div ng-if="step.supportLink" ng-click="openTab(step.supportLink); $event.stopPropagation();" class="tch-pill-sidelink fastclickable"><span>Lire le tutoriel</span></div>
                                         <!---->
                                         <!---->
                                         <!---->
@@ -114,13 +114,13 @@
                                         <!---->
                                         <!----></span>
                                     <!---->
-                                    <!----><span ng-bind="step.text | translate">Set up your domain name</span>
+                                    <!----><span ng-bind="step.text | translate">Configurez votre nom de domaine</span>
                                     <!----><span ng-if="!step.completed() &amp;&amp; !step.disabled()" class="right-arrow">›</span>
                                     <!---->
                                     <!---->
                                     <div ng-if="!step.completed() &amp;&amp; !step.disabled()">
                                         <!---->
-                                        <div ng-if="step.supportLink" ng-click="openTab(step.supportLink); $event.stopPropagation();" class="tch-pill-sidelink fastclickable"><span>Read Tutorial</span></div>
+                                        <div ng-if="step.supportLink" ng-click="openTab(step.supportLink); $event.stopPropagation();" class="tch-pill-sidelink fastclickable"><span>Lire le tutoriel</span></div>
                                         <!---->
                                         <!---->
                                         <!---->
@@ -137,7 +137,7 @@
                                     <!---->
                                     <!----><img ng-if="step.disabled()" ng-src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-lock.svg" class="icon more-faded"
                                       src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-lock.svg">
-                                    <!----><span ng-bind="step.text | translate">Launch your school</span>
+                                    <!----><span ng-bind="step.text | translate">Lance ton école</span>
                                     <!---->
                                     <!---->
                                     <!----></a>
@@ -145,18 +145,16 @@
                             </div>
                         </div>
                         <div class="col-lg-4 hidden-md hidden-sm hidden-xs">
-                            <h2 class="tch-subheading text-left">Need help getting started?</h2>
+                            <h2 class="tch-subheading text-left">Besoin d'aide pour commencer?</h2>
                             <div class="tch-feed-item event-placeholder event-authenticate">
-                                <div class="tch-arrow pull-left"></div>Check out our<span class="space"></span><a href="http://teachable.zendesk.com/" target="_blank" class="feed-link feed-bold">Knowledge Base</a><span class="space"></span>for tips,
-                                how-tos, and other helpful information.
+                                <div class="tch-arrow pull-left"></div>Découvrez nos<span class="space"></span><a href="http://teachable.zendesk.com/" target="_blank" class="feed-link feed-bold">connaissances de base</a><span class="space"></span>pour obtenir des conseils, des conseils pratiques et d’autres informations utiles.
                             </div>
                             <div class="tch-feed-item event-placeholder event-authenticate">
                                 <div class="tch-arrow pull-left"></div><span class="space"></span><a ui-sref="admin.settings.plan({from_redirect_state: currentStateName })" class="feed-link feed-bold"
-                                  href="/admin/settings/plan?from_redirect_state=admin.onboarding">Upgrade your school plan</a> to enable custom domains, extensions, affiliates, and white-labeling.
+                                  href="/admin/settings/plan?from_redirect_state=admin.onboarding">Améliorez votre plan d'école</a> pour activer les domaines personnalisés, les extensions, les sociétés affiliées et le marquage blanc.
                             </div>
                             <div class="tch-feed-item event-placeholder event-authenticate">
-                                <div class="tch-arrow pull-left"></div><span class="space"></span><a ui-sref="admin.settings.payments" class="feed-link feed-bold" href="/admin/settings/payments">Setup payment methods</a> use Monthly Payment Gateway
-                                or receive payouts faster by setting up custom gateways.
+                                <div class="tch-arrow pull-left"></div><span class="space"></span><a ui-sref="admin.settings.payments" class="feed-link feed-bold" href="/admin/settings/payments">Configurer les moyens de paiement</a> utilisez la passerelle de paiement mensuel ou recevez des paiements plus rapidement en configurant des passerelles personnalisées.
                             </div>
                         </div>
                     </div>

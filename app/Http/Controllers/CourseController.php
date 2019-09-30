@@ -9,6 +9,7 @@ use App\Pricing;
 use Illuminate\Http\Request;
 use Auth;
 use Image;
+use App\Services\SlugCourse;
 
 class CourseController extends Controller
 {
@@ -59,6 +60,10 @@ class CourseController extends Controller
         $course = Course::where('name', $request->name)->first();
         if ($course === null) {
             $course = Course::create($request->all());
+
+          $slug = new SlugCourse();
+          $course->slug = $slug->createSlug($request->name);
+          $course->save();
             /*
             $category_id = Category::find($request->category_id);
             $course->categories()->attach($category_id);
@@ -83,6 +88,35 @@ class CourseController extends Controller
         return view('courses.show', ['course' => $course]);
     }
 
+
+    /**
+     * Display the specified resource, this time with slug.
+     *
+     * @param  \App\Course  $formation
+     * @return \Illuminate\Http\Response
+     */
+    public function showSlug($slug)
+    {
+        $course = Course::where('slug', $slug)->firstOrFail();
+
+        return view('courses.show', ['course' => $course]);
+    }
+
+
+
+    /**
+     * Display the specified resource, this time with slug.
+     *
+     * @param  \App\Course  $formation
+     * @return \Illuminate\Http\Response
+     */
+    public function showCurriculum($slug)
+    {
+        $course = Course::where('slug', $slug)->firstOrFail();
+
+        return view('courses.curriculum', ['course' => $course]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -93,6 +127,25 @@ class CourseController extends Controller
     {
         //
     }
+
+
+
+
+    public function updateCourseDescription(Request $request)
+    {
+        //$result = json_decode($request->getContent());
+
+        $data = Course::find($request->id);
+
+        $data->description = $request->description;
+
+        $data->save();
+
+        return response()->json($data);
+    }
+
+
+
 
     /**
      * Update the specified resource in storage.

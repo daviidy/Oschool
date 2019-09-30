@@ -435,9 +435,9 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <form method="post" action="{{route('pricings.store')}}" what="product form" name="inlinePricingForm" ng-submit="addPricingPlan()" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required" style="">
             <!---->
             <!---->
-            <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="#" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+            <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
                 <!----><a what="learn-more-about-subscriptions" ng-href="https://teachable.zendesk.com/hc/en-us/articles/219442088-Overview-of-Course-Pricing-Options" target="_blank" ng-if="planType == 'subscription'"
-                  class="tch-inline-support-article" href="https://teachable.zendesk.com/hc/en-us/articles/219442088-Overview-of-Course-Pricing-Options"><span>Learn more about Subscriptions</span></a>
+                  class="tch-inline-support-article" href="https://teachable.zendesk.com/hc/en-us/articles/219442088-Overview-of-Course-Pricing-Options"><span>En savoir plus sur les abonnements</span></a>
                 <!---->
                 <!---->
                 <!---->
@@ -478,7 +478,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <!---->
                     <div ng-show="products.length > 0" class="">
-                        <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" maxlength="100" placeholder="Name"
+                        <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" maxlength="100" placeholder="Nom de l'offre"
                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
 
                     </div>

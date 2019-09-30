@@ -11,13 +11,12 @@
     <script type="text/javascript" src="/js/index.js"></script>
     <script type="text/javascript" src="/js/slider.js"></script>
 
-
   </head>
 
   <body class="body-public  " cz-shortcut-listen="true">
     <div class="modal-background"></div>
 
-    <div class="exit-intent-modal-container modal-container vertically-align-contents">
+    <!--div class="exit-intent-modal-container modal-container vertically-align-contents">
       <div class="exit-intent-modal">
         <button type="button" class="close close-modal-button">
           ×
@@ -34,7 +33,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div-->
 
     <div class="notifications">
       <div class="hidden message-1">

@@ -295,6 +295,15 @@ ul{margin-top:0;margin-bottom:11px;}
 .tch-page-header .tch-btn-hamburger{margin-right:9px!important;float:left;margin-top:-6px!important;padding:5px 1px;margin-top:3px;text-align:center;}
 .tch-page-header .tch-btn-hamburger .tch-btn-header-icon{padding:0!important;border:0;color:#a9a9a9;}
 .tch-page-header .tch-btn-hamburger i{margin-right:0px;}
+.tch-page-header .tch-btn-header-icon-2{
+    left: 207px;
+    position: unset;
+    bottom: 74px;
+    z-index: 10000;
+    float: right;
+    margin-left: 86px;
+    display: none;
+}
 .tch-page-header i{margin-right:10px;}
 .tch-page-header button i{margin-right:0;}
 .tch-page-header .tch-btn-header-icon{padding:10px 15px;}
@@ -414,12 +423,19 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
                     <!---->Information
+
+                    <div class="tch-btn-header-icon-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="20" height="40"viewBox="0 0 172 172"style=" fill:#000000;position: relative;bottom: 8px;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g fill="#3498db"><path d="M129.07556,30.25717l12.67131,12.67175l-98.8199,98.81645l-12.67131,-12.67175z"></path><path d="M141.73757,129.08237l-12.67077,12.66723l-98.80691,-98.8345l12.67077,-12.66723z"></path></g><path d="" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path></g></g></svg>
+                    </div>
+
                 </div>
                 <!---->
                 <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
             </div>
             <!---->
         </div>
+        <script type="text/javascript" src="/js/admin_views/menu.js"></script>
+
     </div>
     <!---->
     <!---->
@@ -746,6 +762,90 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     <!---->
     <!---->
 
+        {{-- Description longue  --}}
+
+    <ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-school">
+        <form id="formId" method="post" enctype="multipart/form-data" action="{{url('courses', $course)}}" name="settingsCourseForm" class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength">
+            <div ng-show="!section.if || section.if()" id="section-school" class="row tch-section-wrapper" section="section" save="true">
+                {{ csrf_field() }}
+                {{ method_field('patch') }}
+                <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
+                    <!---->
+                    <!---->
+                    <h2 ng-if="section.name" class="tch-subheading">
+                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Description du cours</span>
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!----><br ng-if="!removeDescriptionLineBreak">
+                        <!---->
+                        <p ng-bind-html="section.description" what="section-description" class="small">Présentez votre cours comme il se doit ;)</p>
+                        <!---->
+                        <!---->
+                    </h2>
+                    <!---->
+                </div>
+                <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
+                    <div ng-transclude="">
+
+                        <div form="settingsSchoolForm" label="Homepage Description" for="homepage_description">
+                            <!---->
+                            <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group">
+                                <label-block required-label="requiredLabel">
+                                    <!---->
+                                    <!----><label for="homepage_description" ng-if="label" class="control-label">
+                                        <!----><span ng-bind="label">Description du cours</span>
+                                        <!----></label>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </label-block>
+                                <input name="description" type="hidden">
+                                <input style="display: none;" id="courseDescription" type="text" name="id" value="{{$course->id}}">
+                                <div class="editor-container">
+
+                                    <div id="course-description">
+
+                                        @if($course->description)
+                                        {!!$course->description!!}
+                                        @endif
+
+                                     </div>
+
+                                </div>
+
+                                <help-block>
+                                    <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+
+                                    </ng-messages>
+                                    <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="homepage_description" class="help-block ng-hide"></div>
+                                </help-block>
+                            </div>
+                            <!---->
+                            <!---->
+                        </div>
+
+
+
+
+                    </div>
+                    <div ng-show="showButtonsBar" class="tab-bottom">
+                        <!---->
+                        <!---->
+                        <!----><button id="save-course-basic-infos"  type="submit" class="tch-btn-header-primary">Enregistrer</button>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ng-include>
+
+
+ {{-- Fin de la description longue --}}
+
+
+
     <ng-include src="'courses/course/information/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-branding">
         <div ng-show="!section.if || section.if()" id="section-branding" class="row tch-section-wrapper" section="section">
             <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
@@ -943,6 +1043,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
 </div>
 
-<!--fin popup-->
+
+
+
+
+
+
+
 
 @endsection

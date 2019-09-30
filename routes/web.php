@@ -55,6 +55,7 @@ Route::get('/owner', 'OwnerController@owner')
 //Ajax Routes
 
 Route::post('/updateSchoolStatus', 'SchoolController@updateSchoolStatus');
+Route::post('/updateCourseDescription', 'CourseController@updateCourseDescription');
 Route::post('/deleteSchool', 'SchoolController@deleteSchool');
 Route::post('/updateSchool', 'SchoolController@updateSchool');
 Route::post('/addAuthor', 'SchoolController@addAuthor');
@@ -150,3 +151,9 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pricing', 'CourseController@c
 
 Route::get('/schoolAdmin/{school}/courses/{course}/certificate', 'CourseController@courseCerficate');
 */
+
+
+//vue pour le front end
+Route::get('/course/{slug}', 'CourseController@showSlug')->name('course.slug');
+Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('enrolled.slug');
+Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');

@@ -4,7 +4,7 @@
             <!---->
             <div class="title ng-star-inserted">Les avantages de cette école</div>
             <!---->
-            <div class="subtitle ng-star-inserted">We provide services customized for your needs at every step of your learning journey to ensure your success!</div>
+            <div class="subtitle ng-star-inserted">Nous fournissons des services adaptés à vos besoins à chaque étape de votre parcours d’apprentissage pour assurer votre succès!</div>
             <!---->
             <div class="tabs">
                 <!---->

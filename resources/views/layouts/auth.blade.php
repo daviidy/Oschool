@@ -5,12 +5,10 @@
   <!-- GOOGLE OPTIMIZE MINIMIZE FLICKER -->
   <link rel="stylesheet" href="/css/auth/signup.css">
 
-  <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
-
   <title>Authentification | Oschool</title>
   <meta property="og:title" content="Create an Account | Teachable">
   <meta property="twitter:title" content="Create an Account | Teachable">
-
+<meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
   <meta name="description" content="Sign up for a Teachable account.">
   <meta name="og:description" content="Sign up for a Teachable account.">
   <meta name="twitter:description" content="Sign up for a Teachable account.">

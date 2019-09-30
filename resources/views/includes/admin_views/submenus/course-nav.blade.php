@@ -7,7 +7,7 @@
             <div class="row">
                 <div ng-bind="course.name" class="placeholder-course-name">{{$course->name}}</div>
             </div>
-            <div class="row"><a href="{{url('courses', $course)}}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
+            <div class="row"><a href="{{ route('course.slug', $course->slug) }}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
         </div>
         <!---->
     </div>
