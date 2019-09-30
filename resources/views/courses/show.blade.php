@@ -638,7 +638,7 @@ section.pricing {
                 <br>
                 <button id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" type="submit" value="Enroll in Course for $52">
                   <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
-                  Enroll in Course for
+                  Inscrit toi au cours pour
                   <span class="default-product-price product_7141">$52</span>
                   <span class="coupon-price product_7141"></span>
                 </button>
@@ -663,14 +663,11 @@ section.pricing {
               <h6 class="card-price text-center">{{$pricing->price}} FCFA <span class="period">/month</span></h6>
               <hr>
               <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects</li>
-                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support</li>
-                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
-                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Un seul utilisateur</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Mentoring</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Test</li>
+                {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li> --}}
+                {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li> --}}
               </ul>
               <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
             </div>
