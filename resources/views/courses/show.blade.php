@@ -152,7 +152,7 @@ button{line-height:inherit;}
 .Col_i9j08c-o_O-xsCol12_1m1ceo5-o_O-mdCol6_1rbv01c:after{display:table;clear:both;}
 @media (min-width: 320px){
   .EnrollSectionSCDP{
-    margin-bottom: 500px;
+    /* margin-bottom: 500px; */
   }
 
 .Col_i9j08c-o_O-xsCol12_1m1ceo5-o_O-mdCol6_1rbv01c{width:100%;}
@@ -182,6 +182,82 @@ button{line-height:inherit;}
 @font-face{font-family:OpenSans-Bold;font-weight:700;src:url(https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.eot);src:url(https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.eot#iefix) format("embedded-opentype"),url(https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.woff2) format("woff2"),url(https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.woff) format("woff"),url(https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.ttf) format("truetype"),url(https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.svg#OpenSans-Bold) format("svg");}
 </style>
 
+
+<style>
+
+.row{
+  padding: 20px 0;
+}
+.card-body{
+  padding: 30px 30px;
+}
+
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing hr {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pricing .card-price .period {
+
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing .btn {
+  font-size: 100%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+
+.fa-ul li{
+  font-size: 1.5rem;
+}
+
+.title-price{
+  text-align: center;
+}
+</style>
 
 
 <div class="blocks-page blocks-page-course_sales_page " id="blocks-page-164508">
@@ -214,12 +290,12 @@ button{line-height:inherit;}
               <input type="hidden" name="school_domain" value="https://courses.52kards.com" id="school_domain">
               <input type="hidden" name="product_id" value="7141" id="product_id">
               <input type="hidden" name="user_src" value="teachable-examples" id="user_src">
-              <button id="enroll-button-top" data-course-id="7169" class="btn btn-hg btn-primary btn-header-enroll" type="submit">
+              <a id="enroll-button-top" data-course-id="7169" class="btn btn-hg btn-primary btn-header-enroll" href="#price">
                 <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
                 S'inscrire au cours
                 {{-- <span class="default-product-price product_7141">$52</span> --}}
                 <span class="coupon-price product_7141"></span>
-              </button>
+              </a>
             </form>
           </div>
         </div>
@@ -501,18 +577,19 @@ button{line-height:inherit;}
   </div>
 
   <br>
+ 
 
   <div class="course-block block checkout odd-stripe" id="block-183312">
     <div class="checkout-cta">
       <h2>
 
-        Get started now!
+        Commencez maintenant !
       </h2>
     </div>
     <div class="container" id="pricing-options">
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-          <form action="/purchase" class="new_sale" id="new_sale" method="get">
+          <form action="purchase" class="new_sale" id="new_sale" method="get">
             <input type="hidden" name="utf8" value="✓">
             <input type="hidden" name="course_id" value="7169" id="course_id">
             <input type="hidden" name="coupon_code" value="" id="coupon_code">
@@ -551,14 +628,15 @@ button{line-height:inherit;}
               </label>
             </div>
             <div class="row">
-              <center>
+              <center style="
+              margin: 0 auto;
+          ">
                 <br>
-                <button id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" type="submit" value="Enroll in Course for $52">
+                <a id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" href="#price"value="Enroll in Course for $52">
                   <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
-                  Enroll in Course for
-                  <span class="default-product-price product_7141">$52</span>
+                  Inscrit toi
                   <span class="coupon-price product_7141"></span>
-                </button>
+                </a>
                 <br>
               </center>
             </div>
@@ -568,6 +646,35 @@ button{line-height:inherit;}
     </div>
 
   </div>
+  <section class="pricing py-5" id="price">
+    <div class="container">
+      <h1 class="title-price">Nos offres de prix</h1>
+      <div class="row">
+        <!-- Free Tier -->
+        @foreach($course->pricings as $pricing)
+        <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">{{$pricing->name}}</h5>
+            <h6 class="card-price text-center">{{$pricing->price}} FCFA <span class="period">/ {{$pricing->per == 'month' ? 'Mois' : ''}}</span></h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Un seul utilisateur</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Mentoring</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Test</li>
+                {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li> --}}
+                {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li> --}}
+              </ul>
+              <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+            </div>
+          </div>
+        </div>
+        @endforeach
+      </div>
+    </div>
+  </section>
+
+  <br>
 </div>
 
 
