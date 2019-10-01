@@ -125,6 +125,7 @@
         </div>
         </div>
     </div>
+    <!--MOBILE OGLET GENERALE-->
     <div class="hidden-lg-up mobile">
         <div class="contain">
             <!---->
@@ -137,7 +138,7 @@
             <div class="tab--bar">
                 <!---->
 
-                  <div class="tab--container ng-star-inserted inactive">
+                  <div class="tab--container ng-star-inserted inactive ">
                     <a href="#5">
                       <div class="tab--title">Project Reviewers</div><img class="active-arrow-icon" src="https://www.udacity.com/assets/iridium/images/shared/icons/orange_arrow.svg">
                     </a>
@@ -260,13 +261,16 @@ $('.tabs a:first').trigger('click'); // Default
 
 $('.tab--bar a').on('click', function (event) {
     event.preventDefault();
-
-    $('.active').removeClass('active');
-    $(this).parent().addClass('active');
+    var active_tab_selector = $('.tab--container > a').attr('href');
+    var actived_nav = $('.tab--container');
+		actived_nav.removeClass('active');
+    actived_nav.addClass('inactive');
+    $(this).parents('.tab--container').addClass('active');
+    $(active_tab_selector).removeClass('active');
+		$(active_tab_selector).addClass('inactive');
     $('.contain .tab-panel').hide();
     $($(this).attr('href')).show();
 });
 
-
-
+$('.tab--bar a:second').trigger('click'); // Default
 </script>

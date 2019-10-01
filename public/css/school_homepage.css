@@ -596,6 +596,7 @@
   .mobile .tabs .tab--container.inactive{opacity:0.5;}
   .mobile .tabs .tab--container.inactive:hover{opacity:1;}
   .mobile .tabs .tab--container.inactive .active-arrow-icon{display:none;}
+  .mobile .tabs .tab--container.active .active-arrow-icon{display:block;}
   .mobile .tabs .tab--container .active-arrow-icon{-webkit-transform:rotate(-90deg);transform:rotate(-90deg);position:absolute;bottom:-0.75rem;left:calc(50% - 13px);}
   .tab-panel{float:left;display:block;margin-right:1.69491525%;width:100%;padding:0 1rem;margin-top:3rem;}
   .tab-panel:last-child{margin-right:0;}
@@ -666,6 +667,8 @@
   .mobile .tabs .tab--container.inactive{opacity:0.5;}
   .mobile .tabs .tab--container.inactive:hover{opacity:1;}
   .mobile .tabs .tab--container.inactive .active-arrow-icon{display:none;}
+  .mobile .tabs .tab--container.active .active-arrow-icon{display:block;}
+
   .mobile .tabs .tab--container .active-arrow-icon{-webkit-transform:rotate(-90deg);transform:rotate(-90deg);position:absolute;bottom:-0.75rem;left:calc(50% - 13px);}
   .tab-panel{float:left;display:block;margin-right:1.69491525%;width:100%;padding:0 1rem;margin-top:3rem;}
   .tab-panel:last-child{margin-right:0;}
