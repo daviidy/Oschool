@@ -73,14 +73,10 @@
             </div>
           </a>
         </li>
-
       </ul>
     </div> --}}
-
-
-
-    @if($course->sections)
-    @foreach($course->sections->sortBy('position') as $section)
+    @if($lesson->course->sections)
+    @foreach($lesson->course->sections->sortBy('position') as $section)
     <div class="col-sm-12 course-section">
       <div class="section-title" data-release-date="" data-days-until-dripped="" data-is-dripped-by-date="" data-course-id="532534">
         <span class="section-lock">
@@ -89,10 +85,8 @@
         {{$section->title}}
       </div>
       <ul class="section-list">
-
         @if($section->lessons)
         @foreach($section->lessons->sortBy('position') as $lesson)
-
         <li data-lecture-id="10371330" data-lecture-url="/courses/fast-start-trading-system/lectures/10371330" class="section-item incomplete">
           <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10371330" id="sidebar_link_10371330">
             <span class="status-container">
@@ -111,16 +105,13 @@
             </div>
           </a>
         </li>
-
         @endforeach
         @endif
-
       </ul>
     </div>
-
+    @endforeach
+    @endif
   </div>
-  @endforeach
-  @endif
 </div>
 
 
@@ -132,7 +123,7 @@
     data-previous-lecture-url="" data-previous-lecture-id="">
     <i class="fa fa-youtube-play"></i>
     &nbsp;
-    Welcome To The Course!
+    Bienvenue dans ce cours
   </h2>
 
   <!-- Attachment Blocks -->
@@ -1306,8 +1297,18 @@
                         border-radius: 0 !important;
                         color: #fff !important;
                       }
+
+
+                      iframe{
+                        width: 100%;
+                        margin: 0 auto;
+                      }
+
+
+
                     </style>
-                    <div class="w-vulcan-v2 w-css-reset" id="w-vulcan-v2-33" style="box-sizing: border-box; cursor: default; height: 100%; left: 0px; position: absolute; visibility: visible; top: 0px; width: 100%;">
+                     {!!$lesson->video!!}
+                      {{-- <div class="w-vulcan-v2 w-css-reset" id="w-vulcan-v2-33" style="box-sizing: border-box; cursor: default; height: 100%; left: 0px; position: absolute; visibility: visible; top: 0px; width: 100%;">
                       <div class="w-vulcan--background w-css-reset" style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
                         <div class="w-css-reset" data-handle="statusBar"></div>
                         <div class="w-css-reset" data-handle="backgroundFocus"><button aria-label="Play Video" class="w-css-reset w-vulcan-v2-button" tabindex="0" style="width: 0px; height: 0px; pointer-events: none;"></button></div>
@@ -1547,7 +1548,7 @@
                           <div class="w-focus-outline" style="box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px inset; display: none; height: 100%; left: 0px; pointer-events: none; position: absolute; right: 0px; width: 100%;"></div>
                         </div>
                       </div>
-                    </div>
+                    </div> --}}
                   </div>
                 </div>
                 <div id="wistia_grid_34_front"></div>
@@ -1695,7 +1696,7 @@
     <div class="attachment-data"></div>
 
     <div class="attachment-data"></div>
-    <div class="lecture-text-container">
+    {{-- <div class="lecture-text-container">
       <p></p>
       <p>Most traders have their attention on one thing. When to enter and exit a trade, which is very important.</p>
       <p>More important is each strategy individually and mastering each strategy. As you go through this course put your attention on each strategy individually and make sure you can apply it! </p>
@@ -1717,6 +1718,11 @@
       <p>IF YOU HAVE ANY QUESTIONS ABOUT YOUR ACCOUNT PLEASE REACH OUT TO US.</p>
       <p>For technical questions relating to trading email Leo at <a href="mailto:leo@thetradeacademy.com" target="_blank">leo@thetradeacademy.com</a></p>
       <p>For account questions email our support team: happy@thetradeacademy.com</p>
+      <p></p>
+    </div> --}}
+    <div class="lecture-text-container">
+      <p></p>
+      <p>{!!$lesson->full_text!!}</p>
       <p></p>
     </div>
 
