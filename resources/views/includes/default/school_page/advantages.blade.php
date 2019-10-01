@@ -31,7 +31,7 @@
                   <a href="#3">
                     <img class="tab--icon" src="//images.ctfassets.net/2y9b3o528xhq/1wiqpVycnZpnTjY3fP23DO/4140ec14bc7c4432ba529b192b9afa9d/icon_person_wearing_suit_purple_on_white.svg">
                       <div class="tab--container">
-                          <div class="tab--title">Personal Career Coach</div>
+                          <div class="tab--title">Coach personnel</div>
                       </div>
                   </div>
                   </a>
@@ -44,7 +44,7 @@
             <div id="1" class=" ng-star-inserted">
                 <div class="h4 tab-panel--title">Individual 1-on-1 Mentorship</div>
                 <div class="statistics-section">
-                    <div class="h6 tab-panel--section-title"> Mentors by the numbers </div>
+                    <div class="h6 tab-panel--section-title"> Les mentors en chiffres </div>
                     <div class="statistics">
                         <!---->
                         <div class="statistic "><span class="statistic-quantity">1000+</span> technical mentors</div>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="list-section">
-                    <div class="h6 tab-panel--section-title"> Mentorship Services </div>
+                    <div class="h6 tab-panel--section-title"> PRESTATIONS DE SERVICE </div>
                     <ul>
                         <!---->
                         <li class="">6+ hrs of mentor support per month</li>
@@ -71,7 +71,7 @@
             <div id="2" class=" ng-star-inserted" style="display:none;">
                 <div class="h4 tab-panel--title">ATELIER collectifs</div>
                 <div class="statistics-section">
-                    <div class="h6 tab-panel--section-title"> Mentors by the numbers </div>
+                    <div class="h6 tab-panel--section-title"> Les mentors en chiffres </div>
                     <div class="statistics">
                         <!---->
                         <div class="statistic "><span class="statistic-quantity">1000+</span> technical mentors</div>
@@ -125,6 +125,7 @@
         </div>
         </div>
     </div>
+    <!--MOBILE OGLET GENERALE-->
     <div class="hidden-lg-up mobile">
         <div class="contain">
             <!---->
@@ -137,9 +138,9 @@
             <div class="tab--bar">
                 <!---->
 
-                  <div class="tab--container ng-star-inserted inactive">
+                  <div class="tab--container ng-star-inserted inactive ">
                     <a href="#5">
-                      <div class="tab--title">Project Reviewers</div><img class="active-arrow-icon" src="https://www.udacity.com/assets/iridium/images/shared/icons/orange_arrow.svg">
+                      <div class="tab--title">ATELIER collectifs</div><img class="active-arrow-icon" src="https://www.udacity.com/assets/iridium/images/shared/icons/orange_arrow.svg">
                     </a>
                   </div>
 
@@ -147,14 +148,14 @@
 
                   <div class="tab--container ng-star-inserted active">
                     <a href="#4">
-                      <div class="tab--title">1-on-1 Mentors</div><img class="active-arrow-icon" src="https://www.udacity.com/assets/iridium/images/shared/icons/orange_arrow.svg">
+                      <div class="tab--title">Pédagogie Active</div><img class="active-arrow-icon" src="https://www.udacity.com/assets/iridium/images/shared/icons/orange_arrow.svg">
                     </a>
                   </div>
 
 
                   <div class="tab--container ng-star-inserted inactive">
                     <a href="#6">
-                      <div class="tab--title">Career Coaching</div><img class="active-arrow-icon" src="https://www.udacity.com/assets/iridium/images/shared/icons/orange_arrow.svg">
+                      <div class="tab--title">Coach personnel</div><img class="active-arrow-icon" src="https://www.udacity.com/assets/iridium/images/shared/icons/orange_arrow.svg">
                     </a>
                   </div>
 
@@ -164,7 +165,7 @@
         <div class="contain">
             <!--ONGLET MOBILE1-->
             <div id="4" class="tab-panel 1 ng-star-inserted">
-                <div class="h4 tab-panel--title">Individual 1-on-1 Mentorship</div>
+                <div class="h4 tab-panel--title">Pédagogie Active</div>
                 <div class="statistics-section">
                     <div class="h6 tab-panel--section-title"> Mentors by the numbers </div>
                     <div class="statistics">
@@ -174,7 +175,7 @@
                     </div>
                 </div>
                 <div class="list-section">
-                    <div class="h6 tab-panel--section-title"> Mentorship Services </div>
+                    <div class="h6 tab-panel--section-title"> Coach personnel</div>
                     <ul>
                         <!---->
                         <li class="">6+ hrs of mentor support per month</li>
@@ -244,29 +245,4 @@
         </div>
     </div>
 </section>
-<script type="text/javascript">
-$('.tabs a').on('click', function (event) {
-    event.preventDefault();
-
-    $('.active').removeClass('active');
-    $(this).parent().addClass('active');
-    $('.tab-panel .ng-star-inserted').hide();
-    $($(this).attr('href')).show();
-});
-
-$('.tabs a:first').trigger('click'); // Default
-
-//mobile ONGLET
-
-$('.tab--bar a').on('click', function (event) {
-    event.preventDefault();
-
-    $('.active').removeClass('active');
-    $(this).parent().addClass('active');
-    $('.contain .tab-panel').hide();
-    $($(this).attr('href')).show();
-});
-
-
-
-</script>
+<script type="text/javascript" src="/js/admin_views/curriculum.js"></script>

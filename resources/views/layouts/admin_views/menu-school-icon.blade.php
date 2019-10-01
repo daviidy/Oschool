@@ -428,7 +428,6 @@
   theme: 'snow'  // or 'bubble'
   };
   var quill = new Quill('#site-description', options);
-  var quill2 = new Quill('#course-description', options);
 
   //mise a jour description ecole
 
@@ -467,44 +466,6 @@
 
 
   //fin mise a jour description ecole
-
-
-
-
-  //description longue course
-
-
-  //recuperation de la description ecole
-  var form_course = document.getElementById("formId");
-  if (form_course) {
-
-      form_course.onsubmit = function() {
-      // Populate hidden form on submit
-
-
-
-      $.ajax({
-          type: 'post',
-          url: '/updateCourseDescription',
-          data: {
-              '_token': '{{csrf_token()}}',
-              'id': $("#courseDescription").val(),
-              'description': quill2.root.innerHTML,
-
-          },
-          success: function(data) {
-              $.amaran({'message':"Modifications enregistrées!"});
-
-          },
-          error: function (xhr, msg) {
-            console.log(msg + '\n' + xhr.responseText);
-        }
-      });
-
-      return false;
-      };
-
-  }
 
 
 
@@ -636,9 +597,9 @@ $('#updateLecture').on('click', function() {
 
 
         },
-        error: function (xhr, msg) {
-          console.log(msg + '\n' + xhr.responseText);
-      }
+        error: function(){
+            alert('erreur');
+        }
     });
 });
 
