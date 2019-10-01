@@ -5,7 +5,7 @@
 <div class="course-sidebar">
   <!-- Image & Title -->
   <img class="course-image" src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/p80Kxx3FR7medztw7Ccn">
-  <h2>Fast Start Trading System</h2>
+  <h2>{{$course->name}}</h2>
   <!-- Course Progress -->
   <div class="course-progress">
     <div class="progressbar">
