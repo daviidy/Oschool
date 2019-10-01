@@ -36,7 +36,7 @@
         <span class="lecture-sidebar-icon">
           <i class="fa fa-user"></i>
         </span>
-        Votre instructeur
+        Votre instructeur : {{$course->author->full_name}}
       </a>
     </li>
 
