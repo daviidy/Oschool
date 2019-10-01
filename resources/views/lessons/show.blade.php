@@ -1297,8 +1297,17 @@
                         border-radius: 0 !important;
                         color: #fff !important;
                       }
+
+
+                      iframe{
+                        width: 100%;
+                        margin: 0 auto;
+                      }
+
+
+
                     </style>
-                      <iframe src="https://player.vimeo.com/video/{{$lesson->video}}?title=0&byline=0&portrait=0" width="1040" height="460" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                     {!!$lesson->video!!}
                       {{-- <div class="w-vulcan-v2 w-css-reset" id="w-vulcan-v2-33" style="box-sizing: border-box; cursor: default; height: 100%; left: 0px; position: absolute; visibility: visible; top: 0px; width: 100%;">
                       <div class="w-vulcan--background w-css-reset" style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
                         <div class="w-css-reset" data-handle="statusBar"></div>
