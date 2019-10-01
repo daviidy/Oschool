@@ -44,7 +44,7 @@
             <div id="1" class=" ng-star-inserted">
                 <div class="h4 tab-panel--title">Individual 1-on-1 Mentorship</div>
                 <div class="statistics-section">
-                    <div class="h6 tab-panel--section-title"> Mentors by the numbers </div>
+                    <div class="h6 tab-panel--section-title"> Les mentors en chiffres </div>
                     <div class="statistics">
                         <!---->
                         <div class="statistic "><span class="statistic-quantity">1000+</span> technical mentors</div>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="list-section">
-                    <div class="h6 tab-panel--section-title"> Mentorship Services </div>
+                    <div class="h6 tab-panel--section-title"> PRESTATIONS DE SERVICE </div>
                     <ul>
                         <!---->
                         <li class="">6+ hrs of mentor support per month</li>
@@ -71,7 +71,7 @@
             <div id="2" class=" ng-star-inserted" style="display:none;">
                 <div class="h4 tab-panel--title">ATELIER collectifs</div>
                 <div class="statistics-section">
-                    <div class="h6 tab-panel--section-title"> Mentors by the numbers </div>
+                    <div class="h6 tab-panel--section-title"> Les mentors en chiffres </div>
                     <div class="statistics">
                         <!---->
                         <div class="statistic "><span class="statistic-quantity">1000+</span> technical mentors</div>
