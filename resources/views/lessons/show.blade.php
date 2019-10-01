@@ -4,7 +4,7 @@
 
 
 <div class="course-sidebar lecture-page navbar-collapse navbar-sidebar-collapse collapse" id="courseSidebar" aria-expanded="false" style="height: 31px;">
-  <h2 style="padding-bottom: 0px">Fast Start Trading System</h2>
+  <h2 style="padding-bottom: 0px">Programme du cours</h2>
   <!-- Course Progress -->
 
   <div class="course-progress lecture-page is-at-top">
@@ -23,7 +23,7 @@
 
   <div class="row lecture-sidebar">
 
-    <div class="col-sm-12 course-section">
+    {{-- <div class="col-sm-12 course-section">
       <div class="section-title" data-release-date="" data-days-until-dripped="" data-is-dripped-by-date="" data-course-id="532534">
         <span class="section-lock">
           <i class="fa fa-lock"></i>&nbsp;
@@ -73,765 +73,20 @@
             </div>
           </a>
         </li>
-
-        <li data-lecture-id="10371384" data-lecture-url="/courses/fast-start-trading-system/lectures/10371384" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10371384" id="sidebar_link_10371384">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                How To Study This Course
-
-                (3:59)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10385781" data-lecture-url="/courses/fast-start-trading-system/lectures/10385781" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10385781" id="sidebar_link_10385781">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                What Is Trading
-
-                (4:34)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493040" data-lecture-url="/courses/fast-start-trading-system/lectures/10493040" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493040" id="sidebar_link_10493040">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                What Is Forex
-
-                (6:15)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10371886" data-lecture-url="/courses/fast-start-trading-system/lectures/10371886" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10371886" id="sidebar_link_10371886">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                What Are We Trading?
-
-                (1:47)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10371542" data-lecture-url="/courses/fast-start-trading-system/lectures/10371542" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10371542" id="sidebar_link_10371542">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Major Currencies
-
-                (3:11)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10371919" data-lecture-url="/courses/fast-start-trading-system/lectures/10371919" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10371919" id="sidebar_link_10371919">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Buying VS Selling
-
-                (2:00)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493138" data-lecture-url="/courses/fast-start-trading-system/lectures/10493138" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493138" id="sidebar_link_10493138">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                When Can You Trade Forex? (The 4 Major Markets)
-
-                (4:20)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
       </ul>
-    </div>
-
+    </div> --}}
+    @if($lesson->course->sections)
+    @foreach($lesson->course->sections->sortBy('position') as $section)
     <div class="col-sm-12 course-section">
       <div class="section-title" data-release-date="" data-days-until-dripped="" data-is-dripped-by-date="" data-course-id="532534">
         <span class="section-lock">
           <i class="fa fa-lock"></i>&nbsp;
         </span>
-        Trade Set Up / Key Terms
+        {{$section->title}}
       </div>
       <ul class="section-list">
-
-        <li data-lecture-id="10371967" data-lecture-url="/courses/fast-start-trading-system/lectures/10371967" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10371967" id="sidebar_link_10371967">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                What You Need To Trade
-
-                (1:43)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10399129" data-lecture-url="/courses/fast-start-trading-system/lectures/10399129" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10399129" id="sidebar_link_10399129">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-file-text"></i>
-              </span>
-              <span class="lecture-name">
-                MetaTrader 4
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10399501" data-lecture-url="/courses/fast-start-trading-system/lectures/10399501" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10399501" id="sidebar_link_10399501">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-file-text"></i>
-              </span>
-              <span class="lecture-name">
-                TradingView
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493242" data-lecture-url="/courses/fast-start-trading-system/lectures/10493242" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493242" id="sidebar_link_10493242">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                PIP
-
-                (0:43)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493336" data-lecture-url="/courses/fast-start-trading-system/lectures/10493336" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493336" id="sidebar_link_10493336">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Lot
-
-                (1:19)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493532" data-lecture-url="/courses/fast-start-trading-system/lectures/10493532" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493532" id="sidebar_link_10493532">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Bid and Ask Price
-
-                (0:41)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493563" data-lecture-url="/courses/fast-start-trading-system/lectures/10493563" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493563" id="sidebar_link_10493563">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Spread
-
-                (0:47)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493634" data-lecture-url="/courses/fast-start-trading-system/lectures/10493634" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493634" id="sidebar_link_10493634">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Demo Account
-
-                (0:29)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493705" data-lecture-url="/courses/fast-start-trading-system/lectures/10493705" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493705" id="sidebar_link_10493705">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Live Account
-
-                (0:28)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493712" data-lecture-url="/courses/fast-start-trading-system/lectures/10493712" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493712" id="sidebar_link_10493712">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Broker
-
-                (0:46)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493755" data-lecture-url="/courses/fast-start-trading-system/lectures/10493755" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493755" id="sidebar_link_10493755">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Commission
-
-                (0:27)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493769" data-lecture-url="/courses/fast-start-trading-system/lectures/10493769" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493769" id="sidebar_link_10493769">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                MT4 Full Walkthrough, Entering a Trade, How To Take Partial Profits
-
-                (8:01)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493829" data-lecture-url="/courses/fast-start-trading-system/lectures/10493829" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493829" id="sidebar_link_10493829">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Technical Analysis
-
-                (1:17)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10371986" data-lecture-url="/courses/fast-start-trading-system/lectures/10371986" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10371986" id="sidebar_link_10371986">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                What The Market Is Made Of (Candlesticks)
-
-                (3:13)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-      </ul>
-    </div>
-
-    <div class="col-sm-12 course-section">
-      <div class="section-title" data-release-date="" data-days-until-dripped="" data-is-dripped-by-date="" data-course-id="532534">
-        <span class="section-lock">
-          <i class="fa fa-lock"></i>&nbsp;
-        </span>
-        Part 1
-      </div>
-      <ul class="section-list">
-
-        <li data-lecture-id="10372027" data-lecture-url="/courses/fast-start-trading-system/lectures/10372027" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10372027" id="sidebar_link_10372027">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Understanding Different Timeframes
-
-                (2:24)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10493877" data-lecture-url="/courses/fast-start-trading-system/lectures/10493877" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10493877" id="sidebar_link_10493877">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Different Market Phases Part 2
-
-                (6:24)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10372053" data-lecture-url="/courses/fast-start-trading-system/lectures/10372053" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10372053" id="sidebar_link_10372053">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Different Market Phases Part 1
-
-                (2:21)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10494124" data-lecture-url="/courses/fast-start-trading-system/lectures/10494124" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10494124" id="sidebar_link_10494124">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Uptrend Market Structure
-
-                (7:09)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10494165" data-lecture-url="/courses/fast-start-trading-system/lectures/10494165" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10494165" id="sidebar_link_10494165">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Downtrend Market Structure
-
-                (3:55)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10494187" data-lecture-url="/courses/fast-start-trading-system/lectures/10494187" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10494187" id="sidebar_link_10494187">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Consolidation
-
-                (2:48)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10372068" data-lecture-url="/courses/fast-start-trading-system/lectures/10372068" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10372068" id="sidebar_link_10372068">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Trendlines
-
-                (5:07)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-      </ul>
-    </div>
-
-    <div class="col-sm-12 course-section">
-      <div class="section-title" data-release-date="" data-days-until-dripped="" data-is-dripped-by-date="" data-course-id="532534">
-        <span class="section-lock">
-          <i class="fa fa-lock"></i>&nbsp;
-        </span>
-        Part 2
-      </div>
-      <ul class="section-list">
-
-        <li data-lecture-id="10372079" data-lecture-url="/courses/fast-start-trading-system/lectures/10372079" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10372079" id="sidebar_link_10372079">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Support &amp; Resistance
-
-                (3:20)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10372956" data-lecture-url="/courses/fast-start-trading-system/lectures/10372956" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10372956" id="sidebar_link_10372956">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Combining Our Tools
-
-                (2:51)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="9698860" data-lecture-url="/courses/fast-start-trading-system/lectures/9698860" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/9698860" id="sidebar_link_9698860">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Learn the Wealth Building Formula
-
-                (3:44)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="9699014" data-lecture-url="/courses/fast-start-trading-system/lectures/9699014" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/9699014" id="sidebar_link_9699014">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Create
-
-                (2:46)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="9699019" data-lecture-url="/courses/fast-start-trading-system/lectures/9699019" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/9699019" id="sidebar_link_9699019">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Keep
-
-                (2:44)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="9710579" data-lecture-url="/courses/fast-start-trading-system/lectures/9710579" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/9710579" id="sidebar_link_9710579">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Multiply
-
-                (3:26)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-      </ul>
-    </div>
-
-    <div class="col-sm-12 course-section">
-      <div class="section-title" data-release-date="" data-days-until-dripped="" data-is-dripped-by-date="" data-course-id="532534">
-        <span class="section-lock">
-          <i class="fa fa-lock"></i>&nbsp;
-        </span>
-        BONUS WEBINAR
-      </div>
-      <ul class="section-list">
-
+        @if($section->lessons)
+        @foreach($section->lessons->sortBy('position') as $lesson)
         <li data-lecture-id="10371330" data-lecture-url="/courses/fast-start-trading-system/lectures/10371330" class="section-item incomplete">
           <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10371330" id="sidebar_link_10371330">
             <span class="status-container">
@@ -844,18 +99,18 @@
                 <i class="fa fa-youtube-play"></i>
               </span>
               <span class="lecture-name">
-                Inner Circle Webinar
-
-                (84:23)
+                {{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}
 
               </span>
             </div>
           </a>
         </li>
-
+        @endforeach
+        @endif
       </ul>
     </div>
-
+    @endforeach
+    @endif
   </div>
 </div>
 
@@ -868,7 +123,7 @@
     data-previous-lecture-url="" data-previous-lecture-id="">
     <i class="fa fa-youtube-play"></i>
     &nbsp;
-    Welcome To The Course!
+    Bienvenue dans ce cours
   </h2>
 
   <!-- Attachment Blocks -->
@@ -2043,7 +1298,8 @@
                         color: #fff !important;
                       }
                     </style>
-                    <div class="w-vulcan-v2 w-css-reset" id="w-vulcan-v2-33" style="box-sizing: border-box; cursor: default; height: 100%; left: 0px; position: absolute; visibility: visible; top: 0px; width: 100%;">
+                      <iframe src="https://player.vimeo.com/video/{{$lesson->video}}?title=0&byline=0&portrait=0" width="1040" height="460" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                      {{-- <div class="w-vulcan-v2 w-css-reset" id="w-vulcan-v2-33" style="box-sizing: border-box; cursor: default; height: 100%; left: 0px; position: absolute; visibility: visible; top: 0px; width: 100%;">
                       <div class="w-vulcan--background w-css-reset" style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
                         <div class="w-css-reset" data-handle="statusBar"></div>
                         <div class="w-css-reset" data-handle="backgroundFocus"><button aria-label="Play Video" class="w-css-reset w-vulcan-v2-button" tabindex="0" style="width: 0px; height: 0px; pointer-events: none;"></button></div>
@@ -2283,7 +1539,7 @@
                           <div class="w-focus-outline" style="box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px inset; display: none; height: 100%; left: 0px; pointer-events: none; position: absolute; right: 0px; width: 100%;"></div>
                         </div>
                       </div>
-                    </div>
+                    </div> --}}
                   </div>
                 </div>
                 <div id="wistia_grid_34_front"></div>
@@ -2431,7 +1687,7 @@
     <div class="attachment-data"></div>
 
     <div class="attachment-data"></div>
-    <div class="lecture-text-container">
+    {{-- <div class="lecture-text-container">
       <p></p>
       <p>Most traders have their attention on one thing. When to enter and exit a trade, which is very important.</p>
       <p>More important is each strategy individually and mastering each strategy. As you go through this course put your attention on each strategy individually and make sure you can apply it! </p>
@@ -2453,6 +1709,11 @@
       <p>IF YOU HAVE ANY QUESTIONS ABOUT YOUR ACCOUNT PLEASE REACH OUT TO US.</p>
       <p>For technical questions relating to trading email Leo at <a href="mailto:leo@thetradeacademy.com" target="_blank">leo@thetradeacademy.com</a></p>
       <p>For account questions email our support team: happy@thetradeacademy.com</p>
+      <p></p>
+    </div> --}}
+    <div class="lecture-text-container">
+      <p></p>
+      <p>{!!$lesson->full_text!!}</p>
       <p></p>
     </div>
 

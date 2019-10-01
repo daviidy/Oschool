@@ -175,27 +175,27 @@
               <ul class="dropdown-menu">
                 <li class="user-profile">
                   <a href="/current_user/profile">
-                    Edit Profile
+                    Modifier votre profile
                   </a>
                 </li>
                 <li>
                   <a href="/current_user/subscriptions">
-                    Manage Subscriptions
+                    Gerer vos abonnements
                   </a>
                 </li>
                 <li>
                   <a href="/current_user/credit_card">
-                    Add / Change Credit Card
+                    Ajouter / Echanger votre carte de credit
                   </a>
                 </li>
                 <li>
                   <a href="/current_user/contact">
-                    Contact
+                    Contactez nous
                   </a>
                 </li>
                 <li class="user-signout">
                   <a href="/sign_out">
-                    Log Out
+                    Deconnection
                   </a>
                 </li>
               </ul>
