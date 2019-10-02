@@ -11,7 +11,7 @@ button{overflow:visible;}
 button{-webkit-appearance:button;cursor:pointer;}
 button::-moz-focus-inner{border:0;padding:0;}
 @media print{
-  
+
 *{text-shadow:none!important;color:#000!important;background:transparent!important;box-shadow:none!important;}
 img{page-break-inside:avoid;}
 img{max-width:100%!important;}
@@ -93,7 +93,7 @@ button{line-height:inherit;}
 
 .EnrollSectionSCDP{
     margin-bottom: 10px;
-  } 
+  }
 
 @media (min-width: 1040px){
 .Container_jd01j4-o_O-container_17wca8l{width:1008px;}
@@ -112,7 +112,7 @@ button{line-height:inherit;}
 .Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc{align-items:center;display:-moz-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-ms-flex-align:center;-webkit-box-align:center;}
 .Box_120drhm-o_O-displayflex_poyjc{display:-moz-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;}
 .Box_120drhm-o_O-centerJustify_1nezfbd-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc{
-  
+
   justify-content:center;align-items:center;display:-moz-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-align-items:center;-ms-flex-pack:center;-webkit-box-pack:center;-ms-flex-align:center;-webkit-box-align:center;}
   .Button_1w8tm98-o_O-primary_cv02ee-o_O-md_1jvotax {
     border-radius: 2px;
@@ -364,7 +364,7 @@ button{line-height:inherit;}
           <br>
           <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-4 text-center">
-            
+
             <img class="large-img-rounded img-responsive" src="/images/authors/{{$course->author->image}}" alt="{{$course->author->full_name}}">
               <div class="author-name">
                 {{$course->author->full_name}}
@@ -485,7 +485,7 @@ button{line-height:inherit;}
     </div>
   </div>
 
-  
+
 
 
   <div class="course-block block coupon_banner " id="block-183310">
@@ -493,7 +493,7 @@ button{line-height:inherit;}
       <div class="container">
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-            
+
             <div class="coupon-percent-text">
               <span class="coupon-percent"></span>
               off original price!<br>
@@ -507,12 +507,12 @@ button{line-height:inherit;}
     </div>
   </div>
 
-  
-  
-  
-  
+
+
+
+
   <div class="course-block block closing_letter even-stripe" id="block-183311">
-    
+
     <div class="container">
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
@@ -545,39 +545,120 @@ button{line-height:inherit;}
   </div>
 
   <div>
-    <div><div class="EnrollSectionSCDP" >
-      <div class="EnrollSection p-t-5 p-b-2">
-        <div class="Container_jd01j4-o_O-container_17wca8l">
-          <div class="Row_nvwp6p">
-            <div class="Col_i9j08c-o_O-xsCol12_1m1ceo5-o_O-mdCol6_1rbv01c p-y-1">
-              <h2 class="m-x-0 m-b-1s"><span>Commencez à apprendre dès aujourd'hui&nbsp;!</span></h2>
-              <h4 class="H4_1k76nzj-o_O-weightLighter_1qi0fkl-o_O-fontHeadline_1uu0gyz">
-                <span style="font-size: 0.875rem; color: rgb(42, 115, 204); font-weight: bold;">
-                  <div class="rc-FinaidLink reset"><p class="caption-text">
-                    <button id="finaid_button" data-track="true" data-track-app="xdp_v1" data-track-page="xdp" data-track-action="click" data-track-component="finaid" class="button-link finaid-link">Aide financière disponible</button></p>
+     <div>
+         <div class="EnrollSectionSCDP">
+             <div class="EnrollSection p-t-5 p-b-2">
+                 <div class="Container_jd01j4-o_O-container_17wca8l">
+                     <div class="Row_nvwp6p">
+                         <div class="Col_i9j08c-o_O-xsCol12_1m1ceo5-o_O-mdCol6_1rbv01c p-y-1">
+                             <h2 class="m-x-0 m-b-1s"><span>Commencez à apprendre dès aujourd'hui&nbsp;!</span></h2>
+                             <h4 class="H4_1k76nzj-o_O-weightLighter_1qi0fkl-o_O-fontHeadline_1uu0gyz">
+                                 <span style="font-size: 0.875rem; color: rgb(42, 115, 204); font-weight: bold;">
+                                     <div class="rc-FinaidLink reset">
+                                         <p class="caption-text">
+                                             <button id="finaid_button" data-track="true" data-track-app="xdp_v1" data-track-page="xdp" data-track-action="click" data-track-component="finaid" class="button-link finaid-link">Aide financière
+                                                 disponible</button></p>
 
-                  </div>
-                </span></h4><div class="p-y-1s"><div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc">
-                  <svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Checkffee34fe-27e2-4131-c219-78ecc248c277 Checkffee34fe-27e2-4131-c219-78ecc248c277Desc" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;"><title id="Checkffee34fe-27e2-4131-c219-78ecc248c277">Check</title><polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon></svg><span class="m-x-1 font-md text-primary">Ce cours plus la Spécialisation complète</span></div><div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Checka74c4708-63e0-496b-c178-c76157356839 Checka74c4708-63e0-496b-c178-c76157356839Desc" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;"><title id="Checka74c4708-63e0-496b-c178-c76157356839">Check</title><polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon></svg><span class="m-x-1 font-md text-primary">Certificats partageables</span></div><div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Check62d17183-60ef-4cc2-c7f5-cb8b1499a650 Check62d17183-60ef-4cc2-c7f5-cb8b1499a650Desc" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;"><title id="Check62d17183-60ef-4cc2-c7f5-cb8b1499a650">Check</title><polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon></svg><span class="m-x-1 font-md text-primary">Option d'apprentissage à votre rythme</span></div><div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Checka2d79c60-e7cd-4746-9bec-e5484260ac56 Checka2d79c60-e7cd-4746-9bec-e5484260ac56Desc" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;"><title id="Checka2d79c60-e7cd-4746-9bec-e5484260ac56">Check</title><polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon></svg><span class="m-x-1 font-md text-primary">Vidéos et lectures du cours</span></div><div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Check018f7a24-721d-48c8-9f37-964bac044908 Check018f7a24-721d-48c8-9f37-964bac044908Desc" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;"><title id="Check018f7a24-721d-48c8-9f37-964bac044908">Check</title><polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon></svg><span class="m-x-1 font-md text-primary">Quiz pour s'exercer</span></div><div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4 Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4Desc" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;"><title id="Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4">Check</title><polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon></svg><span class="m-x-1 font-md text-primary">Devoirs notés commentés par les pairs</span></div><div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Check8b824a3b-15e5-40e4-cc95-011040e9ec5f Check8b824a3b-15e5-40e4-cc95-011040e9ec5fDesc" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;"><title id="Check8b824a3b-15e5-40e4-cc95-011040e9ec5f">Check</title><polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon></svg><span class="m-x-1 font-md text-primary">Quiz notés avec commentaires</span></div><div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Check9f7ef0ab-ee64-4f9d-cf2d-426b9d617985 Check9f7ef0ab-ee64-4f9d-cf2d-426b9d617985Desc" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;"><title id="Check9f7ef0ab-ee64-4f9d-cf2d-426b9d617985">Check</title><polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon></svg><span class="m-x-1 font-md text-primary">Exercices de programmation notés</span></div></div><div class="p-t-2"><div class="EnrollButton m-r-2"><div class="d-inline-block"><button target="_blank" rel="nofollow" style="color: rgb(255, 255, 255); font-weight: bold; border-color: transparent;" class="Button_1w8tm98-o_O-primary_cv02ee-o_O-md_1jvotax button_8xjif7" style="color: rgb(255, 255, 255); font-weight: bold; border-color: transparent;"><span class="Box_120drhm-o_O-centerJustify_1nezfbd-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><div><!-- react-text: 1585 -->S'inscrire gratuitement<!-- /react-text --><div id="start-date-string" class="startdate m-t-1s rc-StartDateString font-xs"><span>Commence le sept. 27</span></div></div></span></button></div></div><div class="m-t-1"><div class="rc-ProductMetrics"><div class="enrolledLargeFont_16g5ucx" style="color: rgb(31, 31, 31);"><span><strong><span>64 801</span></strong><!-- react-text: 1593 -->&nbsp;déjà inscrits&nbsp;!<!-- /react-text --></span></div></div></div></div></div><div class="Col_i9j08c-o_O-xsCol12_1m1ceo5-o_O-mdCol6_1rbv01c p-y-1"><div class="p-b-1"><span class="font-md text-primary" style="vertical-align: bottom;">Partageable sur</span><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/growth/xdp/linkedin-logo.svg?auto=format%2Ccompress&amp;dpr=1&amp;w=&amp;h=30" srcset="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/growth/xdp/linkedin-logo.svg?auto=format%2Ccompress&amp;dpr=2&amp;w=&amp;h=30 2x, https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/growth/xdp/linkedin-logo.svg?auto=format%2Ccompress&amp;dpr=3&amp;w=&amp;h=30 3x" class="p-l-1s" alt="LinkedIn" style="max-height: 30px; position: relative; height: 30px; width: auto;"></div><div style="background-image: url(&quot;https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/growth/xdp/cert_enroll_section_cdp.png?auto=format%2Ccompress&amp;dpr=1&amp;w=300&quot;); background-size: contain; height: 340px; width: auto; background-repeat: no-repeat;"><span style="position: relative; top: 30px; left: 70px; max-width: 200px; display: block;">Ruby on Rails: An Introduction</span>
-                  </div>
-                <div class="p-y-1"><div class="Box_120drhm-o_O-displayflex_poyjc" style="align-items: center;">
-                  <span class="m-y-1s font-sm text-xs-left text-primary" style="max-width: 430px;">
-                  Vous pouvez partager vos Les Certificats de Cours dans
-                   la section Certifications de votre profil LinkedIn, sur des CV imprimés, ou d'autres documents.</span>
-                    </div>
-                  
-                  
-              </div>
-              </div>
-                  </div>
-                  </div>
-                  </div>
-                  </div>
-  </div>
-  </div>
+                                     </div>
+                                 </span></h4>
+                             <div class="p-y-1s">
+                                 <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc">
+                                     <svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Checkffee34fe-27e2-4131-c219-78ecc248c277 Checkffee34fe-27e2-4131-c219-78ecc248c277Desc" xmlns="http://www.w3.org/2000/svg"
+                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                         <title id="Checkffee34fe-27e2-4131-c219-78ecc248c277">Check</title>
+                                         <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
+                                     </svg><span class="m-x-1 font-md text-primary">Ce cours plus la Spécialisation complète</span></div>
+                                 <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
+                                       aria-labelledby="Checka74c4708-63e0-496b-c178-c76157356839 Checka74c4708-63e0-496b-c178-c76157356839Desc" xmlns="http://www.w3.org/2000/svg"
+                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                         <title id="Checka74c4708-63e0-496b-c178-c76157356839">Check</title>
+                                         <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
+                                     </svg><span class="m-x-1 font-md text-primary">Certificats partageables</span></div>
+                                 <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
+                                       aria-labelledby="Check62d17183-60ef-4cc2-c7f5-cb8b1499a650 Check62d17183-60ef-4cc2-c7f5-cb8b1499a650Desc" xmlns="http://www.w3.org/2000/svg"
+                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                         <title id="Check62d17183-60ef-4cc2-c7f5-cb8b1499a650">Check</title>
+                                         <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
+                                     </svg><span class="m-x-1 font-md text-primary">Option d'apprentissage à votre rythme</span></div>
+                                 <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
+                                       aria-labelledby="Checka2d79c60-e7cd-4746-9bec-e5484260ac56 Checka2d79c60-e7cd-4746-9bec-e5484260ac56Desc" xmlns="http://www.w3.org/2000/svg"
+                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                         <title id="Checka2d79c60-e7cd-4746-9bec-e5484260ac56">Check</title>
+                                         <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
+                                     </svg><span class="m-x-1 font-md text-primary">Vidéos et lectures du cours</span></div>
+                                 <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
+                                       aria-labelledby="Check018f7a24-721d-48c8-9f37-964bac044908 Check018f7a24-721d-48c8-9f37-964bac044908Desc" xmlns="http://www.w3.org/2000/svg"
+                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                         <title id="Check018f7a24-721d-48c8-9f37-964bac044908">Check</title>
+                                         <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
+                                     </svg><span class="m-x-1 font-md text-primary">Quiz pour s'exercer</span></div>
+                                 <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
+                                       aria-labelledby="Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4 Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4Desc" xmlns="http://www.w3.org/2000/svg"
+                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                         <title id="Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4">Check</title>
+                                         <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
+                                     </svg><span class="m-x-1 font-md text-primary">Devoirs notés commentés par les pairs</span></div>
+                                 <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
+                                       aria-labelledby="Check8b824a3b-15e5-40e4-cc95-011040e9ec5f Check8b824a3b-15e5-40e4-cc95-011040e9ec5fDesc" xmlns="http://www.w3.org/2000/svg"
+                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                         <title id="Check8b824a3b-15e5-40e4-cc95-011040e9ec5f">Check</title>
+                                         <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
+                                     </svg><span class="m-x-1 font-md text-primary">Quiz notés avec commentaires</span></div>
+                                 <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
+                                       aria-labelledby="Check9f7ef0ab-ee64-4f9d-cf2d-426b9d617985 Check9f7ef0ab-ee64-4f9d-cf2d-426b9d617985Desc" xmlns="http://www.w3.org/2000/svg"
+                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                         <title id="Check9f7ef0ab-ee64-4f9d-cf2d-426b9d617985">Check</title>
+                                         <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
+                                     </svg><span class="m-x-1 font-md text-primary">Exercices de programmation notés</span></div>
+                             </div>
+                             <div class="p-t-2">
+                                 <div class="EnrollButton m-r-2">
+                                     <div class="d-inline-block"><button target="_blank" rel="nofollow" style="color: rgb(255, 255, 255); font-weight: bold; border-color: transparent;"
+                                           class="Button_1w8tm98-o_O-primary_cv02ee-o_O-md_1jvotax button_8xjif7" style="color: rgb(255, 255, 255); font-weight: bold; border-color: transparent;"><span
+                                               class="Box_120drhm-o_O-centerJustify_1nezfbd-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc">
+                                                 <div>
+                                                     <!-- react-text: 1585 -->S'inscrire gratuitement
+                                                     <!-- /react-text -->
+                                                     <div id="start-date-string" class="startdate m-t-1s rc-StartDateString font-xs"><span>Commence le sept. 27</span></div>
+                                                 </div>
+                                             </span></button></div>
+                                 </div>
+                                 <div class="m-t-1">
+                                     <div class="rc-ProductMetrics">
+                                         <div class="enrolledLargeFont_16g5ucx" style="color: rgb(31, 31, 31);"><span><strong><span>64 801</span></strong><!-- react-text: 1593 -->&nbsp;déjà inscrits&nbsp;!
+                                                 <!-- /react-text --></span></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="Col_i9j08c-o_O-xsCol12_1m1ceo5-o_O-mdCol6_1rbv01c p-y-1">
+                             <div class="p-b-1"><span class="font-md text-primary" style="vertical-align: bottom;">Partageable sur</span><img
+                                   src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/growth/xdp/linkedin-logo.svg?auto=format%2Ccompress&amp;dpr=1&amp;w=&amp;h=30"
+                                   srcset="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/growth/xdp/linkedin-logo.svg?auto=format%2Ccompress&amp;dpr=2&amp;w=&amp;h=30 2x, https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/growth/xdp/linkedin-logo.svg?auto=format%2Ccompress&amp;dpr=3&amp;w=&amp;h=30 3x"
+                                   class="p-l-1s" alt="LinkedIn" style="max-height: 30px; position: relative; height: 30px; width: auto;"></div>
+                             <div
+                               style="background-image: url(/images/courses/certificate.png);background-size: contain;height: 340px;width: auto;background-repeat: no-repeat;border: 2px solid black;border-radius: 8px;box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);">
+                                 <span style="position: relative; top: 30px; left: 70px; max-width: 200px; display: block;">{{$course->name}}</span>
+                             </div>
+                             <div class="p-y-1">
+                                 <div class="Box_120drhm-o_O-displayflex_poyjc" style="align-items: center;">
+                                     <span class="m-y-1s font-sm text-xs-left text-primary" style="max-width: 430px;">
+                                         Vous pouvez partager vos Les Certificats de Cours dans
+                                         la section Certifications de votre profil LinkedIn, sur des CV imprimés, ou d'autres documents.</span>
+                                 </div>
+
+
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
 
   <br>
- 
+
 
   <div class="course-block block checkout odd-stripe" id="block-183312">
     <div class="checkout-cta">

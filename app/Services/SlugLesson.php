@@ -26,6 +26,10 @@ class SlugLesson
             return $slug;
         }
 
+        else {
+            return $slug;
+        }
+
         // Just append numbers like a savage until we find not used.
         for ($i = 1; $i <= 10; $i++) {
             $newSlug = $slug.'-'.$i;
