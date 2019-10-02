@@ -35,7 +35,7 @@ class LessonController extends Controller
     public function create(School $school, Course $course, Section $section)
     {
         if (Auth::check()) {
-            $lesson = Lesson::create(['position' => Lesson::where('course_id', $course->id)->where('section_id', $section->id)->max('position') + 1,
+            $lesson = Lesson::create(['position' => Lesson::where('course_id', $course->id)->max('position') + 1,
                                        'free_lesson' => 'no',
                                        'title' => 'Nouvelle leçon',
                                        'course_id' => $course->id,

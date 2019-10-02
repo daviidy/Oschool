@@ -17,7 +17,6 @@ class Pricing extends Model
                            'per',
                            'times',
                            'course_id'
-
                          ];
 
 

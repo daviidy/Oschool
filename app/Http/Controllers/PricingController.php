@@ -131,7 +131,7 @@ class PricingController extends Controller
      */
     public function show(Pricing $pricing)
     {
-        //
+        return view('pricings.show', ['pricing' => $pricing]);
     }
 
     /**

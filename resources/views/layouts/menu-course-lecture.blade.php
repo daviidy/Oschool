@@ -200,16 +200,25 @@
         &nbsp;
         <span class="nav-text">Previous Lecture</span>
       </a>
+      @if(Auth::user()->lessons->contains($lesson->id))
+      <a class="nav-btn complete" data-cpl-tooltip="You must complete all lecture material before progressing" href="/course/{{$lesson->course->slug}}/lessons/{{$next_lesson->slug}}" role="button" id="lecture_complete_button">
+        <span class="nav-text">Chapitre suivant</span>
+        &nbsp;
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      </a>
+      @else
+
       <form class="" action="/completeLesson" method="post">
           @csrf
           <input type="hidden" name="id" value="{{$lesson->id}}">
           <button type="submit" class="nav-btn complete" data-cpl-tooltip="You must complete all lecture material before progressing" href="" role="button" id="lecture_complete_button">
-            <span class="nav-text">Completer et continuer</span>
+            <span class="nav-text">Valider et continuer</span>
             &nbsp;
             <i class="fa fa-arrow-right" aria-hidden="true"></i>
          </button>
 
       </form>
+      @endif
 
     </div>
 
