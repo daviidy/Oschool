@@ -317,7 +317,7 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                               <form action="{{ route('lessons.destroy', $lesson) }}" method="post">
                                   {{ csrf_field() }}
                                   {{ method_field('delete') }}
-                                  <button style="background:#4D90CC;"
+                                  <button style="background:#dc4f2f;"
                                       class="tch-btn-icon-fa fastclickable tch-btn-content-primary"><i class="fa fa-trash"></i>
                                   </button>
                               </form>
