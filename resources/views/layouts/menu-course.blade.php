@@ -13,8 +13,8 @@
     rel="stylesheet" data-turbolinks-track="true">
 
 
-  <title>{{$course->name}} | Oschool</title>
-  <meta name="description" content="{{$course->name}}">
+  <title>@yield('title') | Oschool</title>
+  <meta name="description" content="@yield('description')">
 
   <style>
     .course-top-row.has-hero-image .course-header-container {
