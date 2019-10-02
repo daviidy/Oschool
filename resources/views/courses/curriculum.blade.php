@@ -4,7 +4,7 @@
 
 <div class="course-sidebar">
   <!-- Image & Title -->
-<img class="course-image" src="/images/schools/logos/{{$course->logo}}">
+<img class="course-image" src="/images/courses/logos/{{$course->logo}}">
   <h2>{{$course->name}}</h2>
   <!-- Course Progress -->
   <div class="course-progress">
@@ -110,7 +110,7 @@
             </div>
           </a>
         </li>
-        
+
       </ul>
     </div>
   </div> --}}

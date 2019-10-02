@@ -348,6 +348,19 @@ class LessonController extends Controller
     }
 
 
+    public function completeLesson(Lesson $lesson)
+    {
+        Auth::user()->lessons()->attach($request['id']);
+
+        $next_lesson = Lesson::where('course_id', $lesson->course_id)
+        ->where('position', '>', $lesson->position)
+        ->orderBy('position', 'asc')
+        ->first();
+
+        return redirect();
+    }
+
+
 
 
 
