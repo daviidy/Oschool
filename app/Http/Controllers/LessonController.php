@@ -113,7 +113,17 @@ class LessonController extends Controller
     {
         $lesson = Lesson::where('slug', $slug)->firstOrFail();
 
-        return view('lessons.show', ['lesson' => $lesson]);
+        $next_lesson = Lesson::where('course_id', $lesson->course_id)
+        ->where('position', '>', $lesson->position)
+        ->orderBy('position', 'asc')
+        ->first();
+
+        $previous_lesson = Lesson::where('course_id', $lesson->course_id)
+        ->where('position', '<', $lesson->position)
+        ->orderBy('position', 'desc')
+        ->first();
+
+        return view('lessons.show', ['lesson' => $lesson, 'next_lesson' => $next_lesson, 'previous_lesson' => $previous_lesson]);
     }
 
 
@@ -348,16 +358,17 @@ class LessonController extends Controller
     }
 
 
-    public function completeLesson(Lesson $lesson)
+    public function completeLesson(Request $request)
     {
-        Auth::user()->lessons()->attach($request['id']);
+        $lesson = Lesson::find($request['id']);
+        Auth::user()->lessons()->attach($lesson);
 
         $next_lesson = Lesson::where('course_id', $lesson->course_id)
         ->where('position', '>', $lesson->position)
         ->orderBy('position', 'asc')
         ->first();
 
-        return redirect();
+        return redirect('/course/'.$lesson->course->slug.'/lessons/'.$next_lesson->slug);
     }
 
 

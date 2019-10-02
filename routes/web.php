@@ -157,3 +157,8 @@ Route::get('/schoolAdmin/{school}/courses/{course}/certificate', 'CourseControll
 Route::get('/course/{slug}', 'CourseController@showSlug')->name('course.slug');
 Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('enrolled.slug');
 Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');
+
+
+
+//validate a lesson
+Route::post('/completeLesson', 'LessonController@completeLesson');
