@@ -29,13 +29,16 @@ $('.steps-nav a:first .next-step').trigger('click'); // Default
 
 $('.tab--bar a').on('click', function (event) {
     event.preventDefault();
-    var active_tab_selector = $('.tab--bar.active > a').attr('href');
-    var actived_nav = $('.tab--bar a');
+    $('.active').removeClass('active');
+    $(this).parent().addClass('active');
+    var active_tab_selector = $('.tab--container > a').attr('href');
+    var actived_nav = $('.tab--container');
 		actived_nav.removeClass('active');
-    $(this).parent().addClass('inactive');
-    $(active_tab_selector).removeClass('inactive');
+    actived_nav.addClass('inactive');
+    $(this).parents('.tab--container').addClass('active');
+    $(active_tab_selector).removeClass('active');
 		$(active_tab_selector).addClass('inactive');
-    $('.tab-panel').hide();
+    $('.contain .tab-panel').hide();
     $($(this).attr('href')).show();
 });
 $('.tab--bar a:second').trigger('click'); // Default
