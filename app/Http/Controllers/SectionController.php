@@ -43,7 +43,8 @@ class SectionController extends Controller
      */
     public function store(Request $request)
     {
-        $section = Section::create($request->all());
+        $section = Section::create($request->all()
+    + ['position' => Section::where('course_id', $request->course_id)->max('position') + 1]);
         return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
     }
 

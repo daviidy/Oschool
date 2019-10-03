@@ -35,7 +35,7 @@ class LessonController extends Controller
     public function create(School $school, Course $course, Section $section)
     {
         if (Auth::check()) {
-            $lesson = Lesson::create(['position' => Lesson::where('course_id', $course->id)->max('position') + 1,
+            $lesson = Lesson::create(['position' => Lesson::where('course_id', $course->id)->where('section_id', $section->id)->max('position') + 1,
                                        'free_lesson' => 'no',
                                        'title' => 'Nouvelle leçon',
                                        'course_id' => $course->id,
@@ -114,11 +114,27 @@ class LessonController extends Controller
         $lesson = Lesson::where('slug', $slug)->firstOrFail();
 
         $next_lesson = Lesson::where('course_id', $lesson->course_id)
+        ->where('section_id', $lesson->section_id)
         ->where('position', '>', $lesson->position)
         ->orderBy('position', 'asc')
         ->first();
 
+        //si on atteint le max de lecons dans la section
+        if ($next_lesson === null) {
+            //on recupere la prochaine section
+            $next_section = Section::where('course_id', $lesson->course_id)
+            ->where('position', '>', $lesson->section->position)
+            ->orderBy('position', 'asc')
+            ->first();
+
+            $next_lesson = Lesson::where('course_id', $lesson->course_id)
+            ->where('section_id', $next_section->id)
+            ->orderBy('position', 'asc')
+            ->first();
+        }
+
         $previous_lesson = Lesson::where('course_id', $lesson->course_id)
+        ->where('section_id', $lesson->section_id)
         ->where('position', '<', $lesson->position)
         ->orderBy('position', 'desc')
         ->first();
@@ -364,9 +380,25 @@ class LessonController extends Controller
         Auth::user()->lessons()->attach($lesson);
 
         $next_lesson = Lesson::where('course_id', $lesson->course_id)
+        ->where('section_id', $lesson->section_id)
         ->where('position', '>', $lesson->position)
         ->orderBy('position', 'asc')
         ->first();
+
+        //si on atteint le max de lecons dans la section
+        if ($next_lesson === null) {
+            //on recupere la prochaine section
+            $next_section = Section::where('course_id', $lesson->course_id)
+            ->where('position', '>', $lesson->section->position)
+            ->orderBy('position', 'asc')
+            ->first();
+
+            $next_lesson = Lesson::where('course_id', $lesson->course_id)
+            ->where('section_id', $next_section->id)
+            ->orderBy('position', 'asc')
+            ->first();
+        }
+
 
         return redirect('/course/'.$lesson->course->slug.'/lessons/'.$next_lesson->slug);
     }

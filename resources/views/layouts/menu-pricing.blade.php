@@ -4,89 +4,88 @@
 
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
 
-
+  <link rel="stylesheet" href="/css/checkout.css">
+  <link href="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:32,height:32/https://www.filepicker.io/api/file/j5H5tOGHSle9xpD9B3nW" rel="icon" type="image/png">
+  <link href="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:72,height:72/https://www.filepicker.io/api/file/j5H5tOGHSle9xpD9B3nW" rel="apple-touch-icon" type="image/png">
+  <link href="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:144,height:144/https://www.filepicker.io/api/file/j5H5tOGHSle9xpD9B3nW" rel="apple-touch-icon" type="image/png">
+  <link href="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:320,height:345/https://d2vvqscadf4c1f.cloudfront.net/b7yh7DKMSKeGh9UPYbDI_CardSpring.jpg" rel="apple-touch-startup-image" type="image/png">
+  <link href="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:640,height:690/https://d2vvqscadf4c1f.cloudfront.net/b7yh7DKMSKeGh9UPYbDI_CardSpring.jpg" rel="apple-touch-startup-image" type="image/png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta charset="UTF-8">
+  <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-31ff648fd5e6158c77c31e785844877b6666554feab422e57ca5a96aa5587b9e.css" data-turbolinks-track="true">
+  <link
+    href="https://themes2.teachablecdn.com/themecss/production/base.css?_=0e34779b46fb&amp;brand_course_heading=%23ffffff&amp;brand_heading=%232b3636&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%23000000&amp;brand_secondary=%2339719a&amp;brand_text=%232b3636&amp;logged_out_homepage_background_image_overlay=0.84&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fd2vvqscadf4c1f.cloudfront.net%2Fb7yh7DKMSKeGh9UPYbDI_CardSpring.jpg"
+    rel="stylesheet" data-turbolinks-track="true">
+  <style>
+    .course-top-row.has-hero-image .course-header-container {
 
+      padding: 25px !important;
 
+      border-radius: 20px !important;
 
-  <title>@yield('title') | Oschool</title>
-  <meta name="description" content="@yield('description')">
+    }
 
+    .bottom-menu {
+      position: inherit;
+    }
 
-  <style media="screen">
-  /*! CSS Used from: https://fedora.teachablecdn.com/assets/bootstrap-31ff648fd5e6158c77c31e785844877b6666554feab422e57ca5a96aa5587b9e.css ; media=screen */
-@media screen{
-header{display:block;}
-a{background:0 0;}
-a:active,a:hover{outline:0;}
-img{border:0;}
-@media print{
-*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
-a,a:visited{text-decoration:underline;}
-a[href]:after{content:" (" attr(href) ")";}
-img{page-break-inside:avoid;}
-img{max-width:100%!important;}
-.navbar{display:none;}
-}
-*{box-sizing:border-box;}
-:before,:after{box-sizing:border-box;}
-a{color:#428bca;text-decoration:none;}
-a:hover,a:focus{color:#2a6496;text-decoration:underline;}
-a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
-img{vertical-align:middle;}
-.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
-@media (min-width: 768px){
-.container{width:750px;}
-}
-@media (min-width: 992px){
-.container{width:970px;}
-}
-@media (min-width: 1200px){
-.container{width:1170px;}
-}
-.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent;}
-@media (min-width: 768px){
-.navbar{border-radius:4px;}
-}
-@media (min-width: 768px){
-.navbar-header{float:left;}
-}
-.container>.navbar-header{margin-right:-15px;margin-left:-15px;}
-@media (min-width: 768px){
-.container>.navbar-header{margin-right:0;margin-left:0;}
-}
-.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030;-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);}
-@media (min-width: 768px){
-.navbar-fixed-top{border-radius:0;}
-}
-.navbar-fixed-top{top:0;border-width:0 0 1px;}
-.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px;}
-.navbar-brand:hover,.navbar-brand:focus{text-decoration:none;}
-@media (min-width: 768px){
-.navbar>.container .navbar-brand{margin-left:-15px;}
-}
-.container:before,.container:after,.navbar:before,.navbar:after,.navbar-header:before,.navbar-header:after{display:table;content:" ";}
-.container:after,.navbar:after,.navbar-header:after{clear:both;}
-}
-/*! CSS Used from: https://themes2.teachablecdn.com/themecss/production/base.css?_=0e34779b46fb&brand_course_heading=%23ffffff&brand_heading=%232b3636&brand_homepage_heading=%23ffffff&brand_navbar_fixed_text=%23ffffff&brand_navbar_text=%23ffffff&brand_primary=%23000000&brand_secondary=%2339719a&brand_text=%232b3636&logged_out_homepage_background_image_overlay=0.84&logged_out_homepage_background_image_url=https%3A%2F%2Fd2vvqscadf4c1f.cloudfront.net%2Fb7yh7DKMSKeGh9UPYbDI_CardSpring.jpg */
-a{color:#39719a;}
-a:hover,a:active{color:#1d3a50;}
-a,a:active,a:hover,a:focus{text-decoration:none;}
-.navbar-fedora{background-color:#000;position:absolute;margin-bottom:0px;top:0px;transition:none;}
-.navbar-fedora .navbar-header{height:60px;width:100%;}
-.navbar-fedora .navbar-brand{font-weight:normal;color:#fff;font-size:30px;line-height:30px;height:60px;}
-.navbar-fedora .navbar-brand.header-logo{max-width:250px;padding-top:0px;padding-bottom:0px;}
-.navbar-fedora .navbar-brand.header-logo img{height:100%;}
-@media screen and (max-width: 767px){
-.navbar-fedora .navbar-brand{font-size:18px;}
-}
-@media screen and (max-width: 480px){
-.navbar-fedora{min-height:60px;}
-}
+    body {
+      padding-bottom: 0 !important;
+    }
   </style>
+  <meta name="csrf-param" content="authenticity_token">
+  <meta name="csrf-token" content="/wqXpd3pYxNO/ROyCZb6dJdswTKuW9jYqOxo33+1KirdTHgUbcoVomgp3GtdaJ6KfuxvHbE812+C5h3URHZnZg==">
+  <title>52Kards</title>
+  <meta name="brand_video_player_color" content="#09A59A">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script>
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ecommerce.js"></script>
+  <script async="" id="analytics-js" type="text/javascript" src="/analytics.js"></script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/Zy-zVXWdnDW6AUZkKlojAKGe/recaptcha__fr.js"></script>
+  <script src="https://js.stripe.com/v3/" data-turbolinks-track="false"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+  <script type="text/javascript" src="https://api.taxamo.com/js/v1/taxamo.all.js"></script>
 
+  <meta name="asset_host" content="https://fedora.teachablecdn.com">
+  <script>
+    if (typeof ga != 'function') {
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    }
+    ga('create', 'UA-44397410-1', 'auto', {
+      'name': 'fedoraTracker',
+      'allowLinker': true
+    });
+    ga('fedoraTracker.require', 'linker');
+    ga('fedoraTracker.linker:autoLink', ['courses.52kards.com']);
+    ga('fedoraTracker.require', 'ecommerce');
+    ga('fedoraTracker.require', 'ec');
+    ga('fedoraTracker.send', 'pageview');
+    ga('create', 'UA-44397410-4', 'auto', {
+      'name': 'teachableTracker',
+      'allowLinker': true
+    });
+    ga('teachableTracker.require', 'linker');
+    ga('teachableTracker.linker:autoLink', ['courses.52kards.com']);
+    ga('teachableTracker.require', 'ecommerce');
+    ga('teachableTracker.require', 'ec');
+    ga('teachableTracker.send', 'pageview');
+  </script>
+  <script src="https://fedora.teachablecdn.com/packs/secure-4af2be702b2dd617a42a.js"></script>
+  <script src="https://fedora.teachablecdn.com/assets/secure-8a739c9142ddf4ee7eebe3d644c515f7be491823935c7f47f490b45486430e8b.js" data-turbolinks-track="true"></script>
 
-
+  <link rel="stylesheet" type="text/css" href="chrome-extension://immhpnclomdloikkpcefncmfgjbkojmh/css/emoji.css">
 
   <style media="screen">
   /*! CSS Used from: http://localhost:8000/css/school_homepage.css */
@@ -284,7 +283,7 @@ footer .container .row ul li a:hover{text-decoration:underline;}
 
 </head>
 
-<body style="padding-bottom: 131px;">
+<body>
 
     <header class="">
     <!-- Navbar -->
