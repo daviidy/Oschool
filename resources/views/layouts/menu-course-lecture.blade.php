@@ -208,16 +208,16 @@
       </a>
       @else
 
-      <form class="" action="/completeLesson" method="post">
-          @csrf
-          <input type="hidden" name="id" value="{{$lesson->id}}">
-          <button type="submit" class="nav-btn complete" data-cpl-tooltip="You must complete all lecture material before progressing" href="" role="button" id="lecture_complete_button">
-            <span class="nav-text">Valider et continuer</span>
-            &nbsp;
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-         </button>
-
-      </form>
+      <a type="submit" class="nav-btn complete" data-cpl-tooltip="You must complete all lecture material before progressing" href="" role="button" id="lecture_complete_button">
+          <form class="" action="/completeLesson" method="post" style="margin-bottom: 0px;">
+              @csrf
+              <input type="hidden" name="id" value="{{$lesson->id}}">
+              <span class="nav-text">Valider et continuer</span>
+              &nbsp;
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              
+            </form>
+          </a>
       @endif
 
     </div>
