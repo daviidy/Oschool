@@ -134,12 +134,12 @@
       <div class="col-xs-12 col-sm-6 col-md-4 ">
         <a href="http://jessicasprague.teachable.com?src=teachable-examples" target="_blank" rel="noopener noreferrer">
           <div class="school-card">
-            <div class="image" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/u9ifiSUyTIOJBWXuCbjm_examples-scrapbooking.jpg);"></div>
+            <div class="image" style="background-image: url(/images/courses/logos/{{$course->logo}});"></div>
             <div class="bottom" data-mh="school-cards" style="height: 280px;">
-              <h1>Digital Scrapbooking</h1>
-              <p class="default-paragraph">Turn your memories into beautifully designed digital scrapbooks with Photoshop</p>
+              <h1>{{$course->name}}</h1>
+              <p class="default-paragraph">{{$course->subtitle}}</p>
               <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/6Owd2hlXSIuRnIvjZ6Ft">
-              <p class="default-paragraph">Jessica Sprague</p>
+              <p class="default-paragraph">{{$course->author->full_name}}</p>
             </div>
           </div>
         </a>
