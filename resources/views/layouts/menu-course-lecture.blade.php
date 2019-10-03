@@ -119,6 +119,19 @@
     }
   </style>
 
+  <style>
+  
+  #nav-btn-complete{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #0071bc;
+    border: 0;
+    color: white;
+  }
+  
+  </style>
+
 </head>
 
 <body data-no-turbolink="true" cz-shortcut-listen="true">
@@ -208,16 +221,16 @@
       </a>
       @else
 
-      <a type="submit" class="nav-btn complete" data-cpl-tooltip="You must complete all lecture material before progressing" href="" role="button" id="lecture_complete_button">
-          <form class="" action="/completeLesson" method="post" style="margin-bottom: 0px;">
+      <form class="" action="/completeLesson" method="post" style="margin-bottom: 0;width: 100%;">
+        <button type="submit" class="nav-btn complete" id="nav-btn-complete" data-cpl-tooltip="You must complete all lecture material before progressing" href="" role="button" id="lecture_complete_button">
               @csrf
               <input type="hidden" name="id" value="{{$lesson->id}}">
               <span class="nav-text">Valider et continuer</span>
               &nbsp;
               <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
               
             </form>
-          </a>
       @endif
 
     </div>

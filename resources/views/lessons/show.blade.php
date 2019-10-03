@@ -3,6 +3,17 @@
 @section('content')
 
 
+<style>
+
+iframe{
+  width: 100%;
+  margin: 0 auto;
+}
+#video p {
+  text-align: center;
+}
+</style>
+
 <div class="course-sidebar lecture-page navbar-collapse navbar-sidebar-collapse collapse" id="courseSidebar" aria-expanded="false" style="height: 31px;">
   <h2 style="padding-bottom: 0px">Programme du cours</h2>
   <!-- Course Progress -->
@@ -127,7 +138,9 @@
 
   <!-- Attachment Blocks -->
 
-{!!$lesson->video!!}
+    <div id="video">
+        {!!$lesson->video!!}
+    </div>
 
   <div class="lecture-attachment lecture-attachment-type-text" id="lecture-attachment-21119459">
     <div class="attachment-data"></div>
