@@ -4,6 +4,7 @@
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/admin/menu-school.css">
+    <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

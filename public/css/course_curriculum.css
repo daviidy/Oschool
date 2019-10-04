@@ -104,8 +104,8 @@ ul ul{margin-bottom:0;}
 }
 }
 /*! CSS Used from: https://themes.teachablecdn.com/themecss/production.css?_=56db37594f88&brand_course_heading=%23ffffff&brand_heading=%23000000&brand_homepage_heading=%23ffffff&brand_navbar_fixed_text=%23e3e3e3&brand_navbar_text=%23ffffff&brand_primary=%234d4d4d&brand_secondary=%230071bc&brand_text=%234d4d4d&font=Arial&logged_out_homepage_background_image_overlay=0.0&logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FU4pfmJMDQ9mzsRTQHFQ2 */
-.btn-primary,.btn-primary:active,.btn-primary:focus{background:#0071bc!important;border:1px solid #0071bc!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
-.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#0062a3!important;border:1px solid #0062a3!important;color:#fff;}
+.btn-primary,.btn-primary:active,.btn-primary:focus{background:#4d90cc!important;border:1px solid #4d90cc!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
+.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#4d90cc!important;border:1px solid #4d90cc!important;color:#fff;}
 @media screen and (max-width: 767px){
 .btn-primary,.btn-primary:active,.btn-primary:focus{font-size:15px;}
 }
@@ -181,7 +181,7 @@ h2{color:#000;}
 .course-mainbar{margin-left:350px;background:#fff;padding:40px;padding-top:55px;height:auto;}
 .course-mainbar h2.section-title{margin-bottom:30px;font-weight:bold;}
 .course-mainbar .next-lecture-wrapper{background:#d2e3ee;border-radius:40px;margin-bottom:20px;}
-.course-mainbar .next-lecture-wrapper .start-next-lecture{margin-right:12px;line-height:35px;font-size:19px;border-radius:40px;}
+.course-mainbar .next-lecture-wrapper .start-next-lecture{margin-right:12px;line-height:35px;font-size:19px;border-radius:40px;background-color: #4D90CC; border-color: #4D90CC}
 .course-mainbar .course-section .btn-primary{margin-right:-65px!important;}
 .course-sidebar{width:350px;margin-top:46px;background-color:#f7f7f7;height:100%;padding-left:0px;padding-right:0px;border-right:1px solid #d7dadb;padding-bottom:30px;position:fixed;overflow:scroll;display:inline-block;}
 .course-sidebar img.course-image{display:block;width:100%;margin:0;}
