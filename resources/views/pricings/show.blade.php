@@ -94,7 +94,7 @@
                   Add Coupon
                 </button>
 
-                <div class="binary-toggle__label hidden" data-binary-toggle-content="">
+                <div class="binary-toggle__label hidden" data-binary-toggle-content="" id="add_coupons">
                   <form class="form-inline spc__inline-form" data-checkout-inline-form="coupon" action="https://sso.teachable.com/secure/6419/checkout/order_g1lkx710/update" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="/wqXpd3pYxNO/ROyCZb6dJdswTKuW9jYqOxo33+1KirdTHgUbcoVomgp3GtdaJ6KfuxvHbE812+C5h3URHZnZg==">
                     <div class="spc__inline-form-inner">
                       <input type="text" name="coupon_code" id="coupon_code" autocomplete="off" class="spc__inline-form-input" placeholder="Coupon code" data-checkout-inline-input="">
@@ -111,7 +111,7 @@
                           </div>
 
                           <div class="spc__inline-form-button-text">
-                            Apply
+                            Appliquer
                           </div>
                         </button>
                       </div>
@@ -125,7 +125,7 @@
             </div>
           </div>
       </div>
-
+      <script src="/js/admin_views/coupons.js" charset="utf-8"></script>
       <div class="spc__row spc__row--total">
         <div class="spc__summary">
           <div class="spc__summary-item">

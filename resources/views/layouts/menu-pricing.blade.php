@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="/css/checkout.css">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta charset="UTF-8">
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
   <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-31ff648fd5e6158c77c31e785844877b6666554feab422e57ca5a96aa5587b9e.css" data-turbolinks-track="true">
   <style>
     .course-top-row.has-hero-image .course-header-container {
