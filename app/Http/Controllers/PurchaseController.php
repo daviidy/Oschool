@@ -299,7 +299,7 @@ class PurchaseController extends Controller
 
         foreach ($admins as $admin) {
         //envoi mail admin pour échec
-        Mail::send('mails.admins.purchase.fail', ['purchase' => $purchase], function($message){
+        Mail::send('mails.admins.purchases.fail', ['purchase' => $purchase], function($message){
           $message->to($admin->email, 'Aux Admins Oschool')->subject('Un paiement a échoué');
           $message->from('eventsoschool@gmail.com', 'Oschool');
         });
