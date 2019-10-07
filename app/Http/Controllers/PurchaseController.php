@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Purchase;
+use App\School;
 use App\User;
 use App\Course;
 use App\Pricing;
@@ -289,6 +290,15 @@ class PurchaseController extends Controller
 
 
                   }
+
+                  //si ce n'est pas encore fait
+                  //on inscrit l'utilsateur dans l'école
+                  $school = School::where('id', $course->school_id)->first();
+                  $in_school = $user->schools->contains($course->school_id);
+                  if (!$in_school) {
+                      $user->schools()->attach($school);
+                  }
+
 
         }//fin grand if
 
