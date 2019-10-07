@@ -64,6 +64,16 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Lesson');
     }
 
+    /**
+     * [users description]
+     * relationship many to many with Course model
+     * @return [array] [description]
+     */
+     public function courses()
+     {
+         return $this->belongsToMany('App\Course');
+     }
+
     //funciton for school owners
     public function createSchools()
     {

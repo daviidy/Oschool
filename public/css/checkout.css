@@ -187,8 +187,8 @@ footer .footer-column{text-align:center;}
 .spc__section--account .spc__inline-form-last{margin-top:16px;margin-bottom:0px;}
 .spc__section--terms{margin-top:30px;}
 .spc__section--terms label{font-size:13px;font-weight:500;}
-.spc__primary-submit{display:block;}
-.spc__primary-submit button{border-radius:30px;height:15%;padding:0 30px!important;position:relative;}
+.spc__primary-submit{display:block; cursor: pointer;}
+.spc__primary-submit button{border-radius:30px;height:7%;padding:0 30px!important;position:relative;}
 .spc__primary-submit button:active,.spc__primary-submit button:hover,.spc__primary-submit button:focus{padding:0 30px!important;}
 .spc__primary-submit button::before{content:'';}
 .spc__primary-submit button .loader{opacity:0;}

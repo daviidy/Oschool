@@ -24,6 +24,18 @@ class Course extends Model
                          ];
 
 
+
+     /**
+      * [users description]
+      * relationship many to many with User model
+      * @return [array] [description]
+      */
+      public function users()
+      {
+          return $this->belongsToMany('App\User');
+      }
+
+
      /**
       * [users description]
       * relationship one to many with User model

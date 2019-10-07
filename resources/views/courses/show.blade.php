@@ -748,7 +748,7 @@ button{line-height:inherit;}
                 {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li> --}}
                 {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li> --}}
               </ul>
-              <a href="{{url('pricings', $pricing)}}" class="btn btn-block btn-primary text-uppercase">S'inscrire</a>
+              <a href="/course/{{$course->slug}}/checkout/{{$pricing->id}}" class="btn btn-block btn-primary text-uppercase">S'inscrire</a>
             </div>
           </div>
         </div>

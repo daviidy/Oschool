@@ -134,6 +134,8 @@ class PricingController extends Controller
         return view('pricings.show', ['pricing' => $pricing]);
     }
 
+
+
     /**
      * Show the form for editing the specified resource.
      *
