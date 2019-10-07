@@ -227,7 +227,7 @@ class PurchaseController extends Controller
 
         //apres avoir décodé la reponse de l'apî call on fait les tests
 
-      if ($json['transaction']['cpm_result'] == '00' && $json['transaction']['cpm_amount'] == $purchase->montant && $json['transaction']['signature'] == $purchase->signature)
+      if ($json['transaction']['cpm_result'] == '00' && $json['transaction']['cpm_amount'] == $purchase->price && $json['transaction']['signature'] == $purchase->signature)
       {
 
                   //on récupère l'id Utilisateur
