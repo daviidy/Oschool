@@ -17,6 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/register/user', 'CustomAuthController@addUser');
+Route::post('/login/user', 'CustomAuthController@loginUser');
+
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('schools', 'SchoolController');
@@ -157,7 +163,18 @@ Route::get('/schoolAdmin/{school}/courses/{course}/certificate', 'CourseControll
 Route::get('/course/{slug}', 'CourseController@showSlug')->name('course.slug');
 Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('enrolled.slug');
 Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');
+Route::get('/course/{slugCourse}/checkout/{pricing}', 'PurchaseController@checkout');
 
+
+//pour les achats
+Route::post('/notify', 'PurchaseController@notify')->name('notify');
+Route::post('renew', 'PurchaseController@renew');
+Route::post('/thank-you', function () {
+    return view('thank-you');
+});
+Route::get('/thank-you', function () {
+    return view('thank-you');
+});
 
 
 //validate a lesson

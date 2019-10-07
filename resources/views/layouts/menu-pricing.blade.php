@@ -5,9 +5,16 @@
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
 
   <link rel="stylesheet" href="/css/checkout.css">
+  <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta charset="UTF-8">
   <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-31ff648fd5e6158c77c31e785844877b6666554feab422e57ca5a96aa5587b9e.css" data-turbolinks-track="true">
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
   <style>
     .course-top-row.has-hero-image .course-header-container {
 
@@ -355,6 +362,8 @@ footer .container .row ul li a:hover{text-decoration:underline;}
 
   <iframe name="filepicker_comm_iframe" id="filepicker_comm_iframe" src="https://dialog.filestackapi.com/dialog/comm_iframe/" style="display: none;"></iframe><iframe name="fpapi_comm_iframe" id="fpapi_comm_iframe"
     src="https://www.filestackapi.com/dialog/comm_iframe/" style="display: none;"></iframe>
+
+    <script type="text/javascript" src="/notifs/amaran/jquery.amaran.js"></script>
 </body>
 
 </html>

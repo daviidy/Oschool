@@ -1,0 +1,408 @@
+/*! CSS Used from: https://www.mindvalley.com/premium-checkout/_ignite/pre_responsive.css */
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.fa-user:before{content:"";}
+.fa-map-marker:before{content:"";}
+.fa-phone:before{content:"";}
+.fa-envelope:before{content:"";}
+.btn-medium{-moz-transition-duration:0.3s;-o-transition-duration:0.3s;-webkit-transition-duration:0.3s;transition-duration:0.3s;display:inline-block;margin:10px 10px 10px 0;font-weight:600;text-transform:uppercase;text-decoration:none;}
+.btn-medium:active,.btn-medium:focus{text-decoration:none;}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{margin:0;}
+footer,header,nav{display:block;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+strong{font-weight:bold;}
+img{border:0;}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{border:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+td,th{padding:0;}
+hr{border:0;margin:0;}
+html{box-sizing:border-box;}
+*,*:before,*:after{box-sizing:inherit;}
+h4{font-size:25px;font-size:1.5625rem;}
+@media (min-width: 20em) and (max-width: 30em){
+h4{font-size:21.875px;font-size:1.5625rem;}
+}
+@media (min-width: 30em) and (max-width: 40em){
+h4{font-size:22.75px;font-size:1.625rem;}
+}
+@media (min-width: 40em) and (max-width: 50em){
+h4{font-size:22.75px;font-size:1.625rem;}
+}
+@media (min-width: 50em) and (max-width: 60em){
+h4{font-size:23.625px;font-size:1.6875rem;}
+}
+@media (min-width: 60em){
+h4{font-size:28px;font-size:1.75rem;}
+}
+html{font-size:100%;line-height:1.6875em;}
+@media only screen and (max-width: 767px){
+html{font-size:87.5%;line-height:1.6875em;}
+}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-family:"Open Sans",sans-serif;font-weight:400;color:#434343;}
+h4{font-weight:300;}
+h4{line-height:1.2em;}
+p{font-size:1em;}
+a{color:#0093e8;text-decoration:none;outline:0;}
+a:active,a:focus,a:hover{color:#005789;}
+.txt-small-1,footer ._footer p,.progress-bar li{font-size:14px;font-size:0.875rem;line-height:27px;line-height:1.6875rem;line-height:21px;line-height:1.31288rem;}
+.txt-right{text-align:right;}
+img{max-width:100%;vertical-align:middle;}
+ul{margin-top:27px;margin-top:1.6875rem;margin-bottom:27px;margin-bottom:1.6875rem;}
+ul>li{padding-top:14px;padding-top:0.84375rem;padding-bottom:0px;padding-bottom:0rem;}
+ul>li:first-child{padding-top:0;}
+.list-fa{list-style:none;padding-left:0;}
+.list-fa .fa{padding-right:1.2em;line-height:1.6875em;vertical-align:top;}
+.list-billing{list-style:none;padding:0;margin:0;display:inline-block;}
+.list-billing li{padding:0;}
+.list-split{list-style:none;padding:0px;}
+@media only screen and (min-width: 960px){
+.list-split>li{display:inline-block;width:49.6%;}
+}
+.bg-grey,.progress-bar{background-color:#f0efef;}
+.content-numbered:before{background-color:#1989ce;}
+.bg-white{background-color:#fff;}
+[class*=" icon-"]{padding-right:10px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+[class*=" icon-"]:before{font-family:'icomoon';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;}
+.icon-bell:before{content:"\e64c";}
+.icon-user:before{content:"\e670";}
+.caption.caption.caption{font-size:15px;font-size:1.5rem;line-height:25px;line-height:2.5rem;margin:0 auto;}
+.caption.caption.caption span{font-size:1.3rem;font-size:13px;padding:1em 10px 8px 10px;display:block;line-height:1.5em;}
+.caption.caption.caption.center{margin:10px auto;text-align:center;}
+._main ._wrapper{max-width:100%;}
+._wrapper{margin:0 auto;position:relative;}
+._wrapper:after{clear:both;content:' ';display:block;visibility:hidden;height:0;}
+.txt-white,.content-numbered:before{color:#fff;}
+.txt-white a,.content-numbered:before a{color:inherit;}
+.marginbottom2em{margin-bottom:2em!important;}
+.pad1em{padding:1em!important;}
+.padtop1em{padding-top:1em!important;}
+.pad2em{padding:2em!important;}
+.padbottom2em{padding-bottom:2em!important;}
+.padtopbottom2em{padding-top:2em!important;padding-bottom:2em!important;}
+._nospacingtop._nospacingtop{margin-top:0px!important;padding-top:0px!important;}
+._nospacingbottom._nospacingbottom{margin-bottom:0px!important;padding-bottom:0px!important;}
+._nomargin._nomargin{margin:0px!important;}
+._nomargintop{margin-top:0px!important;}
+._nomarginbottom._nomarginbottom{margin-bottom:0px!important;}
+._colwrap br{display:block;}
+._row{margin:0 auto;width:100%;}
+._col{position:relative;padding:0 15px;width:100%;}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+._col{width:100%!important;}
+}
+._col ._col{padding:0;}
+@media only screen and (min-width: 600px){
+._col ._col{padding:0 10px;}
+}
+@media only screen and (min-width: 600px){
+._bi ._col._left,._bi ._col:first-child,._tri ._col._left,._tri ._col:first-child,._phi ._col:first-child{margin-left:0;}
+}
+._colwrap{position:relative;margin:0 auto;zoom:1;max-width:1140px;}
+._colwrap:before,._colwrap:after{content:"";display:table;}
+._colwrap:after{clear:both;}
+._centered>._col{margin:0 auto;}
+@media only screen and (min-width: 600px){
+._bi ._col{float:left;width:49.12281%;margin-left:1.75439%;}
+}
+@media only screen and (min-width: 600px){
+._tri ._col{float:left;width:32.16374%;margin-left:1.75439%;}
+}
+@media only screen and (min-width: 600px){
+._phi ._col{float:left;}
+._phi>._aside{width:40.64327%;margin-left:1.75439%;}
+._phi>._article{width:57.60234%;margin-left:1.75439%;}
+}
+.omnibar{-webkit-font-smoothing:initial;}
+.omnibar .img-logo{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;max-width:160px;max-height:35px;}
+@media only screen and (min-width: 600px){
+.omnibar .img-logo{right:auto;left:10px;max-width:none;height:35px;}
+}
+.omnibar__header{position:relative;height:60px;}
+@media only screen and (min-width: 600px){
+.omnibar__header{height:85px;}
+.omnibar__header .c-hamburger{display:none;}
+}
+.omnibar__wrapper{position:relative;max-width:1140px;height:100%;margin:0 auto;font-weight:300;}
+@media only screen and (min-width: 600px){
+.omnibar__wrapper{padding:0 10px;}
+}
+.omnibar__controls{position:absolute;top:0;right:0;}
+@media only screen and (min-width: 600px){
+.omnibar__controls{right:10px;}
+}
+.omnibar__login{display:none;}
+@media only screen and (min-width: 600px){
+.omnibar__login{display:block;list-style:none;margin:0;padding:0;line-height:85px;}
+.omnibar__login>li{display:inline-block;border-left:1px solid #fff;margin-left:-4px;padding:0 5px;line-height:11px;vertical-align:middle;}
+.omnibar__login>li:first-child{border-left:0;margin-left:0;}
+.omnibar__login a{-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-moz-transition-duration:0.4s;-o-transition-duration:0.4s;-webkit-transition-duration:0.4s;transition-duration:0.4s;padding:8px 20px;color:#fff;font-size:14px;text-transform:uppercase;border:1px solid #fff;}
+.omnibar__login a:hover,.omnibar__login a:active,.omnibar__login a:focus{background-color:#1574ae;}
+}
+.omnibar__login--mobile{display:block;padding:0 20px;height:60px;line-height:60px;color:#fff;font-size:20px;border:0;background-color:transparent;outline:0;}
+@media only screen and (min-width: 600px){
+.omnibar__login--mobile{display:none;}
+}
+.omnibar__cpanel{display:none;}
+.omnibar__notification{display:none;}
+@media only screen and (min-width: 600px){
+.omnibar__notification{display:block;margin:0;padding:0;line-height:85px;list-style:none;}
+.omnibar__notification>li{display:inline-block;border-left:1px solid #fff;margin-left:-4px;padding:0;line-height:12px;}
+.omnibar__notification>li:first-child{border-left:0;margin-left:0;}
+}
+.omnibar__notification--mobile{position:relative;display:block;padding-left:5px;padding-right:20px;width:60px;height:60px;line-height:60px;}
+.omnibar__notification--mobile .omnibar__notifier__counter{position:absolute;top:10px;right:15px;width:18px;height:18px;line-height:18px;font-size:8px;}
+@media only screen and (min-width: 600px){
+.omnibar__notification--mobile{display:none;}
+}
+.omnibar__notifier{position:relative;margin-right:11px;color:#fff;font-size:14px;}
+.omnibar__notifier>span{vertical-align:middle;}
+.omnibar__notifier .omnibar__notifier__icon{padding:0;}
+.omnibar__notifier .omnibar__notifier__counter{display:none;width:25px;height:25px;line-height:25px;font-size:10px;}
+.omnibar__notifier .omnibar__notifier__txt{-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-moz-transition-duration:0.4s;-o-transition-duration:0.4s;-webkit-transition-duration:0.4s;transition-duration:0.4s;padding:2px 4px;}
+.omnibar__notifier:hover,.omnibar__notifier:active,.omnibar__notifier:focus{color:#fff;}
+.omnibar__notifier:hover .omnibar__notifier__txt,.omnibar__notifier:active .omnibar__notifier__txt,.omnibar__notifier:focus .omnibar__notifier__txt{background-color:#1574ae;}
+.omnibar__notifier__counter{display:none;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;color:#fff;text-align:center;background-color:#dc2816;}
+.omnibar__user{position:relative;padding-left:60px;color:#fff;font-size:14px;}
+.omnibar__user .omnibar__user__username{-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-moz-transition-duration:0.4s;-o-transition-duration:0.4s;-webkit-transition-duration:0.4s;transition-duration:0.4s;padding:2px 4px;vertical-align:middle;}
+.omnibar__user:hover,.omnibar__user:active,.omnibar__user:focus{color:#fff;}
+.omnibar__user:hover .omnibar__user__username,.omnibar__user:active .omnibar__user__username,.omnibar__user:focus .omnibar__user__username{background-color:#1574ae;}
+.omnibar__navi{display:none;position:absolute;top:60px;width:100%;z-index:1;}
+@media only screen and (min-width: 600px){
+.omnibar__navi{display:block!important;position:relative;top:0;}
+}
+.box-wrapper-grey{background-color:#f7f7f7;border:1px solid #e5e5e5;padding:0.5em 1em;}
+.btn-solid{text-align:center;}
+.btn-solid.btn-orange{background-color:#faa200;color:#fff;}
+.btn-solid.btn-orange:hover,.btn-solid.btn-orange:focus,.btn-solid.btn-orange:active{background-color:#ffb938;}
+.btn-medium{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:0.8em 35px;}
+.content-numbered{position:relative;padding-left:55px;}
+.content-numbered.bg-grey:before{background-color:#cecece;}
+.content-numbered:before{-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;position:absolute;top:0;left:0;width:40px;height:40px;line-height:40px;text-align:center;content:attr(data-number);}
+.c-hamburger{position:relative;overflow:hidden;margin:0;padding:0;width:60px;height:60px;font-size:0;text-indent:-9999px;-webkit-appearance:none;-moz-appearance:none;appearance:none;box-shadow:none;border-radius:none;border:none;cursor:pointer;transition:background 0.3s;}
+.c-hamburger:focus{outline:none;}
+.c-hamburger span{display:block;position:absolute;top:29.5px;left:20px;right:20px;height:1px;background:#fff;}
+.c-hamburger span::before,.c-hamburger span::after{position:absolute;display:block;left:0;width:100%;height:1px;background-color:#fff;content:"";}
+.c-hamburger span::before{top:-6px;}
+.c-hamburger span::after{bottom:-6px;}
+.c-hamburger--htx{background-color:transparent;}
+.c-hamburger--htx span{transition:background 0s 0.3s;}
+.c-hamburger--htx span::before,.c-hamburger--htx span::after{transition-duration:0.3s,0.3s;transition-delay:0.3s,0s;}
+.c-hamburger--htx span::before{transition-property:top, transform;}
+.c-hamburger--htx span::after{transition-property:bottom, transform;}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+.desktop_tablet{display:none!important;}
+}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+.txt-center-devices{text-align:center;}
+}
+@media only screen and (min-width: 600px){
+.aside-left ._article{float:right;}
+.aside-left ._aside{float:left;margin-left:0px;}
+}
+.table-standard{width:100%;}
+.table-standard td,.table-standard th{padding:0.5em 1em;}
+.table-standard thead{background-color:#f7f7f7;border:1px solid #e5e5e5;text-align:left;}
+.table-standard thead .thead-first{width:60%;}
+.table-standard thead .thead-second{width:25%;}
+.table-standard thead .thead-thirds{width:15%;}
+.table-standard tbody tr{border-bottom:1px solid #f0efef;}
+.table-standard tbody tr:last-child{border-bottom:0;}
+.table-standard ._item td{padding-top:3em;padding-bottom:3em;}
+footer{background-color:#116598;color:#fff;padding-bottom:0px;-webkit-font-smoothing:initial;}
+footer .terms{display:block;padding-top:0.6em;font-weight:300;float:none;}
+@media only screen and (min-width: 1140px){
+footer .terms{padding:0px;display:inline-block;float:right;}
+}
+footer .terms .date{padding-right:10px;}
+footer ._footer{padding:10px 0;background-color:#1989ce;}
+@media only screen and (min-width: 1140px){
+footer ._footer{padding:10px 20px;}
+}
+footer ._footer p{padding:5px;text-align:center;}
+@media only screen and (min-width: 1140px){
+footer ._footer p{text-align:left;}
+}
+footer ._footer img{width:100%;display:block;float:none;max-width:140px;margin:0 auto;}
+@media only screen and (min-width: 1140px){
+footer ._footer img{float:left;margin-bottom:0;vertical-align:middle;}
+}
+footer ._legal{display:inline-block;color:#fff!important;margin:10px 10px 0 10px;}
+footer ._legal:hover{text-decoration:none;color:#fff!important;}
+@media only screen and (min-width: 600px){
+footer ._legal{font-size:14px;font-size:0.875rem;line-height:27px;line-height:1.6875rem;display:inline-block;margin:0 10px;}
+}
+@media only screen and (min-width: 1140px){
+footer{text-align:left!important;font-size:14px;font-size:0.875rem;line-height:27px;line-height:1.6875rem;}
+}
+span.caps{display:inline;}
+.videoWrapper{position:relative;padding-bottom:56.25%;height:0;}
+.videoWrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+.bg-access{background:url("https://s5.mindvalley.us/mindvalley/media/images/product-access_06.jpg") no-repeat center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+.bg-wave{background:url("https://s6.mindvalley.us/mindvalley/media/images/bg-wave.jpg") no-repeat center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+.l-masterclass h4{line-height:1.2em;}
+.l-masterclass h4{font-size:23px;font-size:1.4375rem;}
+@media (min-width: 20em) and (max-width: 30em){
+.l-masterclass h4{font-size:20.125px;font-size:1.4375rem;}
+}
+@media (min-width: 30em) and (max-width: 40em){
+.l-masterclass h4{font-size:20.125px;font-size:1.4375rem;}
+}
+@media (min-width: 40em) and (max-width: 50em){
+.l-masterclass h4{font-size:21px;font-size:1.5rem;}
+}
+@media (min-width: 50em) and (max-width: 60em){
+.l-masterclass h4{font-size:21.875px;font-size:1.5625rem;}
+}
+@media (min-width: 60em){
+.l-masterclass h4{font-size:25px;font-size:1.5625rem;}
+}
+.l-academy .omnibar__header{background-color:#1988cc;}
+.l-academy .omnibar__navi{background-color:#0e4b71;}
+.l-access{color:#727272;}
+.l-access--header{padding-top:0;}
+@media only screen and (min-width: 600px){
+.l-access--header{padding-top:3em;}
+}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+.l-access--header ._col{padding:0;}
+}
+.l-access--header-title{color:#fff;margin-top:0;padding:0em 1em;}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+.l-access--header-title{margin-top:0;}
+}
+.l-access--summary ._col._left{border-bottom:1px solid #d7d5d5;}
+@media only screen and (min-width: 600px){
+.l-access--summary ._col._left{border-right:1px solid #d7d5d5;border-bottom:0;}
+}
+.l-access--summary ._col{padding-left:1em;padding-right:1em;}
+.l-access--mvcourse{padding-bottom:3em;}
+.l-access--mvcourse .caption{margin-bottom:0;}
+.l-access--mvcourse .caption span{font-weight:bold;padding-bottom:0!important;}
+.l-access--support-signature{position:absolute;right:0;bottom:2em;}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+.l-access--support-signature{width:52%!important;}
+}
+@media only screen and (min-width: 600px){
+.l-access--support-image{padding-top:4em!important;}
+}
+@media only screen and (min-width: 1140px){
+.l-access--support-image{padding-top:2em!important;}
+}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+.l-access--support-image img{width:40%;}
+}
+.l-access .box-wrapper-grey{margin-top:0;}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+.l-access .box-wrapper-grey{margin-top:1em;margin-bottom:0;}
+}
+.progress-bar li.is-active .progress-bar--num:after,.progress-bar .progress-bar--num:after{-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;position:absolute;display:inline-block;width:30px;height:30px;line-height:1em;left:50%;top:50%;margin:-15px 0 0 -15px;text-align:center;}
+.progress-bar{display:table;table-layout:fixed;margin:0;padding:0;width:100%;overflow:hidden;list-style:none;}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+.progress-bar.mobile-hide{display:none;}
+}
+.progress-bar li{color:#969696;background-color:#f8f8f8;display:table-cell;position:relative;padding:13px 0 13px 30px;text-align:center;line-height:3em;text-transform:uppercase;}
+@media only screen and (min-width: 600px){
+.progress-bar li{height:60px;line-height:60px;padding:0 0 0 30px;}
+}
+.progress-bar li:before,.progress-bar li:after{content:" ";width:0;position:absolute;height:0;font-size:0;line-height:0;z-index:1;}
+.progress-bar li:before{top:-3px;border-bottom:53px solid transparent;border-top:53px solid transparent;right:-33px;border-left:33px solid #f0efef;}
+@media only screen and (min-width: 600px){
+.progress-bar li:before{top:-3px;border-bottom:33px solid transparent;border-top:33px solid transparent;right:-33px;border-left:33px solid #f0efef;}
+}
+.progress-bar li:after{top:0;border-bottom:50px solid transparent;border-top:50px solid transparent;right:-30px;border-left:31px solid #f8f8f8;}
+@media only screen and (min-width: 600px){
+.progress-bar li:after{top:0;border-bottom:30px solid transparent;border-top:30px solid transparent;right:-30px;border-left:30px solid #f8f8f8;}
+}
+.progress-bar li:first-child{padding:0;}
+.progress-bar li.is-active{background-color:#f39c12;color:#fff;}
+.progress-bar li.is-active:after{border-left:31px solid #f39c12;}
+@media only screen and (min-width: 600px){
+.progress-bar li.is-active:after{border-left:30px solid #f39c12;}
+}
+.progress-bar li.is-active .progress-bar--num{margin:0 20px;position:relative;z-index:1;color:#f39c12;}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+.progress-bar li.is-active .progress-bar--num{display:block;}
+}
+.progress-bar li.is-active .progress-bar--num:after{content:" ";z-index:-1;background-color:#fff;}
+.progress-bar .progress-bar--num{margin:0 1.3em;position:relative;color:#a6a0a0;}
+@media only screen and (min-width: 320px) and (max-width: 599px){
+.progress-bar .progress-bar--num{display:block;}
+}
+.progress-bar .progress-bar--num:after{content:" ";border:2px solid #f0efef;color:#746c6c;}
+.progress-bar .progress-bar--txt{display:inline-block;}
+/*! CSS Used from: https://www.mindvalley.com/premium-checkout/assets/style.css */
+.btn-medium{-moz-transition-duration:0.3s;-o-transition-duration:0.3s;-webkit-transition-duration:0.3s;transition-duration:0.3s;}
+.btn-solid.btn-orange:hover,.btn-solid.btn-orange:focus,.btn-solid.btn-orange:active{background-color:#ffb938;}
+.fa{font-family:fontawesome;font-weight:900;}
+.caption{font-size:0.8rem!important;}
+h4{font-family:Gilroy-Bold, Arial!important;font-weight:normal;font-style:normal;}
+.new-reviews,.new-products,.new-support{display:none;}
+@media only screen and (min-width: 600px){
+.new-reviews,.new-products,.new-support{padding:8px 20px;border-radius:4px;float:left;display:inline;line-height:19px;color:#fff!important;margin-right:10px;margin-top:25px;margin-bottom:20px;font-size:14px;}
+.new-reviews:hover,.new-reviews:active,.new-reviews:focus,.new-products:hover,.new-products:active,.new-products:focus,.new-support:hover,.new-support:active,.new-support:focus{-moz-transition-duration:0.4s;-o-transition-duration:0.4s;-webkit-transition-duration:0.4s;transition-duration:0.4s;background-color:#1573ac;}
+}
+@media only screen and (min-width: 600px){
+.omnibar__controls{width:441px;}
+}
+@media only screen and (max-width: 599px){
+.omnibar__login--mobile{display:inline-block;}
+}
+.l-academy .omnibar__header{background-color:#2b8cf8!important;}
+footer ._footer{padding:10px 0;background-color:#2b8cf8;}
+.new-reviews,.new-products,.new-support{display:none;}
+@media only screen and (min-width: 600px){
+.new-reviews,.new-products,.new-support{padding:8px 20px;border-radius:4px;float:left;display:inline;line-height:19px;color:#fff!important;margin-right:10px;margin-top:25px;margin-bottom:20px;font-size:14px;}
+.new-reviews:hover,.new-reviews:active,.new-reviews:focus,.new-products:hover,.new-products:active,.new-products:focus,.new-support:hover,.new-support:active,.new-support:focus{-moz-transition-duration:0.4s;-o-transition-duration:0.4s;-webkit-transition-duration:0.4s;transition-duration:0.4s;background-color:#1573ac;}
+}
+@media only screen and (min-width: 600px){
+.omnibar__controls{width:441px;}
+}
+@media only screen and (max-width: 599px){
+.omnibar__login--mobile{display:inline-block;}
+}
+._colwrap{position:relative;margin:0 auto;zoom:1;max-width:1150px;}
+/*! CSS Used from: Embedded */
+iframe#_hjRemoteVarsFrame{display:none!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important;}
+/*! CSS Used from: Embedded */
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;}
+.fb_reset>div{overflow:hidden;}
+/*! CSS Used from: Embedded */
+.new-reviews,.new-products{visibility:hidden;}
+/*! CSS Used fontfaces */
+@font-face{font-family:'FontAwesome';src:url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/fontawesome-webfont.eot?v=4.5.0");src:url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/fontawesome-webfont.eot#iefix&v=4.5.0") format("embedded-opentype"),url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"),url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"),url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"),url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");font-weight:normal;font-style:normal;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bbck.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bbck.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWZ0bbck.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVp0bbck.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWp0bbck.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bbck.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOX-hpOqc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXuhpOqc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUehpOqc.woff2) format('woff2');unicode-range:U+0370-03FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXehpOqc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'icomoon';src:url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/icomoon.eot?-1ry0pe");src:url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/icomoon.eot#iefix-1ry0pe") format("embedded-opentype"),url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/icomoon.woff?-1ry0pe") format("woff"),url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/icomoon.ttf?-1ry0pe") format("truetype"),url("https://www.mindvalley.com/premium-checkout/_ignite/fonts/icomoon.svg?-1ry0pe#icomoon") format("svg");font-weight:normal;font-style:normal;}
+@font-face{font-family:'Gilroy-Bold';src:url('https://www.mindvalley.com/premium-checkout/assets/webfonts/3375C5_5_0.eot');src:url('https://www.mindvalley.com/premium-checkout/assets/webfonts/3375C5_5_0.eot#iefix') format('embedded-opentype'),url('https://www.mindvalley.com/premium-checkout/assets/webfonts/3375C5_5_0.woff2') format('woff2'),url('https://www.mindvalley.com/premium-checkout/assets/webfonts/3375C5_5_0.woff') format('woff'),url('https://www.mindvalley.com/premium-checkout/assets/webfonts/3375C5_5_0.ttf') format('truetype'),url('https://www.mindvalley.com/premium-checkout/assets/webfonts/3375C5_5_0.svg#wf') format('svg');}
