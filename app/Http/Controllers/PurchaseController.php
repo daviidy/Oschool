@@ -246,7 +246,7 @@ class PurchaseController extends Controller
                     if ($user->courses->contains($course->id)) {
 
                         //envoi mail utilisateur
-                         Mail::send('mails.admins.purchases.success', ['purchase' => $purchase], function($message) use($purchase){
+                         Mail::send('mails.users.purchases.success', ['purchase' => $purchase], function($message) use($purchase){
                            $message->to($purchase->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre paiement a été effectué avec succès !');
                            $message->from('eventsoschool@gmail.com', 'Oschool');
                          });
@@ -255,7 +255,7 @@ class PurchaseController extends Controller
 
                          foreach ($admins as $admin) {
                            //envoi mail admin
-                           Mail::send('mails.users.purchases.success', ['purchase' => $purchase], function($message) use($admin){
+                           Mail::send('mails.admins.purchases.success', ['purchase' => $purchase], function($message) use($admin){
                              $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande a été traitée avec succès');
                              $message->from('eventsoschool@gmail.com', 'Oschool');
                            });
