@@ -265,7 +265,7 @@ class PurchaseController extends Controller
                         }
 
 
-                    }
+
                     else {
 
                         $user->courses()->attach($course);
@@ -290,7 +290,7 @@ class PurchaseController extends Controller
 
                   }
 
-        }
+        }//fin grand if
 
 
       else {
