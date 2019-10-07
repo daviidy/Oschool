@@ -32,7 +32,7 @@
 					<li>Plateforme: <strong>Parcours Oschool</strong> </li>
 					<li>Utilisateur: <strong> <a href="{{url('users', $purchase->user_id)}}">{{$purchase->prenoms}} {{$purchase->nom}}</a> </strong> </li>
           <li>Email: <strong>{{$purchase->user->email}}</strong> </li>
-          <li>course choisie: <strong>{{$purchase->course->name}}</strong> </li>
+          <li>course choisie: <strong>{{$purchase->pricing->course->name}}</strong> </li>
 					<li>price: <strong>{{$purchase->price}} FCFA	</strong> </li>
 					<li>Date de paiement: <strong>{{$purchase->date}}</strong> </li>
           <li>Type: <strong>Nouvelle inscription</strong> </li>
