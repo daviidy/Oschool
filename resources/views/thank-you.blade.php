@@ -4,14 +4,12 @@
 <!--<![endif]-->
 
 <head>
+  <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
+  <title>Je vous remercie</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/thank-you.css">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
-  <title>Thank you</title>
-
-
   <meta name="description" content="The next generation website publishing platform for internet marketing products and services.">
   <meta name="description" content="1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -733,7 +731,7 @@
                   <div class="_row fixed-width l-access--summary">
                     <div class="_colwrap _bi ">
                       <div class="_col _left ">
-                        <p><strong>Bill to</strong></p>
+                        <p><strong>facturer</strong></p>
                         <ul class="list-fa">
                           <li><i class="fa fa-user"></i>N'da Armel David, YAO</li>
                           <li><i class="fa fa-map-marker"></i>
@@ -750,14 +748,14 @@
                           <li><i class="fa fa-envelope"></i>yaodavidarmel@gmail.com</li>
                         </ul>
 
-                        <p><a href="http://www.mindvalley.com/contact">See a Mistake? Contact us and we'll fix it</a></p>
+                        <p><a href="http://www.mindvalley.com/contact">Voir une erreur? Contactez-nous et nous le réparerons</a></p>
                       </div>
 
 
 
                       <div class="_col _right ">
-                        <p><strong>Ship to</strong></p>
-                        <p>Not applicable.</p>
+                        <p><strong>Envoyez à</strong></p>
+                        <p>N'est pas applicable.</p>
                       </div>
 
                     </div>
@@ -871,7 +869,7 @@
             </div>
           </div>
 
-
+<!--
 
           <h4 style="text-align:center;" class="_nospacingbottom _nospacingtop">*Vous pouvez également accéder à votre programme sur mobile ou
             tablette en téléchargeant de Mindvalley App*</h4>
@@ -902,7 +900,7 @@
             </div>
           </div>
 
-
+-->
 
           <div class="_row fixed-width bg-access txt-white l-access--support">
             <div class="_colwrap _bi ">
@@ -944,11 +942,11 @@
       <!--  -->
       <div class="_footer">
         <p class="_colwrap light txt-white">
-          <img src="https://s77.mindvalley.us/mindvalley/media/images/mindvalley.svg" alt="">
+          <img src="/images/schools/logos/oschool_2.png" alt="">
           <span class="terms">
-            <span class="date">© 2019 Mindvalley</span> <span>|</span>
-            <a href="http://www.mindvalley.com/terms-of-use" class="_blank _legal" target="_blank">Terms of Use</a> <span>|</span>
-            <a href="http://www.mindvalley.com/privacy-policy" class="_blank _legal" target="_blank">Privacy Policy</a>
+            <span class="date">© 2019 OSCHOOL. TOUS DROITS RÉSERVÉS.</span> <span>|</span>
+            <a href="http://www.mindvalley.com/terms-of-use" class="_blank _legal" target="_blank">Conditions d'utilisation</a> <span>|</span>
+            <a href="http://www.mindvalley.com/privacy-policy" class="_blank _legal" target="_blank">Politique de confidentialité</a>
           </span>
         </p>
       </div>

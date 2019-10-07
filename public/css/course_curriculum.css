@@ -124,7 +124,7 @@ a,a:active,a:hover,a:focus{text-decoration:none;}
 h2{color:#000;}
 .nav>li>a:focus{background:none!important;outline:0;}
 .section-title{margin-bottom:30px;font-size:22px;font-weight:600;}
-.navbar-fedora{background-color:#4d4d4d;position:absolute;margin-bottom:0px;top:0px;transition:none;}
+.navbar-fedora{background-color:#6aace6!important;position:absolute;margin-bottom:0px;top:0px;transition:none;}
 .navbar-fedora .gravatar{width:30px;height:30px;border-radius:15px;}
 .navbar-fedora .navbar-current-user{display:none;}
 .navbar-fedora .navbar-enrolled{display:none;}
@@ -146,7 +146,7 @@ h2{color:#000;}
 .full-width .navbar-toggle{margin-top:6px;margin-right:15px;}
 @media screen and (max-width: 480px){
 .navbar-fedora{min-height:60px;}
-.navbar-fedora .dropdown-menu{background-color:#292e2e;}
+.navbar-fedora .dropdown-menu{background-color:#6aace6!important;}
 .navbar-fedora .navbar-current-user{display:inline-block;padding-left:5px;}
 .navbar-fedora .navbar-enrolled{display:block;}
 .navbar-fedora .navbar-enrolled .sidebar-nav-link{color:#fff;}
@@ -193,7 +193,7 @@ h2{color:#000;}
 .course-sidebar ul.sidebar-nav li a{font-size:16px;padding:13px 18px;color:#4d4d4d;display:block;margin-top:1px;}
 .course-sidebar ul.sidebar-nav li a i{margin-top:4px;vertical-align:-1px;font-size:22px;margin-right:10px;}
 .course-sidebar ul.sidebar-nav li a:hover{text-decoration:none;background:#e6e6e6;}
-.course-sidebar ul.sidebar-nav li.selected{border-left:3px #000 solid;font-weight:600;}
+.course-sidebar ul.sidebar-nav li.selected{border-left:3px #6aace6 solid!important;font-weight:600;}
 .course-sidebar ul.sidebar-nav li.selected a{background:#ffffff;border-right:1px solid #fff;}
 @media screen and (max-width: 767px){
 .course-mainbar{margin-left:0;padding-left:25px;padding-right:25px;padding-top:85px;}
