@@ -30,11 +30,11 @@
       <td style="padding: 20px 7.5% 0;"> Voici les infos de la transaction  <br>
 				<ul>
 					<li>Plateforme: <strong>Parcours Oschool</strong> </li>
-					<li>Utilisateur: <strong> <a href="{{url('users', $achat->user_id)}}">{{$achat->prenoms}} {{$achat->nom}}</a> </strong> </li>
-          <li>Email: <strong>{{$achat->email}}</strong> </li>
-          <li>Formation choisie: <strong>{{$achat->formation}}</strong> </li>
-					<li>Montant: <strong>{{$achat->montant}} FCFA	</strong> </li>
-					<li>Date de paiement: <strong>{{$achat->date}}</strong> </li>
+					<li>Utilisateur: <strong> <a href="{{url('users', $purchase->user_id)}}">{{$purchase->prenoms}} {{$purchase->nom}}</a> </strong> </li>
+          <li>Email: <strong>{{$purchase->user->email}}</strong> </li>
+          <li>course choisie: <strong>{{$purchase->course->name}}</strong> </li>
+					<li>price: <strong>{{$purchase->price}} FCFA	</strong> </li>
+					<li>Date de paiement: <strong>{{$purchase->date}}</strong> </li>
           <li>Type: <strong>Nouvelle inscription</strong> </li>
 				</ul>
 
