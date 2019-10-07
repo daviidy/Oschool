@@ -91,7 +91,7 @@
             <div data-checkout-inline-form-coupon="">
               <div class="binary-toggle" data-binary-toggle="">
                 <button class="binary-toggle__label" data-binary-toggle-label="" id="add_coupon">
-                  Add Coupon
+                  Ajoutez un coupon
                 </button>
 
                 <div class="binary-toggle__label hidden" data-binary-toggle-content="" id="add_coupons">
@@ -111,7 +111,7 @@
                           </div>
 
                           <div class="spc__inline-form-button-text">
-                            Appliquer
+                            Appliquez
                           </div>
                         </button>
                       </div>
