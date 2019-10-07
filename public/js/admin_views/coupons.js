@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   $("#add_coupon").click(function(){
   $("#add_coupon").addClass("hidden");
-  $("#add_coupons").removeClass("hidden");
+  $(".__label").removeClass("hidden");
 
 });
 
