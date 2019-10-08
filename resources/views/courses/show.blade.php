@@ -452,7 +452,7 @@ button{line-height:inherit;}
         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
           <h2>
             <i class="fa fa-question-circle"></i>
-            Frequently Asked Questions
+            Questions fréquemment posées
           </h2>
           <br>
           <div class="faq-question">
