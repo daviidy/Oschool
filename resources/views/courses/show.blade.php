@@ -401,7 +401,7 @@ button{line-height:inherit;}
             <div class="col-sm-12 course-section">
               <div class="section-title" data-release-date="" data-days-until-dripped="" data-is-dripped-by-date="" data-course-id="7169">
                 <span class="section-lock">
-                  <i class="fa fa-lock"></i>&nbsp;
+                  <ion-icon name="play-circle"></ion-icon>&nbsp;
                 </span>
                 {{$section->title}}
                 <div class="section-days-to-drip">
@@ -423,7 +423,7 @@ button{line-height:inherit;}
                 <li class="section-item">
                   <a class="item" href="/courses/the-foundations-of-card-magic/lectures/124869">
                     <span class="lecture-icon">
-                      <i class="fa fa-youtube-play"></i>
+                      <img src="https://img.icons8.com/color/48/000000/circled-play--v1.png" width="20">
                     </span>
                     <div class="btn-primary btn-sm pull-right lecture-start">
                       Start
@@ -452,34 +452,134 @@ button{line-height:inherit;}
         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
           <h2>
             <i class="fa fa-question-circle"></i>
-            Questions fréquemment posées
+            FAQ OSCHOOL
           </h2>
           <br>
           <div class="faq-question">
-            When does the course start and finish?
+            C’est quoi Oschool ?
           </div>
           <div class="faq-answer">
-            The course starts now and never ends! It is a completely self-paced online course - you decide when you start and when you finish.
+            Nous sommes une plateforme de cours en ligne ! Notre idée principale ? Rassembler des experts dans leurs domaines respectifs, afin que vous trouviez sur notre site les meilleurs cours en ligne sur des thèmes très variés.
           </div>
           <div class="faq-question">
-            How long do I have access to the course?
+            A quoi ressemble un cours ?
           </div>
           <div class="faq-answer">
-            How does lifetime access sound? After enrolling, you have unlimited access to this course for as long as you like - across any and all devices you own.
+            Cela dépend du cours ! Vous ne pourrez pas apprendre le Developpement web comme vous suivez un cours de BTP. Nous nous efforçons donc de toujours proposer les supports de cours les plus adaptés à la formation suivie. Les cours sont principalement composés de vidéos, schémas, textes descriptifs, explicatifs, quizz, afin de vérifier vos connaissances, et d’être sûr qu’elles ont été bien assimilées.
           </div>
           <div class="faq-question">
-            What's the difference between this and the 52Kards YouTube channel?
+            Je suis un vrai débutant. Que dois-je savoir avant de commencer ?
           </div>
           <div class="faq-answer">
-            This course includes exclusive material that I do not teach on YouTube and provides a structured way to learn card magic most effectively and track your progress. Enrolling in the course also helps support the free content that I
-            create for YouTube.
+            Nos cours sont complets et s’adressent autant aux débutants (ils commencent généralement par les bases) qu’aux initiés. Ainsi, il n’y a aucun pré-requis!
+
           </div>
           <div class="faq-question">
-            Any more questions?
+            Pendant combien de temps mes formations sont-elles accessibles/visionnables ?
+          </div>
+          <div class="faq-answer">
+            Cela dépend tout simplement du type de formation que vous aurez choisi : si vous avez choisi un cours sans mentor, vous aurez accès à ce cours à vie. Par contre s’il s’agit d’un parcours en ligne. Celui ci est payable mensuellement, votre abonnement vous donne doit à 30 jours renouvelables.
+          </div>
+          <div class="faq-question">
+            En quoi consiste l'abonnement mensuel à un parcours ?
+          </div>
+          <div class="faq-answer">
+            L'abonnement mensuel à un parcours vous permet de bénéficier d’un accompagnement groupé de la part d’un expert de la thématique étudiée. Cet abonnement se veut totalement libre : chaque mois vous êtes prélevé du montant de votre abonnement mais vous pouvez décider de continuer ou d'arrêter à tout moment.
+          </div>
+          <div class="faq-question">
+            Suis-je engagé(e) lorsque je choisis l'abonnement mensuel à un parcours ?
+          </div>
+          <div class="faq-answer">
+            Non, l'abonnement illimité ne présente aucun engagement.
+          </div>
+          <div class="faq-question">
+            Mes cours sont-ils disponibles intégralement en ligne ou faut-il que je me déplace pour les suivre ?
+          </div>
+          <div class="faq-answer">
+            Tout dépend du type de formation que vous aurez choisi. A ce jour il n’existe qu’une formation en présentiel:<a href="https://code.oschool.ci/formation/formation-en-salle-developpeur-web"> Formation en salle Développeur Web</a>. Toutes les formations sont en lignes.
+          </div>
+          <div class="faq-question">
+            Y’a-t il des contraintes horaires pour suivre les cours ?
+          </div>
+          <div class="faq-answer">
+            Non, vous pouvez suivre les formations 24h/24 et 7j/7. Il n’y a que le mentorat en mode parcours qui nécessite un horaire étudié entre le formateur et l’apprenant.
+
+          </div>
+          <div class="faq-question">
+            Une fois le cours terminé, vais-je recevoir un certificat ?
+          </div>
+          <div class="faq-answer">
+            Un certificat est délivré à la fin de la formation ! Sa délivrance et les modalités sont précisées sur la page du cours.
+          </div>
+          <div class="faq-question">
+            Puis-je télécharger les cours Oschool ?
+          </div>
+          <div class="faq-answer">
+            Vous n’avez pas besoin de vous embêter à télécharger les cours et à les reclasser. Tous les cours sont consultables dans votre espace e-learning, avec une simple connexion Internet.
+            De plus, certaines fonctionnalités de notre plateforme vous permettent de savoir quels chapitres vous avez déjà suivis.
+          </div>
+          <div class="faq-question">
+            Je ne souhaite plus recevoir de mail de votre part. Comment faire ?
+          </div>
+          <div class="faq-answer">
+            Pour cela, vous pouvez tout simplement vous désinscrire de notre Newsletter et vous ne recevrez plus de mail de notre part (hormis de confirmation de commande). Allez dans votre boîte mail, puis sur un mail que vous avez reçu de notre part et tout en bas vous pouvez cliquer sur le bouton "se désinscrire". Vous serez alors supprimé de notre liste d'envoi.
+          </div>
+          <div class="faq-question">
+            J’ai oublié mon mot de passe – que puis-je faire ?
+          </div>
+          <div class="faq-answer">
+            Lors de votre connexion à l’espace membre, cliquez sur “Mot de passe oublié ?”. Ensuite, saisissez l’adresse email correspondant à votre compte puis cliquez sur “Récupérer”. Vous recevrez un mail indiquant la marche à suivre.
+          </div>
+          <div class="faq-question">
+            Quel est le matériel informatique nécessaire pour suivre les formations Oschool ?
+          </div>
+          <div class="faq-answer">
+            Vous avez besoin d’un accès à Internet. Le mieux est d’avoir un navigateur à jour cependant : )
+            Vous pouvez suivre les formations depuis un ordinateur, une tablette ou bien encore un smartphone.
+
+            Si vous avez un problème sur un navigateur, essayez sur un autre. Les navigateurs connus sont : Google Chrome, Mozilla Firefox, Safari et Internet Explorer.
+          </div>
+          <div class="faq-question">
+            J’ai un problème technique (la vidéo ne se lance pas, la vidéo est saccadée, une icône de chargement qui tourne indéfiniment…), que puis-je faire ?
+          </div>
+          <div class="faq-answer">
+            Déconnectez-vous, reconnectez-vous et retournez sur votre vidéo.
+            Essayer de lire la vidéo sur un autre navigateur (Internet Explorer, Firefox, Chrome, Safari)
+            Mettez la vidéo sur pause un petit moment puis appuyez de nouveau sur lecture. En fonction de la qualité du débit de votre connexion internet, il se peut que vous deviez attendre que la vidéo se charge.
+
+            Si le problème persiste, contactez-nous, en fournissant le maximum de détails:
+
+            Votre navigateur
+            Mac (+ version) ou PC
+            La référence, le titre ou le lien de la vidéo qui pose un souci
+            L'erreur spécifique la concernant
+          </div>
+          <h2> PROFESSIONNELS</h2><br>
+
+          <div class="faq-question">
+            Avez-vous un programme d’affiliation ?
+          </div>
+          <div class="faq-answer">
+            Oui. Pour plus d'informations, n’hésitez pas à nous contacter via le +225 48459868 / +225 57414401 / +225 21371277.
+          </div>
+          <div class="faq-question">
+            Que dois-je faire pour devenir instructeur/formateur ?
+          </div>
+          <div class="faq-answer">
+            Vous avez des formations de qualité ou êtes vous-mêmes formateurs/expert dans un domaine, nous serions ravis d'en discuter avec vous !
+
+            Pour nous contacter,<a href="https://oschool.ci/devenez-formateur/"> CLIQUEZ ICI.</a>
+
+            Nous n’attendons que vous !
+          </div>
+          <div class="faq-question">
+            Je souhaite suggérer un tuto
           </div>
           <div class="faq-answer">
             <p>
-              Feel free to contact me at 52Kards@gmail.com if you have any other questions about this course.
+              Vous avez une recommandation à nous faire, une formation que vous souhaiteriez suivre mais qui n'est pas encore sur le site. Vous aimeriez apprendre la magie, faire de la guitare et savoir chanter comme Sinatra ?
+
+              Même méthode : contactez-nous sur la rubrique contact et sélectionnez « Recommandations ».
             </p>
           </div>
         </div>
@@ -759,6 +859,7 @@ button{line-height:inherit;}
 
   <br>
 </div>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 
 @endsection

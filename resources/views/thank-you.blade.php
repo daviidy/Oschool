@@ -821,7 +821,7 @@
           <div class="_row fixed-width l-access--mvcourse">
             <div class="_colwrap _centered">
               <div class="_col" style="width:100%">
-                <h4 style="text-align:center;">Comment accéder à votre cours Mindvalley</h4>
+                <h4 style="text-align:center;">Comment accéder à votre cours OSCHOOL</h4>
 
                 <div class="_row fixed-width ">
                   <div class="_colwrap _tri ">
@@ -842,7 +842,7 @@
                           cours</span></div>
 
                       <div class="content-numbered bg-grey" data-number="2">
-                        <p>Visitez <a href="http://home.mindvalley.com/">home.mindvalley.com</a> et connectez-vous pour accéder à votre programme.</p>
+                        <p>Visitez <a href="/">oschool.ci</a> et connectez-vous pour accéder à votre programme.</p>
                       </div>
 
                     </div>

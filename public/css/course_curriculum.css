@@ -210,7 +210,7 @@ h2{color:#000;}
 header.half-height{height:46px!important;z-index:101;}
 header.half-height .navbar-nav{margin-right:30px!important;float:right;margin-top:0px;}
 header.half-height .nav.navbar-nav>li .fedora-navbar-link{padding-top:8px!important;max-height:45px;}
-header.half-height .lecture-left{width:349px;height:46px!important;float:left;}
+header.half-height .lecture-left{width:349px;height:46px!important;float:left;background-color: #4d90cc!important;}
 header.half-height .lecture-left .nav-icon-back{width:50px!important;height:50px;padding:10px;line-height:20px;display:block;float:left;text-align:center;}
 header.half-height .lecture-left .nav-icon-back i{width:25px;height:25px;font-size:20px;padding-top:2px;}
 header.half-height .lecture-left .nav-icon-back:hover{text-decoration:none;}
