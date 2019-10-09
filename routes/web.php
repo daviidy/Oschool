@@ -20,6 +20,8 @@ Auth::routes();
 Route::post('/register/user', 'CustomAuthController@addUser');
 Route::post('/login/user', 'CustomAuthController@loginUser');
 
+Route::get('/users/billings', 'HomeController@billings');
+
 
 
 

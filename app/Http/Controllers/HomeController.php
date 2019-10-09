@@ -27,4 +27,15 @@ class HomeController extends Controller
     {
         return view('users.dashboard');
     }
+
+
+
+    /**
+     * Show the billings page.
+     *
+     */
+    public function billings()
+    {
+        return view('users.billings');
+    }
 }

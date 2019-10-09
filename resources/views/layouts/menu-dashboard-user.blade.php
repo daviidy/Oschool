@@ -59,7 +59,7 @@
                                 <a href="http://sso.teachable.com/secure/teachable_accounts/profile/edit">Mes paramètres</a>
                             </li>
                             <li class="nav-item-billing">
-                                <a href="http://sso.teachable.com/secure/teachable_accounts/billing">Facturation</a>
+                                <a href="/users/billings">Facturation</a>
                             </li>
                             <li class="nav-item-help">
                                 <a id="my_teachable_help_form" href="http://sso.teachable.com/secure/teachable_accounts/tickets/new">Aidez-moi</a>
@@ -99,7 +99,7 @@
                         <a href="http://sso.teachable.com/secure/teachable_accounts/profile/edit">Mes paramètres</a>
                     </li>
                     <li class="nav-item-billing">
-                        <a href="http://sso.teachable.com/secure/teachable_accounts/billing">Facturation</a>
+                        <a href="/users/billings">Facturation</a>
                     </li>
                     <li class="nav-item-help">
                         <a id="my_teachable_help_form" href="http://sso.teachable.com/secure/teachable_accounts/tickets/new">Aidez-moi</a>

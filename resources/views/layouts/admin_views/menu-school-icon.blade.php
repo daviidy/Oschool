@@ -730,7 +730,7 @@ console.log(JSON.stringify(positions));
   <script type="text/javascript">
 
   $(document).ready(function(){
-      $('.question-added-wrapper').sortable({
+      $('.questions_list').sortable({
           update: function(event, ui){
               $(this).children().each(function(index){
                   if ($(this).attr('data-position') != (index+1)) {
@@ -744,12 +744,12 @@ console.log(JSON.stringify(positions));
   });
 
   function saveNewQuestionPositions(){
-      var positions = [];
+      var lessonPositions = [];
       $('.updated_question').each(function(){
-          positions.push([$(this).attr('data-index'), $(this).attr('data-position')]);
+          lessonPositions.push([$(this).attr('data-index'), $(this).attr('data-position')]);
           $(this).removeClass('updated_question');
       });
-console.log(JSON.stringify(positions));
+      console.log(JSON.stringify(lessonPositions));
       $.ajax({
           type: 'post',
           url: '/saveNewQuestionPositions',
@@ -757,7 +757,7 @@ console.log(JSON.stringify(positions));
           data: {
               '_token': '{{csrf_token()}}',
               'update': 1,
-              'positions': positions,
+              'positions': lessonPositions,
           },
           success: function() {
               $.amaran({'message':"Ordre sauvegardé"});
