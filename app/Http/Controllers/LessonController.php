@@ -252,8 +252,11 @@ class LessonController extends Controller
                 $newPosition = $position[1];
 
                 $data = Question::find($index);
-                $data->position = $newPosition;
-                $data->save();
+                if ($data !== null) {
+                    $data->position = $newPosition;
+                    $data->save();
+                }
+
             }
 
 

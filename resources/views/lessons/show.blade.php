@@ -14,6 +14,73 @@ iframe{
 }
 </style>
 
+<style media="screen">
+/*! CSS Used from: https://fedora.teachablecdn.com/assets/bootstrap-31ff648fd5e6158c77c31e785844877b6666554feab422e57ca5a96aa5587b9e.css ; media=screen */
+@media screen{
+article{display:block;}
+button{margin:0;font:inherit;color:inherit;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+@media print{
+*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+}
+*{box-sizing:border-box;}
+:before,:after{box-sizing:border-box;}
+button{font-family:inherit;font-size:inherit;line-height:inherit;}
+.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px;}
+.btn:focus,.btn:active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.btn:hover,.btn:focus{color:#333;text-decoration:none;}
+.btn:active{background-image:none;outline:0;box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);}
+.btn-primary{color:#fff;background-color:#428bca;border-color:#357ebd;}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active{color:#fff;background-color:#3071a9;border-color:#285e8e;}
+.btn-primary:active{background-image:none;}
+.pull-right{float:right!important;}
+.pull-left{float:left!important;}
+}
+/*! CSS Used from: https://themes2.teachablecdn.com/themecss/production/base.css?_=2cf98e3f62fe&logged_out_homepage_background_image_overlay=0.0 */
+.btn-primary,.btn-primary:active,.btn-primary:focus{background:#1ea69a!important;border:1px solid #1ea69a!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
+.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#1a9086!important;border:1px solid #1a9086!important;color:#fff;}
+@media screen and (max-width: 767px){
+.btn-primary,.btn-primary:active,.btn-primary:focus{font-size:15px;}
+}
+.Quiz{position:relative;}
+.Quiz-item{left:0;position:absolute;top:0;transition:opacity 300ms ease,transform 300ms ease;width:100%;will-change:opacity, transform;}
+.Quiz .quiz-question-outer{transition:height 300ms ease;}
+.quiz-wrapper .quiz{max-width:480px;margin:0 auto;}
+.quiz-wrapper .quiz .quiz-progress{text-align:center;margin-bottom:20px;font-size:20px;color:#ccc;}
+.quiz-wrapper .quiz .quiz-question{text-align:center;margin:0 -50px 30px;font-size:24px;}
+.quiz-wrapper .quiz .quiz-question-outer{position:relative;}
+.quiz-wrapper .quiz .quiz-answer-container .quiz-answer{border:1px solid #eee;padding:10px 20px;margin-bottom:10px;border-radius:5px;cursor:pointer;transition:0.1s ease-in-out all;-webkit-transition:0.1s ease-in-out all;color:#818181;}
+.quiz-wrapper .quiz .quiz-answer-container .quiz-answer:hover{background:#f7f7f7;color:#000;border:1px solid #d7dada;}
+.quiz-wrapper .quiz .quiz-answer-container .quiz-answer-icon i{line-height:40px;color:green;float:right;margin-top:-50px;margin-right:-30px;display:none;}
+.quiz-wrapper .quiz .quiz-answer-container .quiz-answer-icon i.quiz-answer-icon-correct{color:#2ecc71;}
+.quiz-wrapper .quiz .quiz-answer-container .quiz-answer-icon i.quiz-answer-icon-incorrect{color:#e74c3c;}
+.quiz-controls{margin-top:30px;position:relative;}
+.quiz-controls button{opacity:0;position:absolute;pointer-events:none;}
+.quiz-controls button.pull-right{right:0;}
+@media screen and (max-width: 992px){
+.quiz-wrapper .quiz .quiz-question{margin:20px 0px;}
+}
+.lecture-content .lecture-attachment{margin-bottom:20px;margin-top:30px;}
+.lecture-content .lecture-attachment .attachment-block-wrapper{border:1px solid #d7dada;border-radius:5px;}
+.lecture-content .lecture-attachment .attachment-block-wrapper .attachment-block-label{background:#2b3636;color:#fff;display:block;height:27px;line-height:28px;border-radius:3px;text-align:center;margin-top:-35px;margin-left:-35px;font-weight:bold;font-size:15px;float:left;padding:0px 15px;}
+.lecture-content .lecture-attachment .attachment-block-wrapper.quiz-wrapper{padding:35px 35px 80px 35px;}
+/*! CSS Used from: https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css */
+.fa{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.pull-right{float:right;}
+.pull-left{float:left;}
+.fa-check:before{content:"\f00c";}
+.fa-times:before{content:"\f00d";}
+.fa-circle-o:before{content:"\f10c";}
+/*! CSS Used fontfaces */
+@font-face{font-family:'FontAwesome';src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot#iefix&v=4.1.0') format('embedded-opentype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}
+</style>
+
+
+
+
 <div class="course-sidebar lecture-page navbar-collapse navbar-sidebar-collapse collapse" id="courseSidebar" aria-expanded="false" style="height: 31px;">
   <h2 style="padding-bottom: 0px">Programme du cours</h2>
   <!-- Course Progress -->
@@ -180,6 +247,64 @@ iframe{
   </div>
 
 
+  @if($lesson->quizzes)
+  @foreach($lesson->quizzes as $quiz)
+
+
+
+
+  <div class="lecture-attachment lecture-attachment-type-quiz" id="lecture-attachment-24323873">
+      <div class="attachment-data" data-data="{&quot;answerKey&quot;:{&quot;answer-1&quot;:[&quot;oschool&quot;]}}"
+        data-schema="{&quot;type&quot;:&quot;object&quot;,&quot;required&quot;:[&quot;answer-1&quot;],&quot;properties&quot;:{&quot;answer-1&quot;:{&quot;enum&quot;:[&quot;oschool&quot;,&quot;elavoo&quot;],&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;david&quot;,&quot;description&quot;:&quot;single&quot;}}}"
+        data-content-type="null" data-id="24323873" data-is-published="true" data-graded="null">
+          <div class="quiz-content">
+              <div id="quiz-app">
+                  <div class="quiz-wrapper attachment-block-wrapper">
+                      <div class="attachment-block-label">Quiz</div>
+                      @foreach($quiz->questions->sortBy('position') as $question)
+                      <div class="quiz Quiz single">
+                          <div class="quiz-progress">{{$question->position - 1}} / {{count($quiz->questions)}}</div>
+                          <div class="quiz-question-outer" style="height: 168px;">
+                              <div>
+                                  <article class="Quiz-item">
+                                      <div class="quiz-question">{{$question->text}}</div>
+                                      <div class="quiz-answer-container">
+                                          <div class="quiz-answer-container">
+                                              <div role="button" class="quiz-answer"><span class="quiz-answer-text">oschool</span></div>
+                                              <div class="quiz-answer-icon"><i class="quiz-answer-icon-correct fa fa-check"></i><i class="quiz-answer-icon-incorrect fa fa-times"></i><i class="quiz-answer-icon-missed fa fa-circle-o"></i></div>
+                                          </div>
+                                          <div class="quiz-answer-container">
+                                              <div role="button" class="quiz-answer"><span class="quiz-answer-text">elavoo</span></div>
+                                              <div class="quiz-answer-icon"><i class="quiz-answer-icon-correct fa fa-check"></i><i class="quiz-answer-icon-incorrect fa fa-times"></i><i class="quiz-answer-icon-missed fa fa-circle-o"></i></div>
+                                          </div>
+                                          <div class="quiz-answer-icon"><i class="quiz-answer-icon-correct fa fa-check"></i><i class="quiz-answer-icon-incorrect fa fa-times"></i><i class="quiz-answer-icon-missed fa fa-circle-o"></i></div>
+                                      </div>
+                                  </article>
+                              </div>
+                          </div>
+                          <div class="quiz-controls"><button class="btn btn-primary pull-left">‹ Back</button><button class="btn btn-primary pull-right check-answer-button" date-test="check-answer-button">Check</button><button
+                                class="btn btn-primary pull-right" date-test="continue-button">Continue ›</button></div>
+                      </div>
+                      @endforeach
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <!-- Quiz attachment -->
+
+
+  </div>
+
+
+
+
+
+  @endforeach
+  @endif
+
+
   <!-- Comments -->
 
 
@@ -188,6 +313,13 @@ iframe{
   <!-- Scroll to current lecture link position in sidebar -->
 
 </div>
+
+
+<script type="text/javascript">
+
+
+
+</script>
 
 
 @endsection

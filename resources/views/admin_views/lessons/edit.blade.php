@@ -1470,7 +1470,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
             </form>
             <div class="row">
               <div class="col-md-12">
-                  <ul ui-sortable="sortableOptions" ng-model="questions" class="list-unstyled question-added-wrapper ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
+                  <ul ui-sortable="sortableOptions" ng-model="questions" class="questions_list list-unstyled question-added-wrapper ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                       @if($lesson->quizzes)
                       @foreach($lesson->quizzes as $quiz)
                       <input type="hidden" name="quiz_id" value="{{$quiz->id}}">
@@ -1502,7 +1502,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                                 </div>
                                 <div class="multiple-choice">
                                     <p><a class="edit-option" style="cursor: pointer;">Ajouter option de réponse</a></p>
-                                    @foreach($question->options as $option)
+                                    @foreach($question->options->sortBy('id') as $option)
                                     <div what="answer" ng-repeat="answer in question.answers track by $index">
                                         <p></p>
                                         <div class="input-group">
@@ -1532,7 +1532,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                             {{$question->text}}
                           </strong>
                             <ul class="question-answers tch-arrow-list">
-                              @foreach($question->options as $option)
+                              @foreach($question->options->sortBy('id') as $option)
                                 <li what="answer" ng-repeat="answer in question.answers track by $index"  class="answers correct-answer">
                                   <span what="answer text"
                                       ng-bind-html="answer.value">

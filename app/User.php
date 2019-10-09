@@ -79,4 +79,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\School');
     }
+
+
+    //function for relmationship between
+    //user and purchases (one to many)
+    public function purchases()
+    {
+        return $this->hasMany('App\Purchase');
+    }
 }
