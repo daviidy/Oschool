@@ -709,7 +709,7 @@
                   <div class="_row fixed-width ">
                     <div class="_colwrap _bi ">
                       <div class="_col _left txt-center-devices">
-                        <p><strong>Cher N'da Armel David</strong><br>
+                        <p><strong>Cher {{Auth::user()->name}}</strong><br>
                           Merci d’avoir appris avec nous</p>
                       </div>
 
@@ -733,7 +733,7 @@
                       <div class="_col _left ">
                         <p><strong>facturer</strong></p>
                         <ul class="list-fa">
-                          <li><i class="fa fa-user"></i>N'da Armel David, YAO</li>
+                          <li><i class="fa fa-user"></i>{{Auth::user()->name}}</li>
                           <li><i class="fa fa-map-marker"></i>
                             <ul class="list-billing">
                               <li></li>
@@ -745,7 +745,7 @@
                             </ul>
                           </li>
                           <li><i class="fa fa-phone"></i></li>
-                          <li><i class="fa fa-envelope"></i>yaodavidarmel@gmail.com</li>
+                          <li><i class="fa fa-envelope"></i>{{Auth::user()->email}}</li>
                         </ul>
 
                         <p><a href="http://www.mindvalley.com/contact">Voir une erreur? Contactez-nous et nous le réparerons</a></p>
@@ -826,7 +826,7 @@
                 <div class="_row fixed-width ">
                   <div class="_colwrap _tri ">
                     <div class="_col _left ">
-                      <div class="caption center" style="display: block; width: 340px;"><img src="https://www.mindvalley.com/premium-checkout/assets/images/templates/what-happens-1.png" class="user-assets caption" alt="Connectez-vous à votre compte"><span>Connectez-vous à
+                      <div class="caption center" style="display: block; width: 340px;"><img src="/images/divers/1.png" class="user-assets caption" alt="Connectez-vous à votre compte"><span>Connectez-vous à
                           votre compte</span></div>
 
                       <div class="content-numbered bg-grey" data-number="1">
@@ -838,7 +838,7 @@
 
 
                     <div class="_col _middle ">
-                      <div class="caption center" style="display: block; width: 340px;"><img src="https://www.mindvalley.com/premium-checkout/assets/images/templates/what-happens-2.png" class="user-assets caption" alt="Trouvez votre nouveau cours"><span>Trouvez votre nouveau
+                      <div class="caption center" style="display: block; width: 340px;"><img src="/images/divers/2.png" class="user-assets caption" alt="Trouvez votre nouveau cours"><span>Trouvez votre nouveau
                           cours</span></div>
 
                       <div class="content-numbered bg-grey" data-number="2">
@@ -850,7 +850,7 @@
 
 
                     <div class="_col _right ">
-                      <div class="caption center" style="display: block; width: 340px;"><img src="https://www.mindvalley.com/premium-checkout/assets/images/templates/what-happens-3.png" class="user-assets caption" alt="Profitez de votre nouveau cours"><span>Profitez de votre
+                      <div class="caption center" style="display: block; width: 340px;"><img src="/images/divers/3.png" class="user-assets caption" alt="Profitez de votre nouveau cours"><span>Profitez de votre
                           nouveau cours</span></div>
 
                       <div class="content-numbered bg-grey" data-number="3">
