@@ -56,7 +56,7 @@
                                 <a href="{{route('schools.create')}}">Créer une nouvelle école</a>
                             </li>
                             <li class="nav-item-settings">
-                                <a href="http://sso.teachable.com/secure/teachable_accounts/profile/edit">Mes paramètres</a>
+                                <a href="/users/settings">Mes paramètres</a>
                             </li>
                             <li class="nav-item-billing">
                                 <a href="/users/billings">Facturation</a>
@@ -75,14 +75,21 @@
 
                         </ul>
                     </div>
-                    <a class="mobile-settings" href="http://sso.teachable.com/secure/teachable_accounts/profile/edit"><img src="https://assets.teachablecdn.com/icons/icon-settings-white.svg" alt="Icon settings white"></a>
-                    <a class="logo-wrapper" href="/"><img class="logo" src="/images/schools/logos/oschool_2.png" alt="Oschool badge"></a>
+                    <a class="mobile-settings" href="/users/settings">
+                        <img src="https://assets.teachablecdn.com/icons/icon-settings-white.svg" alt="Icon settings white"></a>
+                    <a class="logo-wrapper" href="/"><img class="logo" src="/images/schools/logos/oschool_2.png" alt="Oschool logo"></a>
                     <div class="user-info">
-                        <a href="http://sso.teachable.com/secure/teachable_accounts/profile/edit"><img width="100" height="100" class="avatar" src="https://s.gravatar.com/avatar/9c275cba24f7c939201cda28f832f8e0?d=mm"
+                        <a href="/users/settings"><img width="100" height="100" class="avatar" src="/images/users/default/{{Auth::user()->image}}"
                               alt="9c275cba24f7c939201cda28f832f8e0?d=mm"></a>
-                        <h2>David Yao</h2>
-                        <p>yaodavidarmel@gmail.com</p>
-                        <a class="mobile-logout" href="http://sso.teachable.com/secure/teachable_accounts/sign_out">Log Out</a>
+                        <h2>{{ucfirst(Auth::user()->name)}}</h2>
+                        <p>{{Auth::user()->email}}</p>
+                        <a class="mobile-logout"
+                            href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">Se déconnecter</a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
                     </div>
                 </div>
                 <!--laptop menu view-->
@@ -96,7 +103,7 @@
                     </li>
                     @endif
                     <li class="nav-item-settings">
-                        <a href="http://sso.teachable.com/secure/teachable_accounts/profile/edit">Mes paramètres</a>
+                        <a href="/users/settings">Mes paramètres</a>
                     </li>
                     <li class="nav-item-billing">
                         <a href="/users/billings">Facturation</a>

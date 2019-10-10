@@ -20,7 +20,9 @@ Auth::routes();
 Route::post('/register/user', 'CustomAuthController@addUser');
 Route::post('/login/user', 'CustomAuthController@loginUser');
 
-Route::get('/users/billings', 'HomeController@billings');
+Route::get('/users/billings', 'UserController@billings');
+
+Route::get('/users/settings', 'UserController@edit');
 
 
 
@@ -28,6 +30,8 @@ Route::get('/users/billings', 'HomeController@billings');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('schools', 'SchoolController');
+
+Route::resource('users', 'UserController');
 
 Route::resource('courses', 'CourseController');
 

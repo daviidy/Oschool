@@ -29,13 +29,4 @@ class HomeController extends Controller
     }
 
 
-
-    /**
-     * Show the billings page.
-     *
-     */
-    public function billings()
-    {
-        return view('users.billings');
-    }
 }
