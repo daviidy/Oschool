@@ -115,10 +115,10 @@
                                     <div data-checkout-inline-form-coupon="">
                                         <div class="binary-toggle" data-binary-toggle="">
                                             <button class="binary-toggle__label" data-binary-toggle-label="" id="add_coupon">
-                                                Add Coupon
+                                                Ajoutez un coupon
                                             </button>
 
-                                            <div class="binary-toggle__label hidden" data-binary-toggle-content="">
+                                            <div class="binary-toggle__label __label hidden" data-binary-toggle-content="">
                                                 <form class="form-inline spc__inline-form" data-checkout-inline-form="coupon" action="https://sso.teachable.com/secure/6419/checkout/order_g1lkx710/update" accept-charset="UTF-8" method="post"><input
                                                       name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token"
                                                       value="/wqXpd3pYxNO/ROyCZb6dJdswTKuW9jYqOxo33+1KirdTHgUbcoVomgp3GtdaJ6KfuxvHbE812+C5h3URHZnZg==">
@@ -137,14 +137,14 @@
                                                                 </div>
 
                                                                 <div class="spc__inline-form-button-text">
-                                                                    Apply
+                                                                    Appliquez
                                                                 </div>
                                                             </button>
                                                         </div>
                                                     </div>
 
                                                     <div class="spc__inline-form-error hidden" data-checkout-inline-error="">
-                                                        Invalid Coupon
+                                                      Coupon invalide
                                                     </div>
                                                 </form>
                                             </div>
@@ -152,7 +152,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <script src="/js/admin_views/coupons.js" charset="utf-8"></script>
                             <div class="spc__row spc__row--total">
                                 <div class="spc__summary">
                                     <div class="spc__summary-item">
@@ -211,10 +211,177 @@
                         </p>
                         <div class="spc__check"></div>
 
+            <div data-checkout-inline-form-coupon="">
+              <div class="binary-toggle" data-binary-toggle="">
+                <button class="binary-toggle__label" data-binary-toggle-label="" id="add_coupon">
+                  Ajoutez un coupon
+                </button>
+
+                <div class="binary-toggle__label hidden" data-binary-toggle-content="" id="add_coupons">
+                  <form class="form-inline spc__inline-form" data-checkout-inline-form="coupon" action="https://sso.teachable.com/secure/6419/checkout/order_g1lkx710/update" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="/wqXpd3pYxNO/ROyCZb6dJdswTKuW9jYqOxo33+1KirdTHgUbcoVomgp3GtdaJ6KfuxvHbE812+C5h3URHZnZg==">
+                    <div class="spc__inline-form-inner">
+                      <input type="text" name="coupon_code" id="coupon_code" autocomplete="off" class="spc__inline-form-input" placeholder="Coupon code" data-checkout-inline-input="">
+
+                      <div class="spc__inline-form-success" data-checkout-inline-success=""></div>
+
+                      <div data-checkout-inline-button="" class="spc__inline-form-button is-hidden">
+                        <button id="verify-coupon-code" class="is-hidden btn btn-primary">
+                          <div class="loader">
+                            <div class="loader-line"></div>
+                            <div class="loader-line"></div>
+                            <div class="loader-line"></div>
+                            <div class="loader-line"></div>
+                          </div>
+
+                          <div class="spc__inline-form-button-text">
+                            Appliquez
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+
                         You are logged in as <strong><span data-checkout-authentication-email=""></span></strong>.
 
                         <p></p>
                     </div>
+</form>                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <script src="/js/admin_views/coupons.js" charset="utf-8"></script>
+      <div class="spc__row spc__row--total">
+        <div class="spc__summary">
+          <div class="spc__summary-item">
+            Total
+          </div>
+
+          <div class="spc__summary-item text-right">
+            <span class="meta" data-checkout-currency="">
+              USD
+            </span>
+
+            <span data-checkout-price="final">$52</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </section>
+
+      <section class="spc__section spc__section--account">
+        <h2 class="section-hed">Account Information</h2>
+
+<div class="content-box spc__box">
+  <div data-checkout-device-message="" class="spc__new-device hidden">
+    <div class="spc__new-device-header">
+      <div class="spc__x">
+        <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="emails" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="SPC-unrecognizeddevice" transform="translate(-290.000000, -711.000000)" fill="#D4604B" fill-rule="nonzero">
+              <g id="Acct-info" transform="translate(248.000000, 627.000000)">
+                <g id="Group-6" transform="translate(42.000000, 84.000000)">
+                  <g id="exclamation-circle">
+                    <path d="M18,9 C18,13.9716653 13.9702137,18 9,18 C4.02978629,18 0,13.9716653 0,9 C0,4.0312379 4.02978629,0 9,0 C13.9702137,0 18,4.0312379 18,9 Z M9,10.8145161 C8.07804435,10.8145161 7.33064516,11.5619153 7.33064516,12.483871 C7.33064516,13.4058266 8.07804435,14.1532258 9,14.1532258 C9.92195565,14.1532258 10.6693548,13.4058266 10.6693548,12.483871 C10.6693548,11.5619153 9.92195565,10.8145161 9,10.8145161 Z M7.41509274,4.81405645 L7.68429435,9.74954032 C7.6968871,9.98049194 7.88784677,10.1612903 8.119125,10.1612903 L9.880875,10.1612903 C10.1121532,10.1612903 10.3031129,9.98049194 10.3157056,9.74954032 L10.5849073,4.81405645 C10.5985161,4.56459677 10.3998992,4.35483871 10.1500766,4.35483871 L7.8498871,4.35483871 C7.60006452,4.35483871 7.40148387,4.56459677 7.41509274,4.81405645 Z" id="Shape"></path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <h3 class="section-hed">We don't recognize this device.</h3>
+    </div>
+
+    <p class="spc__new-device-body">
+      Check your email for instructions to authorize this device and complete your purchase.
+
+      <a data-no-turbolink="" href="https://sso.teachable.com/secure/6419/checkout/7141/the-foundations-of-card-magic/sign-out">
+        <strong>Reset</strong>
+</a>    </p>
+  </div>
+
+  <div data-checkout-authentication-message="" class="spc__authenticated hidden">
+    <p>
+    </p><div class="spc__check"></div>
+
+    You are logged in as <strong><span data-checkout-authentication-email=""></span></strong>.
+
+    <a class="spc__log-out" data-no-turbolink="" href="https://sso.teachable.com/secure/6419/checkout/7141/the-foundations-of-card-magic/sign-out">
+      <strong>Log Out</strong>
+</a>    <p></p>
+  </div>
+
+    <div class="spc__unauthenticated">
+      <form class="form-inline spc__inline-form" data-checkout-inline-form="email" action="https://sso.teachable.com/secure/6419/checkout/order_g1lkx710/identify" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="/wqXpd3pYxNO/ROyCZb6dJdswTKuW9jYqOxo33+1KirdTHgUbcoVomgp3GtdaJ6KfuxvHbE812+C5h3URHZnZg==">
+  <label class="control-label" for="email">Email Address</label>
+
+  <div class="spc__inline-form-inner">
+    <input type="email" name="email" id="email" autofocus="autofocus" class="spc__inline-form-input" data-checkout-email="" data-checkout-inline-input="" placeholder="name@example.com" required="required">
+
+    <div class="spc__inline-form-success" data-checkout-inline-success=""></div>
+  </div>
+
+  <p class="spc__authentication-error meta" data-checkout-inline-error="" data-checkout-authentication-error="" data-authentication-error-default="The email you entered is invalid." data-authentication-error-misspelled-gmail="Did you mean &quot;gmail&quot;?" data-authentication-error-misspelled-com="Did you mean &quot;.com&quot;?" ,="" data-authentication-error-no-tld="Did you forget something? Most email addresses have a &quot;.&quot;, like in &quot;.com&quot;." data-authentication-error-dismiss="Dismiss"></p>
+
+</form>
+      <form class="form-inline spc__inline-form" data-checkout-metadata-form="username" action="https://sso.teachable.com/secure/6419/checkout/order_g1lkx710/update" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="/wqXpd3pYxNO/ROyCZb6dJdswTKuW9jYqOxo33+1KirdTHgUbcoVomgp3GtdaJ6KfuxvHbE812+C5h3URHZnZg==">
+  <label class="control-label" for="username">Name</label>
+
+  <div class="spc__inline-form-inner">
+    <input type="text" name="username" id="username" autofocus="autofocus" class="spc__inline-form-input" placeholder="John Doe" required="required">
+  </div>
+</form>
+      <form class="form-inline spc__inline-form spc__inline-form-last" data-checkout-metadata-form="allow_instructor_emails" action="https://sso.teachable.com/secure/6419/checkout/order_g1lkx710/update" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="/wqXpd3pYxNO/ROyCZb6dJdswTKuW9jYqOxo33+1KirdTHgUbcoVomgp3GtdaJ6KfuxvHbE812+C5h3URHZnZg==">
+  <div class="boolean-checkbox spc__checkbox">
+    <label class="spc__promotional-email-label">
+      <input type="hidden" name="allow_instructor_emails" id="allow_instructor_emails" value="false">
+      <input name="allow_instructor_emails" type="checkbox" value="true">
+      <span>I agree to receive instructional and promotional emails</span>
+    </label>
+  </div>
+</form>
+
+      <div id="user-password-form">
+        <div class="spc__password alert alert-warning hidden" data-checkout-alert="school">
+
+  <p class="spc__password-subtitle">
+      It looks like you already have a 52Kards account.
+  </p>
+
+  <form class="form-inline spc__inline-form" data-checkout-inline-form="login-school" action="https://sso.teachable.com/secure/6419/checkout/order_g1lkx710/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="/wqXpd3pYxNO/ROyCZb6dJdswTKuW9jYqOxo33+1KirdTHgUbcoVomgp3GtdaJ6KfuxvHbE812+C5h3URHZnZg==">
+
+    <div class="spc__inline-form-inner">
+      <div class="spc__inline-form-success" data-checkout-inline-success=""></div>
+
+      <input type="password" name="password" id="password_school" value="" autocomplete="off" class="spc__inline-form-input" data-checkout-inline-input="" required="required" placeholder="Enter password">
+
+      <div data-checkout-inline-button="" class="spc__inline-form-button is-hidden">
+        <button class="btn btn-primary">
+          <div class="loader">
+            <div class="loader-line"></div>
+            <div class="loader-line"></div>
+            <div class="loader-line"></div>
+            <div class="loader-line"></div>
+          </div>
+
+          <div class="spc__inline-form-button-text">
+            Log In
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div class="spc__inline-form-error hidden" data-checkout-inline-error="" data-checkout-inline-error-locked="Your account has been locked due to an excessive number of unsuccessful sign in attempts.">
+      Invalid email or password
+    </div>
+
+</form>
+  <p class="text-muted">If this is not you, please use a different email address.</p>
+  <p class="text-muted">If you forgot your password, <a href="https://sso.teachable.com/secure/6419/users/password/new">click here to reset it</a>.</p>
 
                     <div class="spc__unauthenticated">
                         <form id="signup" class="form-inline spc__inline-form" data-checkout-inline-form="email" accept-charset="UTF-8" method="post">

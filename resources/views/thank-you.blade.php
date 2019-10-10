@@ -4,14 +4,12 @@
 <!--<![endif]-->
 
 <head>
+  <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
+  <title>Je vous remercie</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/thank-you.css">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
-  <title>Thank you</title>
-
-
   <meta name="description" content="The next generation website publishing platform for internet marketing products and services.">
   <meta name="description" content="1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -711,7 +709,7 @@
                   <div class="_row fixed-width ">
                     <div class="_colwrap _bi ">
                       <div class="_col _left txt-center-devices">
-                        <p><strong>Cher N'da Armel David</strong><br>
+                        <p><strong>Cher {{Auth::user()->name}}</strong><br>
                           Merci d’avoir appris avec nous</p>
                       </div>
 
@@ -733,9 +731,9 @@
                   <div class="_row fixed-width l-access--summary">
                     <div class="_colwrap _bi ">
                       <div class="_col _left ">
-                        <p><strong>Bill to</strong></p>
+                        <p><strong>facturer</strong></p>
                         <ul class="list-fa">
-                          <li><i class="fa fa-user"></i>N'da Armel David, YAO</li>
+                          <li><i class="fa fa-user"></i>{{Auth::user()->name}}</li>
                           <li><i class="fa fa-map-marker"></i>
                             <ul class="list-billing">
                               <li></li>
@@ -747,17 +745,17 @@
                             </ul>
                           </li>
                           <li><i class="fa fa-phone"></i></li>
-                          <li><i class="fa fa-envelope"></i>yaodavidarmel@gmail.com</li>
+                          <li><i class="fa fa-envelope"></i>{{Auth::user()->email}}</li>
                         </ul>
 
-                        <p><a href="http://www.mindvalley.com/contact">See a Mistake? Contact us and we'll fix it</a></p>
+                        <p><a href="http://www.mindvalley.com/contact">Voir une erreur? Contactez-nous et nous le réparerons</a></p>
                       </div>
 
 
 
                       <div class="_col _right ">
-                        <p><strong>Ship to</strong></p>
-                        <p>Not applicable.</p>
+                        <p><strong>Envoyez à</strong></p>
+                        <p>N'est pas applicable.</p>
                       </div>
 
                     </div>
@@ -823,12 +821,12 @@
           <div class="_row fixed-width l-access--mvcourse">
             <div class="_colwrap _centered">
               <div class="_col" style="width:100%">
-                <h4 style="text-align:center;">Comment accéder à votre cours Mindvalley</h4>
+                <h4 style="text-align:center;">Comment accéder à votre cours OSCHOOL</h4>
 
                 <div class="_row fixed-width ">
                   <div class="_colwrap _tri ">
                     <div class="_col _left ">
-                      <div class="caption center" style="display: block; width: 340px;"><img src="https://www.mindvalley.com/premium-checkout/assets/images/templates/what-happens-1.png" class="user-assets caption" alt="Connectez-vous à votre compte"><span>Connectez-vous à
+                      <div class="caption center" style="display: block; width: 340px;"><img src="/images/divers/1.png" class="user-assets caption" alt="Connectez-vous à votre compte"><span>Connectez-vous à
                           votre compte</span></div>
 
                       <div class="content-numbered bg-grey" data-number="1">
@@ -840,11 +838,11 @@
 
 
                     <div class="_col _middle ">
-                      <div class="caption center" style="display: block; width: 340px;"><img src="https://www.mindvalley.com/premium-checkout/assets/images/templates/what-happens-2.png" class="user-assets caption" alt="Trouvez votre nouveau cours"><span>Trouvez votre nouveau
+                      <div class="caption center" style="display: block; width: 340px;"><img src="/images/divers/2.png" class="user-assets caption" alt="Trouvez votre nouveau cours"><span>Trouvez votre nouveau
                           cours</span></div>
 
                       <div class="content-numbered bg-grey" data-number="2">
-                        <p>Visitez <a href="http://home.mindvalley.com/">home.mindvalley.com</a> et connectez-vous pour accéder à votre programme.</p>
+                        <p>Visitez <a href="/">oschool.ci</a> et connectez-vous pour accéder à votre programme.</p>
                       </div>
 
                     </div>
@@ -852,7 +850,7 @@
 
 
                     <div class="_col _right ">
-                      <div class="caption center" style="display: block; width: 340px;"><img src="https://www.mindvalley.com/premium-checkout/assets/images/templates/what-happens-3.png" class="user-assets caption" alt="Profitez de votre nouveau cours"><span>Profitez de votre
+                      <div class="caption center" style="display: block; width: 340px;"><img src="/images/divers/3.png" class="user-assets caption" alt="Profitez de votre nouveau cours"><span>Profitez de votre
                           nouveau cours</span></div>
 
                       <div class="content-numbered bg-grey" data-number="3">
@@ -871,7 +869,7 @@
             </div>
           </div>
 
-
+<!--
 
           <h4 style="text-align:center;" class="_nospacingbottom _nospacingtop">*Vous pouvez également accéder à votre programme sur mobile ou
             tablette en téléchargeant de Mindvalley App*</h4>
@@ -902,7 +900,7 @@
             </div>
           </div>
 
-
+-->
 
           <div class="_row fixed-width bg-access txt-white l-access--support">
             <div class="_colwrap _bi ">
@@ -944,11 +942,11 @@
       <!--  -->
       <div class="_footer">
         <p class="_colwrap light txt-white">
-          <img src="https://s77.mindvalley.us/mindvalley/media/images/mindvalley.svg" alt="">
+          <img src="/images/schools/logos/oschool_2.png" alt="">
           <span class="terms">
-            <span class="date">© 2019 Mindvalley</span> <span>|</span>
-            <a href="http://www.mindvalley.com/terms-of-use" class="_blank _legal" target="_blank">Terms of Use</a> <span>|</span>
-            <a href="http://www.mindvalley.com/privacy-policy" class="_blank _legal" target="_blank">Privacy Policy</a>
+            <span class="date">© 2019 OSCHOOL. TOUS DROITS RÉSERVÉS.</span> <span>|</span>
+            <a href="http://www.mindvalley.com/terms-of-use" class="_blank _legal" target="_blank">Conditions d'utilisation</a> <span>|</span>
+            <a href="http://www.mindvalley.com/privacy-policy" class="_blank _legal" target="_blank">Politique de confidentialité</a>
           </span>
         </p>
       </div>

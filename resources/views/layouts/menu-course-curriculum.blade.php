@@ -170,12 +170,12 @@
             <li class="dropdown">
               <a aria-expanded="false" aria-haspopup="true" class="fedora-navbar-link navbar-link dropdown-toggle open-my-profile-dropdown" data-toggle="dropdown">
                 <img class="gravatar" src="https://s.gravatar.com/avatar/9c275cba24f7c939201cda28f832f8e0?d=mm" alt="yaodavidarmel@gmail.com">
-                <span class="navbar-current-user">David Yao</span>
+                <span class="navbar-current-user">{{Auth::user()->name}}</span>
               </a>
               <ul class="dropdown-menu">
                 <li class="user-profile">
                   <a href="/current_user/profile">
-                    Modifier votre profile
+                    Modifier votre profil
                   </a>
                 </li>
                 <li>
@@ -183,20 +183,23 @@
                     Gerer vos abonnements
                   </a>
                 </li>
-                <li>
+                <!--li>
                   <a href="/current_user/credit_card">
                     Ajouter / Echanger votre carte de credit
                   </a>
-                </li>
+                </li-->
                 <li>
                   <a href="/current_user/contact">
                     Contactez nous
                   </a>
                 </li>
                 <li class="user-signout">
-                  <a href="/sign_out">
-                    Deconnection
-                  </a>
+                  <a href="{{ route('logout') }}"
+                     onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">Se déconnecter</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
                 </li>
               </ul>
 
