@@ -783,8 +783,7 @@
                     </thead>
 
                     <tbody>
-                      @auth
-                      @foreach(Auth::user()->purchases as $purchase)
+
                       <tr class="_item">
                         <td>
                           A-S00616958 </td>
@@ -797,7 +796,10 @@
                           $258.00 </td>
                       </tr>
 
-                      @endforeach
+
+
+
+
                       <tr class="_total">
                         <td colspan="3">
                           <strong>Order Total</strong>
@@ -807,8 +809,6 @@
                         </td>
                       </tr>
                     </tbody>
-
-                    @endauth
                   </table>
                 </div>
 

@@ -175,7 +175,7 @@
               <ul class="dropdown-menu">
                 <li class="user-profile">
                   <a href="/current_user/profile">
-                    Modifier votre profile
+                    Modifier votre profil
                   </a>
                 </li>
                 <li>

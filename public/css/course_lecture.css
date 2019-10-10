@@ -94,7 +94,7 @@ a.btn,a.btn:hover,a.btn:focus{display:inline-block;}
 @media screen and (-webkit-min-device-pixel-ratio: 0){
 .dropdown-menu{display:none;}
 }
-.small a img {
+.small1 a img {
     border: 1px solid #fff;
     box-shadow: 1px 1px 14px 4px #ccc;
     border-radius: 0 15px;
