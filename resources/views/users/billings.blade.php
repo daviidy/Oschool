@@ -95,23 +95,57 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
     <!---->
     <div data-v-bd11ec86="" data-v-27efbf01="">
         <div data-v-bd11ec86="" class="inner-content empty">
-            <h4 data-v-bd11ec86="">No Active Subscriptions !</h4> <img data-v-bd11ec86="" src="https://s35.mindvalley.us/mindvalleyacademy/media/images/empty_icon.png">
-            <p data-v-bd11ec86="">You do not have any Active Subscriptions at the moment.</p> <a data-v-669dc8b3="" data-v-bd11ec86="" href="/discover" class="centered-button">
+            <h4 data-v-bd11ec86="">Vos achat en cours</h4> <img data-v-bd11ec86="" src="https://s35.mindvalley.us/mindvalleyacademy/media/images/empty_icon.png">
+            @if(!Auth::user()->purchases->where('status', 'Validé'))
+            <p data-v-bd11ec86="">You do not have any Active Subscriptions at the moment.</p> 
+            @else
+            
+            <div data-v-bd11ec86="" class="payment-history">
+                    <div class="table-wrapper">
+                        <table>
+                            <tr class="header">
+                                <th>Cours associé</th>
+                                <th>Prochaine date de paiement</th>
+                                <th>Reste à payer</th>
+                                <th>Methode de paiement</th>
+                            </tr>
+                            @foreach(Auth::user()->purchases->where('status', 'Validé') as $purchase)
+                            <tr data-v-3e7bb260="">
+                                <td data-v-3e7bb260="" class="order"><a data-v-3e7bb260="" href="/api/v2/invoices/download?id=2c92a0fe6ccd01e7016cf2303dcc16d0">
+                                        A-S00616958
+                                        <img data-v-3e7bb260="" src="https://s92.mindvalley.us/mindvalley/media/images/ico-pdf.svg" alt="Invoice"></a>
+                                </td>
+                                <td data-v-3e7bb260="">2019-09-02</td>
+                                <td data-v-3e7bb260="">Super Cerveau (2 Septembre 2019)</td>
+                                <td data-v-3e7bb260="">USD 129.0</td>
+                                
+                                
+                            </tr>
+                            @endforeach
+                        </table>
+                    </div>
+                </div>
+                
+                @endif
+
+
+
+            <a data-v-669dc8b3="" data-v-bd11ec86="" href="/discover" class="centered-button">
                 Discover Subscriptions
             </a>
         </div>
         <!---->
         <div data-v-bd11ec86="" class="inner-content">
-            <h4 data-v-bd11ec86="">Payment History</h4>
+            <h4 data-v-bd11ec86="">Historique de paiements</h4>
             <div data-v-bd11ec86="" class="payment-history">
                 <div class="table-wrapper">
                     <table>
                         <tr class="header">
-                            <th>Order No.</th>
+                            <th>Trier par No.</th>
                             <th>Date</th>
-                            <th>Product Name</th>
+                            <th>Nom de la formule</th>
                             <th>Grand Total</th>
-                            <th>Payment Method</th>
+                            <th>Methode de paiement</th>
                             <th>Status</th>
                         </tr>
                         <tr data-v-3e7bb260="">
