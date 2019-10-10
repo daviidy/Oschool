@@ -130,6 +130,8 @@ input[type="checkbox"]:focus{outline:5px auto -webkit-focus-ring-color;outline-o
 .tab-content > .tab-pane{display:none;}
 .tab-content > .active{display:block;}
 .pull-right{float:right!important;}
+.pull-right1{float:right!important;display: flex!important;margin-top: -53px!important;margin-left: 215px!important;}
+.pull-rights{float:right!important; display: flex!important;}
 .tch-btn-header-primary{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;min-width:140px;padding-left:30px!important;padding-right:30px!important;max-width:570px;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;}
 .tch-btn-header-primary:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
 .tch-btn-header-primary:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
@@ -162,7 +164,7 @@ input[type="checkbox"]:focus{outline:5px auto -webkit-focus-ring-color;outline-o
 .tch-btn-header-icon:active:hover,.tch-btn-header-icon:active:focus,.tch-btn-header-icon:hover:hover,.tch-btn-header-icon:hover:focus,.tch-btn-header-icon:focus:hover,.tch-btn-header-icon:focus:focus{background:white;border-color:#ff7f45;color:#ff7f45;}
 .tch-btn-header-icon:focus{outline:0!important;}
 .tch-btn-header-icon:focus{outline:0!important;}
-.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#1ea69a;border:1px solid #1ea69a;}
+.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#4D90CC;border:1px solid #4D90CC;}
 .tch-btn-content-primary:focus{outline:0!important;}
 .tch-btn-content-primary:focus{outline:0!important;}
 .tch-btn-content-primary:focus{color:white;background-color:#19887e;border-color:#177f76;}
@@ -632,15 +634,15 @@ th{text-align:left;}
 .pull-right{float:right!important;}
 tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
 [disabled]{cursor:default!important;pointer-events:none;}
-.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#1ea69a;border:1px solid #1ea69a;}
+.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#4D90CC;border:1px solid #4D90CC;}
 .tch-btn-content-primary:focus{outline:0!important;}
 .tch-btn-content-primary:focus{outline:0!important;}
-.tch-btn-content-primary:focus{color:white;background-color:#19887e;border-color:#177f76;}
-.tch-btn-content-primary:hover{color:white;background-color:#19887e;border-color:#177f76;}
-.tch-btn-content-primary:active{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-btn-content-primary:focus{color:white;background-color:#4D90CC;border-color:#177f76;}
+.tch-btn-content-primary:hover{color:white;background-color:#4D90CC;border-color:#177f76;}
+.tch-btn-content-primary:active{color:white;background-color:#4D90CC;border-color:#177f76;}
 .tch-btn-content-primary:active:hover,.tch-btn-content-primary:active:focus{color:white;background-color:#146e66;border-color:#12655e;}
 .tch-btn-content-primary:active{background-image:none;}
-.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e6c6b8;color:#d4604b;}
+.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:red;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#e6c6b8;color:#d4604b;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-content-danger:focus{color:white;background-color:#ededed;border-color:#e8e8e8;}
@@ -1127,23 +1129,23 @@ input[type="checkbox"]:focus{outline:5px auto -webkit-focus-ring-color;outline-o
 .input-group-btn{position:relative;font-size:0;white-space:nowrap;}
 .well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);}
 .pull-right{float:right!important;}
-.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#1ea69a;border:1px solid #1ea69a;}
+.tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#4D90CC;border:1px solid #4D90CC;}
 .tch-btn-content-primary:focus{outline:0!important;}
 .tch-btn-content-primary:focus{outline:0!important;}
-.tch-btn-content-primary:focus{color:white;background-color:#19887e;border-color:#177f76;}
-.tch-btn-content-primary:hover{color:white;background-color:#19887e;border-color:#177f76;}
-.tch-btn-content-primary:active{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-btn-content-primary:focus{color:white;background-color:#6aace6;border-color:#6aace6;}
+.tch-btn-content-primary:hover{color:white;background-color:#6aace6;border-color:#6aace6;}
+.tch-btn-content-primary:active{color:white;background-color:#6aace6;border-color:#6aace6;}
 .tch-btn-content-primary:active:hover,.tch-btn-content-primary:active:focus{color:white;background-color:#146e66;border-color:#12655e;}
 .tch-btn-content-primary:active{background-image:none;}
-.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:#4d90cc3b;color:#6aace6;}
+.tch-btn-content-danger{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#fff;border:1px solid #d4604b;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;border-color:red;color:red;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-content-danger:focus{outline:0!important;}
-.tch-btn-content-danger:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-content-danger:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-content-danger:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
+.tch-btn-content-danger:focus{color:white;background-color:red;border-color:red;}
+.tch-btn-content-danger:hover{color:white;background-color:red;border-color:red;}
+.tch-btn-content-danger:active{color:white;background-color:red;border-color:red;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:red;border-color:red;}
 .tch-btn-content-danger:active{background-image:none;}
-.tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
+.tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:red;color:red;}
 .tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus,.tch-btn-content-danger:hover:hover,.tch-btn-content-danger:hover:focus,.tch-btn-content-danger:focus:hover,.tch-btn-content-danger:focus:focus{background:#fff;border-color:#4D90CC;color:#4D90CC;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-content-danger:focus{outline:0!important;}
@@ -1292,7 +1294,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
             <div filepicker-drag-drop="true" drag-over-class="drag-hover" on-upload-success="dropFilePickerSuccess" filepicker-multiple="true" filepicker-folder="true" target-type="attachment upload" class="drop-inner">
                 Mettez une image pour cette leçon (facultatif)<span class="space"></span><span class="space"></span></div>
             <div data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
-              class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="image_lesson" type="file" name="image" value=""> <span> Choisissez une image</span></div>
+              class="drop-button tch-btn-header-secondary pull-right pull-right1 fastclickable"> <input id="image_lesson" type="file" name="image" value=""> <span> Choisissez une image</span></div>
         </div>
         <img width="150" src="/images/lessons/images/{{$lesson->image}}" alt="">
     </ui-view>
@@ -1477,7 +1479,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                       @foreach($quiz->questions->sortBy('position') as $question)
 
                       <li data-index="{{$question->id}}" data-position="{{$question->position}}" class="well ui-sortable-handle">
-                        <div id="question-save-1" ng-show="!question.editing" class="pull-right">
+                        <div id="question-save-1" ng-show="!question.editing" class="pull-right pull-rights">
                             <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/lessons/{{$lesson->id}}/quiz/{{$quiz->id}}/edit"></a>
                                 <button type="button"
                                     class="edit_quiz tch-btn-content-primary tch-btn-icon disable-animations fastclickable"><i class="fa fa-edit"></i>
@@ -1659,5 +1661,6 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
 </div>
 
 <script type="text/javascript" src="/js/admin_views/lesson.js"></script>
+<script type="text/javascript" src="/js/admin_views/curriculum.js"></script>
 
 @endsection

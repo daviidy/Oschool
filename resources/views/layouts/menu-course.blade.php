@@ -4,8 +4,7 @@
 
   <link rel="stylesheet" href="/css/course_single.css">
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
-
-
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <meta charset="UTF-8">
   <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-fb144454ae2d6daf41829e849802fb78e65ccf7a89947805dd103de5cb97d355.css" data-turbolinks-track="true">
   <link
