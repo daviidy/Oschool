@@ -82,18 +82,20 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
 
 
 <div class="course-sidebar lecture-page navbar-collapse navbar-sidebar-collapse collapse" id="courseSidebar" aria-expanded="false" style="height: 31px;">
-  <h2 style="padding-bottom: 0px">Programme du cours</h2>
+  <h2 style="padding-bottom: 0px; text-align: center;">Vous avez des questions, posez les dans la communauté</h2>
   <!-- Course Progress -->
 
   <div class="course-progress lecture-page is-at-top">
-    <div class="progressbar">
-      <div class="progressbar-fill" style="min-width: 97%;"></div>
-    </div>
+    <!--div class="progressbar">
+      <!--div class="progressbar-fill" style="min-width: 97%;"></div->
+    </div-->
     <div class="small course-progress-percentage">
-      <span class="percentage">
+      <!--span class="percentage">
         97%
       </span>
       COMPLETE
+    -->
+    <a href="https://discordapp.com/invite/hhbzcHE" target="_blank"><img src="https://img.icons8.com/color/48/000000/discord-new-logo.png"></a>
     </div>
   </div>
 

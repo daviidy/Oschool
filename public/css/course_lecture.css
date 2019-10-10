@@ -94,6 +94,11 @@ a.btn,a.btn:hover,a.btn:focus{display:inline-block;}
 @media screen and (-webkit-min-device-pixel-ratio: 0){
 .dropdown-menu{display:none;}
 }
+.small a img {
+    border: 1px solid #fff;
+    box-shadow: 1px 1px 14px 4px #ccc;
+    border-radius: 0 15px;
+}
 .dropdown-menu.left-caret:before{position:absolute;top:-7px;left:9px;display:inline-block;border-right:7px solid transparent;border-bottom:7px solid #ccc;border-left:7px solid transparent;border-bottom-color:rgba(0,0,0,0.2);content:'';}
 .dropdown-menu.left-caret:after{position:absolute;top:-6px;left:10px;display:inline-block;border-right:6px solid transparent;border-bottom:6px solid white;border-left:6px solid transparent;content:'';}
 .dropdown-menu.left-caret:before{left:17px;right:auto;}

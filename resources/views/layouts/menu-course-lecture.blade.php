@@ -120,7 +120,7 @@
   </style>
 
   <style>
-  
+
   #nav-btn-complete{
     height: 100%;
     width: 100%;
@@ -129,7 +129,7 @@
     border: 0;
     color: white;
   }
-  
+
   </style>
 
 </head>
@@ -142,12 +142,14 @@
       <a class="nav-icon-back" aria-label="Back to course curriculum" data-no-turbolink="true" role="button" href="/courses/532534">
         <i class="fa fa-angle-left" title="Back to course curriculum"></i>
       </a>
-      <div class="dropdown settings-dropdown" role="menubar">
+      <h2></h2>
+
+      <!--div class="dropdown settings-dropdown" role="menubar">
         <a href="#" class="nav-icon-settings dropdown-toggle" aria-label="Settings Menu" aria-haspopup="true" role="menuitem" id="settings_menu" data-toggle="dropdown" aria-expanded="false">
-          <i class="fa fa-cog" title="Settings Menu"></i>
+          <!-i class="fa fa-cog" title="Settings Menu"></i->
         </a>
-        <ul class="dropdown-menu left-caret" role="menu" aria-labelledby="settings_menu">
-          <!-- AUTOPLAY -->
+        <!--ul class="dropdown-menu left-caret" role="menu" aria-labelledby="settings_menu">
+          <!-- AUTOPLAY ->
           <li aria-label="menuitem">
             <div class="switch" id="switch-autoplay-lectures">
               <input id="custom-toggle-autoplay" class="custom-toggle custom-toggle-round" name="toggle-autoplay" type="checkbox" aria-label="Autoplay" data-control-initialized="true">
@@ -155,7 +157,7 @@
             </div>
             <span aria-labelledby="switch-autoplay-lectures">Autoplay</span>
           </li>
-          <!-- AUTOCOMPLETE -->
+          <!-- AUTOCOMPLETE ->
           <li aria-label="menuitem">
             <div class="switch" id="switch-autocomplete-lectures">
               <input id="custom-toggle-autocomplete" class="custom-toggle custom-toggle-round" name="toggle-autocomplete" type="checkbox" aria-label="Autocomplete" data-control-initialized="true">
@@ -163,7 +165,7 @@
             </div>
             <span aria-labelledby="switch-autocomplete-lectures">Autocomplete</span>
           </li>
-          <!-- PLAYER TYPE -->
+          <!-- PLAYER TYPE ->
           <li aria-label="menuitem">
             <div class="pull-right">
               <div class="switch-toggle well" id="switch-lecture-player">
@@ -176,7 +178,7 @@
             </div>
             <span aria-labelledby="switch-lecture-player">Player</span>
           </li>
-          <!-- PLAYBACK SPEED -->
+          <!-- PLAYBACK SPEED ->
           <li aria-label="menuitem">
             <div class="pull-right">
               <button class="playback-speed" role="button" data-control-initialized="true">
@@ -199,7 +201,7 @@
     </div>
     Quality
   </li> -->
-        </ul>
+</ul-->
 
       </div>
       <a class="nav-icon-list show-xs hidden-sm hidden-md hidden-lg collapsed" aria-label="Course Sidebar" role="button" data-toggle="collapse" href="#courseSidebar" aria-expanded="false" aria-controls="courseSidebar">
@@ -229,7 +231,7 @@
               &nbsp;
               <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </button>
-              
+
             </form>
       @endif
 
