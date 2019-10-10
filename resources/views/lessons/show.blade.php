@@ -169,6 +169,25 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
       <ul class="section-list">
         @if($section->lessons)
         @foreach($section->lessons->sortBy('position') as $section_lesson)
+        @if(Auth::user()->lessons->contains($section_lesson->id))
+        <li class="section-item completed unlocked-lecture">
+            <a class="item" data-no-turbolink="true" href="/course/{{$section_lesson->course->slug}}/lessons/{{$section_lesson->slug}}" id="sidebar_link_10371330">
+              <span class="status-container">
+                <span class="status-icon">
+                  &nbsp;
+                </span>
+              </span>
+              <div class="title-container">
+                <span class="lecture-icon">
+                  <img width="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADbElEQVRoge2YTWhUVxTHf+fla2bMpDOogWknEcXQioJCA5G6sK6KliAuGpq2Qm0Rt9JNF6UQtAguXEjFgiJ2o5sWigq2ddOgCz8aXAhCFsHWZBKrVmcSk8lMJnnHRRI6efcleeObmUZ4Pxi479x7zz3/e9+de96FgICAgICA1xjx2nDfqdurC3ZdkmlttSx7na1Wi2XpW6rEQeMgMSAGhOa6hIvKOWCyqJxWJCNoBvQ5SEpVUiiD1MpgYTo39PtX7z33JaCnR62+2N0vBe0GOoCIV7FlIgvcRrl45fC75xBRt0auAj7quV+fj01eVvigoiF6Rn5NhHXvmUPtBWeN5dY8F5s8tnKCB9DdI1n5zq3GWIH3z/8Rio5F/0F5o/KBlcQYYRJXDrVni43GCjRmGrevwOABmiRHh9NoCLBgQ3XiKR1bZaPTZu4BkfVVieZVUJYXoD5X4Oi+NlpXh/24WBQR28MKoEk/g2xtbeLkJ5s4uLOFSEONH1cGghiT6yJAon4HqrGEzm3NnP18C53bmhHP5/3SKKx12gwBIqwqz3AQDdVycGcLJz7exDuJxnK4XIvqgukw94CWT8A8G5sjHO96m6/3bGBNtN6Pq/rd3w8scOB2EpddAMyemDva4pzev5nu7W9SV/Oq79WzhuKnqgmYJ1Rn0d2R4NRnm9nRFi+9fz4cKn52zYWqgQJT03bJ/aZWyYKErtalzQSzeX1FyBVsfrn7mJ//fERhxjVDXgqNrOkfKzZUTYACvf3P+PHGMOmskRV7Zfynrq6ZYoMhQIQJLXlilmbgSZYzvUP0Pxr35Udg1GkzBKgy4WuUItLZAhdvjnDt/r+UY1IUMk6byyukL0r4VHZlxlau3nvKhZsjZKdmlu/gneVXACTlZ4S+v0c5dz3FcDrnx81iPHQazD0AD/ys9pFLAz56L43AA6fNPAdU/6pYBH5xic0QYLuoXCm4xWYIGI+N30LMzbICGJOI3HEaDQG9B3blsDlbnZhK4gfnjQQskguFRsPfgP5W+Zg8czUR5lu3isX/8FWl82TfFyCf8v9dLd4S1QuXD7efL+lq0Y0PT9+L1+amkrYl61Q0KUgSm1YsOyZIbPaSlyZg/pO0gf9EZ4H8XPnF3C8NZEAzKjIkSgpkUGAwb+dTXi93AwICAgICXmteAqwlCST6n6m2AAAAAElFTkSuQmCC">
+                </span>
+                <span class="lecture-name">
+                  {{$section_lesson->title ? $section_lesson->title : 'Nouvelle leçon'}}
+                </span>
+              </div>
+            </a>
+          </li>
+        @else
         <li class="section-item incomplete">
           <a class="item" data-no-turbolink="true" href="/course/{{$section_lesson->course->slug}}/lessons/{{$section_lesson->slug}}" id="sidebar_link_10371330">
             <span class="status-container">
@@ -186,7 +205,29 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
             </div>
           </a>
         </li>
+        @endif
+
         @endforeach
+       
+        {{-- @foreach($section->lessons->sortBy('position') as $section_lesson)
+        <li class="section-item completed unlocked-lecture">
+          <a class="item" data-no-turbolink="true" href="/course/{{$section_lesson->course->slug}}/lessons/{{$section_lesson->slug}}" id="sidebar_link_10371330">
+            <span class="status-container">
+              <span class="status-icon">
+                &nbsp;
+              </span>
+            </span>
+            <div class="title-container">
+              <span class="lecture-icon">
+                <img width="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADbElEQVRoge2YTWhUVxTHf+fla2bMpDOogWknEcXQioJCA5G6sK6KliAuGpq2Qm0Rt9JNF6UQtAguXEjFgiJ2o5sWigq2ddOgCz8aXAhCFsHWZBKrVmcSk8lMJnnHRRI6efcleeObmUZ4Pxi479x7zz3/e9+de96FgICAgICA1xjx2nDfqdurC3ZdkmlttSx7na1Wi2XpW6rEQeMgMSAGhOa6hIvKOWCyqJxWJCNoBvQ5SEpVUiiD1MpgYTo39PtX7z33JaCnR62+2N0vBe0GOoCIV7FlIgvcRrl45fC75xBRt0auAj7quV+fj01eVvigoiF6Rn5NhHXvmUPtBWeN5dY8F5s8tnKCB9DdI1n5zq3GWIH3z/8Rio5F/0F5o/KBlcQYYRJXDrVni43GCjRmGrevwOABmiRHh9NoCLBgQ3XiKR1bZaPTZu4BkfVVieZVUJYXoD5X4Oi+NlpXh/24WBQR28MKoEk/g2xtbeLkJ5s4uLOFSEONH1cGghiT6yJAon4HqrGEzm3NnP18C53bmhHP5/3SKKx12gwBIqwqz3AQDdVycGcLJz7exDuJxnK4XIvqgukw94CWT8A8G5sjHO96m6/3bGBNtN6Pq/rd3w8scOB2EpddAMyemDva4pzev5nu7W9SV/Oq79WzhuKnqgmYJ1Rn0d2R4NRnm9nRFi+9fz4cKn52zYWqgQJT03bJ/aZWyYKErtalzQSzeX1FyBVsfrn7mJ//fERhxjVDXgqNrOkfKzZUTYACvf3P+PHGMOmskRV7Zfynrq6ZYoMhQIQJLXlilmbgSZYzvUP0Pxr35Udg1GkzBKgy4WuUItLZAhdvjnDt/r+UY1IUMk6byyukL0r4VHZlxlau3nvKhZsjZKdmlu/gneVXACTlZ4S+v0c5dz3FcDrnx81iPHQazD0AD/ys9pFLAz56L43AA6fNPAdU/6pYBH5xic0QYLuoXCm4xWYIGI+N30LMzbICGJOI3HEaDQG9B3blsDlbnZhK4gfnjQQskguFRsPfgP5W+Zg8czUR5lu3isX/8FWl82TfFyCf8v9dLd4S1QuXD7efL+lq0Y0PT9+L1+amkrYl61Q0KUgSm1YsOyZIbPaSlyZg/pO0gf9EZ4H8XPnF3C8NZEAzKjIkSgpkUGAwb+dTXi93AwICAgICXmteAqwlCST6n6m2AAAAAElFTkSuQmCC">
+              </span>
+              <span class="lecture-name">
+                {{$section_lesson->title ? $section_lesson->title : 'Nouvelle leçon'}}
+              </span>
+            </div>
+          </a>
+        </li>
+        @endforeach --}}
         @endif
       </ul>
     </div>
