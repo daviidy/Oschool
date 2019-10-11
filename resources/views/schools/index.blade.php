@@ -65,7 +65,7 @@
           <div class="hidden redirect">https://teachable.com/create-account?src=examples-form</div>
           <div class="hidden iterable-event"></div>
           <div class="hidden iterable-campaign"></div>
-          <input id="email-input" type="email" autofocus="autofocus" placeholder="Email address">
+          <input id="email-input" type="email" autofocus="autofocus" placeholder="Votre adresse email">
           <button id="email-submit-button" class="orange-button">Inscrivez-vous</button>
           <div>
           </div>
@@ -118,19 +118,19 @@
   <div class="container">
 
       <div class="row">
-      <div class="col-xs-12">
-        <h1 class="default-header">Businesses</h1>
-        <p class="default-paragraph">Use Teachable within your organization to provide value to your customers, train employees, or sell courses to the general public</p>
+      <div class="col-xs-12" style="margin: 60px 0 50px 0;">
+        <h1 class="default-header">Nos École</h1>
+        <p class="default-paragraph">Vous avez ici la liste de toutes les écoles qui est chez oschool, chez qui vous pouvez prendre les cours </p>
       </div>
     </div>
 
     <div class="row">
         @foreach($schools as $school)
       <div class="col-xs-12 col-sm-6 col-md-4 ">
-        <a href="http://jessicasprague.teachable.com?src=teachable-examples" target="_blank" rel="noopener noreferrer">
+        <a href="/{{$school->slug}}" target="_blank" rel="noopener noreferrer">
           <div class="school-card">
             <div class="image" style="background-image: url(/images/schools/logos/{{$school->logo}});"></div>
-            <div class="bottom" data-mh="school-cards" style="height: 280px;">
+            <div class="bottom" data-mh="school-cards" style="height: 230px;">
               <h1>{{$school->name}}</h1>
               <p class="default-paragraph">{{$school->heading}}</p>
               <!--
@@ -147,7 +147,7 @@
     </div>
     <div class="row logos">
       <div class="col-xs-12">
-        <p class="default-paragraph">Les leaders du marché utilisent Oschool pour la formation du personnel.</p>
+        <strong><h3 class="default-paragraph" style="margin-bottom: 30px;font-weight: bolder;">Les leaders du marché utilisent Oschool pour la formation du personnel.</h3></strong>
         <div class="clearfix company-logos">
           <img src="/images/divers/cinetpay.png">
           <img src="/images/divers/Epistrophe.jpg">
