@@ -98,20 +98,20 @@
                         <a href="/home">Mes écoles</a>
                     </li>
                     @if(Auth::user()->isAdmin() || Auth::user()->isOwner())
-                    <li class="nav-item-create">
+                    <li class="nav-item-create nav-item">
                         <a href="{{route('schools.create')}}">Créer une nouvelle école</a>
                     </li>
                     @endif
-                    <li class="nav-item-settings">
+                    <li class="nav-item-settings selected">
                         <a href="/users/settings">Mes paramètres</a>
                     </li>
-                    <li class="nav-item-billing">
+                    <li class="nav-item-billing selected">
                         <a href="/users/billings">Facturation</a>
                     </li>
-                    <li class="nav-item-help">
+                    <li class="nav-item-help selected">
                         <a id="my_teachable_help_form" href="http://sso.teachable.com/secure/teachable_accounts/tickets/new">Aidez-moi</a>
                     </li>
-                    <li class="nav-item-logout">
+                    <li class="nav-item-logout selected">
                         <a href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">Se déconnecter</a>
@@ -125,12 +125,20 @@
 
             <script>
             $('.navbar-toggle').click(function(e){
-          e.preventDefault();
-          $('.navbar-collapse').slideToggle();
-          $(this).toggleClass('active');
-        });
+                e.preventDefault();
+                $('.navbar-collapse').slideToggle();
+                $(this).toggleClass('active');
+              });
             </script>
 
+            <script type='text/javascript'>
+            $(function() { // Shorthand for $(document).ready(function() {
+                $('.nav-item').click(function() {
+                    $('.nav-item').removeClass('selected');
+                    $(this).addClass('selected');
+                });
+            });
+              </script>
             @yield('content')
 
         </div>

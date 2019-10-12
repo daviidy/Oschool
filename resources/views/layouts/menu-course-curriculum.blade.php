@@ -169,7 +169,7 @@
             </div>
             <li class="dropdown">
               <a aria-expanded="false" aria-haspopup="true" class="fedora-navbar-link navbar-link dropdown-toggle open-my-profile-dropdown" data-toggle="dropdown">
-                <img class="gravatar" src="https://s.gravatar.com/avatar/9c275cba24f7c939201cda28f832f8e0?d=mm" alt="yaodavidarmel@gmail.com">
+                <img class="gravatar" src="/images/users/default/{{Auth::user()->image}}" alt="yaodavidarmel@gmail.com">
                 <span class="navbar-current-user">{{Auth::user()->name}}</span>
               </a>
               <ul class="dropdown-menu">

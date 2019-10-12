@@ -68,8 +68,8 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .btn-primary,.btn-primary:active,.btn-primary:focus{font-size:15px;}
 }
 .btn-md,.btn-md:active,.btn-md:focus{display:inline-block;border-radius:50px!important;font-size:13px!important;letter-spacing:0.49px;padding-top:16px!important;padding-bottom:16px!important;padding-left:30px!important;padding-right:30px!important;}
-.btn-orange,.btn-orange:hover,.btn-orange:active,.btn-orange:focus{border-color:#ff7f45!important;background-color:#ff7f45!important;}
-.btn-orange:hover,.btn-orange:active,.btn-orange:focus,.btn-orange:hover:hover,.btn-orange:hover:active,.btn-orange:hover:focus,.btn-orange:active:hover,.btn-orange:active:active,.btn-orange:active:focus,.btn-orange:focus:hover,.btn-orange:focus:active,.btn-orange:focus:focus{border-color:#ff6d2c!important;background-color:#ff6d2c!important;}
+.btn-orange,.btn-orange:hover,.btn-orange:active,.btn-orange:focus{border-color:#4d90cc!important;background-color:#4d90cc!important;}
+.btn-orange:hover,.btn-orange:active,.btn-orange:focus,.btn-orange:hover:hover,.btn-orange:hover:active,.btn-orange:hover:focus,.btn-orange:active:hover,.btn-orange:active:active,.btn-orange:active:focus,.btn-orange:focus:hover,.btn-orange:focus:active,.btn-orange:focus:focus{border-color:#66afe9!important;background-color:#66afe9!important;}
 input.form-control{padding:5px 10px;height:40px;font-weight:200;margin-bottom:14px;-webkit-transition:all 0.3s ease;transition:all 0.3s ease;box-shadow:none;}
 input.form-control:focus{border-color:#4bdfd2;outline:0;box-shadow:none;}
 input.form-control::-webkit-input-placeholder{opacity:0.7;}
@@ -85,7 +85,7 @@ p{font-size:18px;font-weight:200;line-height:28px;}
 .content-box .form-group{margin-bottom:20px;}
 .content-box p{display:block;line-height:21px;font-size:12px;color:#909090;letter-spacing:0.45px;padding-bottom:12px;}
 .content-box .form-control{background-color:#f4f9fb;border:0;box-shadow:0px 1px 1px 0px #e6e9ec;}
-.content-box .form-control:focus{background-color:#fff8e6;color:#333;box-shadow:0px 1px 1px 0px #f9c4ad;border:0;}
+.content-box .form-control:focus{background-color:rgba(102,175,233,0.6);color:#333;box-shadow:0px 1px 1px 0px #4d90cc;border:0;}
 .content-box .alert{font-size:13px;font-weight:600;border-radius:4px;letter-spacing:0.1px;margin-bottom:30px;border:0px;padding-bottom:13px;}
 .content-box .alert.alert-danger{color:#c74a47;background-color:#fbe2e2;}
 .content-box label{color:#47505e;font-size:13px;font-weight:500;line-height:29px;letter-spacing:0.61px;}
@@ -111,15 +111,15 @@ p{font-size:18px;font-weight:200;line-height:28px;}
 .my-teachable-layout .sticky-center-container .content-box .button-group{margin-top:45px;display:block;}
 @media screen and (max-width: 767px){
 .my-teachable-layout .sticky-center-container{width:100%;border-radius:0px;-webkit-transform:none;transform:none;top:0px;left:0px;margin-top:-20px;border-top:1px solid #f1f1f1;margin-bottom:0px;}
-.my-teachable-layout .sticky-center-container.pinned{-webkit-transform:none;transform:none;margin-top:-1px;position:absolute;top:0%;left:0%;}
+.my-teachable-layout .sticky-center-container.pinned{-webkit-transform:none;transform:none;margin-top:-1px;position:absolute;top:5%;left:0%;}
 .my-teachable-layout .sticky-center-container .content-box{box-shadow:none;border-radius:0px;min-height:100%;margin-left:0px;}
 }
 @media screen and (min-width: 768px) and (max-width: 930px){
-.my-teachable-layout .sticky-center-container.pinned{-webkit-transform:translate(-50%, 0%);transform:translate(-50%, 0%);top:0%;}
+.my-teachable-layout .sticky-center-container.pinned{-webkit-transform:translate(-50%, 0%);transform:translate(-50%, 0%);top:5%;}
 }
 @media screen and (min-width: 768px){
 .my-teachable-layout .sticky-center-container{width:550px;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);}
-.my-teachable-layout .sticky-center-container.pinned{-webkit-transform:translate(-50%, 0%);transform:translate(-50%, 0%);top:0%;}
+.my-teachable-layout .sticky-center-container.pinned{-webkit-transform:translate(-50%, 0%);transform:translate(-50%, 0%);top:5%;}
 }
 .form-control::-moz-placeholder{color:#b2bcc5;opacity:1;}
 }

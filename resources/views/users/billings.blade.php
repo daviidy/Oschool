@@ -39,8 +39,8 @@ th{text-align:left;}
 }
 /*! CSS Used from: https://home.mindvalley.com/packs/app-c7d9f990427b05dbc9d6ddcf5ac45b3c.css ; media=screen */
 @media screen{
-a[data-v-669dc8b3]{cursor:pointer;display:inline-block;min-height:42px;padding:10px 30px;font-size:15px;color:#fff;text-decoration:none;text-align:center;font-family:Gilroy-Semibold,sans-serif;background-color:#2a8cf8;border-radius:35px;vertical-align:middle;}
-a[data-v-669dc8b3]:hover{background-color:#4e9ff8;}
+a[data-v-669dc8b3]{margin-top: 15px;cursor:pointer;display:inline-block;min-height:42px;padding:10px 30px;font-size:15px;color:#fff;text-decoration:none;text-align:center;font-family:Gilroy-Semibold,sans-serif;background-color:#4D90CC;border-radius:35px;vertical-align:middle;}
+a[data-v-669dc8b3]:hover{background-color:#66afe9;}
 @media (max-width:768px){
 a[data-v-669dc8b3]{padding-left:30px;padding-right:30px;}
 }
@@ -97,9 +97,9 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
         <div data-v-bd11ec86="" class="inner-content empty">
             <h4 data-v-bd11ec86="">Vos achat en cours</h4> <img data-v-bd11ec86="" src="https://s35.mindvalley.us/mindvalleyacademy/media/images/empty_icon.png">
             @if(!Auth::user()->purchases->where('status', 'Validé'))
-            <p data-v-bd11ec86="">You do not have any Active Subscriptions at the moment.</p> 
+            <p data-v-bd11ec86="">You do not have any Active Subscriptions at the moment.</p>
             @else
-            
+
             <div data-v-bd11ec86="" class="payment-history">
                     <div class="table-wrapper">
                         <table>
@@ -118,20 +118,20 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
                                 <td data-v-3e7bb260="">2019-09-02</td>
                                 <td data-v-3e7bb260="">Super Cerveau (2 Septembre 2019)</td>
                                 <td data-v-3e7bb260="">USD 129.0</td>
-                                
-                                
+
+
                             </tr>
                             @endforeach
                         </table>
                     </div>
                 </div>
-                
+
                 @endif
 
 
 
             <a data-v-669dc8b3="" data-v-bd11ec86="" href="/discover" class="centered-button">
-                Discover Subscriptions
+                Découvrez les abonnements
             </a>
         </div>
         <!---->
