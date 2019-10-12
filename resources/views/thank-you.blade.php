@@ -716,7 +716,7 @@
 
 
                       <div class="_col _right txt-right txt-center-devices">
-                        <p class="_nomargintop">Commandé le 02 September 2019</p>
+                        <p class="_nomargintop">Commandé le {{Auth::user()->purchases->last()->date}}</p>
                       </div>
 
                     </div>
