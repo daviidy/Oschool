@@ -716,7 +716,7 @@
 
 
                       <div class="_col _right txt-right txt-center-devices">
-                        <p class="_nomargintop">Commandé le 02 September 2019</p>
+                        <p class="_nomargintop">Commandé le {{Auth::user()->purchases->last()->date}}</p>
                       </div>
 
                     </div>
@@ -775,10 +775,10 @@
 
                     <thead>
                       <tr>
-                        <th class="thead-first">Transaction ID</th>
-                        <th class="thead-second">Item</th>
-                        <th class="thead-thirds">Type</th>
-                        <th class="thead-forths _currency">Price</th>
+                        <th class="thead-first">ID de la transaction</th>
+                        <th class="thead-second">Cours associé</th>
+                        <th class="thead-thirds">Type de la formule</th>
+                        <th class="thead-forths _currency">Montant payé</th>
                       </tr>
                     </thead>
 
@@ -786,14 +786,15 @@
 
                       <tr class="_item">
                         <td>
-                          A-S00616958 </td>
+                          {{Auth::user()->purchases->last()->trans_id}} </td>
                         <td>
-                          Super Cerveau (2 Septembre 2019) </td>
+                          {{Auth::user()->purchases->last()->course->name}} </td>
 
-                        <td>Digital access</td>
+                        <td>{{Auth::user()->purchases->last()->pricing->type}}</td>
 
                         <td class="_currency">
-                          $258.00 </td>
+                          {{Auth::user()->purchases->last()->pricing->price}} FCFA
+                      </td>
                       </tr>
 
 
@@ -802,10 +803,10 @@
 
                       <tr class="_total">
                         <td colspan="3">
-                          <strong>Order Total</strong>
+                          <strong>Total</strong>
                         </td>
                         <td class="_currency">
-                          <strong>$258.00</strong>
+                          <strong>{{Auth::user()->purchases->last()->pricing->price}} FCFA</strong>
                         </td>
                       </tr>
                     </tbody>

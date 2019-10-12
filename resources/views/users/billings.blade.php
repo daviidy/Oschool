@@ -95,7 +95,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
     <!---->
     <div data-v-bd11ec86="" data-v-27efbf01="">
         <div data-v-bd11ec86="" class="inner-content empty">
-            <h4 data-v-bd11ec86="">Vos achat en cours</h4> <img data-v-bd11ec86="" src="https://s35.mindvalley.us/mindvalleyacademy/media/images/empty_icon.png">
+            <h4 data-v-bd11ec86="">Vos achats en cours</h4> <img data-v-bd11ec86="" src="https://s35.mindvalley.us/mindvalleyacademy/media/images/empty_icon.png">
             @if(!Auth::user()->purchases->where('status', 'Validé'))
             <p data-v-bd11ec86="">You do not have any Active Subscriptions at the moment.</p>
             @else
@@ -105,22 +105,57 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
                         <table>
                             <tr class="header">
                                 <th>Cours associé</th>
+                                <th>Type de la formule</th>
                                 <th>Prochaine date de paiement</th>
-                                <th>Reste à payer</th>
+                                <th>Montant à payer</th>
                                 <th>Methode de paiement</th>
                             </tr>
-                            @foreach(Auth::user()->purchases->where('status', 'Validé') as $purchase)
+                            @foreach(Auth::user()->courses as $course)
+                            @if($course->purchases->where('user_id', Auth::user()->id))
+                            @if($course->purchases->where('user_id', Auth::user()->id)->first()->pricing->type == 'Abonnement')
+
                             <tr data-v-3e7bb260="">
                                 <td data-v-3e7bb260="" class="order"><a data-v-3e7bb260="" href="/api/v2/invoices/download?id=2c92a0fe6ccd01e7016cf2303dcc16d0">
-                                        A-S00616958
+                                        {{ucfirst($course->name)}}
                                         <img data-v-3e7bb260="" src="https://s92.mindvalley.us/mindvalley/media/images/ico-pdf.svg" alt="Invoice"></a>
                                 </td>
                                 <td data-v-3e7bb260="">2019-09-02</td>
                                 <td data-v-3e7bb260="">Super Cerveau (2 Septembre 2019)</td>
                                 <td data-v-3e7bb260="">USD 129.0</td>
+                                <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->last()->date}} + 30 jours</td>
+                                <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->price}} FCFA</td>
+                                <td data-v-3e7bb260="">Mobile money</td>
+
+                            </tr>
+                            @endif
+                            @endif
+                            @endforeach
+
+                            <!--si on a affaire a un plan de paiement-->
+                            @foreach(Auth::user()->courses as $course)
+                            @if($course->purchases->where('user_id', Auth::user()->id))
+                            @if($course->purchases->where('user_id', Auth::user()->id)->first()->pricing->type == 'Plan de paiement')
+
+                            <tr data-v-3e7bb260="">
+                                <td data-v-3e7bb260="" class="order"><a data-v-3e7bb260="" href="/api/v2/invoices/download?id=2c92a0fe6ccd01e7016cf2303dcc16d0">
+                                        {{ucfirst($course->name)}}
+                                        <img data-v-3e7bb260="" src="https://s92.mindvalley.us/mindvalley/media/images/ico-pdf.svg" alt="Invoice"></a>
+                                </td>
+                                <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->type}}</td>
+                                <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->last()->date}} + 30 jours</td>
+                                <td data-v-3e7bb260="">
+                                    @if($course->purchases->where('user_id', Auth::user()->id)->first()->pricing->times - count($course->purchases->where('user_id', Auth::user()->id)) == 0)
+                                    Il ne reste plus rien à payer
+                                    @else
+                                    {{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->price}} FCFA
+                                    @endif
+                                </td>
+                                <td data-v-3e7bb260="">Mobile money</td>
 
 
                             </tr>
+                            @endif
+                            @endif
                             @endforeach
                         </table>
                     </div>
@@ -132,6 +167,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
 
             <a data-v-669dc8b3="" data-v-bd11ec86="" href="/discover" class="centered-button">
                 Découvrez les abonnements
+                Voir nos écoles
             </a>
         </div>
         <!---->
@@ -141,38 +177,35 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
                 <div class="table-wrapper">
                     <table>
                         <tr class="header">
-                            <th>Trier par No.</th>
+                            <th>Id de transaction</th>
+                            <th>Cours associé</th>
                             <th>Date</th>
-                            <th>Nom de la formule</th>
-                            <th>Grand Total</th>
+                            <th>Type de la formule</th>
+                            <th>Montant payé</th>
                             <th>Methode de paiement</th>
-                            <th>Status</th>
+                            <th>Statut</th>
                         </tr>
+                        @foreach(Auth::user()->courses as $course)
+                        @foreach($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé') as $purchase)
                         <tr data-v-3e7bb260="">
                             <td data-v-3e7bb260="" class="order"><a data-v-3e7bb260="" href="/api/v2/invoices/download?id=2c92a0fe6ccd01e7016cf2303dcc16d0">
-                                    A-S00616958
+                                    {{$purchase->trans_id}}
                                     <img data-v-3e7bb260="" src="https://s92.mindvalley.us/mindvalley/media/images/ico-pdf.svg" alt="Invoice"></a></td>
-                            <td data-v-3e7bb260="">2019-09-02</td>
-                            <td data-v-3e7bb260="">Super Cerveau (2 Septembre 2019)</td>
-                            <td data-v-3e7bb260="">USD 129.0</td>
+                            <td>{{$course->name}}</td>
+                            <td data-v-3e7bb260="">{{$purchase->date}}</td>
+                            <td data-v-3e7bb260="">{{$purchase->pricing->type}}</td>
+                            <td data-v-3e7bb260="">{{$purchase->pricing->price}} FCFA</td>
                             <td data-v-3e7bb260="">
-                                <div data-v-3e7bb260="" class="credit-card payment-method"><span data-v-285a3986="" data-v-3e7bb260="">
-                                        <!---->
-                                        <!---->
-                                        <!---->
-                                        <!---->
-                                        <!----> <img data-v-285a3986="" srcset="https://static.mindvalley.com/public/assets/2018/10/I12x_PayPal%401x.png 1x,
-            https://static.mindvalley.com/public/assets/2018/10/hQmr_PayPal.png 2x" src="https://static.mindvalley.com/public/assets/2018/10/hQmr_PayPal.png" alt="PayPal">
-                                        <!----></span>
-                                    <!---->
-                                </div>
+                                Mobile money
                             </td>
                             <td data-v-3e7bb260="" class="status">
                                 <div data-v-3e7bb260="" class="{isPaymentSuccessful ? green : red}">
-                                    Payment Successful
+                                    {{$purchase->status}}
                                 </div>
                             </td>
                         </tr>
+                        @endforeach
+                        @endforeach
                     </table>
                 </div>
             </div>

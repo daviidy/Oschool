@@ -116,7 +116,7 @@
   </div> --}}
   @if($course->sections)
   @foreach($course->sections->sortBy('position') as $section)
-
+    
   <div class="row">
     <div class="col-sm-12 course-section">
       <div class="section-title" data-release-date="" data-days-until-dripped="" data-is-dripped-by-date="" data-course-id="532534">
@@ -141,7 +141,23 @@
 
         @if($section->lessons)
         @foreach($section->lessons->sortBy('position') as $lesson)
-
+        @if(Auth::user()->lessons->contains($lesson->id))
+        <li class="section-item completed unlocked-lecture" data-lecture-id="10371330">
+            <a class="item" data-no-turbolink="true" href="/courses/532534/lectures/10371330">
+              <span class="status-container">
+                <span class="status-icon">
+                  &nbsp;
+                </span>
+              </span>
+              <div class="title-container">
+                <div class="btn-primary btn-sm pull-right">
+                  Start
+                </div>
+                {{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}
+              </div>
+            </a>
+          </li>
+        @else
         <li class="section-item incomplete next-lecture" data-lecture-id="10371330">
           <a class="item" data-no-turbolink="true" href="/courses/532534/lectures/10371330">
             <span class="status-container">
@@ -157,7 +173,7 @@
             </div>
           </a>
         </li>
-
+        @endif
         @endforeach
         @endif
 

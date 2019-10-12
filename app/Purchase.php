@@ -16,13 +16,14 @@ class Purchase extends Model
                            'signature',
                            'status',
                            'user_id',
-                           'pricing_id'
+                           'pricing_id',
+                           'course_id'
                          ];
 
 
      /**
       * [users description]
-      * relationship many to many with Pricing model
+      * relationship one to many with Pricing model
       * @return [array] [description]
       */
       public function pricing()
@@ -33,11 +34,21 @@ class Purchase extends Model
 
       /**
        * [users description]
-       * relationship many to many with User model
+       * relationship one to many with User model
        * @return [array] [description]
        */
        public function user()
        {
            return $this->belongsTo('App\User');
        }
+
+       /**
+        * [users description]
+            * relationship one to many with Course model
+        * @return [array] [description]
+        */
+        public function course()
+        {
+            return $this->belongsTo('App\Course');
+        }
 }

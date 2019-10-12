@@ -127,10 +127,10 @@
     <div class="row">
         @foreach($schools as $school)
       <div class="col-xs-12 col-sm-6 col-md-4 ">
-        <a href="http://jessicasprague.teachable.com?src=teachable-examples" target="_blank" rel="noopener noreferrer">
+        <a href="{{url('schools', $school)}}" rel="noopener noreferrer">
           <div class="school-card">
             <div class="image" style="background-image: url(/images/schools/logos/{{$school->logo}});"></div>
-            <div class="bottom" data-mh="school-cards" style="height: 280px;">
+            <div class="bottom" data-mh="school-cards"">
               <h1>{{$school->name}}</h1>
               <p class="default-paragraph">{{$school->heading}}</p>
               <!--
