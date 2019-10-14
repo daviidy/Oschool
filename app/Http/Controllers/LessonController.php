@@ -139,7 +139,33 @@ class LessonController extends Controller
         ->orderBy('position', 'desc')
         ->first();
 
-        return view('lessons.show', ['lesson' => $lesson, 'next_lesson' => $next_lesson, 'previous_lesson' => $previous_lesson]);
+        //si on atteint le max de lecons dans la section
+        if ($previous_lesson === null) {
+            //on recupere la section précédente
+            $previous_section = Section::where('course_id', $lesson->course_id)
+            ->where('position', '<', $lesson->section->position)
+            ->orderBy('position', 'desc')
+            ->first();
+
+            //dans le cas ou c'est la premiere lesson
+            if ($previous_section === null) {
+                $previous_lesson = $lesson;
+            }
+
+            else {
+                $previous_lesson = Lesson::where('course_id', $lesson->course_id)
+                ->where('section_id', $previous_section->id)
+                ->orderBy('position', 'desc')
+                ->first();
+            }
+
+
+        }
+
+        return view('lessons.show', ['lesson' => $lesson,
+                                     'next_lesson' => $next_lesson,
+                                     'previous_lesson' => $previous_lesson
+                                 ]);
     }
 
 

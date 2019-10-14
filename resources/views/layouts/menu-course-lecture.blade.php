@@ -3,6 +3,9 @@
 <head>
   <link rel="stylesheet" href="/css/course_lecture.css">
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
+
+  <meta name="csrf-token" content="{!! csrf_token() !!}">
+
   <style type="text/css">
     @charset "UTF-8";
 
@@ -125,7 +128,7 @@
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    background-color: #0071bc;
+    background-color: #4D90CC;
     border: 0;
     color: white;
   }
@@ -136,58 +139,58 @@
 
 <body data-no-turbolink="true" cz-shortcut-listen="true">
 
+
   <!-- Lecture Header -->
   <header class="full-width half-height is-signed-in">
-    <div class="lecture-left">
-      <a class="nav-icon-back" aria-label="Back to course curriculum" data-no-turbolink="true" role="button" href="/courses/532534">
-        <i class="fa fa-angle-left" title="Back to course curriculum"></i>
-      </a>
-      <h2></h2>
+  <div class="lecture-left">
+    <a class="nav-icon-back" aria-label="Back to course curriculum" data-no-turbolink="true" role="button" href="/courses/627895">
+      <i class="fa fa-angle-left" title="Back to course curriculum"></i>
+    </a>
 
-      <!--div class="dropdown settings-dropdown" role="menubar">
-        <a href="#" class="nav-icon-settings dropdown-toggle" aria-label="Settings Menu" aria-haspopup="true" role="menuitem" id="settings_menu" data-toggle="dropdown" aria-expanded="false">
-          <!-i class="fa fa-cog" title="Settings Menu"></i->
-        </a>
-        <!--ul class="dropdown-menu left-caret" role="menu" aria-labelledby="settings_menu">
-          <!-- AUTOPLAY ->
-          <li aria-label="menuitem">
-            <div class="switch" id="switch-autoplay-lectures">
-              <input id="custom-toggle-autoplay" class="custom-toggle custom-toggle-round" name="toggle-autoplay" type="checkbox" aria-label="Autoplay" data-control-initialized="true">
-              <label for="custom-toggle-autoplay"></label>
-            </div>
-            <span aria-labelledby="switch-autoplay-lectures">Autoplay</span>
-          </li>
-          <!-- AUTOCOMPLETE ->
-          <li aria-label="menuitem">
-            <div class="switch" id="switch-autocomplete-lectures">
-              <input id="custom-toggle-autocomplete" class="custom-toggle custom-toggle-round" name="toggle-autocomplete" type="checkbox" aria-label="Autocomplete" data-control-initialized="true">
-              <label for="custom-toggle-autocomplete"></label>
-            </div>
-            <span aria-labelledby="switch-autocomplete-lectures">Autocomplete</span>
-          </li>
-          <!-- PLAYER TYPE ->
-          <li aria-label="menuitem">
-            <div class="pull-right">
-              <div class="switch-toggle well" id="switch-lecture-player">
-                <input id="toggle_html5" name="custom-toggle-player" type="radio" data-control-initialized="true">
-                <label for="toggle_html5" onclick="">HTML5</label>
-                <input id="toggle_flash" name="custom-toggle-player" type="radio" data-control-initialized="true">
-                <label for="toggle_flash" onclick="">Flash</label>
-                <a class="btn btn-primary"></a>
-              </div>
-            </div>
-            <span aria-labelledby="switch-lecture-player">Player</span>
-          </li>
-          <!-- PLAYBACK SPEED ->
-          <li aria-label="menuitem">
-            <div class="pull-right">
-              <button class="playback-speed" role="button" data-control-initialized="true">
-                <span class="glyphicon glyphicon-forward">1x</span></button>
-            </div>
-            Speed
-          </li>
-          <!-- QUALITY: not working yet -->
-          <!--  <li>
+   <div class="dropdown settings-dropdown" role="menubar">
+      <a href="#" class="nav-icon-settings dropdown-toggle" aria-label="Settings Menu" aria-haspopup="true" role="menuitem" id="settings_menu" data-toggle="dropdown">
+        <i class="fa fa-cog" title="Settings Menu"></i>
+      </a>
+      <ul class="dropdown-menu left-caret" role="menu" aria-labelledby="settings_menu">
+  <!-- AUTOPLAY -->
+  <li aria-label="menuitem">
+    <div class="switch" id="switch-autoplay-lectures">
+      <input id="custom-toggle-autoplay" class="custom-toggle custom-toggle-round" name="toggle-autoplay" type="checkbox" aria-label="Autoplay" data-control-initialized="true">
+      <label for="custom-toggle-autoplay"></label>
+    </div>
+    <span aria-labelledby="switch-autoplay-lectures">Autoplay</span>
+  </li>
+  <!-- AUTOCOMPLETE -->
+  <li aria-label="menuitem">
+    <div class="switch" id="switch-autocomplete-lectures">
+      <input id="custom-toggle-autocomplete" class="custom-toggle custom-toggle-round" name="toggle-autocomplete" type="checkbox" aria-label="Autocomplete" data-control-initialized="true">
+      <label for="custom-toggle-autocomplete"></label>
+    </div>
+    <span aria-labelledby="switch-autocomplete-lectures">Autocomplete</span>
+  </li>
+  <!-- PLAYER TYPE -->
+  <li aria-label="menuitem">
+    <div class="pull-right">
+      <div class="switch-toggle well" id="switch-lecture-player">
+        <input id="toggle_html5" name="custom-toggle-player" type="radio" data-control-initialized="true">
+        <label for="toggle_html5" onclick="">HTML5</label>
+        <input id="toggle_flash" name="custom-toggle-player" type="radio" data-control-initialized="true">
+        <label for="toggle_flash" onclick="">Flash</label>
+        <a class="btn btn-primary"></a>
+      </div>
+    </div>
+    <span aria-labelledby="switch-lecture-player">Player</span>
+  </li>
+  <!-- PLAYBACK SPEED -->
+  <li aria-label="menuitem">
+    <div class="pull-right">
+      <button class="playback-speed" role="button" data-control-initialized="true">
+      <span class="glyphicon glyphicon-forward">1x</span></button>
+    </div>
+    Speed
+  </li>
+  <!-- QUALITY: not working yet -->
+  <!--  <li>
     <div class="pull-right">
       <div class="switch-toggle switch-3 well">
         <input id="auto" name="quality" type="radio" checked>
@@ -201,28 +204,30 @@
     </div>
     Quality
   </li> -->
-</ul-->
+</ul>
 
-      </div>
-      <a class="nav-icon-list show-xs hidden-sm hidden-md hidden-lg collapsed" aria-label="Course Sidebar" role="button" data-toggle="collapse" href="#courseSidebar" aria-expanded="false" aria-controls="courseSidebar">
+</div>
+
+<a class="nav-icon-list show-xs hidden-sm hidden-md hidden-lg collapsed" aria-label="Course Sidebar" role="button" data-toggle="collapse" href="#courseSidebar" aria-expanded="false" aria-controls="courseSidebar">
         <i class="fa fa-list" title="Course Sidebar"></i>
       </a>
-    </div>
 
-    <div class="lecture-nav">
-      <a class="nav-btn" href="" role="button" id="lecture_previous_button" style="display: none;">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        &nbsp;
-        <span class="nav-text">Previous Lecture</span>
-      </a>
-      @if(Auth::user()->lessons->contains($lesson->id))
-      <a class="nav-btn complete" data-cpl-tooltip="You must complete all lecture material before progressing" href="/course/{{$lesson->course->slug}}/lessons/{{$next_lesson->slug}}" role="button" id="lecture_complete_button">
-        <span class="nav-text">Chapitre suivant</span>
-        &nbsp;
-        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-      </a>
-      @else
+  </div>
 
+  <div class="lecture-nav">
+    <a class="nav-btn" href="/course/{{$lesson->course->slug}}/lessons/{{$previous_lesson->slug}}" role="button" id="lecture_previous_button">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      &nbsp;
+      <span class="nav-text">Chapitre précédent</span>
+    </a>
+    @if(Auth::user()->lessons->contains($lesson->id))
+    <a class="nav-btn complete" href="/course/{{$lesson->course->slug}}/lessons/{{$next_lesson->slug}}" role="button" id="lecture_complete_button">
+      <span class="nav-text">Chapitre suivant</span>
+      &nbsp;
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </a>
+    @else
+    <a class="nav-btn complete" data-cpl-tooltip="You must complete all lecture material before progressing" href="" role="button" id="lecture_complete_button">
       <form class="" action="/completeLesson" method="post" style="margin-bottom: 0;width: 100%;">
         <button type="submit" class="nav-btn complete" id="nav-btn-complete" data-cpl-tooltip="You must complete all lecture material before progressing" href="" role="button" id="lecture_complete_button">
               @csrf
@@ -233,16 +238,17 @@
         </button>
 
             </form>
-      @endif
+    </a>
+    @endif
+  </div>
 
-    </div>
-
-  </header>
+</header>
 
   @yield('content')
 
   <iframe name="filepicker_comm_iframe" id="filepicker_comm_iframe" src="https://dialog.filestackapi.com/dialog/comm_iframe/" style="display: none;"></iframe><iframe name="fpapi_comm_iframe" id="fpapi_comm_iframe"
   src="https://www.filestackapi.com/dialog/comm_iframe/" style="display: none;"></iframe>
+
   </body>
 
   </html>

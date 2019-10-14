@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Result extends Model
 {
-    protected $fillable = ['quiz_id', 'user_id', 'result',];
+    protected $fillable = ['quiz_id', 'user_id', 'quiz_result',];
 
 
 
@@ -31,4 +31,15 @@ class Result extends Model
         {
             return $this->belongsTo('App\User');
         }
+
+
+        /**
+         * [users description]
+         * relationship one to many with Answer model
+         * @return [array] [description]
+         */
+         public function answers()
+         {
+             return $this->hasMany('App\Answer');
+         }
 }

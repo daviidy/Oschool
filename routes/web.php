@@ -80,6 +80,7 @@ Route::post('/deleteLecture', 'LessonController@destroy');
 Route::post('/addQuiz', 'LessonController@addQuiz');
 Route::post('/editQuiz', 'LessonController@editQuiz');
 Route::post('/deleteOption', 'LessonController@deleteOption');
+Route::post('/check', 'QuizController@check');
 
 
 
