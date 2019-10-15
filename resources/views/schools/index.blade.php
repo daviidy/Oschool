@@ -121,7 +121,7 @@
       <div class="row">
       <div class="col-xs-12" style="margin: 60px 0 50px 0;">
         <h1 class="default-header">Nos École</h1>
-        <p class="default-paragraph">Vous avez ici la liste de toutes les écoles qui est chez oschool, chez qui vous pouvez prendre les cours </p>
+        <p class="default-paragraph" style="text-align:center;">Vous avez ici la liste de toutes les écoles qui est chez oschool, chez qui vous pouvez prendre les cours </p>
       </div>
     </div>
 
