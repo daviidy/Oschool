@@ -128,17 +128,17 @@
     <div class="row">
         @foreach($schools as $school)
       <div class="col-xs-12 col-sm-6 col-md-4 ">
-<<<<<<< HEAD
-        <a href="/{{$school->slug}}" target="_blank" rel="noopener noreferrer">
+{{-- <<<<<<< HEAD --}}
+        <a href="{{url('schools', $school)}}" target="_blank" rel="noopener noreferrer">
           <div class="school-card">
             <div class="image" style="background-image: url(/images/schools/logos/{{$school->logo}});"></div>
             <div class="bottom" data-mh="school-cards" style="height: 230px;">
-=======
+{{-- =======
         <a href="{{url('schools', $school)}}" rel="noopener noreferrer">
           <div class="school-card">
             <div class="image" style="background-image: url(/images/schools/logos/{{$school->logo}});"></div>
             <div class="bottom" data-mh="school-cards"">
->>>>>>> 28b5954ead173e3c23b57244026798314aa8b5d6
+>>>>>>> 28b5954ead173e3c23b57244026798314aa8b5d6 --}}
               <h1>{{$school->name}}</h1>
               <p class="default-paragraph">{{$school->heading}}</p>
               <!--
