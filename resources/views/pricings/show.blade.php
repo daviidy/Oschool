@@ -773,7 +773,7 @@ $(document).ready(function(){
                 data: data,
                 cache: false,
                 success: function (data){
-                    $.amaran({'message':'Votre compte abien été crée ! Connectez-vous maintenant'});
+                    $.amaran({'message':'Votre compte a bien été crée ! Connectez-vous maintenant'});
                     $("#signup")[0].reset(); // this reset the form to back to normal
 
                     $('#signup').css('display', 'none');

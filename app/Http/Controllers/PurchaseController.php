@@ -131,6 +131,7 @@ class PurchaseController extends Controller
                                 'date' => Carbon::now(),
                                 'user_id' => Auth::user()->id,
                                 'pricing_id' => $pricing->id,
+                                'course_id' => $pricing->course_id,
                               ]);
 
               return view('pricings.show',['signature' => str_replace('"',"",$resultat),

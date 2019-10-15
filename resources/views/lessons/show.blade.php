@@ -74,6 +74,49 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
 .fa-check:before{content:"\f00c";}
 .fa-times:before{content:"\f00d";}
 .fa-circle-o:before{content:"\f10c";}
+
+/*! CSS Used from: https://fedora.teachablecdn.com/assets/bootstrap-31ff648fd5e6158c77c31e785844877b6666554feab422e57ca5a96aa5587b9e.css ; media=screen */
+@media screen{
+button{margin:0;font:inherit;color:inherit;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+@media print{
+*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+}
+*{box-sizing:border-box;}
+:before,:after{box-sizing:border-box;}
+button{font-family:inherit;font-size:inherit;line-height:inherit;}
+.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px;}
+.btn:focus,.btn:active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.btn:hover,.btn:focus{color:#333;text-decoration:none;}
+.btn:active{background-image:none;outline:0;box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);}
+.btn-primary{color:#fff;background-color:#428bca;border-color:#357ebd;}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active{color:#fff;background-color:#3071a9;border-color:#285e8e;}
+.btn-primary:active{background-image:none;}
+}
+/*! CSS Used from: https://themes2.teachablecdn.com/themecss/production/base.css?_=a3fb33ed7622&logged_out_homepage_background_image_overlay=0.0 */
+.btn-primary,.btn-primary:active,.btn-primary:focus{background:#1ea69a!important;border:1px solid #1ea69a!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
+.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#1a9086!important;border:1px solid #1a9086!important;color:#fff;}
+@media screen and (max-width: 767px){
+.btn-primary,.btn-primary:active,.btn-primary:focus{font-size:15px;}
+}
+.Quiz{position:relative;}
+.Quiz-complete{-webkit-animation:fadeIn 750ms ease forwards;animation:fadeIn 750ms ease forwards;will-change:opacity;}
+.quiz-wrapper .quiz{max-width:480px;margin:0 auto;}
+.quiz-finished{margin-top:32px;text-align:center;}
+.quiz-finished i{font-size:90px;margin-bottom:20px;}
+.quiz-finished i.success{color:#2ecc71;}
+.quiz-finished .quiz-finished-text{font-size:22px;font-stretch:normal;font-style:normal;font-weight:normal;line-height:2.05;text-align:center;}
+.quiz-finished .btn-primary{font-size:13px;font-stretch:normal;font-style:normal;font-weight:bold;line-height:0.67;margin-top:40px;min-width:215px;padding:14px 18px!important;text-align:center;}
+/*! CSS Used from: https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css */
+.fa{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.fa-check:before{content:"\f00c";}
+
+
+
+
 /*! CSS Used fontfaces */
 @font-face{font-family:'FontAwesome';src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot#iefix&v=4.1.0') format('embedded-opentype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}
 </style>
@@ -105,58 +148,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
 
   <div class="row lecture-sidebar">
 
-    {{-- <div class="col-sm-12 course-section">
-      <div class="section-title" data-release-date="" data-days-until-dripped="" data-is-dripped-by-date="" data-course-id="532534">
-        <span class="section-lock">
-          <i class="fa fa-lock"></i>&nbsp;
-        </span>
-        Introduction ***Start Here***
-      </div>
-      <ul class="section-list">
 
-        <li data-lecture-id="10371838" data-lecture-url="/courses/fast-start-trading-system/lectures/10371838" class="section-item completed unlocked-lecture next-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10371838" id="sidebar_link_10371838">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Welcome To The Course!
-
-                (1:15)
-
-              </span>
-            </div>
-          </a>
-        </li>
-
-        <li data-lecture-id="10385724" data-lecture-url="/courses/fast-start-trading-system/lectures/10385724" class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/courses/fast-start-trading-system/lectures/10385724" id="sidebar_link_10385724">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <i class="fa fa-youtube-play"></i>
-              </span>
-              <span class="lecture-name">
-                Meet Your Instructor: Nikk Legend
-
-                (5:12)
-
-              </span>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div> --}}
     @if($lesson->course->sections)
     @foreach($lesson->course->sections->sortBy('position') as $section)
     <div class="col-sm-12 course-section">
@@ -171,7 +163,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
         @foreach($section->lessons->sortBy('position') as $section_lesson)
         @if(Auth::user()->lessons->contains($section_lesson->id))
         <li class="section-item completed unlocked-lecture">
-            <a class="item" data-no-turbolink="true" href="/course/{{$section_lesson->course->slug}}/lessons/{{$section_lesson->slug}}" id="sidebar_link_10371330">
+            <a class="item" data-no-turbolink="true" href="/course/{{$lesson->course->slug}}/lessons/{{$section_lesson->slug}}" id="sidebar_link_10371330">
               <span class="status-container">
                 <span class="status-icon">
                   &nbsp;
@@ -189,7 +181,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
           </li>
         @else
         <li class="section-item incomplete">
-          <a class="item" data-no-turbolink="true" href="/course/{{$section_lesson->course->slug}}/lessons/{{$section_lesson->slug}}" id="sidebar_link_10371330">
+          <a class="item" data-no-turbolink="true" href="/course/{{$lesson->course->slug}}/lessons/{{$section_lesson->slug}}" id="sidebar_link_10371330">
             <span class="status-container">
               <span class="status-icon">
                 &nbsp;
@@ -208,26 +200,8 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
         @endif
 
         @endforeach
-       
-        {{-- @foreach($section->lessons->sortBy('position') as $section_lesson)
-        <li class="section-item completed unlocked-lecture">
-          <a class="item" data-no-turbolink="true" href="/course/{{$section_lesson->course->slug}}/lessons/{{$section_lesson->slug}}" id="sidebar_link_10371330">
-            <span class="status-container">
-              <span class="status-icon">
-                &nbsp;
-              </span>
-            </span>
-            <div class="title-container">
-              <span class="lecture-icon">
-                <img width="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADbElEQVRoge2YTWhUVxTHf+fla2bMpDOogWknEcXQioJCA5G6sK6KliAuGpq2Qm0Rt9JNF6UQtAguXEjFgiJ2o5sWigq2ddOgCz8aXAhCFsHWZBKrVmcSk8lMJnnHRRI6efcleeObmUZ4Pxi479x7zz3/e9+de96FgICAgICA1xjx2nDfqdurC3ZdkmlttSx7na1Wi2XpW6rEQeMgMSAGhOa6hIvKOWCyqJxWJCNoBvQ5SEpVUiiD1MpgYTo39PtX7z33JaCnR62+2N0vBe0GOoCIV7FlIgvcRrl45fC75xBRt0auAj7quV+fj01eVvigoiF6Rn5NhHXvmUPtBWeN5dY8F5s8tnKCB9DdI1n5zq3GWIH3z/8Rio5F/0F5o/KBlcQYYRJXDrVni43GCjRmGrevwOABmiRHh9NoCLBgQ3XiKR1bZaPTZu4BkfVVieZVUJYXoD5X4Oi+NlpXh/24WBQR28MKoEk/g2xtbeLkJ5s4uLOFSEONH1cGghiT6yJAon4HqrGEzm3NnP18C53bmhHP5/3SKKx12gwBIqwqz3AQDdVycGcLJz7exDuJxnK4XIvqgukw94CWT8A8G5sjHO96m6/3bGBNtN6Pq/rd3w8scOB2EpddAMyemDva4pzev5nu7W9SV/Oq79WzhuKnqgmYJ1Rn0d2R4NRnm9nRFi+9fz4cKn52zYWqgQJT03bJ/aZWyYKErtalzQSzeX1FyBVsfrn7mJ//fERhxjVDXgqNrOkfKzZUTYACvf3P+PHGMOmskRV7Zfynrq6ZYoMhQIQJLXlilmbgSZYzvUP0Pxr35Udg1GkzBKgy4WuUItLZAhdvjnDt/r+UY1IUMk6byyukL0r4VHZlxlau3nvKhZsjZKdmlu/gneVXACTlZ4S+v0c5dz3FcDrnx81iPHQazD0AD/ys9pFLAz56L43AA6fNPAdU/6pYBH5xic0QYLuoXCm4xWYIGI+N30LMzbICGJOI3HEaDQG9B3blsDlbnZhK4gfnjQQskguFRsPfgP5W+Zg8czUR5lu3isX/8FWl82TfFyCf8v9dLd4S1QuXD7efL+lq0Y0PT9+L1+amkrYl61Q0KUgSm1YsOyZIbPaSlyZg/pO0gf9EZ4H8XPnF3C8NZEAzKjIkSgpkUGAwb+dTXi93AwICAgICXmteAqwlCST6n6m2AAAAAElFTkSuQmCC">
-              </span>
-              <span class="lecture-name">
-                {{$section_lesson->title ? $section_lesson->title : 'Nouvelle leçon'}}
-              </span>
-            </div>
-          </a>
-        </li>
-        @endforeach --}}
+
+
         @endif
       </ul>
     </div>
@@ -293,60 +267,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
 
 
   @if($lesson->quizzes)
-  @foreach($lesson->quizzes as $quiz)
-
-
-
-
-  <div class="lecture-attachment lecture-attachment-type-quiz" id="lecture-attachment-24323873">
-      <div class="attachment-data" data-data="{&quot;answerKey&quot;:{&quot;answer-1&quot;:[&quot;oschool&quot;]}}"
-        data-schema="{&quot;type&quot;:&quot;object&quot;,&quot;required&quot;:[&quot;answer-1&quot;],&quot;properties&quot;:{&quot;answer-1&quot;:{&quot;enum&quot;:[&quot;oschool&quot;,&quot;elavoo&quot;],&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;david&quot;,&quot;description&quot;:&quot;single&quot;}}}"
-        data-content-type="null" data-id="24323873" data-is-published="true" data-graded="null">
-          <div class="quiz-content">
-              <div id="quiz-app">
-                  <div class="quiz-wrapper attachment-block-wrapper">
-                      <div class="attachment-block-label">Quiz</div>
-                      @foreach($quiz->questions->sortBy('position') as $question)
-                      <div class="quiz Quiz single">
-                          <div class="quiz-progress">{{$question->position - 1}} / {{count($quiz->questions)}}</div>
-                          <div class="quiz-question-outer" style="height: 168px;">
-                              <div>
-                                  <article class="Quiz-item">
-                                      <div class="quiz-question">{{$question->text}}</div>
-                                      <div class="quiz-answer-container">
-                                          <div class="quiz-answer-container">
-                                              <div role="button" class="quiz-answer"><span class="quiz-answer-text">oschool</span></div>
-                                              <div class="quiz-answer-icon"><i class="quiz-answer-icon-correct fa fa-check"></i><i class="quiz-answer-icon-incorrect fa fa-times"></i><i class="quiz-answer-icon-missed fa fa-circle-o"></i></div>
-                                          </div>
-                                          <div class="quiz-answer-container">
-                                              <div role="button" class="quiz-answer"><span class="quiz-answer-text">elavoo</span></div>
-                                              <div class="quiz-answer-icon"><i class="quiz-answer-icon-correct fa fa-check"></i><i class="quiz-answer-icon-incorrect fa fa-times"></i><i class="quiz-answer-icon-missed fa fa-circle-o"></i></div>
-                                          </div>
-                                          <div class="quiz-answer-icon"><i class="quiz-answer-icon-correct fa fa-check"></i><i class="quiz-answer-icon-incorrect fa fa-times"></i><i class="quiz-answer-icon-missed fa fa-circle-o"></i></div>
-                                      </div>
-                                  </article>
-                              </div>
-                          </div>
-                          <div class="quiz-controls"><button class="btn btn-primary pull-left">‹ Back</button><button class="btn btn-primary pull-right check-answer-button" date-test="check-answer-button">Check</button><button
-                                class="btn btn-primary pull-right" date-test="continue-button">Continue ›</button></div>
-                      </div>
-                      @endforeach
-                  </div>
-              </div>
-          </div>
-      </div>
-
-
-      <!-- Quiz attachment -->
-
-
-  </div>
-
-
-
-
-
-  @endforeach
+  @include('includes.default.lessons_page.quiz')
   @endif
 
 
@@ -359,12 +280,6 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
 
 </div>
 
-
-<script type="text/javascript">
-
-
-
-</script>
 
 
 @endsection

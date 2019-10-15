@@ -87,4 +87,20 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Purchase');
     }
+
+
+    //function for relmationship between
+    //user and results (one to many)
+    public function results()
+    {
+        return $this->hasMany('App\Result');
+    }
+
+
+    //function for relmationship between
+    //user and answers (one to many)
+    public function answers()
+    {
+        return $this->hasMany('App\Answer');
+    }
 }

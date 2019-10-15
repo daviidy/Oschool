@@ -111,71 +111,7 @@
                     <h2 class="default-paragraph">Rejoignez les +2000 étudiants qui utilisent oschool pour apprendre les compétences les plus rechercher sur le marché de l'emploi.</h2>
                 </div>
             </div>
-            <div class="row">
-                <!--  Below laptop size: bootstrap -->
-                <ul class="col-xs-12 hidden-md hidden-lg">
-                    <li class="col-sm-6 col-xs-12">
-                        <div class="inner-li">
-                            <h3>+ 2k</h3>
-                            <h4 class="default-paragraph">Apprenants</h4>
-                        </div>
-                    </li>
-                    <li class="flex-item-number col-sm-6 col-xs-12">
-                        <div class="inner-li">
-                            <h3>+ 15</h3>
-                            <h4 class="default-paragraph">Parcours disponible</h4>
-                        </div>
-                    </li>
-                    <li class="flex-item-number col-sm-6 col-xs-12">
-                        <div class="inner-li">
-                            <h3>+ 10</h3>
-                            <h4 class="default-paragraph">Ecoles partenaires</h4>
-                        </div>
-                    </li>
-                    <li class="flex-item-number col-sm-6 col-xs-12">
-                        <div class="inner-li">
-                            <h3>+ 10k</h3>
-                            <h4 class="default-paragraph">Personnes dans la communauté Oschool</h4>
-                        </div>
-                    </li>
-                </ul>
-                <!-- Above laptop size: flexbox  -->
-                <ul class="flex-numbers-container hidden-xs hidden-sm">
-                    <li class="flex-item-number">
-                        <div class="inner-li">
-                            <h3>+ 2k</h3>
-                            <h4 class="default-paragraph">Apprenants</h4>
-                        </div>
-                    </li>
-                    <div class="flex-item-line-segment-container">
-                        <div class="flex-item-line-segment"></div>
-                    </div>
-                    <li class="flex-item-number">
-                        <div class="inner-li">
-                            <h3>+ 15</h3>
-                            <h4 class="default-paragraph">Parcours disponible</h4>
-                        </div>
-                    </li>
-                    <div class="flex-item-line-segment-container">
-                        <div class="flex-item-line-segment"></div>
-                    </div>
-                    <li class="flex-item-number">
-                        <div class="inner-li">
-                            <h3>+ 10</h3>
-                            <h4 class="default-paragraph">Ecoles partenaires</h4>
-                        </div>
-                    </li>
-                    <div class="flex-item-line-segment-container">
-                        <div class="flex-item-line-segment"></div>
-                    </div>
-                    <li class="flex-item-number">
-                        <div class="inner-li">
-                            <h3>+ 10k</h3>
-                            <h4 class="default-paragraph">Personnes dans la communauté Oschool</h4>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+
         </div>
     </section>
 
@@ -980,7 +916,7 @@
                         <h2>Rejoignez le show oschool sur facebook</h2>
                         <div class="description">
                             <p>Chaque vendredi à 19h, oschool organise un show sur facebook sur des questions de l'entreprenariat, du Elearning ... Vous êtes invités!  </p>
-                            <a href="https://teachable.com/webinars/quickstart1/register?src=homepage" target="_blank" rel="noopener noreferrer">Clique et Rejoigne nous!</a>
+                            <a href="https://teachable.com/webinars/quickstart1/register?src=homepage" target="_blank" rel="noopener noreferrer">Rejoignez-nous!</a>
                         </div>
                     </div>
                 </div>
@@ -1105,8 +1041,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="small-uppercase-text">CHOISSER OSCHOOL POUR VOTRE FORMATION</h1>
-                    <h2 class="default-header" style="max-width: 750px">Commencer dèh maintenant et transformer votre competence en une carrière profitable.</h2>
+                    <h1 class="small-uppercase-text">CHOISISSEZ OSCHOOL POUR VOTRE FORMATION</h1>
+                    <h2 class="default-header" style="max-width: 750px">Commencer dès maintenant et transformer votre competence en une carrière profitable.</h2>
                     <a href="/create-account?utm_source=home-bottom" class="orange-button">Commencer maintenant</a>
                 </div>
             </div>

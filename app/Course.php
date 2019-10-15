@@ -101,6 +101,17 @@ class Course extends Model
            }
 
 
+           /**
+            * [users description]
+            * relationship one to many with Purchase model
+            * @return [array] [description]
+            */
+            public function purchases()
+            {
+                return $this->hasMany('App\Purchase');
+            }
+
+
            public static function boot() {
            parent::boot();
 
