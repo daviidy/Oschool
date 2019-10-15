@@ -166,7 +166,6 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
 
 
             <a data-v-669dc8b3="" data-v-bd11ec86="" href="/discover" class="centered-button">
-                Découvrez les abonnements
                 Voir nos écoles
             </a>
         </div>

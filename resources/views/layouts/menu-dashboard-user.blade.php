@@ -131,14 +131,6 @@
               });
             </script>
 
-            <script type='text/javascript'>
-            $(function() { // Shorthand for $(document).ready(function() {
-                $('.nav-item').click(function() {
-                    $('.nav-item').removeClass('selected');
-                    $(this).addClass('selected');
-                });
-            });
-              </script>
             @yield('content')
 
         </div>
