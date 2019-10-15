@@ -52,7 +52,7 @@
 </style>
 <div id="segment-event" type="hidden" value=""></div>
 {{-- https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/vNCMiPpT6qrvVvHcJUwQ --}}
-<div class="hero-div" style="background-image: url(https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80);">
+<div class="hero-div" style="background-image: url(https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?cs=srgb&dl=auditorium-benches-chairs-207691.jpg&fm=jpg);">
 <div class="container hero-container">
   <div class="row">
     <div class="col-xs-12 vertically-align-contents-except-xs">
@@ -120,7 +120,7 @@
 
       <div class="row">
       <div class="col-xs-12" style="margin: 60px 0 50px 0;">
-        <h1 class="default-header">Nos École</h1>
+        <h1 class="default-header">Nos Écoles</h1>
         <p class="default-paragraph" style="text-align:center;">Vous avez ici la liste de toutes les écoles qui est chez oschool, chez qui vous pouvez prendre les cours </p>
       </div>
     </div>
