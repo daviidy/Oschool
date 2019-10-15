@@ -928,8 +928,8 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <div href="" tooltip="Complete the onboarding steps to launch your school." tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
-                                  class="tch-onboarding-sidebar-tooltip"></div>
+                                <!--div href="" tooltip="Complete the onboarding steps to launch your school." tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
+                                  class="tch-onboarding-sidebar-tooltip"></div-->
                                 <!----><span class="menu-item-label">Tableau de bord</span>
                             </a>
                             <!---->
