@@ -20,7 +20,8 @@ class Course extends Model
                            'school_id',
                            'author_id',
                            'logo',
-                           'category_id'
+                           'category_id',
+                           'type'
                          ];
 
 

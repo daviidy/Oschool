@@ -248,7 +248,13 @@ class CourseController extends Controller
      public function curriculum(School $school, Course $course)
      {
          if (Auth::check()) {
-         return view('admin_views.courses.curriculum', ['school' => $school, 'course' => $course]);
+             if ($course->type == "course") {
+                 return view('admin_views.courses.curriculum', ['school' => $school, 'course' => $course]);
+             }
+             elseif ($course->type == "path") {
+                 return view('admin_views.paths.curriculum', ['school' => $school, 'course' => $course]);
+             }
+
         }
         else {
             return redirect('home');
