@@ -112,6 +112,7 @@ Route::get('/schoolAdmin/{school}/sales/transactions', 'SchoolController@schoolT
 
 //school statements from oschool
 Route::get('/schoolAdmin/{school}/sales/statements', 'SchoolController@schoolStatements');
+Route::get('/schoolAdmin/{school}/authors', 'AuthorController@show');
 
 
 //routes for course admin dashboard
@@ -157,7 +158,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseControl
 
 // pour autheur
 
-Route::get('/authors/{author}/edit', 'AuthorController@edit');
+Route::get('/schoolAdmin/{school}/authors/{author}/edit', 'AuthorController@edit');
 Route::post('/authors/{author}/update', 'AuthorController@update');
 Route::get('/authors/{author}/destroy', 'AuthorController@destroy');
 
@@ -205,4 +206,4 @@ Route::post('/completeLesson', 'LessonController@completeLesson');
 
 //pour les autheur
 
-// Route::post('/authors', 'AuthorController@store');
+Route::get('/schoolAdmin/{school}/authors/create', 'AuthorController@create');

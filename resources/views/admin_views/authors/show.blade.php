@@ -1,5 +1,5 @@
-{{-- @extends('layouts.menu-dashboard-user') --}}
-{{-- @section('content') --}}
+@extends('layouts.admin_views.menu-school')
+@section('content')
 
 <style media="screen">
 
@@ -267,7 +267,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
     </div>
     <div class="tch-inline-form">
-        <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/authors/create">Nouveau autheur</a><i class="fa fa-angle-down icon-arrow-down"></i></div>
+        <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/authors/create">Nouveau autheur</a><i class="fa fa-angle-down icon-arrow-down"></i></div>
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
             <!---->
             {{-- <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
@@ -337,7 +337,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                             <!---->
                             <div ng-if="product.is_published" class="pull-right">
-                                <a href="/authors/{{$author->id}}/edit">
+                                <a href="/schoolAdmin/{{$school->id}}/authors/{{$author->id}}/edit">
                                     <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
                                 </a>
                                 {{-- <form action="" method="post">

@@ -1,5 +1,5 @@
-{{-- @extends('layouts.admin_views.menu-school-icon')
-@section('content') --}}
+@extends('layouts.admin_views.menu-school')
+@section('content')
 
 <style media="screen">
 
@@ -404,7 +404,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
             <!---->
             <!---->
-            <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+            <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/authors/" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
                 <!---->
                 <!---->
                 <!---->
@@ -429,7 +429,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                           </div>
 
-                        <input style="display: none;" type="text" name="school_id" value="">
+                        <input style="display: none;" type="text" name="school_id" value="{{$school->id}}">
                          {{-- <input style="display: none;" type="text" name="type" value="Free"> --}}
                          {{-- <input style="display: none;" type="text" name="recurring" value="No"> --}}
 
@@ -448,4 +448,4 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 </div>
 
 
-{{-- @endsection --}}
+@endsection

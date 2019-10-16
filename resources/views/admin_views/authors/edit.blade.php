@@ -1,5 +1,5 @@
-{{-- @extends('layouts.admin_views.menu-school-icon')
-@section('content') --}}
+@extends('layouts.admin_views.menu-school')
+@section('content')
 
 <style media="screen">
 
@@ -404,7 +404,7 @@
         
                     <!---->
                     <!---->
-                    <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+                    <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/authors/" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
                         <!---->
                         <!---->
                         <!---->
@@ -448,5 +448,5 @@
         </div>
         
         
-        {{-- @endsection --}}
+        @endsection
         
