@@ -4,18 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pricing extends Model
+class Project extends Model
 {
     /**
      * [protected description]
      * @var [array]
      */
-    protected $fillable = ['name',
-                           'type',
-                           'price',
-                           'recurring',
-                           'per',
-                           'times',
+    protected $fillable = ['title',
+                           'description',
+                           'image',
                            'course_id'
                          ];
 
