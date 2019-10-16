@@ -47,6 +47,8 @@ Route::resource('quizzes', 'QuizController');
 
 Route::resource('questions', 'QuestionController');
 
+Route::resource('authors', 'AuthorController');
+
 
 /*
 
@@ -150,7 +152,19 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pricing/{pricing}/editPayment
 
 //course certificates
 Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseController@certificates')->name('course');
+
+
+
+// pour autheur
+
+Route::get('/authors/{author}/edit', 'AuthorController@edit');
+Route::post('/authors/{author}/update', 'AuthorController@update');
+Route::get('/authors/{author}/destroy', 'AuthorController@destroy');
+
 /*
+
+
+
 
 Route::get('/schoolAdmin/{school}/courses', 'CourseController@coursesForAdmin');
 
@@ -171,7 +185,7 @@ Route::get('/course/{slug}', 'CourseController@showSlug')->name('course.slug');
 Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('enrolled.slug');
 Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');
 Route::get('/course/{slugCourse}/checkout/{pricing}', 'PurchaseController@checkout');
-
+// Route::get('/course')
 
 //pour les achats
 Route::post('/notify', 'PurchaseController@notify')->name('notify');
@@ -186,3 +200,9 @@ Route::get('/thank-you', function () {
 
 //validate a lesson
 Route::post('/completeLesson', 'LessonController@completeLesson');
+
+
+
+//pour les autheur
+
+// Route::post('/authors', 'AuthorController@store');

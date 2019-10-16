@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Author;
+use App\School;
+use App\User;
+use Auth;
 use Illuminate\Http\Request;
 
 class AuthorController extends Controller
@@ -14,7 +17,17 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        //
+        $authors = new Author();
+        // $user = Auth::user()->schools->id;
+        $schools = new School();
+        // $user->schools->id;
+        // return $schools->id;
+        // foreach($schools as $school){
+        //     return $school->logo;
+        // }
+        
+            $authors = Author::where('school_id')->orderBy('created_at', 'desc')->get();
+            return view('admin_views.authors.index')->with('authors', $authors);
     }
 
     /**
@@ -23,8 +36,14 @@ class AuthorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+        $authors = new Author();
+        $schools = School::get();
+        // $authors = Author::where('school_id', $schools->id)->orderBy('created_at', 'desc')->get();
+        // foreach ($authors as $school ) {
+            // return dd($schools);
+            // }
+        return view('admin_views.authors.create')->with('schools',$schools);
     }
 
     /**
@@ -35,7 +54,12 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $authors = new Author();
+         $authors->full_name = $request->full_name;
+         $authors->bio = $request->bio;
+         $authors->school_id = $request->school_id;
+         $authors->save();
+            return redirect('/authors');
     }
 
     /**
@@ -55,9 +79,11 @@ class AuthorController extends Controller
      * @param  \App\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function edit(Author $author)
+    public function edit($id)
     {
-        //
+        // $authors = new Author();
+        $author = Author::find($id);
+        return view('admin_views.authors.edit')->with('author',$author);
     }
 
     /**
@@ -67,9 +93,13 @@ class AuthorController extends Controller
      * @param  \App\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Author $author)
+    public function update(Request $request, $id)
     {
-        //
+        $author = Author::find($id);
+        $author->full_name = $request->full_name;
+        $author->bio = $request->bio;
+        $author->save();
+        return redirect('/authors');
     }
 
     /**
@@ -78,8 +108,9 @@ class AuthorController extends Controller
      * @param  \App\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Author $author)
+    public function destroy($id)
     {
-        //
+        $author = Author::find($id)->delete();
+        return redirect('/authors');
     }
 }

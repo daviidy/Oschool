@@ -952,6 +952,18 @@
                             <!---->
                             <!---->
                         </li>
+                        <li what="nav item" ui-sref-active="active"
+                          text="Users" icon="icon icon-users" sref="admin.users.students" include-active-state="admin.users">
+                            <!----><a what="link" ui-sref="admin.users.authors" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/authors">
+                                <!----><i ng-if="::icon" ng-class="::icon" tooltip="Users" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-users"></i>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Auteurs</span></a>
+                            <!---->
+                            <!---->
+                            <!---->
+                        </li>
                         <!---->
                         <!---->
 
