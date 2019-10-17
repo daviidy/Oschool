@@ -400,7 +400,7 @@
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="post" action="/authors/{{$author->id}}/update" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="">
+            <form method="post" action="/authors/{{$author->id}}/update" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" id="#editor-container">
         
                     <!---->
                     <!---->
@@ -424,9 +424,11 @@
                                       class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
         
                                   </div>
-                                <div class="col-sm-12 add-top-margin-25"><input type="text" name="bio" value="{!!$author->bio!!}" maxlength="100" placeholder="La bio de l'autheur"
-                                      class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
-        
+                                <div class="col-sm-12 add-top-margin-25">
+                                    <input type="hidden" value="" name="bio">
+                                      <div id="editor" >
+                                        {!!$author->bio!!}
+                                      </div>
                                   </div>
         
                                  <input style="display: none;" type="text" name="school_id" value="">
@@ -446,7 +448,36 @@
             </div><br>
             @include('includes.information')
         </div>
+
+
+        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
         
+
+        <script>
+            var quill = new Quill('#editor', {
+            modules: {
+                toolbar: [
+                ['bold', 'italic'],
+                ['link', 'blockquote', 'code-block', 'image','align'],
+                [{ list: 'ordered' }, { list: 'bullet' }]
+                ]
+            },
+            placeholder: 'Votre Bio...',
+            theme: 'snow'
+            });
+
+            var form = document.querySelector('form');
+            form.onsubmit = function() {
+            // Populate hidden form on submit
+            var bio = document.querySelector('input[name=bio]');
+            bio.value = quill.root.innerHTML;
+            console.log("Submitted",quill.root.innerHTML ,$(form).serialize(), $(form).serializeArray());
+            
+            // No back end to actually submit to!
+            // alert('Open the console to see the submit data!')
+            return true;
+            };
+          </script>
         
         @endsection
         

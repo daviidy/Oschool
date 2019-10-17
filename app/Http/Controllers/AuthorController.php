@@ -91,7 +91,7 @@ class AuthorController extends Controller
         $author->full_name = $request->full_name;
         $author->bio = $request->bio;
         $author->save();
-        return redirect('authors.show');
+        return redirect()->back()->with('status', 'Auteur modifier');;
     }
 
     /**

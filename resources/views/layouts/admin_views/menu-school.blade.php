@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
 
+    <!-- Include stylesheet -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
     <style type="text/css">
         .Button-module_button__3Rp1B {
