@@ -46,6 +46,7 @@ Route::resource('lessons', 'LessonController');
 Route::resource('quizzes', 'QuizController');
 
 Route::resource('questions', 'QuestionController');
+Route::resource('coupons', 'CouponController');
 
 
 /*
