@@ -3,6 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Course;
+use App\School;
+use App\Task;
+use App\Resource;
+use Auth;
+use Image;
+use App\Services\SlugProject;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -22,10 +29,15 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+     public function create(School $school, Course $course)
+     {
+         if (Auth::check()) {
+             return view('admin_views.projects.create', ['school' => $school, 'course' => $course]);
+         }
+         else {
+             return redirect('home');
+         }
+     }
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +47,14 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $project = Project::create($request->all()
+    + ['position' => Project::where('course_id', $request->course_id)->max('position') + 1]);
+
+    $slug = new SlugProject();
+    $project->slug = $slug->createSlug($request->title);
+    $project->save();
+
+        return redirect('/schoolAdmin/'.$request->school_id.'/paths/'.$request->course_id.'/curriculum');
     }
 
     /**
@@ -55,10 +74,15 @@ class ProjectController extends Controller
      * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function edit(Project $project)
-    {
-        //
-    }
+     public function edit(School $school, Course $course, Project $project)
+     {
+         if (Auth::check()) {
+             return view('admin_views.projects.edit', ['school' => $school, 'course' => $course, 'project' => $project]);
+         }
+         else {
+             return redirect('home');
+         }
+     }
 
     /**
      * Update the specified resource in storage.
@@ -69,7 +93,24 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        //
+        $data = Project::find($request->project_id);
+        $data->update($request->all());
+
+          $slug = new SlugProject();
+          $data->slug = $slug->createSlug($request->title);
+          $data->save();
+
+
+        if ($request->hasFile('image') ) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->save(public_path('/images/projects/images/' . $filename));
+          $data->image = $filename;
+          $data->save();
+
+        }
+
+        return response()->json($data);
     }
 
     /**
@@ -80,6 +121,137 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect()->back()->with('status', 'Projet bien supprimé');
     }
+
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function addTask(Request $request)
+    {
+
+
+
+        $tasks = json_decode($request->task);
+        foreach ($tasks as $option_input) {
+            $task = Task::create([
+                                  'heading' => $option_input->task,
+                                  'project_id' => $request->project_id,
+                                  'position' => Task::where('project_id', $request->project_id)->max('position') + 1,
+              ]);
+        }
+
+        return response()->json();
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
+    }
+
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function editTask(Request $request)
+    {
+
+
+        //on retrouve la tache
+        $task = Task::find($request->task_id);
+        $task->heading = $request->task;
+        $task->save();
+
+        return response()->json();
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
+    }
+
+
+
+    public function saveNewTaskPositions(Request $request)
+    {
+            foreach ($request->positions as $position) {
+                $index = $position[0];
+                $newPosition = $position[1];
+
+                $data = Task::find($index);
+                if ($data !== null) {
+                    $data->position = $newPosition;
+                    $data->save();
+                }
+
+            }
+
+
+        return response()->json();
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
+    }
+
+
+
+    public function saveNewResourcePositions(Request $request)
+    {
+            foreach ($request->positions as $position) {
+                $index = $position[0];
+                $newPosition = $position[1];
+
+                $data = Resource::find($index);
+                if ($data !== null) {
+                    $data->position = $newPosition;
+                    $data->save();
+                }
+
+            }
+
+
+        return response()->json();
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
+    }
+
+
+
+    public function saveNewProjectPositions(Request $request)
+    {
+            foreach ($request->positions as $position) {
+                $index = $position[0];
+                $newPosition = $position[1];
+
+                $data = Project::find($index);
+                if ($data !== null) {
+                    $data->position = $newPosition;
+                    $data->save();
+                }
+
+            }
+
+
+        return response()->json();
+        /*
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        */
+    }
+
+
+
+
+
+
+
+
+
+
 }

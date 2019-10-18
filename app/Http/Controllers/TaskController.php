@@ -80,6 +80,7 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        //
+        $task->delete();
+        return redirect()->back()->with('status', 'Tâche bien supprimée');
     }
 }

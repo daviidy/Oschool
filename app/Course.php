@@ -93,6 +93,16 @@ class Course extends Model
 
           /**
            * [users description]
+           * relationship one to many with Project model
+           * @return [array] [description]
+           */
+           public function projects()
+           {
+               return $this->hasMany('App\Project');
+           }
+
+          /**
+           * [users description]
            * relationship one to many with Lesson model
            * @return [array] [description]
            */
@@ -123,6 +133,7 @@ class Course extends Model
                }
                 $course->sections()->delete();
                 $course->lessons()->delete();
+                $course->projects()->delete();
                 // do the rest of the cleanup...
            });
        }

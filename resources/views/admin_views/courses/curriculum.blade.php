@@ -258,7 +258,7 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
     </div>
     <div class="row">
         <div ui-tree="options" class="col-md-12 tch-ui-tree-curriculum angular-ui-tree">
-            <ol ui-tree-nodes="" data-type="lectureSection" class="list-unstyled section-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty" style="">
+            <ol ui-tree-nodes="" data-type="lectureSection" class="part-list list-unstyled section-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty" style="">
                 <!---->
                 @if($course->sections)
                 @foreach($course->sections->sortBy('position') as $section)
@@ -277,7 +277,7 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                             <!----></span>
                         <div class="pull-right"><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/new-lecture" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">Nouvelle leçon</a></div>
                     </div>
-                    <ol ui-tree-nodes="" ng-model="lectureSection.lectures" data-type="lecture" class="list-unstyled lecture-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty">
+                    <ol ui-tree-nodes="" ng-model="lectureSection.lectures" data-type="lecture" class="lesson-list list-unstyled lecture-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty">
                         <!---->
                         @if($section->lessons)
                         @foreach($section->lessons->sortBy('position') as $lesson)

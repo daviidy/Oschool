@@ -12,7 +12,9 @@ class Resource extends Model
      */
     protected $fillable = ['link',
                            'type',
-                           'project_id'
+                           'project_id',
+                           'position',
+                           'title'
                          ];
 
 

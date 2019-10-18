@@ -238,7 +238,7 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                       href="/course/enrolled/{{$course->slug}}">Aperçu</a><span class="space"></span>
                     <span class="space"></span>
                     <a what="new section btn" ui-sref="admin.courses.course.curriculum.new_section" class="tch-btn-header-primary"
-                      href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/new-section">Nouvelle section</a>
+                      href="/schoolAdmin/{{$school->id}}/paths/{{$course->id}}/curriculum/new-project">Nouveau projet</a>
                       <!--
                       <a style="background-color: #4D90CC;border: 1px solid #4D90CC;" what="new section btn" ui-sref="admin.courses.course.curriculum.new_section" class="tch-btn-header-primary"
                         href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/new-section">Ajouter quiz</a>
@@ -258,11 +258,11 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
     </div>
     <div class="row">
         <div ui-tree="options" class="col-md-12 tch-ui-tree-curriculum angular-ui-tree">
-            <ol ui-tree-nodes="" data-type="lectureSection" class="list-unstyled section-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty" style="">
+            <ol ui-tree-nodes="" data-type="lectureSection" class="project-list list-unstyled section-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty" style="">
                 <!---->
-                @if($course->sections)
-                @foreach($course->sections->sortBy('position') as $section)
-                <li data-index="{{$section->id}}" data-position="{{$section->position}}" class="section-item angular-ui-tree-node" collapsed="false" style="">
+                @if($course->projects)
+                @foreach($course->projects->sortBy('position') as $project)
+                <li data-index="{{$project->id}}" data-position="{{$project->position}}" class="section-item angular-ui-tree-node" collapsed="false" style="">
                     <div what="section" class="section-heading angular-ui-tree-wrapper"><i ui-tree-handle=""
                           class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle"></i>
                           <span data-nodrag="" class="checkbox-container">
@@ -270,19 +270,42 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                               <input what="checkbox" type="checkbox" ng-model="lectureSection.allSelected"
                               ng-change="selectLectureSection(lectureSection)" class="ng-pristine ng-untouched ng-valid ng-empty">
                           -->
-                          </span><span class="title"><span what="section name" ng-bind="lectureSection.name" editable-text="lectureSection.name"
-                              e-form="lectureSectionNameEditForm" onbeforesave="$event.stopPropagation(); updateLectureSection(lectureSection, { name: $data })" class="lecture-section-name editable">{{$section->title}}</span><button
-                              what="edit section name" ng-click="$event.stopPropagation(); lectureSectionNameEditForm.$show()" ng-hide="lectureSectionNameEditForm.$visible" class="tch-btn-icon-fa icon-gray fastclickable"><i
-                                  class="fa fa-pencil"></i></button>
-                            <!----></span>
-                        <div class="pull-right"><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/new-lecture" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">Nouvelle leçon</a></div>
+                          </span>
+                          <span style="cursor: pointer;" class="title">
+                            <a href="/schoolAdmin/{{$school->id}}/paths/{{$course->id}}/curriculum/projects/{{$project->id}}/edit">
+                            <span style="font-weight: bold;color: black;" what="section name" ng-bind="lectureSection.name" editable-text="lectureSection.name"
+                              e-form="lectureSectionNameEditForm" onbeforesave="$event.stopPropagation(); updateLectureSection(lectureSection, { name: $data })" class="lecture-section-name editable">
+                              {{$project->title}}
+                            </span>
+                            <button
+                              what="edit section name" ng-click="$event.stopPropagation(); lectureSectionNameEditForm.$show()" ng-hide="lectureSectionNameEditForm.$visible" class="tch-btn-icon-fa icon-gray fastclickable">
+                              <i
+                                  class="fa fa-pencil"></i>
+                            </button>
+                            <!---->
+                          </span>
+                          </a>
+                        <div class="pull-right">
+                          <a href="/schoolAdmin/{{$school->id}}/paths/{{$course->id}}/curriculum/projects/{{$project->id}}/new-resource" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
+                              Nouvelle ressource
+                          </a>
+                          <div class="btn-group">
+                          <form action="{{ route('projects.destroy', $project) }}" method="post">
+                              {{ csrf_field() }}
+                              {{ method_field('delete') }}
+                              <button style="background:#dc4f2f;"
+                                  class="tch-btn-icon-fa fastclickable tch-btn-content-primary"><i class="fa fa-trash"></i>
+                              </button>
+                          </form>
+                      </div>
+                      </div>
                     </div>
-                    <ol ui-tree-nodes="" ng-model="lectureSection.lectures" data-type="lecture" class="list-unstyled lecture-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty">
+                    <ol ui-tree-nodes="" ng-model="lectureSection.lectures" data-type="lecture" class="resource-list list-unstyled lecture-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty">
                         <!---->
-                        @if($section->lessons)
-                        @foreach($section->lessons->sortBy('position') as $lesson)
-                        <li data-index="{{$lesson->id}}" data-position="{{$lesson->position}}"
-                           class="{{$lesson->status == 'inactive' ? 'draft' : ''}} lecture-item angular-ui-tree-wrapper angular-ui-tree-node fastclickable" collapsed="false" style="">
+                        @if($project->resources)
+                        @foreach($project->resources->sortBy('position') as $resource)
+                        <li data-index="{{$resource->id}}" data-position="{{$resource->position}}"
+                           class="lecture-item angular-ui-tree-wrapper angular-ui-tree-node fastclickable" collapsed="false" style="">
                           <i ui-tree-handle=""
                               class="fa fa-bars tch-drag-handle-bars angular-ui-tree-handle fastclickable"></i>
                               <span data-nodrag="" ng-click="$event.stopPropagation();" class="checkbox-container fastclickable">
@@ -291,20 +314,18 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                                   class="ng-pristine ng-untouched ng-valid ng-empty">
                               -->
                               </span>
-                              <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/lessons/{{$lesson->id}}/edit">
+                              <a href="/schoolAdmin/{{$school->id}}/paths/{{$course->id}}/curriculum/projects/{{$project->id}}/resources/{{$resource->id}}/edit">
                                   <span class="title">
                                       <span  editable-text="lecture.name"
                                   class="lecture-name editable">
-                                  {{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}
+                                  {{$resource->title}}
                               </span>
                               <button
                                   class="tch-btn-icon-fa icon-gray fastclickable">
                                   <i class="fa fa-pencil"></i>
                               </button>
 
-                                  @if($lesson->status == 'inactive')
-                                  <label ng-if="!lecture.is_published" class="label label-default">Brouillon</label>
-                                  @endif
+
                                 <!----></span>
                                 </a>
                             <div class="pull-right">
@@ -314,7 +335,7 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                                       class="tch-btn-icon-fa fastclickable tch-btn-content-secondary"><i class="fa fa-eye"></i>
                                   </button>
                               -->
-                              <form action="{{ route('lessons.destroy', $lesson) }}" method="post">
+                              <form action="{{ route('resources.destroy', $resource) }}" method="post">
                                   {{ csrf_field() }}
                                   {{ method_field('delete') }}
                                   <button style="background:#dc4f2f;"
