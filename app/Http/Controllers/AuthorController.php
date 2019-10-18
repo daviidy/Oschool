@@ -7,6 +7,7 @@ use App\School;
 use App\User;
 use Auth;
 use Redirect;
+use Image;
 use Illuminate\Http\Request;
 
 class AuthorController extends Controller
@@ -44,12 +45,17 @@ class AuthorController extends Controller
          $authors = new Author();
          $authors->full_name = $request->full_name;
          $authors->bio = $request->bio;
-         $authors->image = $request->image;
          $authors->school_id = $request->school_id;
-         $authors->save();
-
-         $urrl = $school->id;
-            return redirect()->back()->with('status', 'Nouveau auteur ajouter');
+        //  $authors->image = $request->image;
+        if($request->hasFile('image')){
+         $image = $request->file('image');
+         $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/images/authors/' . $filename));
+          $authors->image = $filename;
+        
+        }
+        $authors->save();
+            return redirect()->back()->with('status', 'Nouvel auteur ajouté');
     }
 
     /**
@@ -90,10 +96,17 @@ class AuthorController extends Controller
     {
         $author = Author::find($id);
         $author->full_name = $request->full_name;
-        $authors->image = $request->image;
         $author->bio = $request->bio;
+
+        if($request->hasFile('image')){
+        $image = $request->file('image');
+        $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/images/authors/' . $filename));
+          $author->image = $filename;
+          
+        }
         $author->save();
-        return redirect()->back()->with('status', 'Auteur modifier');;
+          return back()->with('status', 'Auteur modifié');;
     }
 
     /**
@@ -105,6 +118,6 @@ class AuthorController extends Controller
     public function destroy($id)
     {
         $author = Author::find($id)->delete();
-        return redirect()->back()->with('status', 'Auteur supprimer');
+        return redirect()->back()->with('status', 'Auteur supprimé');
     }
 }

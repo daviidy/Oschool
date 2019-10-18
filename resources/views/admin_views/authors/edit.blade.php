@@ -387,7 +387,7 @@
                             <!---->
                             <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                             <!---->
-                            <!---->Modifier un autheur
+                            <!---->Modifier un auteur
                         </div>
                         <!---->
                         <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -400,7 +400,8 @@
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="post" action="/authors/{{$author->id}}/update" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" id="#editor-container">
+            <form method="post" action="/authors/{{$author->id}}/update" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="#editor-container">
+                @csrf
         
                     <!---->
                     <!---->
@@ -408,26 +409,25 @@
                         <!---->
                         <!---->
                         <!---->
-                        @csrf
                         <div class="inline-form-container col-sm-6 col-sm-offset-3">
                             <!---->
                             <div ng-if="planType == 'free'" class="col-sm-12">
                                 {{-- <div class="input-group input-group-image"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg"></div> --}}
-                                <div class="input-group input-group-label"><span>Modifier l'autheur</span></div>
+                                <div class="input-group input-group-label"><span>Modifier l'auteur</span></div>
                             </div>
                             <!---->
                             <!---->
                             <!---->
                             <!---->
                             <div ng-show="products.length > 0" class="">
-                            <div class="col-sm-12 add-top-margin-25"><input type="text" name="full_name" value="{{$author->full_name}}" maxlength="100" placeholder="Nom de l'autheur"
+                            <div class="col-sm-12 add-top-margin-25"><input type="text" name="full_name" value="{{$author->full_name}}" maxlength="100" placeholder="Nom de l'auteur"
                                       class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
-        
+                                <br>
                                   </div>
-                                  <div
-                                  class="tch-btn-content-secondary fastclickable">
-                                  <input id="imageAuthor" type="file" name="image" value="">
-                              </div>
+                                  <br>
+                                    <div class="tch-btn-content-secondary fastclickable">
+                                    <input id="image" type="file" name="image" value="{{$author->image}}">
+                                    </div>
                                 <div class="col-sm-12 add-top-margin-25">
                                     <input type="hidden" value="" name="bio">
                                       <div id="editor" >
