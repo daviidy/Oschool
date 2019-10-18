@@ -424,6 +424,10 @@
                                       class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
         
                                   </div>
+                                  <div
+                                  class="tch-btn-content-secondary fastclickable">
+                                  <input id="imageAuthor" type="file" name="image" value="">
+                              </div>
                                 <div class="col-sm-12 add-top-margin-25">
                                     <input type="hidden" value="" name="bio">
                                       <div id="editor" >

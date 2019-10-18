@@ -44,6 +44,7 @@ class AuthorController extends Controller
          $authors = new Author();
          $authors->full_name = $request->full_name;
          $authors->bio = $request->bio;
+         $authors->image = $request->image;
          $authors->school_id = $request->school_id;
          $authors->save();
 
@@ -89,6 +90,7 @@ class AuthorController extends Controller
     {
         $author = Author::find($id);
         $author->full_name = $request->full_name;
+        $authors->image = $request->image;
         $author->bio = $request->bio;
         $author->save();
         return redirect()->back()->with('status', 'Auteur modifier');;
