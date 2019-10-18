@@ -52,7 +52,7 @@
 </style>
 <div id="segment-event" type="hidden" value=""></div>
 {{-- https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/vNCMiPpT6qrvVvHcJUwQ --}}
-<div class="hero-div" style="background-image: url(https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?cs=srgb&dl=auditorium-benches-chairs-207691.jpg&fm=jpg);">
+<div class="hero-div" style=" background-image: url(/images/schools/backgrounds/bckg.png">
 <div class="container hero-container">
   <div class="row">
     <div class="col-xs-12 vertically-align-contents-except-xs">
