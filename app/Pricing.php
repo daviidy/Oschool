@@ -22,7 +22,7 @@ class Pricing extends Model
 
      /**
       * [users description]
-      * relationship many to many with Course model
+      * relationship one to many with Course model
       * @return [array] [description]
       */
       public function course()
