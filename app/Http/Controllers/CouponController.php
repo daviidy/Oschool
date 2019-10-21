@@ -38,9 +38,9 @@ class CouponController extends Controller
     {
         //validate
         $request->validate([
-          'code'=>'request',
-          'value'=>'request',
-          'expiration_date'=>'request',
+          'code'=>'required',
+          'value'=>'required',
+          'expiration_date'=>'required',
         ]);
 
         $coupon = Coupon::create(['code'=> $request->code,'value' => $request->value,'expiration_date' => $request->expiration_date]);
@@ -84,14 +84,14 @@ class CouponController extends Controller
         $request->validate([
             'code' => 'required',
             'value' => 'required',
-            'expiration_date',
+            'expiration_date'=>'required',
         ]);
 
         $coupon->code = $request->code;
         $coupon->value = $request->value;
         $coupon->expiration_date = $request->expiration_date;
-        $task->save();
-        $request->session()->with('status', 'Coupon modifié avec succes!');
+        $coupon->save();
+        $request->session()->flash('status', 'Coupon modifié avec succes!');
         return redirect('coupons');
     }
 
@@ -104,8 +104,8 @@ class CouponController extends Controller
     public function destroy(Coupon $coupon)
     {
         //
-        $task->delete();
-        $request->session()->with('status', 'Coupon supprimé avec succes!');
+        $coupon->delete();
+        $request->session()->flash('status', 'Coupon supprimé avec succes!');
         return redirect('coupons');
     }
 }

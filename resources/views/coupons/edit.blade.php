@@ -209,6 +209,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
     <!---->
     <form method="post" enctype="multipart/form-data" action="{{url('coupons', [$coupon->id])}}" name="courseNewForm">
+      <input type="hidden" name="_method" value="PUT">
         <div id="section-information" class="row tch-section-wrapper">
             <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
                 <!---->
@@ -243,7 +244,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 <!---->
                             </label-block>
                             <div ng-transclude="">
-                              <input value="{{$coupon->code}}" id="coupon_code" what="name" ng-model="coupon.code" type="text" name="name" maxlength="100" placeholder="ge_89f9rDN4rt'" autofocus="true"
+                              <input value="{{$coupon->code}}" id="coupon_code" what="name" ng-model="coupon.code" type="text" name="code" maxlength="100" placeholder="ge_89f9rDN4rt'" autofocus="true"
                                   required="" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength">
                             </div>
                             <help-block>
@@ -282,7 +283,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 <!---->
                             </label-block>
                             <div ng-transclude="">
-                              <input id="course-heading" type="text" name="subtitle" maxlength="160" value="{{$coupon->value}}" placeholder="e.g. 'exemple -50%'"
+                              <input id="course-heading" type="text" name="value" maxlength="160" value="{{$coupon->value}}" placeholder="e.g. 'exemple 50000'"
                                   class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"><label ng-show="state.errors.heading" ng-bind="state.errors.heading" for="#course-heading" class="control-label ng-hide"></label>
                             </div>
                             <help-block>
@@ -325,7 +326,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 <!---->
                                 <!---->
                             </label-block>
-                            <div ng-transclude=""><input id="course-heading" type="date" name="subtitle" maxlength="160" value="{{$coupon->Expiration_date}}" placeholder="e.g. 'exemple -50%'"
+                            <div ng-transclude=""><input id="course-heading" type="date" name="expiration_date" maxlength="160" value="{{$coupon->expiration_date}}" placeholder="e.g. 'exemple -50%'"
                                   class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"><label ng-show="state.errors.heading" ng-bind="state.errors.heading" for="#course-heading" class="control-label ng-hide"></label>
                             </div>
                             <help-block>
