@@ -509,7 +509,7 @@
 
 
 
-
+//ajouter nouvel auteur
 
 $('#submitNewAuthor').click(function(){
 
@@ -597,6 +597,8 @@ $('#createLecture').on('click', function() {
 });
 
 
+
+//mettre à jour une lecon
 $('#updateLecture').on('click', function() {
     var dataImage = new FormData();
     if ($("#image_lesson").val() !== '') {
@@ -643,7 +645,7 @@ $('#updateLecture').on('click', function() {
     });
 });
 
-
+//supprimer une lecon
 $('#delete-lecture').on('click', function() {
 
 
@@ -665,6 +667,7 @@ $('#delete-lecture').on('click', function() {
 });
 
 
+
 $("#delete").on('click', function(){
 
     $('#popup-background').css('display', 'block');
@@ -684,8 +687,10 @@ $("#cancel").on('click', function(){
 
   <script type="text/javascript">
 
+  //changer position des lecons
+
   $(document).ready(function(){
-      $('.lecture-list').sortable({
+      $('.lesson-list').sortable({
           update: function(event, ui){
               $(this).children().each(function(index){
                   if ($(this).attr('data-position') != (index+1)) {
@@ -729,6 +734,7 @@ console.log(JSON.stringify(positions));
 
   <script type="text/javascript">
 
+//changer position des questions
   $(document).ready(function(){
       $('.questions_list').sortable({
           update: function(event, ui){
@@ -774,8 +780,144 @@ console.log(JSON.stringify(positions));
 
   <script type="text/javascript">
 
+  //changer position des tâches
+    $(document).ready(function(){
+        $('.tasks_list').sortable({
+            update: function(event, ui){
+                $(this).children().each(function(index){
+                    if ($(this).attr('data-position') != (index+1)) {
+                        $(this).attr('data-position', (index+1)).addClass('updated_task');
+                    }
+                });
+
+                saveNewTaskPositions();
+            }
+        });
+    });
+
+    function saveNewTaskPositions(){
+        var taskPositions = [];
+        $('.updated_task').each(function(){
+            taskPositions.push([$(this).attr('data-index'), $(this).attr('data-position')]);
+            $(this).removeClass('updated_task');
+        });
+        $.ajax({
+            type: 'post',
+            url: '/saveNewTaskPositions',
+            dataType: "json",
+            data: {
+                '_token': '{{csrf_token()}}',
+                'update': 1,
+                'positions': taskPositions,
+            },
+            success: function() {
+                $.amaran({'message':"Ordre sauvegardé"});
+            },
+            error: function (xhr, msg) {
+              console.log(msg + '\n' + xhr.responseText);
+          }
+        });
+    }
+
+  </script>
+
+
+  <script type="text/javascript">
+
+  //changer position des ressources
+    $(document).ready(function(){
+        $('.resource-list').sortable({
+            update: function(event, ui){
+                $(this).children().each(function(index){
+                    if ($(this).attr('data-position') != (index+1)) {
+                        $(this).attr('data-position', (index+1)).addClass('updated_resource');
+                    }
+                });
+
+                saveNewResourcePositions();
+            }
+        });
+    });
+
+    function saveNewResourcePositions(){
+        var resourcePositions = [];
+        $('.updated_resource').each(function(){
+            resourcePositions.push([$(this).attr('data-index'), $(this).attr('data-position')]);
+            $(this).removeClass('updated_resource');
+        });
+        $.ajax({
+            type: 'post',
+            url: '/saveNewResourcePositions',
+            dataType: "json",
+            data: {
+                '_token': '{{csrf_token()}}',
+                'update': 1,
+                'positions': resourcePositions,
+            },
+            success: function() {
+                $.amaran({'message':"Ordre sauvegardé"});
+            },
+            error: function (xhr, msg) {
+              console.log(msg + '\n' + xhr.responseText);
+          }
+        });
+    }
+
+  </script>
+
+
+
+  <script type="text/javascript">
+
+  //changer position des projets
+    $(document).ready(function(){
+        $('.project-list').sortable({
+            update: function(event, ui){
+                $(this).children().each(function(index){
+                    if ($(this).attr('data-position') != (index+1)) {
+                        $(this).attr('data-position', (index+1)).addClass('updated_project');
+                    }
+                });
+
+                saveNewProjectPositions();
+            }
+        });
+    });
+
+    function saveNewProjectPositions(){
+        var projectPositions = [];
+        $('.updated_project').each(function(){
+            projectPositions.push([$(this).attr('data-index'), $(this).attr('data-position')]);
+            $(this).removeClass('updated_project');
+        });
+        $.ajax({
+            type: 'post',
+            url: '/saveNewProjectPositions',
+            dataType: "json",
+            data: {
+                '_token': '{{csrf_token()}}',
+                'update': 1,
+                'positions': projectPositions,
+            },
+            success: function() {
+                $.amaran({'message':"Ordre sauvegardé"});
+            },
+            error: function (xhr, msg) {
+              console.log(msg + '\n' + xhr.responseText);
+          }
+        });
+    }
+
+  </script>
+
+
+
+  <script type="text/javascript">
+
+  //changer position des sections
+
   $(document).ready(function(){
-      $('.section-list').sortable({
+      $('.part-list').sortable({
           update: function(event, ui){
               $(this).children().each(function(index){
                   if ($(this).attr('data-position') != (index+1)) {
@@ -820,52 +962,86 @@ console.log(JSON.stringify(positions));
 
 <script type="text/javascript">
 
-//ajouter une question au quiz
-  $('#add-question').on('click', function(event) {
+//ajouter une tache
+  $('#add-task').on('click', function(event) {
       event.preventDefault();
 
       var dataImage = new FormData();
       var tab = [];
 
-      var question = $('#question-text').val();
-      var options = $('.text_question_quiz');
-      console.log(options);
-      $.each(options, function(){
+      var tasks = $('.text_question_quiz');
+      console.log(tasks);
+      $.each(tasks, function(){
           if ($(this).val() !== "") {
 
-              var correct = $(this).prev().find('input[name=correct]:checked').length > 0;
-              console.log(correct);
               console.log($(this).val());
               var obj = {
-                  'option': $(this).val(),
-                  'correct': correct,
+                  'task': $(this).val(),
               };
               tab.push(obj);
 
           }
       });
       console.log(tab);
-      console.log(question);
       console.log(JSON.stringify(tab));
 
 
       dataImage.append('_token', '{{csrf_token()}}');
       dataImage.append('school_id', $('input[name=school_id]').val());
       dataImage.append('course_id', $('input[name=course_id]').val());
-      dataImage.append('lesson_id', $('input[name=lesson_id]').val());
-      dataImage.append('question', question);
-      dataImage.append('option', JSON.stringify(tab));
+      dataImage.append('project_id', $('input[name=project_id]').val());
+      dataImage.append('task', JSON.stringify(tab));
 
       $.ajax({
           type: 'post',
-          url: '/addQuiz',
+          url: '/addTask',
           contentType:false,
           cache: false,
           processData:false,
           data: dataImage,
           success: function(data) {
-              $.amaran({'message':'La question du quiz a bien été ajoutée'});
-              window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+$("input[name=course_id]").val()+'/curriculum/'+$("input[name=section_id]").val()+'/lessons/'+$("input[name=lesson_id]").val()+'/edit/#quiz';
+              $.amaran({'message':'La tâche a bien été ajoutée'});
+              window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/paths/'+$("input[name=course_id]").val()+'/curriculum/projects/'+$("input[name=project_id]").val()+'/edit/';
+
+
+          },
+          error: function (xhr, msg) {
+            console.log(msg + '\n' + xhr.responseText);
+        }
+      });
+
+  });
+
+//modifier tache
+  $('.task-edit').on('click', function(event) {
+      event.preventDefault();
+
+      var dataImage = new FormData();
+      var tab = [];
+
+      var task = $(this).parents(2).siblings('.quiz-question').find('.task-text-edit').val();
+      var task_id = $(this).parents(2).siblings('.quiz-question').find('#task-id').val();
+
+
+
+
+      dataImage.append('_token', '{{csrf_token()}}');
+      dataImage.append('school_id', $('input[name=school_id]').val());
+      dataImage.append('course_id', $('input[name=course_id]').val());
+      dataImage.append('project_id', $('input[name=project_id]').val());
+      dataImage.append('task', task);
+      dataImage.append('task_id', task_id);
+
+      $.ajax({
+          type: 'post',
+          url: '/editTask',
+          contentType:false,
+          cache: false,
+          processData:false,
+          data: dataImage,
+          success: function(data) {
+              $.amaran({'message':'La tâche a bien été modifiée'});
+              window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/paths/'+$("input[name=course_id]").val()+'/curriculum/projects/'+$("input[name=project_id]").val()+'/edit/';
 
 
           },
@@ -879,7 +1055,56 @@ console.log(JSON.stringify(positions));
 
 
 
-  $('.edit-question').on('click', function(event) {
+  //ajouter une question au quiz
+  $('#add-question').on('click', function(event) {
+      event.preventDefault();
+      var dataImage = new FormData();
+      var tab = [];
+      var question = $('#question-text').val();
+      var options = $('.text_question_quiz');
+      console.log(options);
+      $.each(options, function(){
+          if ($(this).val() !== "") {
+              var correct = $(this).prev().find('input[name=correct]:checked').length > 0;
+              console.log(correct);
+              console.log($(this).val());
+              var obj = {
+                  'option': $(this).val(),
+                  'correct': correct,
+              };
+              tab.push(obj);
+          }
+      });
+      console.log(tab);
+      console.log(question);
+      console.log(JSON.stringify(tab));
+      dataImage.append('_token', '{{csrf_token()}}');
+      dataImage.append('school_id', $('input[name=school_id]').val());
+      dataImage.append('course_id', $('input[name=course_id]').val());
+      dataImage.append('lesson_id', $('input[name=lesson_id]').val());
+      dataImage.append('question', question);
+      dataImage.append('option', JSON.stringify(tab));
+      $.ajax({
+          type: 'post',
+          url: '/addQuiz',
+          contentType:false,
+          cache: false,
+          processData:false,
+          data: dataImage,
+          success: function(data) {
+              $.amaran({'message':'La question du quiz a bien été ajoutée'});
+              window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+$("input[name=course_id]").val()+'/curriculum/'+$("input[name=section_id]").val()+'/lessons/'+$("input[name=lesson_id]").val()+'/edit/#quiz';
+          },
+          error: function (xhr, msg) {
+            console.log(msg + '\n' + xhr.responseText);
+        }
+      });
+  });
+
+
+
+//modifier question
+  $('.question-edit').on('click', function(event) {
       event.preventDefault();
 
       var dataImage = new FormData();
@@ -979,10 +1204,50 @@ console.log(JSON.stringify(positions));
 
 
 
+//mettre a jour un projet
+  $('#updateProject').on('click', function() {
+      var dataImage = new FormData();
+      if ($("#image_lesson").val() !== '') {
+          dataImage.append('image', $("#image_lesson")[0].files[0]);
+      }
+
+
+      dataImage.append('_token', '{{csrf_token()}}');
+      dataImage.append('school_id', $("input[name=school_id]").val());
+      dataImage.append('course_id', $("input[name=course_id]").val());
+      dataImage.append('project_id', $("input[name=project_id]").val());
+      dataImage.append('title', $("input[name=title]").val());
+      dataImage.append('video', $("input[name=video]").val());
+
+
+      dataImage.append('description', quill.root.innerHTML);
+
+      $.ajax({
+          type: 'post',
+          url: '/updateProject',
+          contentType: false,
+          processData: false,
+          data: dataImage,
+          success: function(data) {
+              $.amaran({'message':"Le projet a bien été mis à jour !"});
+              window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+data.course_id+'/curriculum';
+
+          },
+          error: function (xhr, msg) {
+            console.log(msg + '\n' + xhr.responseText);
+        }
+      });
+  });
+
+
 
 </script>
 
   <!--fin quill js-->
+
+
+
+
 
 
 </body>
