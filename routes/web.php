@@ -49,6 +49,12 @@ Route::resource('questions', 'QuestionController');
 
 Route::resource('authors', 'AuthorController');
 
+Route::resource('projects', 'ProjectController');
+
+Route::resource('resources', 'ResourceController');
+
+Route::resource('tasks', 'TaskController');
+
 
 /*
 
@@ -78,12 +84,18 @@ Route::post('/updateLecture', 'LessonController@update');
 Route::post('/saveNewPositions', 'LessonController@saveNewPositions');
 Route::post('/saveNewSectionPositions', 'LessonController@saveNewSectionPositions');
 Route::post('/saveNewQuestionPositions', 'LessonController@saveNewQuestionPositions');
+Route::post('/saveNewTaskPositions', 'ProjectController@saveNewTaskPositions');
+Route::post('/saveNewResourcePositions', 'ProjectController@saveNewResourcePositions');
+Route::post('/saveNewProjectPositions', 'ProjectController@saveNewProjectPositions');
+
 Route::post('/deleteLecture', 'LessonController@destroy');
 Route::post('/addQuiz', 'LessonController@addQuiz');
 Route::post('/editQuiz', 'LessonController@editQuiz');
 Route::post('/deleteOption', 'LessonController@deleteOption');
 Route::post('/check', 'QuizController@check');
-
+Route::post('/updateProject', 'ProjectController@update');
+Route::post('/addTask', 'ProjectController@addTask');
+Route::post('/editTask', 'ProjectController@editTask');
 
 
 
@@ -135,6 +147,14 @@ Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/new-section', 'Sec
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/new-lecture', 'LessonController@create')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/lessons/{lesson}/edit', 'LessonController@edit')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/lessons/{lesson}/quiz/{quiz}/edit', 'QuizController@edit')->name('course');
+
+
+//path curriculum
+Route::get('/schoolAdmin/{school}/paths/{course}/curriculum', 'CourseController@curriculum')->name('course');
+Route::get('/schoolAdmin/{school}/paths/{course}/curriculum/new-project', 'ProjectController@create')->name('course');
+Route::get('/schoolAdmin/{school}/paths/{course}/curriculum/projects/{project}/new-resource', 'ResourceController@create')->name('course');
+Route::get('/schoolAdmin/{school}/paths/{course}/curriculum/projects/{project}/edit', 'ProjectController@edit')->name('course');
+Route::get('/schoolAdmin/{school}/paths/{course}/curriculum/projects/{project}/resources/{resource}/edit', 'ResourceController@edit')->name('course');
 
 //course pricing
 Route::get('/schoolAdmin/{school}/courses/{course}/pricing', 'CourseController@pricing')->name('course');

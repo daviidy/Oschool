@@ -748,6 +748,51 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             </div>
                             <!---->
                         </div>
+                        <div label="Categories" for="categories" form="" tooltip-text="Add these to your course so students can sort by category in your school's course directory.">
+                            <!---->
+                            <!---->
+                            <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
+                                <label-block required-label="requiredLabel">
+                                    <!---->
+                                    <!----><label for="categories" ng-if="label" class="control-label">
+                                        <!----><span ng-bind="label">Type du cours</span>
+                                        <!----></label>
+                                    <!---->
+                                    <!----><a href="javascript:void(0)" ng-if="tooltipText" tooltip="Add these to your course so students can sort by category in your school's course directory." tooltip-placement="bottom" tooltip-trigger="mouseenter"
+                                      tooltip-append-to-body="true" class="btn tch-btn-tooltip"><i class="fa fa-question-circle"></i></a>
+                                    <!---->
+                                    <!---->
+                                </label-block>
+                                <div ng-transclude="">
+                                    <select name="type"
+                                      class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-api-validate">
+                                        <option {{$course->type == 'course' ? 'selected' : ''}} value="course" selected>Cours</option>
+                                        <option {{$course->type == 'path' ? 'selected' : ''}} label="" value="path">Parcours</option>
+                                        <option {{$course->type == 'bootcamp' ? 'selected' : ''}} label="" value="bootcamp">Bootcamp</option>
+                                    </select>
+                                  </div>
+
+                                <help-block>
+                                    <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </ng-messages>
+                                    <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="categories" class="help-block ng-hide"></div>
+                                </help-block>
+                            </div>
+                            <!---->
+                        </div>
                     </div>
                     <div ng-show="showButtonsBar" class="tab-bottom">
                         <!---->
