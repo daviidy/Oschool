@@ -143,7 +143,7 @@
         @foreach($section->lessons->sortBy('position') as $lesson)
         @if(Auth::user()->lessons->contains($lesson->id))
         <li class="section-item completed unlocked-lecture" data-lecture-id="10371330">
-            <a class="item" data-no-turbolink="true" href="/courses/532534/lectures/10371330">
+            <a class="item" data-no-turbolink="true" href="/course/{{{$course->slug}}}/lessons/{{$lesson->slug}}/">
               <span class="status-container">
                 <span class="status-icon">
                   &nbsp;
@@ -159,7 +159,7 @@
           </li>
         @else
         <li class="section-item incomplete next-lecture" data-lecture-id="10371330">
-          <a class="item" data-no-turbolink="true" href="/courses/532534/lectures/10371330">
+          <a class="item" data-no-turbolink="true" href="/course/{{{$course->slug}}}/lessons/{{$lesson->slug}}/">
             <span class="status-container">
               <span class="status-icon">
                 &nbsp;
