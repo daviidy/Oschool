@@ -99,7 +99,14 @@ class CourseController extends Controller
     {
         $course = Course::where('slug', $slug)->firstOrFail();
 
-        return view('courses.show', ['course' => $course]);
+        if ($course->type == 'course') {
+            return view('courses.show', ['course' => $course]);
+        }
+        elseif ($course->type == 'path') {
+            return view('paths.show', ['course' => $course]);
+        }
+
+
     }
 
 
