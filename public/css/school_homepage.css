@@ -1384,7 +1384,7 @@
   @media (min-width: 992px){
   .showcase .container-fluid .homepage-slider{margin-bottom:75px;}
   }
-  .showcase .container-fluid .homepage-slider .slick-arrow{height:50px;width:50px;position:absolute;border:0;color:#1ea69a;font-size:35px;line-height:35px;z-index:100;background:none;font-size:50px;opacity:0.5;}
+  .showcase .container-fluid .homepage-slider .slick-arrow{height:50px;width:50px;position:absolute;border:0;color:#4d90cc;font-size:35px;line-height:35px;z-index:100;background:none;font-size:50px;opacity:0.5;}
   @media (max-width: 767px){
   .showcase .container-fluid .homepage-slider .slick-arrow{top:calc(50% - 25px);}
   }
