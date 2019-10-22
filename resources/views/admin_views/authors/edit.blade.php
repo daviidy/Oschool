@@ -430,7 +430,7 @@
                                     </div>
                                 <div class="col-sm-12 add-top-margin-25">
                                     <input type="hidden" value="" name="bio">
-                                      <div id="editor" >
+                                      <div id="editor" style="height: 300px;">
                                         {!!$author->bio!!}
                                       </div>
                                   </div>
