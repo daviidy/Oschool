@@ -347,6 +347,47 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         </div>
                         <!---->
                     </div>
+
+                    <div label="Select Category" tooltip-text="Displays on student curriculum side as &quot;Instructor&quot;" for="author">
+                        <!---->
+                        <!---->
+                        <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
+                            <label-block required-label="requiredLabel">
+                                <!---->
+                                <!----><label for="author" ng-if="label" class="control-label">
+                                    <!----><span ng-bind="label">Choisir le type du cours</span>
+                                    <!----></label>
+
+                            </label-block>
+                            <div ng-transclude="">
+                                <select name="type" what="author" ng-model="course.author_bio_id" ng-options="author.id as author.name for author in authors | orderBy:'name'" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
+                                    <option label="" value="course">Cours</option>
+                                    <option label="" value="path">Parcours</option>
+                                    <option label="" value="bootcamp">Bootcamp</option>
+
+                                </select>
+                            </div>
+                            <help-block>
+                                <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </ng-messages>
+                                <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="author" class="help-block ng-hide"></div>
+                            </help-block>
+                        </div>
+                        <!---->
+                    </div>
                     <div id="selectAuthor" label="Select Author" tooltip-text="Displays on student curriculum side as &quot;Instructor&quot;" for="author">
                         <!---->
                         <!---->

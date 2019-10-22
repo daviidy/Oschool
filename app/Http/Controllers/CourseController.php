@@ -99,7 +99,14 @@ class CourseController extends Controller
     {
         $course = Course::where('slug', $slug)->firstOrFail();
 
-        return view('courses.show', ['course' => $course]);
+        if ($course->type == 'course') {
+            return view('courses.show', ['course' => $course]);
+        }
+        elseif ($course->type == 'path') {
+            return view('paths.show', ['course' => $course]);
+        }
+
+
     }
 
 
@@ -248,7 +255,13 @@ class CourseController extends Controller
      public function curriculum(School $school, Course $course)
      {
          if (Auth::check()) {
-         return view('admin_views.courses.curriculum', ['school' => $school, 'course' => $course]);
+             if ($course->type == "course") {
+                 return view('admin_views.courses.curriculum', ['school' => $school, 'course' => $course]);
+             }
+             elseif ($course->type == "path") {
+                 return view('admin_views.paths.curriculum', ['school' => $school, 'course' => $course]);
+             }
+
         }
         else {
             return redirect('home');

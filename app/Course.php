@@ -20,7 +20,8 @@ class Course extends Model
                            'school_id',
                            'author_id',
                            'logo',
-                           'category_id'
+                           'category_id',
+                           'type'
                          ];
 
 
@@ -92,6 +93,16 @@ class Course extends Model
 
           /**
            * [users description]
+           * relationship one to many with Project model
+           * @return [array] [description]
+           */
+           public function projects()
+           {
+               return $this->hasMany('App\Project');
+           }
+
+          /**
+           * [users description]
            * relationship one to many with Lesson model
            * @return [array] [description]
            */
@@ -122,6 +133,7 @@ class Course extends Model
                }
                 $course->sections()->delete();
                 $course->lessons()->delete();
+                $course->projects()->delete();
                 // do the rest of the cleanup...
            });
        }

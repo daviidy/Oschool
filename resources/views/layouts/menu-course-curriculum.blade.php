@@ -163,7 +163,7 @@
                   <span class="lecture-sidebar-icon">
                     <i class="fa fa-user"></i>
                   </span>
-                  Your Instructor
+                  Votre instructeur
                 </a>
               </li>
             </div>

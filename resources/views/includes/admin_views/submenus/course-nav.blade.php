@@ -7,7 +7,12 @@
             <div class="row">
                 <div ng-bind="course.name" class="placeholder-course-name">{{$course->name}}</div>
             </div>
+            @if($course->type == 'course')
             <div class="row"><a href="{{ route('course.slug', $course->slug) }}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
+            @endif
+            @if($course->type == 'path')
+            <div class="row"><a href="{{ route('path.slug', $course->slug) }}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
+            @endif
         </div>
         <!---->
     </div>
@@ -39,6 +44,7 @@
         <!---->
     </li>
     <!---->
+    @if($course->type == 'course')
     <li what="nav item" ui-sref-active="active"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Curriculum"
       sref="admin.courses.course.curriculum" onboarding-tooltip-if="course.has_published_lecture == false &amp;&amp; course.bundled_courses_count == 0" onboarding-tooltip-text="Create and publish at least one lecture to complete this step" class="">
@@ -57,6 +63,28 @@
         <!---->
         <!---->
     </li>
+    @endif
+
+    @if($course->type == 'path')
+    <li what="nav item" ui-sref-active="active"
+      ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Curriculum"
+      sref="admin.courses.course.curriculum" onboarding-tooltip-if="course.has_published_lecture == false &amp;&amp; course.bundled_courses_count == 0" onboarding-tooltip-text="Create and publish at least one lecture to complete this step" class="">
+        <!----><a href="/schoolAdmin/{{$school->id}}/paths/{{$course->id}}/curriculum" class=""
+          style="">
+            <!---->
+            <!---->
+            <!---->
+            <!---->
+            <!--
+            <div href="javascript:void(0)" ng-if="::onboardingTooltipIf" tooltip="Create and publish at least one lecture to complete this step" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
+              class="tch-onboarding-sidebar-tooltip"></div>-->
+            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Programme</span>
+        </a>
+        <!---->
+        <!---->
+        <!---->
+    </li>
+    @endif
     <!---->
     <li what="nav item" ui-sref-active="active"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"

@@ -49,11 +49,16 @@
                     </button>
                     <div class="mobile-navbar navbar-collapse collapse">
                         <ul class="nav navbar-nav">
+                            @if(Auth::user()->isAdmin())
+                            <li class="nav-item-create">
+                                <a href="/user/admin">Tableau de bord admin</a>
+                            </li>
+                            @endif
                             <li class="nav-item-profile selected">
                                 <a href="{{route('schools.index')}}">Mes écoles</a>
                             </li>
                             <li class="nav-item-create">
-                                <a href="{{route('schools.create')}}">Créer une nouvelle école</a>
+                                <a href="{{route('schools.create')}}">Créer une nouvelle école / classe</a>
                             </li>
                             <li class="nav-item-settings">
                                 <a href="/users/settings">Mes paramètres</a>
@@ -94,12 +99,19 @@
                 </div>
                 <!--laptop menu view-->
                 <ul class="nav nav-sidebar">
+                    @if(Auth::user()->isAdmin())
+                    <li class="nav-item-create">
+                        <a href="/user/admin">Tableau de bord admin</a>
+                    </li>
+                    @endif
                     <li class="nav-item-profile selected">
                         <a href="/home">Mes écoles</a>
                     </li>
                     @if(Auth::user()->isAdmin() || Auth::user()->isOwner())
                     <li class="nav-item-create nav-item">
                         <a href="{{route('schools.create')}}">Créer une nouvelle école</a>
+                    <li class="nav-item-create">
+                        <a href="{{route('schools.create')}}">Créer une nouvelle école / classe</a>
                     </li>
                     @endif
                     <li class="nav-item-settings selected">

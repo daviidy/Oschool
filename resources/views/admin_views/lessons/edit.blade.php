@@ -1557,13 +1557,18 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                                       Enregistrez
 
                                   <button type="submit"
-                                      class="edit-question tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide">
-                                      Save
+                                      class="question-edit edit-question tch-btn-content-primary tch-btn-sm disable-animations fastclickable ng-hide">
+                                      Enregistrer
                                   </button>
                                       <span class="space"></span>
-                                  <button what="delete button" data-nodrag="" type="button" ng-click="deleteQuestion(question)"
-                                      class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable"><i class="fa fa-trash-o"></i>
-                                  </button>
+                                      <form style="float: right;" action="{{ route('questions.destroy', $question) }}" method="post">
+                                          {{ csrf_field() }}
+                                          {{ method_field('delete') }}
+                                          <button type="submit"
+                                                  class="tch-btn-content-danger tch-btn-icon disable-animations fastclickable">
+                                              <i class="fa fa-trash-o"></i>
+                                          </button>
+                                      </form>
                               </div>
                             </div>
                         </div>
