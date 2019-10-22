@@ -22,6 +22,8 @@ Route::post('/login/user', 'CustomAuthController@loginUser');
 
 Route::get('/users/billings', 'UserController@billings');
 
+Route::get('/user/admin', 'HomeController@admin');
+
 Route::get('/users/settings', 'UserController@edit');
 
 
@@ -189,6 +191,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/certificate', 'CourseControll
 
 //vue pour le front end
 Route::get('/course/{slug}', 'CourseController@showSlug')->name('course.slug');
+Route::get('/path/{slug}', 'CourseController@showSlug')->name('path.slug');
 Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('enrolled.slug');
 Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');
 Route::get('/course/{slugCourse}/checkout/{pricing}', 'PurchaseController@checkout');

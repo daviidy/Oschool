@@ -391,12 +391,94 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 .nav-menu .create-course:hover{background:rgba(255,255,255,0.4);transition:all 0.5s ease;}
 }
 
+@if(\Route::current()->getName() == 'path.slug')
+.navbar-course-hero.is-at-top .navbar-brand, .navbar-course-hero.is-at-top a.fedora-navbar-link {
+    color: #000 !important;
+}
+@endif
+
 </style>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+<style>
+
+.row{
+  padding: 20px 0;
+}
+.card-body{
+  padding: 30px 30px;
+}
+
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing hr {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pricing .card-price .period {
+
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing .btn {
+  font-size: 100%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+
+.fa-ul li{
+  font-size: 1.5rem;
+}
+
+.title-price{
+  text-align: center;
+}
+</style>
+
+
+
 
 </head>
 
@@ -426,7 +508,11 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 
           <a class="navbar-brand header-logo" href="/">
             <span class="sr-only">Oschool</span>
+            @if(\Route::current()->getName() == 'path.slug')
+            <img src="/images/schools/logos/oschool.png" alt="Ito9a193qaqy32ndydwc transparent%20logo">
+            @else
             <img src="/images/schools/logos/logo_oschool_blanc.png" alt="Ito9a193qaqy32ndydwc transparent%20logo">
+            @endif
           </a>
 
           <div class="collapse navbar-collapse navbar-header-collapse">
