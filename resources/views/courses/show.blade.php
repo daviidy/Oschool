@@ -185,87 +185,13 @@ button{line-height:inherit;}
 </style>
 
 
-<style>
 
-.row{
-  padding: 20px 0;
-}
-.card-body{
-  padding: 30px 30px;
-}
-
-
-.pricing .card {
-  border: none;
-  border-radius: 1rem;
-  transition: all 0.2s;
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-}
-
-.pricing hr {
-  margin: 1.5rem 0;
-}
-
-.pricing .card-title {
-  margin: 0.5rem 0;
-  letter-spacing: .1rem;
-  font-weight: bold;
-}
-
-.pricing .card-price {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.pricing .card-price .period {
-
-}
-
-.pricing ul li {
-  margin-bottom: 1rem;
-}
-
-.pricing .text-muted {
-  opacity: 0.7;
-}
-
-.pricing .btn {
-  font-size: 100%;
-  border-radius: 5rem;
-  letter-spacing: .1rem;
-  font-weight: bold;
-  padding: 1rem;
-  opacity: 0.7;
-  transition: all 0.2s;
-}
-
-/* Hover Effects on Card */
-
-@media (min-width: 992px) {
-  .pricing .card:hover {
-    margin-top: -.25rem;
-    margin-bottom: .25rem;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-  }
-  .pricing .card:hover .btn {
-    opacity: 1;
-  }
-}
-
-.fa-ul li{
-  font-size: 1.5rem;
-}
-
-.title-price{
-  text-align: center;
-}
-</style>
 
 
 <div class="blocks-page blocks-page-course_sales_page " id="blocks-page-164508">
 
   <div class="course-block block hero odd-stripe" id="block-183303">
-    <div class="course-top-row has-hero-image" style="background:url(&quot;/images/courses/logos/{{$course->logo}}&quot;) no-repeat center fixed;">
+    <div class="course-top-row has-hero-image" style="background:url(&quot;/images/courses/logos/{{$course->logo == 'image.jpg' ? 'dark_background.jpg' : $course->logo}}&quot;) no-repeat center fixed;">
       <div class="black-overlay" style="opacity: 0.52;">&nbsp;</div>
       <div class="container">
         <div class="row">
@@ -817,7 +743,7 @@ button{line-height:inherit;}
                 <br>
                 <a id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" href="#price"value="Enroll in Course for $52">
                   <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
-                  Inscrit toi
+                  S'inscrie au cours
                   <span class="coupon-price product_7141"></span>
                 </a>
                 <br>

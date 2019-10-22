@@ -7,7 +7,12 @@
             <div class="row">
                 <div ng-bind="course.name" class="placeholder-course-name">{{$course->name}}</div>
             </div>
+            @if($course->type == 'course')
             <div class="row"><a href="{{ route('course.slug', $course->slug) }}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
+            @endif
+            @if($course->type == 'path')
+            <div class="row"><a href="{{ route('path.slug', $course->slug) }}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
+            @endif
         </div>
         <!---->
     </div>
