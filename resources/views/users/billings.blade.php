@@ -21,7 +21,7 @@ p{orphans:3;widows:3;}
 }
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 *:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-a{color:#337ab7;text-decoration:none;}
+a{color:#4D90CC;text-decoration:none;}
 a:hover,a:focus{color:#23527c;text-decoration:underline;}
 a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 img{vertical-align:middle;}
@@ -39,7 +39,7 @@ th{text-align:left;}
 }
 /*! CSS Used from: https://home.mindvalley.com/packs/app-c7d9f990427b05dbc9d6ddcf5ac45b3c.css ; media=screen */
 @media screen{
-a[data-v-669dc8b3]{cursor:pointer;display:inline-block;min-height:42px;padding:10px 30px;font-size:15px;color:#fff;text-decoration:none;text-align:center;font-family:Gilroy-Semibold,sans-serif;background-color:#2a8cf8;border-radius:35px;vertical-align:middle;}
+a[data-v-669dc8b3]{cursor:pointer;display:inline-block;min-height:42px;padding:10px 30px;font-size:15px;color:#fff;text-decoration:none;text-align:center;font-family:Gilroy-Semibold,sans-serif;background-color:#4D90CC;border-radius:35px;vertical-align:middle;}
 a[data-v-669dc8b3]:hover{background-color:#4e9ff8;}
 @media (max-width:768px){
 a[data-v-669dc8b3]{padding-left:30px;padding-right:30px;}
@@ -54,11 +54,11 @@ td.status .green[data-v-3e7bb260]{color:#18bb9c;}
 @media (max-width:700px){
 td.status[data-v-3e7bb260]{max-width:none;padding-bottom:20px!important;}
 }
-td.order[data-v-3e7bb260]{color:#2a8cf8;min-width:110px;}
+td.order[data-v-3e7bb260]{color:#4D90CC;min-width:110px;}
 @media (max-width:700px){
 td.order[data-v-3e7bb260]{padding-top:20px!important;}
 }
-td.order a[data-v-3e7bb260]:hover{color:#2a8cf8;text-decoration:none;}
+td.order a[data-v-3e7bb260]:hover{color:#4D90CC;text-decoration:none;}
 td.order img[data-v-3e7bb260]{display:inline-block;margin-left:10px;width:11px;height:auto;}
 .table-wrapper{padding:20px 0 0;}
 .table-wrapper table{width:100%;}
