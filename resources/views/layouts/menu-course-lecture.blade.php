@@ -33,9 +33,10 @@
   </style>
 
 
-  <link rel="stylesheet" media="screen" href="/css/fedora.css" data-turbolinks-track="true">
-
-  <link href="/css/theme.css" rel="stylesheet" data-turbolinks-track="true">
+  <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-fb144454ae2d6daf41829e849802fb78e65ccf7a89947805dd103de5cb97d355.css" data-turbolinks-track="true">
+  <link
+    href="https://themes.teachablecdn.com/themecss/production.css?_=56db37594f88&amp;brand_course_heading=%23ffffff&amp;brand_heading=%23000000&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23e3e3e3&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%234d4d4d&amp;brand_secondary=%230071bc&amp;brand_text=%234d4d4d&amp;font=Arial&amp;logged_out_homepage_background_image_overlay=0.0&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FU4pfmJMDQ9mzsRTQHFQ2"
+    rel="stylesheet" data-turbolinks-track="true">
   <title>{{$lesson->title}} | {{$lesson->course->name}} | Oschool</title>
   <meta name="description" content="{{$lesson->title}}">
 

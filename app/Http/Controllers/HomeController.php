@@ -33,7 +33,30 @@ class HomeController extends Controller
     }
 
 
+    /**
+     * show home of dashboard admin
+     */
+     public function admin()
+     {
+         if (Auth::check() && Auth::user()->isAdmin()) {
 
+            $users = User::orderby('id', 'asc')->paginate(100);
+            $current_month_users = User::whereMonth('created_at', '=', date('m'))->get();
+            $current_month_purchases = Purchase::whereMonth('date', '=', date('m'))->get();
+            $purchases = Purchase::orderby('id', 'asc')->paginate(100);
+            $categories = Category::orderby('id', 'asc')->paginate(100);
+            $courses = Course::orderby('id', 'asc')->paginate(100);
+            return view('admins.dashboard', [
+                'users' => $users,
+                'purchases' => $purchases,
+                'categories' => $purchases,
+                'courses' => $courses,
+                'current_month_purchases' => $current_month_purchases,
+                'current_month_users' => $current_month_users,
+            ]);
+         }
+
+     }
 
 
 }
