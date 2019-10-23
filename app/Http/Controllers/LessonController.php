@@ -43,6 +43,7 @@ class LessonController extends Controller
                                    ]);
            $slug = new SlugLesson();
            $lesson->slug = $slug->createSlug('Nouvelle leçon');
+           $lesson->save();
             //return view('admin_views.lessons.edit', ['school' => $school, 'course' => $course, 'section' => $section, 'lesson' => $lesson]);
             return redirect('/schoolAdmin/'.$school->id.'/courses/'.$course->id.'/curriculum/'.$section->id.'/lessons/'.$lesson->id.'/edit');
         }
