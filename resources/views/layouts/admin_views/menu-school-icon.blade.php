@@ -421,7 +421,7 @@
        modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
    },
    videoResize: {
-          modules: [ 'Resize', 'DisplaySize', 'Toolbar' ] 
+          modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
       },
    syntax: true,
   },
@@ -465,7 +465,7 @@
       };
 
   }
-  
+
 
   //fin mise a jour description ecole
 

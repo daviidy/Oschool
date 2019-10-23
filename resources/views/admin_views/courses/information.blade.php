@@ -605,7 +605,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                                                     </div>
                                                                     <div class="col-sm-7 form-boxes-right">
                                                                         <div class="row">
-                                                                             <input id="nameAuthor" name="full_name" minlength="1" maxlength="50" placeholder="Nom complet"
+                                                                            <input id="nameAuthor" name="full_name" minlength="1" maxlength="50" placeholder="Nom complet"
                                                                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-minlength ng-valid-maxlength"></div>
                                                                         <div class="row add-top-margin">
                                                                             <input id="headlineAuthor"
