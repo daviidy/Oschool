@@ -174,12 +174,12 @@
               </a>
               <ul class="dropdown-menu">
                 <li class="user-profile">
-                  <a href="/current_user/profile">
+                  <a href="/users/settings">
                     Modifier votre profil
                   </a>
                 </li>
                 <li>
-                  <a href="/current_user/subscriptions">
+                  <a href="/users/billings">
                     Gerer vos abonnements
                   </a>
                 </li>
