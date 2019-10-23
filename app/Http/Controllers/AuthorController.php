@@ -66,7 +66,6 @@ class AuthorController extends Controller
      */
     public function show(Author $author, School $school)
     {
-        $authors = new Author();
         
         $authors = Author::where('school_id', $school->id)->orderBy('created_at', 'desc')->get();
         return view('admin_views.authors.show', ['school' => $school, 'authors' => $authors]);
@@ -78,11 +77,9 @@ class AuthorController extends Controller
      * @param  \App\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function edit(School $school,  $id)
+    public function edit(School $school,  Author $author)
     {
-        // $authors = new Author();
-        $author = Author::find($id);
-        return view('admin_views.authors.edit', ['school' => $school])->with('author', $author);
+        return view('admin_views.authors.edit', ['school' => $school,'author' => $author ]);
     }
 
     /**
