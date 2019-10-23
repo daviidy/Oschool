@@ -172,7 +172,7 @@ class CourseController extends Controller
           $course->logo = $filename;
           $course->save();
         }
-        return back()->with('status', 'Les modifications ont bien été enregistrées');
+        return redirect()->back()->with('status', 'Les modifications ont bien été enregistrées');
 
     }
 
