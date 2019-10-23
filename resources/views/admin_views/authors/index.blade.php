@@ -340,15 +340,29 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 <a href="/schoolAdmin/{{$school->id}}/authors/{{$author->id}}/edit">
                                     <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
                                 </a>
+
+
+
+
+                                <form action="{{ route('authors.destroy', $author) }}" method="post">
+                                    {{ csrf_field() }}
+                                    {{ method_field('delete') }}
+                                    <button
+                                        id="test-id-unpublish-btn"
+                                        class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i>
+                                    </button>
+                                </form>
+
+
                                 {{-- <form action="" method="post">
                                     {{ csrf_field() }}
                                     {{ method_field('delete') }} --}}
-                                <a href="/authors/{{$author->id}}/destroy">
+                                {{-- <a href="/authors/{{$author->id}}/destroy">
                                             <button
                                             id="test-id-unpublish-btn"
                                             class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i>
                                             </button>
-                                    </a>
+                                    </a> --}}
                                 {{-- </form> --}}
                             </div>
                             <!---->

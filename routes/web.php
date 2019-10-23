@@ -180,9 +180,9 @@ Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseControl
 // pour autheur
 
 Route::get('/schoolAdmin/{school}/authors/{author}/edit', 'AuthorController@edit');
-Route::get('/schoolAdmin/{school}/authors', 'AuthorController@show');
+Route::get('/schoolAdmin/{school}/authors', 'AuthorController@index');
 Route::get('/schoolAdmin/{school}/authors/create', 'AuthorController@create');
-
+Route::post('/updateAuthor/{author}', 'AuthorController@update');
 
 
 

@@ -400,9 +400,9 @@
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="post" action="/authors/{{$author->id}}/update" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="#editor-container">
+            <form method="POST" action="{{url('authors', $author)}}" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="#editor-container">
                 @csrf
-        
+                {{ method_field('patch') }}
                     <!---->
                     <!---->
                     <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/authors/" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
@@ -441,6 +441,7 @@
         
         
                             </div>
+                            <input style="display: none;" type="text" name="school_id" value="{{$school->id}}">
                             <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Modifier</button></div>
                         </div>
                     </div>

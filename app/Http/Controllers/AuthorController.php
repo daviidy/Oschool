@@ -17,9 +17,10 @@ class AuthorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(School $school)
     {
-        //
+        $authors = Author::where('school_id', $school->id)->orderBy('created_at', 'desc')->get();
+        return view('admin_views.authors.index', ['school' => $school, 'authors' => $authors]);
     }
 
     /**
@@ -29,9 +30,7 @@ class AuthorController extends Controller
      */
     public function create(School $school)
     {   
-        $authors = new Author();
-
-        return view('admin_views.authors.create', ['school' => $school,'authors' => $authors]);
+        return view('admin_views.authors.create', ['school' => $school]);
     }
 
     /**
@@ -40,22 +39,19 @@ class AuthorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, School $school)
+    public function store(Request $request)
     {
-         $authors = new Author();
-         $authors->full_name = $request->full_name;
-         $authors->bio = $request->bio;
-         $authors->school_id = $request->school_id;
-        //  $authors->image = $request->image;
+         $author = Author::create($request->all());
+
         if($request->hasFile('image')){
          $image = $request->file('image');
          $filename = time() . '.' . $image->getClientOriginalExtension();
           Image::make($image)->save(public_path('/images/authors/' . $filename));
-          $authors->image = $filename;
-        
+          $author->image = $filename;
         }
-        $authors->save();
-            return redirect()->back()->with('status', 'Nouvel auteur ajouté');
+
+        $author->save();
+            return redirect('/schoolAdmin/'.$author->school_id.'/authors')->with('status', 'Nouvel auteur ajouté');
     }
 
     /**
@@ -64,11 +60,9 @@ class AuthorController extends Controller
      * @param  \App\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function show(Author $author, School $school)
+    public function show()
     {
-        
-        $authors = Author::where('school_id', $school->id)->orderBy('created_at', 'desc')->get();
-        return view('admin_views.authors.show', ['school' => $school, 'authors' => $authors]);
+        //
     }
 
     /**
@@ -79,7 +73,7 @@ class AuthorController extends Controller
      */
     public function edit(School $school,  Author $author)
     {
-        return view('admin_views.authors.edit', ['school' => $school,'author' => $author ]);
+        return view('admin_views.authors.edit', ['school' => $school,'author' => $author]);
     }
 
     /**
@@ -89,21 +83,19 @@ class AuthorController extends Controller
      * @param  \App\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Author $author)
     {
-        $author = Author::find($id);
-        $author->full_name = $request->full_name;
-        $author->bio = $request->bio;
+        $author->update($request->all());
 
         if($request->hasFile('image')){
         $image = $request->file('image');
         $filename = time() . '.' . $image->getClientOriginalExtension();
           Image::make($image)->save(public_path('/images/authors/' . $filename));
           $author->image = $filename;
-          
         }
+
         $author->save();
-          return back()->with('status', 'Auteur modifié');;
+          return back()->with('status', 'Auteur modifié');
     }
 
     /**
@@ -112,9 +104,9 @@ class AuthorController extends Controller
      * @param  \App\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Author $author)
     {
-        $author = Author::find($id)->delete();
-        return redirect()->back()->with('status', 'Auteur supprimé');
+        $author->delete();
+        return redirect('/schoolAdmin/'.$author->school_id.'/authors')->with('status', 'Auteur supprimé');
     }
 }
