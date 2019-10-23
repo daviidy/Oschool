@@ -10,6 +10,21 @@
             <!-- end pageheader  -->
             <!-- ============================================================== -->
 
+
+@if(!empty($status))
+
+    <div class="card-body">
+
+        <div class="alert alert-success" role="alert">
+            {{$status}}
+        </div>
+
+    </div>
+
+@endif
+
+
+
 <div class="row">
 
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -66,7 +81,7 @@
     <!-- ============================================================== -->
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         <div class="card">
-            <h5 class="card-header">Achats de ce mois</h5>
+            <h5 class="card-header">Liste des achats</h5>
             <div class="card-body p-0">
                 <div class="table-responsive">
                     <table class="table">

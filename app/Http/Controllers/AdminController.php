@@ -130,7 +130,7 @@ class AdminController extends Controller
         $year = (int)$request['year'];
         //ensemble de tous les achats du mois sélectionné
         $current_month_purchases = Purchase::whereMonth('date', '=', $month)->whereYear('date', '=', $year)->where('status', 'Validé')->get();
-        return view('admins.payments.index', ['current_month_purchases' => $current_month_purchases]);
+        return view('admins.payments.index', ['current_month_purchases' => $current_month_purchases])->with('status', 'Retrouvez ci-dessous la liste des achats pour le mois sélectionné');
       }
 
       else {
