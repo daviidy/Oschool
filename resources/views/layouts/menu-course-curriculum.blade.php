@@ -127,8 +127,8 @@
     <div class="navbar navbar-fedora">
       <div class="navbar-header">
         <div class="lecture-left">
-          <a class="nav-icon-back" aria-label="Back to courses" href="/courses/">
-            <i class="fa fa-angle-left" title="Back to courses"></i>
+        <a class="nav-icon-back" aria-label="Présentation de la leçon" href="/course/{{$course->slug}}">
+            <i class="fa fa-angle-left" title="Présentation de la leçon"></i>
           </a>
         </div>
         <button class="navbar-toggle" data-target=".navbar-header-collapse" data-toggle="collapse" type="button">
