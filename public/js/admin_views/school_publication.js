@@ -14,8 +14,8 @@ $('#changeState').on('click', function() {
         success: function(data) {
             if (data.state == 'active') {
 
-                $('#changeState').css("background-color", "#FF6621")
-                .html("Mettre le cours hors ligne");
+                $('#changeState')
+                .html("Annuler la publication du cours");
 
                 $('#state').val('inactive');
 
@@ -23,8 +23,8 @@ $('#changeState').on('click', function() {
             }
             else {
 
-                $('#changeState').css("background-color", "#94fc13")
-                .html("Mettre le cours en ligne");
+                $('#changeState')
+                .html("Publier le cours");
 
                 $('#state').val('active');
 
