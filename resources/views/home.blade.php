@@ -489,7 +489,7 @@
             </div>
             <div class="row second-row active" data-step="1" id="step1">
                 <div class="col-md-7 image-column">
-                    <img src="https://teachable.com/assets/five-steps/step1-3fd2c54b7e72864447f8592b46ffed7927760eeb11ca09a77b9b3a7426a76b29.svg">
+                    <img src="/images/divers/step-1.svg">
                 </div>
                 <div class="col-md-5">
                     <h1 class="default-header">Projets de la vie réelle conçus par des experts de l'industrie</h1>
@@ -499,7 +499,7 @@
             </div>
             <div class="row second-row" data-step="2" id="step2">
                 <div class="col-md-7 image-column">
-                    <img src="https://teachable.com/assets/five-steps/step2-ca89a5b5172f4db76cdc855c5f9f8f0915f0ec6f08e26fc509a027f4439c4022.svg">
+                    <img src="/images/divers/step-2.svg">
                 </div>
                 <div class="col-md-5">
                     <h1 class="default-header">Mentorat</h1>
@@ -509,7 +509,7 @@
             </div>
             <div class="row second-row" data-step="3" id="step3">
                 <div class="col-md-7 image-column">
-                    <img src="https://teachable.com/assets/five-steps/step3-8f437aa13e47280d12ebc583e8f93dc75924ec2c796d7972c02e2f87bc3737ff.svg">
+                    <img src="/images/divers/step-3.svg">
                 </div>
                 <div class="col-md-5">
                     <h1 class="default-header">Programme d'apprentissage flexible</h1>
@@ -519,7 +519,7 @@
             </div>
             <div class="row second-row" data-step="4" id="step4">
                 <div class="col-md-7 image-column">
-                    <img src="https://teachable.com/assets/five-steps/step4-7c0f831a75108d29133c05c3c702da22ba47e389e582fa333d64101d7aac8ce6.svg">
+                    <img src="/images/divers/step-4.svg">
                 </div>
                 <div class="col-md-5">
                     <h1 class="default-header">Accompagnement à l'emploi</h1>
@@ -529,7 +529,7 @@
             </div>
             <div class="row second-row" data-step="5" id="step5">
                 <div class="col-md-7 image-column">
-                    <img src="https://teachable.com/assets/five-steps/step5-675f78f2901de7b19928570ae8cff205a4b34dc3c38e72adb8aad9b5a8bef953.svg">
+                    <img src="/images/divers/step-5.svg">
                 </div>
                 <div class="col-md-5">
                     <h1 class="default-header">Parcours diplômants et certifiants</h1>
