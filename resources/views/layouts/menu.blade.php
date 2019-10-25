@@ -292,8 +292,9 @@
   data-linkmsg ="politique de confidentialité."
   data-moreinfo = "href="https://teachable.com/privacy-policy""
   data-font-size="13px"
-  data-bg="#6aace6"
-  data-link="#fff"
+  data-bg="#000"
+  data-link="#4d90cc"
+  data-fg="#fff"
   >
 </script>
 
