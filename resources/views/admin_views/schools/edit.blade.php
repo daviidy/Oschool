@@ -1496,7 +1496,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
                     <div ng-transclude="">
                         <input style="display: none;" id="schoolId" type="text" name="id" value="{{$school->id}}">
-                        <!---->
+                      <!---->
                         <!---->
                         @if($school->status == "inactive")
                         <div id="changeStatus" class="tch-btn-content-primary fastclickable">Mettre mon école en ligne</div>

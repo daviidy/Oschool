@@ -176,6 +176,16 @@ class CourseController extends Controller
 
     }
 
+    public function updateCourseState(Request $req)
+    {
+        $data = Course::find($req->id);
+        $data->state = $req->state;
+        $data->save();
+        return response()->json($data);
+    }
+
+
+
     /**
      * Remove the specified resource from storage.
      *

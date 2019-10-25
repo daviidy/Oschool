@@ -22,7 +22,7 @@
     <!-- Sidebar Nav -->
 
     <li class="selected">
-      <a href="/courses/532534" class="sidebar-nav-link">
+      <a href="/course/enrolled/{{$course->slug}}" class="sidebar-nav-link">
         <span class="lecture-sidebar-icon">
           <i class="fa fa-list-alt"></i>
         </span>
@@ -32,7 +32,7 @@
 
 
     <li class="">
-      <a href="/courses/532534/author_bio" class="sidebar-nav-link">
+      <a href="/course/enrolled/{slug}" class="sidebar-nav-link">
         <span class="lecture-sidebar-icon">
           <i class="fa fa-user"></i>
         </span>
@@ -47,13 +47,13 @@
 <div class="course-mainbar" style="display: block;">
 
   <!-- Meta tag for tracking lecture progress -->
-  <meta id="lecture-completion-data" data-last-lecture-id="10371330" data-last-lecture-url="/courses/532534/lectures/10371330">
+  <meta id="lecture-completion-data" data-last-lecture-id="10371330" data-last-lecture-url="/course/enrolled/{{$course->slug}}">
 
   <h2 class="section-title">
     Programme de cours
   </h2>
   <div class="next-lecture-wrapper">
-    <a class="btn btn-primary start-next-lecture" data-no-turbolink="true" href="/courses/532534/lectures/10371330">Commencez le prochain chapitre&nbsp;&nbsp;<span aria-hidden="true">›</span></a>
+    <a class="btn btn-primary start-next-lecture" data-no-turbolink="true" href="/course/enrolled/{{$course->slug}}">Commencez le prochain chapitre&nbsp;&nbsp;<span aria-hidden="true">›</span></a>
     <span class="next-lecture-name hidden-sm">
       Minute de lecture
       (84:23)
@@ -143,7 +143,7 @@
         @foreach($section->lessons->sortBy('position') as $lesson)
         @if(Auth::user()->lessons->contains($lesson->id))
         <li class="section-item completed unlocked-lecture" data-lecture-id="10371330">
-            <a class="item" data-no-turbolink="true" href="/courses/532534/lectures/10371330">
+            <a class="item" data-no-turbolink="true" href="/course/{{{$course->slug}}}/lessons/{{$lesson->slug}}/">
               <span class="status-container">
                 <span class="status-icon">
                   &nbsp;
@@ -159,7 +159,7 @@
           </li>
         @else
         <li class="section-item incomplete next-lecture" data-lecture-id="10371330">
-          <a class="item" data-no-turbolink="true" href="/courses/532534/lectures/10371330">
+          <a class="item" data-no-turbolink="true" href="/course/{{{$course->slug}}}/lessons/{{$lesson->slug}}/">
             <span class="status-container">
               <span class="status-icon">
                 &nbsp;

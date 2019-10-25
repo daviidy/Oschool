@@ -22,7 +22,7 @@ Route::post('/login/user', 'CustomAuthController@loginUser');
 
 Route::get('/users/billings', 'UserController@billings');
 
-Route::get('/user/admin', 'HomeController@admin');
+
 
 Route::get('/users/settings', 'UserController@edit');
 
@@ -75,6 +75,7 @@ Route::get('/owner', 'OwnerController@owner')
 //Ajax Routes
 
 Route::post('/updateSchoolStatus', 'SchoolController@updateSchoolStatus');
+Route::post('/updateCourseState', 'CourseController@updateCourseState');
 Route::post('/updateCourseDescription', 'CourseController@updateCourseDescription');
 Route::post('/deleteSchool', 'SchoolController@deleteSchool');
 Route::post('/updateSchool', 'SchoolController@updateSchool');
@@ -209,3 +210,16 @@ Route::get('/thank-you', function () {
 
 //validate a lesson
 Route::post('/completeLesson', 'LessonController@completeLesson');
+
+
+//routes for dashboard admin
+Route::get('/user/admin', 'AdminController@admin');
+Route::get('/user/admin/schools', 'AdminController@schoolIndex');
+Route::get('/user/admin/courses', 'AdminController@courseIndex');
+Route::get('/user/admin/users', 'AdminController@userIndex');
+Route::get('/user/admin/payments', 'AdminController@paymentIndex');
+
+Route::post('/monthlyPayments', 'AdminController@monthlyPayments');
+
+
+//routes for certificate

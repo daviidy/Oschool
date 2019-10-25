@@ -139,8 +139,17 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
       COMPLETE
     </div>
     <div class="small1">
-      <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">Avez-vous des questions ? posez-les dans la communauté</p>
-      <a href="https://discordapp.com/invite/hhbzcHE" target="_blank"><img src="https://img.icons8.com/color/48/000000/discord-new-logo.png"></a>
+      <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">
+          <a href="https://discordapp.com/invite/hhbzcHE" target="_blank">
+          <strong>Avez-vous des questions ? Posez-les dans la communauté</strong>
+          </a>
+      </p>
+
+      <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">
+          <a href="/certificate">
+          <strong>Certificat de réussite</strong>
+          </a>
+      </p>
     </div>
   </div>
 
