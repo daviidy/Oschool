@@ -59,8 +59,8 @@
     <div class="navbar navbar-fedora">
       <div class="navbar-header">
         <div class="lecture-left">
-          <a class="nav-icon-back" aria-label="Back to courses" href="/courses/">
-            <i class="fa fa-angle-left" title="Back to courses"></i>
+        <a class="nav-icon-back" aria-label="Présentation de la leçon" href="/course/{{$course->slug}}">
+            <i class="fa fa-angle-left" title="Présentation de la leçon"></i>
           </a>
         </div>
         <button class="navbar-toggle" data-target=".navbar-header-collapse" data-toggle="collapse" type="button">
@@ -111,7 +111,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="/current_user/subscriptions">
+                  <a href="/curclass="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2"rent_user/subscriptions">
                     Gerer vos abonnements
                   </a>
                 </li>
