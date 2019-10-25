@@ -130,11 +130,11 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
 
   <div class="course-progress lecture-page is-at-top">
     <div class="progressbar">
-      <div class="progressbar-fill" style="min-width: 97%;"></div>
+      <div class="progressbar-fill" style="min-width: {{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}%;"></div>
     </div>
     <div class="small course-progress-percentage">
       <span class="percentage">
-        97%
+        {{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}%
       </span>
       COMPLETE
     </div>

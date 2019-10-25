@@ -142,9 +142,14 @@ a:active,a:focus,a:hover{color:#24292d;}
                 </div>
                 <div _ngcontent-sc24="" class="promo-banner__cta">
                     <a _ngcontent-sc24="" class="button btn sm button--white">
-                          Télécharger le certificat
+                        @if(count(Auth::user()->lessons->where('course_id', $course->id)) == count($course->lessons))
+                          Télécharger
+                         @else
+                         Revenir au cours
+                         @endif
                       </a>
-                  </div>
+
+                 </div>
             </div>
         </div>
 
