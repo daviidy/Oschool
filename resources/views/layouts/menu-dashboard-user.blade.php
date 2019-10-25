@@ -110,8 +110,6 @@
                         <a href="/home">Mes écoles</a>
                     </li>
                     @if(Auth::user()->isAdmin() || Auth::user()->isOwner())
-                    <li class="nav-item-create nav-item">
-                        <a href="{{route('schools.create')}}">Créer une nouvelle école</a>
                     <li class="nav-item-create">
                         <a href="{{route('schools.create')}}">Créer une nouvelle école / classe</a>
                     </li>
