@@ -285,7 +285,7 @@
 </div>
 <!--THE COOKIE SCRIPTE-->
 <script type="text/javascript" id="cookieinfo"
-	src="//cookieinfoscript.com/js/cookieinfo.min.js"
+	src="/js/cookie.js"
   data-message="Ce site utilise des cookies et d'autres outils de suivi pour vous fournir la meilleure expérience. En savoir plus sur les termes de notre"
   data-cookie="CookieInfoScript"
 	data-text-align="left"

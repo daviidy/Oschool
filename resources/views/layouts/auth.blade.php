@@ -35,11 +35,11 @@
     </div>
   </div>
 
-  <div class="cookie-banner vertically-align-contents">
+  <!--div class="cookie-banner vertically-align-contents">
     <p>This website uses cookies and other tracking tools to provide you with the best experience. By using our site, you acknowledge that you understand this and are willing to comply with the terms in our <a
-        href="https://teachable.com/privacy-policy?utm_source=nav">privacy policy</a>.</p>
-    <button><img src="/assets/modal-x-c7f43ce3b8f64f3d597ce12e57caa7ddbf0778d3f163dc92b4a768067ddd2c3f.svg"></button>
-  </div>
+        href="">privacy policy</a>.</p>
+    <button><img src="c7f43ce3b8f64f3d597ce12e57caa7ddbf0778d3f163dc92b4a768067ddd2c3f.svg"></button>
+  </div-->
 
 
   @yield('content')

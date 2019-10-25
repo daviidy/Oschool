@@ -123,12 +123,12 @@
                   <a href="/current_user/credit_card">
                     Ajouter / Echanger votre carte de credit
                   </a>
-                </li-->
+                </li>
                 <li>
                   <a href="/current_user/contact">
                     Contactez nous
                   </a>
-                </li>
+                </li-->
                 <li class="user-signout">
                   <a href="{{ route('logout') }}"
                      onclick="event.preventDefault();
