@@ -5,9 +5,11 @@
     <title>@yield('title | Oschool')</title>
     <link rel="stylesheet" href="/css/school_homepage.css">
     <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
+    <script type="text/javascript" src="/js/cookie.js" charset="utf-8"></script>
     <script type="text/javascript" src="/js/index.js"></script>
     <script type="text/javascript" src="/js/slider.js"></script>
     <script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
@@ -45,10 +47,10 @@
       </div>
     </div>
 
-    <div class="cookie-banner vertically-align-contents hidden">
-      <p>This website uses cookies and other tracking tools to provide you with the best experience. By using our site, you acknowledge that you understand this and are willing to comply with the terms in our <a
-          href="https://teachable.com/privacy-policy">privacy policy</a>.</p>
-      <button><img src="https://teachable.com/assets/modal-x-c7f43ce3b8f64f3d597ce12e57caa7ddbf0778d3f163dc92b4a768067ddd2c3f.svg"></button>
+    <div class="cookie-banner vertically-align-contents hidden ">
+      <p>Ce site utilise des cookies et d'autres outils de suivi pour vous fournir la meilleure expérience. En utilisant notre site, vous reconnaissez que vous comprenez cela et êtes prêt à vous conformer aux termes de notre <a
+          href="https://teachable.com/privacy-policy">politique de confidentialité</a>.</p>
+      <button class="my-close-button"><img src="https://teachable.com/assets/modal-x-c7f43ce3b8f64f3d597ce12e57caa7ddbf0778d3f163dc92b4a768067ddd2c3f.svg"></button>
     </div>
 
     <section class="_1568 clearfix transparent nav-menu">
@@ -281,6 +283,23 @@
 <div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.23648245185608752"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.12266700385399676" width="0" height="0" alt=""
     src="https://bat.bing.com/action/0?ti=5153227&amp;Ver=2&amp;mid=989549a4-44d9-f260-aade-dd03e1ed4b01&amp;pi=1200101525&amp;lg=fr-CI&amp;sw=1366&amp;sh=768&amp;sc=24&amp;tl=Teachable%20%7C%20Examples%20of%20Online%20Courses%20Built%20Using%20Teachable&amp;p=https%3A%2F%2Fteachable.com%2Fexamples&amp;r=https%3A%2F%2Fteachable.com%2F&amp;lt=4075&amp;evt=pageLoad&amp;msclkid=N&amp;rn=663690">
 </div>
+<!--THE COOKIE SCRIPTE-->
+<script type="text/javascript" id="cookieinfo"
+	src="//cookieinfoscript.com/js/cookieinfo.min.js"
+  data-message="Ce site utilise des cookies et d'autres outils de suivi pour vous fournir la meilleure expérience. En savoir plus sur les termes de notre"
+  data-cookie="CookieInfoScript"
+	data-text-align="left"
+  data-linkmsg ="politique de confidentialité."
+  data-moreinfo = "href="https://teachable.com/privacy-policy""
+  data-font-size="13px"
+  data-bg="#6aace6"
+  data-link="#fff"
+  >
+</script>
+
+
+<!--END COOKIE SCRIPTE-->
+
 </body>
 
 
