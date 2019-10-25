@@ -220,3 +220,6 @@ Route::get('/user/admin/users', 'AdminController@userIndex');
 Route::get('/user/admin/payments', 'AdminController@paymentIndex');
 
 Route::post('/monthlyPayments', 'AdminController@monthlyPayments');
+
+
+//routes for certificate
