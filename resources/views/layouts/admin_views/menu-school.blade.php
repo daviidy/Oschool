@@ -14,8 +14,6 @@
 
     <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
 
-    <!-- Include stylesheet -->
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
     <style type="text/css">
         .Button-module_button__3Rp1B {
@@ -874,6 +872,13 @@
         }
     </style>
 
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+
+<script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
+</script>
+
+
 
 </head>
 
@@ -954,20 +959,23 @@
                             <!---->
                             <!---->
                         </li>
+                        <!---->
+                        <!---->
                         <li what="nav item" ui-sref-active="active"
-                          text="Users" icon="icon icon-users" sref="admin.users.students" include-active-state="admin.users">
-                            <!----><a what="link" ui-sref="admin.users.authors" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/authors">
-                                <!----><i ng-if="::icon" ng-class="::icon" tooltip="Users" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-users"></i>
-                                <!---->
-                                <!---->
-                                <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Auteurs</span></a>
-                            <!---->
-                            <!---->
-                            <!---->
-                        </li>
-                        <!---->
-                        <!---->
+                        text="Users" icon="icon icon-users" sref="admin.users.students" include-active-state="admin.users">
+                          <!----><a what="link" ui-sref="admin.users.authors" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/authors">
+                              <!----><i ng-if="::icon" ng-class="::icon" tooltip="Users" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-users"></i>
+                              <!---->
+                              <!---->
+                              <!---->
+                              <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Auteurs</span></a>
+                          <!---->
+                          <!---->
+                          <!---->
+                      </li>
+
+
+
 
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"

@@ -6,10 +6,9 @@
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <meta charset="UTF-8">
-  <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-fb144454ae2d6daf41829e849802fb78e65ccf7a89947805dd103de5cb97d355.css" data-turbolinks-track="true">
-  <link
-    href="https://themes.teachablecdn.com/themecss/production.css?_=f7b687444024&amp;brand_course_heading=%23ffffff&amp;brand_heading=%232b3636&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%23000000&amp;brand_secondary=%2339719a&amp;brand_text=%232b3636&amp;logged_out_homepage_background_image_overlay=0.84&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fd2vvqscadf4c1f.cloudfront.net%2Fb7yh7DKMSKeGh9UPYbDI_CardSpring.jpg"
-    rel="stylesheet" data-turbolinks-track="true">
+  <link rel="stylesheet" media="screen" href="/css/fedora-course.css" data-turbolinks-track="true">
+
+  <link href="/css/theme-course.css" rel="stylesheet" data-turbolinks-track="true">
 
 
   <title>@yield('title') | Oschool</title>
@@ -477,7 +476,8 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 }
 </style>
 
-
+<script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
+</script>
 
 
 </head>

@@ -172,9 +172,19 @@ class CourseController extends Controller
           $course->logo = $filename;
           $course->save();
         }
-        return back()->with('status', 'Les modifications ont bien été enregistrées');
+        return redirect()->back()->with('status', 'Les modifications ont bien été enregistrées');
 
     }
+
+    public function updateCourseState(Request $req)
+    {
+        $data = Course::find($req->id);
+        $data->state = $req->state;
+        $data->save();
+        return response()->json($data);
+    }
+
+
 
     /**
      * Remove the specified resource from storage.

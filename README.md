@@ -30,4 +30,4 @@ Développement de la plateforme de e-learning Oschool
 - Run <code>php artisan db:seed</code> to run seeders, if any.
 - Run <code>php artisan serve</code>
 
-#####You can now access your project at localhost:8000 :)
+#####You can now access your project at localhost:8000 ;)

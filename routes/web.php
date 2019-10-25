@@ -22,7 +22,7 @@ Route::post('/login/user', 'CustomAuthController@loginUser');
 
 Route::get('/users/billings', 'UserController@billings');
 
-Route::get('/user/admin', 'HomeController@admin');
+
 
 Route::get('/users/settings', 'UserController@edit');
 
@@ -49,7 +49,7 @@ Route::resource('quizzes', 'QuizController');
 
 Route::resource('questions', 'QuestionController');
 
-Route::resource('authors', 'AuthorController');
+Route::resource('coupons', 'CouponController');
 
 Route::resource('projects', 'ProjectController');
 
@@ -57,6 +57,7 @@ Route::resource('resources', 'ResourceController');
 
 Route::resource('tasks', 'TaskController');
 
+Route::resource('authors', 'AuthorController');
 
 /*
 
@@ -77,6 +78,7 @@ Route::get('/owner', 'OwnerController@owner')
 //Ajax Routes
 
 Route::post('/updateSchoolStatus', 'SchoolController@updateSchoolStatus');
+Route::post('/updateCourseState', 'CourseController@updateCourseState');
 Route::post('/updateCourseDescription', 'CourseController@updateCourseDescription');
 Route::post('/deleteSchool', 'SchoolController@deleteSchool');
 Route::post('/updateSchool', 'SchoolController@updateSchool');
@@ -174,22 +176,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pricing/{pricing}/editPayment
 
 //course certificates
 Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseController@certificates')->name('course');
-
-
-
-// pour autheur
-
-Route::get('/schoolAdmin/{school}/authors/{author}/edit', 'AuthorController@edit');
-Route::get('/schoolAdmin/{school}/authors', 'AuthorController@index');
-Route::get('/schoolAdmin/{school}/authors/create', 'AuthorController@create');
-Route::post('/updateAuthor/{author}', 'AuthorController@update');
-
-
-
 /*
-
-
-
 
 Route::get('/schoolAdmin/{school}/courses', 'CourseController@coursesForAdmin');
 
@@ -211,7 +198,7 @@ Route::get('/path/{slug}', 'CourseController@showSlug')->name('path.slug');
 Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('enrolled.slug');
 Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');
 Route::get('/course/{slugCourse}/checkout/{pricing}', 'PurchaseController@checkout');
-// Route::get('/course')
+
 
 //pour les achats
 Route::post('/notify', 'PurchaseController@notify')->name('notify');
@@ -228,5 +215,28 @@ Route::get('/thank-you', function () {
 Route::post('/completeLesson', 'LessonController@completeLesson');
 
 
+//routes for dashboard admin
+Route::get('/user/admin', 'AdminController@admin');
+Route::get('/user/admin/schools', 'AdminController@schoolIndex');
+Route::get('/user/admin/courses', 'AdminController@courseIndex');
+Route::get('/user/admin/users', 'AdminController@userIndex');
 
-//pour les autheur
+Route::get('/user/admin/payments', 'AdminController@paymentIndex');
+
+
+Route::post('/monthlyPayments', 'AdminController@monthlyPayments');
+
+Route::post('/monthlyPayments', 'AdminController@monthlyPayments');
+
+
+//routes for certificate
+
+
+
+
+// pour autheur
+
+Route::get('/schoolAdmin/{school}/authors/{author}/edit', 'AuthorController@edit');
+Route::get('/schoolAdmin/{school}/authors', 'AuthorController@index');
+Route::get('/schoolAdmin/{school}/authors/create', 'AuthorController@create');
+Route::post('/updateAuthor/{author}', 'AuthorController@update');

@@ -611,8 +611,7 @@ p.small a:hover{color:#67777c;}
         </form>
         <div class="row">
             <div class="col-md-12">
-                <ul ui-sortable="sortableOptions" ng-model="
-                questions" class="list-unstyled question-added-wrapper ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
+                <ul ui-sortable="sortableOptions" ng-model="questions" class="list-unstyled question-added-wrapper ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
                 </ul>
             </div>

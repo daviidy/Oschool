@@ -347,7 +347,7 @@ button{line-height:inherit;}
                   @if($section->lessons)
                   @foreach($section->lessons->sortBy('position') as $lesson)
                 <li class="section-item">
-                  <a class="item" href="/courses/the-foundations-of-card-magic/lectures/124869">
+                <a class="item" href="/course/{{$lesson->section->course->slug}}/lessons/{{$lesson->slug}}">
                     <span class="lecture-icon">
                       <img src="https://img.icons8.com/color/48/000000/circled-play--v1.png" width="20">
                     </span>

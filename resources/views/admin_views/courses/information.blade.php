@@ -460,12 +460,23 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 </h2>
                 <!---->
             </div>
+            <form ng-submit="save()" name="settingsLaunchModeForm" api-form="savePromise" class="ng-pristine ng-valid">
+                    {{ csrf_field() }}
+                    {{ method_field('patch') }}
             <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
-                <div ng-transclude="">
+            {{-- {{dd($course->state)}} --}}
+            <input style="display: none;" id="courseId" type="text" name="id" value="{{$course->id}}">
+            
+                    @if ($course->state == "inactive")
                     <!---->
-                    <!----><a ng-if="course.is_published" ng-click="unpublish()" id="test-id-unpublish-course-btn" class="tch-btn-header-danger disable-animations fastclickable">Annuler la publication du cours</a>
+                    <div id="changeState" class="tch-btn-header-danger disable-animations fastclickable">Publier le cours</div>
+                    <input style="display: none;" id="state" type="text" name="state" value="active">
+                @else
                     <!---->
-                </div>
+                    <div id="changeState" class="tch-btn-header-danger disable-animations fastclickable">Annuler la publication du cours</div>
+                    <input style="display: none;" id="state" type="text" name="state" value="inactive">
+
+                @endif
                 <div ng-show="showButtonsBar" class="tab-bottom ng-hide">
                     <!---->
                     <!---->
@@ -473,6 +484,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 </div>
             </div>
         </div>
+    </form>
+
     </ng-include>
     <!---->
     <!---->
@@ -605,7 +618,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                                                     </div>
                                                                     <div class="col-sm-7 form-boxes-right">
                                                                         <div class="row">
-                                                                             <input id="nameAuthor" name="full_name" minlength="1" maxlength="50" placeholder="Nom complet"
+                                                                            <input id="nameAuthor" name="full_name" minlength="1" maxlength="50" placeholder="Nom complet"
                                                                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-minlength ng-valid-maxlength"></div>
                                                                         <div class="row add-top-margin">
                                                                             <input id="headlineAuthor"
