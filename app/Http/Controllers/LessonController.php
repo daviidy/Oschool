@@ -128,10 +128,19 @@ class LessonController extends Controller
             ->orderBy('position', 'asc')
             ->first();
 
-            $next_lesson = Lesson::where('course_id', $lesson->course_id)
-            ->where('section_id', $next_section->id)
-            ->orderBy('position', 'asc')
-            ->first();
+            //dans le cas ou c'est la dernière lesson
+            if ($next_section === null) {
+                $next_lesson = $lesson;
+            }
+
+            else {
+                $next_lesson = Lesson::where('course_id', $lesson->course_id)
+                ->where('section_id', $next_section->id)
+                ->orderBy('position', 'asc')
+                ->first();
+            }
+
+
         }
 
         $previous_lesson = Lesson::where('course_id', $lesson->course_id)
@@ -423,10 +432,17 @@ class LessonController extends Controller
             ->orderBy('position', 'asc')
             ->first();
 
-            $next_lesson = Lesson::where('course_id', $lesson->course_id)
-            ->where('section_id', $next_section->id)
-            ->orderBy('position', 'asc')
-            ->first();
+            //dans le cas ou c'est la dernière lesson
+            if ($next_section === null) {
+                $next_lesson = $lesson;
+            }
+
+            else {
+                $next_lesson = Lesson::where('course_id', $lesson->course_id)
+                ->where('section_id', $next_section->id)
+                ->orderBy('position', 'asc')
+                ->first();
+            }
         }
 
 

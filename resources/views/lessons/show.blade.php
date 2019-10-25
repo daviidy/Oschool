@@ -136,7 +136,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
       <span class="percentage">
         {{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}%
       </span>
-      COMPLETE
+      TERMINÉ
     </div>
     <div class="small1">
       <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">

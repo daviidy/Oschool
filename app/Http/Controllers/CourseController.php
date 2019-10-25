@@ -6,6 +6,9 @@ use App\Course;
 use App\School;
 use App\Category;
 use App\Pricing;
+use App\Certificate;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
 use Auth;
 use Image;
@@ -304,7 +307,7 @@ class CourseController extends Controller
       */
      public function certificate(Course $course)
      {
-         if (Auth::check()) {
+         if (Auth::check() && Auth::user()->courses->contains($course->id)) {
          return view('admin_views.courses.certificates', ['course' => $course]);
         }
         else {
@@ -323,9 +326,60 @@ class CourseController extends Controller
       */
      public function getCertificate(Course $course)
      {
-         if (Auth::check()) {
-             $pdf = PDF::loadView('pdf.certificate', $course);
-             return $pdf->download('certificat_'.$course->name.'_oschool.pdf');
+         if (Auth::check() && Auth::user()->courses->contains($course->id)) {
+             if (count(Auth::user()->lessons->where('course_id', $course->id)) == count($course->lessons)) {
+
+                 //si user a un certificat pour ce cours
+                 $certificate = Certificate::where('course_id', $course->id)->where('user_id', Auth::user()->id)->first();
+                 if ($certificate !== null) {
+                     $data = [
+                         'username' => Auth::user()->name,
+                         'course_name' => $course->name,
+                         'certificate_number' => $certificate->number,
+                         'date' => $certificate->date,
+                     ];
+
+                     /*
+                     $html = View::make('pdf.certificate', $data);
+                     $pdf = PDF::loadHTML($html);
+                     return $pdf->stream();
+                      */
+                     $pdf = PDF::loadView('pdf.certificate', $data);
+                     $pdf->setPaper('A4', 'landscape');
+                     return $pdf->download('certificat_'.$course->name.'_oschool.pdf');
+
+                 }
+                 //sinon
+                 //
+                 else {
+                     $certificate = Certificate::create([
+                         'user_id' => Auth::user()->id,
+                         'course_id' => $course->id,
+                         'date' => Carbon::now(),
+                         'number' => date("YmdHis"),
+                     ]);
+
+                     $data = [
+                         'username' => Auth::user()->name,
+                         'course_name' => $course->name,
+                         'certificate_number' => $certificate->number,
+                         'date' => $certificate->date,
+
+                     ];
+
+                     $pdf = PDF::loadView('pdf.certificate', $data);
+                     return $pdf->download('certificat_'.$course->name.'_oschool.pdf');
+                 }
+
+
+
+
+             }
+
+             else {
+                 return redirect()->back();
+             }
+
         }
         else {
             return redirect()->back();

@@ -225,3 +225,5 @@ Route::post('/monthlyPayments', 'AdminController@monthlyPayments');
 
 //routes for certificate
 Route::get('/certificate/{course}', 'CourseController@certificate');
+
+Route::get('/getCertificate/{course}', 'CourseController@getCertificate');

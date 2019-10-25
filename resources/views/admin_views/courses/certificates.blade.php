@@ -1,5 +1,7 @@
 @extends('layouts.menu-project')
 
+@section('title', 'Certificat de réussite')
+
 @section('content')
 
 
@@ -141,13 +143,15 @@ a:active,a:focus,a:hover{color:#24292d;}
                     </p>
                 </div>
                 <div _ngcontent-sc24="" class="promo-banner__cta">
-                    <a _ngcontent-sc24="" class="button btn sm button--white">
-                        @if(count(Auth::user()->lessons->where('course_id', $course->id)) == count($course->lessons))
+                    @if(count(Auth::user()->lessons->where('course_id', $course->id)) == count($course->lessons))
+                    <a href="/getCertificate/{{$course->id}}" _ngcontent-sc24="" class="button btn sm button--white">
                           Télécharger
-                         @else
-                         Revenir au cours
-                         @endif
                       </a>
+                      @else
+                      <a href="#" _ngcontent-sc24="" class="button btn sm button--white">
+                          Revenir au cours
+                      </a>
+                      @endif
 
                  </div>
             </div>

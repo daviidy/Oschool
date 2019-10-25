@@ -30,7 +30,7 @@
   <meta charset="UTF-8" content="PQItdgUoMnpgRnpGOgkUNQIOIT8/OwA/OKI9mI_-4--vSbbPdIitSLRw" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
 
 
-  <title>Projet @yield('project_position') - @yield('path_name')</title>
+  <title>@yield('title')</title>
 
 
 </head>
