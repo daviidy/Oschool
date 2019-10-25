@@ -393,6 +393,7 @@
     <!--fin youtube loading-->
 
     <script type="text/javascript" src="/js/admin_views/menu-icon.js"></script>
+    <script type="text/javascript" src="/js/admin_views/school_publication.js"></script>
 
 
     <!--quill js-->

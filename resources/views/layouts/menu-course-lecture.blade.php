@@ -144,8 +144,8 @@
   <!-- Lecture Header -->
   <header class="full-width half-height is-signed-in">
   <div class="lecture-left">
-    <a class="nav-icon-back" aria-label="Back to course curriculum" data-no-turbolink="true" role="button" href="/courses/627895">
-      <i class="fa fa-angle-left" title="Back to course curriculum"></i>
+    <a class="nav-icon-back" aria-label="Retour au curriculum" data-no-turbolink="true" role="button" href="/course/enrolled/{{$lesson->course->slug}}">
+      <i class="fa fa-angle-left" title="Retour au curriculum"></i>
     </a>
 
    <div class="dropdown settings-dropdown" role="menubar">
