@@ -9,6 +9,7 @@ use App\Pricing;
 use Illuminate\Http\Request;
 use Auth;
 use Image;
+use PDF;
 use App\Services\SlugCourse;
 
 class CourseController extends Controller
@@ -301,13 +302,33 @@ class CourseController extends Controller
       * @param  Course $course [description]
       * @return [type]         [description]
       */
-     public function certificates(School $school, Course $course)
+     public function certificate(Course $course)
      {
          if (Auth::check()) {
-         return view('admin_views.courses.certificates', ['school' => $school, 'course' => $course]);
+         return view('admin_views.courses.certificates', ['course' => $course]);
         }
         else {
             return redirect('home');
+        }
+     }
+
+
+
+
+     /**
+      * [certificates description]
+      * @param  School $school [description]
+      * @param  Course $course [description]
+      * @return [type]         [description]
+      */
+     public function getCertificate(Course $course)
+     {
+         if (Auth::check()) {
+             $pdf = PDF::loadView('pdf.certificate', $course);
+             return $pdf->download('certificat_'.$course->name.'_oschool.pdf');
+        }
+        else {
+            return redirect()->back();
         }
      }
 

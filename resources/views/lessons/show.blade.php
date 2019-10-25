@@ -146,7 +146,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
       </p>
 
       <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">
-          <a href="/certificate">
+          <a href="/certificate/{{$lesson->course_id}}">
           <strong>Certificat de réussite</strong>
           </a>
       </p>
