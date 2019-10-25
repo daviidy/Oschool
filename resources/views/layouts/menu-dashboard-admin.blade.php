@@ -37,6 +37,8 @@
     .adjust-search[_ngcontent-c18]   input[type=text][_ngcontent-c18]{margin-bottom:2rem!important;margin-top:3rem!important;padding:1.75em 1.75em;width:100%;border:1px solid #dbe2e8;color:#2e3d49;background:url(https://www.udacity.com/assets/iridium/images/course-catalog/search.svg) calc(100% - 1.4em) center/1.6rem no-repeat #fff;max-width:70rem;outline:0;margin:0 auto;height:3.5rem;font-size:1.5rem;border-radius:8px;display:block;box-shadow:5px 5px 25px 0 rgba(46,61,73,.2);}
     }
     </style>
+    <script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
+    </script>
 </head>
 
 <body>

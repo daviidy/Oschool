@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="121" viewBox="0 0 120 121" width="120">
+    <g fill="none" fill-rule="evenodd" transform="translate(-32 -58)"><ellipse cx="100" cy="108.699609" fill="#B4DBFF" rx="100" ry="108.699609"/><path d="m28.1571781 187.963819 122.2072389-99.40529 21.980301 94.043199-41.673757 33.713734-81.6139751-.629298z" fill="#6aace6" transform="matrix(.93969262 .34202014 -.34202014 .93969262 58.182395 -25.094768)"/><path d="m28.1571783 187.963819 129.4453507-69.191876 14.742189 63.829785-41.673756 33.713734-81.6139759-.629298z" fill="#2582D6" transform="matrix(.93969262 .34202014 -.34202014 .93969262 63.349193 -24.183722)"/>
+        <g transform="translate(75.952648 100.010397)"><path d="m5.166674 8.361611h24.928441v8.48643h-24.928441z" fill="#70abe0"/><path d="m12.722579 26.692081h9.299766v12.624601h-9.299766z" fill="#70abe0"/>
+            <g stroke="#4d90cc" stroke-width="1.5"><path d="m10.559841 24.494298h9.114414v12.237415h-9.114414z"/><path d="m2.873143 0h24.487809v36.731713h-24.487809z"/><path d="m.2397729 6.51179044h29.8576851" fill="#fff"/><path d="m.2397729 14.5704364h29.8576851" fill="#fff"/></g>
+        </g>
+    </g><div
+        xmlns=""
+        id="screen-shader"
+        style="&#10;            transition: opacity 0.1s ease 0s; &#10;            z-index: 2147483647;&#10;            margin: 0; &#10;            border-radius: 0; &#10;            padding: 0; &#10;            background: #fac563; &#10;            pointer-events: none; &#10;            position: fixed; &#10;            top: -10%; &#10;            right: -10%; &#10;            width: 120%; &#10;            height: 120%; &#10;            opacity: 0.5840;&#10;            mix-blend-mode: multiply; &#10;            display: block;&#10;        "/></svg>
