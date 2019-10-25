@@ -502,7 +502,11 @@
   @font-face{font-family:'TeachableSans-Bold';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.ttf") format("truetype");}
   @font-face{font-family:'TeachableSans-SemiBold';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-SemiBold.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-SemiBold.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-SemiBold.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-SemiBold.ttf") format("truetype");}
   @font-face{font-family:"TeachableSans-Medium";src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Medium.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Medium.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Medium.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Medium.ttf") format("truetype");}
-
+/*cookie zone*/
+.cookieinfo-close{
+  background-color: #000!important;
+  color: #fff!important;
+}
 
   /*school advantages zone*/
 
@@ -1384,7 +1388,7 @@
   @media (min-width: 992px){
   .showcase .container-fluid .homepage-slider{margin-bottom:75px;}
   }
-  .showcase .container-fluid .homepage-slider .slick-arrow{height:50px;width:50px;position:absolute;border:0;color:#1ea69a;font-size:35px;line-height:35px;z-index:100;background:none;font-size:50px;opacity:0.5;}
+  .showcase .container-fluid .homepage-slider .slick-arrow{height:50px;width:50px;position:absolute;border:0;color:#4d90cc;font-size:35px;line-height:35px;z-index:100;background:none;font-size:50px;opacity:0.5;}
   @media (max-width: 767px){
   .showcase .container-fluid .homepage-slider .slick-arrow{top:calc(50% - 25px);}
   }

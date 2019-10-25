@@ -16,7 +16,7 @@
   <meta name="twitter:card" content="summary">
 
 
-
+<script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59'); </script>
 
 
 
@@ -35,11 +35,11 @@
     </div>
   </div>
 
-  <div class="cookie-banner vertically-align-contents">
+  <!--div class="cookie-banner vertically-align-contents">
     <p>This website uses cookies and other tracking tools to provide you with the best experience. By using our site, you acknowledge that you understand this and are willing to comply with the terms in our <a
-        href="https://teachable.com/privacy-policy?utm_source=nav">privacy policy</a>.</p>
-    <button><img src="/assets/modal-x-c7f43ce3b8f64f3d597ce12e57caa7ddbf0778d3f163dc92b4a768067ddd2c3f.svg"></button>
-  </div>
+        href="">privacy policy</a>.</p>
+    <button><img src="c7f43ce3b8f64f3d597ce12e57caa7ddbf0778d3f163dc92b4a768067ddd2c3f.svg"></button>
+  </div-->
 
 
   @yield('content')

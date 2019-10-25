@@ -50,6 +50,10 @@
 
 
   <link rel="stylesheet" type="text/css" href="chrome-extension://immhpnclomdloikkpcefncmfgjbkojmh/css/emoji.css">
+
+<script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
+</script>
+
 </head>
 
 <body class="body-content-view" cz-shortcut-listen="true">
@@ -106,11 +110,12 @@
               </a>
               <ul class="dropdown-menu">
                 <li class="user-profile">
-                  <a href="/current_user/profile">
+                  <a href="/users/settings">
                     Modifier votre profil
                   </a>
                 </li>
                 <li>
+                  <a href="/users/billings">
                   <a href="/curclass="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2"rent_user/subscriptions">
                     Gerer vos abonnements
                   </a>
@@ -119,12 +124,12 @@
                   <a href="/current_user/credit_card">
                     Ajouter / Echanger votre carte de credit
                   </a>
-                </li-->
+                </li>
                 <li>
                   <a href="/current_user/contact">
                     Contactez nous
                   </a>
-                </li>
+                </li-->
                 <li class="user-signout">
                   <a href="{{ route('logout') }}"
                      onclick="event.preventDefault();
