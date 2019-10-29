@@ -393,45 +393,45 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
 
 <script>
-   $(function(){
+//    $(function(){
 
 
-        // search_bar();
+//         // search_bar();
 
-        // $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
+//         // $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
 
 
-        function search_bar(query = ''){
-            $.ajax({
-                url:"{{url('/schoolAdmin/'.$school->id.'/courses')}}",
-                method: 'GET',
-                data: {query: query},
-                dataType: 'json',
-                success: function(data)
-                {
-                    console.log('data: ', data.query)
-                }
+//         function search_bar(query = ''){
+//             $.ajax({
+//                 url:"{{url('/schoolAdmin/'.$school->id.'/courses')}}",
+//                 method: 'GET',
+//                 data: {query: query},
+//                 dataType: 'json',
+//                 success: function(data)
+//                 {
+//                     console.log('data: ', data.query)
+//                 }
 
-            })
-            console.log(query)
-        }
+//             })
+//             console.log(query)
+//         }
 
-        // function search_bar(data){
-        //     console.log(data)
-        // }
-
-        
+//         // function search_bar(data){
+//         //     console.log(data)
+//         // }
 
         
-        $('#search_course').on('keyup',function(){
-            var query = $(this).val();
-            // console.log(query)
-            search_bar(query);
-        })
+
+        
+//         $('#search_course').on('keyup',function(){
+//             var query = $(this).val();
+//             // console.log(query)
+//             search_bar(query);
+//         })
 
 
         
-    })
+//     })
 </script>
 
 
