@@ -227,3 +227,10 @@ Route::post('/monthlyPayments', 'AdminController@monthlyPayments');
 Route::get('/certificate/{course}', 'CourseController@certificate');
 
 Route::get('/getCertificate/{course}', 'CourseController@getCertificate');
+
+
+
+
+// Search bar
+
+Route::get('/schoolAdmin/{school}/courses', 'CourseController@searchCourseForAdmin')->name('course.search');

@@ -10,6 +10,7 @@ use App\Certificate;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
+use Response;
 use Auth;
 use Image;
 use PDF;
@@ -223,6 +224,39 @@ class CourseController extends Controller
             return redirect('home');
         }
      }
+
+     /**
+      * [searchCourseForAdmin description]
+      * @param  Request $request [description]
+      * @return [type]         [description]
+      */
+     public function searchCourseForAdmin(Request $request, School $school)
+     {
+
+        
+            // dd(Response::json());
+        
+        //  if (Auth::check()) {
+
+            if(Response::json()){
+                $query = $request->get('search');
+                $data = Course::where('name', 'like', '%'.$query.'%')->get();
+                return view('admin_views.courses.index', ['school' => $school,'data' => $data]);
+
+            }
+            else
+            {
+                dd('ajax not working');
+            }
+
+        // }
+        // else {
+        //     return redirect('home');
+        // }
+     }
+
+
+
 
      /**
       * [information description]

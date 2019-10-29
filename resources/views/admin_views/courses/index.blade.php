@@ -279,8 +279,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                           class="space"></span><i class="fa fa-chevron-down"></i></a></div>
                 <!---->
                 <div ng-if="ctrl.search" class="filter-search">
-                    <!----><input ng-if="!ctrl.search.apiMethod" what="search-by-course-name" type="text" placeholder="Rechercher des cours par nom" ng-keyup="ctrl.searchLookup($event)" ng-value="ctrl.currentSearchTerm"
-                      class="form-control input-search-icon">
+                    <!----><input name="search" ng-if="!ctrl.search.apiMethod" what="search-by-course-name" type="text" placeholder="Rechercher des cours par nom" ng-keyup="ctrl.searchLookup($event)" ng-value="ctrl.currentSearchTerm"
+                      class="form-control input-search-icon" id="search_course">
                     <!---->
                     <!---->
                     <!---->
@@ -387,5 +387,55 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
     </div>
 </div>
+
+{{-- import jquery cdn --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script>
+   $(function(){
+
+
+        // search_bar();
+
+        // $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
+
+
+        function search_bar(query = ''){
+            $.ajax({
+                url:"{{url('/schoolAdmin/'.$school->id.'/courses')}}",
+                method: 'GET',
+                data: {query: query},
+                dataType: 'json',
+                success: function(data)
+                {
+                    console.log('data: ', data.query)
+                }
+
+            })
+            console.log(query)
+        }
+
+        // function search_bar(data){
+        //     console.log(data)
+        // }
+
+        
+
+        
+        $('#search_course').on('keyup',function(){
+            var query = $(this).val();
+            // console.log(query)
+            search_bar(query);
+        })
+
+
+        
+    })
+</script>
+
+
+
+
 
 @endsection
