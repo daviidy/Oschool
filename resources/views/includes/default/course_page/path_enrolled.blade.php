@@ -536,7 +536,7 @@ button.btn{border:none;}
                 <div class="col col--8-12 col--lg-7-12 col--md-12-12 col--sm-12-12 course-hero-enrolled__content">
 
                     <div class="certificate-banner">
-                        <img src="/static/img/icons/ic_cert.svg" class="certificate-banner__image" role="presentation" alt="certification">
+                        <img src="https://learndigital.withgoogle.com/static/img/icons/ic_cert.svg" class="certificate-banner__image" role="presentation" alt="certification">
                         <div class="certificate-banner__content">
                             <div class="certificate-banner__content__wrapper">
                                 <span class="certificate-banner__content__text">Certification incluse</span>
@@ -547,8 +547,8 @@ button.btn{border:none;}
                         </div>
                     </div>
 
-                    <h1 class="course-hero-enrolled__title">Obtenez la certification "Principes de base du marketing numérique"</h1>
-                    <p class="course-hero-enrolled__subtitle">Découvrez les principes de base du marketing numérique, et favorisez le développement de votre activité ou de votre carrière.</p>
+                    <h1 class="course-hero-enrolled__title">Obtenez la certification "{{$course->name}}"</h1>
+                    <p class="course-hero-enrolled__subtitle">{{$course->subtitle}}</p>
 
                     <ul class="course-hero-enrolled__logos">
 
@@ -572,7 +572,7 @@ button.btn{border:none;}
                         <div class="col--6-12 col--md-12-12 col--sm-12-12 course-hero-enrolled__progress">
                             <p class="course-hero-enrolled__subheader">Progression dans le cours</p>
 
-                            <div class="progress">
+                            <div style="background-color: #fff; box-shadow: none;" class="progress">
                                 <svg viewBox="0 0 36 36" class="progress__container">
                                     <path class="progress__circle progress__circle--full" d="M18 2.0845
             a 15.9155 15.9155 0 0 1 0 31.831
@@ -607,7 +607,7 @@ button.btn{border:none;}
                             <div class="about-this-course__detail">
                                 <span class="about-this-course__detail__icon-container">
                                     <i class="material-icons">reorder</i>
-                                    <span>Module&nbsp;: 26</span>
+                                    <span>Module(s)&nbsp;: {{count($course->projects)}}</span>
                                 </span>
                                 <span class="about-this-course__detail__icon-container">
                                     <i class="material-icons">access_time</i>
@@ -644,7 +644,7 @@ button.btn{border:none;}
 
 
                                             <a href="https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME" target="_blank" class="btn btn--primary cert-validation-box__cta-social" data-gtm-tag="Certification AddToProfile">
-                                                <img src="/static/img/icons/linked_in_certification_btn_image_url.png" alt="">
+                                                <img src="https://learndigital.withgoogle.com/static/img/icons/linked_in_certification_btn_image_url.png" alt="">
                                                 Ajouter au profil
                                             </a>
 
@@ -769,16 +769,16 @@ button.btn{border:none;}
     </section>
 
 
-    <h2 class="course-detail__section__title">Modules (26)</h2>
+    <h2 class="course-detail__section__title">Projets ({{count($course->projects)}})</h2>
 
 
     <myg-accordion class="myg-accordion js-accordion course-detail__module-accordion ng-isolate-scope" selected-item-id="'module-section-1'" scroll-to-selected-item="false" item-active-class="myg-accordion__item--active" item-delay-on-open="300"
       open-multiple-panels="true" label-aria-opened="'Libellé aria pour le panneau en accordéon fermé'" label-aria-closed="'Libellé aria pour le panneau en accordéon fermé'">
 
-
+      @foreach($course->projects as $project)
         <div class="myg-accordion__item js-accordion-item myg-accordion__item--active" id="module-section-1">
             <div class="myg-accordion__header js-accordion-title" tabindex="0">
-                <h4 class="myg-accordion__title heading--h3">Développez une activité en ligne (4)</h4>
+                <h4 class="myg-accordion__title heading--h3">{{$project->title}}</h4>
                 <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
                 <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
             </div>
@@ -787,13 +787,13 @@ button.btn{border:none;}
 
 
 
+                    @foreach($project->resources as $resource)
 
-
-                    <a href="course/digital-marketing/lesson/24" class="module-progress-card" data-gtm-tag="module-card module-link">
+                    <a href="{{$resource->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
                         <div class="module-progress-card__icon">
                             <img src="https://lh3.googleusercontent.com/7nId5qqZMpCWyJRM7Ug8wiVAOaWOPlkIjnzHXHOdwZG2DA7jQ9ze8Mv4PnPiOCWYiZnKS6qwGffTR0gJuZlZb6_39ZExnkz7AAZfmL8" alt="Les opportunités qu'offre Internet">
                         </div>
-                        <h4 class="module-progress-card__title">Les opportunités qu'offre Internet</h4>
+                        <h4 class="module-progress-card__title">{{$resource->title}}</h4>
                         <p class="module-progress-card__duration">
                             <i class="material-icons">access_time</i><span>15&nbsp;min</span>
                         </p>
@@ -807,76 +807,12 @@ button.btn{border:none;}
                         </div>
                     </a>
 
-
-
-
-
-                    <a href="course/digital-marketing/lesson/26" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/8Wmxu9zJjs9gB-vvs9APmySY3l3kT_Be_dUn2NCpRYR8IeoSNADyes7--T_dWW_Lq9uudKZKwDhPQSVA8lLNjlvnx4Z3UDLcRac-Znw" alt="Vos premiers pas vers le succès sur Internet">
-                        </div>
-                        <h4 class="module-progress-card__title">Vos premiers pas vers le succès sur Internet</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>30&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/30" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/BO5E8aQODXSUk8cvfSRBTv0p4KdjSIh525VZF-_7PwkwU_bY_0Fo1wOcH3F1wvHMCNd-E3u3Z83v2czcCHeVm5uFMQvRohn19z0N-w" alt="Développez votre présence en ligne">
-                        </div>
-                        <h4 class="module-progress-card__title">Développez votre présence en ligne</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>40&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/142" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/YmO_ZKke1ByfC4M_5fkGzwzZWSM4X7Ds6FLLVzEtthQsAjTg4owXENTM1s-qoBqJfEc9hzMNn8hflsnI7j3F0e-6oyPj5TrqJ3EPhw" alt="Planifiez votre stratégie commerciale sur le Web">
-                        </div>
-                        <h4 class="module-progress-card__title">Planifiez votre stratégie commerciale sur le Web</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>30&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
+                    @endforeach
 
                 </div>
             </div>
         </div>
-
+        @endforeach
         <div class="myg-accordion__item js-accordion-item" id="module-section-2">
             <div class="myg-accordion__header js-accordion-title" tabindex="0">
                 <h4 class="myg-accordion__title heading--h3">Aidez les utilisateurs à trouver votre entreprise sur le Web (5)</h4>
@@ -1001,444 +937,6 @@ button.btn{border:none;}
             </div>
         </div>
 
-        <div class="myg-accordion__item js-accordion-item" id="module-section-3">
-            <div class="myg-accordion__header js-accordion-title" tabindex="0">
-                <h4 class="myg-accordion__title heading--h3">Touchez plus d'utilisateurs à proximité, sur les médias sociaux ou sur mobile (7)</h4>
-                <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
-                <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
-            </div>
-            <div class="myg-accordion__panel js-accordion-item-panel">
-                <div class="course-detail__module-list">
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/68" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/PtwEvIawXn4zIorh822E9ScsT8A6xzRINRNYObKCJRt8G3htOFPsERhaINFofOw6PXu38xQrDPssCXZB8VC-6XKjunvsoUj9lJVg" alt="Faites-vous connaître localement">
-                        </div>
-                        <h4 class="module-progress-card__title">Faites-vous connaître localement</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>20&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/70" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/PKNgQwA05TH2w9l-_vZ9aLj-KX13Ft2UuJ84ZUcM5T9jYHPgJ-L7fACUe503KegvQA5Aaj-wbGAAk7T2j6Ddc_v0U3gwzwzcPIR5lA" alt="Aidez les gens près de vous à vous trouver en ligne">
-                        </div>
-                        <h4 class="module-progress-card__title">Aidez les gens près de vous à vous trouver en ligne</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>25&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/73" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/Ll59mLbDCXz3r9i0NwNB5UFsEfj0G6cuVFZN8b4CZU7CQIyFANXszFQz-uBv28tIaR-Ey-Xm3LOS4Z09eufF0irwLRj6wZWLC9ajCkw" alt="Faites-vous connaître grâce aux médias sociaux">
-                        </div>
-                        <h4 class="module-progress-card__title">Faites-vous connaître grâce aux médias sociaux</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>30&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/77" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/pYHDGNbTu6S1GRimSHTM896z_ew4cNXzickOtq1EgW4wrFCjgpODQes7SEBF3e7AErQc19NbA_tX9lM4ynRU5qt1wWbq-Xhxzp0Zju4" alt="Plongez dans l'univers des médias sociaux">
-                        </div>
-                        <h4 class="module-progress-card__title">Plongez dans l'univers des médias sociaux</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>30&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/81" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/qfc4oJ7HG-L67AImuzBoNn7WQEX2noTL84ji2Sb2us3jp043IA6s-I5TtBdItpqyYHmtRTUl7S19sNZx-rbkn58SWe5_yMWn9RX8nHk" alt="Découvrez les possibilités offertes par le mobile">
-                        </div>
-                        <h4 class="module-progress-card__title">Découvrez les possibilités offertes par le mobile</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>20&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/84" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/mKzqOGdNIG__IW5TksKR486YU3NKKwY-s6tWLonjxV2Fhml5H6g9YaOeBrdB8Qn7kOqNjvM5_6PRecv-uWmI6dv0RK9p2579w22y" alt="Tirez profit des opportunités qu'offre le mobile">
-                        </div>
-                        <h4 class="module-progress-card__title">Tirez profit des opportunités qu'offre le mobile</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>35&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/147" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/Ja76JntqyTZ-lXtm-pDr1Ysa7zILPemgHyNPOjcYR4eJo1-rOIbi-KZi0Gyh5UdWnaPLe1GS8AEdiGiNqJNrnwLQaqQJ0havBupB" alt="Premiers pas avec le marketing de contenu">
-                        </div>
-                        <h4 class="module-progress-card__title">Premiers pas avec le marketing de contenu</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>35&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="myg-accordion__item js-accordion-item" id="module-section-4">
-            <div class="myg-accordion__header js-accordion-title" tabindex="0">
-                <h4 class="myg-accordion__title heading--h3">Touchez plus d'utilisateurs grâce à la publicité (4)</h4>
-                <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
-                <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
-            </div>
-            <div class="myg-accordion__panel js-accordion-item-panel">
-                <div class="course-detail__module-list">
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/36" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/HR1zfKuxei7gjNd-CtQDmZpYtTEulz87X9vAT3cFWBq_RKCdAGDGLmsalDkSx4nXQsJAiwIj93tYverApzk6-cS63uXj_83i0q5Qig" alt="Communiquez grâce aux e-mails">
-                        </div>
-                        <h4 class="module-progress-card__title">Communiquez grâce aux e-mails</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>30&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/89" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/Tc9AIlIB4naW0WuarwCUIvlGYNGeeRehH2CD3ZnhM0GFAetQipepzHBJQFVBZxZfiJP40C1O4-wyuGmVxQ8gIiJZaq65jWBgpb-j4g" alt="Introduction à la publicité display">
-                        </div>
-                        <h4 class="module-progress-card__title">Introduction à la publicité display</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>25&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/92" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/9bqeuMYz6a6BI-JTGApottSUjD7ke4f3iqdjYk2C4ynTt_Vh32kGyJjYHt8YdPxwQjBLl-6hi_1Q1eY8BNnTX1WiY5Zixk837b0yHA" alt="Approfondissez la publicité display">
-                        </div>
-                        <h4 class="module-progress-card__title">Approfondissez la publicité display</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>25&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/102" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/fVlXxBTGuMbveRMggxgFxe1fCUb3E3olRS22IISZSw8LHKJD9Em4jyZQjK-RXhB2MUwa1a8rkaH9HWWWSRFxKq5CscoT-vC5r7_x0Q" alt="La puissance de la vidéo sur Internet">
-                        </div>
-                        <h4 class="module-progress-card__title">La puissance de la vidéo sur Internet</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>55&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="myg-accordion__item js-accordion-item" id="module-section-5">
-            <div class="myg-accordion__header js-accordion-title" tabindex="0">
-                <h4 class="myg-accordion__title heading--h3">Suivez et mesurez le trafic Web (3)</h4>
-                <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
-                <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
-            </div>
-            <div class="myg-accordion__panel js-accordion-item-panel">
-                <div class="course-detail__module-list">
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/62" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/tKIxFPpeNJ-kHu1oMlrwqJnXmWjclaA7iATS-Y4x34lggICBMPlCanTfGhBjbObd-7njZrmqNxzNGL2QVOEro4FOdXhZGVqrmqgBv3I" alt="Familiarisez-vous avec l'analyse d'audience">
-                        </div>
-                        <h4 class="module-progress-card__title">Familiarisez-vous avec l'analyse d'audience</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>30&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/65" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/DWip-EhnRhz6IrPtl3qKOJhLnJ5Ulyn4RSGir3exv_Gchduzd6KPrtcJ2tzGrg6blhaaIiwXRZJTqez23ZjYZR22YN0yZYs-f8nb" alt="Réussissez grâce à l'analyse d'audience">
-                        </div>
-                        <h4 class="module-progress-card__title">Réussissez grâce à l'analyse d'audience</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>30&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/153" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/q5kkd8eo73ZthXTHe19ATa-MVdtiwA7Jz30GobR9l9Wwe-UKUx5I-Jk_2zAB67c-J4AVLY4P6Qge8AW1rLm7cOg9w3v0csMirO3TBw" alt="Transformez les données en insights">
-                        </div>
-                        <h4 class="module-progress-card__title">Transformez les données en insights</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>30&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="myg-accordion__item js-accordion-item" id="module-section-6">
-            <div class="myg-accordion__header js-accordion-title" tabindex="0">
-                <h4 class="myg-accordion__title heading--h3">Vendez vos produits ou services en ligne (2)</h4>
-                <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
-                <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
-            </div>
-            <div class="myg-accordion__panel js-accordion-item-panel">
-                <div class="course-detail__module-list">
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/108" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/Ywsyxe8V6esHOlBS_J75zvotD-l1j2QlxesnUhrYCUHRfbx7JmlqnzI91sOyqSBMYlLJkPpHjP0fAIzsa4BI2iDzOdfy8-IcQQiG6w" alt="Créez votre boutique en ligne">
-                        </div>
-                        <h4 class="module-progress-card__title">Créez votre boutique en ligne</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>25&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/110" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/fEf4XvyFH0g-GNEKdvwTL1ZRKFJ1KsZ3yX2RYH2vMNwtR8ava5-0j2bCyCkPYwoulegKh9iMNcit5xf0XgUIo_cWoWvAIaF20AVJ" alt="Augmentez vos ventes en ligne">
-                        </div>
-                        <h4 class="module-progress-card__title">Augmentez vos ventes en ligne</h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>35&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="myg-accordion__item js-accordion-item" id="module-section-7">
-            <div class="myg-accordion__header js-accordion-title" tabindex="0">
-                <h4 class="myg-accordion__title heading--h3">Développez votre activité à l'international (1)</h4>
-                <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
-                <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
-            </div>
-            <div class="myg-accordion__panel js-accordion-item-panel">
-                <div class="course-detail__module-list">
-
-
-
-
-
-                    <a href="course/digital-marketing/lesson/95" class="module-progress-card" data-gtm-tag="module-card module-link">
-                        <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/MIERVoNmBQ9kSuZ_F3lbbDnJyO5psjysjyQOH6mJkz6DqskiXhypvehQxrz100Euybu2hWt5cAgkn92tFSU_0kRoKdMtPdJ0jjlK" alt="Développez-vous à l'international ">
-                        </div>
-                        <h4 class="module-progress-card__title">Développez-vous à l'international </h4>
-                        <p class="module-progress-card__duration">
-                            <i class="material-icons">access_time</i><span>70&nbsp;min</span>
-                        </p>
-                        <div class="module-progress-card__progress module-progress-card__progress--completed">
-
-                            <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
-
-                            </span></div>
-                        <div class="module-progress-card__cta">
-                            <i class="material-icons">arrow_forward</i>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
 
     </myg-accordion>
 
