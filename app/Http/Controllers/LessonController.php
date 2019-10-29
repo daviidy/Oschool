@@ -84,13 +84,6 @@ class LessonController extends Controller
           $data->image = $filename;
           $data->save();
 
-        }else
-        {
-            $image = $request->file('image');
-            $filename = 'image.jpg';
-            Image::make($image)->save(public_path('/images/lessons/images/' . $filename));
-          $data->image = $filename;
-          $data->save();
         }
 
         return response()->json($data);
