@@ -37,6 +37,17 @@ class Course extends Model
       }
 
 
+      /**
+       * [users description]
+       * relationship many to many with Certificate model
+       * @return [array] [description]
+       */
+       public function certificates()
+       {
+           return $this->hasMany('App\Certificate');
+       }
+
+
      /**
       * [users description]
       * relationship one to many with User model

@@ -743,7 +743,7 @@ button{line-height:inherit;}
                 <br>
                 <a id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" href="#price"value="Enroll in Course for $52">
                   <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
-                  S'inscrie au cours
+                  S'inscrire au cours
                   <span class="coupon-price product_7141"></span>
                 </a>
                 <br>

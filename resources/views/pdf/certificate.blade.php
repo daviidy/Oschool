@@ -189,25 +189,19 @@ div.cls_011 {
 <script type="text/javascript" src="10a1b458-f529-11e9-9d71-0cc47a792c0a_id_10a1b458-f529-11e9-9d71-0cc47a792c0a_files/wz_jsgraphics.js"></script>
 </head>
 <body>
-  <div style="position:absolute;left:50%;margin-left:-420px;top:0px;width:841px;height:595px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:50%;margin-left:-420px;top:0px;width:841px;height:595px;border-style:outset;overflow:hidden">
     <div style="position:absolute;left:0px;top:0px">
-      <img src="10a1b458-f529-11e9-9d71-0cc47a792c0a_id_10a1b458-f529-11e9-9d71-0cc47a792c0a_files/certificate.png" width=841 height=595></div>
+      <img src="http://deviens-developpeur.com/wp-content/uploads/2019/10/certificate.png" width=841 height=595></div>
     <div style="position:absolute;left: 197.52px;top: 32.11px;" class="cls_002">
-      <span class="cls_002">Abla Pokou</span>
+      <span class="cls_002">{{$username}}</span>
     </div>
-
-
     <div style="position:absolute;left:197.52px;top:199.53px" class="cls_007">
       <span class="cls_007">a validé et obtenu le certificat :</span>
     </div>
     <div style="position:absolute;left:197.52px;top:245.14px;width: 50%;" class="cls_008">
-      <span class="cls_008">Devenez Mentor chez OpenClassrooms Devenez Mentor chez OpenClassrooms</span>
+      <span class="cls_008">{{$course_name}}</span>
     </div>
-
     <div style="position:absolute;left:558.00px;top:544.31px" class="cls_010">
-      <span class="cls_010">Certificat n° 2232697371 - Délivré le 27 mai 2018</span>
+      <span class="cls_010">Certificat n° {{$certificate_number}} - Délivré le {{$date}}</span>
     </div>
-  </div>
-
-</body>
-</html>
+  </div></body></html>

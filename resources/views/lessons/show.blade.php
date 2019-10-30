@@ -130,13 +130,13 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
 
   <div class="course-progress lecture-page is-at-top">
     <div class="progressbar">
-      <div class="progressbar-fill" style="min-width: 97%;"></div>
+      <div class="progressbar-fill" style="min-width: {{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}%;"></div>
     </div>
     <div class="small course-progress-percentage">
       <span class="percentage">
-        97%
+        {{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}%
       </span>
-      COMPLETE
+      TERMINÉ
     </div>
     <div class="small1">
       <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">
@@ -146,7 +146,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
       </p>
 
       <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">
-          <a href="/certificate">
+          <a href="/certificate/{{$lesson->course_id}}">
           <strong>Certificat de réussite</strong>
           </a>
       </p>
