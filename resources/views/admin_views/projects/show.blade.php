@@ -49,7 +49,7 @@
       <div class="bg-white md:rounded-lg p-3 pt-16 md:p-8 md:pt-24 min-h-screen">
         <div class="sectionWrapper sectionWrapper--noTopPadding">
           <section class="section section--header">
-            <h2 class="section-header">La méthode de localisation</h2>
+            <h2 class="section-header">{{$project->title}}</h2>
           </section>
         </div>
         <div>

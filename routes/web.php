@@ -229,8 +229,6 @@ Route::get('/certificate/{course}', 'CourseController@certificate');
 Route::get('/getCertificate/{course}', 'CourseController@getCertificate');
 
 
+//routes for ajax search
 
-
-// Search bar
-
-Route::get('/schoolAdmin/{school}/courses', 'CourseController@searchCourseForAdmin')->name('course.search');
+Route::get('/ajax_course_search', 'LiveSearchController@action');

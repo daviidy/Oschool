@@ -123,7 +123,7 @@ a:active,a:focus,a:hover{color:#24292d;}
       <div class="bg-white md:rounded-lg p-3 pt-16 md:p-8 md:pt-24 min-h-screen">
         <div class="sectionWrapper sectionWrapper--noTopPadding">
           <section class="section section--header">
-            <h2 class="section-header">La méthode de localisation</h2>
+            <h2 class="section-header">Vous avez fait {{(count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100}}% de la formation</h2>
           </section>
         </div>
 
@@ -133,15 +133,27 @@ a:active,a:focus,a:hover{color:#24292d;}
                   style="background-image:url(//images.ctfassets.net/2y9b3o528xhq/1ZS3OPXIw5zDis6UAxkk2s/178a00db8c5a5eeec66eca016e1e3a97/smiling_man_wearing_headset.jpg);background-position:right;"></div>
                 <div _ngcontent-sc24="" class="promo-banner__image mobile-image"
                   style="background-image:url(//images.ctfassets.net/2y9b3o528xhq/1jcJQeEKO3e2XrXoSwdB23/f73309ca736a06be43a1c529ed3c7eef/smiling_man_wearing_headset__mobile.jpg);background-position:right;"></div>
+                  @if(count(Auth::user()->lessons->where('course_id', $course->id)) == count($course->lessons))
                 <div _ngcontent-sc24="" class="promo-banner__content">
                     <div _ngcontent-sc24="" class="promo-banner__flag uppercase white"></div>
                     <div _ngcontent-sc24="" class="promo-banner__title">
-                        Make a difference by becoming a Udacity mentor
+                        Félicitations, vous avez obtenu votre certification !
                     </div>
                     <p _ngcontent-sc24="" class="promo-banner__subtitle">
-                        Help students master the tech skills they need to advance their career
+                        Téléchargez votre certificat au format PDF ou ajoutez-le à votre profil LinkedIn
                     </p>
                 </div>
+                @else
+                <div _ngcontent-sc24="" class="promo-banner__content">
+                    <div _ngcontent-sc24="" class="promo-banner__flag uppercase white"></div>
+                    <div _ngcontent-sc24="" class="promo-banner__title">
+                        Allez, encore un effort et vous aurez votre certification !
+                    </div>
+                    <p _ngcontent-sc24="" class="promo-banner__subtitle">
+                        Vous pourrez ainsi télécharger le certificat au format PDF ou l'ajouter-le à votre profil LinkedIn
+                    </p>
+                </div>
+                @endif
                 <div _ngcontent-sc24="" class="promo-banner__cta">
                     @if(count(Auth::user()->lessons->where('course_id', $course->id)) == count($course->lessons))
                     <a href="/getCertificate/{{$course->id}}" _ngcontent-sc24="" class="button btn sm button--white">

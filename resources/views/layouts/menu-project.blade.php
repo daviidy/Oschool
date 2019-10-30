@@ -120,7 +120,7 @@
             <div class="bottomBar-container"><button class="button button--primary button--bottomBar" style="display: none;">Mark As Complete</button> <button disabled="disabled" class="button is-disabled button--bottomBar"
                 style="display: none;">Mark As Complete</button>
               <div class="bottomBar-message">
-                <div class="sign sign--small sign--completedAlt mr-3"><i class="icon icon-check" aria-hidden="true"></i></div> <span class="text-green font-bold">Completed</span>
+                <div class="sign sign--small sign--completedAlt mr-3"><i class="icon icon-check" aria-hidden="true"></i></div> <span class="text-green font-bold">Terminé</span>
               </div>
             </div>
           </div>
