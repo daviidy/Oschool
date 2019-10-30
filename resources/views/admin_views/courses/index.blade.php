@@ -258,7 +258,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Courses ({{$school->courses->count()}})
+                    <!---->Courses (<span id="total_records"></span>)
+
                     <div class="tch-btn-header-icon-2">
                       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="20" height="40"viewBox="0 0 172 172"style=" fill:#000000;position: relative;bottom: 8px;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g fill="#3498db"><path d="M129.07556,30.25717l12.67131,12.67175l-98.8199,98.81645l-12.67131,-12.67175z"></path><path d="M141.73757,129.08237l-12.67077,12.66723l-98.80691,-98.8345l12.67077,-12.66723z"></path></g><path d="" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path></g></g></svg>
                     </div>
@@ -275,40 +276,40 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     <div ng-if="hasOne">
         <div options="options.filters" search="options.search" sort-keys="options.sortKeys" per-page="24" enable-reordering="permissions.can('reorder_courses')" default-sort-direction="ASC">
             <div class="tch-filters">
+                <!--
                 <div class="filter-add"><a href="#" what="filter-add" popover-placement="bottom" popover-animation="false" popover-template="'common/filter-section/add-filter-popover.html'" class="dropdown-link"><span>Ajouter un filtre</span><span
-                          class="space"></span><i class="fa fa-chevron-down"></i></a></div>
+                          class="space"></span><i class="fa fa-chevron-down"></i></a>
+                </div>
+            -->
                 <!---->
                 <div ng-if="ctrl.search" class="filter-search">
-                    <!----><input ng-if="!ctrl.search.apiMethod" what="search-by-course-name" type="text" placeholder="Rechercher des cours par nom" ng-keyup="ctrl.searchLookup($event)" ng-value="ctrl.currentSearchTerm"
+                    <!----><input id="search" type="text" placeholder="Rechercher des cours par nom"
                       class="form-control input-search-icon">
                     <!---->
                     <!---->
                     <!---->
                 </div>
-                <!---->
+                <!----
                 <div class="filter-sort-by--label"><span>Trier par</span></div>
                 <div dropdown="" data-test="sort-by-drop-down" onclick="show3()" class="btn-group tch-dropdown-group filter-sort-by--dropdown dropdown"><a dropdown-toggle="" type="button" class="dropdown-link dropdown-toggle" aria-haspopup="true"
-                      aria-expanded="false" ><span ng-bind="ctrl.currentSortKey.label || ctrl.defaultSortKey.label">Commande de répertoire</span><span class="space"></span><i class="fa fa-angle-down"></i></a>
+                      aria-expanded="false"><span ng-bind="ctrl.currentSortKey.label || ctrl.defaultSortKey.label">Commande de répertoire</span><span class="space"></span><i class="fa fa-angle-down"></i></a>
                     <div class="dropdown-menu-arrow"></div>
                     <ul role="menu" class="dropdown-menu dropdown-menu-left" id="drop_2">
-                        <!---->
                         <li ng-repeat="sortKey in ctrl.sortKeys"><a href="#" ng-click="ctrl.setSortKey(sortKey)" data-test="sort-by-drop-down-item" ng-bind="sortKey.label" class="fastclickable">Commande de répertoire</a></li>
-                        <!---->
                         <li ng-repeat="sortKey in ctrl.sortKeys"><a href="#" ng-click="ctrl.setSortKey(sortKey)" data-test="sort-by-drop-down-item" ng-bind="sortKey.label" class="fastclickable">Nom</a></li>
-                        <!---->
                         <li ng-repeat="sortKey in ctrl.sortKeys"><a href="#" ng-click="ctrl.setSortKey(sortKey)" data-test="sort-by-drop-down-item" ng-bind="sortKey.label" class="fastclickable">Date de création</a></li>
-                        <!---->
                     </ul>
                 </div>
                 <a href="#" ng-click="ctrl.toggleSortDirection()" class="filter-sort-direction fastclickable"><i
-                      ng-class="{ 'fa fa-long-arrow-up': !ctrl.currentSortDirection || ctrl.currentSortDirection == 'ASC', 'fa fa-long-arrow-down': ctrl.currentSortDirection == 'DESC' }" class="fa fa-long-arrow-up"></i><span
-                      ng-bind="ctrl.currentSortDirection" what="ASC-DESC-btn">ASC</span></a>
-                <!----><a ng-if="ctrl.enableReordering" ng-click="ctrl.toggleReorderMode()" href="#" ng-class="{ selected: ctrl.reorderMode }" tooltip="Enable reordering" tooltip-placement="bottom" tooltip-trigger="mouseenter"
-                  what="enable-disable-reordering" class="filter-reorder-mode fastclickable"><i class="fa fa-arrows"></i></a>
-                <!---->
-            </div>
-            <!---->
-        </div>
+                      ng-class="{ 'fa fa-long-arrow-up': !ctrl.currentSortDirection || ctrl.currentSortDirection == 'ASC', 'fa fa-long-arrow-down': ctrl.currentSortDirection == 'DESC' }" class="fa fa-long-arrow-up"></i><span ng-bind="ctrl.currentSortDirection"
+                      what="ASC-DESC-btn">ASC</span>
+                  </a>
+                <a ng-if="ctrl.enableReordering" ng-click="ctrl.toggleReorderMode()" href="#" ng-class="{ selected: ctrl.reorderMode }" tooltip="Enable reordering" tooltip-placement="bottom" tooltip-trigger="mouseenter" what="enable-disable-reordering"
+                  class="filter-reorder-mode fastclickable"><i class="fa fa-arrows"></i>
+              </a>
+          -->
+                </div>
+                </div>
         <script type="text/javascript" src="/js/admin_views/menu.js"></script>
 
         <!---->
@@ -316,7 +317,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <div ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
                 <!---->
                 <!---->
-                <div ng-if="!enableReordering" ng-show="list.length > 0" class="row tch-course-list">
+                <div class="row tch-course-list">
                     <!---->
                     @foreach($school->courses as $course)
                     <div class="tch-course-listing col-lg-4 col-md-6 col-xs-6 ui-sortable-handle clearfix">
@@ -339,7 +340,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     </div>
                                 </div>
                             </div>
-                        </a></div>
+                        </a>
+                    </div>
                         @endforeach
                     <!---->
                     <div what="course" which="Deviens développeur web en partant de zéro" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }"
@@ -387,5 +389,38 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
     </div>
 </div>
+
+
+
+<script>
+$(document).ready(function(){
+
+ fetch_customer_data();
+
+ function fetch_customer_data(query = '')
+ {
+  $.ajax({
+   url:"/ajax_course_search",
+   method:'GET',
+   data:{query:query},
+   dataType:'json',
+   success:function(data)
+   {
+    $('.tch-course-list').html(data.table_data);
+    $('#total_records').text(data.total_data);
+    },
+    error: function (xhr, msg) {
+      console.log(msg + '\n' + xhr.responseText);
+  }
+  })
+ }
+
+ $(document).on('keyup', '#search', function(){
+  var query = $(this).val();
+  fetch_customer_data(query);
+ });
+});
+</script>
+
 
 @endsection
