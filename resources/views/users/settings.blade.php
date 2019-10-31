@@ -38,7 +38,7 @@ a{color:#428bca;text-decoration:none;}
 a:hover,a:focus{color:#2a6496;text-decoration:underline;}
 a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 img{vertical-align:middle;}
-.img-circle{border-radius:50%;}
+.img-circle{border-radius:50%; width: 75px; height: 75px;}
 hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee;}
 p{margin:0 0 10px;}
 .text-center{text-align:center;}
