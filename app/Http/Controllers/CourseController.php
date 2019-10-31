@@ -142,6 +142,7 @@ class CourseController extends Controller
     {
         $course = Course::where('slug', $slug)->firstOrFail();
 
+
         return view('courses.curriculum', ['course' => $course]);
     }
 

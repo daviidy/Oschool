@@ -134,7 +134,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
     </div>
     <div class="small course-progress-percentage">
       <span class="percentage">
-        {{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}%
+        {{number_format((count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100,2,",",".")}}%
       </span>
       TERMINÉ
     </div>
