@@ -14,6 +14,9 @@
 
     <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
 
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+​
+
 
     <style type="text/css">
         .Button-module_button__3Rp1B {
@@ -956,6 +959,19 @@
                         </li>
                         <!---->
                         <!---->
+
+                        <li what="nav item" ui-sref-active="active"
+                          text="Users" icon="icon icon-users" sref="admin.users.students" include-active-state="admin.users">
+                            <!----><a what="link" ui-sref="admin.users.students" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/authors">
+                                <!----><i ng-if="::icon" ng-class="::icon" tooltip="Users" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-users"></i>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Auteurs</span></a>
+                            <!---->
+                            <!---->
+                            <!---->
+                        </li>
 
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"

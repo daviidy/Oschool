@@ -7,6 +7,7 @@ use App\School;
 use App\Category;
 use App\Pricing;
 use App\Certificate;
+use App\Project;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
@@ -110,6 +111,22 @@ class CourseController extends Controller
             return view('paths.show', ['course' => $course]);
         }
 
+
+    }
+
+
+    /**
+     * Display the specified resource, this time with slug.
+     *
+     * @param  \App\Course  $formation
+     * @return \Illuminate\Http\Response
+     */
+    public function showPath($slugCourse, $slug)
+    {
+        $course = Course::where('slug', $slugCourse)->firstOrFail();
+        $project = Project::where('slug', $slug)->firstOrFail();
+
+        return view('admin_views.projects.show', ['course' => $course, 'project' => $project]);
 
     }
 
