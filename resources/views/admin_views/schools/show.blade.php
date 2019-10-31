@@ -63,7 +63,7 @@
                                         <!----></span>
                                     <!---->
                                     <!---->
-                                    <!----><span ng-bind="step.text | translate">Inscrivez-vous à notre webinaire gratuit en direct</span>
+                                    <!----><span ng-bind="step.text | translate">Inscrivez-vous à notre webinaire en direct</span>
                                     <!----><span ng-if="!step.completed() &amp;&amp; !step.disabled()" class="right-arrow">›</span>
                                     <!---->
                                     <!---->
