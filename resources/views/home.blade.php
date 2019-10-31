@@ -63,7 +63,7 @@
                     <div class="col-xs-12 vertically-align-contents-except-xs">
                         <div class="hero-text hero-text-left">
                             <h1>On ne va pas à l'école, on y est dèja.</h1>
-                            <h2>Faites vous accompagner par nos mentors pendant votre apprentissage et réalisez des projets professionnalisants.</h2>
+                            <h2>Nous vous aidons à apprendre les compétences les plus recherchées par les entreprises<!--Faites vous accompagner par nos mentors pendant votre apprentissage et réalisez des projets professionnalisants.--></h2>
                             <div class="input-container left">
                                 <div class="hidden redirect">/create-account</div>
                                 <div class="hidden iterable-event"></div>
@@ -419,7 +419,7 @@
                 <div class="col-xs-12 col-md-5 right-column match-height clearfix" style="height: 724px;">
                     <div class="image" style="background-image: url(https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/0tTy4z3lTbCkw18ehjQ8);"></div>
                     <div class="quote">
-                        <img class="orange-circle" src="https://teachable.com/assets/blockquote-orange-d24380ebe646a526fc1fa70b279fa6531394ee3ddc19bf7bca406c709a6f08f3.svg">
+                        <img class="orange-circle" src="/images/divers/disc.svg">
                         <blockquote>“J'ai utilisé Oschool pour vendre des centaines de milliers de dollars en cours en ligne. Si vous envisagez de créer votre propre cours en ligne, Oschool est le lieu idéal.”</blockquote>
                         <cite>
                             Melyssa Griffin, <a href="http://melyssagriffin.com" target="_blank" rel="noopener noreferrer">melyssagriffin.com</a>

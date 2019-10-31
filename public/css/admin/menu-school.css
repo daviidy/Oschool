@@ -215,7 +215,7 @@ ul{margin-top:0;margin-bottom:11px;}
 .tch-pills-wrapper .tch-pill{width:570px;margin:auto;text-align:left;line-height:80px;font-weight:500;font-size:17px;letter-spacing:0.4px;margin-bottom:15px!important;border:1px solid transparent;display:block;cursor:pointer;position:relative;background:#ffffff;-webkit-box-shadow:1px 2px 3px 0px #e6e9ec;box-shadow:1px 2px 3px 0px #e6e9ec;border-radius:6px;}
 .tch-pills-wrapper .tch-pill.full-width{width:95%!important;}
 .tch-pills-wrapper .tch-pill img.icon{width:66px;margin-left:27px;margin-right:25px;margin-top:2px;}
-.tch-pills-wrapper .tch-pill img.icon.more-faded{opacity:0.2;}
+.tch-pills-wrapper .tch-pill img.icon.more-faded{opacity:1;}
 .tch-pills-wrapper .tch-pill span.right-arrow{float:right;padding-right:20px;font-size:30px;font-weight:100;color:#ff7f45;}
 .tch-pills-wrapper .tch-pill.pill-completed{color:#b4b4b4;background:rgba(255, 255, 255, .62);pointer-events:none;cursor:default;}
 .tch-pills-wrapper .tch-pill:not(.pill-completed):not(.pill-disabled){color:#809196;-webkit-transition:0.1s all ease-in-out;transition:0.1s all ease-in-out;}
@@ -312,7 +312,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .admin-sidebar .misc-buttons .tch-dropdown-group .dropdown-menu:after,.admin-sidebar .misc-buttons .tch-dropdown-group .dropdown-menu:before{content:none;}
 .admin-sidebar .misc-buttons .tch-dropdown-group-selector{background-color:#2f323a;border-radius:0;color:#fff;text-align:center;line-height:31px;width:190px;font-size:13px!important;font-weight:600;border:0;padding:12px!important;}
 .admin-sidebar .misc-buttons .tch-dropdown-group-selector .user-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
-.admin-sidebar .misc-buttons .tch-dropdown-group-selector img{border-radius:50%;margin-right:10px;}
+.admin-sidebar .misc-buttons .tch-dropdown-group-selector img{border-radius:50%;margin-right:10px; width: 35px;height: 35px;}
 .admin-sidebar .misc-buttons .tch-dropdown-group-selector:hover,.admin-sidebar .misc-buttons .tch-dropdown-group-selector:active,.admin-sidebar .misc-buttons .tch-dropdown-group-selector:focus{background-color:#4D90CC;border:none!important;color:#fff!important;}
 .admin-sidebar:-webkit-scrollbar,.admin-sidebar:-moz-scrollbar{width:0!important;display:none!important;}
 @media screen and (max-width: 1000px){
@@ -353,7 +353,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 .text-left{text-align:left!important;}
 .full-width{max-width:100%;}
 .text-left{text-align:left;}
-.myteachable-icon-overlay{position:absolute;margin-top:17px;background-image:url("//assets.teachablecdn.com/icons/teachable-icon.png");width:15px;height:15px;background-size:15px;display:block;margin-left:49px;}
+.myteachable-icon-overlay{position:absolute;margin-top:17px;width:15px;height:15px;background-size:15px;display:block;margin-left:49px;}
 .dropup ul.dropdown-menu{-webkit-transform-origin:bottom;transform-origin:bottom;}
 html body .text-center-xs{text-align:center;}
 html body .p-0-xs{padding:0;}
