@@ -2,6 +2,284 @@
 
 @section('content')
 
+<style media="screen">
+/*! CSS Used from: http://localhost:8000/css/course_single.css */
+@media screen{
+a{background:0 0;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+@media print{
+*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+p{orphans:3;widows:3;}
+}
+*{box-sizing:border-box;}
+:before,:after{box-sizing:border-box;}
+a{color:#428bca;text-decoration:none;}
+a:hover,a:focus{color:#2a6496;text-decoration:underline;}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+p{margin:0 0 10px;}
+}
+a{color:#4D90CC;}
+a:hover,a:active{color:#1d3a50;}
+a,a:active,a:hover,a:focus{text-decoration:none;}
+p{font-size:18px;font-weight:200;line-height:28px;}
+/*! CSS Used from: http://localhost:8000/css/fedora-course.css ; media=screen */
+@media screen{
+a{background:0 0;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+@media print{
+*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+p{orphans:3;widows:3;}
+}
+*{box-sizing:border-box;}
+:before,:after{box-sizing:border-box;}
+a{color:#428bca;text-decoration:none;}
+a:hover,a:focus{color:#2a6496;text-decoration:underline;}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h4{margin-top:10px;margin-bottom:10px;}
+h4{font-size:18px;}
+p{margin:0 0 10px;}
+}
+/*! CSS Used from: http://localhost:8000/css/theme-course.css */
+a{color:#39719a;}
+a:hover,a:active{color:#1d3a50;}
+a,a:active,a:hover,a:focus{text-decoration:none;}
+p{font-size:18px;font-weight:200;line-height:28px;}
+h4{color:#2b3636;}
+/*! CSS Used from: Embedded */
+@media all{
+p{font-size:16px;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+p{orphans:3;widows:3;}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h4{margin-top:10px;margin-bottom:10px;}
+h4{font-size:18px;}
+p{margin:0 0 10px;}
+*:focus{outline:none;}
+a,a:hover{color:inherit;text-decoration:inherit;}
+a:focus{color:inherit;text-decoration:none;}
+h4{margin:0;font-weight:normal;}
+img{-webkit-user-drag:none;}
+p{margin:0;}
+}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+img{border-style:none;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+@media print{
+*,:after,:before{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;}
+}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:focus{outline:none;}
+*,::after,::before{box-sizing:inherit;}
+img{border-style:none;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+img{border-style:none;}
+*,::after,::before{box-sizing:inherit;}
+img{border-style:none;}
+*,::after,::before{box-sizing:inherit;}
+img{border:0;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*,:after,:before{box-sizing:border-box;}
+img{vertical-align:middle;}
+@media screen{
+div{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+body *{box-sizing:border-box;}
+}
+@media screen{
+div{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+body *{box-sizing:border-box;}
+}
+@media all{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+p{orphans:3;widows:3;}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h4{margin-top:10px;margin-bottom:10px;}
+h4{font-size:18px;}
+p{margin:0 0 10px;}
+*:focus{outline:none;}
+a,a:hover{color:inherit;text-decoration:inherit;}
+a:focus{color:inherit;text-decoration:none;}
+h4{margin:0;font-weight:normal;}
+img{-webkit-user-drag:none;}
+p{margin:0;}
+}
+/*! CSS Used from: Embedded */
+@media all{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+*:focus{outline:none;}
+a,a:hover{color:inherit;text-decoration:inherit;}
+a:focus{color:inherit;text-decoration:none;}
+}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+@media print{
+*,:after,:before{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;}
+}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:focus{outline:none;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
+}
+*,:after,:before{box-sizing:border-box;}
+@media screen{
+body *{box-sizing:border-box;}
+}
+@media screen{
+body *{box-sizing:border-box;}
+}
+@media all{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+*:focus{outline:none;}
+a,a:hover{color:inherit;text-decoration:inherit;}
+a:focus{color:inherit;text-decoration:none;}
+}
+/*! CSS Used from: Embedded ; media=screen */
+@media screen{
+
+.material-icons{position:relative;width:1em;height:1em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;font-feature-settings:"liga";}
+.material-icons:before{position:absolute;top:0;left:0;}
+.module-progress-card{transition:transform .25s ease,box-shadow .25s ease;display:block;border-radius:6px;box-shadow:0 0 12px 0 #f1f3f4;background:#fff;border:1px solid #e8eaed;padding:20px 24px;margin:0 0 8px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;}
+@media (max-width:1440px){
+.module-progress-card{padding:20px;margin:0 0 16px;}
+}
+@media (max-width:599px){
+.module-progress-card{position:relative;padding:24px;flex-direction:column;justify-content:flex-start;align-items:left;}
+}
+@media (min-width:600px){
+.module-progress-card:hover{transform:scale(1.03);box-shadow:0 1px 25px 0 rgba(0,0,0,.05);z-index:2;}
+}
+@media (min-width:600px){
+.module-progress-card>*{margin:0 12px;}
+.module-progress-card>:first-child{margin-left:0;margin-right:12px;}
+.module-progress-card>:last-child{margin-left:12px;margin-right:0;}
+}
+@media (max-width:599px){
+.module-progress-card>*{margin:0;}
+}
+.module-progress-card__icon{width:60px;height:60px;background:#f1f3f4;padding:5px;border-radius:50%;flex:0 0 60px;}
+@media (max-width:599px){
+.module-progress-card__icon{margin-bottom:12px;}
+}
+.module-progress-card__icon img{display:block;width:100%;height:100%;}
+.module-progress-card h4.module-progress-card__title{margin:0;color:#3c4043;font-weight:500;flex:1 1 50%;}
+@media (max-width:599px){
+.module-progress-card h4.module-progress-card__title{flex:0;width:100%;margin-bottom:16px;}
+}
+.module-progress-card p.module-progress-card__duration{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-size:14px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.29;opacity:.9;letter-spacing:normal;color:#80868b;display:flex;align-items:center;flex:0 1 13%;min-width:80px;}
+@media (max-width:599px){
+.module-progress-card p.module-progress-card__duration{flex:0;width:100%;margin-bottom:16px;}
+}
+.module-progress-card p.module-progress-card__duration i{font-size:22px;color:#f9ab00;margin-right:3px;margin-left:0;}
+.module-progress-card__progress{display:flex;align-items:center;flex:0 0 133px;}
+@media (max-width:599px){
+.module-progress-card__progress{flex:0;width:133px;}
+}
+.module-progress-card__progress--completed{animation-name:fade;animation-duration:.25s;animation-delay:.5s;animation-timing-function:ease;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;will-change:opacity;}
+.module-progress-card__progress i{color:#34a853;font-size:22px;margin-right:3px;margin-left:0;}
+.module-progress-card__progress__completed{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-size:14px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.29;letter-spacing:normal;font-weight:500;color:#34a853;}
+.module-progress-card__cta{flex:1 0 24px;display:flex;justify-content:flex-end;align-items:center;text-align:right;}
+@media (max-width:599px){
+.module-progress-card__cta{position:absolute;bottom:24px;right:24px;left:auto;}
+}
+.module-progress-card__cta i{color:#1a73e8;}
+
+}
+@media screen{
+.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;}
+}
+@media screen{
+.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;}
+}
+}
+
+</style>
+
 <main class="container">
   <div class="xl:px-3">
     <div class="xl:px-5">
@@ -344,47 +622,7 @@
           <!---->
           <div class="sectionWrapper">
             <div class="section section--text">
-              <p>Bonjour cher super cerveau, veuillez garder un stylo et un bout de papier à portée de main avant le début de la session. Hier, nous avons appris la méthode d’emplacement [également connue sous le nom de Méthode Loci] en
-                utilisant mon bureau. Faisons-le à présent avec l’endroit que vous connaissez le mieux, à savoir votre maison. À la fin de la session, vous aurez une décomposition étape par étape de cette méthode qui est très facile à
-                utiliser. </p>
-              <p>La méthode d’emplacement utilise la visualisation où les éléments que vous voulez mémoriser sont mentalement associés à des endroits physiques familiers spécifiques. Elle repose sur des relations spatiales mémorisées pour
-                encoder, stocker et récupérer le contenu de vos dossiers de mémoire. </p>
-              <p>Pour cet exercice, nous utiliserons les points clés de la routine du matin comme exemple. Souvenez-vous, si la première heure de votre journée est réussie, il est possible que toute votre journée également soit réussie.
-                Commençons tout de suite !</p>
-              <p>Utilisez les repères de la barre de progression vidéo pour passer à un sujet spécifique de la session.</p>
-              <ol>
-                <li>La méthode d’emplacement. [01:10]</li>
-                <li>Système de classement. [06:22]</li>
-                <li>Mise en pratique de la méthode d’emplacement. [07:52]</li>
-                <li>Révision de la méthode d’emplacement. [15:45]</li>
-                <li>Étapes d’action et points d’apprentissage. [17:35]</li>
-              </ol>
-              <p>Les petites notions du cerveau pour cette leçon : </p>
-              <ul>
-                <li>La mémoire est composée de 3 parties : Encoder, stocker, récupérer. </li>
-                <li>P.I.E. - Placer, Imaginer, Entremêler.</li>
-              </ul>
-              <p>La méthode d’emplacement </p>
-              <ol>
-                <li>Choisissez 5 endroits</li>
-                <li>Allez dans le sens des aiguilles d’une montre </li>
-                <li>Choisissez des éléments uniques</li>
-                <li>Choisissez de grands éléments</li>
-                <li>Pas d’espaces vides</li>
-              </ol>
-              <p>La routine matinale de Jim </p>
-              <ol>
-                <li>Se remémorer tous les rêves.</li>
-                <li>Dresser le lit</li>
-                <li>Boire de l’eau.</li>
-                <li>Faire des exercices physiques</li>
-                <li>Les techniques de respiration </li>
-                <li>Prendre une douche froide.</li>
-                <li>Se brosser les dents avec la main opposée</li>
-                <li>Boire du smoothie pour le super cerveau</li>
-                <li>Tenir un journal </li>
-                <li>De nouveaux apprentissages&nbsp;</li>
-              </ol>
+              {!!$project->description!!}
             </div>
           </div>
           <!---->
@@ -395,36 +633,16 @@
           <!---->
           <!---->
           <section class="sectionWrapper sectionWrapper--audio">
-            <div class="section section--audio">
-              <div class="audioPlayer">
-                <div class="audioPlayer-cover">
-                  <div class="audioPlayer-coverContents">
-                    <div class="coverWrapper coverWrapper--audio">
-                      <div class="cover cover--consumptionAudio" style="background-image: url(&quot;https://assets.mindvalley.com/api/v1/assets/c84794a2-7b54-4975-8c2b-0f278b66c363.jpg&quot;);"></div>
-                    </div>
+              <h3>De l'aide pour réaliser ce projet</h3><br>
+              @foreach($project->resources as $resource)
+              <a target="_blank" href="{{$resource->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
+                  <div class="module-progress-card__icon">
+                      <img src="https://lh3.googleusercontent.com/7nId5qqZMpCWyJRM7Ug8wiVAOaWOPlkIjnzHXHOdwZG2DA7jQ9ze8Mv4PnPiOCWYiZnKS6qwGffTR0gJuZlZb6_39ZExnkz7AAZfmL8" alt="Les opportunités qu'offre Internet">
                   </div>
-                </div>
-                <div data-id="audio_10872" data-asset-url="https://assets.mindvalley.com/api/v1/assets/3000b772-d091-4f31-bfe0-fdaa58351f78.wav" data-quest-id="81" data-content-id="2972" data-asset-id="20001"
-                  class="audioPlayer-controls js-audioPlayer-10872">
-                  <div class="audioPlayer-title">
-                    [Audio] La méthode de localisation
-                  </div>
-                  <div class="audioPlayer-wrapper">
-                    <div class="audioPlayer-seeker">
-                      <div class="w-1/2 text-left"><small class="js-audioPlayerTimeElapsed">00:00</small></div>
-                      <div class="w-1/2 text-right"><small class="js-audioPlayerTimeTotal">19:17</small></div>
-                      <div class="w-full mt-1">
-                        <div class="js-seeker seeker">
-                          <div class="js-seekerProgress seeker-progressBar"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="audioPlayer-buttons"><button class="js-audioPlayerRewindButton audioPlayer-rewindButton"><i class="icon icon-rewind" aria-hidden="true"></i></button> <button
-                        class="js-audioPlayerPlayButton audioPlayer-playButton"><i class="icon icon-play" aria-hidden="true"></i></button> <button class="js-audioPlayerToggleSpeedButton audioPlayer-speedButton">1x</button></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  <h4 class="module-progress-card__title">{{$resource->title}}</h4>
+
+              </a>
+              @endforeach
           </section>
           <!---->
           <!---->
@@ -433,9 +651,10 @@
           <div class="section section--tasks">
             <div class="tasks">
               <header class="tasks-header">
-                2/2 Tasks Completed
+                2/{{$project->tasks->count()}} tâches terminées
               </header>
               <div class="tasks-body">
+                @foreach($project->tasks as $task)
                 <div class="taskWrapper">
                   <div class="task">
                     <div class="task-content">
@@ -444,28 +663,15 @@
                           <div class="cover cover--tasks" style="background-image: url(&quot;https://assets.mindvalley.com/api/v1/assets/84331628-af90-47df-9a46-eacdc460fc85.jpg&quot;);"></div>
                         </div>
                       </div>
+
                       <div class="task-description task-description--completed">
                         <div class="sign sign--completed"><i class="icon icon-check" aria-hidden="true"></i></div>
-                        <div class="task-name">Enseignez cette technique à une autre personne.</div>
+                        <div class="task-name">{{$task->heading}}</div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="taskWrapper">
-                  <div class="task">
-                    <div class="task-content">
-                      <div class="task-cover">
-                        <div class="coverWrapper--tasks">
-                          <div class="cover cover--tasks" style="background-image: url(&quot;https://assets.mindvalley.com/api/v1/assets/617e2397-97ec-45ed-a7aa-b7a29399dd76.jpg&quot;);"></div>
-                        </div>
-                      </div>
-                      <div class="task-description task-description--completed">
-                        <div class="sign sign--completed"><i class="icon icon-check" aria-hidden="true"></i></div>
-                        <div class="task-name">Créez les pièces 3 et 4 pour les numéros de 11 à 20.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                @endforeach
               </div>
             </div>
           </div>
