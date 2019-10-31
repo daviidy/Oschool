@@ -36,6 +36,9 @@
 
 
   <style type="text/css">
+  html{
+    font-family:sans-serif;
+  }
     .addthisevent {
       visibility: hidden;
     }
@@ -908,7 +911,7 @@
               <div class="_col _left ">
                 <h4>Des questions ou besoin d’aide?</h4>
 
-                <p>Notre équipe d’assistance clientèle primée est à votre service. Des personnes réelles et des réponses personnalisées avec un sourire. Il suffit d’écrire à Kristi et à notre équipe directement.</p>
+                <p>Notre équipe d’assistance clientèle primée est à votre service. Des personnes réelles et des réponses personnalisées avec un sourire. Il suffit d’écrire à Gnalé Diaby et à notre équipe directement.</p>
 
                 <p><a href="https://support.mindvalley.com/collections/1779635-mindvalley-deutsch" class="btn-solid btn-medium btn-orange _nomargin"><span class="caps">CONTACTEZ</span>-<span class="caps">NOUS</span> <span class="caps">POUR</span>
                     <span class="caps">SUPPORT</span></a></p>
@@ -920,7 +923,7 @@
                 <div class="_row fixed-width aside-left">
                   <div class="_colwrap _phi ">
                     <div class="_col _article l-access--support-signature">
-                      <img src="https://www.mindvalley.com/premium-checkout/assets/images/templates/wowsupport-signature-white.png" class="user-assets" alt=""> <br> <strong>Kristi Anier</strong> <br> <span class="txt-small-1">Chef d’équipe du bonheur des clients</span></div>
+                      <img src="https://www.mindvalley.com/premium-checkout/assets/images/templates/wowsupport-signature-white.png" class="user-assets" alt=""> <br> <strong>Gnalé Diaby</strong> <br> <span class="txt-small-1">Chef d’équipe du bonheur des clients</span></div>
 
 
 

@@ -303,30 +303,35 @@
                     <div dropdown="" class="btn-group tch-dropdown-group dropup dropdown">
                         <!---->
                         <!----><a href="/my_teachable_profile" ng-if="::currentUser.is_teachable_account" target="_blank" class="tch-dropdown-group-selector"><img gravatar-src-once="user.email" align="left" gravatar-size="30" class="user-avatar"
-                              src="https://secure.gravatar.com/avatar/9c275cba24f7c939201cda28f832f8e0?size=30&amp;default=mm">
+                              src="/images/users/default/{{Auth::user()->image}}">
                             <div class="myteachable-icon-overlay">&nbsp;</div>
-                            <div ng-bind="::user.name" class="user-name">David Yao</div>
+                            <div ng-bind="::user.name" class="user-name">{{Auth::user()->name}}</div>
                         </a>
                         <!----><a what="dropdown-toggle" onclick="show2()" dropdown-toggle="" type="button" href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa fa-angle-up"></i></a>
                         <ul role="menu" class="dropdown-menu dropdown-menu-left" id="drop1">
                             <!---->
-                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.com/experts?src=in-app-menu" target="_blank" what="experts-marketplace">Oschool Experts</a></li>
+                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://www.blog.oschoolelearning.com" target="_blank" what="experts-marketplace">Blog Oschool</a></li>
                             <!---->
                             <!---->
-                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://www.facebook.com/groups/496090827168552/" target="_blank" what="instructor-community">Communauté d'instructeurs</a></li>
+                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://discord.gg/hhbzcHE" target="_blank" what="instructor-community">Communauté Oschool</a></li>
                             <!---->
                             <!---->
-                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.zendesk.com/" target="_blank" what="knowledge-base">Connaissances de base</a></li>
+                            <!--li ng-if="::permissions.can('view_fedora_references')"><a href="https://teachable.zendesk.com/" target="_blank" what="knowledge-base">Connaissances de base</a></li-->
                             <!---->
                             <!---->
                             <li ng-if="::permissions.can('view_fedora_references')" role="presentation" class="divider"></li>
                             <!---->
                             <!---->
-                            <li ng-if="::currentUser.is_teachable_account"><a href="/my_teachable_profile" target="_blank" translate="FOOTER.MYTEACHABLE_PROFILE">Mon profil Oschool</a></li>
+                            <li ng-if="::currentUser.is_teachable_account"><a href="/users/settings" target="_blank" translate="FOOTER.MYTEACHABLE_PROFILE">Mon profil Oschool</a></li>
                             <!---->
                             <!---->
                             <!---->
-                            <li><a href="/sign_out" translate="FOOTER.LOG_OUT" what="logout">Se déconnecter</a></li>
+                            <li><a href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">Se déconnecter</a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                              @csrf
+                          </form></li>
                         </ul>
                     </div>
                 </div>
