@@ -267,7 +267,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
     </div>
     <div class="tch-inline-form">
-        <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/authors/create">Nouveau autheur</a><i class="fa fa-angle-down icon-arrow-down"></i></div>
+        <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/authors/create">Nouveau auteur</a><i class="fa fa-angle-down icon-arrow-down"></i></div>
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
             <!---->
             {{-- <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
@@ -316,7 +316,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
                     @foreach ($authors as $author)
-                        
+
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
                         <td what="id"><span ng-bind="'#' + product.id">{{$author->full_name}}</span><span class="space"></span><span class="space"></span>
                             <!---->
@@ -329,7 +329,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                         </td> --}}
                         <td what="bio">{!!$author->bio!!}</td>
-                        
+
                         {{-- <td what="price" ng-bind="formatProductPrice(product)">
                         </td> --}}
                         <td></td>
@@ -368,7 +368,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                         </td>
                     </tr>
-                    
+
                     @endforeach
                     <!---->
                 </tbody>
