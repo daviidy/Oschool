@@ -4,17 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Deliverable extends Model
 {
     /**
      * [protected description]
      * @var [array]
      */
-    protected $fillable = ['heading',
-                           'description',
-                           'image',
+    protected $fillable = ['link',
+                           'status',
+                           'comment',
                            'project_id',
-                           'position'
+                           'user_id'
                          ];
 
 
@@ -31,8 +31,8 @@ class Task extends Model
 
       //function for relationship between
       //user and tasks (many to many)
-      public function users()
+      public function user()
       {
-          return $this->belongsToMany('App\User');
+          return $this->belongsTo('App\User');
       }
 }
