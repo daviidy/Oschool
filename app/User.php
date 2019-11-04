@@ -6,8 +6,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Contracts\Auth\CanResetPassword;
+
 use App\Notifications\PasswordReset;
-// use App\Notifications\ConfirmationUser;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -126,7 +126,4 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->email;
     }
-    // public function sendEmailVerificationNotification(){
-    //     $this->notify(new ConfirmationUser());
-    // }
 }
