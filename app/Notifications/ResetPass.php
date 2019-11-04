@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class PasswordReset extends Notification
+class ResetPass extends Notification
 {
     use Queueable;
 
@@ -16,9 +16,9 @@ class PasswordReset extends Notification
      *
      * @return void
      */
-    public function __construct($token)
+    public function __construct()
     {
-        $this->token = $token;
+        //
     }
 
     /**
@@ -40,13 +40,7 @@ class PasswordReset extends Notification
      */
     public function toMail($notifiable)
     {
-
-        $url = url('password/reset', $this->token);
-        return (new MailMessage)->markdown('mail.invoice.resetPassword', ['url' => $url]);
-                    // ->greeting('Salue!')
-                    // ->line("Ceci est l'introduction au  notification")
-                    // ->action('Renitialiser votre mot de passe', url('password/reset', $this->token))
-                    // ->line('Merci pour votre presence sur notre application');
+        return (new MailMessage)->markdown('mail.invoice.paid');
     }
 
     /**
