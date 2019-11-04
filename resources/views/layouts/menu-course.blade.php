@@ -509,9 +509,10 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
           <a class="navbar-brand header-logo" href="/">
             <span class="sr-only">Oschool</span>
             @if(\Route::current()->getName() == 'path.slug')
-            <img src="/images/schools/logos/oschool.png" alt="Ito9a193qaqy32ndydwc transparent%20logo">
+            <img src="/images/schools/logos/oschool.png" alt="logo">
+            <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf">
             @else
-            <img src="/images/schools/logos/logo_oschool_blanc.png" alt="Ito9a193qaqy32ndydwc transparent%20logo">
+            <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo">
             @endif
           </a>
 
