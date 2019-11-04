@@ -46,10 +46,7 @@ class ConfirmationUser extends Notification
     {
         return (new MailMessage)
                     ->subject(\Lang::getFromJson('Verify Email Address'))
-                    ->action(
-                        \Lang::getFromJson('Verify Email Address'),
-                        $this->verificationUrl($notifiable)
-                    )
+                    ->action('Confirmer email', url('/email/verify', $this->$notifiable))
                     ->line("Merci d'etre a oschool");
     }
 

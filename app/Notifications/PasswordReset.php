@@ -41,7 +41,6 @@ class PasswordReset extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->from('bouyesamuel01@gmail.com', 'Samuel Bouye')
                     ->greeting('Salue!')
                     ->line("Ceci est l'introduction au  notification")
                     ->action('Renitialiser votre mot de passe', url('password/reset', $this->token))
