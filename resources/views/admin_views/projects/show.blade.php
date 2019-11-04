@@ -284,7 +284,7 @@ a:focus{color:inherit;text-decoration:none;}
   <div class="xl:px-3">
     <div class="xl:px-5">
       <div>
-        <div class="overlay"></div>
+        <div id="overlay-sendWorks" class="overlay"></div>
         <div class="modalWrapper" style="left: 453px;">
           <div id="modal" class="modal rounded-t-lg ">
             <div class="modal-cover rounded-t-lg ">
@@ -651,7 +651,7 @@ a:focus{color:inherit;text-decoration:none;}
           <div class="section section--tasks">
             <div class="tasks">
               <header class="tasks-header">
-                2/{{$project->tasks->count()}} tâches terminées
+                {{Auth::user()->tasks->where('project_id', $project->id)->count()}}/{{$project->tasks->count()}} tâches terminées
               </header>
               <div class="tasks-body">
                 @foreach($project->tasks as $task)
@@ -664,8 +664,8 @@ a:focus{color:inherit;text-decoration:none;}
                         </div>
                       </div>
 
-                      <div class="task-description task-description--completed">
-                        <div class="sign sign--completed"><i class="icon icon-check" aria-hidden="true"></i></div>
+                      <div class="task-description {{Auth::user()->tasks->contains($task->id) ? 'task-description--completed' : ''}}">
+                        <div class="sign {{Auth::user()->tasks->contains($task->id) ? 'sign--completed' : ''}}"><i class="icon icon-check" aria-hidden="true"></i></div>
                         <div class="task-name">{{$task->heading}}</div>
                       </div>
                     </div>

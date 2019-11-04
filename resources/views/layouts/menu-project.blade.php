@@ -21,6 +21,61 @@
     .video_10865-dimensions.vjs-fluid {
       padding-top: 56.25%;
     }
+
+/*popup*/
+
+/*! CSS Used from: https://platform.mindvalley.com/app_new-a2f56af987691a0aa0cfb8aa4c8cdce1.css?vsn=d */
+a{background-color:transparent;-webkit-text-decoration-skip:objects;}
+input{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0;}
+input{overflow:visible;}
+*,:after,:before{box-sizing:inherit;}
+h3{margin:0;}
+*,:after,:before{border:0 solid #95989d;}
+input{font-family:inherit;}
+input:-ms-input-placeholder{color:inherit;opacity:.5;}
+input::placeholder{color:inherit;opacity:.5;}
+.button{display:inline-block;background-color:#3c434e;border-radius:9999px;text-decoration:none;text-align:center;color:#c1c1c1;padding:1rem 2rem;font-size:1rem;font-weight:600;line-height:1;}
+.button:hover{cursor:pointer;background-color:#62686e;}
+.button--primary{background-color:#2a8cf8;border-width:1px;border-color:#2a8cf8;color:#fff;}
+.button--primary:hover{background-color:#6cb2eb;}
+.button>i{margin-right:.25rem;}
+.button--round{padding:0;display:-ms-flexbox;display:flex;-ms-flex-negative:0;flex-shrink:0;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:44px;height:44px;border-radius:50%;}
+.button.button--round>i{margin-right:0;font-size:1.5rem;}
+.button--input{position:absolute;display:-ms-flexbox;display:flex;background-color:#c1c1c1;right:0;color:#3c434e;border-radius:.125rem;border-top-right-radius:.25rem;border-bottom-right-radius:.25rem;border-top-left-radius:0;border-bottom-left-radius:0;top:1px;width:46px;height:44px;}
+.button--input{-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;padding:0;}
+.coverWrapper{position:relative;padding-top:56.25%;}
+.cover{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;background-size:cover;background-color:#62686e;background-position:50%;}
+.input{box-shadow:0 2px 4px 0 rgba(0,0,0,.1);border-radius:.25rem;width:100%;padding:.75rem 1rem;font-weight:500;background-color:#ededed;border-width:1px;border-color:#c1c1c1;color:#000;font-size:1rem;line-height:1.25;}
+.input--withButton{padding-right:46px;}
+.logo{width:23px;height:23px;background-size:cover;}
+.overlay{position:fixed;top:0;right:0;bottom:0;left:0;padding-left:1.25rem;padding-right:1.25rem;z-index:50;padding-bottom:10rem;background-color:rgba(0,0,0,.7);opacity:0;visibility:hidden;transition:opacity .9s,visibility .9s ease-out;}
+.overlay.is-active{opacity:1;visibility:visible;transition:opacity .4s ease-in-out;}
+.modal{width:100%;position:relative;background-color:#fff;border-radius:.5rem;top:15%;}
+.modal-cover{position:relative;border-top-left-radius:.25rem;border-top-right-radius:.25rem;}
+.modal-coverButton{position:absolute;top:0;right:0;padding:1rem;}
+.modal-contents{padding:.5rem;}
+.modal-button,.modal-headline,.modal-input{padding:.75rem;}
+.modal-headline{-ms-flex-align:center;align-items:center;}
+.modal-headline,.modal-input{display:-ms-flexbox;display:flex;}
+.modal-input{-ms-flex-direction:column;flex-direction:column;}
+.modalWrapper{position:fixed;width:100%;z-index:50;padding:1rem 1.5rem;border-radius:.25rem;top:15%;transform:translateY(-200%);transition:transform .8s ease-in-out;max-width:460px;}
+.modalWrapper.is-active{transform:translateY(0);}
+.rounded-b-none{border-bottom-right-radius:0;border-bottom-left-radius:0;}
+.rounded-t-lg{border-top-left-radius:.5rem;}
+.rounded-t-lg{border-top-right-radius:.5rem;}
+.mt-1{margin-top:.25rem;}
+.mb-2{margin-bottom:.5rem;}
+.ml-2{margin-left:.5rem;}
+.relative{position:relative;}
+.text-center{text-align:center;}
+.text-2xl{font-size:1.5rem;}
+.w-full{width:100%;}
+/*! CSS Used from: https://use.fortawesome.com/kits/748c4f83/publications/92363/woff2.css ; media=all */
+@media all{
+.icon{display:inline-block;font:normal normal normal 14px/1 Quests4;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.icon-window-close:before{content:'\f023';}
+}
+
   </style>
   <link rel="stylesheet" href="/css/project.css">
   <meta charset="UTF-8">
@@ -28,7 +83,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Mindvalley Is Creating A Global School That Delivers Transformational Education For All Ages. Powered By Community. Fueled By Fun.">
   <meta charset="UTF-8" content="PQItdgUoMnpgRnpGOgkUNQIOIT8/OwA/OKI9mI_-4--vSbbPdIitSLRw" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
-
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 
   <title>@yield('title')</title>
 
@@ -117,9 +175,15 @@
             </div>
           </div>
           <div class="bottomBar">
-            <div class="bottomBar-container"><button class="button button--primary button--bottomBar" style="display: none;">Mark As Complete</button> <button disabled="disabled" class="button is-disabled button--bottomBar"
-                style="display: none;">Mark As Complete</button>
-              <div class="bottomBar-message">
+            <div class="bottomBar-container">
+                <button id="sendWorks" class="button button--primary button--bottomBar" style="display: block;">
+                    Envoyer mes travaux
+                </button>
+                <button disabled="disabled" class="button is-disabled button--bottomBar"
+                style="display: none;">
+                Mark As Complete
+                </button>
+              <div class="bottomBar-message" style="display: none;">
                 <div class="sign sign--small sign--completedAlt mr-3"><i class="icon icon-check" aria-hidden="true"></i></div> <span class="text-green font-bold">Terminé</span>
               </div>
             </div>
@@ -133,6 +197,22 @@
   <script src="/shared-bd92f0b14e7df925e9443a0359b5f509.js?vsn=d"></script>
   <script src="/app_new-f16b2271dd0e2f0cc8ac36d16dd6c7f4.js?vsn=d"></script>
 
+
+    <script type="text/javascript">
+
+    $('#sendWorks').on('click', function() {
+        $('#overlay-sendWorks').addClass("is-active");
+        $('#overlay-sendWorks').siblings('.modalWrapper').addClass("is-active");
+
+    });
+
+
+    $('.button--round').on('click', function() {
+        $('#overlay-sendWorks').removeClass("is-active");
+        $('#overlay-sendWorks').siblings('.modalWrapper').removeClass("is-active");
+
+    });
+    </script>
 
 </body>
 

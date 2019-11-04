@@ -113,4 +113,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Answer');
     }
+
+
+    //function for relationship between
+    //user and tasks (many to many)
+    public function tasks()
+    {
+        return $this->belongsToMany('App\Task');
+    }
 }
