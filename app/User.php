@@ -121,9 +121,18 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         $this->notify(new PasswordReset($token));
     }
-
-    public function routeNotificationForMail($notification)
+    //function for relationship between
+    //user and tasks (many to many)
+    public function tasks()
     {
-        return $this->email;
+        return $this->belongsToMany('App\Task');
     }
+    
+
+
+    
+        public function routeNotificationForMail($notification)
+        {
+            return $this->email;
+        }
 }

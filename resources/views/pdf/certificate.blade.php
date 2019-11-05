@@ -98,7 +98,7 @@ div.cls_006 {
 
 span.cls_007 {
 
-  font-size: 14.1px;
+  font-size: 18.1px!important;
   color: rgb(26, 26, 26);
   font-weight: normal;
   font-style: oblique;
@@ -189,10 +189,10 @@ div.cls_011 {
 <script type="text/javascript" src="10a1b458-f529-11e9-9d71-0cc47a792c0a_id_10a1b458-f529-11e9-9d71-0cc47a792c0a_files/wz_jsgraphics.js"></script>
 </head>
 <body>
-<div style="position:absolute;left:50%;margin-left:-420px;top:0px;width:841px;height:595px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:50%;margin-left:-420px;top:26px;width:841px;height:595px;border-style:outset;overflow:hidden">
     <div style="position:absolute;left:0px;top:0px">
       <img src="http://deviens-developpeur.com/wp-content/uploads/2019/10/certificate.png" width=841 height=595></div>
-    <div style="position:absolute;left: 197.52px;top: 32.11px;" class="cls_002">
+    <div style="position:absolute;left: 197.52px;top: 60.11px;" class="cls_002">
       <span class="cls_002">{{$username}}</span>
     </div>
     <div style="position:absolute;left:197.52px;top:199.53px" class="cls_007">

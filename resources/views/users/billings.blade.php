@@ -39,6 +39,8 @@ th{text-align:left;}
 }
 /*! CSS Used from: https://home.mindvalley.com/packs/app-c7d9f990427b05dbc9d6ddcf5ac45b3c.css ; media=screen */
 @media screen{
+a[data-v-669dc8b3]{margin-top: 15px;cursor:pointer;display:inline-block;min-height:42px;padding:10px 30px;font-size:15px;color:#fff;text-decoration:none;text-align:center;font-family:Gilroy-Semibold,sans-serif;background-color:#4D90CC;border-radius:35px;vertical-align:middle;}
+a[data-v-669dc8b3]:hover{background-color:#66afe9;}
 a[data-v-669dc8b3]{cursor:pointer;display:inline-block;min-height:42px;padding:10px 30px;font-size:15px;color:#fff;text-decoration:none;text-align:center;font-family:Gilroy-Semibold,sans-serif;background-color:#4D90CC;border-radius:35px;vertical-align:middle;}
 a[data-v-669dc8b3]:hover{background-color:#4e9ff8;}
 @media (max-width:768px){
@@ -119,10 +121,12 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
                                         {{ucfirst($course->name)}}
                                         <img data-v-3e7bb260="" src="https://s92.mindvalley.us/mindvalley/media/images/ico-pdf.svg" alt="Invoice"></a>
                                 </td>
+                                <td data-v-3e7bb260="">2019-09-02</td>
+                                <td data-v-3e7bb260="">Super Cerveau (2 Septembre 2019)</td>
+                                <td data-v-3e7bb260="">USD 129.0</td>
                                 <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->last()->date}} + 30 jours</td>
                                 <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->price}} FCFA</td>
                                 <td data-v-3e7bb260="">Mobile money</td>
-
 
                             </tr>
                             @endif

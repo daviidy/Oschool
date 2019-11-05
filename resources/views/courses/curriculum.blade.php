@@ -13,9 +13,9 @@
     </div>
     <div class="small course-progress">
       <span class="percentage">
-        97%
+        {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100,2,",",".")}}%
       </span>
-      COMPLETE
+      TERMINÉ
     </div>
   </div>
   <ul class="sidebar-nav">
@@ -53,10 +53,22 @@
     Programme de cours
   </h2>
   <div class="next-lecture-wrapper">
-    <a class="btn btn-primary start-next-lecture" data-no-turbolink="true" href="/course/enrolled/{{$course->slug}}">Commencez le prochain chapitre&nbsp;&nbsp;<span aria-hidden="true">›</span></a>
+      @foreach($course->lessons->sortBy('position') as $lesson)
+      @if(!Auth::user()->lessons->contains($lesson->id))
+
+      <a class="btn btn-primary start-next-lecture" data-no-turbolink="true" href="/course/{{$course->slug}}/lessons/{{$lesson->slug}}">Commencez le prochain chapitre&nbsp;&nbsp;<span aria-hidden="true">›</span></a>
+
+      @break
+      @endif
+      @endforeach
+
     <span class="next-lecture-name hidden-sm">
-      Minute de lecture
-      (84:23)
+      @foreach($course->lessons->sortBy('position') as $lesson)
+      @if(!Auth::user()->lessons->contains($lesson->id))
+      {{$lesson->title}}
+      @break
+      @endif
+      @endforeach
 
 
     </span>
@@ -116,7 +128,7 @@
   </div> --}}
   @if($course->sections)
   @foreach($course->sections->sortBy('position') as $section)
-    
+
   <div class="row">
     <div class="col-sm-12 course-section">
       <div class="section-title" data-release-date="" data-days-until-dripped="" data-is-dripped-by-date="" data-course-id="532534">

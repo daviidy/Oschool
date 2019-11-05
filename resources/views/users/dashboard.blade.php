@@ -20,9 +20,7 @@
             <div class="school-info">
                 <img class="school-favicon" src="/images/schools/backgrounds/flavicon-school.svg">
                 <p class="school-name">{{$school->name}}</p>
-                <p class="school-url">oschool2.teachable.com</p>
 
-                <label class="label label-user-type label-free">free</label>
             </div>
         </a>
         @endforeach
@@ -40,8 +38,19 @@
             <div class="school-info">
                 <img class="school-favicon" src="/images/schools/backgrounds/flavicon-school.svg">
                 <p class="school-name">Oschool</p>
-                <p class="school-url">oschool2.teachable.com</p>
-                <label class="label label-user-type label-free">free</label>
+            </div>
+        </a>
+        @endforeach
+    </div>
+
+    <h1>Mes cours</h1>
+    <div class="schools-list ">
+        @foreach(Auth::user()->courses as $course)
+        <a href="/course/enrolled/{{$course->slug}}" class="school-card school-has-default-thumbnail"
+          style="background-image: url('/images/courses/logos/{{$course->logo}}');" target="_blank">
+            <div class="school-info">
+                <p class="school-name">{{$course->name}}</p>
+                <p class="school-url">{{$course->subtilte}}</p>
             </div>
         </a>
         @endforeach

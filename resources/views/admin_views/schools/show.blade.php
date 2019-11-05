@@ -17,7 +17,8 @@
                         <div class="tch-school-onboarding-header-icons"></div>
                         <div class="tch-school-onboarding-header-text">
                             <h3><span>Bienvenue à {{$school->name}}!</span></h3><a href="{{url('schools', $school)}}" target="_blank" class="tch-btn-header-primary">Voir l'école</a><span class="space"></span>
-                            <div dropdown="" class="btn-group dropdown" onclick="show()" ><a dropdown-toggle="" type="button" class="tch-btn-header-dropdown dropdown-toggle" aria-haspopup="true" aria-expanded="false">Comment puis-je<span class="space"></span><i
+                            <!--div dropdown="" class="btn-group dropdown" onclick="show()" >
+                              <a dropdown-toggle="" type="button" class="tch-btn-header-dropdown dropdown-toggle" aria-haspopup="true" aria-expanded="false">Comment puis-je<span class="space"></span><i
                                       class="fa fa-angle-down no-margin"></i></a>
                                 <div class="dropdown-menu-arrow"></div>
                                 <ul role="menu" class="dropdown-menu dropdown-menu-left" id="drop">
@@ -36,7 +37,7 @@
                                     <li><a href="https://teachable.zendesk.com/hc/en-us/articles/219827307-Issuing-Refunds-to-Students?src=admin?src=admin" ng-bind="'SUPPORT.refunds.title' | translate" target="_blank">Comment puis-je effectuer un remboursement total ou partiel pour un étudiant?</a></li>
                                     <li><a href="https://teachable.zendesk.com/hc/en-us/articles/222808927-Adding-Webhooks?src=admin?src=admin" ng-bind="'SUPPORT.webhooks.title' | translate" target="_blank">Comment ajouter des webhooks?</a></li>
                                 </ul>
-                            </div>
+                            </div-->
                         </div>
                     </div>
                     <script type="text/javascript" src="/js/admin_views/menu.js"></script>
@@ -46,7 +47,7 @@
                         <div class="col-lg-8 col-md-12 col-xs-12">
                             <div class="tch-pills-wrapper">
                                 <!---->
-                                <div ng-if="percentComplete() > 0">
+                                <div ng-if="percentComplete() > 0" style="display:none">
                                     <div ng-class="{ 'progress-completed': percentComplete() == 100 }" class="progress">
                                         <div ng-style="{ 'width': percentComplete() + '%' }" ng-class="{ 'progress-bar-completed': percentComplete() == 100 }" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
                                           class="progress-bar" style="width: 25%;"><span ng-bind="percentComplete() | number:0">25</span>% achevé</div>
@@ -62,7 +63,7 @@
                                         <!----></span>
                                     <!---->
                                     <!---->
-                                    <!----><span ng-bind="step.text | translate">Inscrivez-vous à notre webinaire gratuit en direct</span>
+                                    <!----><span ng-bind="step.text | translate">Inscrivez-vous à notre webinaire en direct</span>
                                     <!----><span ng-if="!step.completed() &amp;&amp; !step.disabled()" class="right-arrow">›</span>
                                     <!---->
                                     <!---->
@@ -82,7 +83,7 @@
                                     <!---->
                                 </a>
                                 <!----><a ng-click="step.click()" ng-repeat="step in steps" ng-class="{ 'pill-completed': step.completed(), 'pill-active': step.active(), 'pill-disabled': step.disabled(), 'pill-highlighted': step.highlighted() }"
-                                  class="tch-pill full-width fastclickable pill-completed">
+                                  class="tch-pill full-width fastclickable " href="/schoolAdmin/{{$school->id}}/courses/create">
                                     <!---->
                                     <!----><span ng-if="!step.liveWorkshop">
                                         <!---->
@@ -94,7 +95,7 @@
                                     <!---->
                                     <!----></a>
                                 <!----><a ng-click="step.click()" ng-repeat="step in steps" ng-class="{ 'pill-completed': step.completed(), 'pill-active': step.active(), 'pill-disabled': step.disabled(), 'pill-highlighted': step.highlighted() }"
-                                  class="tch-pill full-width fastclickable">
+                                  class="tch-pill full-width fastclickable" style="display:none">
                                     <!---->
                                     <!----><span ng-if="!step.liveWorkshop">
                                         <!----><img ng-if="!step.completed() &amp;&amp; !step.disabled()" ng-src="/images/schools/icon-customize.svg" class="icon" src="/images/schools/icon-customize.svg">
@@ -116,7 +117,7 @@
                                     <!---->
                                 </a>
                                 <!----><a ng-click="step.click()" ng-repeat="step in steps" ng-class="{ 'pill-completed': step.completed(), 'pill-active': step.active(), 'pill-disabled': step.disabled(), 'pill-highlighted': step.highlighted() }"
-                                  class="tch-pill full-width fastclickable">
+                                  class="tch-pill full-width fastclickable" style="display:none">
                                     <!---->
                                     <!----><span ng-if="!step.liveWorkshop">
                                         <!----><img ng-if="!step.completed() &amp;&amp; !step.disabled()" ng-src="/images/schools/icon-domain.svg" class="icon" src="/images/schools/icon-domain.svg">
@@ -138,7 +139,7 @@
                                     <!---->
                                 </a>
                                 <!----><a ng-click="step.click()" ng-repeat="step in steps" ng-class="{ 'pill-completed': step.completed(), 'pill-active': step.active(), 'pill-disabled': step.disabled(), 'pill-highlighted': step.highlighted() }"
-                                  class="tch-pill full-width fastclickable pill-disabled">
+                                  class="tch-pill full-width fastclickable" href="/schoolAdmin/{{$school->id}}/settings/general">
                                     <!---->
                                     <!----><span ng-if="!step.liveWorkshop">
                                         <!---->
@@ -146,14 +147,14 @@
                                     <!---->
                                     <!----><img ng-if="step.disabled()" ng-src="https://fedora.teachablecdn.com/images/schools/icon-lock.svg" class="icon more-faded"
                                       src="/images/schools/icon-lock.svg">
-                                    <!----><span ng-bind="step.text | translate">Lance ton école</span>
+                                    <!----><span ng-bind="step.text | translate">Paramètre de l'école</span>
                                     <!---->
                                     <!---->
                                     <!----></a>
                                 <!---->
                             </div>
                         </div>
-                        <div class="col-lg-4 hidden-md hidden-sm hidden-xs">
+                        <!--div class="col-lg-4 hidden-md hidden-sm hidden-xs">
                             <h2 class="tch-subheading text-left">Besoin d'aide pour commencer?</h2>
                             <div class="tch-feed-item event-placeholder event-authenticate">
                                 <div class="tch-arrow pull-left"></div>Découvrez nos<span class="space"></span><a href="http://teachable.zendesk.com/" target="_blank" class="feed-link feed-bold">Connaissances de base</a><span class="space"></span>pour les conseils,
@@ -166,7 +167,7 @@
                             <div class="tch-feed-item event-placeholder event-authenticate">
                                 <div class="tch-arrow pull-left"></div><span class="space"></span><a ui-sref="admin.settings.payments" class="feed-link feed-bold" href="/admin/settings/payments">Configurer les moyens de paiement</a> utilisez la passerelle de paiement mensuel ou recevez des paiements plus rapidement en configurant des passerelles personnalisées.
                             </div>
-                        </div>
+                        </div-->
                     </div>
                 </div>
             </div>

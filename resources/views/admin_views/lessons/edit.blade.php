@@ -1296,7 +1296,11 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
             <div data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
               class="drop-button tch-btn-header-secondary pull-right pull-right1 fastclickable"> <input id="image_lesson" type="file" name="image" value=""> <span> Choisissez une image</span></div>
         </div>
+        @if($lesson->image)
         <img width="150" src="/images/lessons/images/{{$lesson->image}}" alt="">
+        @else
+        <img width="150" src="/images/lessons/images/image.png" alt="">
+        @endif
     </ui-view>
 
     <ui-view style="display: none;" id="resource" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
