@@ -6,11 +6,9 @@
 <div class="main my-teachable-dashboard">
 
     @if(Auth::user()->isAdmin() || Auth::user()->isOwner())
-    @foreach(Auth::user()->createSchools as $school)
-    @if($loop->first)
+
+    @if(count(Auth::user()->createSchools) > 0)
     <h1>Les écoles que je possède</h1>
-    @endif
-    @endforeach
 
 
     <div class="schools-list ">
@@ -28,8 +26,9 @@
     </div>
 
     @endif
+    @endif
 
-    @if(Auth::user()->schools)
+    @if(count(Auth::user()->schools) > 0)
     <h1>Les écoles dans lesquelles je suis inscrit</h1>
     <div class="schools-list ">
         @foreach(Auth::user()->schools as $school)
@@ -42,7 +41,9 @@
         </a>
         @endforeach
     </div>
+    @endif
 
+    @if(count(Auth::user()->courses) > 0)
     <h1>Mes cours</h1>
     <div class="schools-list ">
         @foreach(Auth::user()->courses as $course)
