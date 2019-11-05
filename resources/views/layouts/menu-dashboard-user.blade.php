@@ -34,7 +34,7 @@
         @if (session('status'))
         <div class="alert-header">
             <div class="center-container green bolded">
-                <center>{{session('status')}}</center>
+                <center>{{session('status') == "Your password has been reset!" ? "Votre mot de passe a été réinitialisé!" : session('status')}}</center>
             </div>
         </div>
         @endif

@@ -36,10 +36,11 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                        <div class="alert alert-success" role="alert" style="padding-top: 90; font-size:20px;">
+                          <p>Nous avons envoyé votre lien de réinitialisation de mot de passe par e-mail!</p>
                         </div>
-                    @endif
+
+                    @else
 
                 <form method="POST" action="{{ route('password.email') }}" class="new_teachable_account" id="new_teachable_account" accept-charset="UTF-8">
                     @csrf
@@ -58,7 +59,7 @@
             
             @error('email')
             <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
+                <strong style="color:red;">Nous ne pouvons pas trouver un utilisateur avec cette adresse e-mail.</strong>
             </span>
            @enderror
             
@@ -70,6 +71,9 @@
                     <button autocomplete="off" type="submit" name="commit" id="signup_final" class="orange-button btn">Envoyez moi le lien</button>
                   </div>
                 </form>
+
+                @endif
+
                 <div id="right-box-spinner" class="right-box-spinner create-form-spinner hidden"></div>
               </div>
             </div>
