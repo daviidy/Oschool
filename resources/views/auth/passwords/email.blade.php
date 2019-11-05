@@ -67,7 +67,7 @@
 
                   <div class="account-form-button" style="margin: 0 auto;width: 290px;">
                     <br>
-                    <button autocomplete="off" type="submit" name="commit" id="signup_final" class="orange-button btn">Envoyew moi le liens</button>
+                    <button autocomplete="off" type="submit" name="commit" id="signup_final" class="orange-button btn">Envoyez moi le lien</button>
                   </div>
                 </form>
                 <div id="right-box-spinner" class="right-box-spinner create-form-spinner hidden"></div>

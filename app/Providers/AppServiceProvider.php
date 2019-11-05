@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
             );
 
             return (new MailMessage)
-                ->subject('Welcome!')
+                ->subject("Confirmation d'email")
                 ->markdown('mails.verify', ['url' => $verifyUrl]);
         });
         Schema::defaultStringLength(191);

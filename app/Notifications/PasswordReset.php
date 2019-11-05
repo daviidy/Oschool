@@ -42,7 +42,9 @@ class PasswordReset extends Notification
     {
 
         $url = url('password/reset', $this->token);
-        return (new MailMessage)->markdown('mail.invoice.resetPassword', ['url' => $url]);
+        return (new MailMessage)
+                    ->subject("Mot de passe oublié")
+                    ->markdown('mail.invoice.resetPassword', ['url' => $url]);
                     // ->greeting('Salue!')
                     // ->line("Ceci est l'introduction au  notification")
                     // ->action('Renitialiser votre mot de passe', url('password/reset', $this->token))
