@@ -796,10 +796,10 @@
                 </div>
                 <div class="col-xs-12 col-md-4 card-column">
                     <div class="card-container">
-                        <div class="card-front" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/91dZmzQ3RdmL48qQ8BNO_homepage-cardtestimonial-juliestoian.jpg);">
+                        <div class="card-front" style="background-image: url(/images/divers/1258.jpg);background-size: cover;">
                             <div class="card-front-text">
                                 <div class="name">
-                                    Julie Stoian
+                                  Souleymane Coulibaly
                                 </div>
                                 <div class="course-name">
                                     <em>Digital Insiders For Life</em>
@@ -807,13 +807,13 @@
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“Je suis passé de la création de petits cours peu coûteux à de grands cours qui ont abouti à un revenu à 5 chiffres. C'est la solution idéale pour les entrepreneurs de services qui souhaitent faire évoluer leur activité.”</p>
+                            <p class="testimonial-text">“ très bonne plateforme d'apprentissage pour les adultes…”</p>
                             <div class="card-bottom">
-                                <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/HfVh1POeQCaTQbrr0D3r">
+                                <img src="/images/divers/1258.jpg">
                                 <div class="card-bottom-attribution">
                                     <div class="card-bottom-attribution-bottom ">
-                                        <div class="name">Julie Stoian</div>
-                                        <a href="http://school.juliestoian.com" target="_blank" rel="noopener noreferrer">Voir le cours</a>
+                                        <div class="name"> Souleymane Coulibaly</div>
+                                        <!--a href="http://school.juliestoian.com" target="_blank" rel="noopener noreferrer">Voir le cours</a-->
                                     </div>
                                 </div>
                             </div>
@@ -916,7 +916,7 @@
                         <h2>Rejoignez le show oschool sur facebook</h2>
                         <div class="description">
                             <p>Chaque vendredi à 19h, oschool organise un show sur facebook sur des questions de l'entreprenariat, du Elearning ... Vous êtes invités!  </p>
-                            <a href="https://teachable.com/webinars/quickstart1/register?src=homepage" target="_blank" rel="noopener noreferrer">Rejoignez-nous!</a>
+                            <a href="https://www.facebook.com/Oschool.ci/" target="_blank" rel="noopener noreferrer">Rejoignez-nous!</a>
                         </div>
                     </div>
                 </div>
@@ -943,29 +943,30 @@
             }
         </style>
         <div class="container">
-            <h1 class="default-header">Votre succès est notre succès</h1>
+            <h1 class="default-header">Nous aidons les écoles et entreprises à concevoir leur propre école virtuelle</h1>
             <p class="default-paragraph"></p>
         </div>
         <div class="container-fluid">
             <div class="row pictures-grid">
                 <div class="hidden-xs hidden-sm col-md-3 column">
-                    <img src="https://teachable.com/assets/boxes-of-people/beard-e6c9dc7950adc1fd50cd62ca97d874fcc65d20e87e831de29ed09c4f4eb47156.jpg" alt="">
-                    <img src="https://teachable.com/assets/boxes-of-people/peace-70bdbab9bc81c1b6fe035aaeaf2e5749b43bf04a4614255a0dcca34d5ad9c484.jpg"alt="">
-                    <img src="https://teachable.com/assets/boxes-of-people/jade-6b63b22955668550d9723d8871cfa330aed18a01e8c61e3f3c10f20286bde0d2.jpg" alt="">
-                    <img src="https://teachable.com/assets/boxes-of-people/whitelady-886d415f2c99b275c32449e331fb04e9592234b20108fe6d087da06eea6b31e2.jpg" alt="">
-                    <img src="https://teachable.com/assets/boxes-of-people/teacher-901e005114ea89617f63f2281b941e6b5d512d54090e0ed01ca62ee072c46892.jpg" alt="">
+                    <img src="/images/divers/oschool-5.jpeg" alt=""><img src="/images/divers/oschool_4.png"
+                      alt="">
+                    <img src="/images/divers/os-1.png" alt="">
+                    <img src="/images/divers/os-2.png" alt=""><img
+                      src="/images/divers/os-3.png" alt="">
                 </div>
                 <div class="hidden-xs col-sm-4 col-md-3 column">
-                    <img src="https://teachable.com/assets/boxes-of-people/yellowsweater-008ad9cd17aeb7bf4b66d07e62a81b110352b6f8309ff73b90fcbd45a898644d.jpg" alt="">
-                    <img src="https://teachable.com/assets/boxes-of-people/kyle-05de8255f450b88a1268f5e1eaef1ac24bcaee684f15cb87c7cf5f44a00c7d4c.jpg" alt=""><img src="https://teachable.com/assets/boxes-of-people/tealshirt-f3fc7822b6b1dc6e90cfe65143c857fc067a1205a2c1eaaf5856b8e7a544e7ca.jpg" alt="">
+                    <img src="/images/divers/oschool_5.png" alt="">
+                    <img src="/images/divers/oschool-4.png" alt=""><img src="/images/divers/os_4.png"
+                      alt="">
                 </div>
                 <div class="col-sm-8 col-md-6 column">
                     <div class="row-1 clearfix">
-                        <img src="https://teachable.com/assets/boxes-of-people/ankur-915bd38cb9d4c7a881ef6ca90681c317e497f44766b6f458261caf89c0901b94.jpg" class="ankur" alt="">
+                        <img src="/images/divers/os_4.png" class="ankur" alt="">
                         <div class="row-1-col-2">
                             <div class="row-1-col-2-row-1">
-                                <img src="https://teachable.com/assets/boxes-of-people/leaves-f2d8049a1e75192632d5f3e1f74736deae03667b053b5f544a708e089e5e56a2.jpg" class="leaves" alt="">
-                                <img src="https://teachable.com/assets/boxes-of-people/computer-1a3879cbabc1783a1c514b5c4f94c736c3310bff3d761029d74779cd0e305d70.jpg" class="computer" alt="">
+                                <img src="https://teachable.com/assets/boxes-of-people/leaves-f2d8049a1e75192632d5f3e1f74736deae03667b053b5f544a708e089e5e56a2.jpg" class="leaves" alt=""><img
+                                  src="https://teachable.com/assets/boxes-of-people/computer-1a3879cbabc1783a1c514b5c4f94c736c3310bff3d761029d74779cd0e305d70.jpg" class="computer" alt="">
                             </div>
                             <div class="row-1-col-2-row-2">
                                 <img src="https://teachable.com/assets/boxes-of-people/laurence-e0a574262c9055f0cbaf617d8bfd1c604af0fa9b27c9c72b4c013d0eb9f2d6f1.jpg" class="laurence" alt="">
@@ -973,9 +974,9 @@
                         </div>
                     </div>
                     <div class="row-2 clearfix">
-                        <img src="https://teachable.com/assets/boxes-of-people/writer-86733135fcc6a86d2826eaa17e1648a1cc03aed3577d8228118f1c77cb7dda5e.jpg" class="writer">
-                        <img src="https://teachable.com/assets/boxes-of-people/don-6affb7ff54e752829d247f4cee47c5c01dbce5628631d8261554e8f470a57664.jpg" class="don">
-                        <img src="https://teachable.com/assets/boxes-of-people/hat-10f420ab1ce5ccc04b13dfeee96641b809be6658295ac328a2006b59ef14607b.jpg" class="hat">
+                        <img src="https://teachable.com/assets/boxes-of-people/writer-86733135fcc6a86d2826eaa17e1648a1cc03aed3577d8228118f1c77cb7dda5e.jpg" class="writer"><img
+                          src="https://teachable.com/assets/boxes-of-people/don-6affb7ff54e752829d247f4cee47c5c01dbce5628631d8261554e8f470a57664.jpg" class="don"><img src="https://teachable.com/assets/boxes-of-people/hat-10f420ab1ce5ccc04b13dfeee96641b809be6658295ac328a2006b59ef14607b.jpg"
+                          class="hat">
                     </div>
                 </div>
             </div>
