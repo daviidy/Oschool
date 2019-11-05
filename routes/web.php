@@ -29,7 +29,7 @@ Route::get('/users/settings', 'UserController@edit');
 
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 Route::resource('schools', 'SchoolController');
 
@@ -245,3 +245,8 @@ Route::get('/getCertificate/{course}', 'CourseController@getCertificate');
 //routes for ajax search
 
 Route::get('/ajax_course_search', 'LiveSearchController@action');
+
+
+//
+
+Auth::routes(['verify' => true]);

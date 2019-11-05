@@ -5,8 +5,11 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Contracts\Auth\CanResetPassword;
 
-class User extends Authenticatable
+use App\Notifications\PasswordReset;
+
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
@@ -114,11 +117,22 @@ class User extends Authenticatable
         return $this->hasMany('App\Answer');
     }
 
-
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new PasswordReset($token));
+    }
     //function for relationship between
     //user and tasks (many to many)
     public function tasks()
     {
         return $this->belongsToMany('App\Task');
     }
+    
+
+
+    
+        public function routeNotificationForMail($notification)
+        {
+            return $this->email;
+        }
 }
