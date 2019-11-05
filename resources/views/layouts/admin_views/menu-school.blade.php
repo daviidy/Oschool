@@ -988,7 +988,7 @@
                         </li>
                         <!---->
                         <!---->
-                        <li what="nav item" ui-sref-active="active"
+                        <li what="nav item" ui-sref-active="active" style="display:none"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('email_students') || permissions.can('view_gated_email')" text="Emails" icon="icon icon-envelope" sref="admin.emails">
                             <!----><a what="link" ui-sref="admin.emails" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/emails">
@@ -1004,7 +1004,7 @@
                         <!---->
                         <!---->
                         <!---->
-                        <li what="nav item" ui-sref-active="active"
+                        <li what="nav item" ui-sref-active="active" style="display:none"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-2': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_support')" text="Help" icon="icon icon-question-circle" sref="admin.help" pin-to-bottom="2" top-border="!(school.school_plan.name == 'free' &amp;&amp; permissions.can('view_plan'))"
                           class="pin-bottom-level-2 pin-bottom">
@@ -1020,7 +1020,7 @@
                         </li>
                         <!---->
                         <!---->
-                        <li what="nav item" ui-sref-active="active"
+                        <li what="nav item" ui-sref-active="active" style="display:none"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-1': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_gated_teachable_u') || permissions.can('access_teachable_u')" text="TeachableU" icon="fa fa-building-o" sref="admin.teachable-u" pin-to-bottom="1" class="pin-bottom-level-1 pin-bottom">
                             <!----><a what="link" ui-sref="admin.teachable-u" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/teachable-u">
@@ -1035,7 +1035,7 @@
                         </li>
                         <!---->
                         <!---->
-                        <li what="nav item" ui-sref-active="active"
+                        <li what="nav item" ui-sref-active="active" style="display:none"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-3': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::(school.school_plan.name == 'free' &amp;&amp; permissions.can('view_plan'))" text="Plan" icon="icon icon-rocket" sref="admin.settings.plan" pin-to-bottom="3" never-highlight="true" label="UPGRADE" top-border="true"
                           class="pin-bottom-level-3 pin-bottom top-border">
