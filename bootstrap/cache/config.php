@@ -444,16 +444,16 @@
   'mail' => 
   array (
     'driver' => 'smtp',
-    'host' => 'smtp.mailtrap.io',
-    'port' => '2525',
+    'host' => 'smtp.gmail.com',
+    'port' => '587',
     'from' => 
     array (
       'address' => 'eventsoschool@gmail.com',
       'name' => 'Oschool',
     ),
     'encryption' => 'tls',
-    'username' => '4e3523fee4a128',
-    'password' => 'ce50674c0ee220',
+    'username' => 'eventsoschool@gmail.com',
+    'password' => 'D@vidy2016',
     'sendmail' => '/usr/sbin/sendmail -bs',
     'markdown' => 
     array (
