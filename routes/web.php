@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/corporate', function () {
+    return view('corporate');
+});
+
 Auth::routes();
 
 Route::post('/register/user', 'CustomAuthController@addUser');
