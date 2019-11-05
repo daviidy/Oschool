@@ -57,13 +57,13 @@
             }
         </style>
         <div id="segment-event" type="hidden" value="Submit Home Page Hero Form"></div>
-        <div class="hero-div" style="background-image: url(/images/divers/oschool_3.jpg);">
+        <div class="hero-div" style="background-image: url(/images/divers/oschool_5.png);">
             <div class="container hero-container">
                 <div class="row">
                     <div class="col-xs-12 vertically-align-contents-except-xs">
                         <div class="hero-text hero-text-left">
-                            <h1>On ne va pas à l'école, on y est dèja.</h1>
-                            <h2>Nous vous aidons à apprendre les compétences les plus recherchées par les entreprises<!--Faites vous accompagner par nos mentors pendant votre apprentissage et réalisez des projets professionnalisants.--></h2>
+                            <h1>Une meilleure façon d’apprendre !</h1>
+                            <h2>En partenariat avec des universités, nous nous engageons à rendre l’apprentissage possible pour tous et partout.<!--Faites vous accompagner par nos mentors pendant votre apprentissage et réalisez des projets professionnalisants.--></h2>
                             <div class="input-container left">
                                 <div class="hidden redirect">/create-account</div>
                                 <div class="hidden iterable-event"></div>
@@ -105,10 +105,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="default-header">Votre reussite n'est pas loin</h1>
+                    <h1 class="default-header">Commencer gratuitement</h1>
                     <h1>
                     </h1>
-                    <h2 class="default-paragraph">Rejoignez les +2000 étudiants qui utilisent oschool pour apprendre les compétences les plus rechercher sur le marché de l'emploi.</h2>
+                    <h2 class="default-paragraph">Nous voyons un avenir brillant où tout le monde, partout peuvent poursuivre leur plein potentiel académique.</h2>
                 </div>
             </div>
 
@@ -162,7 +162,7 @@
         </style>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-md-5 image-column match-height" style="background-image: url(&quot;https://s3.amazonaws.com/cms-uploaded-images/kyK2e0BxSTSDMOUDlvlf_homepage-intro-image.jpg&quot;); height: 688px;">
+                <div class="col-xs-12 col-md-5 image-column match-height" style="background-image: url(/images/divers/oschool-4.png); height: 688px;">
                     <img src="https://s3.amazonaws.com/cms-uploaded-images/kyK2e0BxSTSDMOUDlvlf_homepage-intro-image.jpg">
                 </div>
                 <div class="col-md-1 hidden-sm hidden-xs"></div>
@@ -599,8 +599,8 @@
         </style>
         <div class="container-fluid">
             <div class="row">
-                <h1 class="default-header">Les meilleurs écoles sont sur Oschool</h1>
-                <p class="default-paragraph subheader">Apprenez les compétences qu'il vous faut pour réussir votre carrière</p>
+                <h1 class="default-header">Nos partenaires exclusifs</h1>
+                <p class="default-paragraph subheader">Si notre école en est là aujourd’hui, c’est aussi grâce aux coups de main précieux et à la confiance que nous ont accordés nos partenaires !</p>
             </div>
             <div class="slider-parent">
                 <div class="homepage-slider">
@@ -700,8 +700,8 @@
             </div>
             <div class="row last-row">
                 <div class="col-xs-12">
-                    <a href="/features" class="dark-green-button">Tous nos écoles</a>
-                    <p class="default-paragraph">En collaboration avec les leaders de l'industrie</p>
+                    <a href="/features" class="dark-green-button">Toutes nos écoles</a>
+                    <!--p class="default-paragraph">En collaboration avec les leaders de l'industrie</p>
                     <div class="clearfix company-logos">
                         <img src="/images/divers/cinetpay.png">
                         <img src="/images/divers/Epistrophe.jpg">
@@ -709,7 +709,7 @@
                         <img src="/images/divers/final.png">
                         <img src="/images/divers/LogoM-1.png">
                         <img src="/images/divers/Logo-1.png">
-                    </div>
+                    </div-->
 
                 </div>
             </div>
@@ -744,10 +744,10 @@
             <div class="row cards-row">
                 <div class="col-xs-12 col-md-4 card-column">
                     <div class="card-container">
-                        <div class="card-front" style="background-image: url(https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/SQqL7NUVR8Ov0zJv7CC9);">
+                        <div class="card-front" style="background-image: url(/images/divers/oschool-5.jpeg);">
                             <div class="card-front-text">
                                 <div class="name">
-                                    CS Lakin
+                                    Jean Philippe Touye Bi
                                 </div>
                                 <div class="course-name">
                                     <em>Vivre. Écrire. Prospérer.</em>
@@ -755,13 +755,13 @@
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“Ce qui l’a vraiment convaincu, pourquoi j’ai choisi l’école et pourquoi je l’aime et continuerai à suivre mes cours en ligne avec Oschool, c’est le formidable soutien dont ils bénéficient.”</p>
+                            <p class="testimonial-text">“Mon passage à Oschool a été très sincèrement fructueux pour moi car cela m’a donné de l'assurance, une carrure de Pro, également j'ai eu grâce à Oschool de la maturité dans le domaine du marketing sur les réseaux sociaux, tout cela par la qualité des enseignements.”</p>
                             <div class="card-bottom">
-                                <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/1Q8XrSq5SbWFgfqocPw2">
+                                <img src="/images/divers/oschool-5.jpeg">
                                 <div class="card-bottom-attribution">
                                     <div class="card-bottom-attribution-bottom ">
-                                        <div class="name">CS Lakin</div>
-                                        <a href="http://cslakin.teachable.com" target="_blank" rel="noopener noreferrer">Voir le cours</a>
+                                        <div class="name">Jean Philippe Touye Bi</div>
+                                        <!--a href="http://cslakin.teachable.com" target="_blank" rel="noopener noreferrer">Voir le cours</a-->
                                     </div>
                                 </div>
                             </div>
@@ -796,10 +796,10 @@
                 </div>
                 <div class="col-xs-12 col-md-4 card-column">
                     <div class="card-container">
-                        <div class="card-front" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/91dZmzQ3RdmL48qQ8BNO_homepage-cardtestimonial-juliestoian.jpg);">
+                        <div class="card-front" style="background-image: url(/images/divers/1258.jpg);background-size: cover;">
                             <div class="card-front-text">
                                 <div class="name">
-                                    Julie Stoian
+                                  Souleymane Coulibaly
                                 </div>
                                 <div class="course-name">
                                     <em>Digital Insiders For Life</em>
@@ -807,13 +807,13 @@
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“Je suis passé de la création de petits cours peu coûteux à de grands cours qui ont abouti à un revenu à 5 chiffres. C'est la solution idéale pour les entrepreneurs de services qui souhaitent faire évoluer leur activité.”</p>
+                            <p class="testimonial-text">“ très bonne plateforme d'apprentissage pour les adultes…”</p>
                             <div class="card-bottom">
-                                <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/HfVh1POeQCaTQbrr0D3r">
+                                <img src="/images/divers/1258.jpg">
                                 <div class="card-bottom-attribution">
                                     <div class="card-bottom-attribution-bottom ">
-                                        <div class="name">Julie Stoian</div>
-                                        <a href="http://school.juliestoian.com" target="_blank" rel="noopener noreferrer">Voir le cours</a>
+                                        <div class="name"> Souleymane Coulibaly</div>
+                                        <!--a href="http://school.juliestoian.com" target="_blank" rel="noopener noreferrer">Voir le cours</a-->
                                     </div>
                                 </div>
                             </div>
@@ -916,7 +916,7 @@
                         <h2>Rejoignez le show oschool sur facebook</h2>
                         <div class="description">
                             <p>Chaque vendredi à 19h, oschool organise un show sur facebook sur des questions de l'entreprenariat, du Elearning ... Vous êtes invités!  </p>
-                            <a href="https://teachable.com/webinars/quickstart1/register?src=homepage" target="_blank" rel="noopener noreferrer">Rejoignez-nous!</a>
+                            <a href="https://www.facebook.com/Oschool.ci/" target="_blank" rel="noopener noreferrer">Rejoignez-nous!</a>
                         </div>
                     </div>
                 </div>
@@ -943,26 +943,26 @@
             }
         </style>
         <div class="container">
-            <h1 class="default-header">Votre succès est notre succès</h1>
+            <h1 class="default-header">Nous aidons les écoles et entreprises à concevoir leur propre école virtuelle</h1>
             <p class="default-paragraph"></p>
         </div>
         <div class="container-fluid">
             <div class="row pictures-grid">
                 <div class="hidden-xs hidden-sm col-md-3 column">
-                    <img src="https://teachable.com/assets/boxes-of-people/beard-e6c9dc7950adc1fd50cd62ca97d874fcc65d20e87e831de29ed09c4f4eb47156.jpg" alt=""><img src="https://teachable.com/assets/boxes-of-people/peace-70bdbab9bc81c1b6fe035aaeaf2e5749b43bf04a4614255a0dcca34d5ad9c484.jpg"
+                    <img src="/images/divers/oschool-5.jpeg" alt=""><img src="/images/divers/oschool_4.png"
                       alt="">
-                    <img src="https://teachable.com/assets/boxes-of-people/jade-6b63b22955668550d9723d8871cfa330aed18a01e8c61e3f3c10f20286bde0d2.jpg" alt="">
-                    <img src="https://teachable.com/assets/boxes-of-people/whitelady-886d415f2c99b275c32449e331fb04e9592234b20108fe6d087da06eea6b31e2.jpg" alt=""><img
-                      src="https://teachable.com/assets/boxes-of-people/teacher-901e005114ea89617f63f2281b941e6b5d512d54090e0ed01ca62ee072c46892.jpg" alt="">
+                    <img src="/images/divers/os-1.png" alt="">
+                    <img src="/images/divers/os-2.png" alt=""><img
+                      src="/images/divers/os-3.png" alt="">
                 </div>
                 <div class="hidden-xs col-sm-4 col-md-3 column">
-                    <img src="https://teachable.com/assets/boxes-of-people/yellowsweater-008ad9cd17aeb7bf4b66d07e62a81b110352b6f8309ff73b90fcbd45a898644d.jpg" alt="">
-                    <img src="https://teachable.com/assets/boxes-of-people/kyle-05de8255f450b88a1268f5e1eaef1ac24bcaee684f15cb87c7cf5f44a00c7d4c.jpg" alt=""><img src="https://teachable.com/assets/boxes-of-people/tealshirt-f3fc7822b6b1dc6e90cfe65143c857fc067a1205a2c1eaaf5856b8e7a544e7ca.jpg"
+                    <img src="/images/divers/oschool_5.png" alt="">
+                    <img src="/images/divers/oschool-4.png" alt=""><img src="/images/divers/os_4.png"
                       alt="">
                 </div>
                 <div class="col-sm-8 col-md-6 column">
                     <div class="row-1 clearfix">
-                        <img src="https://teachable.com/assets/boxes-of-people/ankur-915bd38cb9d4c7a881ef6ca90681c317e497f44766b6f458261caf89c0901b94.jpg" class="ankur" alt="">
+                        <img src="/images/divers/os_4.png" class="ankur" alt="">
                         <div class="row-1-col-2">
                             <div class="row-1-col-2-row-1">
                                 <img src="https://teachable.com/assets/boxes-of-people/leaves-f2d8049a1e75192632d5f3e1f74736deae03667b053b5f544a708e089e5e56a2.jpg" class="leaves" alt=""><img

@@ -75,7 +75,7 @@
         <div class="row">
           <a class="create-course" href="{{route('login')}}">Salle de classe</a>
           <a class="teachable-logo" href="/" title="Teachable - Create a Course"><img src="/images/schools/logos/logo_oschool_blanc.png" alt="" style="width: 130px;"></a>
-          <a class="log-in" href="/login?src=nav">Entreprises</a>
+          <!--a class="log-in" href="/login?src=nav">Entreprises</a-->
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -84,12 +84,12 @@
           <div class="navbar-collapse collapse">
             <ul>
               <li class="dropdown-only"><a href="{{route('login')}}">Salle de classe</a></li>
-              <li class="dropdown-only"><a href="/login?src=nav">Entreprises</a></li>
+              <!--li class="dropdown-only"><a href="/login?src=nav">Entreprises</a></li-->
               <li><a href="{{url('schools')}}">Nos écoles</a></li>
-              <li><a href="/pricing">Nos offres de formations</a></li>
-              <li><a href="/examples">Emplois</a></li>
-              <li><a href="/blog">Evernements</a></li>
-              <li><a href="/blog/resources">Blog</a></li>
+              <li><a href="/pricing">Qui sommes nous?</a></li>
+              <li><a href="/examples">Evénements</a></li>
+              <li><a href="/blog">Entreprises</a></li>
+              <!--li><a href="/blog/resources">Blog</a></li-->
             </ul>
           </div>
         </div>

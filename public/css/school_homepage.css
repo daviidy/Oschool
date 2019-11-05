@@ -1565,7 +1565,7 @@
   .testimonial-cards .card-back .testimonial-text{font-size:20px;}
   }
   .testimonial-cards .card-back .card-bottom{position:absolute;bottom:40px;}
-  .testimonial-cards .card-back .card-bottom img{width:52px;border-radius:100px;margin-right:10px;}
+  .testimonial-cards .card-back .card-bottom img{width:52px;height: 52px;border-radius:100px;margin-right:10px;}
   .testimonial-cards .card-back .card-bottom .card-bottom-attribution{float:right;position:relative;}
   .testimonial-cards .card-back .card-bottom .card-bottom-attribution .card-bottom-attribution-bottom{position:absolute;bottom:0;width:182px;}
   .testimonial-cards .card-back .card-bottom .card-bottom-attribution .card-bottom-attribution-bottom .name{font-size:14px;color:#2c2f33;letter-spacing:.05em;}

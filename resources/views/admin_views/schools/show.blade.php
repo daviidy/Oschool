@@ -63,7 +63,7 @@
                                         <!----></span>
                                     <!---->
                                     <!---->
-                                    <!----><span ng-bind="step.text | translate">Inscrivez-vous à notre webinaire en direct</span>
+                                    <!----><span ng-bind="step.text | translate">Blog Oschool</span>
                                     <!----><span ng-if="!step.completed() &amp;&amp; !step.disabled()" class="right-arrow">›</span>
                                     <!---->
                                     <!---->
@@ -72,7 +72,7 @@
                                         <!---->
                                         <!---->
                                         <div ng-if="step.liveWorkshop" ng-click="step.click()" class="tch-pill-sidelink fastclickable">
-                                            <!----><span ng-if="workshopState() == 'signup'">Revendiquer ma place</span>
+                                            <!----><span ng-if="workshopState() == 'signup'"></span>
                                             <!---->
                                             <!---->
                                             <!---->
