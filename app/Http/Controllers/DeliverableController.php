@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Deliverable;
 use App\Project;
+use App\School;
+use App\Course;
 use App\User;
+use DB;
 use Illuminate\Http\Request;
 
 class DeliverableController extends Controller
@@ -14,9 +17,10 @@ class DeliverableController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Course $course, Project $project, School $school )
     {
-        //
+        $deliverables = DB::table('deliverables')->orderBy('created_at', 'desc')->paginate(15);
+        return view('admin_views.deliverables.index', ['deliverables' => $deliverables, 'school' => $school, 'project' => $project, 'course' => $course]);
     }
 
     /**
@@ -59,9 +63,9 @@ class DeliverableController extends Controller
      * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function edit(Deliverable $deliverable)
+    public function edit(Course $course,Project $project, Deliverable $deliverable, School $school)
     {
-        //
+        return view('admin_views.deliverables.comment', ['course' => $course,'deliverable' => $deliverable,  'school' => $school, 'project' => $project]);
     }
 
     /**
@@ -73,7 +77,9 @@ class DeliverableController extends Controller
      */
     public function update(Request $request, Deliverable $deliverable)
     {
-        //
+        $deliverable->update($request->all());
+        $deliverable->save();
+        return back()->with('status', 'Commentaire ajouté');
     }
 
     /**

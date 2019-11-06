@@ -89,7 +89,6 @@ Route::post('/deleteSchool', 'SchoolController@deleteSchool');
 Route::post('/updateSchool', 'SchoolController@updateSchool');
 Route::post('/addAuthor', 'SchoolController@addAuthor');
 Route::post('/addLecture', 'LessonController@store');
-// Route::post('/submitDoc', 'DeliverableController@store');
 Route::post('/updateLecture', 'LessonController@update');
 Route::post('/saveNewPositions', 'LessonController@saveNewPositions');
 Route::post('/saveNewSectionPositions', 'LessonController@saveNewSectionPositions');
@@ -149,6 +148,10 @@ Route::get('/schoolAdmin/{school}/courses/{course}/information', 'CourseControll
 
 //course pages
 Route::get('/schoolAdmin/{school}/courses/{course}/pages', 'CourseController@pages')->name('course');
+//course deliverable
+Route::get('/schoolAdmin/{school}/courses/{course}/deliverable', 'DeliverableController@index');
+//edit deliverable
+Route::get('/schoolAdmin/course/{course}/project/{project}/deliverable/{deliverable}/edit', 'DeliverableController@edit');
 
 //course curriculum
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum')->name('course');
@@ -241,7 +244,9 @@ Route::post('/updateAuthor/{author}', 'AuthorController@update');
 
 
 
+//fot deliverable 
 
+Route::post('/addComment/{deliverable}', 'DeliverableController@update');
 
 //routes for certificate
 Route::get('/certificate/{course}', 'CourseController@certificate');
