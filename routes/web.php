@@ -61,6 +61,8 @@ Route::resource('tasks', 'TaskController');
 
 Route::resource('authors', 'AuthorController');
 
+Route::resource('deliverables', 'DeliverableController');
+
 
 /*
 
@@ -87,6 +89,7 @@ Route::post('/deleteSchool', 'SchoolController@deleteSchool');
 Route::post('/updateSchool', 'SchoolController@updateSchool');
 Route::post('/addAuthor', 'SchoolController@addAuthor');
 Route::post('/addLecture', 'LessonController@store');
+// Route::post('/submitDoc', 'DeliverableController@store');
 Route::post('/updateLecture', 'LessonController@update');
 Route::post('/saveNewPositions', 'LessonController@saveNewPositions');
 Route::post('/saveNewSectionPositions', 'LessonController@saveNewSectionPositions');

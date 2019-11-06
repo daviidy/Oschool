@@ -286,6 +286,12 @@ a:focus{color:inherit;text-decoration:none;}
       <div>
         <div id="overlay-sendWorks" class="overlay"></div>
         <div class="modalWrapper" style="left: 453px;">
+
+          {{-- Submit doc Beginning --}}
+          
+        <form method="POST" action="{{route('deliverables.store')}}" >
+            @csrf
+
           <div id="modal" class="modal rounded-t-lg ">
             <div class="modal-cover rounded-t-lg ">
               <div class="coverWrapper rounded-t-lg rounded-b-none">
@@ -297,19 +303,24 @@ a:focus{color:inherit;text-decoration:none;}
             </div>
             <div class="modal-contents">
               <div class="modal-headline">
-                <div class="logo" style="background-image: url(&quot;http://platform.mindvalley.com/images/facebook-logo-fcffd6148ae561d4eaba1bf6dfb9430a.png?vsn=d&quot;);"></div>
-                <h3 class="text-2xl ml-2 mt-1">Supercerveau</h3>
+                {{-- <div class="logo" style="background-image: url(&quot;http://platform.mindvalley.com/images/facebook-logo-fcffd6148ae561d4eaba1bf6dfb9430a.png?vsn=d&quot;);"></div> --}}
+                <h3 class="text-2xl ml-2 mt-1">Soumission de projet</h3>
               </div>
-              <div class="modal-input"><span class="mb-2">Passphrase for first time login.</span>
-                <div class="relative"><input type="text" class="input input--withButton text-center">
+              <div class="modal-input"><span class="mb-2">Veuillez copier les liens de votre projet</span>
+                <div class="relative">
+                  <input name="link" type="text" placeholder="https://exemple.drive.com" class="input input--withButton text-center">
+                <input type="hidden" name="project_id" value="{{$project->id}}">
+                  <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                   <div class="button button--input"><i class="icon icon-copy" aria-hidden="true"></i></div>
                 </div>
               </div>
-              <div class="modal-button"><a href="https://www.facebook.com/groups/mindvalley.supercerveau/" class="button button--primary w-full">Go To Community</a></div>
+              <button type="submit" class="modal-button button button--primary w-full">Soumettre mon projet</button>
             </div>
           </div>
         </div>
       </div>
+    </form>
+      {{-- Submit doc end --}}
       <div class="navbar">
         <div class="navbar-container">
           <div class="navbar-leftNavigation"><a href="http://platform.mindvalley.com/quests/supercerveau" class="navbar-link"><i class="icon icon-long-arrow-left" aria-hidden="true"></i> <span class="navbar-linkText">Back To days</span></a>

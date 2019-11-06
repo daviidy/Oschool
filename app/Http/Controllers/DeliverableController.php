@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Deliverable;
+use App\Project;
+use App\User;
 use Illuminate\Http\Request;
 
 class DeliverableController extends Controller
@@ -24,7 +26,7 @@ class DeliverableController extends Controller
      */
     public function create()
     {
-        //
+        // return view('admin_views.projects.show');
     }
 
     /**
@@ -35,7 +37,9 @@ class DeliverableController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $deliverable = Deliverable::create($request->all());
+        $deliverable->save();
+        return back();
     }
 
     /**
