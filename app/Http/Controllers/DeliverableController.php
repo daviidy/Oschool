@@ -90,6 +90,7 @@ class DeliverableController extends Controller
      */
     public function destroy(Deliverable $deliverable)
     {
-        //
+        $deliverable->delete();
+        return back()->with('status', 'Delivrable supprimé');
     }
 }

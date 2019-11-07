@@ -1,4 +1,4 @@
-@extends('layouts.admin_views.menu-school-icon')
+@extends('layouts.admin_views.menu-school')
 @section('content')
 
 <style media="screen">
@@ -350,14 +350,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
 
 
-                                {{-- <form action="{{ route('deliverables.destroy', $deliverable) }}" method="post">
-                                    {{ csrf_field() }}
+                                <form action="{{ route('deliverables.destroy', $deliverable->id) }}" method="post">
+                                    @csrf
                                     {{ method_field('delete') }}
                                     <button
                                         id="test-id-unpublish-btn"
                                         class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i>
                                     </button>
-                                </form> --}}
+                                </form>
 
 
                                 {{-- <form action="" method="post">
