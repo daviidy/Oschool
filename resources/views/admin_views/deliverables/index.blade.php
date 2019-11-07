@@ -303,9 +303,10 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <table ng-if="products.length > 0" class="tch-table draggable-products">
                 <thead>
                     <tr>
-                        <th>Lien</th>
+                        <th>Nom de l'etudiant</th>
                         {{-- <th>Image</th> --}}
                         <th>Commentaire</th>
+                        <th>Evaluation</th>
                         {{-- <th>Prix<a href="#" tooltip="The default price will be set to the first pricing plan on this list." tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="tch-btn-tooltip no-padding"><i
                                   class="fa fa-question-circle"></i>
                                 </a>
@@ -318,7 +319,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     @foreach ($deliverables as $deliverable)
                     
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
-                        <td><span>{{$deliverable->link}}</span><span class="space"></span><span class="space"></span>
+                        <td><span>{{Auth::user()->name}}</span><span class="space"></span><span class="space"></span>
                             <!---->
                         </td>
                         {{-- <td what="type"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg">
@@ -328,16 +329,21 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Gratuit</span>
                             <!---->
                         </td> --}}
-                        <td what="bio">{!!$deliverable->comment!!}</td>
+                        <td what="comment">{!!$deliverable->comment!!}</td>
 
                         {{-- <td what="price" ng-bind="formatProductPrice(product)">
                         </td> --}}
+                        <td>
+                            <div>
+                                <p>{{$deliverable->status == 1 ? "Validé" : "A retravailler"}}</p>
+                            </div>
+                        </td>
                         <td></td>
                         <td>
                             <!---->
                             <!---->
                             <div ng-if="product.is_published" class="pull-right">
-                            <a href="/schoolAdmin/course/{{$course->id}}/project/{{$project->id}}/deliverable/{{$deliverable->id}}/edit">
+                            <a href="/schoolAdmin/course/{{$course->id}}/project/{{$deliverable->project_id}}/deliverable/{{$deliverable->id}}/edit">
                                     <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
                                 </a>
 
@@ -367,6 +373,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             </div>
                             <!---->
                         </td>
+
+                        
                     </tr>
 
                     @endforeach

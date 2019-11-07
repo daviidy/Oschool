@@ -149,7 +149,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/information', 'CourseControll
 //course pages
 Route::get('/schoolAdmin/{school}/courses/{course}/pages', 'CourseController@pages')->name('course');
 //course deliverable
-Route::get('/schoolAdmin/{school}/courses/{course}/deliverable', 'DeliverableController@index');
+Route::get('/schoolAdmin/courses/{course}/deliverable', 'DeliverableController@index');
 //edit deliverable
 Route::get('/schoolAdmin/course/{course}/project/{project}/deliverable/{deliverable}/edit', 'DeliverableController@edit');
 

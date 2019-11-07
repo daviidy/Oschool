@@ -17,10 +17,10 @@ class DeliverableController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Course $course, Project $project, School $school )
+    public function index(School $school, Project $project, Course $course )
     {
         $deliverables = DB::table('deliverables')->orderBy('created_at', 'desc')->paginate(15);
-        return view('admin_views.deliverables.index', ['deliverables' => $deliverables, 'school' => $school, 'project' => $project, 'course' => $course]);
+        return view('admin_views.deliverables.index', ['school' => $school,'deliverables' => $deliverables,  'project' => $project, 'course' => $course]);
     }
 
     /**
@@ -63,9 +63,9 @@ class DeliverableController extends Controller
      * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course,Project $project, Deliverable $deliverable, School $school)
+    public function edit( School $school ,Course $course,Project $project, Deliverable $deliverable )
     {
-        return view('admin_views.deliverables.comment', ['course' => $course,'deliverable' => $deliverable,  'school' => $school, 'project' => $project]);
+        return view('admin_views.deliverables.comment', ['school' => $school, 'course' => $course,'deliverable' => $deliverable,  'project' => $project]);
     }
 
     /**

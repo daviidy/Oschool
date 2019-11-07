@@ -105,7 +105,7 @@
     <li what="nav item" ui-sref-active="active"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Drip"
       sref="admin.courses.course.drip">
-        <!----><a  href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/deliverable" class="" style="">
+        <!----><a  href="/schoolAdmin/courses/{{$course->id}}/deliverable" class="" style="">
             <!---->
             <!---->
             <!---->

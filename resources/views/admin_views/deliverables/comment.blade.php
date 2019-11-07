@@ -1,4 +1,4 @@
-@extends('layouts.admin_views.menu-school-icon')
+@extends('layouts.admin_views.menu-school')
 @section('content')
 
 <style media="screen">
@@ -400,18 +400,20 @@
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="POST" action="{{url('deliverables', $deliverable)}}" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="#editor-container">
+            <form method="POST" action="{{url('deliverables', $deliverable)}}" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="editor-container">
                 @csrf
                 {{ method_field('patch') }}
                     <!---->
                     <!---->
-                    <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/deliverable" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+                    <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/courses/{{$course->id}}/deliverable" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
                         <!---->
                         <!---->
                         <!---->
                         <div class="inline-form-container col-sm-6 col-sm-offset-3">
                             <!---->
                             <div ng-if="planType == 'free'" class="col-sm-12">
+                                    <p><h4>Lien :</h4>  <a href="{{$deliverable->link}}">Lien du projet soumis</a></p>
+                                    <br>
                                 {{-- <div class="input-group input-group-image"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg"></div> --}}
                                 <div class="input-group input-group-label"><span>Commentaire</span></div>
                             </div>
@@ -421,16 +423,24 @@
                             <!---->
                             <div ng-show="products.length > 0" class="">
                             <div class="col-sm-12 add-top-margin-25">
-                                <br>
                                   </div>
 
                                 <div class="col-sm-12 add-top-margin-25">
-                                    <input type="hidden" value="" name="comment">
-                                      <div id="editorComment" style="height: 300px;">
-                                        
-                                      </div>
+                                        @if($deliverable->comment == null)
+                                        <input type="hidden" value="" name="comment">
+                                        <div id="editorComment" style="height: 300px;">
+                                              
+                                        </div>
+                                        @else
+                                        <input type="hidden" value="" name="comment">
+                                        <div id="editorComment" style="height: 300px;">
+                                              {!!$deliverable->comment!!}
+                                        </div>
+                                        @endif
                                         <br>
-                                      <select name="status" id="status" style="width:250px; ">
+
+                                        
+                                      <select name="status" id="status" style="width:250px;">
                                         @if($deliverable->status == 1)
                                           <option value="1" selected>Valide</option>
                                           <option value="2" >A retravailler</option>
@@ -481,12 +491,12 @@
             theme: 'snow'
             });
 
-            var form = document.querySelector('form');
-            form.onsubmit = function() {
+            var formC = document.getElementById('editor-container');
+            formC.onsubmit = function() {
             // Populate hidden form on submit
             var comment = document.querySelector('input[name=comment]');
             comment.value = quillComment.root.innerHTML;
-            console.log("Submitted",quillComment.root.innerHTML ,$(form).serialize(), $(form).serializeArray());
+            // alert("Submitted",quillComment.root.innerHTML ,$(formC).serialize(), $(formC).serializeArray());
             
             // No back end to actually submit to!
             // alert('Open the console to see the submit data!')
