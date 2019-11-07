@@ -295,6 +295,8 @@
                     @include('includes.admin_views.submenus.emails-nav')
                     @if(\Route::current()->getName() == 'course')
                       @include('includes.admin_views.submenus.course-nav')
+                        @elseif(\Route::current()->getName() == 'deliverable')
+                      @include('includes.admin_views.submenus.course-nav')
                     @endif
 
 

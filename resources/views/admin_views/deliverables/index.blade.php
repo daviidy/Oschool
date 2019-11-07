@@ -1,4 +1,4 @@
-@extends('layouts.admin_views.menu-school')
+@extends('layouts.admin_views.menu-school-icon')
 @section('content')
 
 <style media="screen">
@@ -317,7 +317,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
                     @foreach ($deliverables as $deliverable)
-                    
+
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
                         <td><span>{{Auth::user()->name}}</span><span class="space"></span><span class="space"></span>
                             <!---->
@@ -335,7 +335,13 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         </td> --}}
                         <td>
                             <div>
-                                <p>{{$deliverable->status == 1 ? "Validé" : "A retravailler"}}</p>
+                                @if($deliverable->status == null)
+                                    <p>En attente d'évaluation</p>
+                                    @elseif($deliverable->status == 1)
+                                        <p>Validé</p>
+                                @else
+                                    <p>A retravailler</p>
+                                @endif
                             </div>
                         </td>
                         <td></td>
@@ -374,7 +380,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                         </td>
 
-                        
+
                     </tr>
 
                     @endforeach

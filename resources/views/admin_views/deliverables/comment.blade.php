@@ -1,4 +1,4 @@
-@extends('layouts.admin_views.menu-school')
+@extends('layouts.admin_views.menu-school-icon')
 @section('content')
 
 <style media="screen">
@@ -232,7 +232,7 @@
         .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
         /*! CSS Used from: Embedded */
         .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
-        
+
         /*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-79e90a8f89fd85fce9ba.css ; media=screen */
         @media screen{
         .redactor-box{position:relative;overflow:visible;margin-bottom:24px;}
@@ -374,10 +374,10 @@
         .redactor-editor{max-height:300px;}
         *,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
         }
-        
+
         </style>
-        
-        
+
+
         <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
             <div what="page header" class="tch-section-nav tch-page-header" icon="icon icon-cash-dollar" text="Pricing">
                 <div ng-class="{ 'has-sections': sections }" class="tch-section-nav-wrapper affixed">
@@ -396,7 +396,7 @@
                 </div>
             </div>
             <div class="tch-inline-form">
-        
+
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
@@ -429,7 +429,7 @@
                                         @if($deliverable->comment == null)
                                         <input type="hidden" value="" name="comment">
                                         <div id="editorComment" style="height: 300px;">
-                                              
+
                                         </div>
                                         @else
                                         <input type="hidden" value="" name="comment">
@@ -439,26 +439,33 @@
                                         @endif
                                         <br>
 
-                                        
+                                            <label for="status">Status : </label>
+
                                       <select name="status" id="status" style="width:250px;">
-                                        @if($deliverable->status == 1)
-                                          <option value="1" selected>Valide</option>
-                                          <option value="2" >A retravailler</option>
-                                          @elseif($deliverable->status == 2)
-                                          <option value="1">Valide</option>
-                                        <option value="2" selected>A retravailler</option>
-                                        @else
+
+                                              @if($deliverable->status == 1)
+
+                                              <option value="1" selected>Valide</option>
+                                              <option value="2" >A retravailler</option>
+
+                                              @elseif($deliverable->status == 2)
+
+                                                  <option value="1">Valide</option>
+                                                  <option value="2" selected>A retravailler</option>
+                                            @else
+
                                         <option value="1">Valide</option>
                                         <option value="2">A retravailler</option>
+
                                         @endif
                                         </select>
                                   </div>
-        
+
                                  <input style="display: none;" type="text" name="school_id" value="">
                                  {{-- <input style="display: none;" type="text" name="type" value="Free"> --}}
                                  {{-- <input style="display: none;" type="text" name="recurring" value="No"> --}}
-        
-        
+
+
                             </div>
                             <input style="display: none;" type="hidden" name="project_id" value="{{$project->id}}">
                             <input style="display: none;" type="hidden" name="user_id" value="{{Auth::user()->id}}">
@@ -469,14 +476,14 @@
                 </form>
             </ng-include>
         </div>
-        
+
             </div><br>
             @include('includes.information')
         </div>
 
 
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-        
+
 
         <script>
             var quillComment = new Quill('#editorComment', {
@@ -497,12 +504,11 @@
             var comment = document.querySelector('input[name=comment]');
             comment.value = quillComment.root.innerHTML;
             // alert("Submitted",quillComment.root.innerHTML ,$(formC).serialize(), $(formC).serializeArray());
-            
+
             // No back end to actually submit to!
             // alert('Open the console to see the submit data!')
             return true;
             };
           </script>
-        
+
         @endsection
-        
