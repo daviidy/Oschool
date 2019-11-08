@@ -88,7 +88,7 @@
               <li><a href="{{url('schools')}}">Nos écoles</a></li>
               <li><a href="/pricing">Qui sommes nous?</a></li>
               <li><a href="/examples">Evénements</a></li>
-              <li><a href="/blog">Entreprises</a></li>
+              <li><a href="/corporate">Entreprises</a></li>
               <!--li><a href="/blog/resources">Blog</a></li-->
             </ul>
           </div>

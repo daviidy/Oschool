@@ -119,8 +119,8 @@
 
       <div class="row">
       <div class="col-xs-12">
-        <h1 class="default-header">Businesses</h1>
-        <p class="default-paragraph">Use Teachable within your organization to provide value to your customers, train employees, or sell courses to the general public</p>
+        <h1 class="default-header">Nos écoles </h1>
+        <p class="default-paragraph">Utilisez Oschool au sein de votre entreprise pour apporter de la valeur à vos clients, former des employés ou vendre des cours au grand public</p>
       </div>
     </div>
 

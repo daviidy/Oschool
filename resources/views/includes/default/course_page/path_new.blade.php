@@ -57,7 +57,7 @@ p:last-of-type{margin-bottom:0;}
 .certificate-banner{position:relative;}
 .certificate-banner__image{position:absolute;z-index:10;top:10px;left:3px;}
 .certificate-banner__content{left:-10px;position:absolute;top:18px;overflow:visible;max-width:235px;min-height:26px;background-color:#fbbc05;color:#0e3ec1;z-index:2;}
-.certificate-banner__content__wrapper{width:100%;height:100%;position:relative;padding-right:5px;max-width:235px;min-height:26px;display:flex;align-items:center;justify-content:flex-end;}
+.certificate-banner__content__wrapper{width:100%;height:10%;position:relative;padding-right:5px;max-width:235px;min-height:26px;display:flex;align-items:center;justify-content:flex-end;}
 .certificate-banner__content svg{right:-9px;position:absolute;top:0;height:100%;width:10px;}
 .certificate-banner__content:before{content:"";height:0;width:0;display:block;position:absolute;top:-8px;left:0;border-bottom:10px solid #ee8c00;border-left:10px solid transparent;transform:scaleY(.7);}
 .certificate-banner__content__text{padding:6px 2px 6px 51px;z-index:2;}
@@ -341,9 +341,9 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 }
 .heading--h4,h4{font-size:1.8rem;font-weight:400;line-height:2.8rem;letter-spacing:0;}
 .heading--h4-medium{font-weight:500;}
-.btn--primary{background:#1a73e8;color:#fff;}
-.btn--primary:focus,.btn--primary:hover{background:#174ea6;}
-.btn--primary:disabled{cursor:default;background:#dadce0;color:#fff;}
+.btn--primary{background:#4d90cc;color:#fff;}
+.btn--primary:focus,.btn--primary:hover{background:#6aace6;}
+.btn--primary:disabled{cursor:default;background:#6aace6;color:#fff;}
 .btn--primary:after{background:rgba(0,0,0,.4);}
 .btn--secondary{background:#f1f3f4;color:#202124;}
 .btn--secondary:focus,.btn--secondary:hover{background:#e8eaed;color:#174ea6;}
@@ -680,15 +680,15 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 
                 <ul class="course-hero-unenrolled__logos">
 
-                    <li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0)' : 'none'}"
-                      style="background-image: none;"><img src="https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0" alt="partner logo"></li>
+                    <!--li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0)' : 'none'}"
+                      style="background-image: none;display:none"><img src="https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0" alt="partner logo"></li>
 
                     <li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/GK4YywbV1WSn_P4o2TLtQzGI03eEcKWFajo3LwU4QcA75N42Wtjx9zBUIgn-cj5ZoAtTMH0XkLE7YsHP-d7J6Yk=s0)' : 'none'}"
                       style="background-image: none;"><img src="https://lh3.googleusercontent.com/GK4YywbV1WSn_P4o2TLtQzGI03eEcKWFajo3LwU4QcA75N42Wtjx9zBUIgn-cj5ZoAtTMH0XkLE7YsHP-d7J6Yk=s0" alt="partner logo"></li>
 
                     <li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/DalyD9rgzRK_CCCquSYsZMgq2YgdHSuEETd5z0NKQEqNKRf7U8EwEyv9YAxvUpDpbmYJnZ_c_RS-VhIT68dfw2c=s0)' : 'none'}"
                       style="background-image: none;"><img src="https://lh3.googleusercontent.com/DalyD9rgzRK_CCCquSYsZMgq2YgdHSuEETd5z0NKQEqNKRf7U8EwEyv9YAxvUpDpbmYJnZ_c_RS-VhIT68dfw2c=s0" alt="partner logo"></li>
-
+-->
                 </ul>
 
 
@@ -1596,7 +1596,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
         </div>
     </section>
 
-    <section class="course-detail__section course-detail__skills content__container--full-width">
+    <section class="course-detail__section course-detail__skills content__container--full-width" style="display:none">
         <div class="content__wrapper">
             <h2 class="course-detail__section__title">Compétences que vous allez maîtriser</h2>
             <div class="skills">
@@ -1788,7 +1788,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 
     <section class="pricing py-5" id="price">
       <div class="container">
-        <h1 class="title-price">Nos offres de prix</h1>
+        <h1 id="" class="title-price">Nos offres de prix</h1>
         <div class="row">
           <!-- Free Tier -->
           @foreach($course->pricings as $pricing)
