@@ -54,7 +54,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    @if(count($course->author) > 0)
+                                    @if($course->author)
                                     {{$course->author->full_name}}
                                     @else
                                     Aucun auteur
