@@ -60,6 +60,8 @@ input::placeholder{color:inherit;opacity:.5;}
 .modal-input{-ms-flex-direction:column;flex-direction:column;}
 .modalWrapper{position:fixed;width:100%;z-index:50;padding:1rem 1.5rem;border-radius:.25rem;top:15%;transform:translateY(-200%);transition:transform .8s ease-in-out;max-width:460px;}
 .modalWrapper.is-active{transform:translateY(0);}
+.modalWrapperagain{position:fixed;width:100%;z-index:50;padding:1rem 1.5rem;border-radius:.25rem;top:15%;transform:translateY(-200%);transition:transform .8s ease-in-out;max-width:460px;}
+.modalWrapperagain.is-active{transform:translateY(0);}
 .rounded-b-none{border-bottom-right-radius:0;border-bottom-left-radius:0;}
 .rounded-t-lg{border-top-left-radius:.5rem;}
 .rounded-t-lg{border-top-right-radius:.5rem;}
@@ -174,18 +176,39 @@ input::placeholder{color:inherit;opacity:.5;}
               </div>
             </div>
           </div>
-          <div class="bottomBar">
-            <div class="bottomBar-container">
-                <button id="sendWorks" class="button button--primary button--bottomBar" style="display: block;">
-                    Envoyer mes travaux
-                </button>
-                <button disabled="disabled" class="button is-disabled button--bottomBar"
-                style="display: none;">
-                Mark As Complete
-                </button>
-              <div class="bottomBar-message" style="display: none;">
-                <div class="sign sign--small sign--completedAlt mr-3"><i class="icon icon-check" aria-hidden="true"></i></div> <span class="text-green font-bold">Terminé</span>
-              </div>
+            <div class="bottomBar">
+                <div class="bottomBar-container">
+                    {{-- @if(count(DB::table('deliverables')->get()->where('user_id', Auth::user()->id)) > 0) --}}
+                    @if(count(Auth::user()->deliverables->where('user_id', Auth::user()->id)) > 0)
+                    @foreach(Auth::user()->deliverables as $deliverable)
+                    @if($deliverable->status == null)
+                      <button disabled="disabled" class="button is-disabled button--bottomBar"
+                      style="cursor: not-allowed;
+                      background-color: rgb(229, 229, 229) !important;
+                      pointer-events:none;">
+                        Votre projet a deja été envoyé
+                      </button>
+                            
+                    @elseif($deliverable->status == '0')
+
+                      <button id="sendWorksAgain" class="button button--primary button--bottomBar" style="display: block;">
+                          Renvoyer mes travaux
+                      </button>
+                    
+                    @else 
+                    <div class="bottomBar-message">
+                      <div class="sign sign-==-small sign--completedAlt mr-3"><i class="icon icon-check" aria-hidden="true"></i></div> <span class="text-green font-bold">Projet Validé</span>
+                    </div>
+
+                    @endif
+                    @endforeach
+
+                    @else
+                        <button id="sendWorks" class="button button--primary button--bottomBar" style="display: block;">
+                            Envoyer mes travaux
+                        </button>
+                    @endif
+                    
             </div>
           </div>
         </div>
@@ -211,7 +234,21 @@ input::placeholder{color:inherit;opacity:.5;}
         $('#overlay-sendWorks').removeClass("is-active");
         $('#overlay-sendWorks').siblings('.modalWrapper').removeClass("is-active");
 
+    });$('#sendWorksAgain').on('click', function() {
+        $('#overlay-sendWorks').addClass("is-active");
+        $('#overlay-sendWorks').siblings('.modalWrapperagain').addClass("is-active");
+
     });
+
+
+    $('.button--round').on('click', function() {
+        $('#overlay-sendWorks').removeClass("is-active");
+        $('#overlay-sendWorks').siblings('.modalWrapperagain').removeClass("is-active");
+
+    });
+
+
+
     </script>
 
 </body>

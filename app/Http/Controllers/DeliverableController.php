@@ -7,15 +7,20 @@ use App\Project;
 use App\School;
 use App\Course;
 use App\User;
+use Auth;
 use DB;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class DeliverableController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param School $school
+     * @param Project $project
+     * @param Course $course
+     * @return Response
      */
     public function index(School $school, Project $project, Course $course )
     {
@@ -26,42 +31,49 @@ class DeliverableController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function create()
     {
-        // return view('admin_views.projects.show');
+         //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
         $deliverable = Deliverable::create($request->all());
         $deliverable->save();
-        return back();
+        return back()->with('success', 'Votre projet a été envoyer');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Deliverable  $deliverable
-     * @return \Illuminate\Http\Response
+     * @param Deliverable $deliverable
+     * @return void
      */
     public function show(Deliverable $deliverable)
     {
-        //
+        $deliverable = Deliverable::all();
+        //  return ;
+         return view('admin_views.projects.show', ['deliverable' => $deliverable]);
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Deliverable  $deliverable
-     * @return \Illuminate\Http\Response
+     * @param School $school
+     * @param Course $course
+     * @param Project $project
+     * @param Deliverable $deliverable
+     * @return Response
      */
     public function edit( School $school ,Course $course,Project $project, Deliverable $deliverable )
     {
@@ -71,9 +83,9 @@ class DeliverableController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Deliverable  $deliverable
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Deliverable $deliverable
+     * @return Response
      */
     public function update(Request $request, Deliverable $deliverable)
     {
@@ -82,11 +94,21 @@ class DeliverableController extends Controller
         return back()->with('status', 'Commentaire ajouté');
     }
 
+
+    public function resubmitDeliverable(Request $request)
+    {
+        $deliverable = Deliverable::where('project_id', $request->project_id)->where('user_id', Auth::user()->id)->first();
+        $deliverable->status = null;
+        $deliverable->save();
+        return back()->with('success', 'Vos travaux ont bien ete resoumis');
+    }
+
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Deliverable  $deliverable
-     * @return \Illuminate\Http\Response
+     * @param Deliverable $deliverable
+     * @return Response
+     * @throws \Exception
      */
     public function destroy(Deliverable $deliverable)
     {

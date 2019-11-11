@@ -439,23 +439,23 @@
                                         @endif
                                         <br>
 
-                                            <label for="status">Status : </label>
+                                            <label for="status">Statut : </label>
 
                                       <select name="status" id="status" style="width:250px;">
 
                                               @if($deliverable->status == 1)
 
                                               <option value="1" selected>Valide</option>
-                                              <option value="2" >A retravailler</option>
+                                              <option value="0" >A retravailler</option>
 
-                                              @elseif($deliverable->status == 2)
+                                              @elseif($deliverable->status == 0)
 
                                                   <option value="1">Valide</option>
-                                                  <option value="2" selected>A retravailler</option>
+                                                  <option value="0" selected>A retravailler</option>
                                             @else
 
                                         <option value="1">Valide</option>
-                                        <option value="2">A retravailler</option>
+                                        <option value="0">A retravailler</option>
 
                                         @endif
                                         </select>
@@ -469,7 +469,7 @@
                             </div>
                             <input style="display: none;" type="hidden" name="project_id" value="{{$project->id}}">
                             <input style="display: none;" type="hidden" name="user_id" value="{{Auth::user()->id}}">
-                            <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Modifier</button></div>
+                            <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Ajouter le commentaire</button></div>
                         </div>
                     </div>
                     <!---->

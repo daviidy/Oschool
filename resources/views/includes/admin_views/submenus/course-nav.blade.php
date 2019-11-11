@@ -109,7 +109,7 @@
             <!---->
             <!---->
             <!---->
-            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Traveaux</span></a>
+            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Travaux</span></a>
         <!---->
         <!---->
         <!---->
