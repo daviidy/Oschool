@@ -1,4 +1,4 @@
-<html>
+icon icon-users<html>
 
 <head>
 
@@ -138,7 +138,7 @@
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Users</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">utilisateurs</span></a>
                             <!---->
                             <!---->
                             <!---->
@@ -147,17 +147,17 @@
                         <!---->
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" ng-if="::permissions.can('view_site')"
-                          text="Site" icon="icon icon-site-map" sref="admin.site" onboarding-tooltip-if="school.is_domain_confirmed == false &amp;&amp; school.is_customized == false"
+                          text="Site" icon="icon icon-users" sref="admin.site" onboarding-tooltip-if="school.is_domain_confirmed == false &amp;&amp; school.is_customized == false"
                           onboarding-tooltip-text="Save a customization and confirm your domain to complete this step.">
-                            <!----><a what="link" ui-sref="admin.site" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/site">
-                                <!----><i ng-if="::icon" ng-class="::icon" tooltip="Site" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-site-map"></i>
+                            <!----><a what="link" ui-sref="admin.site" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/authors">
+                                <!----><i ng-if="::icon" ng-class="::icon" tooltip="Site" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-users"></i>
                                 <!---->
                                 <!---->
                                 <!---->
                                 <!---->
                                 <div href="javascript:void(0)" ng-if="::onboardingTooltipIf" tooltip="Save a customization and confirm your domain to complete this step." tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
                                   class="tch-onboarding-sidebar-tooltip"></div>
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Site</span>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Auteurs</span>
                             </a>
                             <!---->
                             <!---->
@@ -227,7 +227,7 @@
                         </li>
                         <!---->
                         <!---->
-                        <li what="nav item" ui-sref-active="active"
+                        <li what="nav item" ui-sref-active="active" style="display:none"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-3': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::(school.school_plan.name == 'free' &amp;&amp; permissions.can('view_plan'))" text="Plan" icon="icon icon-rocket" sref="admin.settings.plan" pin-to-bottom="3" never-highlight="true" label="UPGRADE" top-border="true"
                           class="pin-bottom-level-3 pin-bottom top-border">
@@ -249,12 +249,12 @@
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_settings') &amp;&amp; !permissions.can('view_settings_notifications')" text="Settings" icon="icon icon-cog2" sref="admin.settings" class="active">
-                            <!----><a what="link" ui-sref="admin.settings" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/settings">
+                            <!----><a what="link" ui-sref="admin.settings" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/settings/general">
                                 <!----><i ng-if="::icon" ng-class="::icon" tooltip="Settings" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-cog2"></i>
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Settings</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Paramètre</span></a>
                             <!---->
                             <!---->
                             <!---->
