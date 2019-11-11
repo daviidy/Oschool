@@ -19,6 +19,11 @@ Route::get('/corporate', function () {
     return view('corporate');
 });
 
+
+Route::get('/email', function () {
+    return view('email');
+});
+
 Auth::routes();
 
 Route::post('/register/user', 'CustomAuthController@addUser');
