@@ -54,7 +54,7 @@
                                     </div><br>
                                 </div>
                                 <!---->
-                                <!----><a ng-click="step.click()" ng-repeat="step in steps" ng-class="{ 'pill-completed': step.completed(), 'pill-active': step.active(), 'pill-disabled': step.disabled(), 'pill-highlighted': step.highlighted() }"
+                                <!----><a href="https://blog.oschoolelearning.com/" target="_blank" ng-click="step.click()" ng-repeat="step in steps" ng-class="{ 'pill-completed': step.completed(), 'pill-active': step.active(), 'pill-disabled': step.disabled(), 'pill-highlighted': step.highlighted() }"
                                   class="tch-pill full-width fastclickable">
                                     <!----><span ng-if="step.liveWorkshop">
                                         <!----><img ng-if="workshopState() == 'signup' || workshopState() == 'live' || workshopState() == 'pre'" ng-src="/images/schools/icon-webinar.svg" class="icon"

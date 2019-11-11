@@ -31,7 +31,7 @@
         <!---->
     </li>
     <!---->
-    <li what="nav item" ui-sref-active="active"
+    <li what="nav item" ui-sref-active="active" style="display:none"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
       ng-if="permissions.can('manage_course_pages')" text="Pages" sref="admin.courses.course.pages" class="" style="">
         <!----><a what="link" ui-sref="admin.courses.course.pages" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/courses/627895/pages">
@@ -102,7 +102,7 @@
     <!---->
     <!---->
     <!---->
-    <li what="nav item" ui-sref-active="active"
+    <li what="nav item" ui-sref-active="active" style="display:none"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Drip"
       sref="admin.courses.course.drip">
         <!----><a  href="/schoolAdmin/courses/{{$course->id}}/deliverable" class="" style="">
@@ -130,7 +130,7 @@
         <!---->
     </li>
     <!---->
-    <li what="nav item" ui-sref-active="active"
+    <li what="nav item" ui-sref-active="active" style="display:none;"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
       ng-if="::permissions.can('view_comments')" text="Comments" sref="admin.courses.course.comments" class="">
         <!----><a what="link" ui-sref="admin.courses.course.comments" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/courses/627895/comments?page=1">
@@ -163,7 +163,7 @@
       ng-if="::permissions.can('view_students')" text="Students" ng-click="goToStudents()" external-link="true" class="fastclickable" style="">
         <!---->
         <!----><a what="link" ng-if="!sref &amp;&amp; !migrated">
-            <!----><span class="menu-item-label"><span ng-bind="::text" ng-class="textClass">Students</span>
+            <!----><span class="menu-item-label"><span ng-bind="::text" ng-class="textClass">Etudiants</span>
                 <!----><i ng-if="::externalLink" class="fa fa-external-link"></i>
                 <!----></span></a>
         <!---->
@@ -171,7 +171,7 @@
     </li>
     <!---->
     <!---->
-    <li what="nav item" ui-sref-active="active"
+    <li what="nav item" ui-sref-active="active" style="display:none"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
       ng-if="::permissions.can('bundle_courses')" text="Bundle Contents" sref="admin.courses.course.bundle" class="">
         <!----><a what="link" ui-sref="admin.courses.course.bundle" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/courses/627895/bundle">
@@ -185,7 +185,7 @@
     </li>
     <!---->
     <!---->
-    <li what="nav item" ui-sref-active="active"
+    <li what="nav item" ui-sref-active="active" style="display:none"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
       ng-if="::permissions.can('view_course_reports') || permissions.can('view_gated_course_reports')" text="Reports" sref="admin.courses.course.reports" class="">
         <!----><a what="link" ui-sref="admin.courses.course.reports" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/courses/627895/reports">
