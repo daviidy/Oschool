@@ -466,7 +466,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
             {{-- {{dd($course->state)}} --}}
             <input style="display: none;" id="courseId" type="text" name="id" value="{{$course->id}}">
-            
+
                     @if ($course->state == "inactive")
                     <!---->
                     <div id="changeState" class="tch-btn-header-danger disable-animations fastclickable">Publier le cours</div>
@@ -496,14 +496,27 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <p class="small">Voyez à quoi ressemble votre cours pour les visiteurs ou les étudiants inscrits.</p>
                 </h2>
             </div>
-            <div class="tch-section-content tch-thumbnail-link-wrapper col-lg-3 col-md-5 col-sm-5 col-xs-5"><a ng-click="cancel()" href="/courses/vr-course/?preview=logged_out" target="_blank" id="test-id-preview-sales-page"
+            <div class="tch-section-content tch-thumbnail-link-wrapper col-lg-3 col-md-5 col-sm-5 col-xs-5">
+              @if($course->type == 'course')
+              <a ng-click="cancel()" href="{{ route('course.slug', $course->slug) }}" target="_blank" id="test-id-preview-sales-page"
                   class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-visitor.jpg"><i class="fa fa-external-link"></i><br><strong>Page de vente&nbsp;</strong>
                     <div class="muted">en tant que visiteur</div>
-                </a></div>
-            <div class="tch-section-content tch-thumbnail-link-wrapper col-lg-3 col-md-5 col-sm-5 col-xs-5 shift-right"><a ng-click="cancel()" href="/courses/vr-course/?preview=logged_in" target="_blank" id="test-id-preview-curriculum-btn"
-                  class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-enrolled-student.jpg"><i class="fa fa-external-link"></i><br><strong>Programme de cours&nbsp;</strong>
+                </a>
+                @endif
+                @if($course->type == 'path')
+                <a ng-click="cancel()" href="{{ route('path.slug', $course->slug) }}" target="_blank" id="test-id-preview-sales-page"
+                    class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-visitor.jpg"><i class="fa fa-external-link"></i><br><strong>Page de vente&nbsp;</strong>
+                      <div class="muted">en tant que visiteur</div>
+                  </a>
+                    @endif
+            </div>
+            <div class="tch-section-content tch-thumbnail-link-wrapper col-lg-3 col-md-5 col-sm-5 col-xs-5 shift-right">
+              <a ng-click="cancel()" href="/course/enrolled/{{$course->slug}}" target="_blank" id="test-id-preview-curriculum-btn"
+                  class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-enrolled-student.jpg"><i class="fa fa-external-link"></i>
+                  <br><strong>Programme de cours&nbsp;</strong>
                     <div class="muted">en tant qu'étudiant inscrit</div>
-                </a></div>
+                </a>
+            </div>
         </div>
     </ng-include>
     <!---->
