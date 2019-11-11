@@ -53,7 +53,13 @@
                                         {{$course->name}}
                                     </a>
                                 </td>
-                                <td>{{$course->author->full_name}}</td>
+                                <td>
+                                    @if(count($course->author) > 0)
+                                    {{$course->author->full_name}}
+                                    @else
+                                    Aucun auteur
+                                    @endif
+                                </td>
                                 <td>{{$course->state}}</td>
                                 <td>{{$course->type}}</td>
                                 <td>
