@@ -59,9 +59,7 @@ class DeliverableController extends Controller
      */
     public function show(Deliverable $deliverable)
     {
-        $deliverable = Deliverable::all();
-        //  return ;
-         return view('admin_views.projects.show', ['deliverable' => $deliverable]);
+        //
     }
 
 

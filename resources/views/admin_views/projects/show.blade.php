@@ -396,15 +396,22 @@ a:focus{color:inherit;text-decoration:none;}
                     <strong>{{ $message }}</strong>
                 </div>
             @endif
+                @if(Auth::user()->deliverables)
 
-            {{-- <a target="_blank" href="{{Auth::user()->deliverable}}" class="module-progress-card" data-gtm-tag="module-card module-link">
-              <div class="module-progress-card__icon">
-                  <img src="https://lh3.googleusercontent.com/7nId5qqZMpCWyJRM7Ug8wiVAOaWOPlkIjnzHXHOdwZG2DA7jQ9ze8Mv4PnPiOCWYiZnKS6qwGffTR0gJuZlZb6_39ZExnkz7AAZfmL8" alt="Les opportunités qu'offre Internet">
-              </div>
-              <h4 class="module-progress-card__title">{{DB::table('deliverables')->get()->where("link")->first()}}</h4>
+                  @foreach(Auth::user()->deliverables as $deliverable)
 
-          </a> --}}
+                    <a target="_blank" href="{{$deliverable->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
+                      <div class="module-progress-card__icon">
+                          <img src="https://lh3.googleusercontent.com/7nId5qqZMpCWyJRM7Ug8wiVAOaWOPlkIjnzHXHOdwZG2DA7jQ9ze8Mv4PnPiOCWYiZnKS6qwGffTR0gJuZlZb6_39ZExnkz7AAZfmL8" alt="Les opportunités qu'offre Internet">
+                      </div>
+                      <h4 class="module-progress-card__title">Le lien de votre projet</h4>
+                    </a>
+                  
+                  @endforeach
+                    
+     
 
+              @endif
 
           <section class="section section--header">
             <h2 class="section-header">{{$project->title}}</h2>
