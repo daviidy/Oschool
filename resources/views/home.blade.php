@@ -534,7 +534,7 @@
                 <div class="col-md-5">
                     <h1 class="default-header">Parcours diplômants et certifiants</h1>
                     <p class="default-paragraph">Launch your course and join thousands of online instructors already making millions on Teachable. Accept payments and enrollments instantly.</p>
-                    <a class="next-step green-button" style="background: #4D90CC;">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    <a href="{{url('schools')}}" class="next-step green-button" style="background: #4D90CC;">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
                 </div>
             </div>
         </div>
@@ -700,7 +700,7 @@
             </div>
             <div class="row last-row">
                 <div class="col-xs-12">
-                    <a href="/features" class="dark-green-button">Toutes nos écoles</a>
+                    <a href="{{url('schools')}}" class="dark-green-button">Toutes nos écoles</a>
                     <!--p class="default-paragraph">En collaboration avec les leaders de l'industrie</p>
                     <div class="clearfix company-logos">
                         <img src="/images/divers/cinetpay.png">
@@ -956,26 +956,26 @@
                       src="/images/divers/os-3.png" alt="">
                 </div>
                 <div class="hidden-xs col-sm-4 col-md-3 column">
-                    <img src="/images/divers/oschool_5.png" alt="">
+                    <img src="/images/divers/os4.jpeg" alt="">
                     <img src="/images/divers/oschool-4.png" alt=""><img src="/images/divers/os_4.png"
                       alt="">
                 </div>
                 <div class="col-sm-8 col-md-6 column">
                     <div class="row-1 clearfix">
-                        <img src="/images/divers/os_4.png" class="ankur" alt="">
+                        <img src="/images/divers/os5.jpeg" class="ankur" alt="">
                         <div class="row-1-col-2">
                             <div class="row-1-col-2-row-1">
                                 <img src="https://teachable.com/assets/boxes-of-people/leaves-f2d8049a1e75192632d5f3e1f74736deae03667b053b5f544a708e089e5e56a2.jpg" class="leaves" alt=""><img
                                   src="https://teachable.com/assets/boxes-of-people/computer-1a3879cbabc1783a1c514b5c4f94c736c3310bff3d761029d74779cd0e305d70.jpg" class="computer" alt="">
                             </div>
                             <div class="row-1-col-2-row-2">
-                                <img src="https://teachable.com/assets/boxes-of-people/laurence-e0a574262c9055f0cbaf617d8bfd1c604af0fa9b27c9c72b4c013d0eb9f2d6f1.jpg" class="laurence" alt="">
+                                <img src="/images/divers/os1.jpeg" class="laurence" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="row-2 clearfix">
                         <img src="https://teachable.com/assets/boxes-of-people/writer-86733135fcc6a86d2826eaa17e1648a1cc03aed3577d8228118f1c77cb7dda5e.jpg" class="writer"><img
-                          src="https://teachable.com/assets/boxes-of-people/don-6affb7ff54e752829d247f4cee47c5c01dbce5628631d8261554e8f470a57664.jpg" class="don"><img src="https://teachable.com/assets/boxes-of-people/hat-10f420ab1ce5ccc04b13dfeee96641b809be6658295ac328a2006b59ef14607b.jpg"
+                          src="/images/divers/os3.jpeg" class="don"><img src="https://teachable.com/assets/boxes-of-people/hat-10f420ab1ce5ccc04b13dfeee96641b809be6658295ac328a2006b59ef14607b.jpg"
                           class="hat">
                     </div>
                 </div>
@@ -1043,7 +1043,7 @@
                 <div class="col-xs-12">
                     <h1 class="small-uppercase-text">CHOISISSEZ OSCHOOL POUR VOTRE FORMATION</h1>
                     <h2 class="default-header" style="max-width: 750px">Commencer dès maintenant et transformer votre competence en une carrière profitable.</h2>
-                    <a href="/create-account?utm_source=home-bottom" class="orange-button">Commencer maintenant</a>
+                    <a href="{{url('schools')}}" class="orange-button">Commencer maintenant</a>
                 </div>
             </div>
         </div>

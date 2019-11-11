@@ -1783,9 +1783,6 @@ h3{font-size:2.4rem;line-height:2.6rem;}
         </div>
     </section>
 
-<script src="/js/path-slide.js" charset="utf-8"></script>
-
-
     <section class="pricing py-5" id="price">
       <div class="container">
         <h1 id="" class="title-price">Nos offres de prix</h1>
