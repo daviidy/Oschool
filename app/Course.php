@@ -134,6 +134,17 @@ class Course extends Model
             }
 
 
+            /**
+             * [users description]
+             * relationship many to many with Coupon model
+             * @return [array] [description]
+             */
+             public function coupons()
+             {
+                 return $this->belongsToMany('App\Coupon');
+             }
+
+
            public static function boot() {
            parent::boot();
 

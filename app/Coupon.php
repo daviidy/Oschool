@@ -14,5 +14,14 @@ class Coupon extends Model
                            'code',
                            'value',
                          ];
+     /**
+      * [users description]
+      * relationship many to many with Courses model
+      * @return [array] [description]
+      */
+      public function courses()
+      {
+          return $this->belongsToMany('App\Course');
+      }
 
 }
