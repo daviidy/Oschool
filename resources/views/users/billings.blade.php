@@ -99,7 +99,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
         <div data-v-bd11ec86="" class="inner-content empty">
             <h4 data-v-bd11ec86="">Vos achats en cours</h4> <img data-v-bd11ec86="" src="https://s35.mindvalley.us/mindvalleyacademy/media/images/empty_icon.png">
             @if(!Auth::user()->purchases->where('status', 'Validé'))
-            <p data-v-bd11ec86="">You do not have any Active Subscriptions at the moment.</p>
+            <p data-v-bd11ec86="">Vous n'avez pas de souscriptions actives pour le moment</p>
             @else
 
             <div data-v-bd11ec86="" class="payment-history">

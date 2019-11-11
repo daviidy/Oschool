@@ -280,12 +280,30 @@ a:focus{color:inherit;text-decoration:none;}
 
 </style>
 
+<style>
+    /*! CSS Used from: https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css */
+    *,::after,::before{box-sizing:border-box;}
+    .alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;}
+    .alert-success{color:#155724;background-color:#d4edda;border-color:#c3e6cb;}
+    @media print{
+        *,::after,::before{text-shadow:none!important;box-shadow:none!important;}
+    }
+    /*! CSS Used from: https://getbootstrap.com/docs/4.0/assets/css/docs.min.css */
+    .bd-example>.alert+.alert{margin-top:1rem;}
+</style>
+
 <main class="container">
   <div class="xl:px-3">
     <div class="xl:px-5">
       <div>
         <div id="overlay-sendWorks" class="overlay"></div>
         <div class="modalWrapper" style="left: 453px;">
+
+          {{-- Submit doc Beginning --}}
+
+        <form method="POST" action="{{route('deliverables.store')}}" >
+            @csrf
+
           <div id="modal" class="modal rounded-t-lg ">
             <div class="modal-cover rounded-t-lg ">
               <div class="coverWrapper rounded-t-lg rounded-b-none">
@@ -297,19 +315,64 @@ a:focus{color:inherit;text-decoration:none;}
             </div>
             <div class="modal-contents">
               <div class="modal-headline">
-                <div class="logo" style="background-image: url(&quot;http://platform.mindvalley.com/images/facebook-logo-fcffd6148ae561d4eaba1bf6dfb9430a.png?vsn=d&quot;);"></div>
-                <h3 class="text-2xl ml-2 mt-1">Supercerveau</h3>
+                {{-- <div class="logo" style="background-image: url(&quot;http://platform.mindvalley.com/images/facebook-logo-fcffd6148ae561d4eaba1bf6dfb9430a.png?vsn=d&quot;);"></div> --}}
+                <h3 class="text-2xl ml-2 mt-1">Soumission de projet</h3>
               </div>
-              <div class="modal-input"><span class="mb-2">Passphrase for first time login.</span>
-                <div class="relative"><input type="text" class="input input--withButton text-center">
+              <div class="modal-input"><span class="mb-2">Veuillez copier les liens de votre projet</span>
+                <div class="relative">
+                  <input name="link" type="text" placeholder="https://exemple.drive.com" class="input input--withButton text-center">
+                <input type="hidden" name="project_id" value="{{$project->id}}">
+                  <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                   <div class="button button--input"><i class="icon icon-copy" aria-hidden="true"></i></div>
                 </div>
               </div>
-              <div class="modal-button"><a href="https://www.facebook.com/groups/mindvalley.supercerveau/" class="button button--primary w-full">Go To Community</a></div>
+                    <button type="submit" class="modal-button button button--primary w-full">Soumettre mon projet</button>
             </div>
           </div>
-        </div>
+    </form>
       </div>
+
+{{--          Au case ou l'etudiant devra resoumettre son travail--}}
+          <div class="modalWrapperagain" style="left: 453px;">
+
+              {{-- Submit doc Beginning --}}
+
+              <form method="POST" action="/resubmitDeliverable" >
+                  @csrf
+
+                  <div id="modal" class="modal rounded-t-lg ">
+                      <div class="modal-cover rounded-t-lg ">
+                          <div class="coverWrapper rounded-t-lg rounded-b-none">
+                              <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;https://assets.mindvalley.com/api/v1/assets/82215914-053d-4123-ad79-ab8d36589712.jpg&quot;);"></div>
+                          </div>
+                          <div class="modal-coverButton">
+                              <div class="button button--round again"><i class="icon icon-window-close" aria-hidden="true"></i></div>
+                          </div>
+                      </div>
+                      <div class="modal-contents">
+                          <div class="modal-headline">
+                              {{-- <div class="logo" style="background-image: url(&quot;http://platform.mindvalley.com/images/facebook-logo-fcffd6148ae561d4eaba1bf6dfb9430a.png?vsn=d&quot;);"></div> --}}
+                              <h3 class="text-2xl ml-2 mt-1">Re-soumission de projet</h3>
+                          </div>
+{{--                          <div class="modal-input"><span class="mb-2">Veuillez copier les liens de votre projet</span>--}}
+                              <div class="relative">
+                                  {{-- <input type="hidden" name="link" value="{{$deliverable->link}}" class="input input--withButton text-center"> --}}
+                                  <input type="hidden" name="project_id" value="{{$project->id}}">
+                                  <input type="hidden" name="user_id" value="null">
+                                  {{-- <div class="button button--input"><i class="icon icon-copy" aria-hidden="true"></i></div> --}}
+                              </div>
+                          </div>
+                          <button type="submit" class="modal-button button button--primary w-full">Oui</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+
+
+      </div>
+
+
+        {{-- Submit doc end --}}
       <div class="navbar">
         <div class="navbar-container">
           <div class="navbar-leftNavigation"><a href="http://platform.mindvalley.com/quests/supercerveau" class="navbar-link"><i class="icon icon-long-arrow-left" aria-hidden="true"></i> <span class="navbar-linkText">Back To days</span></a>
@@ -326,6 +389,30 @@ a:focus{color:inherit;text-decoration:none;}
     <div class="p-0 md:px-5">
       <div class="bg-white md:rounded-lg p-3 pt-16 md:p-8 md:pt-24 min-h-screen">
         <div class="sectionWrapper sectionWrapper--noTopPadding">
+
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success alert-block">
+{{--                    <button type="button" class="close" data-dismiss="alert">×</button>--}}
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
+                @if(Auth::user()->deliverables)
+
+                  @foreach(Auth::user()->deliverables as $deliverable)
+
+                    <a target="_blank" href="{{$deliverable->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
+                      <div class="module-progress-card__icon">
+                          <img src="https://lh3.googleusercontent.com/7nId5qqZMpCWyJRM7Ug8wiVAOaWOPlkIjnzHXHOdwZG2DA7jQ9ze8Mv4PnPiOCWYiZnKS6qwGffTR0gJuZlZb6_39ZExnkz7AAZfmL8" alt="Les opportunités qu'offre Internet">
+                      </div>
+                      <h4 class="module-progress-card__title">Le lien de votre projet</h4>
+                    </a>
+                  
+                  @endforeach
+                    
+     
+
+              @endif
+
           <section class="section section--header">
             <h2 class="section-header">{{$project->title}}</h2>
           </section>

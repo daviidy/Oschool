@@ -129,6 +129,12 @@ class User extends Authenticatable implements MustVerifyEmail
     }
     
 
+     //function for relationship between
+    //user and deliverables (one to many)
+    public function deliverables()
+    {
+        return $this->hasMany('App\Deliverable');
+    }
 
     
         public function routeNotificationForMail($notification)
