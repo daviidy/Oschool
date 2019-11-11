@@ -66,6 +66,8 @@ Route::resource('tasks', 'TaskController');
 
 Route::resource('authors', 'AuthorController');
 
+Route::resource('deliverables', 'DeliverableController');
+
 
 /*
 
@@ -151,6 +153,10 @@ Route::get('/schoolAdmin/{school}/courses/{course}/information', 'CourseControll
 
 //course pages
 Route::get('/schoolAdmin/{school}/courses/{course}/pages', 'CourseController@pages')->name('course');
+//course deliverable
+Route::get('/schoolAdmin/courses/{course}/deliverable', 'DeliverableController@index')->name('deliverable');
+//edit deliverable
+Route::get('/schoolAdmin/course/{course}/project/{project}/deliverable/{deliverable}/edit', 'DeliverableController@edit')->name('deliverable');
 
 //course curriculum
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum')->name('course');
@@ -243,7 +249,10 @@ Route::post('/updateAuthor/{author}', 'AuthorController@update');
 
 
 
+//fot deliverable
 
+Route::post('/addComment/{deliverable}', 'DeliverableController@update');
+Route::post('/resubmitDeliverable', 'DeliverableController@resubmitDeliverable');
 
 //routes for certificate
 Route::get('/certificate/{course}', 'CourseController@certificate');

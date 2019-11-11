@@ -30,7 +30,7 @@ class Deliverable extends Model
 
 
       //function for relationship between
-      //user and tasks (many to many)
+      //user and tasks (one to many)
       public function user()
       {
           return $this->belongsTo('App\User');
