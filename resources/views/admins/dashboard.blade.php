@@ -62,7 +62,9 @@
                             <div class="card-body">
                                 <h5 class="text-muted">Revenu moyen par User</h5>
                                 <div class="metric-value d-inline-block">
+                                    @if(count($purchases->where('status', 'Validé') > 0)
                                     <h1 class="mb-1">{{$purchases->where('status', 'Validé')->sum('price') / count($purchases->where('status', 'Validé'))}} FCFA</h1>
+                                    @endif
                                 </div>
                                 <div class="metric-label d-inline-block float-right text-secondary font-weight-bold">
                                     <span>-2.00%</span>
