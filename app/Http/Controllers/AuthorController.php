@@ -39,7 +39,7 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-         $author = Author::create($request->all());
+         $author = Author::create($request->all()); 
          if($request->hasFile('image')){
          $image = $request->file('image');
          $filename = time() . '.' . $image->getClientOriginalExtension();
