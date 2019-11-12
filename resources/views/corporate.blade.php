@@ -984,19 +984,22 @@ hr{border-color:#ececec;}
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="small-uppercase-text small-header">Customization</h1>
-                    <h2 class="default-header big-header">Package and personalize your content as a stunning online course</h2>
+                    <h1 class="small-uppercase-text small-header"></h1>
+                    <h2 class="default-header big-header">NOTRE OFFRE, LOCATION DE LA PLATEFORME, TEAM BUILDING</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-5 left-column">
-                    <h1 class="default-green-header">Create engaging multimedia lectures</h1>
+                    <h1 class="default-green-header">NOTRE OFFRE:</h1>
                     <div class="default-paragraph-container markdown-area">
-                        <p>Add video, image, text, audio, and PDF files. Easily import content directly from Dropbox, Google Drive, or OneDrive.</p>
+                        <p>Oschool a développé la plateforme LMS afin de répondre aux besoins de ses clients et de faire face au développement grandissant de la formation à distance.</p>
                     </div>
-                    <h1 class="default-green-header">Build a beautiful website</h1>
+                    <h1 class="default-green-header">Oschoolelearning.com :</h1>
                     <div class="default-paragraph-container markdown-area">
-                        <p>You can work with your existing website or create new pages on Teachable, all with our intuitive drag-and-drop builder.</p>
+                        <ul>
+                          <li>Vous aide à digitaliser votre formation.</li>
+                          <li>Accueille vos cours e-learning pour un coût attractif</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-7 right-column">
@@ -1059,13 +1062,19 @@ hr{border-color:#ececec;}
                       src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/Gxm0GAuWSuKMKIj9kFVG" data-loaded="true">
                 </div>
                 <div class="col-xs-12 col-md-5 right-column">
-                    <h1 class="default-green-header">Delight students on any device</h1>
+                    <h1 class="default-green-header">LOCATION DE LA PLATEFORME:</h1>
                     <div class="default-paragraph-container markdown-area">
-                        <p>Your course website is fully responsive, so students can view your content from computers, tablets, and smartphones.</p>
+                        <p>Oschoolelearning.com est disponible en location mode SaaS pour accueillir vos propres cours e-learning à un coût très attractif. Dans ce cas, la plateforme peut être personnalisée à vos couleurs. Nous proposons également une journée de formation à l’utilisation et à l’administration de la plateforme LMS.</p>
                     </div>
-                    <h1 class="default-green-header">Modify any aspect of your school</h1>
+                    <h1 class="default-green-header">Le principe :</h1>
                     <div class="default-paragraph-container markdown-area">
-                        <p>With our Power Editor, you or your team can dig into the code and make advanced customizations.</p>
+                        <ul>
+                          <li>Nous personnalisons la plateforme LMS « à vos couleurs » ainsi que les attestations de passage.</li>
+                          <li>La location d’oschoolelearning.com est annuelle.</li>
+                          <li>Un droit d’accès est facturé par apprenant.</li>
+                          <li>Le LMS  est simple d’utilisation et ergonomique, néanmoins, nous pouvons vous proposer une journée de formation à son utilisation et à son administration.</li>
+                          <li>Il est possible de réaliser la gestion administrative de la plateforme pour vous.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -1103,13 +1112,13 @@ hr{border-color:#ececec;}
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1 class="default-green-header ">Publish sales pages that convert</h1>
+                        <h1 class="default-green-header ">TEAM BUILDING: </h1>
                         <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p>Easily draft, customize, and launch new course pages with a powerful page editor.</p>
+                            <p></p>
                         </div>
                         <h1 class="default-green-header ">Use our domain to connect your own</h1>
                         <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p>Start with your own free domain (yourschool.teachable.com), host under your own domain name (yourschool.com), or link to a subdomain (school.yoursite.com).</p>
+                            <p>Oschool conçoit vos formations digitales sur-mesure en prêtant autant d'attention au fond (conseil, accompagnement, design des stratégies digitales, architecture de programmes de formation complexes, le tout reposant sur notre méthode pédagogique) qu'à la forme (simulations réalistes, e-learning, applications, vidéo, collaborative training, présentiel et même réalité virtuelle et augmentée)</p>
                         </div>
                         <h1 class="default-green-header ">Reach students worldwide in any language</h1>
                         <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
@@ -1124,34 +1133,106 @@ hr{border-color:#ececec;}
             <div class="row">
                 <div class="col-md-7 left-column match-height" style="height: 664px;">
                     <div class="text">
-                        <h1 class="default-green-header">Publish sales pages that convert</h1>
+                        <h1 class="default-green-header">TEAM BUILDING: </h1>
                         <div class="default-paragraph-container markdown-area">
-                            <p>Easily draft, customize, and launch new course pages with a powerful page editor.</p>
+                            <p>Vous êtes une entreprise et vous souhaitez pouvoir présenter à vos employés une offre e-learning complète et adaptée à vos besoins.</p>
                         </div>
-                        <h1 class="default-green-header">Use our domain to connect your own</h1>
+                        <h1 class="default-green-header"></h1>
                         <div class="default-paragraph-container markdown-area">
-                            <p>Start with your own free domain (yourschool.teachable.com), host under your own domain name (yourschool.com), or link to a subdomain (school.yoursite.com).</p>
+                            <p>Oschool conçoit vos formations digitales sur-mesure en prêtant autant d'attention au fond <b> (conseil, accompagnement, design des stratégies digitales, architecture de programmes de formation complexes, le tout reposant sur notre méthode pédagogique)</b> qu'à la forme (simulations réalistes, e-learning, applications, vidéo, collaborative training, présentiel et même réalité virtuelle et augmentée)</p>
                         </div>
-                        <h1 class="default-green-header">Reach students worldwide in any language</h1>
+                        <h1 class="default-green-header"></h1>
                         <div class="default-paragraph-container markdown-area">
-                            <p>Modify the language used in any part of your site to support international audiences.</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-5 right-column match-height clearfix" style="height: 664px;">
+                <div class="col-xs-12 col-md-5 right-column match-height clearfix" style="height:;">
                     <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/QL2biKvoSr21K0lJUh7x" data-loaded="true"
                       style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/QL2biKvoSr21K0lJUh7x&quot;);"></div>
-                    <div class="quote">
+                    <!--div class="quote">
                         <img class="orange-circle" src="/assets/blockquote-orange-d24380ebe646a526fc1fa70b279fa6531394ee3ddc19bf7bca406c709a6f08f3.svg">
                         <blockquote>“It was important to us that our courses would look beautiful and that the software would be easy to use.”</blockquote>
                         <cite>
                             James Blatch, <a href="https://selfpublishingformula.com" target="_blank" rel="noopener noreferrer">Self Publishing Formula</a>
                         </cite>
-                    </div>
+                    </div-->
                 </div>
             </div>
         </div>
     </section>
+
+
+        <section class="cta-partial _69">
+            <style>
+                ._69 {
+                    margin-bottom: 25px;
+                    padding: 50px 0px!important;
+                    height: 350px;
+                }
+
+                @media (max-width: 991px) {
+                    ._69 {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    ._69 {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                /*CUSTOM EXPID2 CODE*/
+                ._69 {
+                    background-color: #FFFFFF
+                }
+
+                ._69 {
+                    padding-top: 0px;
+                }
+
+                @media (max-width: 991px) {
+                    ._69 {
+                        padding-top: 0px;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    ._69 {
+                        padding-top: 0px;
+                    }
+                }
+
+                ._69 {
+                    padding-bottom: 0px;
+                }
+
+                @media (max-width: 991px) {
+                    ._69 {
+                        padding-bottom: 0px;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    ._69 {
+                        padding-bottom: 0px;
+                    }
+                }
+            </style>
+            <div class="container" style="margin-top: 35px!important;">
+                <div class="row">
+                    <div class="col-xs-12 cta-content">
+                        <h1 class="small-uppercase-text"></h1>
+                        <h2 class="default-header" style="max-width: 750px; font-size: 50px!important;">QUEL IMPACTE POUR VOTRE EQUIPE?</h2>
+                        <div class="">
+                          <a href="/create-account?utm_source=features-mid" class="orange-button" style="padding: 20px 30px;">Téléchargez notre catalogue</a>
+                          <a href="/create-account?utm_source=features-mid" class="orange-button">Contactez-nous</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <section class="id-tag _61">
         <style>
@@ -1202,12 +1283,12 @@ hr{border-color:#ececec;}
     <section class="six-icons _62">
         <style>
             ._62 {
-                margin-bottom: 200px;
+                margin-bottom: 20px;
             }
 
             @media (max-width: 991px) {
                 ._62 {
-                    margin-bottom: 100px;
+                    margin-bottom: 10px;
                 }
             }
 
@@ -1279,40 +1360,87 @@ hr{border-color:#ececec;}
         <div class="container">
             <div class="row headers-row">
                 <div class="col-xs-12">
-                    <h1 class="small-uppercase-text small-header">Learning Tools</h1>
-                    <h2 class="default-header">Enhance the learning experience and build an engaged student community</h2>
+                    <h1 class="small-uppercase-text small-header"></h1>
+                    <h2 class="default-header">Les entreprises qui nous font confiance:</h2>
                 </div>
             </div>
             <div class="row first-row">
-                <div class="col-xs-12 col-md-4">
-                    <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/Ji9T55JSQ2FLL7ZPv2tY" data-loaded="true"
-                      style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/Ji9T55JSQ2FLL7ZPv2tY&quot;);"></div>
-                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;">Quizzes</div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="image" data-background-image="/images/divers/cinetpay.png" data-loaded="true"
+                      style="background-image: url(/images/divers/cinetpay.png);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;"></div>
                     <div class="default-paragraph markdown-area">
-                        <p>Easily create a quiz with our native feature to reinforce learning, summarize essential information, and check in on your students’ progress.</p>
+                        <p></p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/0ZTc1MHQvyQZYSKqrzlN" data-loaded="true"
-                      style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/0ZTc1MHQvyQZYSKqrzlN&quot;);"></div>
-                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;">Course completion certificates</div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="image" data-background-image="/images/divers/Epistrophe.jpg" data-loaded="true"
+                      style="background-image: url(/images/divers/Epistrophe.jpg);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;"></div>
                     <div class="default-paragraph markdown-area">
-                        <p>Issue certificates of completion to reward your students and verify their success. Fully customize your own unique certificate for each course. <a href="https://teachable.com/features/get-certificates">Learn more</a></p>
+                        <p></p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/n9RSphCQRYWhg2dchvrC" data-loaded="true"
-                      style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/n9RSphCQRYWhg2dchvrC&quot;);"></div>
-                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;">Course Compliance</div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="image" data-background-image="/images/divers/bora.png" data-loaded="true"
+                      style="background-image: url(/images/divers/bora.png);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;"></div>
                     <div class="default-paragraph markdown-area">
-                        <p>Enable course compliance to enforce lecture completion, video compliance and require a passing quiz scores for your courses. <a href="https://teachable.com/features/course-compliance">Learn more</a></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="image" data-background-image="/images/divers/final.png" data-loaded="true"
+                      style="background-image: url(/images/divers/final.png);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;"></div>
+                    <div class="default-paragraph markdown-area">
+                        <p></p>
                     </div>
                 </div>
             </div>
+
+            <div class="row first-row">
+                <div class="col-xs-12 col-md-3">
+                    <div class="image" data-background-image="/images/divers/LogoM-1.png" data-loaded="true"
+                      style="background-image: url(/images/divers/tama.png);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;"></div>
+                    <div class="default-paragraph markdown-area">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="image" data-background-image="/images/divers/Logo-1.png" data-loaded="true"
+                      style="background-image: url(/images/divers/Logo-1.png);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;"></div>
+                    <div class="default-paragraph markdown-area">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="image" data-background-image="/images/divers/Akil-tech.png" data-loaded="true"
+                      style="background-image: url(/images/divers/Akil-tech.png);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;"></div>
+                    <div class="default-paragraph markdown-area">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="image" data-background-image="/images/divers/esatic.png" data-loaded="true"
+                      style="background-image: url(/images/divers/esatic.png);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;"></div>
+                    <div class="default-paragraph markdown-area">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </div>
     </section>
 
-    <section class="green-quote-mirrored _63">
+    <!--section class="green-quote-mirrored _63">
         <style>
             ._63 {
                 margin-bottom: 0px;
@@ -1564,9 +1692,9 @@ hr{border-color:#ececec;}
                 </div>
             </div>
         </div>
-    </section>
+    </section-->
 
-    <section class="big-image _66">
+    <!--section class="big-image _66">
         <style>
             ._66 {
                 margin-bottom: 0px;
@@ -1706,75 +1834,10 @@ hr{border-color:#ececec;}
                 </div>
             </div>
         </div>
-    </section>
+    </section-->
 
-    <section class="cta-partial _69">
-        <style>
-            ._69 {
-                margin-bottom: 115px;
-            }
 
-            @media (max-width: 991px) {
-                ._69 {
-                    margin-bottom: 115px;
-                }
-            }
-
-            @media (max-width: 767px) {
-                ._69 {
-                    margin-bottom: 100px;
-                }
-            }
-
-            /*CUSTOM EXPID2 CODE*/
-            ._69 {
-                background-color: #FFFFFF
-            }
-
-            ._69 {
-                padding-top: 0px;
-            }
-
-            @media (max-width: 991px) {
-                ._69 {
-                    padding-top: 0px;
-                }
-            }
-
-            @media (max-width: 767px) {
-                ._69 {
-                    padding-top: 0px;
-                }
-            }
-
-            ._69 {
-                padding-bottom: 0px;
-            }
-
-            @media (max-width: 991px) {
-                ._69 {
-                    padding-bottom: 0px;
-                }
-            }
-
-            @media (max-width: 767px) {
-                ._69 {
-                    padding-bottom: 0px;
-                }
-            }
-        </style>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 cta-content">
-                    <h1 class="small-uppercase-text">WHAT ARE YOU WAITING FOR?</h1>
-                    <h2 class="default-header" style="max-width: 750px;">Join thousands of teachers making a difference every day using Teachable</h2>
-                    <a href="/create-account?utm_source=features-mid" class="orange-button">Get started for free</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="horizontal-line _70">
+    <!--section class="horizontal-line _70">
         <style>
             ._70 {
                 margin-bottom: 75px;
@@ -1971,9 +2034,9 @@ hr{border-color:#ececec;}
                 </div>
             </div>
         </div>
-    </section>
+    </section-->
 
-    <section class="image-text-column _73">
+    <!--section class="image-text-column _73">
         <style>
             ._73 {
                 padding-top: 40px;
@@ -2081,9 +2144,9 @@ hr{border-color:#ececec;}
                 </div>
             </div>
         </div>
-    </section>
+    </section-->
 
-    <section class="id-tag _74">
+    <!--section class="id-tag _74">
         <style>
             ._74 {
                 padding-bottom: 40px;
@@ -2127,9 +2190,9 @@ hr{border-color:#ececec;}
             }
         </style>
         <div id="hosting-and-security"></div>
-    </section>
+    </section-->
 
-    <section class="six-icons _75">
+    <!--section class="six-icons _75">
         <style>
             ._75 {
                 margin-bottom: 110px;
@@ -2272,7 +2335,7 @@ hr{border-color:#ececec;}
                 </div>
             </div>
         </div>
-    </section>
+    </section--->
 
 
 @endsection

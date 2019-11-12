@@ -202,6 +202,7 @@ p:last-of-type{margin-bottom:0;}
 .why-get-cert__content .myg-accordion__item--active .myg-accordion__icon{color:#80868b;}
 .why-get-cert__content .myg-accordion__header{padding:24px 0;}
 .why-get-cert__content .myg-accordion__title{font-size:2.2rem!important;line-height:1.36!important;letter-spacing:normal!important;color:#9aa0a6;max-width:435px;transition:color .2s linear;}
+.show{ display: block!important; height: 190px!important;}
 @media (min-width:1024px) and (max-width:1440px){
 .why-get-cert__content .myg-accordion__title{max-width:310px;font-size:2.3rem!important;}
 }
@@ -783,7 +784,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                                     <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
                                     <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
                                 </div>
-                                <div class="myg-accordion__panel js-accordion-item-panel" style="display: block; height: 190px;">
+                                <div class="myg-accordion__panel js-accordion-item-panel show">
                                     <p>Cette certification vous permet de montrer aux employeurs que vous comprenez parfaitement les principaux concepts du marketing numérique. De plus, vous pouvez ajouter cette qualification à votre&nbsp;CV et
                                         l'importer facilement sur votre profil LinkedIn.</p>
                                 </div>

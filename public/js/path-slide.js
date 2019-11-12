@@ -1,6 +1,6 @@
 $(document).ready(function() {
   //toggle the component with class accordion_body
-  /*$(".myg-accordion__title").click(function() {
+  $(".myg-accordion__title").click(function() {
     if ($('.myg-accordion__panel').is(':visible')) {
       $(".myg-accordion__panel p").slideUp(300);
     }
@@ -9,16 +9,18 @@ $(document).ready(function() {
     } else {
       $(this).next(".myg-accordion__panel p").slideDown(300);
     }
-  });*/
+  });
 
 
-  $(".myg-accordion__header").click(function(){
-      $(".myg-accordion__header").each(function(){
-        $(this).parent().removeClass("active");
-        $(this).removeClass("active");
+  $(".js-accordion-title").click(function(){
+      $(".js-accordion-title").each(function(){
+        $(this).parent().removeClass("myg-accordion__item--active");
+        $(this).removeClass("myg-accordion__item--active");
+        $(".js-accordion-item-panel").removeClass("show");
       });
-      $(this).parent().addClass("active");
-      $(this).addClass("active");
+      $(this).parent().addClass("myg-accordion__item--active");
+      $(this).addClass("myg-accordion__item--active");
+      $(".js-accordion-item-panel").addClass("show");
   });
 
 
