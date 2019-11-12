@@ -9,6 +9,8 @@
   <link rel="stylesheet" media="screen" href="/css/fedora-course.css" data-turbolinks-track="true">
   <script src="/js/path-slide.js" charset="utf-8"></script>
   <link href="/css/theme-course.css" rel="stylesheet" data-turbolinks-track="true">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 
 
   <title>@yield('title') | Oschool</title>

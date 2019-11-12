@@ -304,7 +304,7 @@ icon icon-users<html>
                 <div tooltip="David Yao" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="visible-xs" class="misc-buttons">
                     <div dropdown="" class="btn-group tch-dropdown-group dropup dropdown">
                         <!---->
-                        <!----><a href="/my_teachable_profile" ng-if="::currentUser.is_teachable_account" target="_blank" class="tch-dropdown-group-selector"><img gravatar-src-once="user.email" align="left" gravatar-size="30" class="user-avatar"
+                        <!----><a href="/users/settings" ng-if="::currentUser.is_teachable_account" target="_blank" class="tch-dropdown-group-selector"><img gravatar-src-once="user.email" align="left" gravatar-size="30" class="user-avatar"
                               src="/images/users/default/{{Auth::user()->image}}">
                             <div class="myteachable-icon-overlay">&nbsp;</div>
                             <div ng-bind="::user.name" class="user-name">{{Auth::user()->name}}</div>
@@ -312,7 +312,7 @@ icon icon-users<html>
                         <!----><a what="dropdown-toggle" onclick="show2()" dropdown-toggle="" type="button" href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa fa-angle-up"></i></a>
                         <ul role="menu" class="dropdown-menu dropdown-menu-left" id="drop1">
                             <!---->
-                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://www.blog.oschoolelearning.com" target="_blank" what="experts-marketplace">Blog Oschool</a></li>
+                            <li ng-if="::permissions.can('view_fedora_references')"><a href="https://blog.oschoolelearning.com/" target="_blank" what="experts-marketplace">Blog Oschool</a></li>
                             <!---->
                             <!---->
                             <li ng-if="::permissions.can('view_fedora_references')"><a href="https://discord.gg/hhbzcHE" target="_blank" what="instructor-community">Communauté Oschool</a></li>
