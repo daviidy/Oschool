@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Coupon;
+use App\Course;
+use App\School;
 use Illuminate\Http\Request;
 
 class CouponController extends Controller
@@ -12,9 +14,10 @@ class CouponController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(School $school, Course $course)
     {
-        //
+        $coupons = Coupon::all();
+        return view('admin_views.coupons.index', ['course' => $course, 'school' => $school, 'coupons'=>$coupons]);
     }
 
     /**
@@ -22,9 +25,11 @@ class CouponController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(School $school, Course $course)
     {
-        //
+            $allCourses = Course::all();
+            return view('admin_views.coupons.create', ['school' => $school, 'allCourses' => $allCourses, 'course' => $course]);
+
     }
 
     /**
@@ -35,7 +40,17 @@ class CouponController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $coupon = Coupon::create($request->all());
+        if(is_array($request->courses_id))
+        {
+            foreach($request->courses_id as $course_id)
+            {
+                $course_found = Course::find($course_id);
+                $coupon->courses()->attach($course_found);
+            }
+        }
+
+        return back()->with('status', 'Nouveau ajouté');
     }
 
     /**
@@ -55,9 +70,10 @@ class CouponController extends Controller
      * @param  \App\Coupon  $coupon
      * @return \Illuminate\Http\Response
      */
-    public function edit(Coupon $coupon)
+    public function edit( School $school, Course $course,Coupon $coupon)
     {
-        //
+        $allCourses = Course::all();
+        return view('admin_views.coupons.edit', ['coupon' => $coupon,'allCourses' => $allCourses,'school' => $school, 'course' => $course]);
     }
 
     /**
@@ -69,7 +85,18 @@ class CouponController extends Controller
      */
     public function update(Request $request, Coupon $coupon)
     {
-        //
+        $coupon->update($request->all());
+        if(is_array($request->courses_id))
+        {
+            foreach($request->courses_id as $course_id)
+            {
+                $course_found = Course::find($course_id);
+                // $coupon->courses()->attach($course_found);
+                $coupon->courses()->sync($course_found);
+            }
+        }
+        // $coupon->save();
+        return back()->with('status', 'Coupon modifié');
     }
 
     /**
@@ -80,6 +107,7 @@ class CouponController extends Controller
      */
     public function destroy(Coupon $coupon)
     {
-        //
+        $coupon->delete();
+        return back()->with('status', 'Coupon supprimé');
     }
 }

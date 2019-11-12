@@ -68,6 +68,8 @@ Route::resource('authors', 'AuthorController');
 
 Route::resource('deliverables', 'DeliverableController');
 
+Route::resource('coupons', 'CouponController');
+
 
 /*
 
@@ -247,7 +249,11 @@ Route::get('/schoolAdmin/{school}/authors', 'AuthorController@index');
 Route::get('/schoolAdmin/{school}/authors/create', 'AuthorController@create');
 Route::post('/updateAuthor/{author}', 'AuthorController@update');
 
-
+//For coupons
+Route::get('/schoolAdmin/{school}/courses/{course}/coupons', 'CouponController@index');
+Route::get('/schoolAdmin/{school}/courses/{course}/coupons/create', 'CouponController@create');
+Route::get('/schoolAdmin/{school}/courses/{course}/coupons/{coupon}/edit', 'CouponController@edit');
+Route::post('/updateCoupon/{coupon}', 'CouponController@update')->name('coupon.update');;
 
 //fot deliverable
 
