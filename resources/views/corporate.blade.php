@@ -1169,6 +1169,7 @@ hr{border-color:#ececec;}
                     margin-bottom: 25px;
                     padding: 50px 0px!important;
                     height: 350px;
+                    color: #fff;
                 }
 
                 @media (max-width: 991px) {
@@ -1185,7 +1186,11 @@ hr{border-color:#ececec;}
 
                 /*CUSTOM EXPID2 CODE*/
                 ._69 {
-                    background-color: #FFFFFF
+                    background:url(/images/divers/Nos-solutions.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-attachment: fixed;
+
                 }
 
                 ._69 {
