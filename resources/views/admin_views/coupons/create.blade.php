@@ -432,7 +432,18 @@
                                 <br>
                                 <label for="value">Valeur du coupon</label>
                                 <br>
-                                <input type="number" name="value" id="value">
+                                <select name="value" id="value">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="40">40</option>
+                                    <option value="50">50</option>
+                                    <option value="60">60</option>
+                                    <option value="70">70</option>
+                                    <option value="80">80</option>
+                                    <option value="90">90</option>
+                                    <option value="100">100</option>
+                                </select>
 
                             </div>
 
@@ -440,7 +451,7 @@
 
                                     <label for="status">Course </label>
                                         <br>
-                                      <select name="status" multiple id="courses_id" name="courses_id[]" style="width:250px;">
+                                      <select name="status"size="1" multiple id="courses_id" name="courses_id[]" style="width:250px;">
                                         
                                         @foreach ($allCourses as $course_db)
                                                 <option value="{{$course_db->id}}">{{$course_db->name}}</option>

@@ -433,7 +433,19 @@
                                 <br>
                                 <label for="value">Valeur du coupon</label>
                                 <br>
-                                <input type="number" name="value" id="value" value="{{$coupon->value}}">
+                                {{-- <input type="number" name="value" id="value" value="{{$coupon->value}}"> --}}
+                                <select name="value" id="value">
+                                    <option value="10" {{$coupon->value == 10 ? 'selected' : ''}}>10</option>
+                                    <option value="20" {{$coupon->value == 20 ? 'selected' : ''}}>20</option>
+                                    <option value="30" {{$coupon->value == 30 ? 'selected' : ''}}>30</option>
+                                    <option value="40" {{$coupon->value == 40 ? 'selected' : ''}}>40</option>
+                                    <option value="50" {{$coupon->value == 50 ? 'selected' : ''}}>50</option>
+                                    <option value="60" {{$coupon->value == 60 ? 'selected' : ''}}>60</option>
+                                    <option value="70" {{$coupon->value == 70 ? 'selected' : ''}}>70</option>
+                                    <option value="80" {{$coupon->value == 80 ? 'selected' : ''}}>80</option>
+                                    <option value="90" {{$coupon->value == 90 ? 'selected' : ''}}>90</option>
+                                    <option value="100" {{$coupon->value == 100 ? 'selected' : ''}}>100</option>
+                                </select>
 
                             </div>
 

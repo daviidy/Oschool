@@ -250,10 +250,10 @@ Route::get('/schoolAdmin/{school}/authors/create', 'AuthorController@create');
 Route::post('/updateAuthor/{author}', 'AuthorController@update');
 
 //For coupons
-Route::get('/schoolAdmin/{school}/courses/{course}/coupons', 'CouponController@index');
-Route::get('/schoolAdmin/{school}/courses/{course}/coupons/create', 'CouponController@create');
-Route::get('/schoolAdmin/{school}/courses/{course}/coupons/{coupon}/edit', 'CouponController@edit');
-Route::post('/updateCoupon/{coupon}', 'CouponController@update')->name('coupon.update');;
+Route::get('/schoolAdmin/{school}/courses/{course}/coupons', 'CouponController@index')->name('coupon');
+Route::get('/schoolAdmin/{school}/courses/{course}/coupons/create', 'CouponController@create')->name('coupon');
+Route::get('/schoolAdmin/{school}/courses/{course}/coupons/{coupon}/edit', 'CouponController@edit')->name('coupon');
+Route::post('/updateCoupon/{coupon}', 'CouponController@update')->name('coupon.update');
 
 //fot deliverable
 
