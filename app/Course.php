@@ -154,7 +154,6 @@ class Course extends Model
                    File::delete(public_path('/images/courses/logos/' . $course->logo));
                }
                 $course->sections()->delete();
-                $course->lessons()->delete();
                 $course->projects()->delete();
                 // do the rest of the cleanup...
            });
