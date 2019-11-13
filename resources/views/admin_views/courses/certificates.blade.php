@@ -108,12 +108,12 @@ a:active,a:focus,a:hover{color:#24292d;}
       </div>
       <div class="navbar">
         <div class="navbar-container">
-          <div class="navbar-leftNavigation"><a href="http://platform.mindvalley.com/quests/supercerveau" class="navbar-link"><i class="icon icon-long-arrow-left" aria-hidden="true"></i> <span class="navbar-linkText">Retour au cours</span></a>
+          <div class="navbar-leftNavigation"><a href="http://platform.mindvalley.com/quests/supercerveau" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon> <span class="navbar-linkText">Retour au cours</span></a>
           </div>
           <div class="navbar-title">
             Certificat pour le cours {{$course->name}}
           </div>
-          <div class="navbar-rightNavigation"><button class="navbar-button"><i class="icon icon-users" aria-hidden="true"></i> <span>Contactez-nous</span></button></div>
+          <div class="navbar-rightNavigation"><button class="navbar-button"><ion-icon name="call" size="small"></ion-icon><span>Contactez-nous</span></button></div>
         </div>
       </div>
     </div>

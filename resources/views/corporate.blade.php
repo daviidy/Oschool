@@ -990,7 +990,7 @@ hr{border-color:#ececec;}
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-5 left-column">
-                    <h1 class="default-green-header">NOTRE OFFRE:</h1>
+                    <h1 class="default-green-header">NOTRE OFFRE</h1>
                     <div class="default-paragraph-container markdown-area">
                         <p>Oschool a développé la plateforme LMS afin de répondre aux besoins de ses clients et de faire face au développement grandissant de la formation à distance.</p>
                     </div>
@@ -1062,7 +1062,7 @@ hr{border-color:#ececec;}
                       src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/Gxm0GAuWSuKMKIj9kFVG" data-loaded="true">
                 </div>
                 <div class="col-xs-12 col-md-5 right-column">
-                    <h1 class="default-green-header">LOCATION DE LA PLATEFORME:</h1>
+                    <h1 class="default-green-header">LOCATION DE LA PLATEFORME</h1>
                     <div class="default-paragraph-container markdown-area">
                         <p>Oschoolelearning.com est disponible en location mode SaaS pour accueillir vos propres cours e-learning à un coût très attractif. Dans ce cas, la plateforme peut être personnalisée à vos couleurs. Nous proposons également une journée de formation à l’utilisation et à l’administration de la plateforme LMS.</p>
                     </div>
@@ -1112,7 +1112,7 @@ hr{border-color:#ececec;}
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1 class="default-green-header ">TEAM BUILDING: </h1>
+                        <h1 class="default-green-header ">TEAM BUILDING </h1>
                         <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
                             <p></p>
                         </div>
@@ -1133,7 +1133,7 @@ hr{border-color:#ececec;}
             <div class="row">
                 <div class="col-md-7 left-column match-height" style="height: 664px;">
                     <div class="text">
-                        <h1 class="default-green-header">TEAM BUILDING: </h1>
+                        <h1 class="default-green-header">TEAM BUILDING </h1>
                         <div class="default-paragraph-container markdown-area">
                             <p>Vous êtes une entreprise et vous souhaitez pouvoir présenter à vos employés une offre e-learning complète et adaptée à vos besoins.</p>
                         </div>
@@ -1229,7 +1229,7 @@ hr{border-color:#ececec;}
                 <div class="row">
                     <div class="col-xs-12 cta-content">
                         <h1 class="small-uppercase-text"></h1>
-                        <h2 class="default-header" style="max-width: 750px; font-size: 50px!important;">QUEL IMPACTE POUR VOTRE EQUIPE?</h2>
+                        <h2 class="default-header" style="max-width: 750px; font-size: 50px!important;">QUEL IMPACT POUR VOTRE EQUIPE?</h2>
                         <div class="">
                           <a href="/create-account?utm_source=features-mid" class="orange-button" style="padding: 20px 30px;">Téléchargez notre catalogue</a>
                           <a href="/create-account?utm_source=features-mid" class="orange-button">Contactez-nous</a>
