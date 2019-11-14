@@ -202,7 +202,6 @@ p:last-of-type{margin-bottom:0;}
 .why-get-cert__content .myg-accordion__item--active .myg-accordion__icon{color:#80868b;}
 .why-get-cert__content .myg-accordion__header{padding:24px 0;}
 .why-get-cert__content .myg-accordion__title{font-size:2.2rem!important;line-height:1.36!important;letter-spacing:normal!important;color:#9aa0a6;max-width:435px;transition:color .2s linear;}
-.show{ display: block!important; height: 190px!important;}
 @media (min-width:1024px) and (max-width:1440px){
 .why-get-cert__content .myg-accordion__title{max-width:310px;font-size:2.3rem!important;}
 }
@@ -371,7 +370,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 .myg-accordion__screenreader-box{display:none;}
 }
 .myg-accordion__item{border-bottom:1px solid #dadce0;}
-.myg-accordion__item--active .myg-accordion__panel{display:block;opacity:1;}
+.myg-accordion__item--active .myg-accordion__panel{display:block;opacity:1; height: 190px;}
 .myg-accordion__item--active .myg-accordion__icon{transform:rotateX(180deg);}
 .myg-accordion__header{display:flex;flex-direction:row;justify-content:space-between;cursor:pointer;padding:32px 0;line-height:1.44;}
 .myg-accordion__header:first-letter{text-transform:capitalize;}
@@ -784,7 +783,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                                     <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
                                     <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
                                 </div>
-                                <div class="myg-accordion__panel js-accordion-item-panel show">
+                                <div class="myg-accordion__panel js-accordion-item-panel " style="display:block;">
                                     <p>Cette certification vous permet de montrer aux employeurs que vous comprenez parfaitement les principaux concepts du marketing numérique. De plus, vous pouvez ajouter cette qualification à votre&nbsp;CV et
                                         l'importer facilement sur votre profil LinkedIn.</p>
                                 </div>
@@ -1827,14 +1826,15 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                         <div class="video-slider__video col col--6-12 col--md-12-12 col--sm-12-12">
                             <div class="responsive-video-wrapper ng-isolate-scope" myg-you-tube-player="" myg-yt-player-id="VideoSliderCtrl.activeSlide.value" video-img="VideoSliderCtrl.activeSlide.img"
                               video-img-label="VideoSliderCtrl.activeSlide.label">
-                                <iframe class="player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="100%"
+                                <!--iframe class="player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="100%"
                                   src="https://www.youtube.com/embed/LAWNBwoc5r4?rel=0&amp;showinfo=0&amp;controls=1&amp;color=white&amp;modestbranding=1&amp;playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Flearndigital.withgoogle.com&amp;widgetid=1"
-                                  id="widget2"></iframe>
+                                  id="widget2"></iframe-->
                                 <div class="video-slider__video__preview" ng-click="play()" role="button" tabindex="0">
-                                    <!-- ngAnimateSwap: videoImg --><img ng-src="https://lh3.googleusercontent.com/k6yZjh6qwTQYG3QMhr_9cI3N5zL4rJi2tsRhw3W0pwizdR35L-tG6Kz47HTd_hiOa7BTH3DQVnlZtKJE_yzVOSM=s0" ng-animate-swap="videoImg"
+                                    <!-- ngAnimateSwap: videoImg -->
+                                    <img ng-src="/images/divers/1258.jpg" ng-animate-swap="videoImg"
                                       class="video-slider__video__preview--animate ng-scope" alt="Témoignage de Sylwia"
-                                      src="https://lh3.googleusercontent.com/k6yZjh6qwTQYG3QMhr_9cI3N5zL4rJi2tsRhw3W0pwizdR35L-tG6Kz47HTd_hiOa7BTH3DQVnlZtKJE_yzVOSM=s0">
-                                    <i class="material-icons">play_circle_filled</i>
+                                      src="/images/divers/1258.jpg">
+                                    <!--i class="material-icons">play_circle_filled</i-->
                                 </div>
                             </div>
                         </div>

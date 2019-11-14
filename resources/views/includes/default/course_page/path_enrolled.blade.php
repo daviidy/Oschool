@@ -87,7 +87,7 @@ md-input-container .md-input::-moz-placeholder{color:#bbb;}
 .certificate-banner{position:relative;}
 .certificate-banner__image{position:absolute;z-index:10;top:10px;left:3px;}
 .certificate-banner__content{left:-10px;position:absolute;top:18px;overflow:visible;max-width:235px;min-height:26px;background-color:#fbbc05;color:#0e3ec1;z-index:2;}
-.certificate-banner__content__wrapper{width:100%;height:100%;position:relative;padding-right:5px;max-width:235px;min-height:26px;display:flex;align-items:center;justify-content:flex-end;}
+.certificate-banner__content__wrapper{width:100%;height:15px;position:relative;padding-right:5px;max-width:235px;min-height:26px;display:flex;align-items:center;justify-content:flex-end;}
 .certificate-banner__content svg{right:-9px;position:absolute;top:0;height:100%;width:10px;}
 .certificate-banner__content:before{content:"";height:0;width:0;display:block;position:absolute;top:-8px;left:0;border-bottom:10px solid #ee8c00;border-left:10px solid transparent;transform:scaleY(.7);}
 .certificate-banner__content__text{padding:6px 2px 6px 51px;z-index:2;}
@@ -435,7 +435,7 @@ button.btn{border:none;}
 .myg-accordion__screenreader-box{display:none;}
 }
 .myg-accordion__item{border-bottom:1px solid #dadce0;}
-.myg-accordion__item--active .myg-accordion__panel{display:block;opacity:1;}
+.myg-accordion__item--active .myg-accordion__panel{display:block;opacity:1; height: auto;}
 .myg-accordion__item--active .myg-accordion__icon{transform:rotateX(180deg);}
 .myg-accordion__header{display:flex;flex-direction:row;justify-content:space-between;cursor:pointer;padding:32px 0;line-height:1.44;}
 .myg-accordion__header:first-letter{text-transform:capitalize;}
@@ -550,7 +550,7 @@ button.btn{border:none;}
                     <h1 class="course-hero-enrolled__title">Obtenez la certification "{{$course->name}}"</h1>
                     <p class="course-hero-enrolled__subtitle">{{$course->subtitle}}</p>
 
-                    <ul class="course-hero-enrolled__logos">
+                    <!--ul class="course-hero-enrolled__logos">
 
                         <li ng-class="{'object-fit-fallback': isIe11}"
                           ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0)' : 'none'}" style="background-image: none;"><img
@@ -564,7 +564,7 @@ button.btn{border:none;}
                           ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/DalyD9rgzRK_CCCquSYsZMgq2YgdHSuEETd5z0NKQEqNKRf7U8EwEyv9YAxvUpDpbmYJnZ_c_RS-VhIT68dfw2c=s0)' : 'none'}" style="background-image: none;"><img
                               src="https://lh3.googleusercontent.com/DalyD9rgzRK_CCCquSYsZMgq2YgdHSuEETd5z0NKQEqNKRf7U8EwEyv9YAxvUpDpbmYJnZ_c_RS-VhIT68dfw2c=s0"></li>
 
-                    </ul>
+                    </ul-->
 
                 </div>
                 <div class="col col--4-12 col--lg-5-12 col--md-12-12 col--sm-12-12 course-hero-enrolled__details">
@@ -723,7 +723,7 @@ button.btn{border:none;}
 
 
 
-                <div class="col col--4-12 col--lg-5-12 col--md-12-12 col--sm-12-12 course-hero-enrolled__badges-row">
+                <!--div class="col col--4-12 col--lg-5-12 col--md-12-12 col--sm-12-12 course-hero-enrolled__badges-row">
                     <p class="course-hero-enrolled__subheader course-hero-enrolled__subheader--secondary">Badges récents</p>
                     <p class="course-hero-enrolled__description">Décrochez un badge pour chaque module que vous avez terminé. Vous en avez décroché&nbsp;26 sur&nbsp;26 dans ce cours.</p>
                     <div class="course-hero-enrolled__badges">
@@ -762,7 +762,7 @@ button.btn{border:none;}
 
                     <a href="course/digital-marketing/badges" class="btn btn--flat course-hero-enrolled__badges__link " data-gtm-tag="view-all-badges">Afficher tous les badges</a>
 
-                </div>
+                </div-->
 
             </div>
         </div>
@@ -776,7 +776,7 @@ button.btn{border:none;}
       open-multiple-panels="true" label-aria-opened="'Libellé aria pour le panneau en accordéon fermé'" label-aria-closed="'Libellé aria pour le panneau en accordéon fermé'">
 
       @foreach($course->projects as $project)
-        <div class="myg-accordion__item js-accordion-item myg-accordion__item--active" id="module-section-1">
+        <div class="myg-accordion__item js-accordion-item " id="module-section-1">
             <div class="myg-accordion__header js-accordion-title" tabindex="0">
                 <h4 class="myg-accordion__title heading--h3">
                     <a href="/path/{{$course->slug}}/projects/{{$project->slug}}">
@@ -786,7 +786,7 @@ button.btn{border:none;}
                 <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
                 <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
             </div>
-            <div class="myg-accordion__panel js-accordion-item-panel" style="display: block; height: 496px;">
+            <div class="myg-accordion__panel js-accordion-item-panel" style="display: block;">
                 <div class="course-detail__module-list">
 
 
@@ -823,3 +823,7 @@ button.btn{border:none;}
 
 
 </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<script src="/js/path-slide.js" charset="utf-8"></script>
