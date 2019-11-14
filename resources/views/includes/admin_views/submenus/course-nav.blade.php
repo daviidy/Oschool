@@ -129,6 +129,18 @@
         <!---->
         <!---->
     </li>
+    <li what="nav item" ui-sref-active="active"
+      ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Drip"
+      sref="admin.courses.course.drip">
+  <!----><a what="link" ui-sref="admin.courses.course.drip" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/deliverables" class="" style="">
+            <!---->
+            <!---->
+            <!---->
+            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Traveau</span></a>
+        <!---->
+        <!---->
+        <!---->
+    </li>
     <!---->
     <li what="nav item" ui-sref-active="active" style="display:none;"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
@@ -147,7 +159,7 @@
     <li what="nav item" ui-sref-active="active"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
       ng-if="::permissions.can('view_course_coupons')" text="Coupons" sref="admin.courses.course.coupons" class="">
-        <!----><a what="link" ui-sref="admin.courses.course.coupons" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/coupons">
+        <!----><a what="link" ui-sref="admin.courses.course.coupons" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/coupons">
             <!---->
             <!---->
             <!---->

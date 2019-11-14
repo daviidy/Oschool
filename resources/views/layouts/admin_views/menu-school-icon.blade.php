@@ -1,4 +1,4 @@
-icon icon-users<html>
+<html>
 
 <head>
 
@@ -296,6 +296,8 @@ icon icon-users<html>
                     @if(\Route::current()->getName() == 'course')
                       @include('includes.admin_views.submenus.course-nav')
                         @elseif(\Route::current()->getName() == 'deliverable')
+                      @include('includes.admin_views.submenus.course-nav')
+                        @elseif(\Route::current()->getName() == 'coupon')
                       @include('includes.admin_views.submenus.course-nav')
                     @endif
 

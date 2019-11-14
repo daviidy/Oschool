@@ -255,7 +255,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Liste des projets soumis
+                    <!---->Liste des coupons
                     <div class="tch-btn-header-icon-2">
                       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="20" height="40"viewBox="0 0 172 172"style=" fill:#000000;position: relative;bottom: 8px;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g fill="#3498db"><path d="M129.07556,30.25717l12.67131,12.67175l-98.8199,98.81645l-12.67131,-12.67175z"></path><path d="M141.73757,129.08237l-12.67077,12.66723l-98.80691,-98.8345l12.67077,-12.66723z"></path></g><path d="" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path></g></g></svg>
                     </div>
@@ -267,7 +267,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
     </div>
     <div class="tch-inline-form">
-        {{-- <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin//authors/create">Nouveau auteur</a><i class="fa fa-angle-down icon-arrow-down"></i></div> --}}
+    <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/coupons/create">Nouveau Coupon</a></div>
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
             <!---->
             {{-- <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
@@ -303,10 +303,10 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <table ng-if="products.length > 0" class="tch-table draggable-products">
                 <thead>
                     <tr>
-                        <th>Nom de l'etudiant</th>
+                        <th>Coupon</th>
                         {{-- <th>Image</th> --}}
-                        <th>Commentaire</th>
-                        <th>Evaluation</th>
+                        <th>Date d'expiration</th>
+                        <th>Reduction</th>
                         {{-- <th>Prix<a href="#" tooltip="The default price will be set to the first pricing plan on this list." tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="tch-btn-tooltip no-padding"><i
                                   class="fa fa-question-circle"></i>
                                 </a>
@@ -316,10 +316,10 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 </thead>
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
-                    @foreach ($deliverables as $deliverable)
+                    @foreach ($coupons as $coupon)
 
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
-                        <td><span>{{Auth::user()->name}}</span><span class="space"></span><span class="space"></span>
+                        <td><span>{{$coupon->code}}</span><span class="space"></span><span class="space"></span>
                             <!---->
                         </td>
                         {{-- <td what="type"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg">
@@ -329,34 +329,30 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Gratuit</span>
                             <!---->
                         </td> --}}
-                        <td what="comment">{!!$deliverable->comment!!}</td>
+                        <td what="comment">
+                            <div>
+                               {{$coupon->date_exp}}
+                            </div>
+                        </td>
 
                         {{-- <td what="price" ng-bind="formatProductPrice(product)">
                         </td> --}}
                         <td>
-                            <div>
-                                @if($deliverable->status == null)
-                                    <p>En attente d'évaluation</p>
-                                    @elseif($deliverable->status == 1)
-                                        <p>Validé</p>
-                                @else
-                                    <p>A retravailler</p>
-                                @endif
-                            </div>
+                            {{$coupon->value}} %
                         </td>
-                        <td></td>
+                    <td></td>
                         <td>
                             <!---->
                             <!---->
                             <div ng-if="product.is_published" class="pull-right">
-                            <a href="/schoolAdmin/{{$school->id}}/course/{{$course->id}}/project/{{$deliverable->project_id}}/deliverables/{{$deliverable->id}}/edit">
+                            <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/coupons/{{$coupon->id}}/edit">
                                     <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
                                 </a>
 
 
 
 
-                                <form action="{{ route('deliverables.destroy', $deliverable->id) }}" method="post">
+                                <form action="{{ route('coupons.destroy', $coupon->id) }}" method="post">
                                     @csrf
                                     {{ method_field('delete') }}
                                     <button
@@ -366,16 +362,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 </form>
 
 
-                                {{-- <form action="" method="post">
-                                    {{ csrf_field() }}
-                                    {{ method_field('delete') }} --}}
-                                {{-- <a href="/authors/{{$author->id}}/destroy">
-                                            <button
-                                            id="test-id-unpublish-btn"
-                                            class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i>
-                                            </button>
-                                    </a> --}}
-                                {{-- </form> --}}
+                               
                             </div>
                             <!---->
                         </td>
