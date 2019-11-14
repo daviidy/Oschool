@@ -153,8 +153,8 @@ class Course extends Model
                if (File::exists(public_path('/images/courses/logos/' . $course->logo))) {
                    File::delete(public_path('/images/courses/logos/' . $course->logo));
                }
-                $course->sections()->delete();
                 $course->lessons()->delete();
+                $course->sections()->delete();
                 $course->projects()->delete();
                 // do the rest of the cleanup...
            });
