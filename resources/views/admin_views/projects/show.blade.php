@@ -380,7 +380,7 @@ a:focus{color:inherit;text-decoration:none;}
           <div class="navbar-title">
             Jour 22
           </div>
-          <div class="navbar-rightNavigation"><button class="navbar-button"><img src="https://img.icons8.com/color/48/000000/discord-new-logo.png"> <span>Aller à la communauté</span></button></div>
+          <div class="navbar-rightNavigation"><button class="navbar-button"><img src="https://img.icons8.com/material-rounded/24/000000/conference-background-selected.png"> <span>Aller à la communauté</span></button></div>
         </div>
       </div>
     </div>

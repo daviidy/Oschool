@@ -57,7 +57,7 @@
             }
         </style>
         <div id="segment-event" type="hidden" value="Submit Home Page Hero Form"></div>
-        <div class="hero-div" style="background-image: url(/images/divers/oschool_5.png);">
+        <div class="hero-div" style="background-image: url(/images/divers/oschool_51.png);">
             <div class="container hero-container">
                 <div class="row">
                     <div class="col-xs-12 vertically-align-contents-except-xs">

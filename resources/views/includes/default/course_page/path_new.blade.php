@@ -2045,7 +2045,3 @@ h3{font-size:2.4rem;line-height:2.6rem;}
     </section>
 
 </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<script src="/js/path-slide.js" charset="utf-8"></script>
