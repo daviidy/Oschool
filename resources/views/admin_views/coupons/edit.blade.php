@@ -458,7 +458,7 @@
                                             {{-- <p>{{dd($coupon)}}</p> --}}
                                         {{-- @endforeach --}}
                                         <br>
-                                      <select name="status" multiple id="courses_id" name="courses_id[]" style="width:250px;">
+                                      <select size="1" name="status" multiple id="courses_id" name="courses_id[]" style="width:250px;">
                                         
                                         @foreach ($allCourses as $course_db)
                                                 <option value="{{$course_db->id}}">{{$course_db->name}}</option>
