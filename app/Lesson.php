@@ -79,6 +79,7 @@ class Lesson extends Model
                     File::delete(public_path('/images/lessons/resources/' . $media->name));
                 }
             }
+            //we delete lesson image
             if (File::exists(public_path('/images/lessons/images/' . $lesson->image))) {
                 File::delete(public_path('/images/lessons/images/' . $lesson->image));
             }

@@ -263,7 +263,7 @@ class SchoolController extends Controller
      */
     public function destroy(School $school)
     {
-        $formation->delete();
+        $school->delete();
         return redirect('home')->with('status', 'Ecole supprimée de la base de données' );
     }
 

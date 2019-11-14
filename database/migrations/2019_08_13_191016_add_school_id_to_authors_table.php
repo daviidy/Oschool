@@ -26,8 +26,10 @@ class AddSchoolIdToAuthorsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::table('authors', function (Blueprint $table) {
-            //
+            $table->dropForeign(['school_id']);
         });
+        Schema::enableForeignKeyConstraints();
     }
 }
