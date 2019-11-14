@@ -341,9 +341,9 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 }
 .heading--h4,h4{font-size:1.8rem;font-weight:400;line-height:2.8rem;letter-spacing:0;}
 .heading--h4-medium{font-weight:500;}
-.btn--primary{background:#4d90cc;color:#fff;}
-.btn--primary:focus,.btn--primary:hover{background:#6aace6;}
-.btn--primary:disabled{cursor:default;background:#6aace6;color:#fff;}
+.btn--primary{background:#1a73e8;color:#fff;}
+.btn--primary:focus,.btn--primary:hover{background:#174ea6;}
+.btn--primary:disabled{cursor:default;background:#dadce0;color:#fff;}
 .btn--primary:after{background:rgba(0,0,0,.4);}
 .btn--secondary{background:#f1f3f4;color:#202124;}
 .btn--secondary:focus,.btn--secondary:hover{background:#e8eaed;color:#174ea6;}
@@ -370,7 +370,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 .myg-accordion__screenreader-box{display:none;}
 }
 .myg-accordion__item{border-bottom:1px solid #dadce0;}
-.myg-accordion__item--active .myg-accordion__panel{display:block;opacity:1; height: 190px;}
+.myg-accordion__item--active .myg-accordion__panel{display:block;opacity:1;height: 190px;}
 .myg-accordion__item--active .myg-accordion__icon{transform:rotateX(180deg);}
 .myg-accordion__header{display:flex;flex-direction:row;justify-content:space-between;cursor:pointer;padding:32px 0;line-height:1.44;}
 .myg-accordion__header:first-letter{text-transform:capitalize;}
@@ -678,18 +678,18 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                 <p class="course-hero-unenrolled__subtitle">{{$course->subtitle}}</p>
 
 
-                <ul class="course-hero-unenrolled__logos">
+                <!--ul class="course-hero-unenrolled__logos">
 
-                    <!--li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0)' : 'none'}"
-                      style="background-image: none;display:none"><img src="https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0" alt="partner logo"></li>
+                    <li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0)' : 'none'}"
+                      style="background-image: none;"><img src="https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0" alt="partner logo"></li>
 
                     <li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/GK4YywbV1WSn_P4o2TLtQzGI03eEcKWFajo3LwU4QcA75N42Wtjx9zBUIgn-cj5ZoAtTMH0XkLE7YsHP-d7J6Yk=s0)' : 'none'}"
                       style="background-image: none;"><img src="https://lh3.googleusercontent.com/GK4YywbV1WSn_P4o2TLtQzGI03eEcKWFajo3LwU4QcA75N42Wtjx9zBUIgn-cj5ZoAtTMH0XkLE7YsHP-d7J6Yk=s0" alt="partner logo"></li>
 
                     <li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/DalyD9rgzRK_CCCquSYsZMgq2YgdHSuEETd5z0NKQEqNKRf7U8EwEyv9YAxvUpDpbmYJnZ_c_RS-VhIT68dfw2c=s0)' : 'none'}"
                       style="background-image: none;"><img src="https://lh3.googleusercontent.com/DalyD9rgzRK_CCCquSYsZMgq2YgdHSuEETd5z0NKQEqNKRf7U8EwEyv9YAxvUpDpbmYJnZ_c_RS-VhIT68dfw2c=s0" alt="partner logo"></li>
--->
-                </ul>
+
+                </ul-->
 
 
 
@@ -783,7 +783,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                                     <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
                                     <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
                                 </div>
-                                <div class="myg-accordion__panel js-accordion-item-panel " style="display:block;">
+                                <div class="myg-accordion__panel js-accordion-item-panel" style="display: block;">
                                     <p>Cette certification vous permet de montrer aux employeurs que vous comprenez parfaitement les principaux concepts du marketing numérique. De plus, vous pouvez ajouter cette qualification à votre&nbsp;CV et
                                         l'importer facilement sur votre profil LinkedIn.</p>
                                 </div>
@@ -1596,7 +1596,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
         </div>
     </section>
 
-    <section class="course-detail__section course-detail__skills content__container--full-width" style="display:none">
+    <!--section class="course-detail__section course-detail__skills content__container--full-width">
         <div class="content__wrapper">
             <h2 class="course-detail__section__title">Compétences que vous allez maîtriser</h2>
             <div class="skills">
@@ -1769,23 +1769,26 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                                 </div>
                             </div>
 
-                            <!-- ngIf: navigation && ctrl.items.length > ctrl.columns() -->
+                            <!-- ngIf: navigation && ctrl.items.length > ctrl.columns() >
                             <nav class="carousel__nav ng-scope" ng-if="navigation &amp;&amp; ctrl.items.length > ctrl.columns()" aria-controls="carousel">
-                                <!-- ngIf: ctrl.index < ctrl.maxIndex() --><button class="carousel__nav__link carousel__nav__link--next ng-scope" ng-click="ctrl.next($event);" ng-if="ctrl.index < ctrl.maxIndex()" aria-label="Next"><i
+                                <!-- ngIf: ctrl.index < ctrl.maxIndex() ><button class="carousel__nav__link carousel__nav__link--next ng-scope" ng-click="ctrl.next($event);" ng-if="ctrl.index < ctrl.maxIndex()" aria-label="Next"><i
                                       class="material-icons">chevron_right</i></button><!-- end ngIf: ctrl.index < ctrl.maxIndex() -->
-                                <!-- ngIf: ctrl.index > 0 -->
-                            </nav><!-- end ngIf: navigation && ctrl.items.length > ctrl.columns() -->
+                                <!-- ngIf: ctrl.index > 0 >
+                            </nav><!-- end ngIf: navigation && ctrl.items.length > ctrl.columns() >
                         </div>
-                        <!-- ngIf: pagination -->
+                        <!-- ngIf: pagination >
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section-->
+
+
+
 
     <section class="pricing py-5" id="price">
       <div class="container">
-        <h1 id="" class="title-price">Nos offres de prix</h1>
+        <h1 class="title-price">Nos offres de prix</h1>
         <div class="row">
           <!-- Free Tier -->
           @foreach($course->pricings as $pricing)
@@ -1830,10 +1833,9 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                                   src="https://www.youtube.com/embed/LAWNBwoc5r4?rel=0&amp;showinfo=0&amp;controls=1&amp;color=white&amp;modestbranding=1&amp;playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Flearndigital.withgoogle.com&amp;widgetid=1"
                                   id="widget2"></iframe-->
                                 <div class="video-slider__video__preview" ng-click="play()" role="button" tabindex="0">
-                                    <!-- ngAnimateSwap: videoImg -->
-                                    <img ng-src="/images/divers/1258.jpg" ng-animate-swap="videoImg"
+                                    <!-- ngAnimateSwap: videoImg --><img ng-src="/images/divers/tem2.png" ng-animate-swap="videoImg"
                                       class="video-slider__video__preview--animate ng-scope" alt="Témoignage de Sylwia"
-                                      src="/images/divers/1258.jpg">
+                                      src="/images/divers/tem2.png">
                                     <!--i class="material-icons">play_circle_filled</i-->
                                 </div>
                             </div>
@@ -1843,15 +1845,15 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                             <!-- ngIf: slide.value -->
                             <div ng-repeat="slide in VideoSliderCtrl.content" ng-if="slide.value" class="video-slider__slide__wrapper ng-scope video-slider__slide--active"
                               ng-class="{'video-slider__slide--active': VideoSliderCtrl.activeSlide.value === slide.value}" ng-click="VideoSliderCtrl.setActive(slide)" role="button" tabindex="0">
-                                <h3 class="video-slider__slide__title ng-binding">Témoignage de Jean Philippe Touye Bi</h3>
-                                <p class="video-slider__slide__description ng-binding">“Mon passage à Oschool a été très sincèrement fructueux pour moi car cela m’a donné de l'assurance, une carrure de Pro, également j'ai eu grâce à Oschool de la maturité dans le domaine du marketing sur les réseaux sociaux, tout cela par la qualité des enseignements.”</p>
+                                <h3 class="video-slider__slide__title ng-binding">Témoignage de Souleymane Coulibaly</h3>
+                                <p class="video-slider__slide__description ng-binding">“ très bonne plateforme d'apprentissage pour les adultes…”</p>
                             </div><!-- end ngIf: slide.value -->
                             <!-- end ngRepeat: slide in VideoSliderCtrl.content -->
                             <!-- ngIf: slide.value -->
                             <div ng-repeat="slide in VideoSliderCtrl.content" ng-if="slide.value" class="video-slider__slide__wrapper ng-scope" ng-class="{'video-slider__slide--active': VideoSliderCtrl.activeSlide.value === slide.value}"
                               ng-click="VideoSliderCtrl.setActive(slide)" role="button" tabindex="0">
-                                <h3 class="video-slider__slide__title ng-binding">Témoignage de Souleymane Coulibaly</h3>
-                                <p class="video-slider__slide__description ng-binding">“ très bonne plateforme d'apprentissage pour les adultes…”</p>
+                                <h3 class="video-slider__slide__title ng-binding">Témoignage de Jean Philippe Touye Bi</h3>
+                                <p class="video-slider__slide__description ng-binding">“Mon passage à Oschool a été très sincèrement fructueux pour moi car cela m’a donné de l'assurance, une carrure de Pro, également j'ai eu grâce à Oschool de la maturité dans le domaine du marketing sur les réseaux sociaux, tout cela par la qualité des enseignements.”</p>
                             </div><!-- end ngIf: slide.value -->
                             <!-- end ngRepeat: slide in VideoSliderCtrl.content -->
                             <hr class="video-slider__slide__highlight" ng-style="VideoSliderCtrl.highlightStyles" style="top: 0px; height: 140px;">
@@ -1860,22 +1862,22 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                         <div class="video-slider__mobile-select col col--sm-12-12">
                             <div class="custom-select ng-isolate-scope" ng-class="{'custom-select--open': open}" custom-select="" value="story" options="VideoSliderCtrl.content">
                                 <button type="button" class="custom-select__value" ng-click="ctrl.toggleSelect($event);">
-                                    <span class="custom-select__value__label ng-binding">Témoignage de Sylwia</span>
+                                    <span class="custom-select__value__label ng-binding">Témoignage de Souleymane Coulibaly</span>
                                     <ul class="custom-select__value__list" aria-hidden="">
                                         <!-- ngRepeat: option in options -->
-                                        <li ng-repeat="option in options" aria-hidden="" class="ng-binding ng-scope">wTémoignage de Sylwia</li><!-- end ngRepeat: option in options -->
-                                        <li ng-repeat="option in options" aria-hidden="" class="ng-binding ng-scope">wTémoignage de Darko</li><!-- end ngRepeat: option in options -->
+                                        <li ng-repeat="option in options" aria-hidden="" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</li><!-- end ngRepeat: option in options -->
+                                        <li ng-repeat="option in options" aria-hidden="" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</li><!-- end ngRepeat: option in options -->
                                     </ul>
                                 </button>
                                 <div class="custom-select__options">
                                     <!-- ngRepeat: option in options --><button type="button" class="custom-select__option ng-binding ng-scope custom-select__option--selected" ng-click="ctrl.onClick(option, $event);" ng-repeat="option in options"
-                                      ng-class="{'custom-select__option--selected': option.value == value}">Témoignage de Sylwia</button><!-- end ngRepeat: option in options --><button type="button" class="custom-select__option ng-binding ng-scope"
-                                      ng-click="ctrl.onClick(option, $event);" ng-repeat="option in options" ng-class="{'custom-select__option--selected': option.value == value}">Témoignage de Darko</button><!-- end ngRepeat: option in options -->
+                                      ng-class="{'custom-select__option--selected': option.value == value}">Témoignage de Souleymane Coulibaly</button><!-- end ngRepeat: option in options --><button type="button" class="custom-select__option ng-binding ng-scope"
+                                      ng-click="ctrl.onClick(option, $event);" ng-repeat="option in options" ng-class="{'custom-select__option--selected': option.value == value}">Témoignage de Souleymane Coulibaly</button><!-- end ngRepeat: option in options -->
                                 </div>
                                 <select class="custom-select__native ng-pristine ng-untouched ng-valid ng-not-empty" ng-transclude="" ng-model="value" aria-hidden="true" ng-class="{'custom-select__native--use-native': hasTouch}" aria-invalid="false">
                                     <!-- ngRepeat: story in VideoSliderCtrl.content -->
-                                    <option ng-repeat="story in VideoSliderCtrl.content" value="LAWNBwoc5r4" class="ng-binding ng-scope">Témoignage de Sylwia</option><!-- end ngRepeat: story in VideoSliderCtrl.content -->
-                                    <option ng-repeat="story in VideoSliderCtrl.content" value="OnS3YKbPrP0" class="ng-binding ng-scope">Témoignage de Darko</option><!-- end ngRepeat: story in VideoSliderCtrl.content -->
+                                    <option ng-repeat="story in VideoSliderCtrl.content" value="LAWNBwoc5r4" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</option><!-- end ngRepeat: story in VideoSliderCtrl.content -->
+                                    <option ng-repeat="story in VideoSliderCtrl.content" value="OnS3YKbPrP0" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</option><!-- end ngRepeat: story in VideoSliderCtrl.content -->
                                 </select>
                             </div>
                             <p class="video-slider__mobile-select__description ng-binding">Découvrez l'exemple de Sylwia, de l'agence icube.pl. Après avoir renforcé ses compétences et obtenu la certification, elle a été promue responsable du
@@ -2031,9 +2033,6 @@ h3{font-size:2.4rem;line-height:2.6rem;}
         </div>
       </div>
     </div>
-
-
-
 
     <section class="course-detail__section course-detail__cta-box content__container--full-width">
         <div class="content__wrapper">

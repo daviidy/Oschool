@@ -750,7 +750,7 @@
                                     Jean Philippe Touye Bi
                                 </div>
                                 <div class="course-name">
-                                    <em>Vivre. Écrire. Prospérer.</em>
+                                    <em></em>
                                 </div>
                             </div>
                         </div>
@@ -773,21 +773,21 @@
                         <div class="card-front" style="background-image: none;">
                             <div class="card-front-text">
                                 <div class="name">
-                                    Alan Perlman
+                                    Zigoli Clement
                                 </div>
                                 <div class="course-name">
-                                    <em>UAV Coach</em>
+                                    <em>Etudiant/coach</em>
                                 </div>
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“J'avais du mal à décoller, mais j'ai découvert Teachable et il était si facile de tout configurer, une excellente équipe d'assistance et, dans l'ensemble, une expérience extraordinaire.”</p>
+                            <p class="testimonial-text">“ce cours de Laravel est tellement pratique que je n’ai pas eu du mal à l’approprier. Je vous le recommande vivement et je dis merci à David car ses tutos sont très simplifiés pour permettre à tous de suivre les modules proposés.”</p>
                             <div class="card-bottom">
-                                <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/7xttxlETVOIUtnNtDWC5">
+                                <img src="/images/divers/tem.jpg">
                                 <div class="card-bottom-attribution">
                                     <div class="card-bottom-attribution-bottom ">
-                                        <div class="name">Alan Perlman</div>
-                                        <a href="http://learn.uavcoach.com" target="_blank" rel="noopener noreferrer">Voir le cours</a>
+                                        <div class="name">Zigoli Clement</div>
+                                        <!--a href="http://learn.uavcoach.com" target="_blank" rel="noopener noreferrer">Voir le cours</a-->
                                     </div>
                                 </div>
                             </div>
@@ -802,7 +802,7 @@
                                   Souleymane Coulibaly
                                 </div>
                                 <div class="course-name">
-                                    <em>Digital Insiders For Life</em>
+                                    <em></em>
                                 </div>
                             </div>
                         </div>
@@ -949,14 +949,14 @@
         <div class="container-fluid">
             <div class="row pictures-grid">
                 <div class="hidden-xs hidden-sm col-md-3 column">
-                    <img src="/images/divers/oschool-5.jpeg" alt=""><img src="/images/divers/oschool_4.png"
+                    <img src=" /images/divers/os2.jpeg" alt=""><img src="/images/divers/oschool_4.png"
                       alt="">
                     <img src="/images/divers/os-1.png" alt="">
                     <img src="/images/divers/os-2.png" alt=""><img
                       src="/images/divers/os-3.png" alt="">
                 </div>
                 <div class="hidden-xs col-sm-4 col-md-3 column">
-                    <img src="/images/divers/os4.jpeg" alt="">
+                    <img src="/images/divers/oschool_5.png" alt="">
                     <img src="/images/divers/oschool-4.png" alt=""><img src="/images/divers/os_4.png"
                       alt="">
                 </div>
@@ -965,17 +965,17 @@
                         <img src="/images/divers/os5.jpeg" class="ankur" alt="">
                         <div class="row-1-col-2">
                             <div class="row-1-col-2-row-1">
-                                <img src="https://teachable.com/assets/boxes-of-people/leaves-f2d8049a1e75192632d5f3e1f74736deae03667b053b5f544a708e089e5e56a2.jpg" class="leaves" alt=""><img
+                                <img src="/images/divers/tem.jpg" class="leaves" alt=""><img
                                   src="https://teachable.com/assets/boxes-of-people/computer-1a3879cbabc1783a1c514b5c4f94c736c3310bff3d761029d74779cd0e305d70.jpg" class="computer" alt="">
                             </div>
                             <div class="row-1-col-2-row-2">
-                                <img src="/images/divers/os1.jpeg" class="laurence" alt="">
+                                <img src="https://teachable.com/assets/boxes-of-people/laurence-e0a574262c9055f0cbaf617d8bfd1c604af0fa9b27c9c72b4c013d0eb9f2d6f1.jpg" class="laurence" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="row-2 clearfix">
                         <img src="https://teachable.com/assets/boxes-of-people/writer-86733135fcc6a86d2826eaa17e1648a1cc03aed3577d8228118f1c77cb7dda5e.jpg" class="writer"><img
-                          src="/images/divers/os3.jpeg" class="don"><img src="https://teachable.com/assets/boxes-of-people/hat-10f420ab1ce5ccc04b13dfeee96641b809be6658295ac328a2006b59ef14607b.jpg"
+                          src="/images/divers/os3.jpeg" class="don"><img src="/images/divers/os_5.jpg"
                           class="hat">
                     </div>
                 </div>

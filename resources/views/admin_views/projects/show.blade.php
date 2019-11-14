@@ -375,12 +375,12 @@ a:focus{color:inherit;text-decoration:none;}
         {{-- Submit doc end --}}
       <div class="navbar">
         <div class="navbar-container">
-          <div class="navbar-leftNavigation"><a href="http://platform.mindvalley.com/quests/supercerveau" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour aux jours</span></a>
+          <div class="navbar-leftNavigation"><a href="/course/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour aux jours</span></a>
           </div>
           <div class="navbar-title">
             Jour 22
           </div>
-          <div class="navbar-rightNavigation"><button class="navbar-button"><img src="https://img.icons8.com/material-rounded/24/000000/conference-background-selected.png"> <span>Aller à la communauté</span></button></div>
+          <div class="navbar-rightNavigation"> <a href="https://discordapp.com/invite/hhbzcHE" target="_blank"><button class="navbar-button"><img src="https://img.icons8.com/material-rounded/24/000000/conference-background-selected.png"> <span>Aller à la communauté</span></button></a> </div>
         </div>
       </div>
     </div>
