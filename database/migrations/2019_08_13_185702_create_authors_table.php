@@ -30,6 +30,8 @@ class CreateAuthorsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('authors');
+        Schema::enableForeignKeyConstraints();
     }
 }
