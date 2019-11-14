@@ -349,7 +349,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                             <!---->
                             <div ng-if="product.is_published" class="pull-right">
-                            <a href="/schoolAdmin/course/{{$course->id}}/project/{{$deliverable->project_id}}/deliverable/{{$deliverable->id}}/edit">
+                            <a href="/schoolAdmin/{{$school->id}}/course/{{$course->id}}/project/{{$deliverable->project_id}}/deliverables/{{$deliverable->id}}/edit">
                                     <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
                                 </a>
 
