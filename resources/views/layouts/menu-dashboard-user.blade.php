@@ -50,6 +50,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <div class="mobile-navbar navbar-collapse collapse">
+                        <!--menu for smartphone view-->
                         <ul class="nav navbar-nav">
                             @if(Auth::user()->isAdmin())
                             <li class="nav-item-create">
@@ -57,7 +58,7 @@
                             </li>
                             @endif
                             <li class="nav-item-profile selected">
-                                <a href="{{route('schools.index')}}">Mes écoles</a>
+                                <a href="/home">Mes écoles</a>
                             </li>
                             <li class="nav-item-create">
                                 <a href="{{route('schools.create')}}">Créer une nouvelle école / classe</a>
