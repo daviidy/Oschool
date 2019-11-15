@@ -59,7 +59,7 @@
     @else
 
     <h1>Vous n'êtes inscrit à aucun cours pour le moment.</h1>
-    <img src="/images/divers/no_course.png" alt="">
+    <img style="width: 52%" src="/images/divers/no_course.png" alt="">
     <a href="{{route('schools.index')}}">
         <div class="button-group" style="margin-top: 2em;">
             <font style="vertical-align: inherit;">
