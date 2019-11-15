@@ -400,7 +400,7 @@ $(document).ready(function(){
  function fetch_customer_data(query = '')
  {
   $.ajax({
-   url:"/ajax_course_search",
+   url:"/ajax_course_search/{{$school->id}}",
    method:'GET',
    data:{query:query},
    dataType:'json',
