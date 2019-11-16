@@ -1,7 +1,3 @@
-$(document).ready(function(){
-
-
-
 
 $('#addAuthor').on('click', function() {
 
@@ -14,7 +10,7 @@ $('#addAuthor').on('click', function() {
 
 $('#createAuthor').on('click', function() {
 
-
+$("#createAuthor").hide();
     $.ajax({
         type: 'post',
         url: '/addAuthor',
@@ -24,12 +20,13 @@ $('#createAuthor').on('click', function() {
             'full_name': $('#author-name').val(),
 
         },
+        cache:false,
         success: function(data) {
             $("#selectAuthor").show();
             $("#listAuthor option:selected").removeAttr("selected");
             $('#listAuthor').append("<option selected value='"+ data.id +"'>"+ data.full_name +"</option>")
             $('#inputCreateAuthor').hide();
-            $("#createAuthor").hide();
+
       $.amaran({'message':"Auteur bien ajouté!"});
 
         },
@@ -42,9 +39,6 @@ $('#createAuthor').on('click', function() {
 
 
 
-
-
-});
 //responsive menu admin
 
 $(".tch-btn-header-icon").click(function() {
