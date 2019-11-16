@@ -75,7 +75,12 @@ class School extends Model
          if (File::exists(public_path('/images/schools/logos/' . $school->logo))) {
              File::delete(public_path('/images/schools/logos/' . $school->logo));
          }
-          $school->courses()->delete();
+         foreach ($school->courses as $course) {
+             $course->lessons()->delete();
+             $course->sections()->delete();
+             $course->projects()->delete();
+             $course->delete();
+         }
           $school->authors()->delete();
           // do the rest of the cleanup...
      });

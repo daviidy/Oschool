@@ -16,9 +16,9 @@ class CreateLessonsTable extends Migration
         Schema::create('lessons', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('course_id')->unsigned()->nullable();
-            $table->foreign('course_id')->references('id')->on('courses');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->bigInteger('section_id')->unsigned()->nullable();
-            $table->foreign('section_id')->references('id')->on('sections');
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
             $table->string('image')->nullable();

@@ -56,6 +56,18 @@
         </a>
         @endforeach
     </div>
+    @else
+
+    <h1>Vous n'êtes inscrit à aucun cours pour le moment.</h1>
+    <img style="width: 52%" src="/images/divers/no_course.png" alt="">
+    <a href="{{route('schools.index')}}">
+        <div class="button-group" style="margin-top: 2em;">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;"><input type="submit" name="commit" value="Commencez à apprendre dès maintenant" id="foo-submit" class="btn btn-primary btn-md btn-orange btn-teachable-block"></font>
+            </font>
+        </div>
+    </a>
+
     @endif
 </div>
 

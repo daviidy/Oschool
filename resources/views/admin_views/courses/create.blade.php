@@ -364,7 +364,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     <option label="" value="course">Cours</option>
                                     <option label="" value="path">Parcours</option>
                                     <option label="" value="bootcamp">Bootcamp</option>
-
                                 </select>
                             </div>
                             <help-block>

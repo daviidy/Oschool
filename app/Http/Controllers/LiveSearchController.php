@@ -10,7 +10,7 @@ class LiveSearchController extends Controller
 {
 
 
-    function action(Request $request)
+    function action(Request $request, School $school)
     {
      if($request->ajax())
      {
@@ -29,6 +29,7 @@ class LiveSearchController extends Controller
       {
        $data = DB::table('courses')
          ->orderBy('name', 'asc')
+         ->where('school_id', 'like', '%'.$school->id.'%')
          ->get();
       }
       $total_row = $data->count();
