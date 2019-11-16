@@ -176,6 +176,7 @@ input::placeholder{color:inherit;opacity:.5;}
               </div>
             </div>
           </div>
+          @if(\Route::current()->getName() !== 'certificate')
             <div class="bottomBar">
                 <div class="bottomBar-container">
                     {{-- @if(count(DB::table('deliverables')->get()->where('user_id', Auth::user()->id)) > 0) --}}
@@ -188,14 +189,14 @@ input::placeholder{color:inherit;opacity:.5;}
                       pointer-events:none;">
                         Votre projet a deja été envoyé
                       </button>
-                            
+
                     @elseif($deliverable->status == '0')
 
                       <button id="sendWorksAgain" class="button button--primary button--bottomBar" style="display: block;">
                           Renvoyer mes travaux
                       </button>
-                    
-                    @else 
+
+                    @else
                     <div class="bottomBar-message">
                       <div class="sign sign-==-small sign--completedAlt mr-3"><i class="icon icon-check" aria-hidden="true"></i></div> <span class="text-green font-bold">Projet Validé</span>
                     </div>
@@ -208,8 +209,9 @@ input::placeholder{color:inherit;opacity:.5;}
                             Envoyer mes travaux
                         </button>
                     @endif
-                    
+
             </div>
+          @endif
           </div>
         </div>
       </div>
