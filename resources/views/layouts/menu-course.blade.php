@@ -514,25 +514,22 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <img src="/images/schools/logos/oschool.png" alt="logo">
             <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf">
             @else
-            <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo">
+            <img src="/images/schools/logos/logo_oschool_noir.png" alt="logo" id="logo-icon" style="display:none">
+            <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf" >
             @endif
           </a>
 
           <div class="collapse navbar-collapse navbar-header-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <a class="fedora-navbar-link navbar-link" href="/features" target="">
+                <a class="fedora-navbar-link navbar-link" href="{{url('schools')}}" target="">
                   Nos écoles
                 </a>
               </li>
-              <li>
-                <a class="fedora-navbar-link navbar-link" href="/pricing" target="">
-                  Nos offres de formations
-                </a>
-              </li>
+
               <li>
                 <a class="fedora-navbar-link navbar-link" href="/examples" target="">
-                  Emplois
+                  Qui sommes nous?
                 </a>
               </li>
               <li>
@@ -540,14 +537,10 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
                   Evernements
                 </a>
               </li>
-              <li>
-                <a class="fedora-navbar-link navbar-link" href="/blog/resources" target="">
-                  Blog
-                </a>
-              </li>
+
 
               <li>
-                <a class="navbar-link fedora-navbar-link" href="/sign_in">
+                <a class="navbar-link fedora-navbar-link" href="/corporate">
                   Entreprises
                 </a>
               </li>

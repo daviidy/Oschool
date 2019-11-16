@@ -10,5 +10,4 @@ $(document).ready(function() {
       $(this).addClass("myg-accordion__item--active");
   });
 
-
 });
