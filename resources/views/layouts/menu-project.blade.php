@@ -2,6 +2,8 @@
   class="icon-events-icons-ready icon-events-typefaces-gilroy-ready icon-events-typefaces-gilroy-normal-normal-ready icon-events-typefaces-gilroy-500-normal-ready icon-events-typefaces-open-sans-ready icon-events-typefaces-open-sans-700-normal-ready icon-events-typefaces-open-sans-400-italic-ready icon-events-typefaces-open-sans-400-normal-ready icon-events-typefaces-gilroy-600-normal-ready icon-events-typefaces-gilroy-bold-normal-ready">
 
 <head>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
   <style class="vjs-styles-defaults">
     .video-js {
       width: 300px;
@@ -72,6 +74,9 @@ input::placeholder{color:inherit;opacity:.5;}
 .text-center{text-align:center;}
 .text-2xl{font-size:1.5rem;}
 .w-full{width:100%;}
+ion-icon.hydrated.md {
+    font-size: 45px;
+}
 /*! CSS Used from: https://use.fortawesome.com/kits/748c4f83/publications/92363/woff2.css ; media=all */
 @media all{
 .icon{display:inline-block;font:normal normal normal 14px/1 Quests4;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
@@ -188,16 +193,16 @@ input::placeholder{color:inherit;opacity:.5;}
                       pointer-events:none;">
                         Votre projet a deja été envoyé
                       </button>
-                            
+
                     @elseif($deliverable->status == '0')
 
                       <button id="sendWorksAgain" class="button button--primary button--bottomBar" style="display: block;">
                           Renvoyer mes travaux
                       </button>
-                    
-                    @else 
+
+                    @else
                     <div class="bottomBar-message">
-                      <div class="sign sign-==-small sign--completedAlt mr-3"><i class="icon icon-check" aria-hidden="true"></i></div> <span class="text-green font-bold">Projet Validé</span>
+                      <div class="sign sign-==-small sign--completedAlt mr-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="s-ion-icon"><path d="M170.718 216.482L141.6 245.6l93.6 93.6 208-208-29.118-29.118L235.2 279.918l-64.482-63.436zM422.4 256c0 91.518-74.883 166.4-166.4 166.4S89.6 347.518 89.6 256 164.482 89.6 256 89.6c15.6 0 31.2 2.082 45.764 6.241L334 63.6C310.082 53.2 284.082 48 256 48 141.6 48 48 141.6 48 256s93.6 208 208 208 208-93.6 208-208h-41.6z"></path></svg></div> <span class="text-green font-bold">Projet Validé</span>
                     </div>
 
                     @endif
@@ -208,7 +213,7 @@ input::placeholder{color:inherit;opacity:.5;}
                             Envoyer mes travaux
                         </button>
                     @endif
-                    
+
             </div>
           </div>
         </div>

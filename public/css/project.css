@@ -167,7 +167,7 @@ button{cursor:pointer;}
 }
 .navbar-leftNavigation{-ms-flex-pack:start;justify-content:flex-start;}
 .navbar-rightNavigation{-ms-flex-pack:end;justify-content:flex-end;}
-.navbar-button,.navbar-title{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:100%;text-transform:capitalize;font-weight:600;}
+.navbar-button,.navbar-title{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:100%;text-transform:initial;font-weight:600;}
 .navbar-button{height:100%;}
 .navbar-link{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;height:100%;color:#62686e;font-size:1.25rem;text-decoration:none;}
 .navbar-link>.icon{color:#484f5a;}

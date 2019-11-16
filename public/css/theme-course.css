@@ -1292,20 +1292,20 @@ h3 {
 }
 
 .navbar-course-hero.is-at-top .navbar-brand, .navbar-course-hero.is-at-top a.fedora-navbar-link {
-    color: #000 !important
+    color: #000 !important;
 }
 
 .navbar-course-hero.is-at-top .navbar-brand:hover, .navbar-course-hero.is-at-top a.fedora-navbar-link:hover {
     background: none !important;
-    color: #ccc !important
+    color: #ccc !important;
 }
 
 .navbar-course-hero.is-at-top .icon-bar {
-    background: #fff !important
+    background: #fff !important;
 }
 
 .navbar-course-hero.is-scrolling {
-    background-color: rgba(0, 0, 0, 0.97)
+    background-color: rgba(0, 0, 0, 0.97);
 }
 
 .is-above-the-fold.show-nav-background-color, .is-at-top.show-nav-background-color, .navbar-fedora.is-at-top.is-not-signed-in.is-homepage.show-nav-background-color {

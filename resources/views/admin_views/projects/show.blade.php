@@ -375,12 +375,12 @@ a:focus{color:inherit;text-decoration:none;}
         {{-- Submit doc end --}}
       <div class="navbar">
         <div class="navbar-container">
-          <div class="navbar-leftNavigation"><a href="http://platform.mindvalley.com/quests/supercerveau" class="navbar-link"><i class="icon icon-long-arrow-left" aria-hidden="true"></i> <span class="navbar-linkText">Back To days</span></a>
+          <div class="navbar-leftNavigation"><a href="/course/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour aux jours</span></a>
           </div>
           <div class="navbar-title">
-            day 22
+            Jour 22
           </div>
-          <div class="navbar-rightNavigation"><button class="navbar-button"><i class="icon icon-users" aria-hidden="true"></i> <span>Go To Community</span></button></div>
+          <div class="navbar-rightNavigation"> <a href="https://discordapp.com/invite/hhbzcHE" target="_blank"><button class="navbar-button"><img src="https://img.icons8.com/material-rounded/24/000000/conference-background-selected.png"> <span>Aller à la communauté</span></button></a> </div>
         </div>
       </div>
     </div>
@@ -406,10 +406,10 @@ a:focus{color:inherit;text-decoration:none;}
                       </div>
                       <h4 class="module-progress-card__title">Le lien de votre projet</h4>
                     </a>
-                  
+
                   @endforeach
-                    
-     
+
+
 
               @endif
 
@@ -431,8 +431,14 @@ a:focus{color:inherit;text-decoration:none;}
                     <source src="https://assets.mindvalley.com/api/v1/assets/d807ade2-2d9f-46d4-b163-ad08bcb8fd6a.mp4" type="video/mp4"></video>
                   <div class="vjs-poster" tabindex="-1" aria-disabled="false" style="background-image: url(&quot;https://assets.mindvalley.com/api/v1/assets/41bb5927-7382-41e3-9158-7daa77e12957.jpg&quot;);"></div>
                   <div class="vjs-text-track-display" aria-live="off" aria-atomic="true"></div>
-                  <div class="vjs-loading-spinner" dir="ltr"><span class="vjs-control-text">Video Player is loading.</span></div><button class="vjs-big-play-button" type="button" title="Play Video" aria-disabled="false"><span
-                      aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Play Video</span></button>
+                  <div class="vjs-loading-spinner" dir="ltr"><span class="vjs-control-text">Video Player is loading.</span></div>
+
+                  <button class="vjs-big-play-button" type="button" title="Play Video" aria-disabled="false">
+                    <ion-icon name="play"></ion-icon>
+                    <!--span aria-hidden="true" class="vjs-icon-placeholder"></span-->
+                      <span class="vjs-control-text" aria-live="polite">Play Video</span>
+                    </button>
+
                   <div class="vjs-control-bar" dir="ltr"><button class="vjs-play-control vjs-control vjs-button" type="button" title="Play" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span
                         class="vjs-control-text" aria-live="polite">Play</span></button>
                     <div class="vjs-volume-panel vjs-control vjs-volume-panel-horizontal"><button class="vjs-mute-control vjs-control vjs-button vjs-vol-3" type="button" title="Mute" aria-disabled="false"><span aria-hidden="true"
@@ -752,7 +758,7 @@ a:focus{color:inherit;text-decoration:none;}
                       </div>
 
                       <div class="task-description {{Auth::user()->tasks->contains($task->id) ? 'task-description--completed' : ''}}">
-                        <div class="sign {{Auth::user()->tasks->contains($task->id) ? 'sign--completed' : ''}}"><i class="icon icon-check" aria-hidden="true"></i></div>
+                        <div class="sign {{Auth::user()->tasks->contains($task->id) ? 'sign--completed' : ''}}"><ion-icon name="checkmark-circle-outline"></ion-icon></div>
                         <div class="task-name">{{$task->heading}}</div>
                       </div>
                     </div>

@@ -341,9 +341,9 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 }
 .heading--h4,h4{font-size:1.8rem;font-weight:400;line-height:2.8rem;letter-spacing:0;}
 .heading--h4-medium{font-weight:500;}
-.btn--primary{background:#4d90cc;color:#fff;}
-.btn--primary:focus,.btn--primary:hover{background:#6aace6;}
-.btn--primary:disabled{cursor:default;background:#6aace6;color:#fff;}
+.btn--primary{background:#1a73e8;color:#fff;}
+.btn--primary:focus,.btn--primary:hover{background:#174ea6;}
+.btn--primary:disabled{cursor:default;background:#dadce0;color:#fff;}
 .btn--primary:after{background:rgba(0,0,0,.4);}
 .btn--secondary{background:#f1f3f4;color:#202124;}
 .btn--secondary:focus,.btn--secondary:hover{background:#e8eaed;color:#174ea6;}
@@ -370,7 +370,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 .myg-accordion__screenreader-box{display:none;}
 }
 .myg-accordion__item{border-bottom:1px solid #dadce0;}
-.myg-accordion__item--active .myg-accordion__panel{display:block;opacity:1;}
+.myg-accordion__item--active .myg-accordion__panel{display:block;opacity:1;height: 190px;}
 .myg-accordion__item--active .myg-accordion__icon{transform:rotateX(180deg);}
 .myg-accordion__header{display:flex;flex-direction:row;justify-content:space-between;cursor:pointer;padding:32px 0;line-height:1.44;}
 .myg-accordion__header:first-letter{text-transform:capitalize;}
@@ -678,18 +678,18 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                 <p class="course-hero-unenrolled__subtitle">{{$course->subtitle}}</p>
 
 
-                <ul class="course-hero-unenrolled__logos">
+                <!--ul class="course-hero-unenrolled__logos">
 
-                    <!--li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0)' : 'none'}"
-                      style="background-image: none;display:none"><img src="https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0" alt="partner logo"></li>
+                    <li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0)' : 'none'}"
+                      style="background-image: none;"><img src="https://lh3.googleusercontent.com/2MERxMhSGFas8NXxBJxW0U5BjpPzp6YvPzmZ6mGsO78NoRreH52SJuhWhLn2ftNduaTRYt2puep4Bxel1DtWfTI=s0" alt="partner logo"></li>
 
                     <li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/GK4YywbV1WSn_P4o2TLtQzGI03eEcKWFajo3LwU4QcA75N42Wtjx9zBUIgn-cj5ZoAtTMH0XkLE7YsHP-d7J6Yk=s0)' : 'none'}"
                       style="background-image: none;"><img src="https://lh3.googleusercontent.com/GK4YywbV1WSn_P4o2TLtQzGI03eEcKWFajo3LwU4QcA75N42Wtjx9zBUIgn-cj5ZoAtTMH0XkLE7YsHP-d7J6Yk=s0" alt="partner logo"></li>
 
                     <li ng-class="{'object-fit-fallback': isIe11}" ng-style="{'background-image': isIe11 ? 'url(https://lh3.googleusercontent.com/DalyD9rgzRK_CCCquSYsZMgq2YgdHSuEETd5z0NKQEqNKRf7U8EwEyv9YAxvUpDpbmYJnZ_c_RS-VhIT68dfw2c=s0)' : 'none'}"
                       style="background-image: none;"><img src="https://lh3.googleusercontent.com/DalyD9rgzRK_CCCquSYsZMgq2YgdHSuEETd5z0NKQEqNKRf7U8EwEyv9YAxvUpDpbmYJnZ_c_RS-VhIT68dfw2c=s0" alt="partner logo"></li>
--->
-                </ul>
+
+                </ul-->
 
 
 
@@ -783,7 +783,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                                     <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
                                     <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
                                 </div>
-                                <div class="myg-accordion__panel js-accordion-item-panel" style="display: block; height: 190px;">
+                                <div class="myg-accordion__panel js-accordion-item-panel" style="display: block;">
                                     <p>Cette certification vous permet de montrer aux employeurs que vous comprenez parfaitement les principaux concepts du marketing numérique. De plus, vous pouvez ajouter cette qualification à votre&nbsp;CV et
                                         l'importer facilement sur votre profil LinkedIn.</p>
                                 </div>
@@ -1596,7 +1596,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
         </div>
     </section>
 
-    <section class="course-detail__section course-detail__skills content__container--full-width" style="display:none">
+    <!--section class="course-detail__section course-detail__skills content__container--full-width">
         <div class="content__wrapper">
             <h2 class="course-detail__section__title">Compétences que vous allez maîtriser</h2>
             <div class="skills">
@@ -1769,26 +1769,26 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                                 </div>
                             </div>
 
-                            <!-- ngIf: navigation && ctrl.items.length > ctrl.columns() -->
+                            <!-- ngIf: navigation && ctrl.items.length > ctrl.columns() >
                             <nav class="carousel__nav ng-scope" ng-if="navigation &amp;&amp; ctrl.items.length > ctrl.columns()" aria-controls="carousel">
-                                <!-- ngIf: ctrl.index < ctrl.maxIndex() --><button class="carousel__nav__link carousel__nav__link--next ng-scope" ng-click="ctrl.next($event);" ng-if="ctrl.index < ctrl.maxIndex()" aria-label="Next"><i
+                                <!-- ngIf: ctrl.index < ctrl.maxIndex() ><button class="carousel__nav__link carousel__nav__link--next ng-scope" ng-click="ctrl.next($event);" ng-if="ctrl.index < ctrl.maxIndex()" aria-label="Next"><i
                                       class="material-icons">chevron_right</i></button><!-- end ngIf: ctrl.index < ctrl.maxIndex() -->
-                                <!-- ngIf: ctrl.index > 0 -->
-                            </nav><!-- end ngIf: navigation && ctrl.items.length > ctrl.columns() -->
+                                <!-- ngIf: ctrl.index > 0 >
+                            </nav><!-- end ngIf: navigation && ctrl.items.length > ctrl.columns() >
                         </div>
-                        <!-- ngIf: pagination -->
+                        <!-- ngIf: pagination >
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section-->
 
-<script src="/js/path-slide.js" charset="utf-8"></script>
+
 
 
     <section class="pricing py-5" id="price">
       <div class="container">
-        <h1 id="" class="title-price">Nos offres de prix</h1>
+        <h1 class="title-price">Nos offres de prix</h1>
         <div class="row">
           <!-- Free Tier -->
           @foreach($course->pricings as $pricing)
@@ -1799,9 +1799,9 @@ h3{font-size:2.4rem;line-height:2.6rem;}
               <h6 class="card-price text-center">{{$pricing->price}} FCFA <span class="period">/ {{$pricing->per == 'month' ? 'Mois' : ''}}</span></h6>
                 <hr>
                 <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Un seul utilisateur</li>
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Mentoring</li>
-                  <li><span class="fa-li"><i class="fas fa-check"></i></span>Test</li>
+                  <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Un seul utilisateur</li>
+                  <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Mentoring</li>
+                  <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Test</li>
                   {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li> --}}
                   {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li> --}}
                 </ul>
@@ -1829,14 +1829,14 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                         <div class="video-slider__video col col--6-12 col--md-12-12 col--sm-12-12">
                             <div class="responsive-video-wrapper ng-isolate-scope" myg-you-tube-player="" myg-yt-player-id="VideoSliderCtrl.activeSlide.value" video-img="VideoSliderCtrl.activeSlide.img"
                               video-img-label="VideoSliderCtrl.activeSlide.label">
-                                <iframe class="player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="100%"
+                                <!--iframe class="player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="100%"
                                   src="https://www.youtube.com/embed/LAWNBwoc5r4?rel=0&amp;showinfo=0&amp;controls=1&amp;color=white&amp;modestbranding=1&amp;playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Flearndigital.withgoogle.com&amp;widgetid=1"
-                                  id="widget2"></iframe>
+                                  id="widget2"></iframe-->
                                 <div class="video-slider__video__preview" ng-click="play()" role="button" tabindex="0">
-                                    <!-- ngAnimateSwap: videoImg --><img ng-src="https://lh3.googleusercontent.com/k6yZjh6qwTQYG3QMhr_9cI3N5zL4rJi2tsRhw3W0pwizdR35L-tG6Kz47HTd_hiOa7BTH3DQVnlZtKJE_yzVOSM=s0" ng-animate-swap="videoImg"
+                                    <!-- ngAnimateSwap: videoImg --><img ng-src="/images/divers/tem2.png" ng-animate-swap="videoImg"
                                       class="video-slider__video__preview--animate ng-scope" alt="Témoignage de Sylwia"
-                                      src="https://lh3.googleusercontent.com/k6yZjh6qwTQYG3QMhr_9cI3N5zL4rJi2tsRhw3W0pwizdR35L-tG6Kz47HTd_hiOa7BTH3DQVnlZtKJE_yzVOSM=s0">
-                                    <i class="material-icons">play_circle_filled</i>
+                                      src="/images/divers/tem2.png">
+                                    <!--i class="material-icons">play_circle_filled</i-->
                                 </div>
                             </div>
                         </div>
@@ -1845,17 +1845,15 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                             <!-- ngIf: slide.value -->
                             <div ng-repeat="slide in VideoSliderCtrl.content" ng-if="slide.value" class="video-slider__slide__wrapper ng-scope video-slider__slide--active"
                               ng-class="{'video-slider__slide--active': VideoSliderCtrl.activeSlide.value === slide.value}" ng-click="VideoSliderCtrl.setActive(slide)" role="button" tabindex="0">
-                                <h3 class="video-slider__slide__title ng-binding">Témoignage de Sylwia</h3>
-                                <p class="video-slider__slide__description ng-binding">Découvrez l'exemple de Sylwia, de l'agence icube.pl. Après avoir renforcé ses compétences et obtenu la certification, elle a été promue responsable du marketing de
-                                    contenu. Depuis, elle a aidé l'agence à pénétrer de nombreux nouveaux marchés.</p>
+                                <h3 class="video-slider__slide__title ng-binding">Témoignage de Souleymane Coulibaly</h3>
+                                <p class="video-slider__slide__description ng-binding">“ très bonne plateforme d'apprentissage pour les adultes…”</p>
                             </div><!-- end ngIf: slide.value -->
                             <!-- end ngRepeat: slide in VideoSliderCtrl.content -->
                             <!-- ngIf: slide.value -->
                             <div ng-repeat="slide in VideoSliderCtrl.content" ng-if="slide.value" class="video-slider__slide__wrapper ng-scope" ng-class="{'video-slider__slide--active': VideoSliderCtrl.activeSlide.value === slide.value}"
                               ng-click="VideoSliderCtrl.setActive(slide)" role="button" tabindex="0">
-                                <h3 class="video-slider__slide__title ng-binding">Témoignage de Darko</h3>
-                                <p class="video-slider__slide__description ng-binding">Darko Dujič, PDG de la plate-forme d'e-commerce slovène Ceneje.si, a été tellement impressionné par les cours en ligne qu'il a encouragé tous les autres salariés
-                                    de l'entreprise à les suivre.</p>
+                                <h3 class="video-slider__slide__title ng-binding">Témoignage de Jean Philippe Touye Bi</h3>
+                                <p class="video-slider__slide__description ng-binding">“Mon passage à Oschool a été très sincèrement fructueux pour moi car cela m’a donné de l'assurance, une carrure de Pro, également j'ai eu grâce à Oschool de la maturité dans le domaine du marketing sur les réseaux sociaux, tout cela par la qualité des enseignements.”</p>
                             </div><!-- end ngIf: slide.value -->
                             <!-- end ngRepeat: slide in VideoSliderCtrl.content -->
                             <hr class="video-slider__slide__highlight" ng-style="VideoSliderCtrl.highlightStyles" style="top: 0px; height: 140px;">
@@ -1864,22 +1862,22 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                         <div class="video-slider__mobile-select col col--sm-12-12">
                             <div class="custom-select ng-isolate-scope" ng-class="{'custom-select--open': open}" custom-select="" value="story" options="VideoSliderCtrl.content">
                                 <button type="button" class="custom-select__value" ng-click="ctrl.toggleSelect($event);">
-                                    <span class="custom-select__value__label ng-binding">Témoignage de Sylwia</span>
+                                    <span class="custom-select__value__label ng-binding">Témoignage de Souleymane Coulibaly</span>
                                     <ul class="custom-select__value__list" aria-hidden="">
                                         <!-- ngRepeat: option in options -->
-                                        <li ng-repeat="option in options" aria-hidden="" class="ng-binding ng-scope">wTémoignage de Sylwia</li><!-- end ngRepeat: option in options -->
-                                        <li ng-repeat="option in options" aria-hidden="" class="ng-binding ng-scope">wTémoignage de Darko</li><!-- end ngRepeat: option in options -->
+                                        <li ng-repeat="option in options" aria-hidden="" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</li><!-- end ngRepeat: option in options -->
+                                        <li ng-repeat="option in options" aria-hidden="" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</li><!-- end ngRepeat: option in options -->
                                     </ul>
                                 </button>
                                 <div class="custom-select__options">
                                     <!-- ngRepeat: option in options --><button type="button" class="custom-select__option ng-binding ng-scope custom-select__option--selected" ng-click="ctrl.onClick(option, $event);" ng-repeat="option in options"
-                                      ng-class="{'custom-select__option--selected': option.value == value}">Témoignage de Sylwia</button><!-- end ngRepeat: option in options --><button type="button" class="custom-select__option ng-binding ng-scope"
-                                      ng-click="ctrl.onClick(option, $event);" ng-repeat="option in options" ng-class="{'custom-select__option--selected': option.value == value}">Témoignage de Darko</button><!-- end ngRepeat: option in options -->
+                                      ng-class="{'custom-select__option--selected': option.value == value}">Témoignage de Souleymane Coulibaly</button><!-- end ngRepeat: option in options --><button type="button" class="custom-select__option ng-binding ng-scope"
+                                      ng-click="ctrl.onClick(option, $event);" ng-repeat="option in options" ng-class="{'custom-select__option--selected': option.value == value}">Témoignage de Souleymane Coulibaly</button><!-- end ngRepeat: option in options -->
                                 </div>
                                 <select class="custom-select__native ng-pristine ng-untouched ng-valid ng-not-empty" ng-transclude="" ng-model="value" aria-hidden="true" ng-class="{'custom-select__native--use-native': hasTouch}" aria-invalid="false">
                                     <!-- ngRepeat: story in VideoSliderCtrl.content -->
-                                    <option ng-repeat="story in VideoSliderCtrl.content" value="LAWNBwoc5r4" class="ng-binding ng-scope">Témoignage de Sylwia</option><!-- end ngRepeat: story in VideoSliderCtrl.content -->
-                                    <option ng-repeat="story in VideoSliderCtrl.content" value="OnS3YKbPrP0" class="ng-binding ng-scope">Témoignage de Darko</option><!-- end ngRepeat: story in VideoSliderCtrl.content -->
+                                    <option ng-repeat="story in VideoSliderCtrl.content" value="LAWNBwoc5r4" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</option><!-- end ngRepeat: story in VideoSliderCtrl.content -->
+                                    <option ng-repeat="story in VideoSliderCtrl.content" value="OnS3YKbPrP0" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</option><!-- end ngRepeat: story in VideoSliderCtrl.content -->
                                 </select>
                             </div>
                             <p class="video-slider__mobile-select__description ng-binding">Découvrez l'exemple de Sylwia, de l'agence icube.pl. Après avoir renforcé ses compétences et obtenu la certification, elle a été promue responsable du
@@ -1895,40 +1893,146 @@ h3{font-size:2.4rem;line-height:2.6rem;}
     </section>
 
 
-    <section class="course-detail__section course-detail__faqs content__container--full-width">
-        <h2 class="course-detail__faqs__title course-detail__section__title">Questions fréquentes</h2>
-
-        <myg-accordion class="myg-accordion js-accordion ng-isolate-scope" item-active-class="myg-accordion__item--active" item-delay-on-open="300" label-aria-opened="'Libellé aria pour le panneau en accordéon fermé'"
-          label-aria-closed="'Libellé aria pour le panneau en accordéon fermé'">
-
-
-            <div class="myg-accordion__item js-accordion-item" id="faq-5649391675244544">
-                <div class="myg-accordion__header js-accordion-title" tabindex="0">
-                    <h4 class="myg-accordion__title heading--h4 heading--h4-medium">À qui est-il destiné ?</h4>
-                    <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation">Libellé aria pour le panneau en accordéon fermé</i>
-                    <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
-                </div>
-                <div class="myg-accordion__panel js-accordion-item-panel">
-                    <p>La plateforme de formation est gratuite et accessible à tous, quels que soient votre niveau de compétences, vos objectifs ou votre expérience.</p>
-                </div>
+    <div class="course-block block faq odd-stripe" id="block-183309" style="background-color:#fff">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+            <h2>
+              <i class="fa fa-question-circle"></i>
+              FAQ OSCHOOL
+            </h2>
+            <br>
+            <div class="faq-question">
+              C’est quoi Oschool ?
             </div>
-
-            <div class="myg-accordion__item js-accordion-item" id="faq-5651874166341632">
-                <div class="myg-accordion__header js-accordion-title" tabindex="0">
-                    <h4 class="myg-accordion__title heading--h4 heading--h4-medium">Pourquoi le site L'atelier numérique africain a-t-il été créé ?</h4>
-                    <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation">Libellé aria pour le panneau en accordéon fermé</i>
-                    <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
-                </div>
-                <div class="myg-accordion__panel js-accordion-item-panel">
-                    <p>Nous sommes convaincus que les individus, les entreprises et l'économie tout entière peuvent se développer en tirant pleinement parti du Web. Nous souhaitons accompagner les professionnels (TPE-PME, commerçants, artisans) aussi
-                        bien que les individus pour qu'ils acquièrent les compétences numériques nécessaires pour tirer profit de la révolution technologique.</p>
-                </div>
+            <div class="faq-answer">
+              Nous sommes une plateforme de cours en ligne ! Notre idée principale ? Rassembler des experts dans leurs domaines respectifs, afin que vous trouviez sur notre site les meilleurs cours en ligne sur des thèmes très variés.
             </div>
+            <div class="faq-question">
+              A quoi ressemble un cours ?
+            </div>
+            <div class="faq-answer">
+              Cela dépend du cours ! Vous ne pourrez pas apprendre le Developpement web comme vous suivez un cours de BTP. Nous nous efforçons donc de toujours proposer les supports de cours les plus adaptés à la formation suivie. Les cours sont principalement composés de vidéos, schémas, textes descriptifs, explicatifs, quizz, afin de vérifier vos connaissances, et d’être sûr qu’elles ont été bien assimilées.
+            </div>
+            <div class="faq-question">
+              Je suis un vrai débutant. Que dois-je savoir avant de commencer ?
+            </div>
+            <div class="faq-answer">
+              Nos cours sont complets et s’adressent autant aux débutants (ils commencent généralement par les bases) qu’aux initiés. Ainsi, il n’y a aucun pré-requis!
 
-        </myg-accordion>
+            </div>
+            <div class="faq-question">
+              Pendant combien de temps mes formations sont-elles accessibles/visionnables ?
+            </div>
+            <div class="faq-answer">
+              Cela dépend tout simplement du type de formation que vous aurez choisi : si vous avez choisi un cours sans mentor, vous aurez accès à ce cours à vie. Par contre s’il s’agit d’un parcours en ligne. Celui ci est payable mensuellement, votre abonnement vous donne doit à 30 jours renouvelables.
+            </div>
+            <div class="faq-question">
+              En quoi consiste l'abonnement mensuel à un parcours ?
+            </div>
+            <div class="faq-answer">
+              L'abonnement mensuel à un parcours vous permet de bénéficier d’un accompagnement groupé de la part d’un expert de la thématique étudiée. Cet abonnement se veut totalement libre : chaque mois vous êtes prélevé du montant de votre abonnement mais vous pouvez décider de continuer ou d'arrêter à tout moment.
+            </div>
+            <div class="faq-question">
+              Suis-je engagé(e) lorsque je choisis l'abonnement mensuel à un parcours ?
+            </div>
+            <div class="faq-answer">
+              Non, l'abonnement illimité ne présente aucun engagement.
+            </div>
+            <div class="faq-question">
+              Mes cours sont-ils disponibles intégralement en ligne ou faut-il que je me déplace pour les suivre ?
+            </div>
+            <div class="faq-answer">
+              Tout dépend du type de formation que vous aurez choisi. A ce jour il n’existe qu’une formation en présentiel:<a href="https://code.oschool.ci/formation/formation-en-salle-developpeur-web"> Formation en salle Développeur Web</a>. Toutes les formations sont en lignes.
+            </div>
+            <div class="faq-question">
+              Y’a-t il des contraintes horaires pour suivre les cours ?
+            </div>
+            <div class="faq-answer">
+              Non, vous pouvez suivre les formations 24h/24 et 7j/7. Il n’y a que le mentorat en mode parcours qui nécessite un horaire étudié entre le formateur et l’apprenant.
 
-        <a class="btn btn--secondary course-detail__faqs__cta" href="https://learndigital.withgoogle.com/lateliernumerique/faqs">Afficher toutes les questions fréquentes</a>
-    </section>
+            </div>
+            <div class="faq-question">
+              Une fois le cours terminé, vais-je recevoir un certificat ?
+            </div>
+            <div class="faq-answer">
+              Un certificat est délivré à la fin de la formation ! Sa délivrance et les modalités sont précisées sur la page du cours.
+            </div>
+            <div class="faq-question">
+              Puis-je télécharger les cours Oschool ?
+            </div>
+            <div class="faq-answer">
+              Vous n’avez pas besoin de vous embêter à télécharger les cours et à les reclasser. Tous les cours sont consultables dans votre espace e-learning, avec une simple connexion Internet.
+              De plus, certaines fonctionnalités de notre plateforme vous permettent de savoir quels chapitres vous avez déjà suivis.
+            </div>
+            <div class="faq-question">
+              Je ne souhaite plus recevoir de mail de votre part. Comment faire ?
+            </div>
+            <div class="faq-answer">
+              Pour cela, vous pouvez tout simplement vous désinscrire de notre Newsletter et vous ne recevrez plus de mail de notre part (hormis de confirmation de commande). Allez dans votre boîte mail, puis sur un mail que vous avez reçu de notre part et tout en bas vous pouvez cliquer sur le bouton "se désinscrire". Vous serez alors supprimé de notre liste d'envoi.
+            </div>
+            <div class="faq-question">
+              J’ai oublié mon mot de passe – que puis-je faire ?
+            </div>
+            <div class="faq-answer">
+              Lors de votre connexion à l’espace membre, cliquez sur “Mot de passe oublié ?”. Ensuite, saisissez l’adresse email correspondant à votre compte puis cliquez sur “Récupérer”. Vous recevrez un mail indiquant la marche à suivre.
+            </div>
+            <div class="faq-question">
+              Quel est le matériel informatique nécessaire pour suivre les formations Oschool ?
+            </div>
+            <div class="faq-answer">
+              Vous avez besoin d’un accès à Internet. Le mieux est d’avoir un navigateur à jour cependant : )
+              Vous pouvez suivre les formations depuis un ordinateur, une tablette ou bien encore un smartphone.
+
+              Si vous avez un problème sur un navigateur, essayez sur un autre. Les navigateurs connus sont : Google Chrome, Mozilla Firefox, Safari et Internet Explorer.
+            </div>
+            <div class="faq-question">
+              J’ai un problème technique (la vidéo ne se lance pas, la vidéo est saccadée, une icône de chargement qui tourne indéfiniment…), que puis-je faire ?
+            </div>
+            <div class="faq-answer">
+              Déconnectez-vous, reconnectez-vous et retournez sur votre vidéo.
+              Essayer de lire la vidéo sur un autre navigateur (Internet Explorer, Firefox, Chrome, Safari)
+              Mettez la vidéo sur pause un petit moment puis appuyez de nouveau sur lecture. En fonction de la qualité du débit de votre connexion internet, il se peut que vous deviez attendre que la vidéo se charge.
+
+              Si le problème persiste, contactez-nous, en fournissant le maximum de détails:
+
+              Votre navigateur
+              Mac (+ version) ou PC
+              La référence, le titre ou le lien de la vidéo qui pose un souci
+              L'erreur spécifique la concernant
+            </div>
+            <h2> PROFESSIONNELS</h2><br>
+
+            <div class="faq-question">
+              Avez-vous un programme d’affiliation ?
+            </div>
+            <div class="faq-answer">
+              Oui. Pour plus d'informations, n’hésitez pas à nous contacter via le +225 48459868 / +225 57414401 / +225 21371277.
+            </div>
+            <div class="faq-question">
+              Que dois-je faire pour devenir instructeur/formateur ?
+            </div>
+            <div class="faq-answer">
+              Vous avez des formations de qualité ou êtes vous-mêmes formateurs/expert dans un domaine, nous serions ravis d'en discuter avec vous !
+
+              Pour nous contacter,<a href="https://oschool.ci/devenez-formateur/"> CLIQUEZ ICI.</a>
+
+              Nous n’attendons que vous !
+            </div>
+            <div class="faq-question">
+              Je souhaite suggérer un tuto
+            </div>
+            <div class="faq-answer">
+              <p>
+                Vous avez une recommandation à nous faire, une formation que vous souhaiteriez suivre mais qui n'est pas encore sur le site. Vous aimeriez apprendre la magie, faire de la guitare et savoir chanter comme Sinatra ?
+
+                Même méthode : contactez-nous sur la rubrique contact et sélectionnez « Recommandations ».
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section class="course-detail__section course-detail__cta-box content__container--full-width">
         <div class="content__wrapper">

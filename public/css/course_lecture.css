@@ -228,7 +228,7 @@ header.half-height a.nav-btn{width:50%;}
 .course-sidebar .row.lecture-sidebar .course-section .title-container{padding-right:0px!important;}
 .course-sidebar.navbar-sidebar-collapse{margin-top:46px;transition:0.5s height ease;}
 .lecture-content{padding-top:60px;}
-.lecture-content h2.section-title{line-height:41px;margin-bottom:18px;margin-top:10px;}
+.lecture-content h2.section-title{line-height:41px;margin-bottom:18px;margin-top:10px;display: inline-flex;}
 .lecture-content .lecture-attachment{margin-bottom:20px;margin-top:30px;}
 .lecture-content .lecture-attachment .attachment-wistia-player{margin:auto;height:100%;width:100%;}
 @media screen and (max-width: 991px){
