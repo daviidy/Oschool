@@ -246,9 +246,9 @@ footer .container .row ul li a:hover{text-decoration:underline;}
             <div class="navbar-header">
                 <!-- Site logo -->
 
-                <a class="navbar-brand header-logo" href="https://courses.52kards.com">
-                    <img src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:60/https://d2vvqscadf4c1f.cloudfront.net/itO9a193QaqY32nDydWc_Transparent%20Logo.png" alt="52Kards"
-                      srcset="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:120/https://d2vvqscadf4c1f.cloudfront.net/itO9a193QaqY32nDydWc_Transparent%20Logo.png 2x">
+                <a class="navbar-brand header-logo" href="/">
+                    <img src="/images/schools/logos/logo_oschool_blanc.png" alt="52Kards"
+                      srcset="/images/schools/logos/logo_oschool_blanc.png 2x">
                 </a>
 
             </div>
@@ -319,7 +319,7 @@ footer .container .row ul li a:hover{text-decoration:underline;}
               <a href="/privacy-policy">Facebook</a>
             </li>
             <li>
-              <a href="/terms-of-use">Twiter Linkedin</a>
+              <a href="/terms-of-use">Twiter</a>
             </li>
             <li>
               <a href="/terms-of-use">Linkedin</a>

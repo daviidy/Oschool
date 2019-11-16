@@ -545,27 +545,23 @@ button{line-height:inherit;}
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
           <h2 style="text-align: center;">
-              Testimonials
+              Témoignages
             </h2>
           <hr>
           <p>
-            <i>"Hi Asad - I'm a serious magic hobbyist (and by day a director/writer/actor of movies and TV shows) and I've scoured many sources and your style of teaching is by far my favorite ... I'm wanting to put some time (and money) into
-              taking my skills to the next level, and I want you to be my teacher!" </i>- David Wain
+            <i>“Mon passage à Oschool a été très sincèrement fructueux pour moi car cela m’a donné de l'assurance, une carrure de Pro, également j'ai eu grâce à Oschool de la maturité dans le domaine du marketing sur les réseaux sociaux, tout cela par la qualité des enseignements.”</i>-Jean Philippe Touye Bi
             </p>
             <p>
               <br>
             </p>
             <p>
-              <i>"I'm a 44 year old family doctor who has always loved sleight of hand but have never had the time to invest in learning…only watching. Now I'm learning. It's a great and inexpensive hobby and it's even become a great way to spend
-              time with my 4 children. Of all the sources I've used so far, I've enjoyed yours the most. Concise yet thorough. Keep up the great work. I really appreciate your help." - </i>Mike
+              <i>“ très bonne plateforme d'apprentissage pour les adultes…”- </i>Souleymane Coulibaly
             </p>
             <p>
               <br>
             </p>
             <p>
-              <i>"I am such a huge fan of your content because it is so much different than every other teacher I've seen online. I've been doing card magic for about 6 or 7 years now and I felt like I hit a wall in my progression. I'm in college
-                so I don't have a lot of time to study techniques shown in a book. Your videos were so instrumental in progressing my skills and expanding my arsenal in an extremely speedy fashion. Your explanations are also very clear and concise
-                and I love you always focus on the nitty gritty, considering that's where a lot of card instructors lack in their explanations."</i> - Chris Wheatley<br>
+
               </p>
             </div>
       </div>
@@ -768,9 +764,9 @@ button{line-height:inherit;}
             <h6 class="card-price text-center">{{$pricing->price}} FCFA <span class="period">/ {{$pricing->per == 'month' ? 'Mois' : ''}}</span></h6>
               <hr>
               <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Un seul utilisateur</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Mentoring</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Test</li>
+                <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Un seul utilisateur</li>
+                <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Mentoring</li>
+                <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Test</li>
                 {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li> --}}
                 {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li> --}}
               </ul>
