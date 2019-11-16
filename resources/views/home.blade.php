@@ -781,7 +781,7 @@
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“ce cours de Laravel est tellement pratique que je n’ai pas eu du mal à l’approprier. Je vous le recommande vivement et je dis merci à David car ses tutos sont très simplifiés pour permettre à tous de suivre les modules proposés.”</p>
+                            <p class="testimonial-text">“Les cours sur oschool sont tellement pratique que je n’ai pas eu du mal à l’approprier. Je vous le recommande vivement et je dis merci à David car ses tutos sont très simplifiés pour permettre à tous de suivre les modules proposés.”</p>
                             <div class="card-bottom">
                                 <img src="/images/divers/tem.jpg">
                                 <div class="card-bottom-attribution">
