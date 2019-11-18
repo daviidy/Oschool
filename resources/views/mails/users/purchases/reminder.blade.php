@@ -15,17 +15,24 @@
         			<table style="max-width:600px;text-align:center">
         				<tbody>
         					<tr>
-        						<td style="padding:25px 0"><a href="https://oschoolelearning.com" target="_blank"><img alt="Mindvalley Logo" border="0" src="https://oschoolelearning.com/images/schools/logos/oschool_2.png" style="width:204px" class="CToWUd"></a></td>
+        						<td style="padding:25px 0"><a href="https://oschoolelearning.com" target="_blank"><img alt="Oschool Logo" border="0" src="https://oschoolelearning.com/images/schools/logos/oschool_2.png" style="width:204px" class="CToWUd"></a></td>
         					</tr>
         					<tr>
         						<td style="padding:0 0 20px 0">
-        						<h2 style="font-size:34px;color:#333;letter-spacing:0.25px;line-height:inherit">Bravo {{$purchase->user->name}}!</h2>
+        						<h2 style="font-size:34px;color:#333;letter-spacing:0.25px;line-height:inherit">Hello {{$purchase->user->name}}, petit rappel concernant votre abonnement au cours {{$purchase->course->name}}</h2>
         						</td>
         					</tr>
         					<tr>
         						<td align="left">
-        						<p style="font-size:16px;color:#333;letter-spacing:0.25px;line-height:1.4">Votre achat au cours <span class="il">Oschool</span> a été effectué avec succès <strong style="font-weight:bold">09/02/2019</strong> pour un total de <strong style="font-weight:bold">{{$purchase->price}} FCFA</strong>. <a href="https://oschoolelearning.com/home" style="font-weight:bold;text-decoration:none" target="_blank" data-saferedirecturl="">Connectez-vous</a> à votre compte pour jeter un coup d'œil et vous mettre à l'aise ... parce que nous n'allons nulle part! Pendant que vous y êtes, vous pouvez vous rendre à la <a href="https://home.mindvalley.com/profile/accounts_and_billing" style="font-weight:bold;text-decoration:none" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://home.mindvalley.com/profile/accounts_and_billing&amp;source=gmail&amp;ust=1570496899750000&amp;usg=AFQjCNEr-4D3nPuLbhjtu7piGt3ol_PlwQ">section facturation</a> pour voir un récapitulatif de vos achats.<br>
-        						<br>
+        						<p style="font-size:16px;color:#333;letter-spacing:0.25px;line-height:1.4">Votre abonnement au cours <span class="il">{{$purchase->course->name}}</span> prend fin le <strong style="font-weight:bold">{{Carbon\Carbon::parse($purchase->date)->addDays(30)->format('d-m-Y')}}</strong>.<br>
+                                    Il faudra donc vous acquitter de la somme de <strong style="font-weight:bold">{{$purchase->pricing->price}} FCFA</strong>, pour continuer à apprendre avec Oschool.<br>
+                                    Vous pouvez en savoir plus dans la <a href="https://home.mindvalley.com/profile/accounts_and_billing" style="font-weight:bold;text-decoration:none" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://home.mindvalley.com/profile/accounts_and_billing&amp;source=gmail&amp;ust=1570496899750000&amp;usg=AFQjCNEr-4D3nPuLbhjtu7piGt3ol_PlwQ">section facturation</a> pour voir un récapitulatif de vos achats.<br>
+        						</td>
+        					</tr>
+                            <tr>
+        						<td align="left">
+        						<p style="font-size:16px;color:#333;letter-spacing:0.25px;line-height:1.4">
+                                <br>
         						N'oubliez pas ! Suivez-nous sur <a href="https://www.facebook.com/Oschool.ci/" style="font-weight:bold;text-decoration:none" target="_blank" >Facebook</a> et <a href="https://www.instagram.com/oschooleducation/" style="font-weight:bold;text-decoration:none" target="_blank">Instagram</a> et connectez-vous à d'autres membres <span class="il">Oschool</span>. Notre communauté vous inspire à découvrir constamment des enseignants extraordinaires qui vous pousseront à grandir et à inspirer les autres. Qu'est-ce que vous attendez?</p>
         						</td>
         					</tr>
