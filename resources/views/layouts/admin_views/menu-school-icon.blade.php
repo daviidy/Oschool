@@ -440,6 +440,7 @@
   };
   var quill = new Quill('#site-description', options);
   var quill2 = new Quill('#course-description', options);
+  var quill3 = new Quill('#editor-pricing', options);
 
   //mise a jour description ecole
 
