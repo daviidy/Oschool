@@ -23,18 +23,15 @@
     </tr>
 
     <tr>
-      <td style="padding: 20px 7.5% 0;">Un paiement a été effectué avec succès <br>  </td>
+      <td style="padding: 20px 7.5% 0;">Il y a un nouvel utilisateur sur la plateforme <br>  </td>
     </tr>
 .
     <tr>
-      <td style="padding: 20px 7.5% 0;"> Voici les infos de la transaction  <br>
+      <td style="padding: 20px 7.5% 0;"> Voici les infos de l'utilisateur  <br>
 				<ul>
-					<li>Utilisateur: <strong> {{$purchase->user->name}}</strong> </li>
-                  <li>Email: <strong>{{$purchase->user->email}}</strong> </li>
-                  <li>Cours choisi: <strong>{{$purchase->course->name}}</strong> </li>
-					<li>Prix: <strong>{{$purchase->price}} FCFA	</strong> </li>
-					<li>Date de paiement: <strong>{{$purchase->date}}</strong> </li>
-                    <li>Offre choisie: <strong>{{$purchase->pricing->name}}</strong> </li>
+					<li>Utilisateur: <strong> {{$user->name}}</strong> </li>
+                  <li>Email: <strong>{{$user->email}}</strong> </li>
+                    <li>Date de création: <strong>{{$user->created_at}}</strong> </li>
 				</ul>
 
       </td>

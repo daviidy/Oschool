@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Mail;
 
 class RegisterController extends Controller
 {
@@ -63,7 +64,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -71,5 +72,19 @@ class RegisterController extends Controller
             'type2' => 'none',
             'type3' => 'none',
         ]);
+
+        //envoi mail inscrit (mail bienvenue)
+        Mail::send('mails.users.welcome', ['user' => $user], function($message) use ($user){
+          $message->to($user->email, 'Je vous souhaite personnellement la bienvenue !')->subject('Propulsez votre vie avec Oschool');
+          $message->from('eventsoschool@gmail.com', 'Oschool');
+        });
+
+        //envoi mail admin (mail bienvenue)
+        Mail::send('mails.admins.users.registration', ['user' => $user], function($message) use ($user){
+          $message->to('yaodavidarmel@gmail.com', 'A David')->subject('Il y a un nouvel utilisateur sur Oschool !');
+          $message->from('eventsoschool@gmail.com', 'Oschool');
+        });
+
+        return $user;
     }
 }
