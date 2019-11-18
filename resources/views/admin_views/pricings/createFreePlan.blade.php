@@ -456,7 +456,7 @@ var form = document.getElementById('pricing-container');
 form.onsubmit = function() {
   // Populate hidden form on submit
   var description = document.querySelector('input[name=description]');
-  description.value = quill3.root.innerHTML;
+  description.value = quillFreePlan.root.innerHTML;
   
 //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
   

@@ -440,7 +440,11 @@
   };
   var quill = new Quill('#site-description', options);
   var quill2 = new Quill('#course-description', options);
-  var quill3 = new Quill('#editor-pricing', options);
+  var quillFreePlan = new Quill('#editor-pricing', options);
+  var quillSuscriptionPlan = new Quill('#editor-susplan', options);
+  var quillOnePlan = new Quill('#editor-oneplan', options);
+  var quillAbonnementPlan = new Quill('#editor-abplan', options);
+
 
   //mise a jour description ecole
 
