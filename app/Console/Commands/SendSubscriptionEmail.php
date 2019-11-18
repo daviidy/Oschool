@@ -58,10 +58,12 @@ class SendSubscriptionEmail extends Command
                             if ($purchase->pricing->type == 'Plan de paiement') {
                                 if ($purchase->pricing->times - count($course->purchases->where('user_id', $user->id)->where('status', 'Validé')) > 0) {
                                     //envoi mail utilisateur
+
                                      Mail::send('mails.users.purchases.reminder', ['purchase' => $purchase], function($message) use($purchase){
                                        $message->to($purchase->user->email, 'Cher(ère) Etudiant(e)')->subject('Petit rappel concernant votre abonnement');
                                        $message->from('eventsoschool@gmail.com', 'Oschool');
                                      });
+
                                 }
                                 else {
                                     echo "pas envoyé";
@@ -73,23 +75,18 @@ class SendSubscriptionEmail extends Command
                                 //we determine when the user Subscription
                                 //will end. and we start to send emails 10 days
                                 //before the subscription ending
-                                $end_subscription_date = Carbon::parse($purchase->date)->addDays(30);
-                                echo $purchase->date;
-                                echo "/".$end_subscription_date;
-                                echo "/".$date;
-                                echo "/".$end_subscription_date->subDays(10);
-                                $min = $end_subscription_date->subDays(10) <= $date;
-                                $max = $date > $end_subscription_date;
-                                echo $max;
-                                if ($min == '1' && $max == '1' ) {
+
+                                if (Carbon::parse($purchase->date)->addDays(30)->subDays(10) <= $date && $date <= Carbon::parse($purchase->date)->addDays(30)) {
+
                                     Mail::send('mails.users.purchases.reminder', ['purchase' => $purchase], function($message) use($purchase){
                                       $message->to($purchase->user->email, 'Cher(ère) Etudiant(e)')->subject('Petit rappel concernant votre abonnement');
                                       $message->from('eventsoschool@gmail.com', 'Oschool');
                                     });
+
                                     echo "envoi abonnement";
                                 }
                                 else {
-                                    echo "pas abonnement";
+
                                 }
                             }
 

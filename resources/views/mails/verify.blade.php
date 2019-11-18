@@ -21,28 +21,28 @@
                                     @component('mail::header', ['url' => config('app.url')])
 
                                         <td style="padding:25px 0"><img alt="Mindvalley Logo" border="0" src="https://ci5.googleusercontent.com/proxy/A8vH6ZHHZbdDlHqs7n59XiWxJ1UFDNx5vzQFABGkZYb6aBc4CYJgcrcC1fKJ8OtIy2WIjJnILyDi7kKmwGxjf92ctVtyLG7WXpOlyhYWAw=s0-d-e1-ft#http://s78.mindvalley.us/mindvalley/media/images/mv_logo.png" style="width:204px" class="CToWUd"></td>
-                                    
+
                                         @endcomponent
                                     @endslot
         					</tr>
         					<tr>
         						<td style="padding:0 0 20px 0">
-        						<h2 style="font-size:34px;color:#333;letter-spacing:0.25px;line-height:inherit">Bravo, Confirmer votre adresse email pour continuer</h2>
+        						<h2 style="font-size:34px;color:#333;letter-spacing:0.25px;line-height:inherit">Bravo, confirmez votre adresse email pour continuer</h2>
         						</td>
         					</tr>
         					<tr>
         						<td align="left">
                                 <p style="font-size:16px;color:#333;letter-spacing:0.25px;line-height:1.4">
-                                    
 
-                                    Veillez confirmer votre compte en cliquent sur le bouton en bas <br>
+
+                                    Veuillez confirmer votre compte en cliquant sur le bouton en bas <br>
 
                                     <em>Ce lien expirera dans 60 minutes</em>
-                                    
+
                                     @component('mail::button', ['url' => $url])
                                     Verifiez l'email
                                     @endcomponent
-                                    
+
                                     {{-- <a href="https://home.mindvalley.com/" style="font-weight:bold;text-decoration:none" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://home.mindvalley.com/&amp;source=gmail&amp;ust=1570496899750000&amp;usg=AFQjCNEV2Fn2wGgMAIfhRc46qZB4VC6wpg">Login</a><br> --}}
         						<br>
         						{{-- N'oublie pas! Consultez nos canaux <a href="https://www.facebook.com/groups/mindvalley.community" style="font-weight:bold;text-decoration:none" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.facebook.com/groups/mindvalley.community&amp;source=gmail&amp;ust=1570496899750000&amp;usg=AFQjCNE9xqkpqwq5xRQBxPlym__toBZzQA">Facebook</a> et  <a href="https://www.instagram.com/mindvalley" style="font-weight:bold;text-decoration:none" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.instagram.com/mindvalley&amp;source=gmail&amp;ust=1570496899750000&amp;usg=AFQjCNHGbddvBplFHjbGUkA-GN4HHtWdRQ">Instagram</a> connectez-vous avec d'autres membres de  <span class="il">Oschool</span> partageant les mêmes idées. Notre communauté nous inspire à découvrir constamment des enseignants extraordinaires qui vous pousseront à grandir et à inspirer les autres. Qu'est-ce que tu attends?</p> --}}
@@ -51,7 +51,7 @@
         					<tr>
         						<td align="left">
                                 <p style="color:#62686e;font-size:14px;line-height:1.4;letter-spacing:0.25px">
-                                
+
                                 {{-- Footer --}}
                                     @slot('footer')
                                     @component('mail::footer')
@@ -64,7 +64,7 @@
                                             )
                                     @endcomponent
                                     @endslot
-                                
+
                                 </p>
         						</td>
         					</tr>
@@ -173,7 +173,7 @@
 Verifiez l'email
 @endcomponent --}}
 
-{{-- 
+{{--
 Merci d'etre un membre,<br>
 {{ __("d'Oschool E-learning") }} --}}
 

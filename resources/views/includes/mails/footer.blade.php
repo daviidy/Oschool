@@ -23,8 +23,8 @@
     		</tr>
     		<tr>
     			<td align="left">
-    <img alt="David Yao" src="/images/divers/dave.png" style="max-width:120px;display:inline-block" width="120" class="CToWUd">
-    <img alt="David Yao signature" src="/images/divers/signature_dave.png" style="max-width:150px;display:inline-block" width="150" class="CToWUd">
+    <img alt="David Yao" src="https://oschoolelearning.com/images/divers/dave.png" style="max-width:120px;display:inline-block" width="120" class="CToWUd">
+    <img alt="David Yao signature" src="https://oschoolelearning.com/images/divers/signature_dave.png" style="max-width:150px;display:inline-block" width="150" class="CToWUd">
     </td>
     		</tr>
     		<tr>
