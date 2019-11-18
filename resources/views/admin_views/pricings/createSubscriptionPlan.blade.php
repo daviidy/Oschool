@@ -432,7 +432,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-show" style="">
     <!---->
     <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-        <form method="post" action="{{route('pricings.store')}}" what="product form" name="inlinePricingForm" ng-submit="addPricingPlan()" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required" style="">
+        <form method="post" action="{{route('pricings.store')}}" what="product form" name="inlinePricingForm" ng-submit="addPricingPlan()" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required" style="" id="pricing_susplan-container" >
             <!---->
             <!---->
             <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
@@ -468,7 +468,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                       <select name="per" id="test-id-recurring"
                               ng-model="product.billing_interval" class="form-control small-inline disable-animations ng-pristine ng-untouched ng-valid ng-not-empty">
                                 <option value="month" ng-bind="'PRODUCT.month' | translate">Mois</option>
-                                <option value="year" ng-bind="'PRODUCT.year' | translate">année</option>
+                                <option value="year" ng-bind="'PRODUCT.year' | translate">Année</option>
                             </select></label>
 
                             <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
@@ -480,7 +480,17 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div ng-show="products.length > 0" class="">
                         <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" maxlength="100" placeholder="Nom de l'offre"
                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
+                            
 
+                              
+                    </div>
+                    
+                    <div class="col-sm-12">
+                        <br>
+                        <input type="hidden" name="description">
+                        <div id="editor-susplan">
+
+                        </div>
                     </div>
                     <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Ajouter offre</button></div>
                 </div>
@@ -494,5 +504,22 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     @include('includes.information')
 </div>
 
+
+<script>
+
+        var form = document.getElementById('pricing_susplan-container');
+        form.onsubmit = function() {
+          // Populate hidden form on submit
+          var description = document.querySelector('input[name=description]');
+          description.value = quillSuscriptionPlan.root.innerHTML;
+          
+        //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+          
+          // No back end to actually submit to!
+        //   alert('Open the console to see the submit data!')
+          return true;
+        };
+        
+</script>
 
 @endsection

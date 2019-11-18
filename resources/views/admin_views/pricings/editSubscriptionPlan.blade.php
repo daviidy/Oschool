@@ -432,7 +432,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-show" style="">
     <!---->
     <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-        <form method="post" action="{{url('pricings', $pricing)}}" what="product form" name="inlinePricingForm" ng-submit="addPricingPlan()" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required" style="">
+        <form method="post" action="{{url('pricings', $pricing)}}" what="product form" name="inlinePricingForm" ng-submit="addPricingPlan()" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required" style="" id="pricing_susplan-container">
             <!---->
             <!---->
             <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
@@ -454,7 +454,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 <option label="FCFA" value="string:XOF" selected="selected">FCFA</option>
                           </select></div>
                         <div class="input-group input-group-select-attached">
-                          <input name="price" id="amount" type="text" maxlength="15" placeholder="Entrer un prix" convert-currency="currencies[product.currency].ratio"
+                        <input name="price" id="amount" type="text" maxlength="15" value="{{$pricing->price}}" placeholder="Entrer un prix" convert-currency="currencies[product.currency].ratio"
                               numeric="" required="" autofocus="true" class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-touched" style="">
                             <div what="input-group-addon" class="input-group-addon">
                                 <!----><span ng-if="currencies[product.currency].ratio === 100" class="disable-animations">.00</span>
@@ -468,8 +468,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div ng-if="planType == 'subscription'" class="col-sm-12 text-center add-top-margin"><label class="for-checkbox"><span ng-bind="'PRODUCT.per' | translate">per</span>
                       <select name="per" id="test-id-recurring"
                               ng-model="product.billing_interval" class="form-control small-inline disable-animations ng-pristine ng-untouched ng-valid ng-not-empty">
-                                <option value="month" ng-bind="'PRODUCT.month' | translate">month</option>
-                                <option value="year" ng-bind="'PRODUCT.year' | translate">year</option>
+                              @if ($pricing->per == 'month')
+                              <option value="month" ng-bind="'PRODUCT.month' | translate" selected>Mois</option>
+                              <option value="year" ng-bind="'PRODUCT.year' | translate">Année</option>
+                                @elseif($pricing->per == 'year')
+                                <option value="month" ng-bind="'PRODUCT.month' | translate" >Mois</option>
+                                <option value="year" ng-bind="'PRODUCT.year' | translate" selected>Année</option>
+                              @endif  
+                              
                             </select></label>
 
                             <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
@@ -479,10 +485,18 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <!---->
                     <div ng-show="products.length > 0" class="">
-                        <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" maxlength="100" placeholder="Name"
+                    <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" maxlength="100" value="{{$pricing->name}}" placeholder="Name"
                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
 
                     </div>
+
+                    <div class="col-sm-12">
+                            <br>
+                            <input type="hidden" name="description">
+                            <div id="editor-susplan">
+                                    {!!$pricing->description!!}  
+                            </div>
+                        </div>
                     <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Modifier offre</button></div>
                 </div>
             </div>
@@ -495,5 +509,23 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     @include('includes.information')
 </div>
 
+
+
+<script>
+
+        var form = document.getElementById('pricing_susplan-container');
+        form.onsubmit = function() {
+          // Populate hidden form on submit
+          var description = document.querySelector('input[name=description]');
+          description.value = quillSuscriptionPlan.root.innerHTML;
+          
+        //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+          
+          // No back end to actually submit to!
+        //   alert('Open the console to see the submit data!')
+          return true;
+        };
+        
+</script>
 
 @endsection

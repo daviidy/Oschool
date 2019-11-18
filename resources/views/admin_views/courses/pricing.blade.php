@@ -314,7 +314,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 </thead>
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
-                    @foreach($course->pricings as $pricing)
+                    @foreach($course->pricings->sortByDesc('id') as $pricing)
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
                         <td what="id"><span ng-bind="'#' + product.id">#{{$pricing->id}}</span><span class="space"></span><span class="space"></span>
                             <!---->

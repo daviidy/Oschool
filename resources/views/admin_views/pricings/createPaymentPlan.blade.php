@@ -436,7 +436,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-show" style="">
     <!---->
     <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-        <form method="post" action="{{route('pricings.store')}}" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required ng-valid-min ng-valid-max" style="">
+        <form method="post" action="{{route('pricings.store')}}" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required ng-valid-min ng-valid-max" style="" id="abplan-container">
             <!---->
             <!---->
             <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
@@ -481,6 +481,18 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
 
                     </div>
+
+
+                    <div class="col-sm-12" >
+                            <br>
+                            <input type="hidden" name="description">
+                            <div id="editor-abplan">
+                                    {{-- {!!$pricing->description!!}   --}}
+                            </div>
+                        </div>
+
+
+
                     <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit"  class="tch-btn-header-primary-block">Ajouter l'offre de prix</button></div>
                 </div>
             </div>
@@ -493,5 +505,21 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     @include('includes.information')
 </div>
 
+
+<script>
+        var form = document.getElementById('abplan-container');
+    form.onsubmit = function() {
+      // Populate hidden form on submit
+      var description = document.querySelector('input[name=description]');
+      description.value = quillAbonnementPlan.root.innerHTML;
+      
+    //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+      
+      // No back end to actually submit to!
+    //   alert('Open the console to see the submit data!')
+      return true;
+    };
+    
+</script>
 
 @endsection

@@ -426,7 +426,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-                <form method="post" action="{{url('pricings', $pricing)}}" what="product form" name="inlinePricingForm" ng-submit="addPricingPlan()" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required" style="">
+                <form method="post" action="{{url('pricings', $pricing)}}" what="product form" name="inlinePricingForm" ng-submit="addPricingPlan()" class="inline-form-wrapper ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required" style="" id="oneplan-container">
             <!---->
             <!---->
             <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/pricing" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
@@ -448,7 +448,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 <option label="FCFA" value="string:XOF" selected="selected">FCFA</option>
                           </select></div>
                         <div class="input-group input-group-select-attached">
-                          <input name="price" id="amount" type="text" maxlength="15" placeholder="Entrer un prix" convert-currency="currencies[product.currency].ratio"
+                        <input name="price" id="amount" type="text" maxlength="15" placeholder="Entrer un prix" value="{{$pricing->price}}" convert-currency="currencies[product.currency].ratio"
                               numeric="" required="" autofocus="true" class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-touched" style="">
                             <div what="input-group-addon" class="input-group-addon">
                                 <!----><span ng-if="currencies[product.currency].ratio === 100" class="disable-animations">.00</span>
@@ -467,10 +467,20 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <!---->
                     <div ng-show="products.length > 0" class="">
-                        <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" maxlength="100" placeholder="Name"
+                    <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" value="{{$pricing->name}}" maxlength="100" placeholder="Name"
                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
 
                     </div>
+
+                        <div class="col-sm-12" >
+                            <br>
+                            <input type="hidden" name="description">
+                            <div id="editor-oneplan">
+                                    {!!$pricing->description!!}  
+                            </div>
+                        </div>
+
+
                     <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Modifier offre</button></div>
                 </div>
             </div>
@@ -482,6 +492,23 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div><br>
     @include('includes.information')
 </div>
+
+
+<script>
+        var form = document.getElementById('oneplan-container');
+    form.onsubmit = function() {
+      // Populate hidden form on submit
+      var description = document.querySelector('input[name=description]');
+      description.value = quillOnePlan.root.innerHTML;
+      
+    //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+      
+      // No back end to actually submit to!
+    //   alert('Open the console to see the submit data!')
+      return true;
+    };
+    
+</script>
 
 
 @endsection
