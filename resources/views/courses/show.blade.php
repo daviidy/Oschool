@@ -12,6 +12,12 @@ button{color:inherit;}
 button{overflow:visible;}
 button{-webkit-appearance:button;cursor:pointer;}
 button::-moz-focus-inner{border:0;padding:0;}
+.centre{
+  position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    right: 50%;
+}
 @media print{
 
 *{text-shadow:none!important;color:#000!important;background:transparent!important;box-shadow:none!important;}
