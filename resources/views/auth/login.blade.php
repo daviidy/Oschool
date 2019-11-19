@@ -1,6 +1,74 @@
 @extends('layouts.auth')
 
 @section('content')
+ 
+<style>
+
+  /* Shared */
+  .loginBtn {
+    box-sizing: border-box;
+    position: relative;
+    /* width: 13em;  - apply for fixed size  okk*/
+    margin: 0.3em;
+    padding: 10px 30px 10px 46px;
+    border: none;
+    text-align: left;
+    line-height: 34px;
+    white-space: nowrap;
+    border-radius: 0.2em;
+    font-size: 16px;
+    color: #FFF;
+  }
+  .loginBtn:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 100%;
+  }
+  .loginBtn:focus {
+    outline: none;
+  }
+  .loginBtn:active {
+    box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+  }
+  
+  
+  /* Facebook */
+  .loginBtn--facebook {
+    background-color: #4C69BA;
+    background-image: linear-gradient(#4C69BA, #3B55A0);
+    /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+    text-shadow: 0 -1px 0 #354C8C;
+  }
+  .loginBtn--facebook:before {
+    border-right: #364e92 1px solid;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+  }
+  .loginBtn--facebook:hover,
+  .loginBtn--facebook:focus {
+    background-color: #5B7BD5;
+    background-image: linear-gradient(#5B7BD5, #4864B1);
+  }
+  
+  
+  /* Google */
+  .loginBtn--google {
+    /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+    background: #DD4B39;
+  }
+  .loginBtn--google:before {
+    border-right: #BB3F30 1px solid;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+  }
+  .loginBtn--google:hover,
+  .loginBtn--google:focus {
+    background: #E74B37;
+  }
+  </style>
+  
 
   <section class="sign-up-form account-form">
 
@@ -59,19 +127,44 @@
                     </label>
 
                     @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a style="margin-bottom: 20px;" class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Mot de passe oublié?') }}
                                     </a>
                     @endif
+                     
+                    
                   </div>
 
+                  <p style="text-align: center;"> <span>Ou</span></p>
 
+                  <div style="text-align: center;">
+                  
+                    <br>
+  
+                    <button class="loginBtn loginBtn--facebook">
+                      <a class="btn btn-link" href="{{ url('login/facebook') }}">
+                      <span class="_8jan">{{ __('Connexion avec facebook') }}</span>
+                    </a>
+                    </button>
+  
+                    <button class="loginBtn loginBtn--google">
+                      <a class="btn btn-link" href="{{ url('login/gmail') }}">
+                      <span class="_8jan">{{ __('Connexion avec gmail') }}</span>
+                    </a>
+                    </button>
+                  
+                  
+                  </div>
+  
+  
 
                   <div class="account-form-button-container">
                     <br>
                     <input autocomplete="off" type="submit" name="commit" value="Se connecter" id="signup_final" class="orange-button btn">
                   </div>
                 </form>
+
+                    
                 <div id="right-box-spinner" class="right-box-spinner create-form-spinner hidden"></div>
               </div>
             </div>
