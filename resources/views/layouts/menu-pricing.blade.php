@@ -368,6 +368,49 @@ footer .container .row ul li a:hover{text-decoration:underline;}
     src="https://www.filestackapi.com/dialog/comm_iframe/" style="display: none;"></iframe>
 
     <script type="text/javascript" src="/notifs/amaran/jquery.amaran.js"></script>
+
+<!--
+    <script type="text/javascript">
+
+        $('#apply_coupon').click(function(){
+
+            var code = $("input[name=code]").val();
+
+            $.ajax({
+                type: 'post',
+                url: '/applyCoupon',
+                contentType: false,
+                processData: false,
+                data: code,
+
+                success: function(data) {
+                    $("#author_select option:selected").removeAttr("selected");
+                    $('#author_select').append('<option label="" value="'+data.id+'" selected="selected">'+data.full_name+'</option>');
+                    $.amaran({'message':"Auteur ajouté avec succès"});
+
+                },
+                error: function(){
+                    alert('erreur');
+                }
+            });
+
+            return false;
+
+        });
+
+    </script>
+
+-->
+
+<script type="text/javascript">
+
+    $('#add_coupon').click(function(){
+
+        $('#input_coupon').removeClass('hidden');
+        $('#button_apply_coupon').removeClass('is-hidden');
+    });
+
+</script>
 </body>
 
 </html>

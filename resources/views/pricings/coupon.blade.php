@@ -4,11 +4,23 @@
 
 
 
+<style media="screen">
+.alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;}
+.alert-success{color:#155724;background-color:#d4edda;border-color:#c3e6cb;}
+@media print{
+*,::after,::before{text-shadow:none!important;box-shadow:none!important;}
+}
+</style>
+
 
 <div class="spc" data-checkout="https://sso.teachable.com/secure/6419/checkout/7141/the-foundations-of-card-magic#" data-initialized="true">
 
 
+
     <main id="sr-main-content" tab-index="-1" class="container spc__inner">
+        <div class="alert alert-success" role="alert">
+          Bravo, votre code coupon a pris effet !
+        </div>
         <h1 class="sr-only">Commande</h1>
         <div class="col-sm-6">
             <section class="spc__section spc__section--review" data-checkout-main-order-summary="">
@@ -29,7 +41,7 @@
                                     </div>
 
                                     <div class="spc__summary-item text-right mono">
-                                        {{$pricing->price}} FCFA
+                                        {{$price}} FCFA
                                     </div>
 
 
@@ -42,15 +54,6 @@
                                     <div class="spc__summary-item spc--text-light">
                                         Type: {{$pricing->type}}
                                     </div>
-
-                                    <div class="spc__summary-item text-right mono">
-                                        @if($pricing->times)
-                                        Vous paierez cette somme {{$pricing->times}} fois
-                                        @elseif($pricing->per)
-                                        Par {{$pricing->per == 'month' ? 'mois': 'année'}}
-                                        @endif
-                                    </div>
-
 
                                 </div>
                             </div>
@@ -66,46 +69,6 @@
                                         <div class="spc__summary-item text-right mono" data-checkout-price="coupon">- $0.00</div>
                                     </div>
 
-                                    <div data-checkout-inline-form-coupon="">
-                                        <div class="binary-toggle" data-binary-toggle="">
-                                            <button class="binary-toggle__label" data-binary-toggle-label="" id="add_coupon">
-                                                Ajouter un Code Coupon
-                                            </button>
-
-                                            <div id="input_coupon" class="binary-toggle__label {{session('status') ? '' : 'hidden'}}" data-binary-toggle-content="">
-                                                <form class="form-inline spc__inline-form" data-checkout-inline-form="coupon" action="/applyCoupon" accept-charset="UTF-8" method="post">
-                                                    @csrf
-                                                    <div class="spc__inline-form-inner">
-                                                        <input type="text" name="code" id="coupon_code" autocomplete="off" class="spc__inline-form-input" placeholder="Coupon code" data-checkout-inline-input="">
-                                                        <input style="display: none;" type="text" name="course_id" value="{{$pricing->course->id}}" class="spc__inline-form-input">
-                                                        <input style="display: none;" type="text" name="pricing_id" value="{{$pricing->id}}" class="spc__inline-form-input">
-
-                                                        <div class="spc__inline-form-success" data-checkout-inline-success=""></div>
-
-                                                        <div id="button_apply_coupon" data-checkout-inline-button="" class="spc__inline-form-button {{session('status') ? '' : 'is-hidden'}}">
-                                                            <button id="verify-coupon-code" class="is-hidden btn btn-primary">
-                                                                <div class="loader">
-                                                                    <div class="loader-line"></div>
-                                                                    <div class="loader-line"></div>
-                                                                    <div class="loader-line"></div>
-                                                                    <div class="loader-line"></div>
-                                                                </div>
-
-                                                                <div class="spc__inline-form-button-text">
-                                                                    Appliquer
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    @if(session('status'))
-                                                    <div class="spc__inline-form-error" data-checkout-inline-error="">
-                                                        {{session('status')}}
-                                                    </div>
-                                                    @endif
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
@@ -120,7 +83,7 @@
                                             FCFA
                                         </span>
 
-                                        <span data-checkout-price="final">{{$pricing->price}}</span>
+                                        <span data-checkout-price="final">{{$price}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -398,7 +361,7 @@
                     </div>
                     <div style="display: none;" class="">
                       <select class="" name="cpm_amount">
-                        <option value="{{$pricing->price}}">montant</option>
+                        <option value="{{$price}}">montant</option>
                       </select>
                     </div>
                     <div style="display: none;" class="">
@@ -458,7 +421,7 @@
                     </div>
 
                     <button id="confirm-cinetpay" type="submit" class="btn btn-primary spc__button">
-                        Abonnez-vous à la formation ({{$pricing->price}} FCFA)
+                        Abonnez-vous à la formation ({{$price}} FCFA)
                     </button>
 
                 </form>
@@ -467,7 +430,7 @@
             @endauth
 
             <div class="spc__description hidden" data-checkout-price="description" data-checkout-price-string="for the first month then">
-                {{$pricing->price}} FCFA
+                {{$price}} FCFA
             </div>
 
         </div>
