@@ -65,18 +65,18 @@
                             <h1>Une meilleure façon d’apprendre !</h1>
                             <h2>En partenariat avec des universités, nous nous engageons à rendre l’apprentissage possible pour tous et partout.<!--Faites vous accompagner par nos mentors pendant votre apprentissage et réalisez des projets professionnalisants.--></h2>
                             <div class="input-container left">
-                                <div class="hidden redirect">/create-account</div>
+                                <!--div class="hidden redirect">/create-account</div>
                                 <div class="hidden iterable-event"></div>
                                 <div class="hidden iterable-campaign"></div>
-                                <input id="email-input" type="email" autofocus="autofocus" placeholder="Que voulez-vous apprendre">
-                                <button id="email-submit-button" class="orange-button">Commencez</button>
-                                <div class="hidden marketing-email-opt-in-container">
+                                <input id="email-input" type="email" autofocus="autofocus" placeholder="Que voulez-vous apprendre"-->
+                                <a href="{{url('schools')}}"> <button id="email-submit-button" class="orange-button">Commencez</button></a>
+                                <!--div class="hidden marketing-email-opt-in-container">
                                     <input class="marketing-email-opt-in-input" type="checkbox" name="opted-into-marketing-email">
                                     <label for="opted-into-marketing-email">J'accepte de recevoir des mises à jour de produit et de marketing de oschool</label>
-                                </div>
+                                </div--->
                                 <div>
                                 </div>
-                            </div>
+                            </div-->
                         </div>
                     </div>
                 </div>
