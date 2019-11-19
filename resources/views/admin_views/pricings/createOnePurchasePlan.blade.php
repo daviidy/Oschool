@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
+@section('title', 'Ajouter une offre de paiement en une fois')
 @section('content')
 
 <style media="screen">
@@ -497,14 +498,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
           // Populate hidden form on submit
           var description = document.querySelector('input[name=description]');
           description.value = quillOnePlan.root.innerHTML;
-          
+
         //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
-          
+
           // No back end to actually submit to!
         //   alert('Open the console to see the submit data!')
           return true;
         };
-        
+
 </script>
 
 

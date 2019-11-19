@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school')
+@section('title', 'Ajouter un nouveau cours')
 @section('content')
 
 <style media="screen">

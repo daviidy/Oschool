@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school')
+@section('title', 'Administration école')
 @section('content')
 
             <div id="react-app" ng-class="sidebarCollapsed" ng-init="initReactApp()"></div>

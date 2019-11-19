@@ -1,5 +1,5 @@
 @extends('layouts.menu-dashboard-user')
-@section('title', 'Mon compte')
+@section('title', 'Mes écoles et cours')
 
 @section('content')
 

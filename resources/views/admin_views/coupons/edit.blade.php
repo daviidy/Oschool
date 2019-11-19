@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
+@section('title', 'Modifier un coupon')
 @section('content')
 
 <style media="screen">
@@ -387,7 +388,7 @@
                             <!---->
                             <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                             <!---->
-                            <!---->Modifié un nouveau coupon 
+                            <!---->Modifié un nouveau coupon
                         </div>
                         <!---->
                         <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -459,11 +460,11 @@
                                         {{-- @endforeach --}}
                                         <br>
                                       <select size="1" name="status" multiple id="courses_id" name="courses_id[]" style="width:250px;">
-                                        
+
                                         @foreach ($allCourses as $course_db)
                                                 <option value="{{$course_db->id}}">{{$course_db->name}}</option>
                                             @endforeach
-                                            
+
                                       </select>
                                   </div>
 

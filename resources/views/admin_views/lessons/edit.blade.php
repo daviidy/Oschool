@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
+@section('title', 'Modifier une leçon')
 @section('content')
 
 <style media="screen">

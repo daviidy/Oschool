@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school')
+@section('title', 'Ajouter un nouvel auteur')
 @section('content')
 
 <style media="screen">
@@ -437,7 +438,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <input type="hidden" value="" name="bio">
 
                               <div id="editor" style="height: 300px;">
-                                
+
                               </div>
                           </div>
                         <input style="display: none;" type="text" name="school_id" value="{{$school->id}}">
@@ -460,7 +461,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
 
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-        
+
 
 <script>
     var quill = new Quill('#editor', {
@@ -481,7 +482,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     var bio = document.querySelector('input[name=bio]');
     bio.value = quill.root.innerHTML;
     console.log("Submitted",quill.root.innerHTML ,$(form).serialize(), $(form).serializeArray());
-    
+
     // No back end to actually submit to!
     // alert('Open the console to see the submit data!')
     return true;

@@ -37,7 +37,7 @@
   </style>
   <meta name="csrf-param" content="authenticity_token">
   <meta name="csrf-token" content="/wqXpd3pYxNO/ROyCZb6dJdswTKuW9jYqOxo33+1KirdTHgUbcoVomgp3GtdaJ6KfuxvHbE812+C5h3URHZnZg==">
-  <title>Page de paiement</title>
+  <title>@yield('title') | Oschool</title>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   <style media="screen">

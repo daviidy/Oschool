@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
+@section('title', 'Evaluer un projet')
 @section('content')
 
 <style media="screen">

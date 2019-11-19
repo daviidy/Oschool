@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
+@section('title', 'Modifier une offre de plan de paiement')
 @section('content')
 
 <style media="screen">
@@ -488,7 +489,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <br>
                             <input type="hidden" name="description">
                             <div id="editor-abplan">
-                                    {!!$pricing->description!!}  
+                                    {!!$pricing->description!!}
                             </div>
                         </div>
 
@@ -512,14 +513,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
       // Populate hidden form on submit
       var description = document.querySelector('input[name=description]');
       description.value = quillAbonnementPlan.root.innerHTML;
-      
+
     //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
-      
+
       // No back end to actually submit to!
     //   alert('Open the console to see the submit data!')
       return true;
     };
-    
+
 </script>
 
 @endsection

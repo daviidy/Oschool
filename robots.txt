@@ -1,0 +1,13 @@
+User-Agent: *
+Disallow:
+Disallow: /app
+Disallow: /bootstrap
+Disallow: /config
+Disallow: /database
+Disallow: /node_modules
+Disallow: /resources
+Disallow: /route
+Disallow: /storage
+Disallow: /tests
+Disallow: /vendor
+Allow: /public

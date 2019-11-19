@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
+@section('title', 'Modifier une offre d\'abonnement')
 @section('content')
 
 <style media="screen">
@@ -474,8 +475,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 @elseif($pricing->per == 'year')
                                 <option value="month" ng-bind="'PRODUCT.month' | translate" >Mois</option>
                                 <option value="year" ng-bind="'PRODUCT.year' | translate" selected>Année</option>
-                              @endif  
-                              
+                              @endif
+
                             </select></label>
 
                             <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
@@ -494,7 +495,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <br>
                             <input type="hidden" name="description">
                             <div id="editor-susplan">
-                                    {!!$pricing->description!!}  
+                                    {!!$pricing->description!!}
                             </div>
                         </div>
                     <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Modifier offre</button></div>
@@ -518,14 +519,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
           // Populate hidden form on submit
           var description = document.querySelector('input[name=description]');
           description.value = quillSuscriptionPlan.root.innerHTML;
-          
+
         //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
-          
+
           // No back end to actually submit to!
         //   alert('Open the console to see the submit data!')
           return true;
         };
-        
+
 </script>
 
 @endsection

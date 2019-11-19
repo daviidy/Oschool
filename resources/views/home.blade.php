@@ -1,4 +1,5 @@
 @extends('layouts.menu')
+@section('title', 'Apprenez auprès des meilleures universités et entreprises d\'Afrique')
 
 @section('content')
 

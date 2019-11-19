@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
+@section('title', 'Modifier une offre gratuite')
 @section('content')
 
 <style media="screen">
@@ -423,13 +424,13 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div ng-show="products.length > 0" class="">
                         <div class="col-sm-12 add-top-margin-25"><input type="text" value="{{$pricing->name}}" name="name" maxlength="100" placeholder="Nom de l'offre"
                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
-                          
+
                                 <br>
                               <input type="hidden" name="description">
                               <div id="editor-pricing">
                                     {!!$pricing->description!!}
                               </div>
-                          
+
                             </div>
 
                          <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
@@ -458,14 +459,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
           // Populate hidden form on submit
           var description = document.querySelector('input[name=description]');
           description.value = quillFreePlan.root.innerHTML;
-          
+
         //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
-          
+
           // No back end to actually submit to!
         //   alert('Open the console to see the submit data!')
           return true;
         };
-        
+
 </script>
 
 

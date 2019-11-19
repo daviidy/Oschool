@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
+@section('title', 'Liste des coupons')
 @section('content')
 
 <style media="screen">
@@ -362,7 +363,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 </form>
 
 
-                               
+
                             </div>
                             <!---->
                         </td>

@@ -95,7 +95,7 @@ ion-icon.hydrated.md {
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 
-  <title>@yield('title')</title>
+  <title>{{$project->title}} - {{$project->course->name}} | Oschool</title>
 
 
 </head>

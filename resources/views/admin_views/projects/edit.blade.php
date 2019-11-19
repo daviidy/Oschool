@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
+@section('title', 'Modifier un projet')
 @section('content')
 
 <style media="screen">
@@ -1234,7 +1235,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                         </a>
                             <span class="space"></span>
                             <a
-                              ng-href="/courses/vr-course/lectures/11599543?preview=logged_in" target="_blank" what="preview lecture" class="tch-btn-header-secondary" href="/course/{{$course->slug}}/projects/{{$project->slug}}">Aperçu</a><span
+                              ng-href="/courses/vr-course/lectures/11599543?preview=logged_in" target="_blank" what="preview lecture" class="tch-btn-header-secondary" href="/path/{{$course->slug}}/projects/{{$project->slug}}">Aperçu</a><span
                               class="space"></span>
                               <button id="updateProject"
                               class="tch-btn-header-primary disable-animations fastclickable">Mettre à jour</button></div>

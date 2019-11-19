@@ -1,5 +1,4 @@
 @extends('layouts.menu-project')
-
 @section('content')
 
 <style media="screen">

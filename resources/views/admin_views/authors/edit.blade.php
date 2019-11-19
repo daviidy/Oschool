@@ -1,4 +1,5 @@
 @extends('layouts.admin_views.menu-school')
+@section('title', 'Modifier un auteur')
 @section('content')
 
 <style media="screen">
@@ -232,7 +233,7 @@
         .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
         /*! CSS Used from: Embedded */
         .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
-        
+
         /*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-79e90a8f89fd85fce9ba.css ; media=screen */
         @media screen{
         .redactor-box{position:relative;overflow:visible;margin-bottom:24px;}
@@ -374,10 +375,10 @@
         .redactor-editor{max-height:300px;}
         *,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit;}
         }
-        
+
         </style>
-        
-        
+
+
         <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
             <div what="page header" class="tch-section-nav tch-page-header" icon="icon icon-cash-dollar" text="Pricing">
                 <div ng-class="{ 'has-sections': sections }" class="tch-section-nav-wrapper affixed">
@@ -396,7 +397,7 @@
                 </div>
             </div>
             <div class="tch-inline-form">
-        
+
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
@@ -434,12 +435,12 @@
                                         {!!$author->bio!!}
                                       </div>
                                   </div>
-        
+
                                  <input style="display: none;" type="text" name="school_id" value="">
                                  {{-- <input style="display: none;" type="text" name="type" value="Free"> --}}
                                  {{-- <input style="display: none;" type="text" name="recurring" value="No"> --}}
-        
-        
+
+
                             </div>
                             <input style="display: none;" type="text" name="school_id" value="{{$school->id}}">
                             <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Modifier</button></div>
@@ -449,14 +450,14 @@
                 </form>
             </ng-include>
         </div>
-        
+
             </div><br>
             @include('includes.information')
         </div>
 
 
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-        
+
 
         <script>
             var quill = new Quill('#editor', {
@@ -477,12 +478,11 @@
             var bio = document.querySelector('input[name=bio]');
             bio.value = quill.root.innerHTML;
             console.log("Submitted",quill.root.innerHTML ,$(form).serialize(), $(form).serializeArray());
-            
+
             // No back end to actually submit to!
             // alert('Open the console to see the submit data!')
             return true;
             };
           </script>
-        
+
         @endsection
-        

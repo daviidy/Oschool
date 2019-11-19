@@ -1,4 +1,5 @@
 @extends('layouts.menu')
+@section('title', 'Les meilleures écoles et universités d\'Afrique sont en ligne sur Oschool')
 
 @section('content')
 
