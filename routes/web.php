@@ -261,7 +261,7 @@ Route::post('/addComment/{deliverable}', 'DeliverableController@update');
 Route::post('/resubmitDeliverable', 'DeliverableController@resubmitDeliverable');
 
 //routes for certificate
-Route::get('/certificate/{course}', 'CourseController@certificate');
+Route::get('/certificate/{course}', 'CourseController@certificate')->name('certificate');
 
 Route::get('/getCertificate/{course}', 'CourseController@getCertificate');
 

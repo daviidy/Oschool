@@ -16,7 +16,8 @@ class Pricing extends Model
                            'recurring',
                            'per',
                            'times',
-                           'course_id'
+                           'course_id',
+                           'description'
                          ];
 
 

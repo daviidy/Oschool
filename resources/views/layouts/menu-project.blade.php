@@ -181,6 +181,7 @@ ion-icon.hydrated.md {
               </div>
             </div>
           </div>
+          @if(\Route::current()->getName() !== 'certificate')
             <div class="bottomBar">
                 <div class="bottomBar-container">
                     {{-- @if(count(DB::table('deliverables')->get()->where('user_id', Auth::user()->id)) > 0) --}}
@@ -215,6 +216,7 @@ ion-icon.hydrated.md {
                     @endif
 
             </div>
+          @endif
           </div>
         </div>
       </div>

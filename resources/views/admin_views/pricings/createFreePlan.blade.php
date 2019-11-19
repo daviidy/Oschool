@@ -400,7 +400,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <div class="slide-show" style="">
     <!---->
     <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-        <form method="post" action="{{route('pricings.store')}}" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="">
+        <form method="post" action="{{route('pricings.store')}}" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" id="pricing-container">
 
             <!---->
             <!---->
@@ -423,6 +423,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <div class="col-sm-12 add-top-margin-25"><input type="text" name="name" maxlength="100" placeholder="Nom de l'offre"
                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
 
+
+                              <br>
+                                <input type="hidden" name="description">
+                              <div id="editor-pricing">
+
+                              </div>
                           </div>
 
                          <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
@@ -443,5 +449,22 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     @include('includes.information')
 </div>
 
+
+<script>
+
+var form = document.getElementById('pricing-container');
+form.onsubmit = function() {
+  // Populate hidden form on submit
+  var description = document.querySelector('input[name=description]');
+  description.value = quillFreePlan.root.innerHTML;
+  
+//   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+  
+  // No back end to actually submit to!
+//   alert('Open the console to see the submit data!')
+  return true;
+};
+
+</script>
 
 @endsection

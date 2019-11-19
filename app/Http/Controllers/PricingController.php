@@ -180,6 +180,6 @@ class PricingController extends Controller
     public function destroy(Pricing $pricing)
     {
         $pricing->delete();
-        return redirect('/schoolAdmin/'.$pricing->course->school_id.'/courses/'.$request->course_id.'/pricing')->with('status', 'Offre de prix supprimée de la base de données' );
+        return redirect('/schoolAdmin/'.$pricing->course->school_id.'/courses/'.$pricing->course_id.'/pricing')->with('status', 'Offre de prix supprimée de la base de données' );
     }
 }
