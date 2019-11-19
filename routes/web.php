@@ -274,3 +274,11 @@ Route::get('/ajax_course_search/{school}', 'LiveSearchController@action');
 //
 
 Auth::routes(['verify' => true]);
+
+
+
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('login/gmail', 'Auth\LoginController@redirectToProviderGmail');
+Route::get('login/gmail/callback', 'Auth\LoginController@handleProviderCallbackGmail');

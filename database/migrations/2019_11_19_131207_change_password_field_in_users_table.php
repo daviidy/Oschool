@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddDescriptionFieldToPricingsTable extends Migration
+class ChangePasswordFieldInUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddDescriptionFieldToPricingsTable extends Migration
      */
     public function up()
     {
-        Schema::table('pricings', function (Blueprint $table) {
-            $table->longText('description')->nullable();
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('password')->nullable()->change();
         });
     }
 
@@ -25,8 +25,8 @@ class AddDescriptionFieldToPricingsTable extends Migration
      */
     public function down()
     {
-        Schema::table('pricings', function (Blueprint $table) {
-            $table->dropColumn('description');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('password');
         });
     }
 }
