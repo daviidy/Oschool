@@ -266,7 +266,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 </div>
                 <!---->
                 <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"><span class="space"></span><a what="new course header btn" ui-sref="admin.courses.new" class="tch-btn-header-primary"
-                      href="/admin/courses/new">Nouveau cours</a></div>
+                      href="/schoolAdmin/{{$school->id}}/courses/create">Nouveau cours</a></div>
             </div>
             <!---->
         </div>

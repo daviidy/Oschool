@@ -116,37 +116,35 @@
       <div class="col-sm-2 second-section">
         <ul class="new-homepage-footer-links">
           <h4>Oschool</h4>
-          <li>
+          <!--li>
             <a target="_blank" rel="noopener noreferrer" href="https://teachable.zendesk.com/hc/en-us">Carrières</a>
+          </li-->
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/?page_id=4302">Devenez formateur</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/blog">Devenez formateur</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/?page_id=4404">FAQ</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/podcast/everything-is-teachable">FAQ</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/hhbzcHE">La communauté</a>
           </li>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/podcast/everything-is-teachable">La communauté</a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/podcast/everything-is-teachable">Témoignages</a>
-          </li>
+
         </ul>
       </div>
       <div class="col-sm-2 third-section">
         <ul class="new-homepage-footer-links">
           <h4>Plus</h4>
           <li>
-            <a href="/careers">Conditions</a>
+            <a href="https://blog.oschoolelearning.com/?page_id=4400" target="_blank">Conditions</a>
           </li>
           <li>
-            <a href="/experts">Confidentialité</a>
+            <a href="https://blog.oschoolelearning.com/?page_id=4402" target="_blank">Confidentialité</a>
           </li>
           <li>
-            <a href="/affiliates">Contactez-nous</a>
+            <a href="https://blog.oschoolelearning.com/?page_id=4300" target="_blank">Contactez-nous</a>
           </li>
           <li>
-            <a href="/affiliates">Blog</a>
+            <a href="https://blog.oschoolelearning.com" target="_blank">Blog</a>
           </li>
         </ul>
       </div>
@@ -154,13 +152,16 @@
         <ul class="new-homepage-footer-links">
           <h4>Réseaux sociaux</h4>
           <li>
-            <a href="/privacy-policy">Facebook</a>
+            <a href="https://www.facebook.com/Oschool.ci/" target="_blank">Facebook</a>
           </li>
           <li>
-            <a href="/terms-of-use">Twiter Linkedin</a>
+            <a href="https://twitter.com/OschoolLearning" target="_blank">Twiter</a>
           </li>
           <li>
-            <a href="/terms-of-use">Linkedin</a>
+            <a href="https://www.linkedin.com/in/oschool-ci-5823b8141/" target="_blank">Linkedin</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/oschool_e_learning/" target="_blank">instagram</a>
           </li>
         </ul>
       </div>
