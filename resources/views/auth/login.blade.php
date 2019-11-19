@@ -135,7 +135,18 @@
                     
                   </div>
 
-                  <p style="text-align: center;"> <span>Ou</span></p>
+                  
+  
+  
+
+                  <div class="account-form-button-container">
+                    <br>
+                    <input autocomplete="off" type="submit" name="commit" value="Se connecter" id="signup_final" class="orange-button btn">
+                  </div>
+                </form>
+
+
+                <p style="text-align: center;"> <span>Ou</span></p>
 
                   <div style="text-align: center;">
                   
@@ -155,15 +166,6 @@
                   
                   
                   </div>
-  
-  
-
-                  <div class="account-form-button-container">
-                    <br>
-                    <input autocomplete="off" type="submit" name="commit" value="Se connecter" id="signup_final" class="orange-button btn">
-                  </div>
-                </form>
-
                     
                 <div id="right-box-spinner" class="right-box-spinner create-form-spinner hidden"></div>
               </div>
