@@ -112,7 +112,7 @@ Route::post('/check', 'QuizController@check');
 Route::post('/updateProject', 'ProjectController@update');
 Route::post('/addTask', 'ProjectController@addTask');
 Route::post('/editTask', 'ProjectController@editTask');
-
+Route::post('/applyCoupon', 'CouponController@applyCoupon');
 
 
 //routes for school admin dashboard
