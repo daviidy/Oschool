@@ -1,5 +1,6 @@
 @extends('layouts.menu')
-
+@section('title', $school->name)
+@section('description', $school->heading)
 @section('content')
 
 <section class="hero-partial _1569">
@@ -67,8 +68,10 @@
           <div class="hidden redirect">https://teachable.com/create-account?src=examples-form</div>
           <div class="hidden iterable-event"></div>
           <div class="hidden iterable-campaign"></div>
-          <input id="email-input" type="email" autofocus="autofocus" placeholder="Email address">
+          <input style="width: 100%;" id="email-input" type="email" autofocus="autofocus" placeholder="Cherchez un cours">
+          <!--
           <button id="email-submit-button" class="orange-button">Inscrivez-vous</button>
+      -->
           <div>
           </div>
         </div>
@@ -138,7 +141,7 @@
             <div class="bottom" data-mh="school-cards" style="height: 280px;">
               <h1>{{$course->name}}</h1>
               <p class="default-paragraph">{{$course->subtitle}}</p>
-              <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/6Owd2hlXSIuRnIvjZ6Ft">
+              <img src="/images/authors/{{$course->author->image}}">
               <p class="default-paragraph">{{$course->author->full_name}}</p>
             </div>
           </div>
@@ -162,7 +165,9 @@
       @endif
 
     </div>
+    {{--
     @include('includes.default.school_page.advantages')
+    --}}
     <div class="row logos">
       <div class="col-xs-12">
         <p class="default-paragraph">Les leaders du marché utilisent Oschool pour la formation du personnel.</p>
@@ -271,26 +276,5 @@
 </div>
 </section>
 
-<section class="big-image _1579">
-<style>
-._1579 {
-  margin-bottom: 0px;
-}
-
-@media (max-width: 991px) {
-  ._1579 {
-    margin-bottom: 0px;
-  }
-}
-
-@media (max-width: 767px) {
-  ._1579 {
-    margin-bottom: 0px;
-  }
-}
-</style>
-<img src="https://s3.amazonaws.com/cms-uploaded-images/ZmSsuyfrRGGVTrLm8ZQq_people.jpg">
-<div class="big-image-div" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/ZmSsuyfrRGGVTrLm8ZQq_people.jpg); min-height: 375px;"></div>
-</section>
 
 @endsection

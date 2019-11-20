@@ -106,7 +106,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="default-header">Commencer gratuitement</h1>
+                    <h1 class="default-header">Commencez gratuitement</h1>
                     <h1>
                     </h1>
                     <h2 class="default-paragraph">Nous voyons un avenir brillant où tout le monde, partout peuvent poursuivre leur plein potentiel académique.</h2>
@@ -384,15 +384,16 @@
                     <div class="col-xs-12">
                         <h1 class="default-green-header ">Cours interactifs</h1>
                         <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p>les cours Oschool sont des cours où les participantes et participants peuvent intervenir immédiatement. Dans ces cours, la formatrice ou le formateur est directement présent avec les participantes et participants.</p>
+                            <p>Les cours Oschool sont des cours où les participantes et participants peuvent intervenir immédiatement.
+                                Dans ces cours, la formatrice ou le formateur est directement présent avec les participantes et participants.</p>
                         </div>
                         <h1 class="default-green-header ">Aide et assistance </h1>
                         <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p>Oschool associe un mentor dans le domaine de votre formation pour vous aidez à mieux la suivre .</p>
+                            <p>Oschool associe un mentor dans le domaine de votre formation pour mieux suivre vos progrès.</p>
                         </div>
                         <h1 class="default-green-header ">Certificats et diplômes</h1>
                         <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p>Suivre tes cours sur oschool à votre rythme, tout en obtenant un diplôme reconnu par l'Etat et les entreprises partenaires, ou pour améliorer votre performance.</p>
+                            <p>Suivez vos cours sur Oschool à votre rythme, tout en obtenant un diplôme reconnu par l'Etat et les entreprises partenaires, ou pour améliorer votre performance.</p>
                         </div>
                     </div>
                 </div>
@@ -405,28 +406,32 @@
                     <div class="text">
                         <h1 class="default-green-header">Cours interactifs</h1>
                         <div class="default-paragraph-container markdown-area">
-                            <p>les cours Oschool sont des cours où les participantes et participants peuvent intervenir immédiatement. Dans ces cours, la formatrice ou le formateur est directement présent avec les participantes et participants.</p>
+                            <p>Les cours Oschool sont des cours où les participantes et participants peuvent intervenir immédiatement.
+                                Dans ces cours, la formatrice ou le formateur est directement présent avec les participantes et participants.</p>
                         </div>
                         <h1 class="default-green-header">Aide et assistance </h1>
                         <div class="default-paragraph-container markdown-area">
-                            <p>Oschool associe un mentor dans le domaine de votre formation pour vous aidez à mieux la suivre .</p>
+                            <p>Oschool associe un mentor dans le domaine de votre formation pour mieux suivre vos progrès.</p>
                         </div>
                         <h1 class="default-green-header">Certificats et diplômes</h1>
                         <div class="default-paragraph-container markdown-area">
-                            <p>Suivre tes cours sur oschool à votre rythme, tout en obtenant un diplôme reconnu par l'Etat et les entreprises partenaires, ou pour améliorer votre performance.</p>
+                            <p>Suivez vos cours sur Oschool à votre rythme, tout en obtenant un diplôme reconnu par l'Etat et les entreprises partenaires, ou pour améliorer votre performance.</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-xs-12 col-md-5 right-column match-height clearfix" style="height: 724px;">
                     <div class="image" style="background-image: url(https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/0tTy4z3lTbCkw18ehjQ8);"></div>
                     <div class="quote">
                         <img class="orange-circle" src="/images/divers/disc.svg">
-                        <blockquote>“J'ai utilisé Oschool pour vendre des centaines de milliers de dollars en cours en ligne. Si vous envisagez de créer votre propre cours en ligne, Oschool est le lieu idéal.”</blockquote>
+                        <blockquote>“La mission d'Oschool est de vous aider à combler le gap entre
+                            ce que l'école vous a appris et la réalité en entreprise”</blockquote>
                         <cite>
-                            Melyssa Griffin, <a href="http://melyssagriffin.com" target="_blank" rel="noopener noreferrer">melyssagriffin.com</a>
+                            David YAO, <a href="http://david-yao.com" target="_blank" rel="noopener noreferrer">david-yao.com</a>
                         </cite>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -525,7 +530,7 @@
                 <div class="col-md-5">
                     <h1 class="default-header">Accompagnement à l'emploi</h1>
                     <p class="default-paragraph">Vous aurez accès à des sessions de coaching en carrière, à des conseils de préparation aux entretiens, à des résumés de CV et à des critiques de profils professionnels en ligne pour vous aider à progresser dans votre carrière.</p>
-                    <!--a class="next-step green-button" style="background: #FF6D2C;">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a-->
+                    <!--a class="next-step green-button" style="background: #FF6D2C;">Commencez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a-->
                 </div>
             </div>
             <div class="row second-row" data-step="5" id="step5">
@@ -535,7 +540,7 @@
                 <div class="col-md-5">
                     <h1 class="default-header">Parcours diplômants et certifiants</h1>
                     <p class="default-paragraph">Launch your course and join thousands of online instructors already making millions on Teachable. Accept payments and enrollments instantly.</p>
-                    <a href="{{url('schools')}}" class="next-step green-button" style="background: #4D90CC;">Commencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    <a href="{{url('schools')}}" class="next-step green-button" style="background: #4D90CC;">Commencez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
                 </div>
             </div>
         </div>
@@ -687,21 +692,25 @@
         <div class="container container-beneath-slider">
             <div class="row">
                 <div class="col-xs-12 col-md-4 column">
-                    <h1 class="default-green-header">Une communauté engagée</h1>
-                    <p class="default-paragraph">Personnalisez votre école en ligne avec une interface utilisateur intuitive. Concevez votre page d'accueil, vos conférences et vos pages de vente pour répondre à vos besoins spécifiques.</p>
+                    <h1 class="default-green-header">Partagez vos certificats sur LinkedIn</h1>
+                    <p class="default-paragraph">
+                        Tous nos certificats sont partageables sur LinkedIn.
+                        Vous pourrez ainsi faire valoir facilement
+                        vos compétences auprès de potentiels recruteurs.
+                    </p>
                 </div>
                 <div class="col-xs-12 col-md-4 column">
-                    <h1 class="default-green-header">Une équipe prête pour vous.</h1>
-                    <p class="default-paragraph">Offrez à vos étudiants une expérience d’apprentissage cohérente et captivante sur les ordinateurs de bureau, les tablettes et les smartphones. Présentez un site Web qui a fière allure sur n'importe quel appareil.</p>
+                    <h1 class="default-green-header">Mentorat</h1>
+                    <p class="default-paragraph">Chaque semaine, un expert de votre domaine professionnel suit vos progrès</p>
                 </div>
                 <div class="col-xs-12 col-md-4 column">
-                    <h1 class="default-green-header">Une présence dans la semaine</h1>
-                    <p class="default-paragraph">Avec notre Power Editor, vous ou votre équipe pouvez consulter le code et modifier n’importe quel aspect de votre école en ligne. Votre ambition est la seule limite à ce que vous pouvez accomplir.</p>
+                    <h1 class="default-green-header">Accompagnement à l'emploi</h1>
+                    <p class="default-paragraph">Vous aurez accès à des sessions de coaching de carrière, à des conseils de préparation aux entretiens, à des résumés de CV et à des critiques de profils professionnels en ligne pour vous aider à progresser dans votre carrière.</p>
                 </div>
             </div>
             <div class="row last-row">
                 <div class="col-xs-12">
-                    <a href="{{url('schools')}}" class="dark-green-button">Toutes nos écoles</a>
+                    <a href="{{url('schools')}}" class="dark-green-button">Commencez dès maintenant</a>
                     <!--p class="default-paragraph">En collaboration avec les leaders de l'industrie</p>
                     <div class="clearfix company-logos">
                         <img src="/images/divers/cinetpay.png">
@@ -738,7 +747,7 @@
         <div class="container">
             <div class="row header-row">
                 <div class="col-xs-12">
-                    <h1 class="default-header">Ils ont reussi avec Oschool</h1>
+                    <h1 class="default-header">Ils ont réussi avec Oschool</h1>
                     <p class="default-paragraph"></p>
                 </div>
             </div>
@@ -756,7 +765,7 @@
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“Mon passage à Oschool a été très sincèrement fructueux pour moi car cela m’a donné de l'assurance, une carrure de Pro, également j'ai eu grâce à Oschool de la maturité dans le domaine du marketing sur les réseaux sociaux, tout cela par la qualité des enseignements.”</p>
+                            <p class="testimonial-text">“Mon passage à Oschool a été très sincèrement fructueux pour moi car cela m’a donné de l'assurance et une carrure de pro. J'ai également eu grâce à Oschool de la maturité dans le domaine du marketing sur les réseaux sociaux, tout cela par la qualité des enseignements.”</p>
                             <div class="card-bottom">
                                 <img src="/images/divers/oschool-5.jpeg">
                                 <div class="card-bottom-attribution">
@@ -782,7 +791,7 @@
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“Les cours sur oschool sont tellement pratique que je n’ai pas eu du mal à l’approprier. Je vous le recommande vivement et je dis merci à David car ses tutos sont très simplifiés pour permettre à tous de suivre les modules proposés.”</p>
+                            <p class="testimonial-text">“Les cours sur oschool sont tellement pratiques que je n’ai pas eu du mal à les approprier. Je vous les recommande vivement et je dis merci à Oschool car leurs cours en programmation sont très simplifiés pour permettre à tous de suivre les modules proposés.”</p>
                             <div class="card-bottom">
                                 <img src="/images/divers/tem.jpg">
                                 <div class="card-bottom-attribution">
@@ -808,7 +817,7 @@
                             </div>
                         </div>
                         <div class="card-back">
-                            <p class="testimonial-text">“ très bonne plateforme d'apprentissage pour les adultes…”</p>
+                            <p class="testimonial-text">“ Très bonne plateforme d'apprentissage pour les adultes…”</p>
                             <div class="card-bottom">
                                 <img src="/images/divers/1258.jpg">
                                 <div class="card-bottom-attribution">
@@ -880,15 +889,17 @@
                 }
             }
         </style>
+        <!--
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="small-uppercase-text">ET SI VOUS DEVENEZ UN MENTOR OSCHOOL?</h1>
-                    <h2 class="default-header" style="max-width: 750px">Faite la difference en devenant mentor Oschool</h2>
+                    <h2 class="default-header" style="max-width: 750px">Faites la difference en devenant mentor Oschool</h2>
                     <a href="/create-account?utm_source=home-testimonial" class="orange-button">Postuler pour devenir mentor.</a>
                 </div>
             </div>
         </div>
+    -->
     </section>
 
     <section class="webinar _10">
@@ -910,6 +921,7 @@
             }
         </style>
         <div class="url-string hidden">quickstart1</div>
+        <!--
         <div class="background" style="background-image: url(https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/97mKmvzDR5auFMsSHTFG);" onload="$(this).fadeIn();">
             <div class="container">
                 <div class="row">
@@ -923,6 +935,7 @@
                 </div>
             </div>
         </div>
+    -->
     </section>
 
     <section class="boxes-of-people remove-bottom-margin _11">
@@ -944,7 +957,7 @@
             }
         </style>
         <div class="container">
-            <h1 class="default-header">Nous aidons les écoles et entreprises à concevoir leur propre école virtuelle</h1>
+            <h1 class="default-header">Avec Oschool, on ne va pas à l'école, on y est déjà</h1>
             <p class="default-paragraph"></p>
         </div>
         <div class="container-fluid">
@@ -1043,8 +1056,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="small-uppercase-text">CHOISISSEZ OSCHOOL POUR VOTRE FORMATION</h1>
-                    <h2 class="default-header" style="max-width: 750px">Commencer dès maintenant et transformer votre competence en une carrière profitable.</h2>
-                    <a href="{{url('schools')}}" class="orange-button">Commencer maintenant</a>
+                    <h2 class="default-header" style="max-width: 750px">Commencez dès maintenant et démarrez une carrière enrichissante dans le domaine qui vous passionne</h2>
+                    <a href="{{url('schools')}}" class="orange-button">Commencez maintenant</a>
                 </div>
             </div>
         </div>

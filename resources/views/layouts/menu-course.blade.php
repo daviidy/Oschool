@@ -512,7 +512,6 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <span class="sr-only">Oschool</span>
             @if(\Route::current()->getName() == 'path.slug')
             <img src="/images/schools/logos/oschool.png" alt="logo">
-            <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf">
             @else
             <img src="/images/schools/logos/logo_oschool_noir.png" alt="logo" id="logo-icon" style="display:none">
             <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf" >

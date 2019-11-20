@@ -180,7 +180,7 @@
   .cta-partial h1{margin-bottom:10px;}
   .cta-partial h2{margin:auto;margin-bottom:26px;}
   .example-schools .row:first-of-type h1{text-align:center;margin:auto;margin-bottom:10px;}
-  .example-schools .row:first-of-type p{max-width:730px;margin:auto;margin-bottom:40px;}
+  .example-schools .row:first-of-type p{max-width:730px;margin:auto;margin-bottom:40px;text-align: center;}
   .example-schools .row:nth-of-type(2){margin-bottom:130px;}
   .example-schools .row:nth-of-type(2) .school-card{margin-top:30px;background-color:white;-webkit-box-shadow:0 10px 90px 10px rgba(0,0,0,0.05);-moz-box-shadow:0 10px 90px 10px rgba(0,0,0,0.05);box-shadow:0 10px 90px 10px rgba(0,0,0,0.05);}
   .example-schools .row:nth-of-type(2) .school-card .image{display:block;background-size:cover;background-position:50%;height:270px;border-radius:5px;}

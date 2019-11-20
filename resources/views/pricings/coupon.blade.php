@@ -1,5 +1,5 @@
 @extends('layouts.menu-pricing')
-
+@section('title', $pricing->name.' - '.$pricing->course->name)
 @section('content')
 
 

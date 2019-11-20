@@ -235,8 +235,6 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                 </div>
                 <!---->
                 <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons">
-                    <a target="_blank" class="tch-btn-header-secondary"
-                      href="/course/enrolled/{{$course->slug}}">Aperçu</a><span class="space"></span>
                     <span class="space"></span>
                     <a what="new section btn" ui-sref="admin.courses.course.curriculum.new_section" class="tch-btn-header-primary"
                       href="/schoolAdmin/{{$school->id}}/paths/{{$course->id}}/curriculum/new-project">Nouveau projet</a>

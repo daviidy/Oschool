@@ -653,7 +653,50 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 </style>
 
 
+<style media="screen">
+/*! CSS Used from: https://www.codecademy.com/webpack/121.b0ca2c49a6d3e4f35cbc.chunk.css */
+*,:after,:before{box-sizing:inherit;}
+h2,h3,p{margin-top:0;}
+p{margin-bottom:1rem;}
+button{border-radius:0;}
+button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color;}
+button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
+button{overflow:visible;}
+button{text-transform:none;}
+button,html [type=button]{-webkit-appearance:button;}
+[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none;}
 
+/*! CSS Used from: https://www.codecademy.com/webpack/5.834129a31aa84bdadb07.chunk.css */
+.contentContainer__3rYV5hCbkX8Z5A1gQ1uzq4{height:100%;padding-left:1rem;padding-right:1rem;max-width:calc(1440px + 12rem);margin-left:auto;margin-right:auto;}
+@media only screen and (min-width:48rem){
+.contentContainer__3rYV5hCbkX8Z5A1gQ1uzq4{padding-left:2rem;padding-right:2rem;}
+}
+@media only screen and (min-width:64rem){
+.contentContainer__3rYV5hCbkX8Z5A1gQ1uzq4{padding-left:3rem;padding-right:3rem;}
+}
+@media only screen and (min-width:75rem){
+.contentContainer__3rYV5hCbkX8Z5A1gQ1uzq4{padding-left:6rem;padding-right:6rem;}
+}
+/*! CSS Used from: https://www.codecademy.com/webpack/portal-scenes-Paths.1ceff5f1b64c34c2260c.chunk.css */
+.trackDetailContainer__2N5WdI63tXUqfACKnAAqiH{background-color:#fff;display:-webkit-flex;display:flex;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-flex-direction:row;flex-direction:row;width:100%;border-bottom:1px solid #dddce0;}
+.trackDetailNumber__1aYtKDcpYbCP8ZLTf_Pio8{font-size:5.25rem;font-weight:700;color:#646466;display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center;width:12.5rem;}
+.trackDetailText__2m-7z-7ZEv69iZ8XMALzuT{margin-right:15px;width:100%;}
+.trackDetailTitle__1Xy--Ry5e4p_P_HBMN2E5o{font-size:é.4rem;margin-top:1.375rem;}
+.trackDetailDescription__2hIX0QS0cf7ycluNx1aIp3{margin-top:-.5rem;font-size:1rem;width:100%;color:#323233;}
+.tracksContainer__2x7KTuW_T4k8mqZ7AXwnzk{position:relative;padding:2.5rem 0 5rem;}
+.tracksContainer__2x7KTuW_T4k8mqZ7AXwnzk,.tracksText__2QnyXKYcWDRi820kHQ5QaE{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-flex-direction:column;flex-direction:column;}
+.tracksTitle__1YnzuBiOIL9TSmJwT5LmE_{margin:auto;text-align:center;font-size:3.2rem;}
+.tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ{border:1px solid #ccc;border-left:6px solid #4c7ef3;}
+.moreTracksDetailLayout__3IgDKzQO73_LcU3e52kHuH,.tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:flex-start;justify-content:flex-start;width:calc(100% - 40px);margin:3.5625rem auto auto;-webkit-animation:fadeInTracks__3fylYIdas-SsoK-GgiYPCJ 1s forwards;animation:fadeInTracks__3fylYIdas-SsoK-GgiYPCJ 1s forwards;}
+@media only screen and (min-width:64rem){
+.moreTracksDetailLayout__3IgDKzQO73_LcU3e52kHuH,.tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ{width:100rem;}
+}
+.moreTracksDetailLayout__3IgDKzQO73_LcU3e52kHuH{-webkit-align-items:center;align-items:center;background:none;border:0;color:#7c5ce6;cursor:pointer;display:-webkit-flex;display:flex;-webkit-flex-direction:row;flex-direction:row;height:7.1875rem;-webkit-justify-content:center;justify-content:center;margin-top:0;width:100%;}
+.moreTracksDetailLayout__3IgDKzQO73_LcU3e52kHuH:focus{font-weight:700;color:#19191a;outline:none;}
+.container__2pOQhMH63ZlM4TpcZhwliA{position:relative;}
+.content__19X6PISinqrnIPYq7yW9O-{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;padding:4rem 0;}
+
+</style>
 
 <main class="content">
     <section class="course-hero-unenrolled content__container--full-width ">
@@ -726,12 +769,13 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 
 
             <div class="about-this-course">
-                <div class="about-this-course__info">
-                    <h2 class="about-this-course__info__title">À propos de ce cours</h2>
+                <div style="width: 100%; border-right: unset;" class="about-this-course__info">
+                    <h2 style="text-align: center;" class="about-this-course__info__title">À propos de ce parcours</h2>
 
                     <p class="about-this-course__info__description">{!!$course->description!!}</p>
 
                 </div>
+                <!--
                 <div class="about-this-course__detail ">
                     <span class="about-this-course__detail__title">Détails du cours</span>
                     <span class="about-this-course__detail__icon-container">
@@ -752,6 +796,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                     </span>
                 </div>
 
+
                 <div class="about-this-course__features">
                     <span class="about-this-course__features__title">Caractéristiques du cours</span>
                     <ul>
@@ -761,6 +806,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                         <li>Certification reconnue</li>
                     </ul>
                 </div>
+            -->
 
             </div>
         </div>
@@ -784,7 +830,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                                     <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
                                 </div>
                                 <div class="myg-accordion__panel js-accordion-item-panel" style="display: block;">
-                                    <p>Cette certification vous permet de montrer aux employeurs que vous comprenez parfaitement les principaux concepts du marketing numérique. De plus, vous pouvez ajouter cette qualification à votre&nbsp;CV et
+                                    <p>Cette certification vous permet de montrer aux employeurs que vous comprenez parfaitement les principaux concepts de ce métier. De plus, vous pouvez ajouter cette qualification à votre&nbsp;CV et
                                         l'importer facilement sur votre profil LinkedIn.</p>
                                 </div>
                             </div>
@@ -795,7 +841,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                                     <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
                                 </div>
                                 <div class="myg-accordion__panel js-accordion-item-panel">
-                                    <p>L'obtention de cette certification prouve que vous possédez de réelles compétences dans le domaine du numérique et que vous êtes désireux d'apprendre. Or, il s'agit de deux&nbsp;qualités essentielles dans le
+                                    <p>L'obtention de cette certification prouve que vous possédez de réelles compétences dans ce domaine et que vous êtes désireux d'apprendre. Or, il s'agit de deux&nbsp;qualités essentielles dans le
                                         monde professionnel actuel. En démontrant vos aptitudes à ce sujet, vous aurez toutes les cartes en main pour décrocher l'emploi recherché.</p>
                                 </div>
                             </div>
@@ -806,7 +852,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                                     <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
                                 </div>
                                 <div class="myg-accordion__panel js-accordion-item-panel">
-                                    <p>L'amélioration de vos connaissances sur le numérique peut vous permettre de trouver un emploi, d'obtenir une promotion ou de vous lancer dans une toute nouvelle carrière.</p>
+                                    <p>L'amélioration de vos connaissances sur ce domaine peut vous permettre de trouver un emploi, d'obtenir une promotion ou de vous lancer dans une toute nouvelle carrière.</p>
                                 </div>
                             </div>
                         </myg-accordion>
@@ -824,12 +870,12 @@ h3{font-size:2.4rem;line-height:2.6rem;}
                 <h2 class="how-it-works__title">Fonctionnement</h2>
                 <div class="how-it-works__boxes">
                     <div class="how-it-works__boxes__box">
-                        <h3 class="how-it-works__boxes__box__title">Terminez les 26&nbsp;modules</h3>
-                        <p class="how-it-works__boxes__box__description">Maîtrisez de nouvelles compétences grâce à nos brefs tutoriels vidéo, puis testez vos connaissances en répondant à un rapide questionnaire.</p>
+                        <h3 class="how-it-works__boxes__box__title">Validez les {{count($course->projects)}}&nbsp;projets de ce parcours</h3>
+                        <p class="how-it-works__boxes__box__description">Ce sont des projets professionnalisatns qui vous aideront à acquérir un bloc de compétences précis</p>
                     </div>
                     <div class="how-it-works__boxes__box">
                         <h3 class="how-it-works__boxes__box__title">Passez l'examen final</h3>
-                        <p class="how-it-works__boxes__box__description">Répondez aux 40&nbsp;questions de l'examen final et décrochez votre certification.</p>
+                        <p class="how-it-works__boxes__box__description">Réalisez le dernier projet de ce parcours, qui reprendra tout ce que vous aurez appris depuis le début.</p>
                     </div>
                     <div class="how-it-works__boxes__box">
                         <h3 class="how-it-works__boxes__box__title">Partagez votre certificat</h3>
@@ -840,761 +886,30 @@ h3{font-size:2.4rem;line-height:2.6rem;}
         </div>
     </section>
 
-    <section class="course-detail__section course-detail__modules content__container--full-width">
-        <div class="content__wrapper">
-            <h2 class="course-detail__section__title">Projets ({{count($course->projects)}})</h2>
-            <div class="content__container--full-width carousel__container ng-isolate-scope" selectable="false" touch-snap="unidirectional" justify-content="stretch" touch-acceleration="1.25">
-                <div class="content__wrapper">
-                    <div class="carousel carousel--col-4 carousel--col-lg-3 carousel--col-md-2 carousel--col-sm-1">
-                        <div class="carousel__wrapper" id="carousel" aria-label="carousel" role="list" ng-transclude="" style="transform: translateX(0px);">
-
-                            <div class="carousel__item ng-scope carousel__item--current" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 1 of 26" role="listitem" aria-hidden="false" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/1" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/7nId5qqZMpCWyJRM7Ug8wiVAOaWOPlkIjnzHXHOdwZG2DA7jQ9ze8Mv4PnPiOCWYiZnKS6qwGffTR0gJuZlZb6_39ZExnkz7AAZfmL8"
-                                                  alt="Les opportunités qu'offre Internet">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Les opportunités qu'offre Internet</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">2&nbsp;leçon(s)/15&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/24" data-gtm-tag="module-card lesson-link">Présentation de Google Ateliers Numériques</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/25" data-gtm-tag="module-card lesson-link">Vos opportunités numériques</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--current-plus-1" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 2 of 26" role="listitem" aria-hidden="false" tabindex="0" style="">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/2" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/8Wmxu9zJjs9gB-vvs9APmySY3l3kT_Be_dUn2NCpRYR8IeoSNADyes7--T_dWW_Lq9uudKZKwDhPQSVA8lLNjlvnx4Z3UDLcRac-Znw"
-                                                  alt="Vos premiers pas vers le succès sur Internet">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Vos premiers pas vers le succès sur Internet</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">4&nbsp;leçon(s)/30&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/26" data-gtm-tag="module-card lesson-link">Les objectifs de votre stratégie en ligne</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/27" data-gtm-tag="module-card lesson-link">Soyez présent sur Internet</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/28" data-gtm-tag="module-card lesson-link">Faites-vous connaître en ligne</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/29" data-gtm-tag="module-card lesson-link">Analysez vos performances et adaptez vos objectifs</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 3 of 26" role="listitem" aria-hidden="false" tabindex="0" style="">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/3" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/BO5E8aQODXSUk8cvfSRBTv0p4KdjSIh525VZF-_7PwkwU_bY_0Fo1wOcH3F1wvHMCNd-E3u3Z83v2czcCHeVm5uFMQvRohn19z0N-w"
-                                                  alt="Développez votre présence en ligne">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Développez votre présence en ligne</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">6&nbsp;leçon(s)/40&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/30" data-gtm-tag="module-card lesson-link">Choisissez où développer votre présence en ligne</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/31" data-gtm-tag="module-card lesson-link">Le fonctionnement des sites Web</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/32" data-gtm-tag="module-card lesson-link">Les éléments clés d'un site Web</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/33" data-gtm-tag="module-card lesson-link">Les sites Web et vos objectifs commerciaux</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/34" data-gtm-tag="module-card lesson-link">Facilitez l'utilisation de votre site Web</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/35" data-gtm-tag="module-card lesson-link">Les bonnes pratiques et les pièges à éviter en matière de conception de site Web</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view carousel__item--current-plus-3" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 4 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/137" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/YmO_ZKke1ByfC4M_5fkGzwzZWSM4X7Ds6FLLVzEtthQsAjTg4owXENTM1s-qoBqJfEc9hzMNn8hflsnI7j3F0e-6oyPj5TrqJ3EPhw"
-                                                  alt="Planifiez votre stratégie commerciale sur le Web">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Planifiez votre stratégie commerciale sur le Web</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">5&nbsp;leçon(s)/30&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/142" data-gtm-tag="module-card lesson-link">Les bénéfices d'une stratégie en ligne</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/143" data-gtm-tag="module-card lesson-link">Passez à la vente en ligne</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/144" data-gtm-tag="module-card lesson-link">Analysez le comportement des utilisateurs</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/145" data-gtm-tag="module-card lesson-link">Démarquez-vous de vos concurrents</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/146" data-gtm-tag="module-card lesson-link">Améliorez vos performances commerciales grâce aux objectifs
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 5 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/5" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/ZcW8vDHKLws8pfv9TgJmtXZrWr5LxEVVq3oABMSBMgZxgH9k3uLV-ODRP_nEmEyOGFmOkSCj_vmDht2EG5UCpT65rRPpg3g_VkN4ng"
-                                                  alt="Familiarisez-vous avec la recherche">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Familiarisez-vous avec la recherche</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">6&nbsp;leçon(s)/45&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/40" data-gtm-tag="module-card lesson-link">Les points clés sur les moteurs de recherche</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/41" data-gtm-tag="module-card lesson-link">Introduction aux moteurs de recherche</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/42" data-gtm-tag="module-card lesson-link">Comment les moteurs de recherche voient les pages Web</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/43" data-gtm-tag="module-card lesson-link">La recherche naturelle, qu'est-ce que c'est ?</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/44" data-gtm-tag="module-card lesson-link">La publicité sur les moteurs de recherche, qu'est-ce que c'est ?</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/45" data-gtm-tag="module-card lesson-link">La Search Console de Google</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 6 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/6" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/KtL5gaA0B_MmlUdpetMctK8PzqUpm9FFgH9SkWb4124YVoXtWl7W6b1Lj7zsgOxrBhW2-HjUv8NkI85cEcBiGX3S3BIY5_13h8tTgw"
-                                                  alt="Faites-vous connaître grâce à la recherche">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Faites-vous connaître grâce à la recherche</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">5&nbsp;leçon(s)/35&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/46" data-gtm-tag="module-card lesson-link">Introduction au référencement naturel (SEO)</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/47" data-gtm-tag="module-card lesson-link">L'importance d'un plan SEO</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/48" data-gtm-tag="module-card lesson-link">Le processus de SEO</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/49" data-gtm-tag="module-card lesson-link">Comment choisir vos mots-clés ?</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/50" data-gtm-tag="module-card lesson-link">Fixez-vous des objectifs SEO réalistes</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 7 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/7" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/S0Oe8GsAYd2n_TAFBDXvXIotZnXM3DviMtcdQ5qdOMVuMm_OBEU-uctOKkf0uNhTdpx2ZkWZ1l_RJ0-ZBOsikoCZ4ANlSFRdMN-lbw"
-                                                  alt="Faites en sorte que la recherche fonctionne pour votre entreprise">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Faites en sorte que la recherche fonctionne pour votre entreprise</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">3&nbsp;leçon(s)/25&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/51" data-gtm-tag="module-card lesson-link">Rendez conviviale la recherche de vos pages Web</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/52" data-gtm-tag="module-card lesson-link">Tirez parti des autres sites Web</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/53" data-gtm-tag="module-card lesson-link">Lancez-vous à l'international avec le SEO</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 8 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/8" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/0RS0o9WsEaWqCIPELwXNbpbHlFgxU3X6Y95_ZufGneS6Cv56Jf3djbpjExXQywmJAWLhhQRnU8aUvSqYF3Q1Ht3sopA0EL9Rlbr5Nmo"
-                                                  alt="Faites-vous remarquer grâce aux annonces sur les moteurs de recherche">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Faites-vous remarquer grâce aux annonces sur les moteurs de recherche</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">4&nbsp;leçon(s)/25&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/54" data-gtm-tag="module-card lesson-link">Introduction aux liens sponsorisés (SEM)</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/55" data-gtm-tag="module-card lesson-link">Les enchères liées aux liens sponsorisés</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/56" data-gtm-tag="module-card lesson-link">Qu'est-ce qu'un bon mot-clé ?</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/57" data-gtm-tag="module-card lesson-link">Faites en sorte que vos annonces se démarquent</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 9 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/9" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/Zvx4DdrPJl5L1KQ2U-cjfSvojtVWNFVukGYmcnRkQkam3NtvO00HVYeIf9UIyZz1igb9Rl6DNkOCfryxDTuuCDSk-w8PE8cVGDDt1A"
-                                                  alt="Améliorez vos campagnes sur les moteurs de recherche">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Améliorez vos campagnes sur les moteurs de recherche</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">4&nbsp;leçon(s)/30&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/58" data-gtm-tag="module-card lesson-link">Optimisez votre pertinence grâce à une structure de campagne adaptée</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/59" data-gtm-tag="module-card lesson-link">Tirez pleinement parti de vos mots-clés</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/60" data-gtm-tag="module-card lesson-link">Affinez les types de correspondance des mots-clés</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/61" data-gtm-tag="module-card lesson-link">Apprenez les bonnes pratiques et les pièges à éviter</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 10 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/12" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/PtwEvIawXn4zIorh822E9ScsT8A6xzRINRNYObKCJRt8G3htOFPsERhaINFofOw6PXu38xQrDPssCXZB8VC-6XKjunvsoUj9lJVg"
-                                                  alt="Faites-vous connaître localement">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Faites-vous connaître localement</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">2&nbsp;leçon(s)/20&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/68" data-gtm-tag="module-card lesson-link">Faites de la publicité auprès d'une clientèle locale</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/69" data-gtm-tag="module-card lesson-link">Le pouvoir des annuaires locaux</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 11 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/13" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/PKNgQwA05TH2w9l-_vZ9aLj-KX13Ft2UuJ84ZUcM5T9jYHPgJ-L7fACUe503KegvQA5Aaj-wbGAAk7T2j6Ddc_v0U3gwzwzcPIR5lA"
-                                                  alt="Aidez les gens près de vous à vous trouver en ligne">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Aidez les gens près de vous à vous trouver en ligne</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">3&nbsp;leçon(s)/25&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/70" data-gtm-tag="module-card lesson-link">Découvrez la publicité locale sur Internet</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/71" data-gtm-tag="module-card lesson-link">Atteignez les internautes mobiles locaux</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/72" data-gtm-tag="module-card lesson-link">L'optimisation du référencement (SEO) pour les entreprises locales</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 12 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/14" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/Ll59mLbDCXz3r9i0NwNB5UFsEfj0G6cuVFZN8b4CZU7CQIyFANXszFQz-uBv28tIaR-Ey-Xm3LOS4Z09eufF0irwLRj6wZWLC9ajCkw"
-                                                  alt="Faites-vous connaître grâce aux médias sociaux">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Faites-vous connaître grâce aux médias sociaux</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">4&nbsp;leçon(s)/30&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/73" data-gtm-tag="module-card lesson-link">Introduction aux médias sociaux</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/74" data-gtm-tag="module-card lesson-link">Identifiez les médias sociaux adaptés à votre entreprise</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/75" data-gtm-tag="module-card lesson-link">Déterminez vos objectifs sur les médias sociaux</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/76" data-gtm-tag="module-card lesson-link">Lancez-vous sur les médias sociaux</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 13 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/15" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/pYHDGNbTu6S1GRimSHTM896z_ew4cNXzickOtq1EgW4wrFCjgpODQes7SEBF3e7AErQc19NbA_tX9lM4ynRU5qt1wWbq-Xhxzp0Zju4"
-                                                  alt="Plongez dans l'univers des médias sociaux">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Plongez dans l'univers des médias sociaux</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">4&nbsp;leçon(s)/30&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/77" data-gtm-tag="module-card lesson-link">Développez votre stratégie sur les réseaux sociaux</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/78" data-gtm-tag="module-card lesson-link">Faites de la publicité sur les médias sociaux</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/79" data-gtm-tag="module-card lesson-link">Mesurez votre succès sur les médias sociaux</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/80" data-gtm-tag="module-card lesson-link">Les pièges à éviter sur les réseaux sociaux</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 14 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/16" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/qfc4oJ7HG-L67AImuzBoNn7WQEX2noTL84ji2Sb2us3jp043IA6s-I5TtBdItpqyYHmtRTUl7S19sNZx-rbkn58SWe5_yMWn9RX8nHk"
-                                                  alt="Découvrez les possibilités offertes par le mobile">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Découvrez les possibilités offertes par le mobile</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">3&nbsp;leçon(s)/20&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/81" data-gtm-tag="module-card lesson-link">L'évolution des appareils mobiles</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/82" data-gtm-tag="module-card lesson-link">Optimisez votre site pour les smartphones</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/83" data-gtm-tag="module-card lesson-link">Découvrez le fonctionnement des applications mobiles</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 15 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/17" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/mKzqOGdNIG__IW5TksKR486YU3NKKwY-s6tWLonjxV2Fhml5H6g9YaOeBrdB8Qn7kOqNjvM5_6PRecv-uWmI6dv0RK9p2579w22y"
-                                                  alt="Tirez profit des opportunités qu'offre le mobile">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Tirez profit des opportunités qu'offre le mobile</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">5&nbsp;leçon(s)/35&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/84" data-gtm-tag="module-card lesson-link">Introduction à la publicité mobile</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/85" data-gtm-tag="module-card lesson-link">Les campagnes sur les moteurs de recherche spécifiques aux smartphones</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/86" data-gtm-tag="module-card lesson-link">Les campagnes display pour les smartphones</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/87" data-gtm-tag="module-card lesson-link">Les campagnes mobiles sur les réseaux sociaux</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/88" data-gtm-tag="module-card lesson-link">La publicité vidéo sur les smartphones</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 16 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/138" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/Ja76JntqyTZ-lXtm-pDr1Ysa7zILPemgHyNPOjcYR4eJo1-rOIbi-KZi0Gyh5UdWnaPLe1GS8AEdiGiNqJNrnwLQaqQJ0havBupB"
-                                                  alt="Premiers pas avec le marketing de contenu">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Premiers pas avec le marketing de contenu</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">6&nbsp;leçon(s)/35&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/147" data-gtm-tag="module-card lesson-link">Introduction au marketing de contenu
-                                            </a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/148" data-gtm-tag="module-card lesson-link">Apprenez à connaître vos clients en ligne</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/149" data-gtm-tag="module-card lesson-link">Choisissez le format adapté pour votre contenu</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/150" data-gtm-tag="module-card lesson-link">Rédigez des contenus pour vos audiences en ligne</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/151" data-gtm-tag="module-card lesson-link">Optimisez la visibilité de vos contenus</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/152" data-gtm-tag="module-card lesson-link">Mesurez les performances de vos actions de marketing de contenu</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 17 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/4" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/HR1zfKuxei7gjNd-CtQDmZpYtTEulz87X9vAT3cFWBq_RKCdAGDGLmsalDkSx4nXQsJAiwIj93tYverApzk6-cS63uXj_83i0q5Qig"
-                                                  alt="Communiquez grâce aux e-mails">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Communiquez grâce aux e-mails</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">5&nbsp;leçon(s)/30&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/36" data-gtm-tag="module-card lesson-link">Les bases de l'e-mail marketing</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/37" data-gtm-tag="module-card lesson-link">Vos options en matière d'e-mail marketing</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/38" data-gtm-tag="module-card lesson-link">Rédigez des e-mails convaincants</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/39" data-gtm-tag="module-card lesson-link">Gérez efficacement vos campagnes d'e-mails</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/164" data-gtm-tag="module-card lesson-link">Mesurez l'efficacité du marketing par e-mail</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 18 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/18" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/Tc9AIlIB4naW0WuarwCUIvlGYNGeeRehH2CD3ZnhM0GFAetQipepzHBJQFVBZxZfiJP40C1O4-wyuGmVxQ8gIiJZaq65jWBgpb-j4g"
-                                                  alt="Introduction à la publicité display">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Introduction à la publicité display</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">3&nbsp;leçon(s)/25&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/89" data-gtm-tag="module-card lesson-link">Qu'est-ce que la publicité display ?</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/90" data-gtm-tag="module-card lesson-link">Les différences entre les publicités sur les moteurs de recherche et display</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/91" data-gtm-tag="module-card lesson-link">Ciblez les bonnes personnes avec la publicité display</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 19 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/19" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/9bqeuMYz6a6BI-JTGApottSUjD7ke4f3iqdjYk2C4ynTt_Vh32kGyJjYHt8YdPxwQjBLl-6hi_1Q1eY8BNnTX1WiY5Zixk837b0yHA"
-                                                  alt="Approfondissez la publicité display">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Approfondissez la publicité display</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">3&nbsp;leçon(s)/25&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/92" data-gtm-tag="module-card lesson-link">Atteignez vos objectifs avec la publicité display</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/93" data-gtm-tag="module-card lesson-link">Comprenez les différents réseaux publicitaires</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/94" data-gtm-tag="module-card lesson-link">Comment fonctionne le reciblage publicitaire ?</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 20 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/21" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/fVlXxBTGuMbveRMggxgFxe1fCUb3E3olRS22IISZSw8LHKJD9Em4jyZQjK-RXhB2MUwa1a8rkaH9HWWWSRFxKq5CscoT-vC5r7_x0Q"
-                                                  alt="La puissance de la vidéo sur Internet">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">La puissance de la vidéo sur Internet</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">6&nbsp;leçon(s)/55&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/102" data-gtm-tag="module-card lesson-link">L'essor de la vidéo en ligne</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/103" data-gtm-tag="module-card lesson-link">Comment intégrer la vidéo dans votre stratégie en ligne</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/104" data-gtm-tag="module-card lesson-link">Créez du contenu vidéo sans vous ruiner</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/105" data-gtm-tag="module-card lesson-link">Partagez vos vidéos et faites-en la promotion</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/106" data-gtm-tag="module-card lesson-link">Faites de la publicité sur les sites de partage vidéo</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/107" data-gtm-tag="module-card lesson-link">Mesurez les performances de vos vidéos</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 21 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/10" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/tKIxFPpeNJ-kHu1oMlrwqJnXmWjclaA7iATS-Y4x34lggICBMPlCanTfGhBjbObd-7njZrmqNxzNGL2QVOEro4FOdXhZGVqrmqgBv3I"
-                                                  alt="Familiarisez-vous avec l'analyse d'audience">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Familiarisez-vous avec l'analyse d'audience</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">3&nbsp;leçon(s)/30&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/62" data-gtm-tag="module-card lesson-link">Qu'est-ce que l'analyse d'audience ?</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/63" data-gtm-tag="module-card lesson-link">L'analyse d'audience à votre service</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/64" data-gtm-tag="module-card lesson-link">Évaluez vos objectifs avec l'analyse d'audience</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 22 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/11" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/DWip-EhnRhz6IrPtl3qKOJhLnJ5Ulyn4RSGir3exv_Gchduzd6KPrtcJ2tzGrg6blhaaIiwXRZJTqez23ZjYZR22YN0yZYs-f8nb"
-                                                  alt="Réussissez grâce à l'analyse d'audience">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Réussissez grâce à l'analyse d'audience</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">3&nbsp;leçon(s)/30&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/65" data-gtm-tag="module-card lesson-link">L’analyse d'audience et la recherche naturelle</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/66" data-gtm-tag="module-card lesson-link">Maîtrisez les outils d'évaluation pour les liens sponsorisés (SEM)</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/67" data-gtm-tag="module-card lesson-link">Décryptez vos données pour en retirer des informations utiles</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 23 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/139" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/q5kkd8eo73ZthXTHe19ATa-MVdtiwA7Jz30GobR9l9Wwe-UKUx5I-Jk_2zAB67c-J4AVLY4P6Qge8AW1rLm7cOg9w3v0csMirO3TBw"
-                                                  alt="Transformez les données en insights">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Transformez les données en insights</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">5&nbsp;leçon(s)/30&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/153" data-gtm-tag="module-card lesson-link">Analysez les audiences à l'aide des données</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/154" data-gtm-tag="module-card lesson-link">Analysez le cycle de données</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/155" data-gtm-tag="module-card lesson-link">Créez des insights exploitables à partir de vos données</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/156" data-gtm-tag="module-card lesson-link">Gérez les chiffres à l'aide de feuilles de calcul</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/157" data-gtm-tag="module-card lesson-link">Présentez efficacement vos données</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 24 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/22" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/Ywsyxe8V6esHOlBS_J75zvotD-l1j2QlxesnUhrYCUHRfbx7JmlqnzI91sOyqSBMYlLJkPpHjP0fAIzsa4BI2iDzOdfy8-IcQQiG6w"
-                                                  alt="Créez votre boutique en ligne">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Créez votre boutique en ligne</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">2&nbsp;leçon(s)/25&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/108" data-gtm-tag="module-card lesson-link">Choisissez les solutions e-commerce adaptées à vos besoins</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/109" data-gtm-tag="module-card lesson-link">Recevez les paiements et gérez les commandes</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 25 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/23" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/fEf4XvyFH0g-GNEKdvwTL1ZRKFJ1KsZ3yX2RYH2vMNwtR8ava5-0j2bCyCkPYwoulegKh9iMNcit5xf0XgUIo_cWoWvAIaF20AVJ"
-                                                  alt="Augmentez vos ventes en ligne">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Augmentez vos ventes en ligne</h4>
-                                            </a>
-                                            <span class="module-info__subtitle">3&nbsp;leçon(s)/35&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/110" data-gtm-tag="module-card lesson-link">Créez une expérience d'e-commerce réussie</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/111" data-gtm-tag="module-card lesson-link">Mettez en valeur vos produits</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/112" data-gtm-tag="module-card lesson-link">Le reciblage publicitaire appliqué à l'e-commerce</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel__item ng-scope carousel__item--out-of-view" ng-click="ctrl.onClick($event);"
-                              ng-class="{'carousel__item--active': ctrl.active, 'carousel__item--out-of-view': ctrl.outsideView, 'carousel__item--current': ctrl.index == ctrl.parentCtrl.index, 'carousel__item--current-minus-1': ctrl.index == ctrl.parentCtrl.index - 1, 'carousel__item--current-minus-3': ctrl.index == ctrl.parentCtrl.index - 3, 'carousel__item--current-minus-5': ctrl.index == ctrl.parentCtrl.index - 5, 'carousel__item--current-plus-1': ctrl.index == ctrl.parentCtrl.index + 1, 'carousel__item--current-plus-3': ctrl.index == ctrl.parentCtrl.index + 3}"
-                              aria-label="Carousel item 26 of 26" role="listitem" aria-hidden="true" tabindex="0">
-                                <div class="carousel__item__contents" ng-transclude="">
-                                    <div class="module-info ng-scope">
-                                        <div class="module-info__header">
-                                            <a href="course/digital-marketing/module/20" data-gtm-tag="module-card module-link">
-                                                <img class="module-info__image" src="https://lh3.googleusercontent.com/MIERVoNmBQ9kSuZ_F3lbbDnJyO5psjysjyQOH6mJkz6DqskiXhypvehQxrz100Euybu2hWt5cAgkn92tFSU_0kRoKdMtPdJ0jjlK"
-                                                  alt="Développez-vous à l'international ">
-                                                <h4 class="module-info__title heading--h4 heading--h4-medium">Développez-vous à l'international </h4>
-                                            </a>
-                                            <span class="module-info__subtitle">7&nbsp;leçon(s)/70&nbsp;min</span>
-                                        </div>
-                                        <div class="module-info__links-list">
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/95" data-gtm-tag="module-card lesson-link">Introduction au marketing international et à l'exportation</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/96" data-gtm-tag="module-card lesson-link">Validez votre nouveau marché</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/97" data-gtm-tag="module-card lesson-link">Faites-vous comprendre à l'étranger</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/98" data-gtm-tag="module-card lesson-link">Faites de la publicité au-delà de vos frontières</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/99" data-gtm-tag="module-card lesson-link">Anticipez les questions réglementaires, fiscales et logistiques</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/100" data-gtm-tag="module-card lesson-link">Aidez les clients à l'étranger à acheter vos produits</a>
-
-                                            <a class="module-info__link" href="course/digital-marketing/lesson/101" data-gtm-tag="module-card lesson-link">Livrez des produits à vos clients dans le monde entier</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- ngIf: navigation && ctrl.items.length > ctrl.columns() -->
-                        <nav class="carousel__nav ng-scope" ng-if="navigation &amp;&amp; ctrl.items.length > ctrl.columns()" aria-controls="carousel">
-                            <!-- ngIf: ctrl.index < ctrl.maxIndex() --><button class="carousel__nav__link carousel__nav__link--next ng-scope" ng-click="ctrl.next($event);" ng-if="ctrl.index < ctrl.maxIndex()" aria-label="Next"><i
-                                  class="material-icons">chevron_right</i></button><!-- end ngIf: ctrl.index < ctrl.maxIndex() -->
-                            <!-- ngIf: ctrl.index > 0 -->
-                        </nav><!-- end ngIf: navigation && ctrl.items.length > ctrl.columns() -->
+    <div class="container__2pOQhMH63ZlM4TpcZhwliA">
+
+    <div class="contentContainer__3rYV5hCbkX8Z5A1gQ1uzq4">
+        <div class="content__19X6PISinqrnIPYq7yW9O-">
+            <div class="tracksContainer__2x7KTuW_T4k8mqZ7AXwnzk">
+                <div>
+                    <div class="tracksText__2QnyXKYcWDRi820kHQ5QaE">
+                        <h2 class="tracksTitle__1YnzuBiOIL9TSmJwT5LmE_">Ce que vous allez réaliser</h2>
                     </div>
-                    <!-- ngIf: pagination -->
+                    <div class="tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ">
+                        @foreach($course->projects as $project)
+                        <div class="trackDetailContainer__2N5WdI63tXUqfACKnAAqiH" data-testid="path-marketing-syllabus-track-1">
+                            <div class="trackDetailNumber__1aYtKDcpYbCP8ZLTf_Pio8">{{$loop->index + 1}}</div>
+                            <div class="trackDetailText__2m-7z-7ZEv69iZ8XMALzuT">
+                                <h3 class="trackDetailTitle__1Xy--Ry5e4p_P_HBMN2E5o">{{$project->title}}</h3>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
     <!--section class="course-detail__section course-detail__skills content__container--full-width">
         <div class="content__wrapper">

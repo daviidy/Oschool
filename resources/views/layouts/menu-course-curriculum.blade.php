@@ -33,6 +33,7 @@
 
   <link href="/css/theme.css" rel="stylesheet" data-turbolinks-track="true">
   <title>{{$course->name}} | Oschool</title>
+  <meta name="description" content="Programme du cours {{$course->name}}">
 
   <meta name="asset_host" content="https://fedora.teachablecdn.com">
   <script src="https://fedora.teachablecdn.com/assets/application-1373410a4fe18258bccdd558991a1b1ed4c62390e2116938378a10bc0ff046cf.js" data-turbolinks-track="true"></script>

@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 @section('title', 'Les meilleures écoles et universités d\'Afrique sont en ligne sur Oschool')
-
+@section('description', 'Visitez nos différentes écoles et démarrez dès maintenant une carrière enrichissante dans le domaine qui vous passionne')
 @section('content')
 
 <section class="hero-partial _1569">
@@ -62,6 +62,7 @@
 
 
           <h2>Parcourez la liste de nos écoles et découvrez ce qu'elles ont à vous offrir</h2>
+          <!--
         <div class="input-container center">
           <div class="hidden redirect">https://teachable.com/create-account?src=examples-form</div>
           <div class="hidden iterable-event"></div>
@@ -71,6 +72,7 @@
           <div>
           </div>
         </div>
+    -->
       </div>
     </div>
   </div>
@@ -131,7 +133,7 @@
         <a href="{{url('schools', $school)}}" rel="noopener noreferrer">
           <div class="school-card">
             <div class="image" style="background-image: url(/images/schools/logos/{{$school->logo}});"></div>
-            <div class="bottom" data-mh="school-cards"">
+            <div class="bottom" data-mh="school-cards">
               <h1>{{$school->name}}</h1>
               <p class="default-paragraph">{{$school->heading}}</p>
               <!--
@@ -254,26 +256,6 @@
 </div>
 </section>
 
-<section class="big-image _1579">
-<style>
-._1579 {
-  margin-bottom: 0px;
-}
 
-@media (max-width: 991px) {
-  ._1579 {
-    margin-bottom: 0px;
-  }
-}
-
-@media (max-width: 767px) {
-  ._1579 {
-    margin-bottom: 0px;
-  }
-}
-</style>
-<img src="https://s3.amazonaws.com/cms-uploaded-images/ZmSsuyfrRGGVTrLm8ZQq_people.jpg">
-<div class="big-image-div" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/ZmSsuyfrRGGVTrLm8ZQq_people.jpg); min-height: 375px;"></div>
-</section>
 
 @endsection
