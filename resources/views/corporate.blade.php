@@ -1148,8 +1148,8 @@ hr{border-color:#ececec;}
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-5 right-column match-height clearfix" style="height:;">
-                    <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/QL2biKvoSr21K0lJUh7x" data-loaded="true"
-                      style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/QL2biKvoSr21K0lJUh7x&quot;);"></div>
+                    <div class="image" data-background-image="/images/divers/corporate-1.jpg" data-loaded="true"
+                      style="background-image: url(/images/divers/corporate-1.jpg);"></div>
                     <!--div class="quote">
                         <img class="orange-circle" src="/assets/blockquote-orange-d24380ebe646a526fc1fa70b279fa6531394ee3ddc19bf7bca406c709a6f08f3.svg">
                         <blockquote>“It was important to us that our courses would look beautiful and that the software would be easy to use.”</blockquote>
@@ -1232,7 +1232,7 @@ hr{border-color:#ececec;}
                         <h2 class="default-header" style="max-width: 750px; font-size: 50px!important;">QUEL IMPACT POUR VOTRE EQUIPE?</h2>
                         <div class="">
                           <a href="/create-account?utm_source=features-mid" class="orange-button" style="padding: 20px 30px;">Téléchargez notre catalogue</a>
-                          <a href="/create-account?utm_source=features-mid" class="orange-button">Contactez-nous</a>
+                          <a href="https://blog.oschoolelearning.com/?page_id=4300" class="orange-button">Contactez-nous</a>
                         </div>
                     </div>
                 </div>
