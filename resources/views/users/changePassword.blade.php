@@ -129,11 +129,11 @@ p{font-size:18px;font-weight:200;line-height:28px;}
 <div class="main my-teachable-dashboard">
     <div class="sticky-center-container pinned">
         <div class="content-box form-wrapper settings-form-wrapper">
-            <form enctype="multipart/form-data" id="profile-form" action="{{url('users', Auth::user())}}" accept-charset="UTF-8" method="post">
+            <form enctype="multipart/form-data" id="profile-form" action="{{url('user/settings/editPassword')}}" accept-charset="UTF-8" method="post">
                 @csrf
-                {{method_field('patch')}}
+                {{-- {{method_field('patch')}} --}}
                 @if(session('status'))
-                <div id="form-success" class="alert alert-success" role="alert">Votre profil a été mis à jour.</div>
+                <div id="form-success" class="alert alert-success" role="alert">Votre mot de passe a été mis à jour.</div>
                 @endif
                 <div id="form-success" class="alert alert-success hidden" role="alert">You have successfully confirmed your email address.</div>
                 <div id="form-confirmation" class="alert alert-success hidden" role="alert">
@@ -144,36 +144,47 @@ p{font-size:18px;font-weight:200;line-height:28px;}
                     Please fix the errors below.
                     <div id="input-errors"></div>
                 </div>
-                <div class="form-group">
-                    <center>
-                        <img width="70" class="img-circle" src="/images/users/default/{{Auth::user()->image}}" alt="davidyfreelance@gmail.com">
-                        <br><br>
-                        <p class="center-explanation">
-                            Changez votre image ci-dessous
-                        </p>
-                        <input type="file" name="image" value="">
-                    </center>
-                </div>
+                
 
                 <div class="form-group">
-                    <label class="control-label" for="edit-user-name">
-                        Nom complet
+                    <label class="control-label" for="current-edit-user-password">
+                        Votre ancien mot de passe
                     </label>
                     <div class="control-input">
-                        <input class="form-control" id="edit-user-name" maxlength="100" name="name" placeholder="Full Name" required="required" type="text" value="{{Auth::user()->name}}">
+                        <input class="form-control" id="current-edit-user-password" maxlength="100" name="current_password" placeholder="********" required="required" type="password" >
                         <span class="input-icon"></span>
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label" for="edit-user-email">
-                        Adresse email
+                    <label class="control-label" for="edit-user-password">
+                        Votre nouveau mot de passe
                     </label>
                     <div class="control-input">
-                        <input disabled class="form-control" id="edit-user-email" maxlength="100" name="email" required="required" type="email" value="{{Auth::user()->email}}">
+                        <input class="form-control" id="edit-user-password" maxlength="100" name="password" placeholder="********" required="required" type="password" >
                         <span class="input-icon"></span>
                     </div>
-                </div>
+                    <label class="control-label" for="confirm-edit-user-password">
+                        Confirmer votre nouveau mot de passe
+                    </label>
+                    <div class="control-input">
+                        <input class="form-control" id="confirm-edit-user-password" maxlength="100" name="password_confirmation" placeholder="********" required="required" type="password" >
+                        <span class="input-icon"></span>
+                    </div>
+                
+                    {{-- <label class="control-label" for="edit-user-password">
+                        Votre nouveau mot de passe
+                    </label>
+                    <div class="control-input">
+                        <input disabled class="form-control" id="edit-user-password" maxlength="100" name="password" placeholder="********" required="required" type="password">
+                        <span class="input-icon"></span>
+                    </div>
+                
+                    <label class="control-label" for="c-edit-user-password">
+                        Confirmer votre nouveau mot de passe
+                    </label>
+                    <div class="control-input">
+                        <input disabled class="form-control" id="c-edit-user-password" maxlength="100" name="confim_password" placeholder="********" required="required" type="password">
+                        <span class="input-icon"></span>
+                    </div>
+                </div> --}}
                 <!--
                 <a id="change-pw-btn">Change Password</a>
                 <div class="form-group hidden" id="change-pw-form-group">
@@ -193,8 +204,8 @@ p{font-size:18px;font-weight:200;line-height:28px;}
                     </div>
                 </div>
             -->
-                <br>
-                <a href="{{url('user/settings/changePassword')}}">Changer de mot de passe</a>
+                {{-- <br> --}}
+                {{-- <a href="{{url('user/settings/changePassword')}}">Changer de mot de passe</a> --}}
                 <hr>
 
 
