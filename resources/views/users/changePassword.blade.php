@@ -148,7 +148,7 @@ p{font-size:18px;font-weight:200;line-height:28px;}
 
                 <div class="form-group">
                     <label class="control-label" for="current-edit-user-password">
-                        Votre anciens mot de passe
+                        Votre ancien mot de passe
                     </label>
                     <div class="control-input">
                         <input class="form-control" id="current-edit-user-password" maxlength="100" name="current_password" placeholder="********" required="required" type="password" >
