@@ -282,3 +282,10 @@ Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallba
 
 Route::get('login/gmail', 'Auth\LoginController@redirectToProviderGmail');
 Route::get('login/gmail/callback', 'Auth\LoginController@handleProviderCallbackGmail');
+
+
+//user change password
+
+
+Route::get('user/settings/changePassword', 'UserController@changePassword');
+Route::post('user/settings/editPassword', 'UserController@editPassword');
