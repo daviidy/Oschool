@@ -611,8 +611,11 @@
             <div class="slider-parent">
                 <div class="homepage-slider">
                             <div class="item">
-                                <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
-
+                                <img class="big-image" src="/images/divers/dave_slider.jpg">
+                                <div class="text big-image-text">
+                                    <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
+                                    <p class="default-paragraph">David YAO, $1k in 1 Day Academy</p>
+                                </div>
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/lsfYuKBpSFOdaK4QQ3n2_homepage-featured-everytuesday.jpg">
