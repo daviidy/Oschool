@@ -1,5 +1,5 @@
 @extends('layouts.menu-course-curriculum')
-
+@section('image', @section('image', $course->logo))
 @section('content')
 
 <div class="course-sidebar">

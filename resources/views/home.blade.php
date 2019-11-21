@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 @section('title', 'Apprenez auprès des meilleures universités et entreprises d\'Afrique')
-
+@section('image', '/images/divers/slider_home.png')
 @section('content')
 
 
@@ -539,7 +539,7 @@
                 </div>
                 <div class="col-md-5">
                     <h1 class="default-header">Parcours diplômants et certifiants</h1>
-                    <p class="default-paragraph">Launch your course and join thousands of online instructors already making millions on Teachable. Accept payments and enrollments instantly.</p>
+                    <p class="default-paragraph">Ces parcours constitués de projets professionnalisants, vous aident à être tout de suite opérationnels pour les entreprises</p>
                     <a href="{{url('schools')}}" class="next-step green-button" style="background: #4D90CC;">Commencez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
                 </div>
             </div>

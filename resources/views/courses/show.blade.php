@@ -2,6 +2,7 @@
 
 @section('title', $course->name)
 @section('description', $course->subtitle)
+@section('image', $course->logo)
 @section('content')
 
 <style>

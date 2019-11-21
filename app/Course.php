@@ -47,6 +47,16 @@ class Course extends Model
            return $this->hasMany('App\Certificate');
        }
 
+       /**
+        * [users description]
+        * relationship many to many with Deliverable model
+        * @return [array] [description]
+        */
+        public function deliverables()
+        {
+            return $this->hasMany('App\Deliverable');
+        }
+
 
      /**
       * [users description]

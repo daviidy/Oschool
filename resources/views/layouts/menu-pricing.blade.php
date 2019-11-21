@@ -38,6 +38,7 @@
   <meta name="csrf-param" content="authenticity_token">
   <meta name="csrf-token" content="/wqXpd3pYxNO/ROyCZb6dJdswTKuW9jYqOxo33+1KirdTHgUbcoVomgp3GtdaJ6KfuxvHbE812+C5h3URHZnZg==">
   <title>@yield('title') | Oschool</title>
+  <meta name="og:image" content="/images/divers/money.png"/>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   <style media="screen">

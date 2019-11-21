@@ -1,5 +1,6 @@
 @extends('layouts.menu')
 @section('title', $school->name)
+@section('image', '/images/divers/slider_school.png')
 @section('description', $school->heading)
 @section('content')
 

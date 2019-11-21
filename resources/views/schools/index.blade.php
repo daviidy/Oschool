@@ -1,6 +1,7 @@
 @extends('layouts.menu')
 @section('title', 'Les meilleures écoles et universités d\'Afrique sont en ligne sur Oschool')
 @section('description', 'Visitez nos différentes écoles et démarrez dès maintenant une carrière enrichissante dans le domaine qui vous passionne')
+@section('image', '/images/divers/slider_school.png')
 @section('content')
 
 <section class="hero-partial _1569">

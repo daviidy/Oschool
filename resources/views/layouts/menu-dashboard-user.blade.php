@@ -2,6 +2,7 @@
 
 <head>
     <title>@yield('title') | Oschool</title>
+    <meta name="og:image" content="/images/divers/user.jpg"/>
 
     <link rel="stylesheet" href="/css/dashboard-user/menu.css">
     <meta name="csrf-param" content="authenticity_token">

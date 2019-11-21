@@ -1,5 +1,5 @@
 @extends('layouts.menu-course-lecture')
-
+@section('image', '/images/lessons/images/image.png')
 @section('content')
 
 

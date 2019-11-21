@@ -14,6 +14,7 @@
 
 
   <title>@yield('title') | Oschool</title>
+  <meta name="og:image" content="@yield('image')"/>
   <meta name="description" content="@yield('description')">
 
   <style>

@@ -14,7 +14,8 @@ class Deliverable extends Model
                            'status',
                            'comment',
                            'project_id',
-                           'user_id'
+                           'user_id',
+                           'course_id'
                          ];
 
 
@@ -27,6 +28,17 @@ class Deliverable extends Model
       {
           return $this->belongsTo('App\Project');
       }
+
+
+      /**
+       * [users description]
+       * relationship one to many with Course model
+       * @return [array] [description]
+       */
+       public function course()
+       {
+           return $this->belongsTo('App\Course');
+       }
 
 
       //function for relationship between

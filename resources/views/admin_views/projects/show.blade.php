@@ -1,4 +1,5 @@
 @extends('layouts.menu-project')
+@section('image', $project->image)
 @section('content')
 
 <style media="screen">
@@ -322,6 +323,7 @@ a:focus{color:inherit;text-decoration:none;}
                   <input name="link" type="text" placeholder="https://exemple.drive.com" class="input input--withButton text-center">
                 <input type="hidden" name="project_id" value="{{$project->id}}">
                   <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                  <input type="hidden" name="course_id" value="{{$project->course->id}}">
                   <div class="button button--input"><i class="icon icon-copy" aria-hidden="true"></i></div>
                 </div>
               </div>
@@ -401,7 +403,7 @@ a:focus{color:inherit;text-decoration:none;}
 
                     <a target="_blank" href="{{$deliverable->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
                       <div class="module-progress-card__icon">
-                          <img src="https://lh3.googleusercontent.com/7nId5qqZMpCWyJRM7Ug8wiVAOaWOPlkIjnzHXHOdwZG2DA7jQ9ze8Mv4PnPiOCWYiZnKS6qwGffTR0gJuZlZb6_39ZExnkz7AAZfmL8" alt="Les opportunités qu'offre Internet">
+                          <img src="/images/divers/resource_icon.png" alt="Les opportunités qu'offre Internet">
                       </div>
                       <h4 class="module-progress-card__title">Le lien de votre projet</h4>
                     </a>
@@ -729,7 +731,7 @@ a:focus{color:inherit;text-decoration:none;}
               @foreach($project->resources as $resource)
               <a target="_blank" href="{{$resource->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
                   <div class="module-progress-card__icon">
-                      <img src="https://lh3.googleusercontent.com/7nId5qqZMpCWyJRM7Ug8wiVAOaWOPlkIjnzHXHOdwZG2DA7jQ9ze8Mv4PnPiOCWYiZnKS6qwGffTR0gJuZlZb6_39ZExnkz7AAZfmL8" alt="Les opportunités qu'offre Internet">
+                      <img src="/images/divers/resource_icon.png" alt="Les opportunités qu'offre Internet">
                   </div>
                   <h4 class="module-progress-card__title">{{$resource->title}}</h4>
 
@@ -752,7 +754,7 @@ a:focus{color:inherit;text-decoration:none;}
                     <div class="task-content">
                       <div class="task-cover">
                         <div class="coverWrapper--tasks">
-                          <div class="cover cover--tasks" style="background-image: url(&quot;https://assets.mindvalley.com/api/v1/assets/84331628-af90-47df-9a46-eacdc460fc85.jpg&quot;);"></div>
+                          <div class="cover cover--tasks" style="background-image: url(&quot;/images/divers/user.jpg&quot;);"></div>
                         </div>
                       </div>
 

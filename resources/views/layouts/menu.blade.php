@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>@yield('title') | Oschool</title>
+    <meta name="og:image" content="@yield('image')"/>
     <meta name="description" content="@yield('description')">
     <link rel="stylesheet" href="/css/school_homepage.css">
     <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">

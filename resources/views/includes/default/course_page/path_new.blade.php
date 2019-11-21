@@ -754,7 +754,7 @@ button,html [type=button]{-webkit-appearance:button;}
 
 
             <div class="course-hero-unenrolled__image">
-                <img src="https://lh3.googleusercontent.com/YVtfMqg7ScLXc4l7yNY96YymsaL7zH81YCgTP1F-kw0C8b12WkEwiNBZGLW4TGeqpm3foUsGAJtTwZx2HnS1BoQ=s0" alt="Obtenez la certification &quot;Principes de base du marketing numérique&quot;">
+                <img src="/images/courses/logos/{{$course->logo == 'image.jpg' ? 'default_path.png' : $course->logo}}" alt="Obtenez la certification &quot;Principes de base du marketing numérique&quot;">
             </div>
 
         </div>
