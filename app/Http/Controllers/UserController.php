@@ -136,11 +136,11 @@ class UserController extends Controller
     $validator = Validator::make($data, [
         'current_password' => 'required',
         'password' => 'required|same:password',
-        'password_confirmation' => 'required|same:password',     
+        'password_confirmation' => 'required|same:password',
     ], $messages);
 
     return $validator;
-    } 
+    }
 
     public function editPassword(Request $request)
     {
@@ -150,29 +150,29 @@ class UserController extends Controller
             $validator = $this->admin_credential_rules($request_data);
             if($validator->fails())
             {
-            return response()->json(array('error' => $validator->getMessageBag()->toArray()), 400);
+            return redirect()->back()->with('error', 'Le mot de passe de confirmation est incorrect');
             }
             else
-            {  
-            $current_password = Auth::User()->password;           
+            {
+            $current_password = Auth::User()->password;
             if(Hash::check($request_data['current_password'], $current_password))
-            {           
-                $user_id = Auth::User()->id;                       
+            {
+                $user_id = Auth::User()->id;
                 $obj_user = User::find($user_id);
                 $obj_user->password = Hash::make($request_data['password']);;
-                $obj_user->save(); 
+                $obj_user->save();
                 return redirect()->back()->with('status', 'La modification de votre mot de passe a effectuées');
             }
             else
-            {           
-                $error = array('current_password' => 'Please enter correct current password');
-                return response()->json(array('error' => $error), 400);   
+            {
+                $error = array('current_password' => 'Veuillez entrer le mot de passe actuel correct');
+                return redirect()->back()->with('error_current', 'Veuillez entrer le mot de passe actuel correct');
             }
-            }        
+            }
         }
         else
         {
             return redirect()->to('/');
-        }    
+        }
     }
 }
