@@ -58,19 +58,19 @@
             }
         </style>
         <div id="segment-event" type="hidden" value="Submit Home Page Hero Form"></div>
-        <div class="hero-div" style="background-image: url(/images/divers/oschool_51.png);">
+        <div class="hero-div" style="background-image: url(/images/divers/slider_home.png);">
             <div class="container hero-container">
                 <div class="row">
                     <div class="col-xs-12 vertically-align-contents-except-xs">
                         <div class="hero-text hero-text-left">
-                            <h1>Une meilleure façon d’apprendre !</h1>
-                            <h2>En partenariat avec des universités, nous nous engageons à rendre l’apprentissage possible pour tous et partout.<!--Faites vous accompagner par nos mentors pendant votre apprentissage et réalisez des projets professionnalisants.--></h2>
+                            <h1>Il est encore temps pour atteindre vos objectifs de formation avant la fin de cette année</h1>
+                            <h2>Tous nos parcours de formation sont à seulement 15.000 FCFA les 3 premiers mois !<!--Faites vous accompagner par nos mentors pendant votre apprentissage et réalisez des projets professionnalisants.--></h2>
                             <div class="input-container left">
                                 <!--div class="hidden redirect">/create-account</div>
                                 <div class="hidden iterable-event"></div>
                                 <div class="hidden iterable-campaign"></div>
                                 <input id="email-input" type="email" autofocus="autofocus" placeholder="Que voulez-vous apprendre"-->
-                                <a href="{{url('schools')}}"> <button id="email-submit-button" class="orange-button">Commencez</button></a>
+                                <a href="{{url('schools')}}"> <button id="email-submit-button" class="orange-button">Profitez de l'offre</button></a>
                                 <!--div class="hidden marketing-email-opt-in-container">
                                     <input class="marketing-email-opt-in-input" type="checkbox" name="opted-into-marketing-email">
                                     <label for="opted-into-marketing-email">J'accepte de recevoir des mises à jour de produit et de marketing de oschool</label>
@@ -612,49 +612,26 @@
                 <div class="homepage-slider">
                             <div class="item">
                                 <img class="big-image" src="/images/divers/dave_slider.jpg">
-                                <div class="text big-image-text">
-                                    <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
-                                    <p class="default-paragraph">David YAO, $1k in 1 Day Academy</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/lsfYuKBpSFOdaK4QQ3n2_homepage-featured-everytuesday.jpg">
 
                             </div>
                             <div class="item">
-                                <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/XKMKaKhXSniPF7Ok6xh3">
+                                <img class="big-image" src="/images/divers/feature1.png">
 
                             </div>
                             <div class="item">
-                                <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/HodQVq0YS7qSVCtXSNHK_homepage-featured-sketchmaster.jpg">
+                                <img class="big-image" src="/images/divers/feature2.png">
+
+                            </div>
+                            <div class="item">
+                                <img class="big-image" src="/images/divers/os-2.png">
 
                             </div>
                             <div class="item">
                                 <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IC5in4HlQB23O5MEj7nu">
 
                             </div>
-                            <div class="item">
-                                <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
 
-                            </div>
-                            <div class="item ">
-                                <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/lsfYuKBpSFOdaK4QQ3n2_homepage-featured-everytuesday.jpg">
 
-                            </div>
-                            <div class="item ">
-                                <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/XKMKaKhXSniPF7Ok6xh3">
-                                <div class="text big-image-text">
-                                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IgamM6IzTySKfgHAeNUV">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/HodQVq0YS7qSVCtXSNHK_homepage-featured-sketchmaster.jpg">
-
-                            </div>
-                            <div class="item">
-                                <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IC5in4HlQB23O5MEj7nu">
-
-                            </div>
                             {{-- <div class="item">
                                 <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
                                 <div class="text big-image-text">
@@ -669,8 +646,8 @@
             </div>
             <div class="small-text">
                 <div class="text active">
-                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/UQ2vDQcTQq88XYQlisDg">
-                    <p class="default-paragraph">Pat Flynn, Smart Passive Income</p>
+                    <img class="person-image" src="/images/divers/dave_slider.jpg">
+                    <p class="default-paragraph">David YAO, Entrepreneur et codeur</p>
                 </div>
                 <div class="text">
                     <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
