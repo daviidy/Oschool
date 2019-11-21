@@ -78,6 +78,25 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 .btn-danger-g:active{color:#fff;background-color:#c9302c;border-color:#ac2925;}
 .btn-danger-g:active:focus,.btn-danger:active:hover{color:#fff;background-color:#ac2925;border-color:#761c19;}
 .btn-danger-g:active{background-image:none;}
+
+
+.btn-blue-g{color:#fff;background-color:#0086B6;border-color:#0086B6;}
+.btn-blue-g:focus{color:#fff;background-color:#0086B6;border-color:#761c19;}
+.btn-blue-g:hover{color:#fff;background-color:#0a568c;border-color:#0a568c;}
+.btn-blue-g:active{color:#fff;background-color:#c9302c;border-color:#ac2925;}
+.btn-blue-g:active:focus,.btn-danger:active:hover{color:#fff;background-color:#ac2925;border-color:#761c19;}
+.btn-blue-g:active{background-image:none;}
+
+.btn-black-g{color:#fff;background-color:#545454;border-color:#545454;}
+.btn-black-g:focus{color:#fff;background-color:#545454;border-color:#545454;}
+.btn-black-g:hover{color:#fff;background-color:#2B2B2B;border-color:#2B2B2B;}
+.btn-black-g:active{color:#fff;background-color:#c9302c;border-color:#ac2925;}
+.btn-black-g:active:focus,.btn-danger:active:hover{color:#fff;background-color:#ac2925;border-color:#761c19;}
+.btn-black-g:active{background-image:none;}
+
+
+
+
 .btn-lg{padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px;}
 .btn-block{display:block;width:100%;}
 .btn-block+.btn-block{margin-top:5px;}
@@ -95,6 +114,12 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 /*! CSS Used fontfaces */
 @font-face{font-family:'FontAwesome';src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0');src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot#iefix&v=4.7.0') format('embedded-opentype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}
 </style>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
   <section class="sign-up-form account-form">
 
     <div class="form-aligner">
@@ -190,8 +215,8 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 
                     <a href="{{ url('login/facebook') }}" class="btn btn-primary btn-lg btn-block"><i class="fa fa-facebook"></i> {{ __('Connexion avec ') }}<b>Facebook</b></a>
                     <a href="{{ url('login/gmail') }}" class="btn btn-danger-g btn-lg btn-block btn-g"><i class="fa fa-google"></i> {{__('Connexion avec ') }} <b>Google</b></a>
-                    <a href="{{ url('login/linkedin') }}" class="btn btn-danger-g btn-lg btn-block btn-g"><i class="fa fa-linkedin"></i> {{__('Connexion avec ') }} <b>Linkedin</b></a>
-                    <a href="{{ url('login/github') }}" class="btn btn-danger-g btn-lg btn-block btn-g"><i class="fa fa-github"></i> {{__('Connexion avec ') }} <b>Github</b></a>
+                    <a href="{{ url('login/linkedin') }}" class="btn btn-blue-g btn-lg btn-block btn-g"><i class="fa fa-linkedin"></i> {{__('Connexion avec ') }} <b>Linkedin</b></a>
+                    <a href="{{ url('login/github') }}" class="btn btn-black-g btn-lg btn-block btn-g"><i class="fa fa-github"></i> {{__('Connexion avec ') }} <b>Github</b></a>
                   </div>
 
                 <div id="right-box-spinner" class="right-box-spinner create-form-spinner hidden"></div>
