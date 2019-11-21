@@ -908,15 +908,7 @@ hr{border-color:#ececec;}
           <h1>Faire progresser les compétences</h1>
 
           <h2>Apprendre et améliorer les compétences dans les domaines des affaires, de la technologie, du design, etc. Enseigné par des experts pour aider votre main-d'œuvre à faire face à la situation.</h2>
-        <div class="input-container center">
-          <div class="hidden redirect">https://teachable.com/create-account?src=examples-form</div>
-          <div class="hidden iterable-event"></div>
-          <div class="hidden iterable-campaign"></div>
-          <input id="email-input" type="email" autofocus="autofocus" placeholder="Email address">
-          <button id="email-submit-button" class="orange-button">Inscrivez-vous</button>
-          <div>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
