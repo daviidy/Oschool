@@ -1,4 +1,5 @@
 @extends('layouts.menu-project')
+@section('title', $project->title.' - '.$project->course->name)
 @section('image', $project->image)
 @section('content')
 
