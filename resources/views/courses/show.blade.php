@@ -12,12 +12,7 @@ button{color:inherit;}
 button{overflow:visible;}
 button{-webkit-appearance:button;cursor:pointer;}
 button::-moz-focus-inner{border:0;padding:0;}
-.centre{
-  position: absolute;
-    margin: 0 auto;
-    left: 50%;
-    right: 50%;
-}
+
 @media print{
 
 *{text-shadow:none!important;color:#000!important;background:transparent!important;box-shadow:none!important;}
@@ -760,7 +755,7 @@ button{line-height:inherit;}
   <section class="pricing py-5" id="price">
     <div class="container">
       <h1 class="title-price">Nos offres de prix</h1>
-      <div class="row">
+      <div class="row centre">
         <!-- Free Tier -->
         @foreach($course->pricings as $pricing)
         <div class="col-lg-4">
