@@ -228,6 +228,10 @@ Route::get('/thank-you', function () {
 });
 
 
+//make user subscribe for free
+Route::post('/subscribeForFree', 'PurchaseController@subscribeForFree');
+
+
 //validate a lesson
 Route::post('/completeLesson', 'LessonController@completeLesson');
 

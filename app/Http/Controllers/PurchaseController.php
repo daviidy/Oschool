@@ -58,6 +58,22 @@ class PurchaseController extends Controller
         //vers cinetpay pour récuperer la signature
         //et le transid
         if (Auth::check()) {
+
+            if ($pricing->type == "Free") {
+                $purchase=Purchase::create([
+                                  'price' => 0,
+                                  'date' => Carbon::now(),
+                                  'user_id' => Auth::user()->id,
+                                  'pricing_id' => $pricing->id,
+                                  'course_id' => $pricing->course_id,
+                                ]);
+
+                return view('pricings.free',[
+                                             'purchase' => $purchase,
+                                             'pricing' => $pricing,
+                                           ]);
+            }
+
             $price = $pricing->price;
 
             function postData($params, $url)
@@ -321,6 +337,84 @@ class PurchaseController extends Controller
 
 
     } //fin fonction notify
+
+
+    //make user subscribe for free
+    public function subscribeForFree(Request $request)
+    {
+        //on récupère le purchase du user
+        $purchase = Purchase::find($request->purchase_id);
+
+        //on met le status de l'achat à jour
+          $purchase->status = 'Validé';
+          $purchase->save();
+
+        //si l'étudiant n'est pas déjà
+        //inscrit a la course en question
+        //on l'inscrit
+
+          $course = Course::where('name', $purchase->pricing->course->name)->first();
+
+          if (Auth::user()->courses->contains($course->id)) {
+
+              //envoi mail utilisateur
+               Mail::send('mails.users.purchases.success', ['purchase' => $purchase], function($message) use($purchase){
+                 $message->to($purchase->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre paiement a été effectué avec succès !');
+                 $message->from('eventsoschool@gmail.com', 'Oschool');
+               });
+
+               $admins = User::where('type1', 'admin')->orderby('id', 'asc')->paginate(1000);
+
+               foreach ($admins as $admin) {
+                 //envoi mail admin
+                 Mail::send('mails.admins.purchases.success', ['purchase' => $purchase], function($message) use($admin){
+                   $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande a été traitée avec succès');
+                   $message->from('eventsoschool@gmail.com', 'Oschool');
+                 });
+               }
+
+
+
+
+              }
+
+
+
+          else {
+
+              Auth::user()->courses()->attach($course);
+
+              //envoi mail utilisateur
+               Mail::send('mails.users.purchases.success', ['purchase' => $purchase], function($message) use($purchase){
+                 $message->to($purchase->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre paiement a été effectué avec succès !');
+                 $message->from('eventsoschool@gmail.com', 'Oschool');
+               });
+
+               $admins = User::where('type1', 'admin')->orderby('id', 'asc')->paginate(1000);
+
+               foreach ($admins as $admin) {
+                 //envoi mail admin
+                 Mail::send('mails.admins.purchases.success', ['purchase' => $purchase], function($message) use($admin){
+                   $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande a été traitée avec succès');
+                   $message->from('eventsoschool@gmail.com', 'Oschool');
+                 });
+               }
+
+
+
+        }
+
+        //si ce n'est pas encore fait
+        //on inscrit l'utilsateur dans l'école
+        $school = School::where('id', $course->school_id)->first();
+        $in_school = Auth::user()->schools->contains($course->school_id);
+        if (!$in_school) {
+            Auth::user()->schools()->attach($school);
+        }
+
+        return redirect('/course/enrolled/'.$course->slug);
+
+    }
 
 
 
