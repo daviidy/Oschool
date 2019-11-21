@@ -117,7 +117,24 @@ class CouponController extends Controller
             return redirect('/course/'.$course->slug.'/checkout/'.$pricing->id)->with('status', 'Coupon Invalide');
         }
         else {
-            $price = ($pricing->price * $coupon->value)/100;
+            $discount_value = ($pricing->price * $coupon->value)/100;
+            $price = $pricing->price - $discount_value;
+            if ($price == 0) {
+
+                $purchase=Purchase::create([
+                                  'price' => 0,
+                                  'date' => Carbon::now(),
+                                  'user_id' => Auth::user()->id,
+                                  'pricing_id' => $pricing->id,
+                                  'course_id' => $pricing->course_id,
+                                ]);
+
+                return view('pricings.free',[
+                                             'purchase' => $purchase,
+                                             'pricing' => $pricing,
+                                           ]);
+
+            }
 
             function postData($params, $url)
                 {
