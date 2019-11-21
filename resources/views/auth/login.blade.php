@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('content')
- 
+
 
   <style>
     /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
@@ -44,10 +44,10 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 .login-form a{color:#5cb85c;}
 /*! CSS Used fontfaces */
 @font-face{font-family:'FontAwesome';src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0');src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot#iefix&v=4.7.0') format('embedded-opentype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}
-  
-  
-  
-  
+
+
+
+
   </style>
 
 
@@ -156,13 +156,13 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
                                         {{ __('Mot de passe oublié?') }}
                                     </a>
                     @endif
-                     
-                    
+
+
                   </div>
 
-                  
-  
-  
+
+
+
 
                   <div class="account-form-button-container">
                     <br>
@@ -174,15 +174,15 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
                 <p style="text-align: center;"> <span>Ou</span></p>
 
                   <div style="text-align: center;">
-                  
+
                     <br>
-  
+
                     {{-- <button class="loginBtn loginBtn--facebook">
                       <a class="btn btn-link" href="{{ url('login/facebook') }}">
                       <span class="_8jan">{{ __('Connexion avec facebook') }}</span>
                     </a>
                     </button> --}}
-  
+
                     {{-- <button class="loginBtn loginBtn--google">
                       <a class="btn btn-link" href="{{ url('login/gmail') }}">
                       <span class="_8jan">{{ __('Connexion avec gmail') }}</span>
@@ -190,8 +190,10 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 
                     <a href="{{ url('login/facebook') }}" class="btn btn-primary btn-lg btn-block"><i class="fa fa-facebook"></i> {{ __('Connexion avec ') }}<b>Facebook</b></a>
                     <a href="{{ url('login/gmail') }}" class="btn btn-danger-g btn-lg btn-block btn-g"><i class="fa fa-google"></i> {{__('Connexion avec ') }} <b>Google</b></a>
+                    <a href="{{ url('login/linkedin') }}" class="btn btn-danger-g btn-lg btn-block btn-g"><i class="fa fa-linkedin"></i> {{__('Connexion avec ') }} <b>Linkedin</b></a>
+                    <a href="{{ url('login/github') }}" class="btn btn-danger-g btn-lg btn-block btn-g"><i class="fa fa-github"></i> {{__('Connexion avec ') }} <b>Github</b></a>
                   </div>
-                    
+
                 <div id="right-box-spinner" class="right-box-spinner create-form-spinner hidden"></div>
               </div>
             </div>
