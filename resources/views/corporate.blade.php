@@ -1,5 +1,6 @@
 @extends('layouts.menu')
-
+@section('title', 'La destination de l\'apprentissage en milieu de travail')
+@section('description', 'Apprendre et améliorer les compétences dans les domaines des affaires, de la technologie, du design, etc. Enseigné par des experts pour aider votre main-d\'œuvre à faire face à la situation.')
 @section('content')
 
 <style media="screen">
@@ -898,7 +899,7 @@ hr{border-color:#ececec;}
 
 </style>
 <div id="segment-event" type="hidden" value=""></div>
-<div class="hero-div" style="background-image: url(https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/vNCMiPpT6qrvVvHcJUwQ);">
+<div class="hero-div" style="background-image: url(/images/divers/corporate.png);">
 <div class="container hero-container">
   <div class="row">
     <div class="col-xs-12 vertically-align-contents-except-xs">
@@ -907,15 +908,7 @@ hr{border-color:#ececec;}
           <h1>Faire progresser les compétences</h1>
 
           <h2>Apprendre et améliorer les compétences dans les domaines des affaires, de la technologie, du design, etc. Enseigné par des experts pour aider votre main-d'œuvre à faire face à la situation.</h2>
-        <div class="input-container center">
-          <div class="hidden redirect">https://teachable.com/create-account?src=examples-form</div>
-          <div class="hidden iterable-event"></div>
-          <div class="hidden iterable-campaign"></div>
-          <input id="email-input" type="email" autofocus="autofocus" placeholder="Email address">
-          <button id="email-submit-button" class="orange-button">Inscrivez-vous</button>
-          <div>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>

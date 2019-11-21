@@ -52,7 +52,7 @@
 }
 </style>
 <div id="segment-event" type="hidden" value=""></div>
-<div class="hero-div" style="background-image: url(https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/vNCMiPpT6qrvVvHcJUwQ);">
+<div class="hero-div" style="background-image: url(/images/divers/slider_school.png);">
 <div class="container hero-container">
   <div class="row">
     <div class="col-xs-12 vertically-align-contents-except-xs">
