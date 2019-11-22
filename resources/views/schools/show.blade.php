@@ -150,7 +150,7 @@
           </div>
         </div>
         <div class="row">
-          @if($school->courses)
+          @if(count($school->courses) > 0)
             @foreach($school->courses as $course)
                 @if($course->type == 'course')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
@@ -169,18 +169,12 @@
           @endif
           @endforeach
           @else
-          <div class="col-xs-12 col-sm-6 col-md-4 ">
-            <a href="http://jessicasprague.teachable.com?src=teachable-examples" target="_blank" rel="noopener noreferrer">
-              <div class="school-card">
-                <div class="image" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/u9ifiSUyTIOJBWXuCbjm_examples-scrapbooking.jpg);"></div>
-                <div class="bottom" data-mh="school-cards" style="height: 280px;">
-                  <h1>Aucun cours</h1>
-                  <p class="default-paragraph">Turn your memories into beautifully designed digital scrapbooks with Photoshop</p>
-                  <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/6Owd2hlXSIuRnIvjZ6Ft">
-                  <p class="default-paragraph">Jessica Sprague</p>
-                </div>
-              </div>
-            </a>
+          <div class="row">
+            <div style="text-align: center;" class="col-xs-12">
+              <h1 style="margin-top: 2rem;" class="default-header">Aucun cours pour le moment pour cette école</h1>
+              <img style="margin: auto" width="300" src="/images/divers/rocket.png" alt="">
+              <p>Si vous avez des souhaits concernant un cours donné, n'hésitez pas à cliquer sur l'icone de messagerie en bas à droite de votre écran, et nous en parler</p>
+            </div>
           </div>
           @endif
 
@@ -236,7 +230,7 @@
           </div>
         </div>
         <div class="row">
-          @if($school->courses)
+          @if(count($school->courses) > 0)
             @foreach($school->courses as $course)
                 @if($course->type == 'path')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
@@ -255,18 +249,12 @@
             @endif
           @endforeach
           @else
-          <div class="col-xs-12 col-sm-6 col-md-4 ">
-            <a href="http://jessicasprague.teachable.com?src=teachable-examples" target="_blank" rel="noopener noreferrer">
-              <div class="school-card">
-                <div class="image" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/u9ifiSUyTIOJBWXuCbjm_examples-scrapbooking.jpg);"></div>
-                <div class="bottom" data-mh="school-cards" style="height: 280px;">
-                  <h1>Aucun cours</h1>
-                  <p class="default-paragraph">Turn your memories into beautifully designed digital scrapbooks with Photoshop</p>
-                  <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/6Owd2hlXSIuRnIvjZ6Ft">
-                  <p class="default-paragraph">Jessica Sprague</p>
-                </div>
-              </div>
-            </a>
+          <div class="row">
+            <div style="text-align: center;" class="col-xs-12">
+              <h1 style="margin-top: 2rem;" class="default-header">Aucun cours pour le moment pour cette école</h1>
+              <img style="margin: auto" width="300" src="/images/divers/rocket.png" alt="">
+              <p>Si vous avez des souhaits concernant un cours donné, n'hésitez pas à cliquer sur l'icone de messagerie en bas à droite de votre écran, et nous en parler</p>
+            </div>
           </div>
           @endif
 
@@ -323,7 +311,7 @@
           </div>
         </div>
         <div class="row">
-          @if($school->courses)
+          @if(count($school->courses) > 0)
             @foreach($school->courses as $course)
                 @if($course->type == 'bootcamp')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
@@ -342,18 +330,12 @@
             @endif
           @endforeach
           @else
-          <div class="col-xs-12 col-sm-6 col-md-4 ">
-            <a href="http://jessicasprague.teachable.com?src=teachable-examples" target="_blank" rel="noopener noreferrer">
-              <div class="school-card">
-                <div class="image" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/u9ifiSUyTIOJBWXuCbjm_examples-scrapbooking.jpg);"></div>
-                <div class="bottom" data-mh="school-cards" style="height: 280px;">
-                  <h1>Aucun cours</h1>
-                  <p class="default-paragraph">Turn your memories into beautifully designed digital scrapbooks with Photoshop</p>
-                  <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/6Owd2hlXSIuRnIvjZ6Ft">
-                  <p class="default-paragraph">Jessica Sprague</p>
-                </div>
-              </div>
-            </a>
+          <div class="row">
+            <div style="text-align: center;" class="col-xs-12">
+              <h1 style="margin-top: 2rem;" class="default-header">Aucun cours pour le moment pour cette école</h1>
+              <img style="margin: auto" width="300" src="/images/divers/rocket.png" alt="">
+              <p>Si vous avez des souhaits concernant un cours donné, n'hésitez pas à cliquer sur l'icone de messagerie en bas à droite de votre écran, et nous en parler</p>
+            </div>
           </div>
           @endif
 
