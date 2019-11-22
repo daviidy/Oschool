@@ -407,7 +407,7 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
                 
                 <br>
 
-                <p style="text-align: center;"> <span>Contenez-vous avec </span></p>
+                <p style="text-align: center;"> <span>Contenez-vous avec <i class="fa fa-arrow-down"></i> </span></p>
 
                   <div style="text-align: center;">
 
