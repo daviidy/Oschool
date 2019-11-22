@@ -159,7 +159,7 @@
                 <div class="image" style="background-image: url(/images/courses/logos/{{$course->logo}});"></div>
                 <div class="bottom" data-mh="school-cards" style="height: 280px;">
                   <h1>{{$course->name}}</h1>
-                  <p class="default-paragraph">{{ str_limit($course->subtitle, $limit = 10  0, $end = '...') }}</p>
+                  <p class="default-paragraph">{{ str_limit($course->subtitle, $limit = 100, $end = '...') }}</p>
                   <img src="/images/authors/{{$course->author->image}}">
                   <p class="default-paragraph">{{$course->author->full_name}}</p>
                 </div>
@@ -245,7 +245,7 @@
                 <div class="image" style="background-image: url(/images/courses/logos/{{$course->logo}});"></div>
                 <div class="bottom" data-mh="school-cards" style="height: 280px;">
                   <h1>{{$course->name}}</h1>
-                  <p class="default-paragraph">{{$course->subtitle}}</p>
+                  <p class="default-paragraph">{{ str_limit($course->subtitle, $limit = 100, $end = '...') }}</p>
                   <img src="/images/authors/{{$course->author->image}}">
                   <p class="default-paragraph">{{$course->author->full_name}}</p>
                 </div>
@@ -332,7 +332,7 @@
                 <div class="image" style="background-image: url(/images/courses/logos/{{$course->logo}});"></div>
                 <div class="bottom" data-mh="school-cards" style="height: 280px;">
                   <h1>{{$course->name}}</h1>
-                  <p class="default-paragraph">{{$course->subtitle}}</p>
+                  <p class="default-paragraph">{{ str_limit($course->subtitle, $limit = 100, $end = '...') }}</p>
                   <img src="/images/authors/{{$course->author->image}}">
                   <p class="default-paragraph">{{$course->author->full_name}}</p>
                 </div>
