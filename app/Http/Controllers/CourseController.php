@@ -107,7 +107,7 @@ class CourseController extends Controller
         if ($course->type == 'course') {
             return view('courses.show', ['course' => $course]);
         }
-        elseif ($course->type == 'path') {
+        elseif ($course->type == 'path' || $course->type == 'bootcamp') {
             return view('paths.show', ['course' => $course]);
         }
 
@@ -290,7 +290,7 @@ class CourseController extends Controller
              if ($course->type == "course") {
                  return view('admin_views.courses.curriculum', ['school' => $school, 'course' => $course]);
              }
-             elseif ($course->type == "path") {
+             elseif ($course->type == "path" || $course->type == "bootcamp") {
                  return view('admin_views.paths.curriculum', ['school' => $school, 'course' => $course]);
              }
 

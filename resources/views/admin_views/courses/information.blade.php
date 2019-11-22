@@ -504,13 +504,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div class="muted">en tant que visiteur</div>
                 </a>
                 @endif
-                @if($course->type == 'path')
+                @if($course->type == 'path' || $course->type == 'bootcamp')
                 <a ng-click="cancel()" href="{{ route('path.slug', $course->slug) }}" target="_blank" id="test-id-preview-sales-page"
                     class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-visitor.jpg"><i class="fa fa-external-link"></i><br><strong>Page de vente&nbsp;</strong>
                       <div class="muted">en tant que visiteur</div>
                   </a>
                     @endif
             </div>
+            @if($course->type == 'course')
             <div class="tch-section-content tch-thumbnail-link-wrapper col-lg-3 col-md-5 col-sm-5 col-xs-5 shift-right">
               <a ng-click="cancel()" href="/course/enrolled/{{$course->slug}}" target="_blank" id="test-id-preview-curriculum-btn"
                   class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-enrolled-student.jpg"><i class="fa fa-external-link"></i>
@@ -518,6 +519,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <div class="muted">en tant qu'étudiant inscrit</div>
                 </a>
             </div>
+            @endif
         </div>
     </ng-include>
     <!---->

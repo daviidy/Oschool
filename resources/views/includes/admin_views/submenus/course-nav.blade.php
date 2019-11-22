@@ -10,7 +10,7 @@
             @if($course->type == 'course')
             <div class="row"><a href="{{ route('course.slug', $course->slug) }}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
             @endif
-            @if($course->type == 'path')
+            @if($course->type == 'path' || $course->type == 'bootcamp')
             <div class="row"><a href="{{ route('path.slug', $course->slug) }}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
             @endif
         </div>
@@ -65,7 +65,7 @@
     </li>
     @endif
 
-    @if($course->type == 'path')
+    @if($course->type == 'path' || $course->type == 'bootcamp')
     <li what="nav item" ui-sref-active="active"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Curriculum"
       sref="admin.courses.course.curriculum" onboarding-tooltip-if="course.has_published_lecture == false &amp;&amp; course.bundled_courses_count == 0" onboarding-tooltip-text="Create and publish at least one lecture to complete this step" class="">
@@ -129,18 +129,20 @@
         <!---->
         <!---->
     </li>
+    @if($course->type == 'path' || $course->type == 'bootcamp')
     <li what="nav item" ui-sref-active="active"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Drip"
       sref="admin.courses.course.drip">
-  <!----><a what="link" ui-sref="admin.courses.course.drip" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/deliverables" class="" style="">
+  <!----><a  href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/deliverables" class="" style="">
             <!---->
             <!---->
             <!---->
-            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Traveau</span></a>
+            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Travaux</span></a>
         <!---->
         <!---->
         <!---->
     </li>
+    @endif
     <!---->
     <li what="nav item" ui-sref-active="active" style="display:none;"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
@@ -211,7 +213,7 @@
     </li>
     <!---->
     <!---->
-    <li what="nav item" ui-sref-active="active"
+    <li style="display: none;" what="nav item" ui-sref-active="active"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
       ng-if="permissions.can('manage_certificates') || permissions.can('view_gated_native_certificates')" text="Certificates" sref="admin.courses.course.certificates.index" label="" minimal="true" class="">
         <!----><a what="link" ui-sref="admin.courses.course.certificates.index" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/courses/627895/certificates"
