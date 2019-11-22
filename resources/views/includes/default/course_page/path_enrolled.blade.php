@@ -570,14 +570,14 @@ button.btn{border:none;}
                 <div class="col col--4-12 col--lg-5-12 col--md-12-12 col--sm-12-12 course-hero-enrolled__details">
                     <div class="cols">
                         <div class="col--6-12 col--md-12-12 col--sm-12-12 course-hero-enrolled__progress">
-                            <p class="course-hero-enrolled__subheader">Progression dans le cours</p>
+                            <p class="course-hero-enrolled__subheader">Progression dans le parcours</p>
 
                             <div style="background-color: #fff; box-shadow: none;" class="progress">
                                 <svg viewBox="0 0 36 36" class="progress__container">
-                                    <path class="progress__circle progress__circle--full" d="M18 2.0845
+                                    <path class="progress__circle {{count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) == count($course->projects) ? 'progress__circle--full' : ''}}" d="M18 2.0845
             a 15.9155 15.9155 0 0 1 0 31.831
             a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-                                    <g stroke-dasharray="100, 100">
+                                    <g stroke-dasharray="{{number_format((count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}, 100">
 
 
                                         <path class="progress__bar  progress__bar--no-animate" d="M18 2.0845
@@ -588,11 +588,9 @@ button.btn{border:none;}
 
 
                                     </g>
-                                    <text x="18" y="20.35" class="progress__text
+                                    <text x="18" y="20.35" class="progress__text {{count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) == count($course->projects) ? 'progress__text--white' : ''}}">
 
-             progress__text--white">
-
-                                        100%
+                                        {{number_format((count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100,2,",",".")}}%
 
                                     </text>
                                 </svg>
@@ -600,27 +598,16 @@ button.btn{border:none;}
 
                         </div>
                         <div class="col--6-12 col--md-12-12 col--sm-12-12 about-this-course">
-                            <p class="course-hero-enrolled__subheader">Détails du cours</p>
+                            <p class="course-hero-enrolled__subheader">Détails du parcours</p>
 
 
 
                             <div class="about-this-course__detail">
                                 <span class="about-this-course__detail__icon-container">
                                     <i class="material-icons">reorder</i>
-                                    <span>Module(s)&nbsp;: {{count($course->projects)}}</span>
+                                    <span>Projet(s)&nbsp;: {{count($course->projects)}}</span>
                                 </span>
-                                <span class="about-this-course__detail__icon-container">
-                                    <i class="material-icons">access_time</i>
-                                    <span>Heures&nbsp;: 40</span>
-                                </span>
-                                <span class="about-this-course__detail__icon-container">
-                                    <img src="/static/img/icons/Level-Beginner.svg" class="" role="presentation" alt="">
-                                    <span>Débutant</span>
-                                </span>
-                                <span class="about-this-course__detail__icon-container">
-                                    <img src="/static/img/icons/Free.svg" class="" role="presentation" alt="">
-                                    <span>Gratuit</span>
-                                </span>
+
                             </div>
                         </div>
                     </div>
@@ -633,6 +620,7 @@ button.btn{border:none;}
 
                             <div class="cert-validation-box ng-scope" myg-validate-certificate="" myg-status-id="certfication_completed" student="" xsrf-token="" is-validation-certificate-feature-active="true" name-has-been-validated="true"
                               assessment-passed="true">
+                              @if(count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) == count($course->projects))
                                 <div class="cert-validation-box__main">
                                     <span class="cert-validation-box__sub-header">Étape suivante</span>
                                     <span ng-show="!valCertCtrl.showValidationNameForm" class="" aria-hidden="false">
@@ -653,65 +641,14 @@ button.btn{border:none;}
 
                                         </div>
                                     </span>
-                                    <span ng-show="valCertCtrl.showValidationNameForm" class="ng-hide" aria-hidden="true">
-                                        <h5 class="cert-validation-box__title">Félicitations, vous avez réussi l'examen&nbsp;!</h5>
-                                        <p class="cert-validation-box__description">Veuillez confirmer que vous souhaitez afficher le nom ci-dessous sur votre certificat.</p>
-                                        <form name="validateForm" class="ng-pristine ng-invalid ng-invalid-required">
-                                            <div class="cert-validation-box__input-wrapper">
-                                                <md-input-container class="">
-                                                    <label for="firstname" ng-class="{'md-no-float': validateForm.firstname.$error}" class="md-no-float">Prénom</label>
-                                                    <input type="text" id="firstname" name="firstname" md-no-asterisk="" required="" ng-model="valCertCtrl.student.name" class="ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
-                                                      aria-invalid="true">
-                                                    <div class="md-errors-spacer"></div>
-                                                    <div ng-messages="validateForm.firstname.$error" class="md-input-messages-animation md-auto-hide ng-active" aria-live="assertive">
-                                                        <!-- ngMessage: required -->
-                                                        <div ng-message="required" class="md-input-message-animation ng-scope"></div>
-                                                    </div>
-                                                </md-input-container>
 
-                                                <md-input-container class="">
-                                                    <label for="lastname" ng-class="{'md-no-float': validateForm.lastname.$error}" class="md-no-float">Nom</label>
-                                                    <input type="text" id="lastname" name="lastname" required="" md-no-asterisk="" ng-model="valCertCtrl.student.lastName"
-                                                      class="ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required" aria-invalid="true">
-                                                    <div class="md-errors-spacer"></div>
-                                                    <div ng-messages="validateForm.lastname.$error" class="md-input-messages-animation md-auto-hide ng-active" aria-live="assertive">
-                                                        <!-- ngMessage: required -->
-                                                        <div ng-message="required" class="md-input-message-animation ng-scope"></div>
-                                                    </div>
-                                                </md-input-container>
-                                            </div>
-                                            <button class="btn btn--primary" ng-click="valCertCtrl.validateName()">Confirmer le nom</button>
-                                        </form>
-                                    </span>
                                 </div>
-                                <div class="cert-validation-box__progress">
-                                    <span class="cert-validation-box__sub-header">Progression dans le cours</span>
-                                    <div class="progress">
-                                        <svg viewBox="0 0 36 36" class="progress__container">
-                                            <path class="progress__circle progress__circle--full" d="M18 2.0845
-            a 15.9155 15.9155 0 0 1 0 31.831
-            a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-                                            <g stroke-dasharray="100, 100">
-
-
-                                                <path class="progress__bar  progress__bar--no-animate" d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-
-
-
-
-                                            </g>
-                                            <text x="18" y="20.35" class="progress__text
-
-             progress__text--white">
-
-                                                100%
-
-                                            </text>
-                                        </svg>
-                                    </div>
+                                @else
+                                <div class="course-hero-unenrolled__cta" data-gtm-tag="start-course sign-in">
+                                    <a class="btn btn--primary" enroll-link="">Commencer le cours</a>
                                 </div>
+                                @endif
+
                             </div>
 
                         </div>
@@ -795,9 +732,10 @@ button.btn{border:none;}
 
                     <a href="{{$resource->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
                         <div class="module-progress-card__icon">
-                            <img src="https://lh3.googleusercontent.com/7nId5qqZMpCWyJRM7Ug8wiVAOaWOPlkIjnzHXHOdwZG2DA7jQ9ze8Mv4PnPiOCWYiZnKS6qwGffTR0gJuZlZb6_39ZExnkz7AAZfmL8" alt="Les opportunités qu'offre Internet">
+                            <img src="/images/divers/resource_icon.png" alt="{{$resource->title}}">
                         </div>
                         <h4 class="module-progress-card__title">{{$resource->title}}</h4>
+                        <!--
                         <p class="module-progress-card__duration">
                             <i class="material-icons">access_time</i><span>15&nbsp;min</span>
                         </p>
@@ -805,10 +743,13 @@ button.btn{border:none;}
 
                             <i class="material-icons">check_circle</i><span class="module-progress-card__progress__completed">Terminé
 
-                            </span></div>
+                            </span>
+                        </div>
+                    -->
                         <div class="module-progress-card__cta">
                             <i class="material-icons">arrow_forward</i>
                         </div>
+
                     </a>
 
                     @endforeach

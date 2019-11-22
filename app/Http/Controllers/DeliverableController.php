@@ -48,7 +48,7 @@ class DeliverableController extends Controller
     {
         $deliverable = Deliverable::create($request->all());
         $deliverable->save();
-        return back()->with('success', 'Votre projet a été envoyer');
+        return back()->with('success', 'Votre projet a été envoyé');
     }
 
     /**
@@ -98,7 +98,7 @@ class DeliverableController extends Controller
         $deliverable = Deliverable::where('project_id', $request->project_id)->where('user_id', Auth::user()->id)->first();
         $deliverable->status = null;
         $deliverable->save();
-        return back()->with('success', 'Vos travaux ont bien ete resoumis');
+        return back()->with('success', 'Vos travaux ont bien été renvoyés');
     }
 
     /**
@@ -111,6 +111,6 @@ class DeliverableController extends Controller
     public function destroy(Deliverable $deliverable)
     {
         $deliverable->delete();
-        return back()->with('status', 'Delivrable supprimé');
+        return back()->with('status', 'Livrables supprimé');
     }
 }

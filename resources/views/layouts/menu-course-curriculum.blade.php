@@ -4,6 +4,8 @@
   <link rel="stylesheet" href="/css/course_curriculum.css">
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
   <style type="text/css">
+
+/*
     @charset "UTF-8";
 
     [ng\:cloak],
@@ -19,7 +21,7 @@
     ng\:form {
       display: block;
     }
-
+*/
     .ng-animate-shim {
       visibility: hidden;
     }
@@ -34,7 +36,7 @@
   <link href="/css/theme.css" rel="stylesheet" data-turbolinks-track="true">
   <title>{{$course->name}} | Oschool</title>
   <meta name="description" content="Programme du cours {{$course->name}}">
-
+  <meta name="og:image" content="@yield('image')"/>
   <meta name="asset_host" content="https://fedora.teachablecdn.com">
   <script src="https://fedora.teachablecdn.com/assets/application-1373410a4fe18258bccdd558991a1b1ed4c62390e2116938378a10bc0ff046cf.js" data-turbolinks-track="true"></script>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">

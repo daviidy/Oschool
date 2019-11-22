@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" href="/css/course_lecture.css">
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
-
+  <meta name="og:image" content="@yield('image')"/>
   <meta name="csrf-token" content="{!! csrf_token() !!}">
 
   <style type="text/css">

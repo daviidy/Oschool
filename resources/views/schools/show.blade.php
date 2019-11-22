@@ -1,5 +1,6 @@
 @extends('layouts.menu')
 @section('title', $school->name)
+@section('image', '/images/divers/slider_school.png')
 @section('description', $school->heading)
 @section('content')
 
@@ -101,89 +102,334 @@
 }
 </style>
 
-<div class="nav-partial nav-partial-1 active" style="display: block;">
-<section class="example-schools _1571">
-  <style>
-    ._1571 {
-      margin-bottom: 0px;
-    }
+<div id="tabs" class="border-bottom">
+    <ul class="nav-container nav-container_1570">
+        <li class="nav-item nav-link nav-link-1">
+          <a id="tab1">Cours</a>
+        </li>
+        <li class="nav-item nav-link nav-link-2">
+          <a id="tab2">Carrières</a>
+        </li>
 
-    @media (max-width: 991px) {
-      ._1571 {
-        margin-bottom: 0px;
-      }
-    }
+        <li class="nav-item nav-link nav-link-2">
+          <a id="tab3">Formations en salle</a>
+        </li>
 
-    @media (max-width: 767px) {
-      ._1571 {
-        margin-bottom: 0px;
-      }
-    }
-  </style>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h1 style="margin-top: 2rem;" class="default-header">A propos de {{$school->name}}</h1>
-        <p>{!!$school->description!!}</p>
+        <li class="nav-item nav-link nav-link-2">
+          <a id="tab4">A propos de cette école</a>
+        </li>
 
-        <h1 style="margin-top: 2rem;" class="default-header">Les formations diplômantes de {{$school->name}}</h1>
-        <p class="default-paragraph">Toutes ces formations sont professionnalisantes et font partie des meilleures sur le marché</p>
+    </ul>
+  </div>
 
-      </div>
-    </div>
-    <div class="row">
-      @if($school->courses)
-        @foreach($school->courses as $course)
-      <div class="col-xs-12 col-sm-6 col-md-4 ">
-        <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
-          <div class="school-card">
-            <div class="image" style="background-image: url(/images/courses/logos/{{$course->logo}});"></div>
-            <div class="bottom" data-mh="school-cards" style="height: 280px;">
-              <h1>{{$course->name}}</h1>
-              <p class="default-paragraph">{{$course->subtitle}}</p>
-              <img src="/images/authors/{{$course->author->image}}">
-              <p class="default-paragraph">{{$course->author->full_name}}</p>
-            </div>
+<div id="tab1C" class="nav-partial nav-partial-1 active" style="display: block;">
+    <section class="example-schools _1571">
+      <style>
+        ._1571 {
+          margin-bottom: 0px;
+        }
+
+        @media (max-width: 991px) {
+          ._1571 {
+            margin-bottom: 0px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          ._1571 {
+            margin-bottom: 0px;
+          }
+        }
+      </style>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 style="margin-top: 2rem;" class="default-header">Les cours de {{$school->name}}</h1>
+            <p class="default-paragraph">Toutes ces formations sont professionnalisantes et font partie des meilleures sur le marché</p>
+
           </div>
-        </a>
-      </div>
-      @endforeach
-      @else
-      <div class="col-xs-12 col-sm-6 col-md-4 ">
-        <a href="http://jessicasprague.teachable.com?src=teachable-examples" target="_blank" rel="noopener noreferrer">
-          <div class="school-card">
-            <div class="image" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/u9ifiSUyTIOJBWXuCbjm_examples-scrapbooking.jpg);"></div>
-            <div class="bottom" data-mh="school-cards" style="height: 280px;">
-              <h1>Aucun cours</h1>
-              <p class="default-paragraph">Turn your memories into beautifully designed digital scrapbooks with Photoshop</p>
-              <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/6Owd2hlXSIuRnIvjZ6Ft">
-              <p class="default-paragraph">Jessica Sprague</p>
-            </div>
+        </div>
+        <div class="row">
+          @if($school->courses)
+            @foreach($school->courses as $course)
+                @if($course->type == 'course')
+          <div class="col-xs-12 col-sm-6 col-md-4 ">
+            <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
+              <div class="school-card">
+                <div class="image" style="background-image: url(/images/courses/logos/{{$course->logo}});"></div>
+                <div class="bottom" data-mh="school-cards" style="height: 280px;">
+                  <h1>{{$course->name}}</h1>
+                  <p class="default-paragraph">{{$course->subtitle}}</p>
+                  <img src="/images/authors/{{$course->author->image}}">
+                  <p class="default-paragraph">{{$course->author->full_name}}</p>
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-      @endif
+          @endif
+          @endforeach
+          @else
+          <div class="col-xs-12 col-sm-6 col-md-4 ">
+            <a href="http://jessicasprague.teachable.com?src=teachable-examples" target="_blank" rel="noopener noreferrer">
+              <div class="school-card">
+                <div class="image" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/u9ifiSUyTIOJBWXuCbjm_examples-scrapbooking.jpg);"></div>
+                <div class="bottom" data-mh="school-cards" style="height: 280px;">
+                  <h1>Aucun cours</h1>
+                  <p class="default-paragraph">Turn your memories into beautifully designed digital scrapbooks with Photoshop</p>
+                  <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/6Owd2hlXSIuRnIvjZ6Ft">
+                  <p class="default-paragraph">Jessica Sprague</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          @endif
 
-    </div>
-    {{--
-    @include('includes.default.school_page.advantages')
-    --}}
-    <div class="row logos">
-      <div class="col-xs-12">
-        <p class="default-paragraph">Les leaders du marché utilisent Oschool pour la formation du personnel.</p>
-        <div class="clearfix company-logos">
-          <img src="/images/divers/cinetpay.png">
-          <img src="/images/divers/Epistrophe.jpg">
-          <img src="/images/divers/bora.png">
-          <img src="/images/divers/final.png">
-          <img src="/images/divers/LogoM-1.png">
-          <img src="/images/divers/Logo-1.png">
         </div>
 
+        {{--
+        @include('includes.default.school_page.advantages')
+        --}}
+        <div class="row logos">
+          <div class="col-xs-12">
+            <p class="default-paragraph">Les leaders du marché utilisent Oschool pour la formation du personnel.</p>
+            <div class="clearfix company-logos">
+              <img src="/images/divers/cinetpay.png">
+              <img src="/images/divers/Epistrophe.jpg">
+              <img src="/images/divers/bora.png">
+              <img src="/images/divers/final.png">
+              <img src="/images/divers/LogoM-1.png">
+              <img src="/images/divers/Logo-1.png">
+            </div>
+
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+</div>
+
+<div id="tab2C" class="nav-partial nav-partial-2" style="display: none;">
+    <section class="example-schools _1571">
+      <style>
+        ._1571 {
+          margin-bottom: 0px;
+        }
+
+        @media (max-width: 991px) {
+          ._1571 {
+            margin-bottom: 0px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          ._1571 {
+            margin-bottom: 0px;
+          }
+        }
+      </style>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 style="margin-top: 2rem;" class="default-header">Les formations diplômantes de {{$school->name}}</h1>
+            <p class="default-paragraph">Toutes ces formations sont professionnalisantes et font partie des meilleures sur le marché</p>
+
+          </div>
+        </div>
+        <div class="row">
+          @if($school->courses)
+            @foreach($school->courses as $course)
+                @if($course->type == 'path')
+          <div class="col-xs-12 col-sm-6 col-md-4 ">
+            <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
+              <div class="school-card">
+                <div class="image" style="background-image: url(/images/courses/logos/{{$course->logo}});"></div>
+                <div class="bottom" data-mh="school-cards" style="height: 280px;">
+                  <h1>{{$course->name}}</h1>
+                  <p class="default-paragraph">{{$course->subtitle}}</p>
+                  <img src="/images/authors/{{$course->author->image}}">
+                  <p class="default-paragraph">{{$course->author->full_name}}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+            @endif
+          @endforeach
+          @else
+          <div class="col-xs-12 col-sm-6 col-md-4 ">
+            <a href="http://jessicasprague.teachable.com?src=teachable-examples" target="_blank" rel="noopener noreferrer">
+              <div class="school-card">
+                <div class="image" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/u9ifiSUyTIOJBWXuCbjm_examples-scrapbooking.jpg);"></div>
+                <div class="bottom" data-mh="school-cards" style="height: 280px;">
+                  <h1>Aucun cours</h1>
+                  <p class="default-paragraph">Turn your memories into beautifully designed digital scrapbooks with Photoshop</p>
+                  <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/6Owd2hlXSIuRnIvjZ6Ft">
+                  <p class="default-paragraph">Jessica Sprague</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          @endif
+
+        </div>
+
+
+        {{--
+        @include('includes.default.school_page.advantages')
+        --}}
+        <div class="row logos">
+          <div class="col-xs-12">
+            <p class="default-paragraph">Les leaders du marché utilisent Oschool pour la formation du personnel.</p>
+            <div class="clearfix company-logos">
+              <img src="/images/divers/cinetpay.png">
+              <img src="/images/divers/Epistrophe.jpg">
+              <img src="/images/divers/bora.png">
+              <img src="/images/divers/final.png">
+              <img src="/images/divers/LogoM-1.png">
+              <img src="/images/divers/Logo-1.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+</div>
+
+<div id="tab3C" class="nav-partial nav-partial-3" style="display: none;">
+    <section class="example-schools _1571">
+      <style>
+        ._1571 {
+          margin-bottom: 0px;
+        }
+
+        @media (max-width: 991px) {
+          ._1571 {
+            margin-bottom: 0px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          ._1571 {
+            margin-bottom: 0px;
+          }
+        }
+      </style>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 style="margin-top: 2rem;" class="default-header">Les formations en salle de {{$school->name}}</h1>
+            <p class="default-paragraph">Toutes ces formations sont professionnalisantes et font partie des meilleures sur le marché</p>
+
+          </div>
+        </div>
+        <div class="row">
+          @if($school->courses)
+            @foreach($school->courses as $course)
+                @if($course->type == 'bootcamp')
+          <div class="col-xs-12 col-sm-6 col-md-4 ">
+            <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
+              <div class="school-card">
+                <div class="image" style="background-image: url(/images/courses/logos/{{$course->logo}});"></div>
+                <div class="bottom" data-mh="school-cards" style="height: 280px;">
+                  <h1>{{$course->name}}</h1>
+                  <p class="default-paragraph">{{$course->subtitle}}</p>
+                  <img src="/images/authors/{{$course->author->image}}">
+                  <p class="default-paragraph">{{$course->author->full_name}}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+            @endif
+          @endforeach
+          @else
+          <div class="col-xs-12 col-sm-6 col-md-4 ">
+            <a href="http://jessicasprague.teachable.com?src=teachable-examples" target="_blank" rel="noopener noreferrer">
+              <div class="school-card">
+                <div class="image" style="background-image: url(https://s3.amazonaws.com/cms-uploaded-images/u9ifiSUyTIOJBWXuCbjm_examples-scrapbooking.jpg);"></div>
+                <div class="bottom" data-mh="school-cards" style="height: 280px;">
+                  <h1>Aucun cours</h1>
+                  <p class="default-paragraph">Turn your memories into beautifully designed digital scrapbooks with Photoshop</p>
+                  <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/6Owd2hlXSIuRnIvjZ6Ft">
+                  <p class="default-paragraph">Jessica Sprague</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          @endif
+
+        </div>
+
+
+        {{--
+        @include('includes.default.school_page.advantages')
+        --}}
+        <div class="row logos">
+          <div class="col-xs-12">
+            <p class="default-paragraph">Les leaders du marché utilisent Oschool pour la formation du personnel.</p>
+            <div class="clearfix company-logos">
+              <img src="/images/divers/cinetpay.png">
+              <img src="/images/divers/Epistrophe.jpg">
+              <img src="/images/divers/bora.png">
+              <img src="/images/divers/final.png">
+              <img src="/images/divers/LogoM-1.png">
+              <img src="/images/divers/Logo-1.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+</div>
+
+<div id="tab4C" class="nav-partial nav-partial-3" style="display: none;">
+    <section class="example-schools _1571">
+      <style>
+        ._1571 {
+          margin-bottom: 0px;
+        }
+
+        @media (max-width: 991px) {
+          ._1571 {
+            margin-bottom: 0px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          ._1571 {
+            margin-bottom: 0px;
+          }
+        }
+      </style>
+      <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1 style="margin-top: 2rem;" class="default-header">A propos de {{$school->name}}</h1>
+              <p>{!!$school->description!!}</p>
+            </div>
+          </div>
+
+
+
+        {{--
+        @include('includes.default.school_page.advantages')
+        --}}
+        <div class="row logos">
+          <div class="col-xs-12">
+            <p class="default-paragraph">Les leaders du marché utilisent Oschool pour la formation du personnel.</p>
+            <div class="clearfix company-logos">
+              <img src="/images/divers/cinetpay.png">
+              <img src="/images/divers/Epistrophe.jpg">
+              <img src="/images/divers/bora.png">
+              <img src="/images/divers/final.png">
+              <img src="/images/divers/LogoM-1.png">
+              <img src="/images/divers/Logo-1.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
 
 </div>
 

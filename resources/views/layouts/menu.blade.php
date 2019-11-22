@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>@yield('title') | Oschool</title>
+    <meta name="og:image" content="@yield('image')"/>
     <meta name="description" content="@yield('description')">
     <link rel="stylesheet" href="/css/school_homepage.css">
     <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
@@ -201,107 +202,29 @@
   </div>
 </footer>
 
+<script type="text/javascript">
 
+$(document).ready(function() {
 
-<div>
-  <script src="https://unpkg.com/@teachable/iris@1.5.1/dist/iris.umd.min.js"></script>
-  <script type="text/javascript" src="//cdn.embed.ly/player-0.0.11.min.js"></script>
-  <script src="/javascripts/public-bundle-5ce9d056668cca67a144.js"></script>
-  <script src="https://teachable.com/assets/application-67c274dbd61b20404456f6ae8195303d0a920e4a67ef0e97ef764ed3fa0a2585.js"></script>
+$('#tabs li a:not(:first)').addClass('inactive');
+$('.nav-partial').hide();
+$('.nav-partial:first').show();
 
+$('#tabs li a').click(function(){
+    var t = $(this).attr('id');
+  if($(this).hasClass('inactive')){ //this is the start of our condition
+    $('#tabs li a').addClass('inactive');
+    $(this).removeClass('inactive');
 
-  <!-- SENTRY RAVEN -->
-  <script src="https://cdn.ravenjs.com/3.26.4/raven.min.js" crossorigin="anonymous"></script>
-  <!-- RightMessage (Pendo 2.0) -->
-  <script type="text/javascript">
-    (function(p, a, n, d, o, b, c) {
-      o = n.createElement('script');
-      o.type = 'text/javascript';
-      o.async = true;
-      o.src = 'https://tag.rightmessage.com/' + p + '.js';
-      b = n.getElementsByTagName('script')[0];
-      d = function(h, u, i) {
-        var c = n.createElement('style');
-        c.id = 'rmcloak' + i;
-        c.type = 'text/css';
-        c.appendChild(n.createTextNode('.rmcloak' + h + '{visibility:hidden}.rmcloak' + u + '{display:none}'));
-        b.parentNode.insertBefore(c, b);
-        return c;
-      };
-      c = d('', '-hidden', '');
-      d('-stay-invisible', '-stay-hidden', '-stay');
-      setTimeout(o.onerror = function() {
-        c.parentNode && c.parentNode.removeChild(c);
-      }, a);
-      b.parentNode.insertBefore(o, b);
-    })('561285057', 20000, document);
-  </script>
-  <!-- SEGMENT -->
-  <script>
-    window.analytics = window.analytics || [], window.analytics.methods = ["identify", "group", "track", "page", "pageview", "alias", "ready", "on", "once", "off", "trackLink", "trackForm", "trackClick", "trackSubmit"], window.analytics.factory =
-      function(t) {
-        return function() {
-          var a = Array.prototype.slice.call(arguments);
-          return a.unshift(t), window.analytics.push(a), window.analytics
-        }
-      };
-    for (var i = 0; i < window.analytics.methods.length; i++) {
-      var key = window.analytics.methods[i];
-      window.analytics[key] = window.analytics.factory(key)
-    }
-    window.analytics.load = function(t) {
-        if (!document.getElementById("analytics-js")) {
-          var a = document.createElement("script");
-          a.type = "text/javascript", a.id = "analytics-js", a.async = !0, a.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.io/analytics.js/v1/" + t + "/analytics.min.js";
-          var n = document.getElementsByTagName("script")[0];
-          n.parentNode.insertBefore(a, n)
-        }
-      }, window.analytics.SNIPPET_VERSION = "2.0.9",
-      window.analytics.load("tnh8fhmjpo");
-  </script>
-  <!-- RETENTION by PROFITWELL (for dunning) -->
-  <script>
-    (function(i, s, o, g, r, a, m) {
-      i['ProfitWellObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m);
-    })(window, document, 'script', 'https://dna8twue3dlxq.cloudfront.net/js/profitwell.js', 'profitwell');
-    profitwell('auth_token', 'c73a37dec4e02a585a09bd1997ebfa57');
-  </script>
-  <!-- STRIPE -->
-  <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
-</div>
+    $('.nav-partial').hide();
+    $('#'+ t + 'C').fadeIn('slow');
+ }
+});
 
-<iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeMetricsController0" allowpaymentrequest="true"
-  src="https://js.stripe.com/v2/m/outer.html#url=https%3A%2F%2Fteachable.com%2Fexamples&amp;title=Teachable%20%7C%20Examples%20of%20Online%20Courses%20Built%20Using%20Teachable&amp;referrer=https%3A%2F%2Fteachable.com%2F&amp;muid=546ca813-0cf0-4c94-812d-1b919c197c3e&amp;sid=dd947be9-53c1-4eb9-91e2-3b0bf02d44a3&amp;preview=false"
-  aria-hidden="true" tabindex="-1"
-  style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe>
-<div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.23648245185608752"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.12266700385399676" width="0" height="0" alt=""
-    src="https://bat.bing.com/action/0?ti=5153227&amp;Ver=2&amp;mid=989549a4-44d9-f260-aade-dd03e1ed4b01&amp;pi=1200101525&amp;lg=fr-CI&amp;sw=1366&amp;sh=768&amp;sc=24&amp;tl=Teachable%20%7C%20Examples%20of%20Online%20Courses%20Built%20Using%20Teachable&amp;p=https%3A%2F%2Fteachable.com%2Fexamples&amp;r=https%3A%2F%2Fteachable.com%2F&amp;lt=4075&amp;evt=pageLoad&amp;msclkid=N&amp;rn=663690">
-</div>
-<!--THE COOKIE SCRIPTE-->
-<script type="text/javascript" id="cookieinfo"
-	src="/js/cookie.js"
-  data-message="Ce site utilise des cookies et d'autres outils de suivi pour vous fournir la meilleure expérience. En savoir plus sur les termes de notre"
-  data-cookie="CookieInfoScript"
-	data-text-align="left"
-  data-linkmsg ="politique de confidentialité."
-  data-moreinfo = "href="https://teachable.com/privacy-policy""
-  data-font-size="13px"
-  data-bg="#000"
-  data-link="#4d90cc"
-  data-fg="#fff"
-  >
+});
+
 </script>
 
-
-<!--END COOKIE SCRIPTE-->
 
 </body>
 

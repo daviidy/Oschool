@@ -1,5 +1,5 @@
 @extends('layouts.menu-course-lecture')
-
+@section('image', '/images/lessons/images/image.png')
 @section('content')
 
 
@@ -134,7 +134,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
     </div>
     <div class="small course-progress-percentage">
       <span class="percentage">
-        {{number_format((count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100,2,",",".")}}%
+        {{number_format((count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100)}}%
       </span>
       TERMINÉ
     </div>

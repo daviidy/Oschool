@@ -1,5 +1,5 @@
 @extends('layouts.menu-course-curriculum')
-
+@section('image', $course->logo)
 @section('content')
 
 <div class="course-sidebar">
@@ -13,7 +13,7 @@
     </div>
     <div class="small course-progress">
       <span class="percentage">
-        {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100,2,",",".")}}%
+        {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}%
       </span>
       TERMINÉ
     </div>

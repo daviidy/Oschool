@@ -123,7 +123,7 @@ a:active,a:focus,a:hover{color:#24292d;}
       <div class="bg-white md:rounded-lg p-3 pt-16 md:p-8 md:pt-24 min-h-screen">
         <div class="sectionWrapper sectionWrapper--noTopPadding">
           <section class="section section--header">
-            <h2 class="section-header">Vous avez fait {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100,2,",",".")}}% de la formation</h2>
+            <h2 class="section-header">Vous avez fait {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}% de la formation</h2>
           </section>
         </div>
 

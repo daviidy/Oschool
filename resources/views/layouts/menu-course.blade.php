@@ -14,6 +14,7 @@
 
 
   <title>@yield('title') | Oschool</title>
+  <meta name="og:image" content="@yield('image')"/>
   <meta name="description" content="@yield('description')">
 
   <style>
@@ -148,6 +149,13 @@ ul{margin-top:0;margin-bottom:10px;}
 }
 @media (min-width: 1200px){
 .container{width:1170px;}
+.centre{
+    display: flex!important;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
 }
 .row{margin-right:-15px;margin-left:-15px;}
 .row:before,.row:after{display:table;content:" ";}

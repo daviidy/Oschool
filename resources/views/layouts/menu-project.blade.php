@@ -1,4 +1,4 @@
-<html lang="en"
+<html lang="fr"
   class="icon-events-icons-ready icon-events-typefaces-gilroy-ready icon-events-typefaces-gilroy-normal-normal-ready icon-events-typefaces-gilroy-500-normal-ready icon-events-typefaces-open-sans-ready icon-events-typefaces-open-sans-700-normal-ready icon-events-typefaces-open-sans-400-italic-ready icon-events-typefaces-open-sans-400-normal-ready icon-events-typefaces-gilroy-600-normal-ready icon-events-typefaces-gilroy-bold-normal-ready">
 
 <head>
@@ -85,6 +85,7 @@ ion-icon.hydrated.md {
 
   </style>
   <link rel="stylesheet" href="/css/project.css">
+  <meta name="og:image" content="@yield('image')"/>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -95,7 +96,7 @@ ion-icon.hydrated.md {
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 
-  <title>{{$project->title}} - {{$project->course->name}} | Oschool</title>
+  <title>@yield('title') | Oschool</title>
 
 
 </head>
