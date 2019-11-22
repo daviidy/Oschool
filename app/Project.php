@@ -15,7 +15,9 @@ class Project extends Model
                            'description',
                            'image',
                            'course_id',
-                           'position'
+                           'position',
+                           'slug',
+                           'video',
                          ];
 
 
