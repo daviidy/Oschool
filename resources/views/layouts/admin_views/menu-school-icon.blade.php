@@ -427,6 +427,7 @@
       ['size', 'bold', 'italic', 'underline'],
       ['image', 'code-block', 'video', 'blockquote', 'code', 'align', 'link'],
       ['color'],
+      [{ list: 'ordered' }, { list: 'bullet' }]
   ],
   imageResize: {
        modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
