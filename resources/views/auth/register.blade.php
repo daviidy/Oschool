@@ -115,6 +115,219 @@
         @font-face{font-family:'FontAwesome';src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0');src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot#iefix&v=4.7.0') format('embedded-opentype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}
     </style>
 
+
+<style>
+ .stretch-card>.card {
+     width: 100%;
+     min-width: 100%
+ }
+
+ body {
+     background-color: #f9f9fa
+ }
+
+ .flex {
+     -webkit-box-flex: 1;
+     -ms-flex: 1 1 auto;
+     flex: 1 1 auto
+ }
+
+ @media (max-width:991.98px) {
+     .padding {
+         padding: 1.5rem
+     }
+ }
+
+ @media (max-width:767.98px) {
+     .padding {
+         padding: 1rem
+     }
+ }
+
+ .padding {
+     padding: 3rem
+ }
+
+ .card {
+     box-shadow: none;
+     -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+     -ms-box-shadow: none
+ }
+
+ .card {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word;
+     background-color: #fff;
+     background-clip: border-box;
+     border: 1px solid #3da5f;
+     border-radius: 0
+ }
+
+ .card .card-body {
+     padding: 1.25rem 1.75rem
+ }
+
+ .card .card-title {
+     color: #000000;
+     margin-bottom: 0.625rem;
+     text-transform: capitalize;
+     font-size: 0.875rem;
+     font-weight: 500
+ }
+
+ .card .card-description {
+     margin-bottom: .875rem;
+     font-weight: 400;
+     color: #76838f
+ }
+
+ .btn.btn-social-icon {
+     width: 50px;
+     height: 50px;
+     padding: 0
+ }
+
+ .template-demo>.btn {
+     margin-right: 0.5rem !important
+ }
+
+ .template-demo {
+     margin-top: 0.5rem !important
+ }
+
+ .btn.btn-rounded {
+     border-radius: 50px
+ }
+
+ .btn-outline-facebook {
+     border: 1px solid #3b579d;
+     color: #3b579d
+ }
+
+ .btn-outline-facebook:hover {
+     background: #3b579d;
+     color: #ffffff
+ }
+
+ .btn-outline-youtube {
+     border: 1px solid #e52d27;
+     color: #e52d27
+ }
+
+ .btn-outline-github {
+     border: 1px solid #2B2B2B;
+     color: #545454
+ }
+
+ .btn-outline-dribbble {
+     border: 1px solid #ea4c89;
+     color: #ea4c89
+ }
+
+ .btn-outline-linkedin {
+     border: 1px solid #0177b5;
+     color: #0177b5
+ }
+
+ .btn-outline-instagram {
+     border: 1px solid #dc4a38;
+     color: #dc4a38
+ }
+
+ .btn-outline-github:hover {
+     background: #2B2B2B;
+     color: #ffffff
+ }
+
+ .btn-outline-linkedin:hover {
+     background: #0177b5;
+     color: #ffffff
+ }
+
+ .btn-outline-youtube:hover {
+     background: #e52d27;
+     color: #ffffff
+ }
+
+ .btn-outline-instagram:hover {
+     background: #e52d27;
+     color: #ffffff
+ }
+
+ .btn-facebook {
+     background: #3b579d;
+     color: #ffffff
+ }
+
+ .btn-youtube {
+     background: #e52d27;
+     color: #ffffff
+ }
+
+ .btn-github {
+     background: #2B2B2B;
+     color: #ffffff
+ }
+
+ .btn-dribbble {
+     background: #ea4c89;
+     color: #ffffff
+ }
+
+ .btn-linkedin {
+     background: #0177b5;
+     color: #ffffff
+ }
+
+ .btn-instagram {
+     background: #dc4a38;
+     color: #ffffff
+ }
+
+ .btn-facebook:hover,
+ .btn-facebook:focus {
+     background: #2d4278;
+     color: #ffffff
+ }
+
+ .btn-youtube:hover,
+ .btn-youtube:focus {
+     background: #c21d17;
+     color: #ffffff
+ }
+
+ .btn-github:hover,
+ .btn-github:focus {
+     background: #2B2B2B;
+     color: #ffffff
+ }
+
+ .btn-dribbble:hover,
+ .btn-dribbble:focus {
+     background: #e51e6b;
+     color: #ffffff
+ }
+
+ .btn-linkedin:hover,
+ .btn-linkedin:focus {
+     background: #015682;
+     color: #ffffff
+ }
+
+ .btn-instagram:hover,
+ .btn-instagram:focus {
+     background: #bf3322;
+     color: #ffffff
+ }
+
+</style>
+
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -192,17 +405,36 @@
                   </div>
                 </form>
 
+                <br>
 
-                  <p style="text-align: center;"> <span>Ou</span></p>
+                <p style="text-align: center;"> <span>Inscrivez-vous avec <i class="fa fa-arrow-down"></i> </span></p>
 
                   <div style="text-align: center;">
 
-                      <br>
+                    <br>
+                    <div class="card-body">
+                      <div class="template-demo"> 
+                       <a style="text-decoration:none;" href="{{ url('login/facebook') }}"> <button type="button" class="btn btn-social-icon btn-outline-facebook">
+                          <i class="fa fa-facebook"></i>
+                        </button> </a>
 
-                      <a href="{{ url('login/facebook') }}" class="btn btn-primary btn-lg btn-block"><i class="fa fa-facebook"></i> {{ __('Inscription avec ') }}<b>Facebook</b></a>
-                      <a href="{{ url('login/gmail') }}" class="btn btn-danger-g btn-lg btn-block btn-g"><i class="fa fa-google"></i> {{__('Inscription avec ') }} <b>Google</b></a>
-                      <a href="{{ url('login/linkedin') }}" class="btn btn-blue-g btn-lg btn-block btn-g"><i class="fa fa-linkedin"></i> {{__('Inscription avec ') }} <b>Linkedin</b></a>
-                      <a href="{{ url('login/github') }}" class="btn btn-black-g btn-lg btn-block btn-g"><i class="fa fa-github"></i> {{__('Inscription avec ') }} <b>Github</b></a>
+                       <a style="text-decoration:none;" href="{{ url('login/gmail') }}"> <button type="button" class="btn btn-social-icon btn-outline-youtube">
+                          <i class="fa fa-google"></i>
+                        </button></a>
+                        
+                       <a style="text-decoration:none;" href="{{ url('login/github') }}"> <button type="button" class="btn btn-social-icon btn-outline-github">
+                          <i class="fa fa-github"></i>
+                        </button> </a>
+
+                        
+                       <a style="text-decoration:none;" href="{{ url('login/linkedin') }}"> <button type="button" class="btn btn-social-icon btn-outline-linkedin">
+                          <i class="fa fa-linkedin"></i>
+                        </button></a>
+                        
+                      
+                      </div>
+                      {{-- <div class="template-demo"> <button type="button" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></button> <button type="button" class="btn btn-social-icon btn-youtube"><i class="fa fa-youtube"></i></button> <button type="button" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></button> <button type="button" class="btn btn-social-icon btn-dribbble"><i class="fa fa-dribbble"></i></button> <button type="button" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></button> <button type="button" class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></button> </div> --}}
+                      {{-- <div class="template-demo"> <button type="button" class="btn btn-social-icon btn-facebook btn-rounded"><i class="fa fa-facebook"></i></button> <button type="button" class="btn btn-social-icon btn-youtube btn-rounded"><i class="fa fa-youtube"></i></button> <button type="button" class="btn btn-social-icon btn-twitter btn-rounded"><i class="fa fa-twitter"></i></button> <button type="button" class="btn btn-social-icon btn-dribbble btn-rounded"><i class="fa fa-dribbble"></i></button> <button type="button" class="btn btn-social-icon btn-linkedin btn-rounded"><i class="fa fa-linkedin"></i></button> <button type="button" class="btn btn-social-icon btn-instagram btn-rounded"><i class="fa fa-instagram"></i></button> </div> --}}
                   </div>
 
 
