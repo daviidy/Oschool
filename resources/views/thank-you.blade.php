@@ -24,7 +24,8 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="/premium-checkout/assets/images/favicon/favicon.ico">
 
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="https://www.mindvalley.com/premium-checkout/assets/mindvalley.css">
 
   <link rel="stylesheet" href="/premium-checkout/_ignite/pre_responsive.css">
