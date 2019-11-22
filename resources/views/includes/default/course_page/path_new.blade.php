@@ -8,6 +8,10 @@ button,select{font-size:100%;}
 }
 /*! CSS Used from: https://learndigital.withgoogle.com/static/css/miyagi-core.css?cb=d3a7e7ad0a5a4e5ef007052f683a96dc ; media=screen */
 @media screen{
+p{
+    font-size: 16px !important;
+    font-family: 'Google sans' !important;
+}
 main,nav,section{display:block;}
 a{background-color:transparent;}
 a:active,a:hover{outline:0;}
