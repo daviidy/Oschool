@@ -55,7 +55,7 @@ button{font-family:inherit;font-size:inherit;}
 .text-xs-left{text-align:left!important;}
 button.button-link{background:transparent none repeat 0 0 scroll;color:rgba(0,0,0,.87);border:0;font-size:1em;margin:0;padding:0;text-align:left;text-decoration:none;text-indent:0;min-width:0;}
 button.button-link:disabled{background:transparent none repeat 0 0 scroll;color:rgba(0,0,0,.26);}
-button.button-link{color:#2972d1;text-decoration:none;cursor:pointer;}
+button.button-link{color:#4d90cc!important;text-decoration:none;cursor:pointer;}
 button.button-link:hover{text-decoration:underline;}
 ::-webkit-input-placeholder{color:hsla(0,0%,47%,.75);}
 ::-moz-placeholder{color:hsla(0,0%,47%,.75);}
@@ -115,9 +115,8 @@ button{line-height:inherit;}
 .Row_nvwp6p:after{display:table;clear:both;}
 .Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc{align-items:center;display:-moz-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-ms-flex-align:center;-webkit-box-align:center;}
 .Box_120drhm-o_O-displayflex_poyjc{display:-moz-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;}
-.Box_120drhm-o_O-centerJustify_1nezfbd-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc{
+.Box_120drhm-o_O-centerJustify_1nezfbd-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc{ justify-content:center;align-items:center;display:-moz-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-align-items:center;-ms-flex-pack:center;-webkit-box-pack:center;-ms-flex-align:center;-webkit-box-align:center;}
 
-  justify-content:center;align-items:center;display:-moz-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-align-items:center;-ms-flex-pack:center;-webkit-box-pack:center;-ms-flex-align:center;-webkit-box-align:center;}
   .Button_1w8tm98-o_O-primary_cv02ee-o_O-md_1jvotax {
     border-radius: 2px;
     border-width: 1px;
@@ -137,8 +136,8 @@ button{line-height:inherit;}
     text-decoration: none;
     font-weight: 600;
     color: #FFF;
-    background-color: #2A73CC;
-    border: 1px solid #2A73CC;
+    background-color: #4d90cc!important;
+    border: 1px solid #4d90cc!important;
     padding: 1.9rem 2rem;
     font-size: 1.7rem;
     min-height: 48px;
@@ -590,49 +589,49 @@ button{line-height:inherit;}
                              <div class="p-y-1s">
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc">
                                      <svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Checkffee34fe-27e2-4131-c219-78ecc248c277 Checkffee34fe-27e2-4131-c219-78ecc248c277Desc" xmlns="http://www.w3.org/2000/svg"
-                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                       style="fill:#4d90cc; height: 30px; width: 30px; min-width: 30px;">
                                          <title id="Checkffee34fe-27e2-4131-c219-78ecc248c277">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
                                      </svg><span class="m-x-1 font-md text-primary">Ce cours plus la Spécialisation complète</span></div>
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
                                        aria-labelledby="Checka74c4708-63e0-496b-c178-c76157356839 Checka74c4708-63e0-496b-c178-c76157356839Desc" xmlns="http://www.w3.org/2000/svg"
-                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                       style="fill: #4d90cc; height: 30px; width: 30px; min-width: 30px;">
                                          <title id="Checka74c4708-63e0-496b-c178-c76157356839">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
                                      </svg><span class="m-x-1 font-md text-primary">Certificats partageables</span></div>
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
                                        aria-labelledby="Check62d17183-60ef-4cc2-c7f5-cb8b1499a650 Check62d17183-60ef-4cc2-c7f5-cb8b1499a650Desc" xmlns="http://www.w3.org/2000/svg"
-                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                       style="fill: #4d90cc; height: 30px; width: 30px; min-width: 30px;">
                                          <title id="Check62d17183-60ef-4cc2-c7f5-cb8b1499a650">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
                                      </svg><span class="m-x-1 font-md text-primary">Option d'apprentissage à votre rythme</span></div>
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
                                        aria-labelledby="Checka2d79c60-e7cd-4746-9bec-e5484260ac56 Checka2d79c60-e7cd-4746-9bec-e5484260ac56Desc" xmlns="http://www.w3.org/2000/svg"
-                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                       style="fill: #4d90cc; height: 30px; width: 30px; min-width: 30px;">
                                          <title id="Checka2d79c60-e7cd-4746-9bec-e5484260ac56">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
                                      </svg><span class="m-x-1 font-md text-primary">Vidéos et lectures du cours</span></div>
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
                                        aria-labelledby="Check018f7a24-721d-48c8-9f37-964bac044908 Check018f7a24-721d-48c8-9f37-964bac044908Desc" xmlns="http://www.w3.org/2000/svg"
-                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                       style="fill: #4d90cc; height: 30px; width: 30px; min-width: 30px;">
                                          <title id="Check018f7a24-721d-48c8-9f37-964bac044908">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
                                      </svg><span class="m-x-1 font-md text-primary">Quiz pour s'exercer</span></div>
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
                                        aria-labelledby="Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4 Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4Desc" xmlns="http://www.w3.org/2000/svg"
-                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                       style="fill: #4d90cc; height: 30px; width: 30px; min-width: 30px;">
                                          <title id="Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
                                      </svg><span class="m-x-1 font-md text-primary">Devoirs notés commentés par les pairs</span></div>
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
                                        aria-labelledby="Check8b824a3b-15e5-40e4-cc95-011040e9ec5f Check8b824a3b-15e5-40e4-cc95-011040e9ec5fDesc" xmlns="http://www.w3.org/2000/svg"
-                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                       style="fill: #4d90cc; height: 30px; width: 30px; min-width: 30px;">
                                          <title id="Check8b824a3b-15e5-40e4-cc95-011040e9ec5f">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
                                      </svg><span class="m-x-1 font-md text-primary">Quiz notés avec commentaires</span></div>
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
                                        aria-labelledby="Check9f7ef0ab-ee64-4f9d-cf2d-426b9d617985 Check9f7ef0ab-ee64-4f9d-cf2d-426b9d617985Desc" xmlns="http://www.w3.org/2000/svg"
-                                       style="fill: rgb(42, 115, 204); height: 30px; width: 30px; min-width: 30px;">
+                                       style="fill: #4d90cc; height: 30px; width: 30px; min-width: 30px;">
                                          <title id="Check9f7ef0ab-ee64-4f9d-cf2d-426b9d617985">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
                                      </svg><span class="m-x-1 font-md text-primary">Exercices de programmation notés</span></div>

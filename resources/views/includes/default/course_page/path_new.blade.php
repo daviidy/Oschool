@@ -26,7 +26,7 @@ button{-webkit-appearance:button;cursor:pointer;}
 button::-moz-focus-inner{border:0;padding:0;}
 *{box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 svg{overflow:hidden;vertical-align:middle;position:relative;top:-1px;box-sizing:content-box;pointer-events:none;}
-h1,h2,h3,h4,p{font-family:Roboto,Arial,sans-serif;font-weight:300;}
+h1,h2,h3,h4,p{font-family:'TeachableSans-Regular';font-weight:300;}
 h1,h2,h3,h4{text-rendering:optimizeLegibility;margin:0;}
 a{text-decoration:none;}
 p{font-size:1.6rem;line-height:2.4rem;margin:0 0 2.1rem;}
@@ -60,7 +60,7 @@ p:last-of-type{margin-bottom:0;}
 .certificate-banner__content{font-family:Google Sans,Arial,sans-serif;font-weight:500;font-style:normal;font-stretch:normal;line-height:normal;text-transform:uppercase;letter-spacing:.5px;font-size:1rem;}
 .certificate-banner{position:relative;}
 .certificate-banner__image{position:absolute;z-index:10;top:10px;left:3px;}
-.certificate-banner__content{left:-10px;position:absolute;top:18px;overflow:visible;max-width:235px;min-height:26px;background-color:#fbbc05;color:#0e3ec1;z-index:2;}
+.certificate-banner__content{left:-10px;position:absolute;top:18px;overflow:visible;max-width:235px;min-height:26px;background-color:#4d90cc;color:#fff;z-index:2;}
 .certificate-banner__content__wrapper{width:100%;height:10%;position:relative;padding-right:5px;max-width:235px;min-height:26px;display:flex;align-items:center;justify-content:flex-end;}
 .certificate-banner__content svg{right:-9px;position:absolute;top:0;height:100%;width:10px;}
 .certificate-banner__content:before{content:"";height:0;width:0;display:block;position:absolute;top:-8px;left:0;border-bottom:10px solid #ee8c00;border-left:10px solid transparent;transform:scaleY(.7);}
@@ -164,19 +164,19 @@ p:last-of-type{margin-bottom:0;}
 .how-it-works__boxes__box{flex:0 0 100%;padding:0 0 61px;max-width:100%;}
 .how-it-works__boxes__box:last-of-type{padding-bottom:0;}
 }
-.how-it-works__boxes__box:after{top:50%;content:" ";height:0;width:0;position:absolute;pointer-events:none;border:13px solid transparent;border-left-color:#34a853;margin-top:-13px;margin-left:-6px;left:100%;right:auto;}
+.how-it-works__boxes__box:after{top:50%;content:" ";height:0;width:0;position:absolute;pointer-events:none;border:13px solid transparent;border-left-color:#6aace6;margin-top:-13px;margin-left:-6px;left:100%;right:auto;}
 @media (max-width:1440px){
 .how-it-works__boxes__box:after{border-width:10px;margin-top:-10px;margin-left:-5px;}
 }
 @media (max-width:599px){
-.how-it-works__boxes__box:after{left:0;right:0;top:100%;margin:-35px auto 0;border-color:#34a853 transparent transparent;}
+.how-it-works__boxes__box:after{left:0;right:0;top:100%;margin:-35px auto 0;border-color:#6aace6 transparent transparent;}
 }
 .how-it-works__boxes__box:last-of-type:after,.how-it-works__boxes__box:nth-child(3n):after{content:none;}
 .how-it-works__boxes__box h3.how-it-works__boxes__box__title{margin-bottom:8px;color:#3c4043;}
 @media (max-width:1023px){
 .how-it-works__boxes__box h3.how-it-works__boxes__box__title{font-size:18px;line-height:1.56;}
 }
-.how-it-works__boxes__box p.how-it-works__boxes__box__description{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-size:1.8rem;font-weight:400;font-style:normal;font-stretch:normal;line-height:3rem;letter-spacing:normal;text-align:center;color:#9aa0a6;}
+.how-it-works__boxes__box p.how-it-works__boxes__box__description{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';font-size:1.8rem;font-weight:400;font-style:normal;font-stretch:normal;line-height:3rem;letter-spacing:normal;text-align:center;color:#9aa0a6;}
 @media (max-width:1023px){
 .how-it-works__boxes__box p.how-it-works__boxes__box__description{font-size:16px!important;line-height:1.63!important;}
 }
@@ -252,9 +252,9 @@ p:last-of-type{margin-bottom:0;}
 .skills__item__icon{transition:color .25s;color:#c0c3c8;font-size:30px;}
 .skills__item h4.skills__item__title{transition:color .25s;color:#9aa0a6;font-size:14px;font-weight:400;line-height:1.57;letter-spacing:normal;text-align:center;margin-bottom:0;}
 .skills__description{border-top:2px solid #f1f3f4;}
-.skills__description p{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-size:1.8rem;font-weight:400;font-style:normal;font-stretch:normal;line-height:3rem;letter-spacing:normal;animation:fadein-up-slow;animation-duration:.8s;animation-delay:.2 .5s;animation-timing-function:ease;animation-iteration-count:1;animation-direction:out;animation-fill-mode:both;will-change:transform,opacity;color:#80868b;text-align:center;max-width:800px;width:100%;margin:54px auto 0;}
+.skills__description p{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';font-size:1.8rem;font-weight:400;font-style:normal;font-stretch:normal;line-height:3rem;letter-spacing:normal;animation:fadein-up-slow;animation-duration:.8s;animation-delay:.2 .5s;animation-timing-function:ease;animation-iteration-count:1;animation-direction:out;animation-fill-mode:both;will-change:transform,opacity;color:#80868b;text-align:center;max-width:800px;width:100%;margin:54px auto 0;}
 .cta-box{display:flex;flex-direction:column;align-items:center;}
-.cta-box__title{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-size:2.2rem;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.36;letter-spacing:normal;color:#3c4043;margin-bottom:32px;width:100%;text-align:center;}
+.cta-box__title{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';font-size:2.2rem;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.36;letter-spacing:normal;color:#3c4043;margin-bottom:32px;width:100%;text-align:center;}
 @media (min-width:1024px) and (max-width:1440px){
 .cta-box__title{margin-bottom:40px;}
 }
@@ -320,17 +320,24 @@ p:last-of-type{margin-bottom:0;}
 @media (max-width:1440px){
 .about-this-course__features ul li{margin-top:36px;}
 }
+@media (min-width: 1200px){
+.senter {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
 @media (max-width:599px){
 .about-this-course__features ul li{margin-top:24px;}
 }
 .about-this-course__features ul li:before{position:relative;font-feature-settings:"liga";font-family:Material Icons;content:"\E86C";color:#34a853;font-size:2.2rem;line-height:normal;margin-right:8px;vertical-align:middle;}
-h1,h2,h3,h4{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;}
-h1{font-size:4rem;font-weight:400;line-height:5rem;letter-spacing:-.5px;font-family:Google Sans Display,Arial,sans-serif;}
+h1,h2,h3,h4{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';}
+h1{font-size:4rem;font-weight:400;line-height:5rem;letter-spacing:-.5px;font-family:'TeachableSans-Bold';}
 @media (min-width:320px) and (max-width:599px){
-h1{font-size:3.2rem;line-height:4rem;letter-spacing:0;font-family:Google Sans,Arial,sans-serif;}
+h1{font-size:3.2rem;line-height:4rem;letter-spacing:0;font-family:'TeachableSans-Bold';}
 }
 @media (min-width:600px) and (max-width:1023px){
-h1{font-size:3.6rem;line-height:4.4rem;letter-spacing:0;font-family:Google Sans Display,Arial,sans-serif;}
+h1{font-size:3.6rem;line-height:4.4rem;letter-spacing:0;font-family:'TeachableSans-Bold';}
 }
 h2{font-size:3.2rem;font-weight:400;line-height:4rem;letter-spacing:0;}
 @media (min-width:320px) and (max-width:599px){
@@ -345,8 +352,8 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 }
 .heading--h4,h4{font-size:1.8rem;font-weight:400;line-height:2.8rem;letter-spacing:0;}
 .heading--h4-medium{font-weight:500;}
-.btn--primary{background:#1a73e8;color:#fff;}
-.btn--primary:focus,.btn--primary:hover{background:#174ea6;}
+.btn--primary{background:#4d90cc;color:#fff;}
+.btn--primary:focus,.btn--primary:hover{background:#6aace6;}
 .btn--primary:disabled{cursor:default;background:#dadce0;color:#fff;}
 .btn--primary:after{background:rgba(0,0,0,.4);}
 .btn--secondary{background:#f1f3f4;color:#202124;}
@@ -354,10 +361,10 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 .btn--secondary:disabled{cursor:default;background:#dadce0;color:#fff;}
 .btn--secondary:after{background:rgba(0,0,0,.1);}
 [class^=btn]{transition:background-color .2s,color .2s;}
-[class^=btn]{font-family:Google Sans,Arial,sans-serif;}
-[class^=btn]{border-radius:2px;cursor:pointer;font-size:16px;font-weight:500;letter-spacing:.5px;line-height:26px;padding:10px 24px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;outline:0;border:0;box-sizing:border-box;position:relative;overflow:hidden;text-align:center;}
+[class^=btn]{font-family:'TeachableSans-Regular';}
+[class^=btn]{border-radius:25px;cursor:pointer;font-size:16px;font-weight:500;letter-spacing:.5px;line-height:26px;padding:10px 24px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;outline:0;border:0;box-sizing:border-box;position:relative;overflow:hidden;text-align:center;}
 @media (max-width:1023px){
-[class^=btn]{border-radius:2px;font-size:14px;font-weight:500;letter-spacing:.75px;line-height:20px;padding:13px 24px;}
+[class^=btn]{border-radius:25px;font-size:14px;font-weight:500;letter-spacing:.75px;line-height:20px;padding:13px 24px;}
 }
 .cols{display:flex;flex-direction:row;flex-wrap:wrap;margin:-12px;}
 .col{margin:12px;}
@@ -483,14 +490,14 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 @media (max-width:599px){
 .video-slider__slide{display:none;}
 }
-.video-slider__slide__highlight{animation-name:fade;animation-duration:.8s;animation-delay:.25s;animation-timing-function:ease;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;will-change:opacity;left:-1px;right:auto;transition:top .5s ease,height .15s;z-index:2;position:absolute;border:none;background:#1a73e8;margin:0;top:0;width:5px;height:0;}
+.video-slider__slide__highlight{animation-name:fade;animation-duration:.8s;animation-delay:.25s;animation-timing-function:ease;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;will-change:opacity;left:-1px;right:auto;transition:top .5s ease,height .15s;z-index:2;position:absolute;border:none;background:#4d90cc;margin:0;top:0;width:5px;height:0;}
 .video-slider__slide__wrapper{padding:8px 0 8px 16px;position:relative;margin-bottom:24px;transition:border-color .5s linear;}
 .video-slider__slide__wrapper:focus{outline:none;}
 .video-slider__slide__title{color:#9aa0a6;margin-bottom:10px;transition:color .5s linear;}
 @media (min-width:600px) and (max-width:1023px){
 .video-slider__slide__title{font-size:22px!important;line-height:1.36!important;}
 }
-.video-slider__slide__description{font-family:Roboto,Arial,sans-serif;font-size:16px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1.75;letter-spacing:normal;color:#9aa0a6;transition:color .5s linear;}
+.video-slider__slide__description{font-family:'TeachableSans-Regular';font-size:16px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1.75;letter-spacing:normal;color:#9aa0a6;transition:color .5s linear;}
 .video-slider__slide--active .video-slider__slide__title{color:#3c4043;}
 .video-slider__slide--active .video-slider__slide__description{color:#5f6368;}
 .video-slider__mobile-select{display:flex;flex-direction:column;margin-top:12px;}
@@ -538,7 +545,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 .course-detail__section{padding:40px 0 48px;}
 }
 .course-detail__section__title{text-align:center;margin-bottom:48px;color:#3c4043;}
-.course-detail__section__description{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-size:1.8rem;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.67;letter-spacing:normal;text-align:center;margin-bottom:48px;color:#9aa0a6;}
+.course-detail__section__description{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';font-size:1.8rem;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.67;letter-spacing:normal;text-align:center;margin-bottom:48px;color:#9aa0a6;}
 .course-detail__about-this-course,.course-detail__cta-box,.course-detail__how-it-works{background:#fff;}
 .course-detail__modules{background:#f8f9fa;}
 .course-detail__modules .carousel{padding:0 20px;}
@@ -690,7 +697,7 @@ button,html [type=button]{-webkit-appearance:button;}
 .tracksContainer__2x7KTuW_T4k8mqZ7AXwnzk{position:relative;padding:2.5rem 0 5rem;}
 .tracksContainer__2x7KTuW_T4k8mqZ7AXwnzk,.tracksText__2QnyXKYcWDRi820kHQ5QaE{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-flex-direction:column;flex-direction:column;}
 .tracksTitle__1YnzuBiOIL9TSmJwT5LmE_{margin:auto;text-align:center;font-size:3.2rem;}
-.tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ{border:1px solid #ccc;border-left:6px solid #4c7ef3;}
+.tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ{border:1px solid #ccc;border-left:6px solid #4d90cc;}
 .moreTracksDetailLayout__3IgDKzQO73_LcU3e52kHuH,.tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:flex-start;justify-content:flex-start;width:calc(100% - 40px);margin:3.5625rem auto auto;-webkit-animation:fadeInTracks__3fylYIdas-SsoK-GgiYPCJ 1s forwards;animation:fadeInTracks__3fylYIdas-SsoK-GgiYPCJ 1s forwards;}
 @media only screen and (min-width:64rem){
 .moreTracksDetailLayout__3IgDKzQO73_LcU3e52kHuH,.tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ{width:100rem;}
@@ -714,7 +721,7 @@ button,html [type=button]{-webkit-appearance:button;}
                         <div class="certificate-banner__content__wrapper">
                             <span class="certificate-banner__content__text">Certification incluse</span>
                             <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="100%" height="100%" viewBox="0 0 150 398" preserveAspectRatio="none">
-                                <path d="M41.1003 199L150 398H0V0h150z" fill="#FBBC05" fill-rule="nonzero"></path>
+                                <path d="M41.1003 199L150 398H0V0h150z" fill="#4d90cc" fill-rule="nonzero"></path>
                             </svg>
                         </div>
                     </div>
@@ -1108,7 +1115,7 @@ button,html [type=button]{-webkit-appearance:button;}
     <section class="pricing py-5" id="price">
       <div class="container">
         <h1 class="title-price">Nos offres de prix</h1>
-        <div class="row">
+        <div class="row senter">
           <!-- Free Tier -->
           @foreach($course->pricings as $pricing)
           <div class="col-lg-4">
@@ -1165,7 +1172,7 @@ button,html [type=button]{-webkit-appearance:button;}
                             <div ng-repeat="slide in VideoSliderCtrl.content" ng-if="slide.value" class="video-slider__slide__wrapper ng-scope video-slider__slide--active"
                               ng-class="{'video-slider__slide--active': VideoSliderCtrl.activeSlide.value === slide.value}" ng-click="VideoSliderCtrl.setActive(slide)" role="button" tabindex="0">
                                 <h3 class="video-slider__slide__title ng-binding">Témoignage de Souleymane Coulibaly</h3>
-                                <p class="video-slider__slide__description ng-binding">“ très bonne plateforme d'apprentissage pour les adultes…”</p>
+                                <p class="video-slider__slide__description ng-binding">“ Très bonne plateforme d'apprentissage pour les adultes…”</p>
                             </div><!-- end ngIf: slide.value -->
                             <!-- end ngRepeat: slide in VideoSliderCtrl.content -->
                             <!-- ngIf: slide.value -->

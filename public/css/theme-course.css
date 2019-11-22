@@ -142,8 +142,8 @@
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:focus {
-    background: #39719a !important;
-    border: 1px solid #39719a !important;
+    background: #4d90cc !important;
+    border: 1px solid #4d90cc !important;
     font-weight: 600 !important;
     outline: none !important;
     color: #fff;
@@ -154,8 +154,8 @@
 .btn-primary:hover, .btn-primary:active:hover, .btn-primary:focus:hover {
     outline: none !important;
     text-decoration: none;
-    background: #326387 !important;
-    border: 1px solid #326387 !important;
+    background: #6aace6 !important;
+    border: 1px solid #6aace6 !important;
     color: #fff
 }
 
@@ -1022,7 +1022,7 @@ body {
     background-image: none;
     background-size: none;
     background: none;
-    font-family: "Proxima";
+    font-family: 'TeachableSans-Regular';
     margin: 0 !important;
     color: #2b3636
 }
