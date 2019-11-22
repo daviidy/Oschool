@@ -51,7 +51,7 @@ svg{overflow:hidden;vertical-align:middle;position:relative;top:-1px;box-sizing:
 .progress__bar{position:relative;}
 .progress__bar:before{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:transparent;}
 .progress__bar:not([md-mode=indeterminate]){height:.8rem;border-radius:1rem 0 0 1rem;}
-h1,h2,h4,h5,p{font-family:Roboto,Arial,sans-serif;font-weight:300;}
+h1,h2,h4,h5,p{font-family:'TeachableSans-Regular';font-weight:300;}
 h1,h2,h4,h5{text-rendering:optimizeLegibility;margin:0;}
 a{text-decoration:none;}
 p{font-size:1.6rem;line-height:2.4rem;margin:0 0 2.1rem;}
@@ -86,7 +86,7 @@ md-input-container .md-input::-moz-placeholder{color:#bbb;}
 .certificate-banner__content{font-family:Google Sans,Arial,sans-serif;font-weight:500;font-style:normal;font-stretch:normal;line-height:normal;text-transform:uppercase;letter-spacing:.5px;font-size:1rem;}
 .certificate-banner{position:relative;}
 .certificate-banner__image{position:absolute;z-index:10;top:10px;left:3px;}
-.certificate-banner__content{left:-10px;position:absolute;top:18px;overflow:visible;max-width:235px;min-height:26px;background-color:#fbbc05;color:#0e3ec1;z-index:2;}
+.certificate-banner__content{left:-10px;position:absolute;top:18px;overflow:visible;max-width:235px;min-height:26px;background-color:#4d90cc;color:#fff;z-index:2;}
 .certificate-banner__content__wrapper{width:100%;height:15px;position:relative;padding-right:5px;max-width:235px;min-height:26px;display:flex;align-items:center;justify-content:flex-end;}
 .certificate-banner__content svg{right:-9px;position:absolute;top:0;height:100%;width:10px;}
 .certificate-banner__content:before{content:"";height:0;width:0;display:block;position:absolute;top:-8px;left:0;border-bottom:10px solid #ee8c00;border-left:10px solid transparent;transform:scaleY(.7);}
@@ -134,7 +134,7 @@ md-input-container .md-input::-moz-placeholder{color:#bbb;}
 @media (max-width:1440px){
 .course-hero-enrolled__progress .progress,.course-hero-enrolled__progress svg{width:120px;height:120px;}
 }
-.course-hero-enrolled__subheader{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-size:12px;font-weight:400;font-style:normal;font-stretch:normal;line-height:2.3rem;letter-spacing:normal;font-weight:500;letter-spacing:1.3px;color:#80868b;padding-bottom:16px;text-transform:uppercase;margin:0;}
+.course-hero-enrolled__subheader{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';font-size:12px;font-weight:400;font-style:normal;font-stretch:normal;line-height:2.3rem;letter-spacing:normal;font-weight:500;letter-spacing:1.3px;color:#80868b;padding-bottom:16px;text-transform:uppercase;margin:0;}
 @media (min-width:600px) and (max-width:1023px){
 .course-hero-enrolled__subheader{padding-bottom:0;}
 }
@@ -166,7 +166,7 @@ md-input-container .md-input::-moz-placeholder{color:#bbb;}
 @media (min-width:1441px){
 .course-hero-enrolled__badges__link{float:right;}
 }
-.course-hero-enrolled p.course-hero-enrolled__subtitle{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-size:16px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.63;letter-spacing:normal;color:#9aa0a6;margin-bottom:16px;}
+.course-hero-enrolled p.course-hero-enrolled__subtitle{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';font-size:16px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.63;letter-spacing:normal;color:#9aa0a6;margin-bottom:16px;}
 .course-hero-enrolled__logos{list-style:none;margin:20px 0 0;padding:0;}
 .course-hero-enrolled__logos li{display:inline-block;min-height:24px;max-height:50px;min-width:16px;max-width:100px;margin-bottom:24px;vertical-align:middle;position:relative;overflow:hidden;margin-right:24px;margin-left:0;}
 @media (min-width:600px) and (max-width:1023px){
@@ -247,7 +247,7 @@ md-input-container .md-input::-moz-placeholder{color:#bbb;}
 .cert-validation-box__main{width:100%;border-bottom:1px solid #e8eaed;padding:24px;}
 }
 .cert-validation-box__sub-header{font-size:12px;line-height:1.3;color:#80868b;text-transform:uppercase;}
-.cert-validation-box__sub-header,.cert-validation-box__title{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-weight:400;font-style:normal;font-stretch:normal;letter-spacing:normal;font-weight:500;}
+.cert-validation-box__sub-header,.cert-validation-box__title{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Bold';font-weight:400;font-style:normal;font-stretch:normal;letter-spacing:normal;font-weight:500;}
 .cert-validation-box__title{font-size:1.6rem;line-height:1.63;color:#3c4043;margin:8px 0;}
 @media (min-width:1024px){
 .cert-validation-box__title{font-size:2.2rem!important;line-height:1.18!important;margin:16px 0 8px;}
@@ -255,7 +255,7 @@ md-input-container .md-input::-moz-placeholder{color:#bbb;}
 @media (min-width:600px) and (max-width:1023px){
 .cert-validation-box__title{font-size:1.8rem!important;line-height:1.44!important;}
 }
-.cert-validation-box__description{font-family:Roboto,Arial,sans-serif;font-size:14px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1.71;letter-spacing:normal;color:#80868b;}
+.cert-validation-box__description{font-family:'TeachableSans-Regular';font-size:14px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1.71;letter-spacing:normal;color:#80868b;}
 @media (min-width:1024px){
 .cert-validation-box__description{font-size:16px;line-height:1.75;}
 }
@@ -298,10 +298,10 @@ md-input-container .md-input::-moz-placeholder{color:#bbb;}
 .progress__circle--full{fill:#34a853;stroke:none;}
 .progress__bar{fill:none;stroke-width:2.2;stroke-linecap:round;animation:progress 1s ease-out forwards;animation-delay:.75s;stroke:#34a853;}
 .progress__bar--no-animate{animation:none;stroke-dasharray:inherit;}
-.progress__text{text-anchor:middle;font-family:Google Sans,Arial,sans-serif;font-size:8px;font-weight:500;font-style:normal;font-stretch:normal;line-height:normal;letter-spacing:-.2px;text-align:center;fill:#1e8e3e;opacity:0;animation:fadein .75s forwards;animation-delay:.5s;}
+.progress__text{text-anchor:middle;font-family:'TeachableSans-Bold';font-size:8px;font-weight:500;font-style:normal;font-stretch:normal;line-height:normal;letter-spacing:-.2px;text-align:center;fill:#1e8e3e;opacity:0;animation:fadein .75s forwards;animation-delay:.5s;}
 .progress__text--white{fill:#fff;}
 .about-this-course__detail__icon-container{display:flex;flex-direction:row;align-items:flex-start;margin-top:32px;}
-.about-this-course__detail__icon-container span{opacity:.9;font-family:Google Sans,Arial,sans-serif;font-size:16px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.38;letter-spacing:normal;color:#5f6368;}
+.about-this-course__detail__icon-container span{opacity:.9;font-family:'TeachableSans-Regular';font-size:16px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.38;letter-spacing:normal;color:#5f6368;}
 .about-this-course__detail__icon-container .material-icons,.about-this-course__detail__icon-container img{font-size:22px;margin-right:8px;}
 .about-this-course{width:100%;display:flex;flex-direction:row;}
 @media (max-width:1023px){
@@ -371,13 +371,13 @@ md-input-container .md-input::-moz-placeholder{color:#bbb;}
 .module-progress-card__cta{position:absolute;bottom:24px;right:24px;left:auto;}
 }
 .module-progress-card__cta i{color:#1a73e8;}
-h1,h2,h4,h5{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;}
-h1{font-size:4rem;font-weight:400;line-height:5rem;letter-spacing:-.5px;font-family:Google Sans Display,Arial,sans-serif;}
+h1,h2,h4,h5{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';}
+h1{font-size:4rem;font-weight:400;line-height:5rem;letter-spacing:-.5px;font-family:'TeachableSans-Bold';}
 @media (min-width:320px) and (max-width:599px){
-h1{font-size:3.2rem;line-height:4rem;letter-spacing:0;font-family:Google Sans,Arial,sans-serif;}
+h1{font-size:3.2rem;line-height:4rem;letter-spacing:0;font-family:'TeachableSans-Regular';}
 }
 @media (min-width:600px) and (max-width:1023px){
-h1{font-size:3.6rem;line-height:4.4rem;letter-spacing:0;font-family:Google Sans Display,Arial,sans-serif;}
+h1{font-size:3.6rem;line-height:4.4rem;letter-spacing:0;font-family:'TeachableSans-Regular';}
 }
 h2{font-size:3.2rem;font-weight:400;line-height:4rem;letter-spacing:0;}
 @media (min-width:320px) and (max-width:599px){
@@ -392,8 +392,8 @@ h2{font-size:2.4rem;line-height:3.2rem;}
 }
 h4{font-size:1.8rem;font-weight:400;line-height:2.8rem;letter-spacing:0;}
 h5{font-size:1.6rem;font-weight:500;line-height:2.6rem;letter-spacing:0;}
-.btn--primary{background:#1a73e8;color:#fff;}
-.btn--primary:focus,.btn--primary:hover{background:#174ea6;}
+.btn--primary{background:#4d90cc;color:#fff;}
+.btn--primary:focus,.btn--primary:hover{background:#6aace6;}
 .btn--primary:disabled{cursor:default;background:#dadce0;color:#fff;}
 .btn--primary:after{background:rgba(0,0,0,.4);}
 .btn--flat{border-radius:0;background:none;color:#1a73e8;padding:10px;line-height:1em;}
@@ -403,10 +403,10 @@ h5{font-size:1.6rem;font-weight:500;line-height:2.6rem;letter-spacing:0;}
 .btn--flat:after{background:rgba(0,0,0,.1);}
 [class^=btn],button.btn{transition:background-color .2s,color .2s;}
 button.btn{border:none;}
-[class^=btn],button.btn{font-family:Google Sans,Arial,sans-serif;}
-[class^=btn]{border-radius:2px;cursor:pointer;font-size:16px;font-weight:500;letter-spacing:.5px;line-height:26px;padding:10px 24px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;outline:0;border:0;box-sizing:border-box;position:relative;overflow:hidden;text-align:center;}
+[class^=btn],button.btn{font-family:'TeachableSans-Regular';}
+[class^=btn]{border-radius:25px;cursor:pointer;font-size:16px;font-weight:500;letter-spacing:.5px;line-height:26px;padding:10px 24px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;outline:0;border:0;box-sizing:border-box;position:relative;overflow:hidden;text-align:center;}
 @media (max-width:1023px){
-[class^=btn]{border-radius:2px;font-size:14px;font-weight:500;letter-spacing:.75px;line-height:20px;padding:13px 24px;}
+[class^=btn]{border-radius:25px;font-size:14px;font-weight:500;letter-spacing:.75px;line-height:20px;padding:13px 24px;}
 }
 .cols{display:flex;flex-direction:row;flex-wrap:wrap;margin:-12px;}
 .col{margin:12px;}
@@ -541,7 +541,7 @@ button.btn{border:none;}
                             <div class="certificate-banner__content__wrapper">
                                 <span class="certificate-banner__content__text">Certification incluse</span>
                                 <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="100%" height="100%" viewBox="0 0 150 398" preserveAspectRatio="none">
-                                    <path d="M41.1003 199L150 398H0V0h150z" fill="#FBBC05" fill-rule="nonzero"></path>
+                                    <path d="M41.1003 199L150 398H0V0h150z" fill="#4d90cc" fill-rule="nonzero"></path>
                                 </svg>
                             </div>
                         </div>

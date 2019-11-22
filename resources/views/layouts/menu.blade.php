@@ -136,10 +136,10 @@
         <ul class="new-homepage-footer-links">
           <h4>Plus</h4>
           <li>
-            <a href="https://blog.oschoolelearning.com/?page_id=4400" target="_blank">Conditions</a>
+            <a href="https://blog.oschoolelearning.com/condition/" target="_blank">Conditions</a>
           </li>
           <li>
-            <a href="https://blog.oschoolelearning.com/?page_id=4402" target="_blank">Confidentialité</a>
+            <a href="https://blog.oschoolelearning.com/confidentialite/" target="_blank">Confidentialité</a>
           </li>
           <li>
             <a href="https://blog.oschoolelearning.com/?page_id=4300" target="_blank">Contactez-nous</a>

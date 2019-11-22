@@ -30,7 +30,7 @@ select{background:#fff!important;}
 *{box-sizing:border-box;}
 :before,:after{box-sizing:border-box;}
 html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0);}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
+body{font-family:'TeachableSans-Regular'!important;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
 input,button,select{font-family:inherit;font-size:inherit;line-height:inherit;}
 a{color:#428bca;text-decoration:none;}
 a:hover,a:focus{color:#2a6496;text-decoration:underline;}
@@ -115,8 +115,8 @@ input[type=checkbox]:focus{outline:thin dotted;outline:5px auto -webkit-focus-ri
 .hidden{display:none!important;visibility:hidden!important;}
 }
 /*! CSS Used from: https://themes2.teachablecdn.com/themecss/production/base.css?_=0e34779b46fb&brand_course_heading=%23ffffff&brand_heading=%232b3636&brand_homepage_heading=%23ffffff&brand_navbar_fixed_text=%23ffffff&brand_navbar_text=%23ffffff&brand_primary=%23000000&brand_secondary=%2339719a&brand_text=%232b3636&logged_out_homepage_background_image_overlay=0.84&logged_out_homepage_background_image_url=https%3A%2F%2Fd2vvqscadf4c1f.cloudfront.net%2Fb7yh7DKMSKeGh9UPYbDI_CardSpring.jpg */
-.btn-primary,.btn-primary:active,.btn-primary:focus{background:#39719a!important;border:1px solid #39719a!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
-.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#326387!important;border:1px solid #326387!important;color:#fff;}
+.btn-primary,.btn-primary:active,.btn-primary:focus{background:#4d90cc!important;border:1px solid #4d90cc!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
+.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#6aace6!important;border:1px solid #6aace6!important;color:#fff;}
 @media screen and (max-width: 767px){
 .btn-primary,.btn-primary:active,.btn-primary:focus{font-size:15px;}
 }
