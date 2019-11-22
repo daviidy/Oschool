@@ -400,7 +400,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 .nav-menu .create-course:hover{background:rgba(255,255,255,0.4);transition:all 0.5s ease;}
 }
 
-@if(\Route::current()->getName() == 'path.slug')
+@if($course->type == 'path' || $course->type == 'bootcamp')
 .navbar-course-hero.is-at-top .navbar-brand, .navbar-course-hero.is-at-top a.fedora-navbar-link {
     color: #000 !important;
 }

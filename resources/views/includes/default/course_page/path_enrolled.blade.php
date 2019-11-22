@@ -3,6 +3,10 @@
 
 <style media="screen">
 /*! CSS Used from: Embedded */
+p{
+    font-size: 16px;
+    font-family: 'Google sans';
+}
 md-input-container .md-input{color:rgba(0,0,0,0.87);border-color:rgba(0,0,0,0.12);}
 md-input-container .md-input:-moz-placeholder,md-input-container .md-input::-moz-placeholder{color:rgba(0,0,0,0.38);}
 md-input-container .md-input:-ms-input-placeholder{color:rgba(0,0,0,0.38);}
