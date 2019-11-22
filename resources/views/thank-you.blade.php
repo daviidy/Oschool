@@ -703,7 +703,7 @@
 
 
 
-                  <p style="text-align:center;"><a id="" class="_nomargin btn-solid btn-medium btn-orange" href="https://dashboard.mindvalley.com">COMMENCEZ MAINTENANT »</a></p>
+                  <p style="text-align:center;"><a id="" class="_nomargin btn-solid btn-medium btn-orange" href="{{url('schools')}}">COMMENCEZ MAINTENANT »</a></p>
                 </div>
 
 
@@ -846,7 +846,7 @@
                           cours</span></div>
 
                       <div class="content-numbered bg-grey" data-number="2">
-                        <p>Visitez <a href="/">oschool.ci</a> et connectez-vous pour accéder à votre programme.</p>
+                        <p>Visitez <a href="/">oschoolelearning.com</a> et connectez-vous pour accéder à votre programme.</p>
                       </div>
 
                     </div>
@@ -868,7 +868,7 @@
 
 
 
-                <p style="text-align:center;" class="_nomarginbottom"><a id="" class="btn-solid btn-medium btn-orange _nomargin" href="https://dashboard.mindvalley.com">COMMENCEZ MAINTENANT »</a></p>
+                <p style="text-align:center;" class="_nomarginbottom"><a id="" class="btn-solid btn-medium btn-orange _nomargin" href="{{url('schools')}}">COMMENCEZ MAINTENANT »</a></p>
               </div>
             </div>
           </div>
@@ -949,8 +949,8 @@
           <img src="/images/schools/logos/oschool_2.png" alt="">
           <span class="terms">
             <span class="date">© 2019 OSCHOOL. TOUS DROITS RÉSERVÉS.</span> <span>|</span>
-            <a href="http://www.mindvalley.com/terms-of-use" class="_blank _legal" target="_blank">Conditions d'utilisation</a> <span>|</span>
-            <a href="http://www.mindvalley.com/privacy-policy" class="_blank _legal" target="_blank">Politique de confidentialité</a>
+            <a href="https://blog.oschoolelearning.com/condition/" class="_blank _legal" target="_blank">Conditions d'utilisation</a> <span>|</span>
+            <a href="https://blog.oschoolelearning.com/confidentialite/" class="_blank _legal" target="_blank">Politique de confidentialité</a>
           </span>
         </p>
       </div>

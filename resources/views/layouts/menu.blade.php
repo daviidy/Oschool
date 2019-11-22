@@ -88,7 +88,6 @@
               <li class="dropdown-only"><a href="{{route('login')}}">Salle de classe</a></li>
               <!--li class="dropdown-only"><a href="/login?src=nav">Entreprises</a></li-->
               <li><a href="{{url('schools')}}">Nos écoles</a></li>
-              <li><a href="/who_is">Qui sommes nous?</a></li>
               <li><a href="/event">Evénements</a></li>
               <li><a href="/corporate">Entreprises</a></li>
               <!--li><a href="/blog/resources">Blog</a></li-->
@@ -128,6 +127,9 @@
             <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/?page_id=4404">FAQ</a>
           </li>
           <li>
+            <a target="_blank" rel="noopener noreferrer" href="">Qui sommes nous?</a>
+          </li>
+          <li>
             <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/hhbzcHE">La communauté</a>
           </li>
 
@@ -137,10 +139,10 @@
         <ul class="new-homepage-footer-links">
           <h4>Plus</h4>
           <li>
-            <a href="https://blog.oschoolelearning.com/?page_id=4400" target="_blank">Conditions</a>
+            <a href="https://blog.oschoolelearning.com/condition/" target="_blank">Conditions</a>
           </li>
           <li>
-            <a href="https://blog.oschoolelearning.com/?page_id=4402" target="_blank">Confidentialité</a>
+            <a href="https://blog.oschoolelearning.com/confidentialite/" target="_blank">Confidentialité</a>
           </li>
           <li>
             <a href="https://blog.oschoolelearning.com/?page_id=4300" target="_blank">Contactez-nous</a>
