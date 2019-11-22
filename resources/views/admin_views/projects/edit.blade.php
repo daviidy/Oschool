@@ -1362,7 +1362,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                     <div id="bloc-task" class="multiple-choice">
                         <!---->
                         <br>
-                        <p><a class="add-option" style="cursor: pointer;">Ajouter option de réponse</a></p>
+                        <p><a class="add-task" style="cursor: pointer;">Ajouter une tâche</a></p>
                         <div<qq class="reponses">
 
 
@@ -1387,7 +1387,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                         <!---->
 
                     </div>
-                    <input id="add-task" value="Ajouter question" ng-disabled="!readyToAddQuestion(newQuestion)" class="tch-btn-header-primary-block">
+                    <input id="add-task" value="Ajouter toutes les tâches" ng-disabled="!readyToAddQuestion(newQuestion)" class="tch-btn-header-primary-block">
                 </div>
             </form>
             <div class="row">

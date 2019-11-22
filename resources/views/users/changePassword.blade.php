@@ -135,6 +135,12 @@ p{font-size:18px;font-weight:200;line-height:28px;}
                 @if(session('status'))
                 <div id="form-success" class="alert alert-success" role="alert">Votre mot de passe a été mis à jour.</div>
                 @endif
+                @if(session('error_current'))
+                <div id="form-danger" class="alert alert-danger" role="alert">Votre mot de passe actuel est incorrect.</div>
+                @endif
+                @if(session('error'))
+                <div id="form-danger" class="alert alert-danger" role="alert">Votre mot de passe de confirmation est incorrect.</div>
+                @endif
                 <div id="form-success" class="alert alert-success hidden" role="alert">You have successfully confirmed your email address.</div>
                 <div id="form-confirmation" class="alert alert-success hidden" role="alert">
                     A confirmation email has been sent to: <span id="unconfirmed_email"></span>. Please confirm your email address.
@@ -144,7 +150,7 @@ p{font-size:18px;font-weight:200;line-height:28px;}
                     Please fix the errors below.
                     <div id="input-errors"></div>
                 </div>
-                
+
 
                 <div class="form-group">
                     <label class="control-label" for="current-edit-user-password">
@@ -168,7 +174,7 @@ p{font-size:18px;font-weight:200;line-height:28px;}
                         <input class="form-control" id="confirm-edit-user-password" maxlength="100" name="password_confirmation" placeholder="********" required="required" type="password" >
                         <span class="input-icon"></span>
                     </div>
-                
+
                     {{-- <label class="control-label" for="edit-user-password">
                         Votre nouveau mot de passe
                     </label>
@@ -176,7 +182,7 @@ p{font-size:18px;font-weight:200;line-height:28px;}
                         <input disabled class="form-control" id="edit-user-password" maxlength="100" name="password" placeholder="********" required="required" type="password">
                         <span class="input-icon"></span>
                     </div>
-                
+
                     <label class="control-label" for="c-edit-user-password">
                         Confirmer votre nouveau mot de passe
                     </label>

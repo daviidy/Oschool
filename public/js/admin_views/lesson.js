@@ -32,6 +32,20 @@ $(document).ready(function(){
       ");
     });
 
+    $('.add-task').on('click', function(){
+      $(this).parents('.multiple-choice').append("<div class='reponses'>\
+                            <div class='input-group'>\
+                                <input placeholder='Tâche à effectuer' name='text_question' class='text_question_quiz form-control multiple-choice-answer-input ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched' style=''>\
+                                <input type='hidden' name='option_id' value = ''>\
+                                <div ng-if='newQuestion.answers.length > 1' class='input-group-btn left-10' style=''>\
+                                    <button type='button' tabindex='-1' class='answer-remove tch-btn-content-danger fastclickable'><i class='fa fa-remove'></i></button>\
+                                  </div>\
+                            </div>\
+                            <p></p>\
+                        </div>\
+      ");
+    });
+
     $('.edit-option').on('click', function(){
       $(this).parents('.multiple-choice').append("<div class='reponses'>\
                             <div class='input-group'>\
