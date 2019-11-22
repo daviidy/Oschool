@@ -279,13 +279,19 @@ Route::get('/ajax_course_search/{school}', 'LiveSearchController@action');
 
 Auth::routes(['verify' => true]);
 
-
+//login by social network
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('login/gmail', 'Auth\LoginController@redirectToProviderGmail');
 Route::get('login/gmail/callback', 'Auth\LoginController@handleProviderCallbackGmail');
+
+Route::get('login/linkedin', 'Auth\LoginController@redirectToProviderLinkedin');
+Route::get('login/linkedin/callback', 'Auth\LoginController@handleProviderCallbackLinkedin');
+
+Route::get('login/github', 'Auth\LoginController@redirectToProviderGithub');
+Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallbackGithub');
 
 
 //user change password
