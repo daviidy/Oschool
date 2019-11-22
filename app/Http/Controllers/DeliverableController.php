@@ -7,6 +7,7 @@ use App\Project;
 use App\School;
 use App\Course;
 use App\User;
+use App\Task;
 use Auth;
 use DB;
 use Illuminate\Http\Request;
@@ -88,8 +89,21 @@ class DeliverableController extends Controller
     public function update(Request $request, Deliverable $deliverable)
     {
         $deliverable->update($request->all());
+        $user = User::find($request->user_id);
+        foreach ($request->task_id as $task_id) 
+        {   
+            
+            $task = Task::find($task_id);
+            if($user->tasks->contains($task->id)){
+                $user->tasks()->sync($task);
+            }
+            else
+            {
+                $user->tasks()->attach($task);
+            }
+        }
         $deliverable->save();
-        return back()->with('status', 'Commentaire ajouté');
+        return back()->with('status', 'Evaluation ajouté');
     }
 
 
