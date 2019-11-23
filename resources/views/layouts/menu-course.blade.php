@@ -534,10 +534,10 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
                 </a>
               </li>
 
-              
+
               <li>
                 <a class="fedora-navbar-link navbar-link" href="/blog" target="">
-                  Evernements
+                  Evénements
                 </a>
               </li>
 

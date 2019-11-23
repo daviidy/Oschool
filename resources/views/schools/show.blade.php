@@ -59,7 +59,7 @@
     <div class="col-xs-12 vertically-align-contents-except-xs">
       <div class="hero-text hero-text-center">
           @if($school->heading)
-          <h1>{{$school->name}}: {{$school->heading}}</h1>
+          <h1>{{$school->name}}: {{lcfirst($school->heading)}}</h1>
           @else
           <h1>Les meilleurs formateurs et Université d'afrique construisent leurs cours en ligne sur Oschool</h1>
           @endif
@@ -152,7 +152,7 @@
         <div class="row">
           @if(count($school->courses) > 0)
             @foreach($school->courses as $course)
-                @if($course->type == 'course')
+                @if($course->type == 'course' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
               <div class="school-card">
@@ -166,7 +166,7 @@
               </div>
             </a>
           </div>
-          @endif
+            @endif
           @endforeach
           @else
           <div class="row">
@@ -232,7 +232,7 @@
         <div class="row">
           @if(count($school->courses) > 0)
             @foreach($school->courses as $course)
-                @if($course->type == 'path')
+                @if($course->type == 'path' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
               <div class="school-card">
@@ -313,7 +313,7 @@
         <div class="row">
           @if(count($school->courses) > 0)
             @foreach($school->courses as $course)
-                @if($course->type == 'bootcamp')
+                @if($course->type == 'bootcamp' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
               <div class="school-card">
