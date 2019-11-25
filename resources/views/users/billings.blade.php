@@ -114,7 +114,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
                                 <th>Action</th>
                             </tr>
                             @foreach(Auth::user()->courses as $course)
-                            @if($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé'))
+                            @if(count($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')) > 0)
                             @if($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')->first()->pricing->type == 'Abonnement')
 
                             <tr data-v-3e7bb260="">
@@ -139,7 +139,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
 
                             <!--si on a affaire a un plan de paiement-->
                             @foreach(Auth::user()->courses as $course)
-                            @if($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé'))
+                            @if(count($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')) > 0)
                             @if($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')->first()->pricing->type == 'Plan de paiement')
 
                             <tr data-v-3e7bb260="">
@@ -192,6 +192,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
                             <th>Statut</th>
                         </tr>
                         @foreach(Auth::user()->courses as $course)
+                        @if(count($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')) > 0)
                         @foreach($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé') as $purchase)
                         <tr data-v-3e7bb260="">
                             <td data-v-3e7bb260="" class="order"><a data-v-3e7bb260="" href="/api/v2/invoices/download?id=2c92a0fe6ccd01e7016cf2303dcc16d0">
@@ -211,6 +212,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
                             </td>
                         </tr>
                         @endforeach
+                        @endif
                         @endforeach
                     </table>
                 </div>
