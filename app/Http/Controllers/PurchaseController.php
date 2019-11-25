@@ -125,7 +125,7 @@ class PurchaseController extends Controller
                 $temps = date("YmdHis");
               $params = array('cpm_amount' => $price,
                               'cpm_currency' => 'CFA',
-                              'cpm_site_id' => '585421',
+                              'cpm_site_id' => '113043',
                               'cpm_trans_id' => $temps,
                               'cpm_trans_date' => $time,
                               'cpm_payment_config' => 'SINGLE',
