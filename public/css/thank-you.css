@@ -246,7 +246,7 @@ footer{text-align:left!important;font-size:14px;font-size:0.875rem;line-height:2
 span.caps{display:inline;}
 .videoWrapper{position:relative;padding-bottom:56.25%;height:0;}
 .videoWrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
-.bg-access{background:url("https://s5.mindvalley.us/mindvalley/media/images/product-access_06.jpg") no-repeat center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+.bg-access{background:#4D90CC;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
 .bg-wave{background:url("https://s6.mindvalley.us/mindvalley/media/images/bg-wave.jpg") no-repeat center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
 .l-masterclass h4{line-height:1.2em;}
 .l-masterclass h4{font-size:23px;font-size:1.4375rem;}
