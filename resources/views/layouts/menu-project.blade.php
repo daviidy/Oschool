@@ -133,7 +133,7 @@ ion-icon.hydrated.md {
                         <div class="button button--input"><i class="icon icon-copy" aria-hidden="true"></i></div>
                       </div>
                     </div>
-                    <div class="modal-button"><a href="https://www.facebook.com/groups/mindvalley.supercerveau/" class="button button--primary w-full">Go To Community</a></div>
+                    <div class="modal-button"><a href="https://discord.gg/hhbzcHE" class="button button--primary w-full">Go To Community</a></div>
                   </div>
                 </div>
               </div>
