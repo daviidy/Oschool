@@ -333,7 +333,7 @@ button:focus{outline:none;}
           <div id="modal" class="modal rounded-t-lg ">
             <div class="modal-cover rounded-t-lg ">
               <div class="coverWrapper rounded-t-lg rounded-b-none">
-                <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;https://assets.mindvalley.com/api/v1/assets/82215914-053d-4123-ad79-ab8d36589712.jpg&quot;);"></div>
+                <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div>
               </div>
               <div class="modal-coverButton">
                 <div class="button button--round"><i class="icon icon-window-close" aria-hidden="true"></i></div>
@@ -341,7 +341,7 @@ button:focus{outline:none;}
             </div>
             <div class="modal-contents">
               <div class="modal-headline">
-                {{-- <div class="logo" style="background-image: url(&quot;http://platform.mindvalley.com/images/facebook-logo-fcffd6148ae561d4eaba1bf6dfb9430a.png?vsn=d&quot;);"></div> --}}
+                {{-- <div class="logo" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div> --}}
                 <h3 class="text-2xl ml-2 mt-1">Soumission de projet</h3>
               </div>
               <div class="modal-input"><span class="mb-2">Veuillez copier les liens de votre projet</span>
@@ -370,7 +370,7 @@ button:focus{outline:none;}
                   <div id="modal" class="modal rounded-t-lg ">
                       <div class="modal-cover rounded-t-lg ">
                           <div class="coverWrapper rounded-t-lg rounded-b-none">
-                              <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;https://assets.mindvalley.com/api/v1/assets/82215914-053d-4123-ad79-ab8d36589712.jpg&quot;);"></div>
+                              <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div>
                           </div>
                           <div class="modal-coverButton">
                               <div class="button button--round again"><i class="icon icon-window-close" aria-hidden="true"></i></div>
@@ -378,7 +378,7 @@ button:focus{outline:none;}
                       </div>
                       <div class="modal-contents">
                           <div class="modal-headline">
-                              {{-- <div class="logo" style="background-image: url(&quot;http://platform.mindvalley.com/images/facebook-logo-fcffd6148ae561d4eaba1bf6dfb9430a.png?vsn=d&quot;);"></div> --}}
+                              {{-- <div class="logo" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div> --}}
                               <h3 class="text-2xl ml-2 mt-1">Re-soumission de projet</h3>
                           </div>
 {{--                          <div class="modal-input"><span class="mb-2">Veuillez copier les liens de votre projet</span>--}}
@@ -402,7 +402,8 @@ button:focus{outline:none;}
         {{-- Submit doc end --}}
       <div class="navbar">
         <div class="navbar-container">
-          <div class="navbar-leftNavigation"><a href="/course/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour au parcours</span></a>
+          <div class="navbar-leftNavigation">
+              <a href="/{{$course->type == 'course' ? 'course' : 'path'}}/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour au parcours</span></a>
           </div>
           <div class="navbar-title">
             Jour 22
@@ -423,18 +424,16 @@ button:focus{outline:none;}
                     <strong>{{ $message }}</strong>
                 </div>
             @endif
-                @if(Auth::user()->deliverables)
+                @if(count(Auth::user()->deliverables->where('project_id', $project->id)) > 0)
 
-                  @foreach(Auth::user()->deliverables as $deliverable)
 
-                    <a target="_blank" href="{{$deliverable->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
+                    <a target="_blank" href="{{Auth::user()->deliverables->where('project_id', $project->id)->first()->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
                       <div class="module-progress-card__icon">
                           <img src="/images/divers/resource_icon.png" alt="Les opportunités qu'offre Internet">
                       </div>
                       <h4 class="module-progress-card__title">Le lien de votre projet</h4>
                     </a>
 
-                  @endforeach
 
 
 
@@ -483,12 +482,14 @@ button:focus{outline:none;}
           <!---->
         </div>
 
-        @if($deliverable->comment)
+        @if(count(Auth::user()->deliverables->where('project_id', $project->id)) > 0)
+        @if(Auth::user()->deliverables->where('project_id', $project->id)->first()->comment)
         <div style="width: 60%; margin: auto;" class="_e3fbcfb">
             <div class="_35af145"><img width="200" src="https://oschoolelearning.com/images/divers/feature1.png"></div>
             <h2 class="_7ca935a0"><span>Commentaire sur votre travail</span></h2>
-            <p class="_1f67b618">{!!$deliverable->comment!!}</p>
+            <p class="_1f67b618">{!!Auth::user()->deliverables->where('project_id', $project->id)->first()->comment!!}</p>
         </div>
+        @endif
         @endif
 
 
