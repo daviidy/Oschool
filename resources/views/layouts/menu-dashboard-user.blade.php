@@ -54,7 +54,7 @@
                         <!--menu for smartphone view-->
                         <ul class="nav navbar-nav">
                             @if(Auth::user()->isAdmin())
-                            <li class="nav-item-create">
+                            <li class="nav-item-dashboard">
                                 <a href="/user/admin">Tableau de bord admin</a>
                             </li>
                             @endif
@@ -104,7 +104,7 @@
                 <!--laptop menu view-->
                 <ul class="nav nav-sidebar">
                     @if(Auth::user()->isAdmin())
-                    <li class="nav-item-create">
+                    <li class="nav-item-dashboard">
                         <a href="/user/admin">Tableau de bord admin</a>
                     </li>
                     @endif

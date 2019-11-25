@@ -4,6 +4,7 @@
 @section('content')
 
 <style media="screen">
+
 /*! CSS Used from: https://home.mindvalley.com/assets/darkui-4558cb3c34b34b80e42befe8a8a15be26e7ddb11a5a44679cd0f1f90179af548.css ; media=all */
 @media all{
 a{background-color:transparent;}
@@ -67,7 +68,7 @@ td.order img[data-v-3e7bb260]{display:inline-block;margin-left:10px;width:11px;h
 .table-wrapper table tr{border-bottom:1px solid #dfdfdf;}
 .table-wrapper table tr:last-child{border-bottom:none;}
 .table-wrapper table tr.header{border-bottom:4px solid #dfdfdf;}
-.table-wrapper table tr th{font-family:Gilroy-Regular,sans-serif;font-size:14px;color:#62686e;padding:10px 5px;}
+.table-wrapper table tr th{font-family:'TeachableSans-Regular';font-size:14px;color:#62686e;padding:10px 5px;}
 @media (max-width:700px){
 .table-wrapper table tr th{display:none;}
 }
@@ -75,12 +76,12 @@ td.order img[data-v-3e7bb260]{display:inline-block;margin-left:10px;width:11px;h
 @media (max-width:700px){
 .table-wrapper table tr td{display:block;}
 }
-.empty p[data-v-bd11ec86]{font-family:Gilroy-SemiBold,sans-serif;font-size:14px;font-weight:500;line-height:18px;color:#2c313b;}
+.empty p[data-v-bd11ec86]{font-family:'TeachableSans-Regular';font-size:14px;font-weight:500;line-height:18px;color:#2c313b;}
 .empty img[data-v-bd11ec86]{margin:8px 0 22px;}
 @media (max-width:500px){
 .empty img[data-v-bd11ec86]{width:100%;}
 }
-h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-size:20px;letter-spacing:.2px;color:#333;}
+h4[data-v-bd11ec86]{margin-top:0;font-family:'TeachableSans-Regular';font-size:20px;letter-spacing:.2px;color:#333;}
 .inner-content[data-v-bd11ec86]{padding:40px;padding-bottom:20px;background-color:#fff;border-radius:4px;margin-bottom:30px;}
 @media (max-width:767px){
 .inner-content[data-v-bd11ec86]{padding:20px;}

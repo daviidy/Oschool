@@ -2663,7 +2663,7 @@ footer .powered-by .powered-by-logo {
 }
 
 .course-section ul.section-list .section-item.next-lecture .status-icon {
-    background: url("//assets.teachablecdn.com/icons/course-incomplete.png") 1px 0px #4d4d4d;
+    background: url("/images/divers/course-incomplete.png") 1px 0px #4d4d4d;
     box-shadow: inset 0px 0px 0px 2px #4d4d4d
 }
 
@@ -7110,7 +7110,8 @@ header.half-height .lecture-left .open .dropdown-toggle {
 }
 
 header.half-height .lecture-left .settings-dropdown {
-    float: right
+    float: right;
+    display: none;
 }
 
 header.half-height .lecture-left .settings-dropdown ul.dropdown-menu {

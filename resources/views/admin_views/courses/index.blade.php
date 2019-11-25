@@ -331,7 +331,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="tch-course-listing-sales tch-course-listing-footer-section">$<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
+                                    <div class="tch-course-listing-sales tch-course-listing-footer-section">Fcfa<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
                                           class="tch-course-listing-sales-total">0</div>
                                         <div class="tch-course-listing-sales-label">Ventes</div>
                                     </div>
@@ -355,7 +355,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="tch-course-listing-sales tch-course-listing-footer-section">$<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
+                                    <div class="tch-course-listing-sales tch-course-listing-footer-section">Fcfa<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
                                           class="tch-course-listing-sales-total">0</div>
                                         <div class="tch-course-listing-sales-label">Ventes</div>
                                     </div>

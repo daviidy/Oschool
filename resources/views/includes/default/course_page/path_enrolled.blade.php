@@ -540,7 +540,7 @@ button.btn{border:none;}
                 <div class="col col--8-12 col--lg-7-12 col--md-12-12 col--sm-12-12 course-hero-enrolled__content">
 
                     <div class="certificate-banner">
-                        <img src="https://learndigital.withgoogle.com/static/img/icons/ic_cert.svg" class="certificate-banner__image" role="presentation" alt="certification">
+                        <img src="/images/divers/cert.svg" class="certificate-banner__image" role="presentation" alt="certification">
                         <div class="certificate-banner__content">
                             <div class="certificate-banner__content__wrapper">
                                 <span class="certificate-banner__content__text">Certification incluse</span>
