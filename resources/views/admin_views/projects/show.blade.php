@@ -402,7 +402,8 @@ button:focus{outline:none;}
         {{-- Submit doc end --}}
       <div class="navbar">
         <div class="navbar-container">
-          <div class="navbar-leftNavigation"><a href="/course/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour au parcours</span></a>
+          <div class="navbar-leftNavigation">
+              <a href="/{{$course->type == 'course' ? 'course' : 'path'}}/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour au parcours</span></a>
           </div>
           <div class="navbar-title">
             Jour 22
