@@ -443,12 +443,12 @@
 
                                         <label for="task">Parmi les taches suivants, lesquelles l'etudiant a t-il valide ?</label>
                                             @foreach($project->tasks as $task)
-                                        <input type="checkbox" name="task_id[]" value="{{$task->id}}">{{$task->heading}} <br>
-                                        
+                                        <input {{$deliverable->user->tasks->contains($task->id) ? 'checked' : ''}} type="checkbox" name="task_id[]" value="{{$task->id}}">{{$task->heading}} <br>
+
                                             @endforeach
 
                                         <br>
-                                        
+
 
                                             <label for="status">Statut : </label>
 

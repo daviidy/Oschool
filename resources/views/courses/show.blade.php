@@ -219,12 +219,30 @@ button{line-height:inherit;}
               <input type="hidden" name="school_domain" value="https://courses.52kards.com" id="school_domain">
               <input type="hidden" name="product_id" value="7141" id="product_id">
               <input type="hidden" name="user_src" value="teachable-examples" id="user_src">
-              <a id="enroll-button-top" data-course-id="7169" class="btn btn-hg btn-primary btn-header-enroll" href="#price">
+              @auth
+              <a id="enroll-button-top" data-course-id="7169" class="btn btn-hg btn-primary btn-header-enroll" href="{{Auth::user()->courses->contains($course->id) ? '/course/enrolled/'.$course->slug : '#price'}}">
+                  @if(!Auth::user()->courses->contains($course->id))
                 <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
+                @endif
+                @if(Auth::user()->courses->contains($course->id))
+                Commencez le cours
+                @else
                 S'inscrire au cours
+                @endif
                 {{-- <span class="default-product-price product_7141">$52</span> --}}
                 <span class="coupon-price product_7141"></span>
               </a>
+              @endauth
+              @guest
+
+              <a id="enroll-button-top" data-course-id="7169" class="btn btn-hg btn-primary btn-header-enroll" href="#price">
+                <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
+                Commencez le cours
+                {{-- <span class="default-product-price product_7141">$52</span> --}}
+                <span class="coupon-price product_7141"></span>
+              </a>
+
+              @endguest
             </form>
           </div>
         </div>
@@ -264,7 +282,7 @@ button{line-height:inherit;}
 
           </p>
           <h2 style="text-align: center;"></h2>
-          <h2 style="text-align: center;">Apropos du cours<br>
+          <h2 style="text-align: center;">A propos du cours<br>
           </h2>
           <hr>
           <p style="text-align: center;">
@@ -347,8 +365,10 @@ button{line-height:inherit;}
               <ul class="section-list">
                   @if($section->lessons)
                   @foreach($section->lessons->sortBy('position') as $lesson)
+                  @if($lesson->status == 'active')
                 <li class="section-item">
-                <a class="item" href="/course/{{$lesson->section->course->slug}}/lessons/{{$lesson->slug}}">
+                  @auth
+                <a class="item" {{Auth::user()->courses->contains($course->id) ? "href=/course/".$lesson->section->course->slug."/lessons/".$lesson->slug : ''}}>
                     <span class="lecture-icon">
                       <img src="https://img.icons8.com/color/48/000000/circled-play--v1.png" width="20">
                     </span>
@@ -357,7 +377,21 @@ button{line-height:inherit;}
                     </div>
                     {{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}
                   </a>
+                    @endauth
+
+                    @guest
+                  <a class="item">
+                      <span class="lecture-icon">
+                        <img src="https://img.icons8.com/color/48/000000/circled-play--v1.png" width="20">
+                      </span>
+                      <div class="btn-primary btn-sm pull-right lecture-start">
+                        Start
+                      </div>
+                      {{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}
+                    </a>
+                      @endguest
                 </li>
+                @endif
                 @endforeach
                 @endif
 
@@ -550,13 +584,13 @@ button{line-height:inherit;}
             </h2>
           <hr>
           <p>
-            <i>“Mon passage à Oschool a été très sincèrement fructueux pour moi car cela m’a donné de l'assurance, une carrure de Pro, également j'ai eu grâce à Oschool de la maturité dans le domaine du marketing sur les réseaux sociaux, tout cela par la qualité des enseignements.”</i>-Jean Philippe Touye Bi
+            <i>“Mon passage à Oschool a été très sincèrement fructueux pour moi car cela m’a donné de l'assurance et une carrure de Pro. J'ai également eu grâce à Oschool de la maturité dans le domaine du marketing sur les réseaux sociaux, tout cela par la qualité des enseignements.”</i>-Jean Philippe Touye Bi
             </p>
             <p>
               <br>
             </p>
             <p>
-              <i>“ très bonne plateforme d'apprentissage pour les adultes…”- </i>Souleymane Coulibaly
+              <i>“Très bonne plateforme d'apprentissage pour les adultes…”- </i>Souleymane Coulibaly
             </p>
             <p>
               <br>
@@ -577,28 +611,15 @@ button{line-height:inherit;}
                      <div class="Row_nvwp6p">
                          <div class="Col_i9j08c-o_O-xsCol12_1m1ceo5-o_O-mdCol6_1rbv01c p-y-1">
                              <h2 class="m-x-0 m-b-1s"><span>Commencez à apprendre dès aujourd'hui&nbsp;!</span></h2>
-                             <h4 class="H4_1k76nzj-o_O-weightLighter_1qi0fkl-o_O-fontHeadline_1uu0gyz">
-                                 <span style="font-size: 0.875rem; color: rgb(42, 115, 204); font-weight: bold;">
-                                     <div class="rc-FinaidLink reset">
-                                         <p class="caption-text">
-                                             <button id="finaid_button" data-track="true" data-track-app="xdp_v1" data-track-page="xdp" data-track-action="click" data-track-component="finaid" class="button-link finaid-link">Aide financière
-                                                 disponible</button></p>
 
-                                     </div>
-                                 </span></h4>
                              <div class="p-y-1s">
-                                 <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc">
-                                     <svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img" aria-labelledby="Checkffee34fe-27e2-4131-c219-78ecc248c277 Checkffee34fe-27e2-4131-c219-78ecc248c277Desc" xmlns="http://www.w3.org/2000/svg"
-                                       style="fill:#4d90cc; height: 30px; width: 30px; min-width: 30px;">
-                                         <title id="Checkffee34fe-27e2-4131-c219-78ecc248c277">Check</title>
-                                         <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
-                                     </svg><span class="m-x-1 font-md text-primary">Ce cours plus la Spécialisation complète</span></div>
+
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
                                        aria-labelledby="Checka74c4708-63e0-496b-c178-c76157356839 Checka74c4708-63e0-496b-c178-c76157356839Desc" xmlns="http://www.w3.org/2000/svg"
                                        style="fill: #4d90cc; height: 30px; width: 30px; min-width: 30px;">
                                          <title id="Checka74c4708-63e0-496b-c178-c76157356839">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
-                                     </svg><span class="m-x-1 font-md text-primary">Certificats partageables</span></div>
+                                     </svg><span class="m-x-1 font-md text-primary">Certificats partageables sur LinkedIn</span></div>
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
                                        aria-labelledby="Check62d17183-60ef-4cc2-c7f5-cb8b1499a650 Check62d17183-60ef-4cc2-c7f5-cb8b1499a650Desc" xmlns="http://www.w3.org/2000/svg"
                                        style="fill: #4d90cc; height: 30px; width: 30px; min-width: 30px;">
@@ -617,6 +638,7 @@ button{line-height:inherit;}
                                          <title id="Check018f7a24-721d-48c8-9f37-964bac044908">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
                                      </svg><span class="m-x-1 font-md text-primary">Quiz pour s'exercer</span></div>
+                                     <!--
                                  <div class="Box_120drhm-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc"><svg class="SvgIcon_8wfvj4" viewBox="0 0 48 48" role="img"
                                        aria-labelledby="Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4 Check50d0bcbf-4dd5-4e9f-fcb2-10a8f027a1a4Desc" xmlns="http://www.w3.org/2000/svg"
                                        style="fill: #4d90cc; height: 30px; width: 30px; min-width: 30px;">
@@ -635,22 +657,33 @@ button{line-height:inherit;}
                                          <title id="Check9f7ef0ab-ee64-4f9d-cf2d-426b9d617985">Check</title>
                                          <polygon points="17.4333333 31.6416667 8.85833333 23.0666667 6 25.925 17.4333333 37.3583333 41.9333333 12.8583333 39.075 10" role="presentation"></polygon>
                                      </svg><span class="m-x-1 font-md text-primary">Exercices de programmation notés</span></div>
+                                -->
                              </div>
                              <div class="p-t-2">
                                  <div class="EnrollButton m-r-2">
-                                     <div class="d-inline-block"><button target="_blank" rel="nofollow" style="color: rgb(255, 255, 255); font-weight: bold; border-color: transparent;"
-                                           class="Button_1w8tm98-o_O-primary_cv02ee-o_O-md_1jvotax button_8xjif7" style="color: rgb(255, 255, 255); font-weight: bold; border-color: transparent;"><span
+                                     <div class="d-inline-block">
+                                         <a href="{{Auth::user()->courses->contains($course->id) ? '/course/enrolled/'.$course->slug : '#price'}}">
+                                         <button style="color: rgb(255, 255, 255); font-weight: bold; border-color: transparent;"
+                                           class="Button_1w8tm98-o_O-primary_cv02ee-o_O-md_1jvotax button_8xjif7" style="color: rgb(255, 255, 255); font-weight: bold; border-color: transparent;">
+                                           <span style="font-size: 22px;"
                                                class="Box_120drhm-o_O-centerJustify_1nezfbd-o_O-centerAlign_19zvu2s-o_O-displayflex_poyjc">
                                                  <div>
-                                                     <!-- react-text: 1585 -->S'inscrire gratuitement
-                                                     <!-- /react-text -->
-                                                     <div id="start-date-string" class="startdate m-t-1s rc-StartDateString font-xs"><span>Commence le sept. 27</span></div>
+
+                                                   @if(Auth::user()->courses->contains($course->id))
+                                                   Commencez le cours
+                                                   @else
+                                                   S'inscrire au cours
+                                                   @endif
+
                                                  </div>
-                                             </span></button></div>
+                                             </span>
+                                         </button>
+                                         </a>
+                                     </div>
                                  </div>
                                  <div class="m-t-1">
                                      <div class="rc-ProductMetrics">
-                                         <div class="enrolledLargeFont_16g5ucx" style="color: rgb(31, 31, 31);"><span><strong><span>64 801</span></strong><!-- react-text: 1593 -->&nbsp;déjà inscrits&nbsp;!
+                                         <div class="enrolledLargeFont_16g5ucx" style="color: rgb(31, 31, 31);"><span><strong><span>{{rand(200,500)}}</span></strong><!-- react-text: 1593 -->&nbsp;déjà inscrits&nbsp;!
                                                  <!-- /react-text --></span></div>
                                      </div>
                                  </div>
@@ -668,7 +701,7 @@ button{line-height:inherit;}
                              <div class="p-y-1">
                                  <div class="Box_120drhm-o_O-displayflex_poyjc" style="align-items: center;">
                                      <span class="m-y-1s font-sm text-xs-left text-primary" style="max-width: 430px;">
-                                         Vous pouvez partager vos Les Certificats de Cours dans
+                                         Vous pouvez partager vos certificats de cours dans
                                          la section Certifications de votre profil LinkedIn, sur des CV imprimés, ou d'autres documents.</span>
                                  </div>
 
@@ -738,9 +771,15 @@ button{line-height:inherit;}
               margin: 0 auto;
           ">
                 <br>
-                <a id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" href="#price"value="Enroll in Course for $52">
+                <a id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" href="{{Auth::user()->courses->contains($course->id) ? '/course/enrolled/'.$course->slug : '#price'}}">
+                  @if(!Auth::user()->courses->contains($course->id))
                   <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
+                  @endif
+                  @if(Auth::user()->courses->contains($course->id))
+                  Commencez le cours
+                  @else
                   S'inscrire au cours
+                  @endif
                   <span class="coupon-price product_7141"></span>
                 </a>
                 <br>
@@ -752,6 +791,7 @@ button{line-height:inherit;}
     </div>
 
   </div>
+  @if(!Auth::user()->courses->contains($course->id))
   <section class="pricing py-5" id="price">
     <div class="container">
       <h1 class="title-price">Nos offres de prix</h1>
@@ -762,8 +802,15 @@ button{line-height:inherit;}
           <div class="card mb-5 mb-lg-0">
             <div class="card-body">
               <h5 class="card-title text-muted text-uppercase text-center">{{$pricing->name}}</h5>
-            <h6 class="card-price text-center">{{$pricing->type == 'Free' ? '0' : $pricing->price}} FCFA <span class="period">/ {{$pricing->per == 'month' ? 'Mois' : ''}}</span></h6>
+            <h6 class="card-price text-center">{{$pricing->type == 'Free' ? '0' : number_format($pricing->price, 0, '.', ' ')}} FCFA <span class="period"> {{$pricing->per == 'month' ? '/ Mois' : ''}} {{$pricing->per == 'year' ? '/ Année' : ''}}</span></h6>
               <hr>
+              @if($pricing->type == 'Plan de paiement')
+              Vous paierez cette somme {{$pricing->times}} fois
+              <hr>
+              @endif
+              {!!$pricing->description!!}
+              <br>
+              <br>
               <!--
               <ul class="fa-ul">
                 <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Un seul utilisateur</li>
@@ -781,6 +828,7 @@ button{line-height:inherit;}
       </div>
     </div>
   </section>
+  @endif
 
   <br>
 </div>

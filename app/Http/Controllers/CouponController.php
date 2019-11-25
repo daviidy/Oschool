@@ -113,7 +113,7 @@ class CouponController extends Controller
         $course = Course::find($request->course_id);
         $pricing = Pricing::find($request->pricing_id);
 
-        if ($coupon === null) {
+        if ($coupon === null || !$coupon->courses->contains($course->id)) {
             return redirect('/course/'.$course->slug.'/checkout/'.$pricing->id)->with('status', 'Coupon Invalide');
         }
         else {

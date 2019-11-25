@@ -1122,8 +1122,12 @@ button,html [type=button]{-webkit-appearance:button;}
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">{{$pricing->name}}</h5>
-              <h6 class="card-price text-center">{{$pricing->price}} FCFA <span class="period">/ {{$pricing->per == 'month' ? 'Mois' : ''}}</span></h6>
+              <h6 class="card-price text-center">{{$pricing->type == 'Free' ? '0' : number_format($pricing->price, 0, '.', ' ')}} FCFA <span class="period">/ {{$pricing->per == 'month' ? 'Mois' : ''}}</span></h6>
                 <hr>
+                {!!$pricing->description!!}
+                  <br>
+                  <br>
+                <!--
                 <ul class="fa-ul">
                   <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Un seul utilisateur</li>
                   <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Mentoring</li>
@@ -1131,6 +1135,7 @@ button,html [type=button]{-webkit-appearance:button;}
                   {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li> --}}
                   {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li> --}}
                 </ul>
+            -->
                 <a href="/course/{{$course->slug}}/checkout/{{$pricing->id}}" class="btn btn-block btn-primary text-uppercase">S'inscrire</a>
               </div>
             </div>
@@ -1144,7 +1149,7 @@ button,html [type=button]{-webkit-appearance:button;}
     <section class="course-detail__section course-detail__success-stories content__container--full-width">
         <div class="content__wrapper">
             <h2 class="course-detail__section__title">Témoignages</h2>
-            <p class="course-detail__section__description">Plus de 300&nbsp;000&nbsp;personnes ont déjà obtenu cette qualification, qui leur permet de développer et d'améliorer leur situation professionnelle.</p>
+            <p class="course-detail__section__description">Plus de {{number_format(rand(2000,5000), 0, '.', ' ')}} personnes ont déjà obtenu cette qualification, qui leur permet de développer et d'améliorer leur situation professionnelle.</p>
 
 
             <div class="success-stories">

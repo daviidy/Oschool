@@ -170,6 +170,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
       <ul class="section-list">
         @if($section->lessons)
         @foreach($section->lessons->sortBy('position') as $section_lesson)
+        @if($section_lesson->status == 'active')
         @if(Auth::user()->lessons->contains($section_lesson->id))
         <li class="section-item completed unlocked-lecture">
             <a class="item" data-no-turbolink="true" href="/course/{{$lesson->course->slug}}/lessons/{{$section_lesson->slug}}" id="sidebar_link_10371330">
@@ -206,6 +207,7 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
             </div>
           </a>
         </li>
+        @endif
         @endif
 
         @endforeach

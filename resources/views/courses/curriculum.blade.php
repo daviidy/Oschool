@@ -153,6 +153,7 @@
 
         @if($section->lessons)
         @foreach($section->lessons->sortBy('position') as $lesson)
+        @if($lesson->status == 'active')
         @if(Auth::user()->lessons->contains($lesson->id))
         <li class="section-item completed unlocked-lecture" data-lecture-id="10371330">
             <a class="item" data-no-turbolink="true" href="/course/{{{$course->slug}}}/lessons/{{$lesson->slug}}/">
@@ -185,6 +186,7 @@
             </div>
           </a>
         </li>
+        @endif
         @endif
         @endforeach
         @endif

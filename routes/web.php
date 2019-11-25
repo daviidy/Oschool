@@ -220,12 +220,8 @@ Route::get('/path/{slugCourse}/projects/{slug}', 'CourseController@showPath');
 //pour les achats
 Route::post('/notify', 'PurchaseController@notify')->name('notify');
 Route::post('renew', 'PurchaseController@renew');
-Route::post('/thank-you', function () {
-    return view('thank-you');
-});
-Route::get('/thank-you', function () {
-    return view('thank-you');
-});
+Route::post('/thank-you', 'PurchaseController@thankYou');
+Route::get('/thank-you', 'PurchaseController@thankYou');
 
 
 //make user subscribe for free

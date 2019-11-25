@@ -44,29 +44,14 @@
                                     <div class="spc__summary-item spc--text-light">
                                         Type: {{$pricing->type}}
                                     </div>
-                                    @auth
+
                                     <div class="spc__summary-item text-right mono">
                                         @if($pricing->times)
-                                        Vous paierez cette somme
-                                        @if(count($pricing->course->purchases->where('user_id', Auth::user()->id)->where('status','Validé')) > 0)
-                                        {{$pricing->course->purchases->where('user_id', Auth::user()->id)->first()->pricing->times - count($pricing->course->purchases->where('user_id', Auth::user()->id)->where('status','Validé'))}} fois
-                                        @else
-                                        {{$pricing->times}} fois
-                                        @endif
+                                        Il reste à payer cette somme {{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->times - count($course->purchases->where('user_id', Auth::user()->id))}} fois
                                         @elseif($pricing->per)
                                         Par {{$pricing->per == 'month' ? 'mois': 'année'}}
                                         @endif
                                     </div>
-                                    @endauth
-                                    @guest
-                                    <div class="spc__summary-item text-right mono">
-                                        @if($pricing->times)
-                                        Vous paierez cette somme {{$pricing->times}} fois
-                                        @elseif($pricing->per)
-                                        Par {{$pricing->per == 'month' ? 'mois': 'année'}}
-                                        @endif
-                                    </div>
-                                    @endguest
 
 
                                 </div>

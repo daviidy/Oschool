@@ -28,6 +28,13 @@ class PurchaseController extends Controller
       return view('achats.index', ['achats' => $purchases]);
     }
 
+    public function thankYou()
+    {
+        if (Auth::check()) {
+            return view('thank-you');
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -45,6 +52,7 @@ class PurchaseController extends Controller
 
     //recuperation des infos utilisateur a envoyer
     //a la page de paiement
+    //pour les nouveaux paiements
 
     /**
      * Display the specified resource.

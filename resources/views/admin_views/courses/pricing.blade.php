@@ -324,7 +324,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                             <!---->
                             <!---->
-                            <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Gratuit</span>
+                            <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">{{$pricing->type}}</span>
                             <!---->
                         </td>
                         <td what="name">{{$pricing->name}}</td>

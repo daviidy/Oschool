@@ -110,7 +110,8 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
                                 <th>Type de la formule</th>
                                 <th>Prochaine date de paiement</th>
                                 <th>Montant à payer</th>
-                                <th>Methode de paiement</th>
+                                <th>Méthode de paiement</th>
+                                <th>Action</th>
                             </tr>
                             @foreach(Auth::user()->courses as $course)
                             @if($course->purchases->where('user_id', Auth::user()->id))
@@ -121,12 +122,16 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
                                         {{ucfirst($course->name)}}
                                         <img data-v-3e7bb260="" src="https://s92.mindvalley.us/mindvalley/media/images/ico-pdf.svg" alt="Invoice"></a>
                                 </td>
-                                <td data-v-3e7bb260="">2019-09-02</td>
-                                <td data-v-3e7bb260="">Super Cerveau (2 Septembre 2019)</td>
-                                <td data-v-3e7bb260="">USD 129.0</td>
-                                <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->last()->date}} + 30 jours</td>
+                                <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->type}}</td>
+
+                                <td data-v-3e7bb260="">{{Carbon\Carbon::parse($course->purchases->where('user_id', Auth::user()->id)->last()->date)->addDays(30)}}</td>
                                 <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->price}} FCFA</td>
                                 <td data-v-3e7bb260="">Mobile money</td>
+                                <td data-v-3e7bb260="">
+                                    <a data-v-669dc8b3="" data-v-bd11ec86="" href="/course/{{$course->slug}}/checkout/{{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->id}}" class="centered-button">
+                                        Se réabonner
+                                    </a>
+                                </td>
 
                             </tr>
                             @endif
@@ -144,16 +149,20 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
                                         <img data-v-3e7bb260="" src="https://s92.mindvalley.us/mindvalley/media/images/ico-pdf.svg" alt="Invoice"></a>
                                 </td>
                                 <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->type}}</td>
-                                <td data-v-3e7bb260="">{{$course->purchases->where('user_id', Auth::user()->id)->last()->date}} + 30 jours</td>
+                                <td data-v-3e7bb260="">{{Carbon\Carbon::parse($course->purchases->where('user_id', Auth::user()->id)->last()->date)->addDays(30)}}</td>
                                 <td data-v-3e7bb260="">
-                                    @if($course->purchases->where('user_id', Auth::user()->id)->first()->pricing->times - count($course->purchases->where('user_id', Auth::user()->id)) == 0)
+                                    @if($course->purchases->where('user_id', Auth::user()->id)->first()->pricing->times - count($course->purchases->where('user_id', Auth::user()->id)->where('status','Validé')) == 0)
                                     Il ne reste plus rien à payer
                                     @else
                                     {{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->price}} FCFA
                                     @endif
                                 </td>
                                 <td data-v-3e7bb260="">Mobile money</td>
-
+                                <td data-v-3e7bb260="">
+                                    <a data-v-669dc8b3="" data-v-bd11ec86="" href="/course/{{$course->slug}}/checkout/{{$course->purchases->where('user_id', Auth::user()->id)->first()->pricing->id}}" class="centered-button">
+                                        Se réabonner
+                                    </a>
+                                </td>
 
                             </tr>
                             @endif
@@ -167,9 +176,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:Gilroy-SemiBold,sans-serif;font-siz
 
 
 
-            <a data-v-669dc8b3="" data-v-bd11ec86="" href="/discover" class="centered-button">
-                Voir nos écoles
-            </a>
+
         </div>
         <!---->
         <div data-v-bd11ec86="" class="inner-content">

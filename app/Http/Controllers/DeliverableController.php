@@ -10,6 +10,7 @@ use App\User;
 use App\Task;
 use Auth;
 use DB;
+use Mail;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -90,20 +91,26 @@ class DeliverableController extends Controller
     {
         $deliverable->update($request->all());
         $user = User::find($request->user_id);
-        foreach ($request->task_id as $task_id) 
-        {   
-            
-            $task = Task::find($task_id);
-            if($user->tasks->contains($task->id)){
-                $user->tasks()->sync($task);
-            }
-            else
+            foreach ($request->task_id as $task_id)
             {
-                $user->tasks()->attach($task);
+
+                $task = Task::find($task_id);
+                if($user->tasks->contains($task->id)){
+                    break;
+                }
+                else
+                {
+                    $user->tasks()->attach($task);
+                }
             }
-        }
+
         $deliverable->save();
-        return back()->with('status', 'Evaluation ajouté');
+        //send mail to the student
+         Mail::send('mails.users.projects.evaluation', ['deliverable' => $deliverable], function($message) use($deliverable){
+           $message->to($deliverable->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre travail pour le projet '.$deliverable->project->title.' a été évalué');
+           $message->from('eventsoschool@gmail.com', 'Oschool');
+         });
+        return back()->with('status', 'Evaluation ajoutée');
     }
 
 

@@ -113,9 +113,10 @@ class LessonController extends Controller
     public function showSlug($slugCourse, $slug)
     {
         $lesson = Lesson::where('slug', $slug)->firstOrFail();
-
+        //on cherche la prochaine lesson dans la meme section
         $next_lesson = Lesson::where('course_id', $lesson->course_id)
         ->where('section_id', $lesson->section_id)
+        ->where('status', 'active')
         ->where('position', '>', $lesson->position)
         ->orderBy('position', 'asc')
         ->first();
@@ -129,6 +130,7 @@ class LessonController extends Controller
             ->first();
 
             //dans le cas ou c'est la dernière lesson
+            //c'est a dire qu'il n'ya pas plus de section suivantes
             if ($next_section === null) {
                 $next_lesson = $lesson;
             }
@@ -136,6 +138,7 @@ class LessonController extends Controller
             else {
                 $next_lesson = Lesson::where('course_id', $lesson->course_id)
                 ->where('section_id', $next_section->id)
+                ->where('status', 'active')
                 ->orderBy('position', 'asc')
                 ->first();
             }
@@ -145,6 +148,7 @@ class LessonController extends Controller
 
         $previous_lesson = Lesson::where('course_id', $lesson->course_id)
         ->where('section_id', $lesson->section_id)
+        ->where('status', 'active')
         ->where('position', '<', $lesson->position)
         ->orderBy('position', 'desc')
         ->first();
@@ -165,12 +169,24 @@ class LessonController extends Controller
             else {
                 $previous_lesson = Lesson::where('course_id', $lesson->course_id)
                 ->where('section_id', $previous_section->id)
+                ->where('status', 'active')
                 ->orderBy('position', 'desc')
                 ->first();
             }
 
 
         }
+
+        //si, malgré tout ça next ou previous sont null
+
+        if ($next_lesson === null) {
+            $next_lesson = $lesson;
+        }
+
+        if ($previous_lesson === null) {
+            $previous_lesson = $lesson;
+        }
+
 
         return view('lessons.show', ['lesson' => $lesson,
                                      'next_lesson' => $next_lesson,

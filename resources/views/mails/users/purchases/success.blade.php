@@ -26,7 +26,7 @@
         						<td align="left">
         						<p style="font-size:16px;color:#333;letter-spacing:0.25px;line-height:1.4">
                                     Votre achat au cours <span class="il">Oschool</span> a été effectué avec succès <strong style="font-weight:bold">09/02/2019</strong> pour un total de <strong style="font-weight:bold">{{$purchase->price}} FCFA</strong>.
-                                    <a href="https://oschoolelearning.com/home" style="font-weight:bold;text-decoration:none" target="_blank" data-saferedirecturl="">Connectez-vous</a> à votre compte pour jeter un coup d'œil et vous mettre à l'aise ... parce que nous n'allons nulle part! Pendant que vous y êtes, vous pouvez vous rendre à la <a href="https://home.mindvalley.com/profile/accounts_and_billing" style="font-weight:bold;text-decoration:none" target="_blank">section facturation</a> pour voir un récapitulatif de vos achats.<br>
+                                    <a href="https://oschoolelearning.com/home" style="font-weight:bold;text-decoration:none" target="_blank" data-saferedirecturl="">Connectez-vous</a> à votre compte pour jeter un coup d'œil et vous mettre à l'aise ... parce que nous n'allons nulle part! Pendant que vous y êtes, vous pouvez vous rendre à la <a href="/users/billings" style="font-weight:bold;text-decoration:none" target="_blank">section facturation</a> pour voir un récapitulatif de vos achats.<br>
         						</p>
         						</td>
         					</tr>

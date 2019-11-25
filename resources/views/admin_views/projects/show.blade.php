@@ -299,6 +299,25 @@ a:focus{color:inherit;text-decoration:none;}
     .bd-example>.alert+.alert{margin-top:1rem;}
 </style>
 
+<style media="screen">
+/*! CSS Used from: Embedded */
+button:focus,button:active,button:hover{outline:0px!important;-webkit-appearance:none;}
+h2{font-weight:normal;}
+h2{font-weight:normal;}
+button:focus{outline:none;}
+/*! CSS Used from: Embedded */
+::-ms-clear{display:none;}
+/*! CSS Used from: Embedded */
+._1f67b618{width:100%;text-align:center;margin-bottom:32px;}
+._342054f3{cursor:pointer;border-radius:4px;border:0px;background-color:#62d76b;color:#ffffff;height:48px;font-size:16px;letter-spacing:1px;font-family:FibraOne-Bold, Gotham Rounded A, Gotham Rounded B, Segoe UI, Roboto, Oxygen, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;width:100%;}
+._342054f3:hover{background-color:#32b964;}
+._35af145{display:flex;flex-direction:row;justify-content:center;}
+._7c686bce{color:#ffd011;}
+._7ca935a0{width:100%;text-align:center;font-size:24px;}
+._e3fbcfb{background-color:#4D90CC;border-radius:8px;box-shadow:0px 2px 12px 0px rgba(0, 0, 0, 0.1);padding:40px 40px 40px 40px;color:#ffffff;margin-bottom:30px;font-size:16px;}
+
+</style>
+
 <main class="container">
   <div class="xl:px-3">
     <div class="xl:px-5">
@@ -383,7 +402,7 @@ a:focus{color:inherit;text-decoration:none;}
         {{-- Submit doc end --}}
       <div class="navbar">
         <div class="navbar-container">
-          <div class="navbar-leftNavigation"><a href="/course/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour aux jours</span></a>
+          <div class="navbar-leftNavigation"><a href="/course/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour au parcours</span></a>
           </div>
           <div class="navbar-title">
             Jour 22
@@ -463,6 +482,18 @@ a:focus{color:inherit;text-decoration:none;}
           <!---->
           <!---->
         </div>
+
+        @if($deliverable->comment)
+        <div style="width: 60%; margin: auto;" class="_e3fbcfb">
+            <div class="_35af145"><img width="200" src="https://oschoolelearning.com/images/divers/feature1.png"></div>
+            <h2 class="_7ca935a0"><span>Commentaire sur votre travail</span></h2>
+            <p class="_1f67b618">{!!$deliverable->comment!!}</p>
+        </div>
+        @endif
+
+
+
+
         <section class="sectionWrapper sectionWrapper--tasks">
           <div class="section section--tasks">
             <div class="tasks">
