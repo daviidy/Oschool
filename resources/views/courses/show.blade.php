@@ -22,7 +22,7 @@ img{max-width:100%!important;}
 }
 *,:after,:before{box-sizing:border-box;}
 button{font-family:inherit;font-size:inherit;}
-.caption-text{font-size:12px;line-height:18px;font-family:OpenSans,Arial,sans-serif;}
+.caption-text{font-size:12px;line-height:18px;font-family:'TeachableSans-Regular';}
 .rc-FinaidLink .caption-text{font-size:12px;}
 .rc-FinaidLink.reset .caption-text{font-size:inherit;font-weight:inherit;margin-bottom:0;}
 .rc-FinaidLink.reset .finaid-link{color:inherit;}

@@ -1,6 +1,6 @@
 /*! CSS Used from: https://fedora.teachablecdn.com/assets/bootstrap-fb144454ae2d6daf41829e849802fb78e65ccf7a89947805dd103de5cb97d355.css ; media=screen */
 @media screen{
-html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+html{font-family:'TeachableSans-Regular';-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
 body{margin:0;}
 header{display:block;}
 a{background:0 0;}
@@ -24,8 +24,8 @@ h2{page-break-after:avoid;}
 *{box-sizing:border-box;}
 :before,:after{box-sizing:border-box;}
 html{font-size:10px;-webkit-tap-highlight-color:transparent;}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
-button{font-family:inherit;font-size:inherit;line-height:inherit;}
+body{font-family:'TeachableSans-Regular'!important;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
+button{'TeachableSans-Regular':inherit;font-size:inherit;line-height:inherit;}
 a{color:#428bca;text-decoration:none;}
 a:hover,a:focus{color:#2a6496;text-decoration:underline;}
 a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
@@ -117,7 +117,7 @@ a.btn,a.btn:hover,a.btn:focus{display:inline-block;}
 .dropdown-menu{display:none;}
 }
 html{min-height:100%;position:relative;}
-body{background-image:none;background-size:none;background:none;font-family:"Arial";margin:0!important;color:#4d4d4d;}
+body{background-image:none;background-size:none;background:none;font-family:'TeachableSans-Regular';margin:0!important;color:#4d4d4d;}
 a{color:#0071bc;}
 a:hover,a:active{color:#003456;}
 a,a:active,a:hover,a:focus{text-decoration:none;}

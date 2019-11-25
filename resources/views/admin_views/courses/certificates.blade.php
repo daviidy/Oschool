@@ -101,19 +101,19 @@ a:active,a:focus,a:hover{color:#24292d;}
                   <div class="button button--input"><i class="icon icon-copy" aria-hidden="true"></i></div>
                 </div>
               </div>
-              <div class="modal-button"><a href="https://www.facebook.com/groups/mindvalley.supercerveau/" class="button button--primary w-full">Go To Community</a></div>
+              <div class="modal-button"><a href="https://discord.gg/hhbzcHE" class="button button--primary w-full">Go To Community</a></div>
             </div>
           </div>
         </div>
       </div>
       <div class="navbar">
         <div class="navbar-container">
-          <div class="navbar-leftNavigation"><a href="http://platform.mindvalley.com/quests/supercerveau" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon> <span class="navbar-linkText">Retour au cours</span></a>
+          <div class="navbar-leftNavigation"><a href="/course/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon> <span class="navbar-linkText">Retour au cours</span></a>
           </div>
           <div class="navbar-title">
             Certificat pour le cours {{$course->name}}
           </div>
-          <div class="navbar-rightNavigation"><button class="navbar-button"><ion-icon name="call" size="small"></ion-icon><span>Contactez-nous</span></button></div>
+          <div class="navbar-rightNavigation"> <a href="https://blog.oschoolelearning.com/contact/"> <button class="navbar-button"><ion-icon name="call" size="small"></ion-icon><span>Contactez-nous</span></button></a></div>
         </div>
       </div>
     </div>

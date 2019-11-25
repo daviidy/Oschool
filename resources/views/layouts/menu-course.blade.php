@@ -548,7 +548,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
                 </a>
               </li>
               <li>
-                <a class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn" href="{{route('login')}}">
+                <a href="{{route('login')}}"  class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn">
                   Salle de classe
                 </a>
               </li>

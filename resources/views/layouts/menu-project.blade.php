@@ -23,17 +23,19 @@
     .video_10865-dimensions.vjs-fluid {
       padding-top: 56.25%;
     }
+    @font-face{font-family:'TeachableSans-Regular';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.ttf") format("truetype");}
+    @font-face{font-family:'TeachableSans-Bold';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.ttf") format("truetype");}
 
 /*popup*/
 
 /*! CSS Used from: https://platform.mindvalley.com/app_new-a2f56af987691a0aa0cfb8aa4c8cdce1.css?vsn=d */
 a{background-color:transparent;-webkit-text-decoration-skip:objects;}
-input{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0;}
+input{font-family:'TeachableSans-Regular';font-size:100%;line-height:1.15;margin:0;}
 input{overflow:visible;}
 *,:after,:before{box-sizing:inherit;}
 h3{margin:0;}
 *,:after,:before{border:0 solid #95989d;}
-input{font-family:inherit;}
+input{font-family:'TeachableSans-Regular';}
 input:-ms-input-placeholder{color:inherit;opacity:.5;}
 input::placeholder{color:inherit;opacity:.5;}
 .button{display:inline-block;background-color:#3c434e;border-radius:9999px;text-decoration:none;text-align:center;color:#c1c1c1;padding:1rem 2rem;font-size:1rem;font-weight:600;line-height:1;}

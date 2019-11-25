@@ -1,6 +1,6 @@
 /*! CSS Used from: https://fedora.teachablecdn.com/assets/bootstrap-fb144454ae2d6daf41829e849802fb78e65ccf7a89947805dd103de5cb97d355.css ; media=screen */
 @media screen{
-html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+html{font-family:'TeachableSans-Regular';-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
 body{margin:0;}
 header{display:block;}
 canvas,video{display:inline-block;vertical-align:baseline;}
@@ -26,12 +26,12 @@ img{max-width:100%!important;}
 p,h2{orphans:3;widows:3;}
 h2{page-break-after:avoid;}
 }
-.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.glyphicon{position:relative;top:1px;display:inline-block;font-family:'TeachableSans-Regular';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
 .glyphicon-forward:before{content:"\e075";}
 *{box-sizing:border-box;}
 :before,:after{box-sizing:border-box;}
 html{font-size:10px;-webkit-tap-highlight-color:transparent;}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
+body{font-family:'TeachableSans-Regular';font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
 input,button{font-family:inherit;font-size:inherit;line-height:inherit;}
 a{color:#428bca;text-decoration:none;}
 a:hover,a:focus{color:#2a6496;text-decoration:underline;}
@@ -128,7 +128,7 @@ input.custom-toggle-round:checked+label:after{margin-left:17px;background:#8ce19
 .switch-toggle{-webkit-animation:webkitSiblingBugfix infinite 1s;}
 }
 html{min-height:100%;position:relative;}
-body{background-image:none;background-size:none;background:none;font-family:"Arial";margin:0!important;color:#4d4d4d;}
+body{background-image:none;background-size:none;background:none;font-family:'TeachableSans-Regular';margin:0!important;color:#4d4d4d;}
 a{color:#0071bc;}
 a:hover,a:active{color:#003456;}
 a,a:active,a:hover,a:focus{text-decoration:none;}
@@ -272,7 +272,7 @@ header.half-height a.nav-btn{width:50%;}
 .volume__large-wave{animation:VOLUME_LARGE_WAVE_FLASH 2s infinite .3s;opacity:0;}
 }
 /*! CSS Used from: Embedded */
-#wistia_grid_34_wrapper{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;font-family:Arial,sans-serif;font-size:14px;height:100%;position:relative;text-align:left;width:100%;}
+#wistia_grid_34_wrapper{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;font-family:'TeachableSans-Regular';font-size:14px;height:100%;position:relative;text-align:left;width:100%;}
 #wistia_grid_34_wrapper *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
 #wistia_grid_34_above{position:relative;}
 #wistia_grid_34_main{display:block;height:100%;position:relative;}
@@ -293,5 +293,8 @@ header.half-height a.nav-btn{width:50%;}
 @keyframes VOLUME_SMALL_WAVE_FLASH{0%{opacity:0;}33%{opacity:1;}66%{opacity:1;}100%{opacity:0;}}
 @keyframes VOLUME_LARGE_WAVE_FLASH{0%{opacity:0;}33%{opacity:1;}66%{opacity:1;}100%{opacity:0;}}
 /*! CSS Used fontfaces */
+@font-face{font-family:'TeachableSans-Regular';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.ttf") format("truetype");}
+@font-face{font-family:'TeachableSans-Bold';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.ttf") format("truetype");}
+
 @font-face{font-family:'Glyphicons Halflings';src:url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.eot");src:url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"),url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"),url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");}
 @font-face{font-family:'FontAwesome';src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot#iefix&v=4.1.0') format('embedded-opentype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}
