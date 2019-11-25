@@ -404,16 +404,16 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
                     <input autocomplete="off" type="submit" name="commit" value="Se connecter" id="signup_final" class="orange-button btn">
                   </div>
                 </form>
-                
+
                 <br>
 
-                <p style="text-align: center;"> <span>Contenez-vous avec <i class="fa fa-arrow-down"></i> </span></p>
+                <p style="text-align: center;"> <span>Connectez-vous avec <i class="fa fa-arrow-down"></i> </span></p>
 
                   <div style="text-align: center;">
 
                     <br>
                     <div class="card-body">
-                      <div class="template-demo"> 
+                      <div class="template-demo">
                        <a style="text-decoration:none;" href="{{ url('login/facebook') }}"> <button type="button" class="btn btn-social-icon btn-outline-facebook">
                           <i class="fa fa-facebook"></i>
                         </button> </a>
@@ -421,17 +421,17 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
                        <a style="text-decoration:none;" href="{{ url('login/gmail') }}"> <button type="button" class="btn btn-social-icon btn-outline-youtube">
                           <i class="fa fa-google"></i>
                         </button></a>
-                        
+
                        <a style="text-decoration:none;" href="{{ url('login/github') }}"> <button type="button" class="btn btn-social-icon btn-outline-github">
                           <i class="fa fa-github"></i>
                         </button> </a>
 
-                        
+
                        <a style="text-decoration:none;" href="{{ url('login/linkedin') }}"> <button type="button" class="btn btn-social-icon btn-outline-linkedin">
                           <i class="fa fa-linkedin"></i>
                         </button></a>
-                        
-                      
+
+
                       </div>
                       {{-- <div class="template-demo"> <button type="button" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></button> <button type="button" class="btn btn-social-icon btn-youtube"><i class="fa fa-youtube"></i></button> <button type="button" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></button> <button type="button" class="btn btn-social-icon btn-dribbble"><i class="fa fa-dribbble"></i></button> <button type="button" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></button> <button type="button" class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></button> </div> --}}
                       {{-- <div class="template-demo"> <button type="button" class="btn btn-social-icon btn-facebook btn-rounded"><i class="fa fa-facebook"></i></button> <button type="button" class="btn btn-social-icon btn-youtube btn-rounded"><i class="fa fa-youtube"></i></button> <button type="button" class="btn btn-social-icon btn-twitter btn-rounded"><i class="fa fa-twitter"></i></button> <button type="button" class="btn btn-social-icon btn-dribbble btn-rounded"><i class="fa fa-dribbble"></i></button> <button type="button" class="btn btn-social-icon btn-linkedin btn-rounded"><i class="fa fa-linkedin"></i></button> <button type="button" class="btn btn-social-icon btn-instagram btn-rounded"><i class="fa fa-instagram"></i></button> </div> --}}
