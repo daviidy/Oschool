@@ -55,7 +55,7 @@
                 <p class="school-url">{{$course->subtilte}}</p>
             </div>
         </a>
-        @else /path/{slugCourse}/projects/{slug}
+        @else
         <a href="/path/{{$course->slug}}" class="school-card school-has-default-thumbnail"
           style="background-image: url('/images/courses/logos/{{$course->logo}}');" target="_blank">
             <div class="school-info">
