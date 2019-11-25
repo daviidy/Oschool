@@ -333,7 +333,7 @@ button:focus{outline:none;}
           <div id="modal" class="modal rounded-t-lg ">
             <div class="modal-cover rounded-t-lg ">
               <div class="coverWrapper rounded-t-lg rounded-b-none">
-                <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;https://assets.mindvalley.com/api/v1/assets/82215914-053d-4123-ad79-ab8d36589712.jpg&quot;);"></div>
+                <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div>
               </div>
               <div class="modal-coverButton">
                 <div class="button button--round"><i class="icon icon-window-close" aria-hidden="true"></i></div>
@@ -341,7 +341,7 @@ button:focus{outline:none;}
             </div>
             <div class="modal-contents">
               <div class="modal-headline">
-                {{-- <div class="logo" style="background-image: url(&quot;http://platform.mindvalley.com/images/facebook-logo-fcffd6148ae561d4eaba1bf6dfb9430a.png?vsn=d&quot;);"></div> --}}
+                {{-- <div class="logo" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div> --}}
                 <h3 class="text-2xl ml-2 mt-1">Soumission de projet</h3>
               </div>
               <div class="modal-input"><span class="mb-2">Veuillez copier les liens de votre projet</span>
@@ -370,7 +370,7 @@ button:focus{outline:none;}
                   <div id="modal" class="modal rounded-t-lg ">
                       <div class="modal-cover rounded-t-lg ">
                           <div class="coverWrapper rounded-t-lg rounded-b-none">
-                              <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;https://assets.mindvalley.com/api/v1/assets/82215914-053d-4123-ad79-ab8d36589712.jpg&quot;);"></div>
+                              <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div>
                           </div>
                           <div class="modal-coverButton">
                               <div class="button button--round again"><i class="icon icon-window-close" aria-hidden="true"></i></div>
@@ -378,7 +378,7 @@ button:focus{outline:none;}
                       </div>
                       <div class="modal-contents">
                           <div class="modal-headline">
-                              {{-- <div class="logo" style="background-image: url(&quot;http://platform.mindvalley.com/images/facebook-logo-fcffd6148ae561d4eaba1bf6dfb9430a.png?vsn=d&quot;);"></div> --}}
+                              {{-- <div class="logo" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div> --}}
                               <h3 class="text-2xl ml-2 mt-1">Re-soumission de projet</h3>
                           </div>
 {{--                          <div class="modal-input"><span class="mb-2">Veuillez copier les liens de votre projet</span>--}}

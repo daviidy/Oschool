@@ -186,9 +186,8 @@ ion-icon.hydrated.md {
             <div class="bottomBar">
                 <div class="bottomBar-container">
                     {{-- @if(count(DB::table('deliverables')->get()->where('user_id', Auth::user()->id)) > 0) --}}
-                    @if(count(Auth::user()->deliverables->where('user_id', Auth::user()->id)) > 0)
-                    @foreach(Auth::user()->deliverables as $deliverable)
-                    @if($deliverable->status == null)
+                    @if(count(Auth::user()->deliverables->where('user_id', Auth::user()->id)->where('project_id', $project->id)) > 0)
+                    @if(Auth::user()->deliverables->where('project_id', $project->id)->first()->status == null)
                       <button disabled="disabled" class="button is-disabled button--bottomBar"
                       style="cursor: not-allowed;
                       background-color: rgb(229, 229, 229) !important;
@@ -196,7 +195,7 @@ ion-icon.hydrated.md {
                         Votre projet a deja été envoyé
                       </button>
 
-                    @elseif($deliverable->status == '0')
+                    @elseif(Auth::user()->deliverables->where('project_id', $project->id)->first()->status == '0')
 
                       <button id="sendWorksAgain" class="button button--primary button--bottomBar" style="display: block;">
                           Renvoyer mes travaux
@@ -208,7 +207,6 @@ ion-icon.hydrated.md {
                     </div>
 
                     @endif
-                    @endforeach
 
                     @else
                         <button id="sendWorks" class="button button--primary button--bottomBar" style="display: block;">
