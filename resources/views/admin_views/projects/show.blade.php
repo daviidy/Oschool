@@ -423,18 +423,16 @@ button:focus{outline:none;}
                     <strong>{{ $message }}</strong>
                 </div>
             @endif
-                @if(Auth::user()->deliverables)
+                @if(count(Auth::user()->deliverables->where('project_id', $project->id)) > 0)
 
-                  @foreach(Auth::user()->deliverables as $deliverable)
 
-                    <a target="_blank" href="{{$deliverable->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
+                    <a target="_blank" href="{{Auth::user()->deliverables->where('project_id', $project->id)->first()->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
                       <div class="module-progress-card__icon">
                           <img src="/images/divers/resource_icon.png" alt="Les opportunités qu'offre Internet">
                       </div>
                       <h4 class="module-progress-card__title">Le lien de votre projet</h4>
                     </a>
 
-                  @endforeach
 
 
 
@@ -483,12 +481,14 @@ button:focus{outline:none;}
           <!---->
         </div>
 
-        @if($deliverable->comment)
+        @if(count(Auth::user()->deliverables->where('project_id', $project->id)) > 0)
+        @if(Auth::user()->deliverables->where('project_id', $project->id)->first()->comment)
         <div style="width: 60%; margin: auto;" class="_e3fbcfb">
             <div class="_35af145"><img width="200" src="https://oschoolelearning.com/images/divers/feature1.png"></div>
             <h2 class="_7ca935a0"><span>Commentaire sur votre travail</span></h2>
-            <p class="_1f67b618">{!!$deliverable->comment!!}</p>
+            <p class="_1f67b618">{!!Auth::user()->deliverables->where('project_id', $project->id)->first()->comment!!}</p>
         </div>
+        @endif
         @endif
 
 
