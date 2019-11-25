@@ -36,7 +36,7 @@
           style="background-image: url('/images/schools/logos/{{$school->logo}}');" target="_blank">
             <div class="school-info">
                 <img class="school-favicon" src="/images/schools/backgrounds/flavicon-school.svg">
-                <p class="school-name">Oschool</p>
+                <p class="school-name">{{$school->name}}</p>
             </div>
         </a>
         @endforeach
@@ -47,6 +47,7 @@
     <h1>Mes cours</h1>
     <div class="schools-list ">
         @foreach(Auth::user()->courses as $course)
+        @if($course->type == 'course')
         <a href="/course/enrolled/{{$course->slug}}" class="school-card school-has-default-thumbnail"
           style="background-image: url('/images/courses/logos/{{$course->logo}}');" target="_blank">
             <div class="school-info">
@@ -54,6 +55,15 @@
                 <p class="school-url">{{$course->subtilte}}</p>
             </div>
         </a>
+        @else
+        <a href="/path/{{$course->slug}}" class="school-card school-has-default-thumbnail"
+          style="background-image: url('/images/courses/logos/{{$course->logo}}');" target="_blank">
+            <div class="school-info">
+                <p class="school-name">{{$course->name}}</p>
+                <p class="school-url">{{$course->subtilte}}</p>
+            </div>
+        </a>
+        @endif
         @endforeach
     </div>
     @else
