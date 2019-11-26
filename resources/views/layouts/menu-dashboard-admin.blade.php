@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="og:image" content="/images/divers/user.jpg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/admin/assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="/admin/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">

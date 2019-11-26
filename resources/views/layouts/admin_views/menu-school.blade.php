@@ -12,6 +12,7 @@
       crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/nProgress/nprogress.css">
+    <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
 
