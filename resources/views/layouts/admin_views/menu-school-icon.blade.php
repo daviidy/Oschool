@@ -289,6 +289,7 @@
                         <!---->
                     </ul>
                     @include('includes.admin_views.submenus.site-nav')
+                   
                     @include('includes.admin_views.submenus.users-nav')
                     @if(\Route::current()->getName() == 'schoolSettings')
                     @include('includes.admin_views.submenus.settings-nav')
