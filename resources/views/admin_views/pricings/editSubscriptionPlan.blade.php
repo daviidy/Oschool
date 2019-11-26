@@ -502,7 +502,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                         <br>
                         <div>
-                          <label for="status">Status :</label>
+                          <label for="status">Statut :</label>
                           @if($pricing->status == 0)
                             <select name="status" id="status">
                                 <option value="0" selected>Hors ligne</option>

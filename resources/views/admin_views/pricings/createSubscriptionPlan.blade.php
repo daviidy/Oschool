@@ -496,7 +496,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                     <br>
                           <div>
-                            <label for="status">Status :</label>
+                            <label for="status">Statut :</label>
                               <select name="status" id="status">
                                   <option value="0">Hors ligne</option>
                                   <option value="1">En ligne</option>
