@@ -72,7 +72,7 @@
                                 <a href="/users/billings">Facturation</a>
                             </li>
                             <li class="nav-item-help">
-                                <a id="my_teachable_help_form" href="http://sso.teachable.com/secure/teachable_accounts/tickets/new">Aidez-moi</a>
+                                <a id="my_teachable_help_form" href="https://support.oschoolelearning.com/">Aidez-moi</a>
                             </li>
                             <li class="nav-item-logout">
                                 <a href="{{ route('logout') }}"
@@ -124,7 +124,7 @@
                         <a href="/users/billings">Facturation</a>
                     </li>
                     <li class="nav-item-help selected">
-                        <a id="my_teachable_help_form" href="http://sso.teachable.com/secure/teachable_accounts/tickets/new">Aidez-moi</a>
+                        <a id="my_teachable_help_form" href="https://support.oschoolelearning.com">Aidez-moi</a>
                     </li>
                     <li class="nav-item-logout selected">
                         <a href="{{ route('logout') }}"
