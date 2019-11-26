@@ -5,6 +5,8 @@
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
   <meta name="og:image" content="@yield('image')"/>
   <meta name="csrf-token" content="{!! csrf_token() !!}">
+  <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
+
 
   <style type="text/css">
     @charset "UTF-8";

@@ -3,6 +3,7 @@
 
 <head>
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
 
   <style class="vjs-styles-defaults">
     .video-js {
