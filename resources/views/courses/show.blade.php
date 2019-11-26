@@ -319,7 +319,7 @@ button{line-height:inherit;}
             </div>
             <div class="col-lg-9 col-md-8 col-sm-8">
               <p>
-                {{$course->author->description}}
+                {{$course->author->bio}}
               </p>
               <p>
                 <br>
