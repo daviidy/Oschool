@@ -998,24 +998,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                             </div>
                                         </div>
                                     </div>
-                                    <help-block>
-                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                        </ng-messages>
-                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="thumbnails" class="help-block ng-hide"></div>
-                                    </help-block>
+
                                 </div>
                                 <!---->
                             </div>
