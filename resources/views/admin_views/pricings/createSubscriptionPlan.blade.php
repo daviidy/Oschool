@@ -493,6 +493,15 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                         </div>
                     </div>
+
+                    <br>
+                          <div>
+                            <label for="status">Status :</label>
+                              <select name="status" id="status">
+                                  <option value="0">Hors ligne</option>
+                                  <option value="1">En ligne</option>
+                              </select>
+                          </div>
                     <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Ajouter offre</button></div>
                 </div>
             </div>

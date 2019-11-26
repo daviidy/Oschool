@@ -498,6 +498,28 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     {!!$pricing->description!!}
                             </div>
                         </div>
+
+
+                        <br>
+                        <div>
+                          <label for="status">Status :</label>
+                          @if($pricing->status == 0)
+                            <select name="status" id="status">
+                                <option value="0" selected>Hors ligne</option>
+                                <option value="1">En ligne</option>
+                            </select>
+                            @elseif($pricing->status == 1)
+                            <select name="status" id="status">
+                              <option value="0" >Hors ligne</option>
+                              <option value="1" selected>En ligne</option>
+                           </select>
+                           @else
+                           <select name="status" id="status">
+                              <option value="0" >Hors ligne</option>
+                              <option value="1" >En ligne</option>
+                           </select>
+                            @endif
+                        </div>
                     <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Modifier offre</button></div>
                 </div>
             </div>

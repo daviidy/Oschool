@@ -433,6 +433,27 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                             </div>
 
+                            <br>
+                          <div>
+                            <label for="status">Status :</label>
+                            @if($pricing->status == 0)
+                              <select name="status" id="status">
+                                  <option value="0" selected>Hors ligne</option>
+                                  <option value="1">En ligne</option>
+                              </select>
+                              @elseif($pricing->status == 1)
+                              <select name="status" id="status">
+                                <option value="0" >Hors ligne</option>
+                                <option value="1" selected>En ligne</option>
+                             </select>
+                             @else
+                             <select name="status" id="status">
+                                <option value="0" >Hors ligne</option>
+                                <option value="1" >En ligne</option>
+                             </select>
+                              @endif
+                          </div>
+
                          <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
                          <input style="display: none;" type="text" name="type" value="Free">
                          <input style="display: none;" type="text" name="recurring" value="No">

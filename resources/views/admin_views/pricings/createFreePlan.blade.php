@@ -431,7 +431,15 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                               </div>
                           </div>
-
+                          
+                          <br>
+                          <div>
+                            <label for="status">Status :</label>
+                              <select name="status" id="status">
+                                  <option value="0">Hors ligne</option>
+                                  <option value="1">En ligne</option>
+                              </select>
+                          </div>
                          <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">
                          <input style="display: none;" type="text" name="type" value="Free">
                          <input style="display: none;" type="text" name="recurring" value="No">
