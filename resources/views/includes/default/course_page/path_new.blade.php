@@ -1122,7 +1122,7 @@ button,html [type=button]{-webkit-appearance:button;}
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">{{$pricing->name}}</h5>
-              <h6 class="card-price text-center">{{$pricing->type == 'Free' ? '0' : number_format($pricing->price, 0, '.', ' ')}} FCFA <span class="period">/ {{$pricing->per == 'month' ? 'Mois' : ''}}</span></h6>
+              <h6 class="card-price text-center">{{$pricing->type == 'Free' ? '0' : number_format($pricing->price, 0, '.', ' ')}} FCFA <span class="period"> {{$pricing->per == 'month' ? 'Mois' : ''}}</span></h6>
                 <hr>
                 {!!$pricing->description!!}
                   <br>

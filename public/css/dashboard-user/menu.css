@@ -1,6 +1,6 @@
 /*! CSS Used from: https://fedora.teachablecdn.com/assets/application-23491958e294fe4d246330299b9c6d23458454934c3a178dd5cefcb27d36f097.css ; media=all */
 @media all{
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+html{font-family:'TeachableSans-Regular';-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 body{margin:0;}
 a{background-color:transparent;}
 a:active,a:hover{outline:0;}
@@ -11,8 +11,8 @@ button{overflow:visible;}
 button{text-transform:none;}
 button{-webkit-appearance:button;cursor:pointer;}
 button::-moz-focus-inner{border:0;padding:0;}
-html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-body{margin:0;}
+html{font-family:'TeachableSans-Regular';-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body{margin:0; font-family: 'TeachableSans-Regular'!important;}
 a{background:0 0;}
 a:active,a:hover{outline:0;}
 h1{margin:.67em 0;font-size:2em;}
@@ -35,7 +35,7 @@ h2{page-break-after:avoid;}
 *{box-sizing:border-box;}
 :before,:after{box-sizing:border-box;}
 html{font-size:10px;-webkit-tap-highlight-color:transparent;}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
+body{font-family:'TeachableSans-Regular';font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
 button{font-family:inherit;font-size:inherit;line-height:inherit;}
 a{color:#428bca;text-decoration:none;}
 a:hover,a:focus{color:#2a6496;text-decoration:underline;}
@@ -88,7 +88,7 @@ h1,h2{color:#2b3636;}
 .nav>li>a:focus{background:none!important;outline:0;}
 .nav.navbar-nav>li>a{line-height:30px;font-weight:200;}
 .my-teachable-layout{font-family:'TeachableSans';}
-.my-teachable-layout{font-family:'TeachableSans', 'Helvetica', 'Arial';min-width:330px;background:#f5f6f7;}
+.my-teachable-layout{font-family:'TeachableSans-Regular', 'Helvetica', 'Arial';min-width:330px;background:#f5f6f7;}
 .my-teachable-layout .sidebar{width:276px;}
 .my-teachable-layout .sidebar .profile-card{height:353px;text-align:center;padding:30px;}
 .my-teachable-layout .sidebar .profile-card .logo-wrapper{position:absolute;left:55px;top:22px;}
@@ -113,8 +113,12 @@ h1,h2{color:#2b3636;}
 .my-teachable-layout .sidebar .nav-sidebar>li:hover,.my-teachable-layout .sidebar .nav-sidebar>li:focus,.my-teachable-layout .sidebar .nav-sidebar>li.selected{background-position:-24px 16px;}
 .my-teachable-layout .sidebar .nav-sidebar>li:hover a,.my-teachable-layout .sidebar .nav-sidebar>li:focus a,.my-teachable-layout .sidebar .nav-sidebar>li.selected a{color:#4d90cc;}
 .my-teachable-layout .sidebar .nav-sidebar>li.selected a{font-weight:600;}
-.my-teachable-layout .sidebar .nav-sidebar>li.nav-item-profile{background-image:url("/images/schools/icon-school.svg");}
+.my-teachable-layout .sidebar .nav-sidebar>li.nav-item-profile{background-image:url(/images/schools/icon-school.svg);}
+
+.my-teachable-layout .sidebar .nav-sidebar>li.nav-item-dashboard{background-image:url("/images/schools/icon-plus.svg");}
+
 .my-teachable-layout .sidebar .nav-sidebar>li.nav-item-create{background-image:url("/images/schools/icon-plus.svg");}
+
 .my-teachable-layout .sidebar .nav-sidebar>li.nav-item-settings{background-image:url("/images/schools/icon-settings.svg");}
 .my-teachable-layout .sidebar .nav-sidebar>li.nav-item-help{background-image:url("/images/schools/icon-help.svg");}
 .my-teachable-layout .sidebar .nav-sidebar>li.nav-item-billing{background-image:url("/images/schools/icon-billing.svg");}
@@ -187,6 +191,9 @@ h1,h2{color:#2b3636;}
 }
 }
 /*! CSS Used fontfaces */
+@font-face{font-family:'TeachableSans-Regular';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.ttf") format("truetype");}
+@font-face{font-family:'TeachableSans-Bold';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.ttf") format("truetype");}
+
 @font-face{font-family:'Proxima';src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}
 @font-face{font-family:'Proxima';font-style:italic;src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}
 @font-face{font-family:'Proxima';font-weight:300;src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.eot?1307578394");src:url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.eot?iefix") format("eot"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.woff?1307578394") format("woff"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.ttf?1307578394") format("truetype"),url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.svg#webfont2rpW2ohz") format("svg");font-display:swap;}

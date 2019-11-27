@@ -4,6 +4,8 @@
   <!-- GOOGLE ANALYTICS -->
   <!-- GOOGLE OPTIMIZE MINIMIZE FLICKER -->
   <link rel="stylesheet" href="/css/auth/signup.css">
+  <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
+
 
   <title>Authentification | Oschool</title>
   <meta property="og:title" content="Create an Account | Teachable">

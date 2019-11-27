@@ -3,6 +3,7 @@
 <head>
     <title>@yield('title') | Oschool</title>
     <meta name="og:image" content="/images/divers/user.jpg"/>
+    <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="/css/dashboard-user/menu.css">
     <meta name="csrf-param" content="authenticity_token">
@@ -54,7 +55,7 @@
                         <!--menu for smartphone view-->
                         <ul class="nav navbar-nav">
                             @if(Auth::user()->isAdmin())
-                            <li class="nav-item-create">
+                            <li class="nav-item-dashboard">
                                 <a href="/user/admin">Tableau de bord admin</a>
                             </li>
                             @endif
@@ -71,7 +72,7 @@
                                 <a href="/users/billings">Facturation</a>
                             </li>
                             <li class="nav-item-help">
-                                <a id="my_teachable_help_form" href="http://sso.teachable.com/secure/teachable_accounts/tickets/new">Aidez-moi</a>
+                                <a id="my_teachable_help_form" href="https://support.oschoolelearning.com/">Aidez-moi</a>
                             </li>
                             <li class="nav-item-logout">
                                 <a href="{{ route('logout') }}"
@@ -104,7 +105,7 @@
                 <!--laptop menu view-->
                 <ul class="nav nav-sidebar">
                     @if(Auth::user()->isAdmin())
-                    <li class="nav-item-create">
+                    <li class="nav-item-dashboard">
                         <a href="/user/admin">Tableau de bord admin</a>
                     </li>
                     @endif
@@ -123,7 +124,7 @@
                         <a href="/users/billings">Facturation</a>
                     </li>
                     <li class="nav-item-help selected">
-                        <a id="my_teachable_help_form" href="http://sso.teachable.com/secure/teachable_accounts/tickets/new">Aidez-moi</a>
+                        <a id="my_teachable_help_form" href="https://support.oschoolelearning.com">Aidez-moi</a>
                     </li>
                     <li class="nav-item-logout selected">
                         <a href="{{ route('logout') }}"
