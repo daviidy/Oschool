@@ -20,6 +20,7 @@ class LiveSearchController extends Controller
       {
        $data = DB::table('courses')
          ->where('name', 'like', '%'.$query.'%')
+         ->orWhere('school_id', 'like', '%'.$school->id.'%')
          ->orWhere('slug', 'like', '%'.$query.'%')
          ->orderBy('name', 'asc')
          ->get();
