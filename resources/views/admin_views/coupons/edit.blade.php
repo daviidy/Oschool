@@ -462,14 +462,11 @@
                                         <br>
                                         <select class="js-example-basic-multiple" name="courses_id[]" multiple="multiple" style="width:270px;">
                                                 @foreach ($allCourses as $course_db)
-                                                           @if(DB::table('coupon_course')->pluck('course_id')->count() == $course_db->id)
-                                                                <option selected value="{{$course_db->id}}">{{$course_db->name}}</option>
-                                                                @else
-                                                                <option value="{{$course_db->id}}">{{$course_db->name}}</option>
-                                                                @endif
-                                                                @endforeach
-                                                            </select>
-                                                            {{DB::table('coupon_course')->pluck('course_id')}}
+                                                           {{-- @if($course_db->id === DB::table('coupon_course')->pluck('course_id')->count() ) --}}
+                                                                <option  value="{{$course_db->id}}">{{$course_db->name}}</option>
+                                                                {{-- @endif --}}
+                                                @endforeach
+                                         </select>
                                   </div>
 
                                  {{-- <input style="display: none;" type="text" name="school_id" value=""> --}}
