@@ -6,6 +6,8 @@
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <meta charset="UTF-8">
+  <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
+
   <link rel="stylesheet" media="screen" href="/css/fedora-course.css" data-turbolinks-track="true">
   <link href="/css/theme-course.css" rel="stylesheet" data-turbolinks-track="true">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -493,7 +495,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 </head>
 
 <body style="padding-bottom: 131px;">
-
+    
   <meta id="fedora-data" data-report-card="{}" data-course-ids="[]" data-role="null" data-last-four="null" data-completed-lecture-ids="[]" data-school-id="6419" data-school-launched="true" data-preview="logged_out"
     data-turn-off-fedora-branding="true" data-plan-supports-whitelabeling="true" data-powered-by-text="Powered by"
     data-asset-path="//https://fedora.teachablecdn.com/assets/footer/teachable-logo-white-efd32576079839534d5b6e87bf4424e99b12624f854b2c500a4d3f0b6e2af46b.svg"
@@ -502,6 +504,8 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
     data-course-data="{&quot;is_lecture_order_enforced&quot;:null,&quot;is_minimum_quiz_score_enforced&quot;:null,&quot;is_video_completion_enforced&quot;:null,&quot;minimum_quiz_score&quot;:null,&quot;maximum_quiz_retakes&quot;:null}"
     data-course-url="https://courses.52kards.com/courses/7169" data-course-id="7169" data-vat-country="null" data-hellosign-id="null">
 
+
+    
   <header class="">
 
     <div class="navbar navbar-fedora navbar-fixed-top bs-docs-nav   is-not-signed-in                     navbar-course-hero is-at-top" id="navbar" role="navigation">
@@ -525,7 +529,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf" >
             @endif
           </a>
-
+ 
           <div class="collapse navbar-collapse navbar-header-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li>
@@ -536,7 +540,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 
 
               <li>
-                <a class="fedora-navbar-link navbar-link" href="/blog" target="">
+                <a class="fedora-navbar-link navbar-link" href="https://events.oschoolelearning.com" target="">
                   Evénements
                 </a>
               </li>
@@ -548,7 +552,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
                 </a>
               </li>
               <li>
-                <a class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn" href="/signin">
+                <a href="{{route('login')}}"  class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn">
                   Salle de classe
                 </a>
               </li>
@@ -620,7 +624,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <a href="https://www.facebook.com/Oschool.ci/" target="_blank">Facebook</a>
           </li>
           <li>
-            <a href="https://twitter.com/OschoolLearning" target="_blank">Twiter</a>
+            <a href="https://twitter.com/OschoolLearning" target="_blank">Twitter</a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/oschool-ci-5823b8141/" target="_blank">Linkedin</a>

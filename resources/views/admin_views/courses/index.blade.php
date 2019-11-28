@@ -331,13 +331,13 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="tch-course-listing-sales tch-course-listing-footer-section">$<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
+                                    <div class="tch-course-listing-sales tch-course-listing-footer-section">FCFA<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
                                           class="tch-course-listing-sales-total">0</div>
                                         <div class="tch-course-listing-sales-label">Ventes</div>
                                     </div>
                                     <div class="tch-course-listing-enrollment tch-course-listing-footer-section">
                                         <div ng-bind="::courseStats[course.id].enrolled" what="course-total-enrolled" class="tch-course-listing-enrollment-total">0</div>
-                                        <div class="tch-course-listing-enrollment-label">Inscrit</div>
+                                        <div class="tch-course-listing-enrollment-label">Inscrit(e)(s)</div>
                                     </div>
                                 </div>
                             </div>
@@ -355,7 +355,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="tch-course-listing-sales tch-course-listing-footer-section">$<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
+                                    <div class="tch-course-listing-sales tch-course-listing-footer-section">Fcfa<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
                                           class="tch-course-listing-sales-total">0</div>
                                         <div class="tch-course-listing-sales-label">Ventes</div>
                                     </div>

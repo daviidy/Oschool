@@ -23,7 +23,7 @@ td,th{padding:0;}
 .pull-right{float:right;}
 .fa-trash-o:before{content:"\F014";}
 .fa-edit:before{content:"\F044";}
-.fa-question-circle:before{content:"\F059";}
+.fa-question-circle:before{content:"\F059"; display: none;}
 .fa-bars:before{content:"\F0C9";}
 .fa-angle-left:before{content:"\F104";}
 .fa-angle-right:before{content:"\F105";}

@@ -65,7 +65,7 @@ textarea{overflow:auto;}
 .fa-trash-o:before{content:"\F014";}
 .fa-lock:before{content:"\F023";}
 .fa-image:before{content:"\F03E";}
-.fa-question-circle:before{content:"\F059";}
+.fa-question-circle:before{content:"\F059"; display: none!important;}
 .fa-external-link:before{content:"\F08E";}
 .fa-bars:before{content:"\F0C9";}
 .fa-angle-down:before{content:"\F107";}
@@ -998,24 +998,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                             </div>
                                         </div>
                                     </div>
-                                    <help-block>
-                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                        </ng-messages>
-                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="thumbnails" class="help-block ng-hide"></div>
-                                    </help-block>
+
                                 </div>
                                 <!---->
                             </div>

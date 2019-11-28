@@ -48,7 +48,7 @@ a{color:#428bca;text-decoration:none;}
 a:hover,a:focus{color:#2a6496;text-decoration:underline;}
 a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 img{vertical-align:middle;}
-h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h4{font-family:'TeachableSans-Regular';font-weight:500;line-height:1.1;color:inherit;}
 h4{margin-top:10px;margin-bottom:10px;}
 h4{font-size:18px;}
 p{margin:0 0 10px;}
@@ -79,7 +79,7 @@ a{color:#337ab7;text-decoration:none;}
 a:hover,a:focus{color:#23527c;text-decoration:underline;}
 a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 img{vertical-align:middle;}
-h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h4{font-family:'TeachableSans-Regular';font-weight:500;line-height:1.1;color:inherit;}
 h4{margin-top:10px;margin-bottom:10px;}
 h4{font-size:18px;}
 p{margin:0 0 10px;}
@@ -146,7 +146,7 @@ a{color:#337ab7;text-decoration:none;}
 a:hover,a:focus{color:#23527c;text-decoration:underline;}
 a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 img{vertical-align:middle;}
-h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h4{font-family:'TeachableSans-Regular';font-weight:500;line-height:1.1;color:inherit;}
 h4{margin-top:10px;margin-bottom:10px;}
 h4{font-size:18px;}
 p{margin:0 0 10px;}
@@ -252,7 +252,7 @@ a:focus{color:inherit;text-decoration:none;}
 @media (max-width:599px){
 .module-progress-card h4.module-progress-card__title{flex:0;width:100%;margin-bottom:16px;}
 }
-.module-progress-card p.module-progress-card__duration{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-size:14px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.29;opacity:.9;letter-spacing:normal;color:#80868b;display:flex;align-items:center;flex:0 1 13%;min-width:80px;}
+.module-progress-card p.module-progress-card__duration{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';font-size:14px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.29;opacity:.9;letter-spacing:normal;color:#80868b;display:flex;align-items:center;flex:0 1 13%;min-width:80px;}
 @media (max-width:599px){
 .module-progress-card p.module-progress-card__duration{flex:0;width:100%;margin-bottom:16px;}
 }
@@ -263,7 +263,7 @@ a:focus{color:inherit;text-decoration:none;}
 }
 .module-progress-card__progress--completed{animation-name:fade;animation-duration:.25s;animation-delay:.5s;animation-timing-function:ease;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;will-change:opacity;}
 .module-progress-card__progress i{color:#34a853;font-size:22px;margin-right:3px;margin-left:0;}
-.module-progress-card__progress__completed{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Google Sans,Arial,sans-serif;font-size:14px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.29;letter-spacing:normal;font-weight:500;color:#34a853;}
+.module-progress-card__progress__completed{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';font-size:14px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.29;letter-spacing:normal;font-weight:500;color:#34a853;}
 .module-progress-card__cta{flex:1 0 24px;display:flex;justify-content:flex-end;align-items:center;text-align:right;}
 @media (max-width:599px){
 .module-progress-card__cta{position:absolute;bottom:24px;right:24px;left:auto;}
@@ -309,7 +309,7 @@ button:focus{outline:none;}
 ::-ms-clear{display:none;}
 /*! CSS Used from: Embedded */
 ._1f67b618{width:100%;text-align:center;margin-bottom:32px;}
-._342054f3{cursor:pointer;border-radius:4px;border:0px;background-color:#62d76b;color:#ffffff;height:48px;font-size:16px;letter-spacing:1px;font-family:FibraOne-Bold, Gotham Rounded A, Gotham Rounded B, Segoe UI, Roboto, Oxygen, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;width:100%;}
+._342054f3{cursor:pointer;border-radius:4px;border:0px;background-color:#62d76b;color:#ffffff;height:48px;font-size:16px;letter-spacing:1px;font-family:'TeachableSans-Regular';width:100%;}
 ._342054f3:hover{background-color:#32b964;}
 ._35af145{display:flex;flex-direction:row;justify-content:center;}
 ._7c686bce{color:#ffd011;}

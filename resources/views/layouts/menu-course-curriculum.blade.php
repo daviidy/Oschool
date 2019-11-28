@@ -2,6 +2,8 @@
 
 <head>
   <link rel="stylesheet" href="/css/course_curriculum.css">
+  <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
+
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
   <style type="text/css">
 
@@ -29,6 +31,9 @@
     .ng-anchor {
       position: absolute;
     }
+    @font-face{font-family:'TeachableSans-Regular';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.ttf") format("truetype");}
+    @font-face{font-family:'TeachableSans-Bold';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.ttf") format("truetype");}
+
   </style>
 
   <link rel="stylesheet" media="screen" href="/css/fedora.css" data-turbolinks-track="true">
@@ -37,7 +42,7 @@
   <title>{{$course->name}} | Oschool</title>
   <meta name="description" content="Programme du cours {{$course->name}}">
   <meta name="og:image" content="@yield('image')"/>
-  <meta name="asset_host" content="https://fedora.teachablecdn.com">
+  <!--meta name="asset_host" content="https://fedora.teachablecdn.com"-->
   <script src="https://fedora.teachablecdn.com/assets/application-1373410a4fe18258bccdd558991a1b1ed4c62390e2116938378a10bc0ff046cf.js" data-turbolinks-track="true"></script>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <script src="https://fedora.teachablecdn.com/packs/student-d0390011b83863c240d7.js"></script>
