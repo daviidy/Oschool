@@ -6,6 +6,8 @@
   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <meta charset="UTF-8">
+  <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
+
   <link rel="stylesheet" media="screen" href="/css/fedora-course.css" data-turbolinks-track="true">
   <link href="/css/theme-course.css" rel="stylesheet" data-turbolinks-track="true">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -538,7 +540,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 
 
               <li>
-                <a class="fedora-navbar-link navbar-link" href="/blog" target="">
+                <a class="fedora-navbar-link navbar-link" href="https://events.oschoolelearning.com" target="">
                   Evénements
                 </a>
               </li>
@@ -550,7 +552,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
                 </a>
               </li>
               <li>
-                <a class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn" href="/signin">
+                <a href="{{route('login')}}"  class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn">
                   Salle de classe
                 </a>
               </li>
@@ -622,7 +624,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <a href="https://www.facebook.com/Oschool.ci/" target="_blank">Facebook</a>
           </li>
           <li>
-            <a href="https://twitter.com/OschoolLearning" target="_blank">Twiter</a>
+            <a href="https://twitter.com/OschoolLearning" target="_blank">Twitter</a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/oschool-ci-5823b8141/" target="_blank">Linkedin</a>

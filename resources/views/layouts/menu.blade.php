@@ -6,6 +6,8 @@
     <meta name="og:image" content="@yield('image')"/>
     <meta name="description" content="@yield('description')">
     <link rel="stylesheet" href="/css/school_homepage.css">
+    <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
+
     <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
@@ -159,7 +161,7 @@
             <a href="https://www.facebook.com/Oschool.ci/" target="_blank">Facebook</a>
           </li>
           <li>
-            <a href="https://twitter.com/OschoolLearning" target="_blank">Twiter</a>
+            <a href="https://twitter.com/OschoolLearning" target="_blank">Twitter</a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/oschool-ci-5823b8141/" target="_blank">Linkedin</a>

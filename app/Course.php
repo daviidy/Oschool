@@ -165,7 +165,16 @@ class Course extends Model
                }
                 $course->lessons()->delete();
                 $course->sections()->delete();
-                $course->projects()->delete();
+                foreach ($course->projects as $project) {
+                    $project->tasks()->delete();
+                    $project->resources()->delete();
+                    $project->delete();
+                }
+
+                foreach ($course->pricings as $pricing) {
+                    $pricing->purchases()->delete();
+                    $pricing->delete();
+                }
                 // do the rest of the cleanup...
            });
        }

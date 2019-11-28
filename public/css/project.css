@@ -179,7 +179,7 @@ button{cursor:pointer;}
 @media (min-width:768px){
 .navbar-button>span{display:block;margin-left:.5rem;}
 }
-body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Gilroy,sans-serif;letter-spacing:.11px;line-height:1;}
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';letter-spacing:.11px;line-height:1;}
 .page--light{color:#62686e;background:linear-gradient(180deg,#fff,#f5f5f5 30%);}
 .sectionWrapper{padding:.75rem;}
 @media (min-width:768px){
