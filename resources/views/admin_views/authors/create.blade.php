@@ -401,7 +401,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <div class="slide-show" style="">
     <!---->
     <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-        <form method="post" action="{{route('authors.store')}}" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style=""  enctype="multipart/form-data">
+        <form method="post" action="{{route('authors.store')}}" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" id="form"  enctype="multipart/form-data">
             @csrf
 
             <!---->
@@ -460,11 +460,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 </div>
 
 
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
 
 
 <script>
-    var quill = new Quill('#editor', {
+    var quillEditor = new Quill('#editor', {
     modules: {
         toolbar: [
         ['bold', 'italic'],
@@ -476,12 +476,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     theme: 'snow'
     });
 
-    var form = document.querySelector('form');
+    var form = document.getElementById('form');
     form.onsubmit = function() {
     // Populate hidden form on submit
     var bio = document.querySelector('input[name=bio]');
-    bio.value = quill.root.innerHTML;
-    console.log("Submitted",quill.root.innerHTML ,$(form).serialize(), $(form).serializeArray());
+    bio.value = quillEditor.root.innerHTML;
+    console.log("Submitted",quillEditor.root.innerHTML ,$(form).serialize(), $(form).serializeArray());
 
     // No back end to actually submit to!
     // alert('Open the console to see the submit data!')
