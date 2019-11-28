@@ -495,7 +495,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 </head>
 
 <body style="padding-bottom: 131px;">
-
+    
   <meta id="fedora-data" data-report-card="{}" data-course-ids="[]" data-role="null" data-last-four="null" data-completed-lecture-ids="[]" data-school-id="6419" data-school-launched="true" data-preview="logged_out"
     data-turn-off-fedora-branding="true" data-plan-supports-whitelabeling="true" data-powered-by-text="Powered by"
     data-asset-path="//https://fedora.teachablecdn.com/assets/footer/teachable-logo-white-efd32576079839534d5b6e87bf4424e99b12624f854b2c500a4d3f0b6e2af46b.svg"
@@ -504,6 +504,8 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
     data-course-data="{&quot;is_lecture_order_enforced&quot;:null,&quot;is_minimum_quiz_score_enforced&quot;:null,&quot;is_video_completion_enforced&quot;:null,&quot;minimum_quiz_score&quot;:null,&quot;maximum_quiz_retakes&quot;:null}"
     data-course-url="https://courses.52kards.com/courses/7169" data-course-id="7169" data-vat-country="null" data-hellosign-id="null">
 
+
+    
   <header class="">
 
     <div class="navbar navbar-fedora navbar-fixed-top bs-docs-nav   is-not-signed-in                     navbar-course-hero is-at-top" id="navbar" role="navigation">
@@ -527,7 +529,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf" >
             @endif
           </a>
-
+ 
           <div class="collapse navbar-collapse navbar-header-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li>

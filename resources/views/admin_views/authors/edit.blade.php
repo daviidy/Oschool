@@ -401,7 +401,7 @@
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="POST" action="{{url('authors', $author)}}" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="#editor-container">
+            <form method="POST" action="{{url('authors', $author)}}" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" id="form" enctype="multipart/form-data" id="#editor-container">
                 @csrf
                 {{ method_field('patch') }}
                     <!---->
@@ -460,7 +460,7 @@
 
 
         <script>
-            var quill = new Quill('#editor', {
+            var quillEditor = new Quill('#editor', {
             modules: {
                 toolbar: [
                 ['bold', 'italic'],
@@ -472,12 +472,12 @@
             theme: 'snow'
             });
 
-            var form = document.querySelector('form');
+            var form = document.getElementById('form');
             form.onsubmit = function() {
             // Populate hidden form on submit
             var bio = document.querySelector('input[name=bio]');
-            bio.value = quill.root.innerHTML;
-            console.log("Submitted",quill.root.innerHTML ,$(form).serialize(), $(form).serializeArray());
+            bio.value = quillEditor.root.innerHTML;
+            console.log("Submitted",quillEditor.root.innerHTML ,$(form).serialize(), $(form).serializeArray());
 
             // No back end to actually submit to!
             // alert('Open the console to see the submit data!')

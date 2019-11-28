@@ -1118,6 +1118,7 @@ button,html [type=button]{-webkit-appearance:button;}
         <div class="row senter">
           <!-- Free Tier -->
           @foreach($course->pricings as $pricing)
+            @if($pricing->status == "1")
           <div class="col-lg-4">
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
@@ -1140,6 +1141,7 @@ button,html [type=button]{-webkit-appearance:button;}
               </div>
             </div>
           </div>
+            @endif
           @endforeach
         </div>
       </div>
