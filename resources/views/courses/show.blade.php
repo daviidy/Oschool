@@ -300,6 +300,7 @@ button{line-height:inherit;}
     </div>
   </div>
 
+  @if($course->author)
   <div class="course-block block bio odd-stripe" id="block-183306">
     <div class="container">
       <div class="row">
@@ -312,14 +313,14 @@ button{line-height:inherit;}
           <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-4 text-center">
 
-            <img class="large-img-rounded img-responsive" src="/images/authors/{{$course->author->image}}" alt="{{$course->author->full_name}}">
+            <img class="large-img-rounded img-responsive" src="/images/users/authors/{{$course->author->image}}" alt="{{$course->author->full_name}}">
               <div class="author-name">
                 {{$course->author->full_name}}
               </div>
             </div>
             <div class="col-lg-9 col-md-8 col-sm-8">
               <p>
-                {{$course->author->bio}}
+                {!!$course->author->bio!!}
               </p>
               <p>
                 <br>
@@ -331,6 +332,7 @@ button{line-height:inherit;}
       </div>
     </div>
   </div>
+  @endif
 
   <div class="course-block block curriculum even-stripe" id="block-183307">
     <div class="container">
@@ -798,6 +800,7 @@ button{line-height:inherit;}
       <div class="row centre">
         <!-- Free Tier -->
         @foreach($course->pricings as $pricing)
+            @if($pricing->status == "1")
         <div class="col-lg-4">
           <div class="card mb-5 mb-lg-0">
             <div class="card-body">
@@ -824,6 +827,7 @@ button{line-height:inherit;}
             </div>
           </div>
         </div>
+        @endif
         @endforeach
       </div>
     </div>
