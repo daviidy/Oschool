@@ -237,7 +237,7 @@ button{line-height:inherit;}
 
               <a id="enroll-button-top" data-course-id="7169" class="btn btn-hg btn-primary btn-header-enroll" href="#price">
                 <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
-                Commencez le cours
+                S'inscrire cours
                 {{-- <span class="default-product-price product_7141">$52</span> --}}
                 <span class="coupon-price product_7141"></span>
               </a>
@@ -664,6 +664,7 @@ button{line-height:inherit;}
                              <div class="p-t-2">
                                  <div class="EnrollButton m-r-2">
                                      <div class="d-inline-block">
+                                         @auth
                                          <a href="{{Auth::user()->courses->contains($course->id) ? '/course/enrolled/'.$course->slug : '#price'}}">
                                          <button style="color: rgb(255, 255, 255); font-weight: bold; border-color: transparent;"
                                            class="Button_1w8tm98-o_O-primary_cv02ee-o_O-md_1jvotax button_8xjif7" style="color: rgb(255, 255, 255); font-weight: bold; border-color: transparent;">
@@ -681,6 +682,8 @@ button{line-height:inherit;}
                                              </span>
                                          </button>
                                          </a>
+                                         @endauth
+
                                      </div>
                                  </div>
                                  <div class="m-t-1">
@@ -770,9 +773,9 @@ button{line-height:inherit;}
             </div>
             <div class="row">
               <center style="
-              margin: 0 auto;
-          ">
+              margin: 0 auto;">
                 <br>
+                @auth
                 <a id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" href="{{Auth::user()->courses->contains($course->id) ? '/course/enrolled/'.$course->slug : '#price'}}">
                   @if(!Auth::user()->courses->contains($course->id))
                   <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
@@ -784,6 +787,15 @@ button{line-height:inherit;}
                   @endif
                   <span class="coupon-price product_7141"></span>
                 </a>
+                @endauth
+                @guest
+                <a id="enroll-button" data-course-id="7169" class="btn btn-hg btn-primary btn-enroll" name="commit" href="#price">
+                  <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
+
+                  S'inscrire au cours
+                  <span class="coupon-price product_7141"></span>
+                </a>
+                @endguest
                 <br>
               </center>
             </div>
@@ -793,6 +805,7 @@ button{line-height:inherit;}
     </div>
 
   </div>
+  @auth
   @if(!Auth::user()->courses->contains($course->id))
   <section class="pricing py-5" id="price">
     <div class="container">
@@ -832,7 +845,49 @@ button{line-height:inherit;}
       </div>
     </div>
   </section>
+  @endauth
   @endif
+
+  @guest
+  <section class="pricing py-5" id="price">
+    <div class="container">
+      <h1 class="title-price">Nos offres de prix</h1>
+      <div class="row centre">
+        <!-- Free Tier -->
+        @foreach($course->pricings as $pricing)
+            @if($pricing->status == "1")
+        <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">{{$pricing->name}}</h5>
+            <h6 class="card-price text-center">{{$pricing->type == 'Free' ? '0' : number_format($pricing->price, 0, '.', ' ')}} FCFA <span class="period"> {{$pricing->per == 'month' ? '/ Mois' : ''}} {{$pricing->per == 'year' ? '/ Année' : ''}}</span></h6>
+              <hr>
+              @if($pricing->type == 'Plan de paiement')
+              Vous paierez cette somme {{$pricing->times}} fois
+              <hr>
+              @endif
+              {!!$pricing->description!!}
+              <br>
+              <br>
+              <!--
+              <ul class="fa-ul">
+                <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Un seul utilisateur</li>
+                <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Mentoring</li>
+                <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Test</li>
+                {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li> --}}
+                {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li> --}}
+              </ul>
+          -->
+              <a href="/course/{{$course->slug}}/checkout/{{$pricing->id}}" class="btn btn-block btn-primary text-uppercase">S'inscrire</a>
+            </div>
+          </div>
+        </div>
+        @endif
+        @endforeach
+      </div>
+    </div>
+  </section>
+  @endguest
 
   <br>
 </div>
