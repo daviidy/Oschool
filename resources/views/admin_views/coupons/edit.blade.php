@@ -377,6 +377,7 @@
         }
 
         </style>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
 
 
         <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
@@ -459,13 +460,13 @@
                                             {{-- <p>{{dd($coupon)}}</p> --}}
                                         {{-- @endforeach --}}
                                         <br>
-                                      <select size="1" name="status" multiple id="courses_id" name="courses_id[]" style="width:250px;">
-
-                                        @foreach ($allCourses as $course_db)
-                                                <option value="{{$course_db->id}}">{{$course_db->name}}</option>
-                                            @endforeach
-
-                                      </select>
+                                        <select class="js-example-basic-multiple" name="courses_id[]" multiple="multiple" style="width:270px;">
+                                                @foreach ($allCourses as $course_db)
+                                                           {{-- @if($course_db->id === DB::table('coupon_course')->pluck('course_id')->count() ) --}}
+                                                                <option  value="{{$course_db->id}}">{{$course_db->name}}</option>
+                                                                {{-- @endif --}}
+                                                @endforeach
+                                         </select>
                                   </div>
 
                                  {{-- <input style="display: none;" type="text" name="school_id" value=""> --}}
@@ -517,5 +518,15 @@
             return true;
             };
           </script>
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+
+</script>
+
+
 
         @endsection
