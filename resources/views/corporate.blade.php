@@ -1225,7 +1225,7 @@ hr{border-color:#ececec;}
                         <h1 class="small-uppercase-text"></h1>
                         <h2 class="default-header" style="max-width: 750px; font-size: 50px!important;">QUEL IMPACT POUR VOTRE EQUIPE?</h2>
                         <div class="">
-                          <a href="/create-account?utm_source=features-mid" class="orange-button" style="padding: 20px 30px;">Téléchargez notre catalogue</a>
+                          <a href="https://drive.google.com/open?id=1XgdPMQlUx8odYdNsQmxowfVQ11b6ODzO" class="orange-button" style="padding: 20px 30px;">Téléchargez notre catalogue</a>
                           <a href="https://blog.oschoolelearning.com/?page_id=4300" class="orange-button">Contactez-nous</a>
                         </div>
                     </div>

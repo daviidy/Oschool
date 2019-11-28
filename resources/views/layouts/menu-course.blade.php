@@ -592,7 +592,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/?page_id=4404">FAQ</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="">Qui sommes nous?</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://support.oschoolelearning.com/qui-sommes-nous/">Qui sommes nous?</a>
           </li>
           <li>
             <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/hhbzcHE">La communauté</a>

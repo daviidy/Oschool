@@ -95,7 +95,7 @@
               <li class="dropdown-only"><a href="{{route('login')}}">Salle de classe</a></li>
               <!--li class="dropdown-only"><a href="/login?src=nav">Entreprises</a></li-->
               <li><a href="{{url('schools')}}">Nos écoles</a></li>
-              <li><a href="/event">Evénements</a></li>
+              <li><a href="https://events.oschoolelearning.com">Evénements</a></li>
               <li><a href="/corporate">Entreprises</a></li>
               <!--li><a href="/blog/resources">Blog</a></li-->
             </ul>
@@ -134,7 +134,7 @@
             <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/?page_id=4404">FAQ</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="">Qui sommes nous?</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://support.oschoolelearning.com/qui-sommes-nous/">Qui sommes nous?</a>
           </li>
           <li>
             <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/hhbzcHE">La communauté</a>
