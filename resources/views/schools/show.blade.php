@@ -160,7 +160,7 @@
                 <div class="bottom" data-mh="school-cards" style="height: 280px;">
                   <h1>{{$course->name}}</h1>
                   <p class="default-paragraph">{{ str_limit($course->subtitle, $limit = 100, $end = '...') }}</p>
-                  <img src="/images/authors/{{$course->author->image}}">
+                  <img src="/images/users/authors/{{$course->author->image}}">
                   <p class="default-paragraph">{{$course->author->full_name}}</p>
                 </div>
               </div>
@@ -240,7 +240,7 @@
                 <div class="bottom" data-mh="school-cards" style="height: 280px;">
                   <h1>{{$course->name}}</h1>
                   <p class="default-paragraph">{{ str_limit($course->subtitle, $limit = 100, $end = '...') }}</p>
-                  <img src="/images/authors/{{$course->author->image}}">
+                  <img src="/images/users/authors/{{$course->author->image}}">
                   <p class="default-paragraph">{{$course->author->full_name}}</p>
                 </div>
               </div>
@@ -321,7 +321,7 @@
                 <div class="bottom" data-mh="school-cards" style="height: 280px;">
                   <h1>{{$course->name}}</h1>
                   <p class="default-paragraph">{{ str_limit($course->subtitle, $limit = 100, $end = '...') }}</p>
-                  <img src="/images/authors/{{$course->author->image}}">
+                  <img src="/images/users/authors/{{$course->author->image}}">
                   <p class="default-paragraph">{{$course->author->full_name}}</p>
                 </div>
               </div>
