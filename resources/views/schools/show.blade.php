@@ -234,7 +234,7 @@
             @foreach($school->courses as $course)
                 @if($course->type == 'path' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
-            <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
+            <a href="{{ route('path.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
               <div class="school-card">
                 <div class="image" style="background-image: url(/images/courses/logos/{{$course->logo}});"></div>
                 <div class="bottom" data-mh="school-cards" style="height: 280px;">
@@ -315,7 +315,7 @@
             @foreach($school->courses as $course)
                 @if($course->type == 'bootcamp' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
-            <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
+            <a href="{{ route('path.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
               <div class="school-card">
                 <div class="image" style="background-image: url(/images/courses/logos/{{$course->logo}});"></div>
                 <div class="bottom" data-mh="school-cards" style="height: 280px;">
