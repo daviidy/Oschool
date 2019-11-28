@@ -377,7 +377,7 @@
         }
 
         </style>
-
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
 
         <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
             <div what="page header" class="tch-section-nav tch-page-header" icon="icon icon-cash-dollar" text="Pricing">
@@ -448,17 +448,26 @@
 
                             </div>
 
+                            
+
                                 <div class="col-sm-12 add-top-margin-25">
 
                                     <label for="status">Course </label>
                                         <br>
-                                      <select name="status"size="1" multiple id="courses_id" name="courses_id[]" style="width:250px;">
+                                      {{-- <select size="1" multiple id="courses_id" name="courses_id[]" style="width:250px;">
 
                                         @foreach ($allCourses as $course_db)
                                                 <option value="{{$course_db->id}}">{{$course_db->name}}</option>
                                             @endforeach
 
-                                      </select>
+                                      </select> --}}
+
+                                      <select class="js-example-basic-multiple" name="courses_id[]" multiple="multiple" style="width:250px;">
+                                            @foreach ($allCourses as $course_db)
+                                                        <option value="{{$course_db->id}}">{{$course_db->name}}</option>
+                                                    @endforeach
+                                          </select>
+                                      
                                   </div>
 
                                  <input style="display: none;" type="text" name="school_id" value="">
@@ -510,5 +519,14 @@
             return true;
             };
           </script>
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+
+</script>
+
 
         @endsection

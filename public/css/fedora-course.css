@@ -5,7 +5,7 @@
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
-    font-family: sans-serif;
+    font-family: 'TeachableSans-Regular';
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
 }
@@ -265,7 +265,7 @@ td, th {
 }
 
 @font-face {
-    font-family: 'Glyphicons Halflings';
+    font-family: 'TeachableSans-Regular';
     src: url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.eot");
     src: url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("//assets.teachablecdn.com/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg")
 }
@@ -274,7 +274,7 @@ td, th {
     position: relative;
     top: 1px;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
+    font-family:'TeachableSans-Regular';
     font-style: normal;
     font-weight: 400;
     line-height: 1;

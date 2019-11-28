@@ -23,7 +23,7 @@ td,th{padding:0;}
 .pull-right{float:right;}
 .fa-trash-o:before{content:"\F014";}
 .fa-edit:before{content:"\F044";}
-.fa-question-circle:before{content:"\F059";}
+.fa-question-circle:before{content:"\F059"; display: none;}
 .fa-bars:before{content:"\F0C9";}
 .fa-angle-left:before{content:"\F104";}
 .fa-angle-right:before{content:"\F105";}
@@ -310,6 +310,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <th>Prix<a href="#" tooltip="The default price will be set to the first pricing plan on this list." tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="tch-btn-tooltip no-padding"><i
                                   class="fa fa-question-circle"></i></a></th>
                         <th>Récurrent</th>
+                        <th>Statut</th>
 
                     </tr>
                 </thead>
@@ -336,6 +337,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             @endif
                         </td>
                         <td>{{$pricing->recurring}}</td>
+                       <td> 
+                           @if($pricing->status == 0)
+                            Hors ligne
+                            @elseif($pricing->status == 1)
+                            En ligne
+                            @endif
                         <td>
                             <!---->
                             <!---->
