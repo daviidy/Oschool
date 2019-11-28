@@ -495,7 +495,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
 </head>
 
 <body style="padding-bottom: 131px;">
-    
+
   <meta id="fedora-data" data-report-card="{}" data-course-ids="[]" data-role="null" data-last-four="null" data-completed-lecture-ids="[]" data-school-id="6419" data-school-launched="true" data-preview="logged_out"
     data-turn-off-fedora-branding="true" data-plan-supports-whitelabeling="true" data-powered-by-text="Powered by"
     data-asset-path="//https://fedora.teachablecdn.com/assets/footer/teachable-logo-white-efd32576079839534d5b6e87bf4424e99b12624f854b2c500a4d3f0b6e2af46b.svg"
@@ -505,7 +505,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
     data-course-url="https://courses.52kards.com/courses/7169" data-course-id="7169" data-vat-country="null" data-hellosign-id="null">
 
 
-    
+
   <header class="">
 
     <div class="navbar navbar-fedora navbar-fixed-top bs-docs-nav   is-not-signed-in                     navbar-course-hero is-at-top" id="navbar" role="navigation">
@@ -529,7 +529,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf" >
             @endif
           </a>
- 
+
           <div class="collapse navbar-collapse navbar-header-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li>
@@ -586,10 +586,10 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <a target="_blank" rel="noopener noreferrer" href="https://teachable.zendesk.com/hc/en-us">Carrières</a>
           </li-->
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/?page_id=4302">Devenez formateur</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/devenir-formateur/">Devenez formateur</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/?page_id=4404">FAQ</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/faq/">FAQ</a>
           </li>
           <li>
             <a target="_blank" rel="noopener noreferrer" href="https://support.oschoolelearning.com/qui-sommes-nous/">Qui sommes nous?</a>
@@ -610,7 +610,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             <a href="https://blog.oschoolelearning.com/confidentialite/" target="_blank">Confidentialité</a>
           </li>
           <li>
-            <a href="https://blog.oschoolelearning.com/?page_id=4300" target="_blank">Contactez-nous</a>
+            <a href="https://blog.oschoolelearning.com/contact/" target="_blank">Contactez-nous</a>
           </li>
           <li>
             <a href="https://blog.oschoolelearning.com" target="_blank">Blog</a>

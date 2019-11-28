@@ -61,7 +61,7 @@
     @include('includes.timer');
     {{-- timer --}}
 
-    
+
     <section class="_1568 clearfix transparent nav-menu">
       <style>
         ._1568 {
@@ -128,10 +128,10 @@
             <a target="_blank" rel="noopener noreferrer" href="https://teachable.zendesk.com/hc/en-us">Carrières</a>
           </li-->
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/?page_id=4302">Devenez formateur</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/devenir-formateur/">Devenez formateur</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/?page_id=4404">FAQ</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/faq/">FAQ</a>
           </li>
           <li>
             <a target="_blank" rel="noopener noreferrer" href="https://support.oschoolelearning.com/qui-sommes-nous/">Qui sommes nous?</a>
@@ -152,7 +152,7 @@
             <a href="https://blog.oschoolelearning.com/confidentialite/" target="_blank">Confidentialité</a>
           </li>
           <li>
-            <a href="https://blog.oschoolelearning.com/?page_id=4300" target="_blank">Contactez-nous</a>
+            <a href="https://blog.oschoolelearning.com/contact/" target="_blank">Contactez-nous</a>
           </li>
           <li>
             <a href="https://blog.oschoolelearning.com" target="_blank">Blog</a>
