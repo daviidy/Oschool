@@ -453,7 +453,7 @@
 
                                 <div class="col-sm-12 add-top-margin-25">
 
-                                    <label for="status">Course </label>
+                                    <label for="status">Cours </label>
                                     {{-- <br> --}}
                                     {{-- <p>Cours deja selectionnee</p> --}}
                                         {{-- @foreach ($coupon->courses as $coupon) --}}
@@ -462,9 +462,7 @@
                                         <br>
                                         <select class="js-example-basic-multiple" name="courses_id[]" multiple="multiple" style="width:270px;">
                                                 @foreach ($allCourses as $course_db)
-                                                           {{-- @if($course_db->id === DB::table('coupon_course')->pluck('course_id')->count() ) --}}
-                                                                <option  value="{{$course_db->id}}">{{$course_db->name}}</option>
-                                                                {{-- @endif --}}
+                                                                <option {{$coupon->courses->contains($course_db->id) ? 'selected' : ''}}  value="{{$course_db->id}}">{{$course_db->name}}</option>
                                                 @endforeach
                                          </select>
                                   </div>

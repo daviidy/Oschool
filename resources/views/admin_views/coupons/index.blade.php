@@ -308,6 +308,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                         {{-- <th>Image</th> --}}
                         <th>Date d'expiration</th>
                         <th>Reduction</th>
+                        <th>Cours concernés</th>
                         {{-- <th>Prix<a href="#" tooltip="The default price will be set to the first pricing plan on this list." tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true" class="tch-btn-tooltip no-padding"><i
                                   class="fa fa-question-circle"></i>
                                 </a>
@@ -341,7 +342,11 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                         <td>
                             {{$coupon->value}} %
                         </td>
-                    <td></td>
+                        <td>
+                            @foreach($coupon->courses as $course)
+                            {{$course->name}},
+                            @endforeach
+                        </td>
                         <td>
                             <!---->
                             <!---->

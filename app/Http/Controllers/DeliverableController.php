@@ -96,7 +96,7 @@ class DeliverableController extends Controller
 
                 $task = Task::find($task_id);
                 if($user->tasks->contains($task->id)){
-                    break;
+                    continue;
                 }
                 else
                 {

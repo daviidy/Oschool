@@ -98,7 +98,13 @@ class CouponController extends Controller
             {
                 $course_found = Course::find($course_id);
                 // $coupon->courses()->attach($course_found);
-                $coupon->courses()->sync($course_found);
+                if ($coupon->courses->contains($course_found->id)) {
+                    continue;
+                }
+                else {
+                    $coupon->courses()->attach($course_found);
+                }
+
             }
         }
         // $coupon->save();
