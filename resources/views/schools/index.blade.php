@@ -149,6 +149,8 @@
 
 
     </div>
+
+    {{ $schools->links() }}
     <div class="row logos">
       <div class="col-xs-12">
         <p class="default-paragraph">Les leaders du marché utilisent Oschool pour la formation du personnel.</p>

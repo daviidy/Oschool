@@ -18,6 +18,20 @@
     <script type="text/javascript" src="/js/slider.js"></script>
     <script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
     </script>
+
+<!--for pagination-->
+    <style media="screen">
+    /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css */
+
+.pagination{margin-bottom: 7rem;display:-ms-flexbox;display:flex;padding-left:0;list-style:none;border-radius:.25rem;}
+.page-link{position:relative;display:block;padding:.5rem .75rem;margin-left:-1px;line-height:1.25;color:#007bff;background-color:#fff;border:1px solid #dee2e6;}
+.page-link:hover{z-index:2;color:#0056b3;text-decoration:none;background-color:#e9ecef;border-color:#dee2e6;}
+.page-link:focus{z-index:2;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25);}
+.page-item:first-child .page-link{margin-left:0;border-top-left-radius:.25rem;border-bottom-left-radius:.25rem;}
+.page-item:last-child .page-link{border-top-right-radius:.25rem;border-bottom-right-radius:.25rem;}
+.page-item.active .page-link{z-index:1;color:#fff;background-color:#4D90CC;border-color:#4D90CC;}
+
+    </style>
   </head>
 
   <body class="body-public  " cz-shortcut-listen="true">

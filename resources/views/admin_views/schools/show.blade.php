@@ -148,7 +148,7 @@
                                     <!---->
                                     <!----><img ng-if="step.disabled()" ng-src="https://fedora.teachablecdn.com/images/schools/icon-lock.svg" class="icon more-faded"
                                       src="/images/schools/icon-lock.svg">
-                                    <!----><span ng-bind="step.text | translate">Paramètre de l'école</span>
+                                    <!----><span ng-bind="step.text | translate">Paramètres de l'école</span>
                                     <!---->
                                     <!---->
                                     <!----></a>

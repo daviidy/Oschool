@@ -19,7 +19,7 @@ class SchoolController extends Controller
      */
     public function index()
     {
-        $schools = School::where('status', 'active')->orderby('id','asc')->paginate(30);
+        $schools = School::where('status', 'active')->orderby('id','asc')->paginate(9);
         return view('schools.index', ['schools' => $schools]);
     }
 
