@@ -420,7 +420,13 @@ class PurchaseController extends Controller
             Auth::user()->schools()->attach($school);
         }
 
-        return redirect('/course/enrolled/'.$course->slug);
+        if ($course->type == 'course') {
+            return redirect('/course/enrolled/'.$course->slug);
+        }
+        else {
+            return redirect('/path/'.$course->slug);
+        }
+
 
     }
 
