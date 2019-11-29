@@ -120,19 +120,24 @@ class CouponController extends Controller
             $discount_value = ($pricing->price * $coupon->value)/100;
             $price = $pricing->price - $discount_value;
             if ($price == 0) {
+                if (Auth::check()) {
+                    $purchase=Purchase::create([
+                                      'price' => 0,
+                                      'date' => Carbon::now(),
+                                      'user_id' => Auth::user()->id,
+                                      'pricing_id' => $pricing->id,
+                                      'course_id' => $pricing->course_id,
+                                    ]);
 
-                $purchase=Purchase::create([
-                                  'price' => 0,
-                                  'date' => Carbon::now(),
-                                  'user_id' => Auth::user()->id,
-                                  'pricing_id' => $pricing->id,
-                                  'course_id' => $pricing->course_id,
-                                ]);
+                    return view('pricings.free',[
+                                                 'purchase' => $purchase,
+                                                 'pricing' => $pricing,
+                                               ]);
+                }
+                else {
+                    return redirect('/course/'.$course->slug.'/checkout/'.$pricing->id)->with('status', 'Connectez-vous d\'abord ci-dessous, pour ajouter le code coupon');
+                }
 
-                return view('pricings.free',[
-                                             'purchase' => $purchase,
-                                             'pricing' => $pricing,
-                                           ]);
 
             }
 
