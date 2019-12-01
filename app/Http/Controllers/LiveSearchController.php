@@ -50,8 +50,8 @@ class LiveSearchController extends Controller
                                </div>
                            </div>
                            <div class="row">
-                               <div class="tch-course-listing-sales tch-course-listing-footer-section">FCFA<div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
-                                     class="tch-course-listing-sales-total">0</div>
+                               <div class="tch-course-listing-sales tch-course-listing-footer-section">0 <div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
+                                     class="tch-course-listing-sales-total">FCFA</div>
                                    <div class="tch-course-listing-sales-label">Ventes</div>
                                </div>
                                <div class="tch-course-listing-enrollment tch-course-listing-footer-section">
