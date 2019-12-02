@@ -6,7 +6,7 @@
 
 <section id="sticky-banner" class="permanent-stick sticky green-countdown timer"  >
     <div class="content-container">
-      <h3 class="header">OSCHOOL BLACK FRIDAY! 60% DE REDUCTION !</h3>
+      <h3 class="header">DEAL DE L'ANNEE ! 60% DE REDUCTION PENDANT 3 MOIS !</h3>
         <div  id="sticky-banner-countdown" class="countdown-timer-component" data-on-end="">
     <div class="data-payload" data-end="2019-12-01T23:59:00-05:00"></div>
     <div class="days-container">
@@ -41,7 +41,7 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 01, 2019 12:31:25").getTime();
+var countDownDate = new Date("Dec 31, 2019 12:31:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
