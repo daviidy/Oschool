@@ -315,7 +315,9 @@ button{line-height:inherit;}
 
             <img class="large-img-rounded img-responsive" src="/images/users/authors/{{$course->author->image}}" alt="{{$course->author->full_name}}">
               <div class="author-name">
+                @if($course->author->full_name)
                 {{$course->author->full_name}}
+                @endif
               </div>
             </div>
             <div class="col-lg-9 col-md-8 col-sm-8">

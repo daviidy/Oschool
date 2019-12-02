@@ -36,7 +36,10 @@
         <span class="lecture-sidebar-icon">
           <i class="fa fa-user"></i>
         </span>
-        Votre instructeur : {{$course->author->full_name}}
+        Votre instructeur :
+        @if($course->author->full_name)
+        {{$course->author->full_name}}
+        @endif
       </a>
     </li>
 
@@ -164,7 +167,7 @@
               </span>
               <div class="title-container">
                 <div class="btn-primary btn-sm pull-right">
-                  Start
+                  Commencez
                 </div>
                 {{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}
               </div>
