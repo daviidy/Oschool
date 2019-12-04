@@ -176,7 +176,7 @@
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
       ng-if="::permissions.can('view_students')" text="Students" ng-click="goToStudents()" external-link="true" class="fastclickable" style="">
         <!---->
-        <!----><a what="link" ng-if="!sref &amp;&amp; !migrated">
+        <!----><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/students">
             <!----><span class="menu-item-label"><span ng-bind="::text" ng-class="textClass">Etudiants</span>
                 <!----><i ng-if="::externalLink" class="fa fa-external-link"></i>
                 <!----></span></a>

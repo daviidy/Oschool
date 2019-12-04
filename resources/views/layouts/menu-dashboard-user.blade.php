@@ -31,7 +31,7 @@
 
 </head>
 
-<body class="my-teachable-layout" cz-shortcut-listen="true">
+<body style="overflow-x: hidden;" class="my-teachable-layout" cz-shortcut-listen="true">
     <div class="container-fluid">
         @if (session('status'))
         <div class="alert-header">
@@ -62,9 +62,11 @@
                             <li class="nav-item-profile selected">
                                 <a href="/home">Mes écoles</a>
                             </li>
+                            @if(Auth::user()->isAdmin() || Auth::user()->isOwner())
                             <li class="nav-item-create">
                                 <a href="{{route('schools.create')}}">Créer une nouvelle école / classe</a>
                             </li>
+                            @endif
                             <li class="nav-item-settings">
                                 <a href="/users/settings">Mes paramètres</a>
                             </li>

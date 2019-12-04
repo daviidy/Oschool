@@ -157,8 +157,12 @@ Route::get('/schoolAdmin/{school}/courses/{course}/information', 'CourseControll
 Route::get('/schoolAdmin/{school}/courses/{course}/pages', 'CourseController@pages')->name('course');
 //course deliverable
 Route::get('/schoolAdmin/{school}/courses/{course}/deliverables', 'DeliverableController@index')->name('deliverable');
+
 //edit deliverable
 Route::get('/schoolAdmin/{school}/course/{course}/project/{project}/deliverables/{deliverable}/edit', 'DeliverableController@edit')->name('deliverable');
+
+//course students
+Route::get('/schoolAdmin/{school}/courses/{course}/students', 'CourseController@students')->name('course');
 
 //course curriculum
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum')->name('course');
@@ -192,6 +196,9 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pricing/{pricing}/editPayment
 
 //course certificates
 Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseController@certificates')->name('course');
+
+//delete user from the course
+Route::post('/unsubscribe', 'CourseController@unsubscribe');
 /*
 
 Route::get('/schoolAdmin/{school}/courses', 'CourseController@coursesForAdmin');

@@ -1192,30 +1192,6 @@ button,html [type=button]{-webkit-appearance:button;}
                             <hr class="video-slider__slide__highlight" ng-style="VideoSliderCtrl.highlightStyles" style="top: 0px; height: 140px;">
                         </div>
 
-                        <div class="video-slider__mobile-select col col--sm-12-12">
-                            <div class="custom-select ng-isolate-scope" ng-class="{'custom-select--open': open}" custom-select="" value="story" options="VideoSliderCtrl.content">
-                                <button type="button" class="custom-select__value" ng-click="ctrl.toggleSelect($event);">
-                                    <span class="custom-select__value__label ng-binding">Témoignage de Souleymane Coulibaly</span>
-                                    <ul class="custom-select__value__list" aria-hidden="">
-                                        <!-- ngRepeat: option in options -->
-                                        <li ng-repeat="option in options" aria-hidden="" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</li><!-- end ngRepeat: option in options -->
-                                        <li ng-repeat="option in options" aria-hidden="" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</li><!-- end ngRepeat: option in options -->
-                                    </ul>
-                                </button>
-                                <div class="custom-select__options">
-                                    <!-- ngRepeat: option in options --><button type="button" class="custom-select__option ng-binding ng-scope custom-select__option--selected" ng-click="ctrl.onClick(option, $event);" ng-repeat="option in options"
-                                      ng-class="{'custom-select__option--selected': option.value == value}">Témoignage de Souleymane Coulibaly</button><!-- end ngRepeat: option in options --><button type="button" class="custom-select__option ng-binding ng-scope"
-                                      ng-click="ctrl.onClick(option, $event);" ng-repeat="option in options" ng-class="{'custom-select__option--selected': option.value == value}">Témoignage de Souleymane Coulibaly</button><!-- end ngRepeat: option in options -->
-                                </div>
-                                <select class="custom-select__native ng-pristine ng-untouched ng-valid ng-not-empty" ng-transclude="" ng-model="value" aria-hidden="true" ng-class="{'custom-select__native--use-native': hasTouch}" aria-invalid="false">
-                                    <!-- ngRepeat: story in VideoSliderCtrl.content -->
-                                    <option ng-repeat="story in VideoSliderCtrl.content" value="LAWNBwoc5r4" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</option><!-- end ngRepeat: story in VideoSliderCtrl.content -->
-                                    <option ng-repeat="story in VideoSliderCtrl.content" value="OnS3YKbPrP0" class="ng-binding ng-scope">Témoignage de Souleymane Coulibaly</option><!-- end ngRepeat: story in VideoSliderCtrl.content -->
-                                </select>
-                            </div>
-                            <p class="video-slider__mobile-select__description ng-binding">Découvrez l'exemple de Sylwia, de l'agence icube.pl. Après avoir renforcé ses compétences et obtenu la certification, elle a été promue responsable du
-                                marketing de contenu. Depuis, elle a aidé l'agence à pénétrer de nombreux nouveaux marchés.</p>
-                        </div>
 
 
 
@@ -1370,7 +1346,7 @@ button,html [type=button]{-webkit-appearance:button;}
     <section class="course-detail__section course-detail__cta-box content__container--full-width">
         <div class="content__wrapper">
             <div class="cta-box">
-                <span class="cta-box__title">Commencez dès aujourd'hui et obtenez votre certification "Les principes fondamentaux du marketing numérique".</span>
+                <span class="cta-box__title">Commencez dès aujourd'hui et obtenez votre certification "{{$course->name}}".</span>
                 <a href="#price" class="btn btn--primary" enroll-link="" btn-ripple="" data-gtm-tag="start-course sign-in">Inscrivez-vous à ce parcours</a>
             </div>
         </div>

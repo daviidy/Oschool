@@ -8,6 +8,7 @@ use App\Category;
 use App\Pricing;
 use App\Certificate;
 use App\Project;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
@@ -45,7 +46,7 @@ class CourseController extends Controller
      */
     public function createAdmin(School $school)
     {
-        if (Auth::check()) {
+        if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
         $categories = Category::orderby('id', 'asc')->paginate(100);
         return view('admin_views.courses.create', ['school' => $school, 'categories' => $categories]);
         }
@@ -234,7 +235,7 @@ class CourseController extends Controller
       */
      public function indexForAdmin(School $school)
      {
-         if (Auth::check()) {
+         if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
          return view('admin_views.courses.index', ['school' => $school]);
         }
         else {
@@ -250,7 +251,7 @@ class CourseController extends Controller
       */
      public function information(School $school, Course $course)
      {
-         if (Auth::check()) {
+         if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
          $categories = Category::orderby('id', 'asc')->paginate(100);
          return view('admin_views.courses.information', ['school' => $school,
                                                          'course' => $course,
@@ -270,7 +271,7 @@ class CourseController extends Controller
       */
      public function pages(School $school, Course $course)
      {
-         if (Auth::check()) {
+         if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
          return view('admin_views.courses.pages', ['school' => $school, 'course' => $course]);
         }
         else {
@@ -286,7 +287,7 @@ class CourseController extends Controller
       */
      public function curriculum(School $school, Course $course)
      {
-         if (Auth::check()) {
+         if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
              if ($course->type == "course") {
                  return view('admin_views.courses.curriculum', ['school' => $school, 'course' => $course]);
              }
@@ -309,8 +310,35 @@ class CourseController extends Controller
       */
      public function pricing(School $school, Course $course)
      {
-         if (Auth::check()) {
+         if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
          return view('admin_views.courses.pricing', ['school' => $school, 'course' => $course]);
+        }
+        else {
+            return redirect('home');
+        }
+     }
+
+     //show students of the course
+     public function students(School $school, Course $course)
+     {
+         if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
+         return view('admin_views.courses.students', ['school' => $school, 'course' => $course]);
+        }
+        else {
+            return redirect('home');
+        }
+     }
+
+     //show students of the course
+     public function unsubscribe(Request $request)
+     {
+         if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
+             $user = User::find($request->user_id);
+             $course = Course::find($request->course_id);
+             $school = School::find($course->school_id);
+             $user->courses()->detach($course);
+             $user->schools()->detach($school);
+         return redirect()->back()->with('status', 'Utilisateur désinscrit avec succès');
         }
         else {
             return redirect('home');
