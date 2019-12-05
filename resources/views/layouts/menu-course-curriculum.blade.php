@@ -123,8 +123,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="/users/billings">
-                  <a href="/curclass="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2"rent_user/subscriptions">
+
+                  <a href="/users/billings"col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2"rent_user/subscriptions">
                     Gerer vos abonnements
                   </a>
                 </li>
