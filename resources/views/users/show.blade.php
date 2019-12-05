@@ -127,9 +127,9 @@ p{margin:0;}
 @media all{
 .text-left{text-align:left!important;}
 body a{color:rgba(0,0,0,.92);text-decoration:underline;}
-body a:hover{color:#7451eb;}
+body a:hover{color:#4D90CC;}
 h2{color:rgba(0,0,0,.92);margin:10px 0;font-weight:700;}
-h2{font-size:1.125rem;line-height:1.75rem;}
+h2{font-size:2.125rem;line-height:1.75rem;}
 p{font-size:.875rem;line-height:1.5rem;color:rgba(0,0,0,.92);}
 @media only screen and (min-width:992px){
 p{font-size:1rem;line-height:1.625rem;}
@@ -193,7 +193,7 @@ figure{margin:0;position:relative;display:inline-block;overflow:hidden;width:100
 .searchField__wrapperInput{display:table-cell;vertical-align:middle;width:250px;}
 .searchField__input{width:100%;}
 .searchField__button{display:table-cell;margin-left:10px;}
-.secondTitle{color:rgba(0,0,0,.92);font-size:1.5rem;line-height:2.125rem;font-weight:700;border-bottom:1px solid #d2d2d2;margin-bottom:20px;}
+.secondTitle{color:rgba(0,0,0,.92);font-size:.125rem;line-height:2.125rem;font-weight:700;border-bottom:1px solid #d2d2d2;margin-bottom:20px;}
 .dashboardTable{color:rgba(0,0,0,.92);border-collapse:collapse;text-align:center;width:100%;font-size:14px;box-shadow:0 0 8px #9b9b9b;}
 .dashboardTable .dashboardTable__link{color:rgba(0,0,0,.92);text-decoration:none;}
 .dashboardTable__infoSecondary{display:none;}
@@ -545,12 +545,12 @@ div.mce-edit-area{background:#fff;filter:none;}
                             <i class="  avatar"
                               style="background-image: url(&quot;/images/users/default/{{$user->image}}&quot;);"></i><br>
                         </a>
-                        <div class="mentorshipStudent__nameDetails">
-                            <a href="/fr/membres/adib-legastelois">
-                                Adib Legastelois
+                        <div style="font-size: 16px;" class="mentorshipStudent__nameDetails">
+                            <a>
+                                {{$user->name}}
                             </a>
                             <br>
-                            <p class="mentorshipStudent__studentEmail oc-typography-body2">adib.legastelois@icloud.com</p>
+                            <p style="font-size: 16px;" class="mentorshipStudent__studentEmail oc-typography-body2">{{$user->email}}</p>
                         </div>
                     </div>
                     @if(Auth::user()->isAdmin())
@@ -558,7 +558,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                         <form action="{{ route('users.destroy', $user) }}" method="post">
                             {{ csrf_field() }}
                             {{ method_field('delete') }}
-                            <button class="button button--secondary button--compact searchField__button" type="submit" data-open-on-change="false" data-cancel-button="true" data-text-button="Retirer ce mentor"
+                            <button style="font-size: 12px;" class="button button--secondary button--compact searchField__button" type="submit" data-open-on-change="false" data-cancel-button="true" data-text-button="Retirer ce mentor"
                               data-message="Attention, retirer l'attribution de ce mentor va entraîner la suppression des éventuelles futures sessions de mentorat déjà programmées avec l'étudiant." data-force-width="480">
                                 Supprimer cet utilisateur
                             </button>
