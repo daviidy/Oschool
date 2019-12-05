@@ -533,7 +533,7 @@ button{line-height:inherit;}
           <div class="faq-answer">
             Vous avez des formations de qualité ou êtes vous-mêmes formateurs/expert dans un domaine, nous serions ravis d'en discuter avec vous !
 
-            Pour nous contacter,<a href="https://oschool.ci/devenez-formateur/"> CLIQUEZ ICI.</a>
+            Pour nous contacter,<a href="https://blog.oschoolelearning.com/devenir-formateur/"> CLIQUEZ ICI.</a>
 
             Nous n’attendons que vous !
           </div>

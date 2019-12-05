@@ -337,7 +337,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             @endif
                         </td>
                         <td>{{$pricing->recurring}}</td>
-                       <td> 
+                       <td>
                            @if($pricing->status == 0)
                             Hors ligne
                             @elseif($pricing->status == 1)
@@ -374,12 +374,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                   disabled="disabled"><i class="fa fa-angle-left"></i></button><button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page" class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"><i
                       class="fa fa-angle-right"></i></button></div>
         </div>
-        <!---->
+        <!---
         <div ng-class="{ 'text-center': products.length == 0, 'pull-right': products.length > 0 }" ng-if=" deletedPlansCount > 0" class="pull-right">
-            <!----><a ui-sref="admin.courses.course.pricing(::{id: course.id, is_published: false})" ng-if="showPublishedPlans" ui-sref-opts="{reload:true}" class="gray-underline"
+            <!---<a ui-sref="admin.courses.course.pricing(::{id: course.id, is_published: false})" ng-if="showPublishedPlans" ui-sref-opts="{reload:true}" class="gray-underline"
               href="/admin/courses/627895/pricing?is_published=false&amp;page=1">Afficher les plans de tarification supprimés (1)</a>
-            <!---->
-            <!---->
+            <!---
+            <!---
         </div>
         <!---->
         <!----><br ng-if="products.length > 0">

@@ -382,13 +382,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
     <!---->
     <!---->
-    <div class="tch-learn-more" what="info-footer" text="about courses in the Teachable Knowledge Base" label="admin.courses.index">
-        <div class="alert alert-info">
-            <!---->
-            <div ng-transclude="" ng-class="{ 'border-left': title }" class="alert-text-wrapper"><a ng-href="https://support.oschoolelearning.com"
-                  href="https://support.oschoolelearning.com" target="_blank">Apprendre encore plus</a><span class="space"></span><span ng-bind="text">à propos des informations sur la connaissance de base des cours.</span></div>
-        </div>
-    </div>
+    @include('includes.information')
 </div>
 
 

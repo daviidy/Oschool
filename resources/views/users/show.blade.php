@@ -200,11 +200,11 @@ figure{margin:0;position:relative;display:inline-block;overflow:hidden;width:100
 .dashboardTable td,.dashboardTable th{padding:10px;}
 .dashboardTable td{border:1px solid #bebebe;}
 .dashboardTable .dashboardTable__progressBar{padding:0;vertical-align:bottom;}
-.dashboardTable th{background:#003668;color:#fff;font-weight:400;position:relative;}
+.dashboardTable th{background:#4d90cc;color:#fff;font-weight:400;position:relative;}
 .dashboardTable th+th::before{content:' ';width:0;display:inline-block;vertical-align:middle;position:absolute;left:0;top:9px;bottom:9px;border-left:1px solid rgba(0,0,0,.3);border-right:1px solid rgba(255,255,255,.1);}
 .dashboardTable tr{height:55px;}
 .dashboardTable tr:nth-child(odd){background:#f6f6f6;}
-.dashboardTable .dashboardTable__header.dashboardTable__header{background-color:#003668;border:1px solid #003668;}
+.dashboardTable .dashboardTable__header.dashboardTable__header{background-color:#4d90cc;border:1px solid #4d90cc;}
 .dashboardTable__projectWorkInProgress .response{display:inline-block;border:1px solid #ececec;border-radius:3px;color:#fff;background-color:#7451eb;font-size:.875rem;padding:3px 10px;}
 @media only screen and (min-width:768px){
 .dashboardTable__infoSecondary{display:table-cell;}
@@ -226,17 +226,17 @@ figure{margin:0;position:relative;display:inline-block;overflow:hidden;width:100
 .button--primary,.button--secondary,.button--alternative{font-family:"Montserrat";font-size:.875rem;font-weight:700;text-align:center;line-height:1.5rem;}
 .button--alternative{font-family:"Montserrat";font-size:.875rem;font-weight:700;text-align:center;line-height:1.5rem;}
 .button--primary{border-radius:4px;border-width:1px;border-style:solid;outline:none;padding:8px 16px;text-transform:uppercase;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;position:relative;overflow:hidden;color:#fff;background-color:#7451eb;border-color:#7451eb;-webkit-box-shadow:0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.2);box-shadow:0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.2);}
-.button--primary:hover,.button--primary:focus{color:#fff;background-color:#7451eb;border-color:#7451eb;-webkit-box-shadow:0 6px 6px 0 rgba(0,0,0,0.26),0 10px 20px 0 rgba(0,0,0,0.19);box-shadow:0 6px 6px 0 rgba(0,0,0,0.26),0 10px 20px 0 rgba(0,0,0,0.19);}
+.button--primary:hover,.button--primary:focus{color:#fff;background-color:#4d90cc;border-color:#4d90cc;-webkit-box-shadow:0 6px 6px 0 rgba(0,0,0,0.26),0 10px 20px 0 rgba(0,0,0,0.19);box-shadow:0 6px 6px 0 rgba(0,0,0,0.26),0 10px 20px 0 rgba(0,0,0,0.19);}
 .button--primary:active{color:#fff;background-color:#7451eb;border-color:#7451eb;-webkit-box-shadow:none;box-shadow:none;}
 .button--primary:disabled{pointer-events:none;}
 .button--primary:after{content:'';position:absolute;top:50%;left:50%;width:5px;height:5px;background:#fff;opacity:0;border-radius:100%;-webkit-transform:scale(1, 1) translate(-50%);transform:scale(1, 1) translate(-50%);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;}
 .button--primary:disabled{color:#545454;background-color:#d2d2d2;border-color:#d2d2d2;-webkit-box-shadow:none;box-shadow:none;}
-.button--secondary{border-radius:4px;border-width:1px;border-style:solid;outline:none;padding:8px 16px;text-transform:uppercase;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;position:relative;overflow:hidden;color:#7451eb;background-color:#fff;border-color:#7451eb;-webkit-box-shadow:none;box-shadow:none;}
-.button--secondary:hover,.button--secondary:focus{color:#7451eb;background-color:rgba(116,81,235,0.24);border-color:#7451eb;-webkit-box-shadow:none;box-shadow:none;}
-.button--secondary:active{color:#7451eb;background-color:#fff;border-color:#7451eb;-webkit-box-shadow:none;box-shadow:none;}
+.button--secondary{border-radius:4px;border-width:1px;border-style:solid;outline:none;padding:8px 16px;text-transform:uppercase;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;position:relative;overflow:hidden;color:#4d90cc;background-color:#fff;border-color:#4d90cc;-webkit-box-shadow:none;box-shadow:none;}
+.button--secondary:hover,.button--secondary:focus{color:#4d90cc;background-color:#6aace642;border-color:#4d90cc;-webkit-box-shadow:none;box-shadow:none;}
+.button--secondary:active{color:#4d90cc;background-color:#fff;border-color:#4d90cc;-webkit-box-shadow:none;box-shadow:none;}
 .button--secondary:disabled{pointer-events:none;}
 .button--secondary:after{content:'';position:absolute;top:50%;left:50%;width:5px;height:5px;background:#7451eb;opacity:0;border-radius:100%;-webkit-transform:scale(1, 1) translate(-50%);transform:scale(1, 1) translate(-50%);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;}
-.button--secondary:disabled{color:#545454;background-color:#d2d2d2;border-color:#d2d2d2;-webkit-box-shadow:none;box-shadow:none;}
+.button--secondary:disabled{color:#4d90cc;background-color:#d2d2d2;border-color:#4d90cc;-webkit-box-shadow:none;box-shadow:none;}
 .button--alternative{border-radius:4px;border-width:1px;border-style:solid;outline:none;padding:8px 16px;text-transform:uppercase;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,-webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;position:relative;overflow:hidden;color:#7451eb;background-color:rgba(0,0,0,0);border-color:rgba(0,0,0,0);-webkit-box-shadow:none;box-shadow:none;border-radius:2px;}
 .button--alternative:hover,.button--alternative:focus{color:#7451eb;background-color:rgba(116,81,235,0.24);border-color:rgba(0,0,0,0);-webkit-box-shadow:none;box-shadow:none;}
 .button--alternative:active{color:#7451eb;background-color:rgba(0,0,0,0);border-color:rgba(0,0,0,0);-webkit-box-shadow:none;box-shadow:none;}
@@ -322,7 +322,7 @@ input:not([type=checkbox]):not([type=radio]):focus,textarea:focus{outline:none;}
 .mentorshipStudent__studentContainer,.mentorshipStudent__mentorContainer{max-width:initial;}
 .mentorshipStudent__mentorContainer{margin-top:0;margin-left:24px;}
 }
-.avatar{border-radius:50%;display:inline-block;position:relative;width:40px;height:40px;background-size:cover;background-position:center center;background-color:transparent;-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);}
+.avatar{border-radius:50%;display:inline-block;position:relative;background-size:cover;background-position:center center;background-color:transparent;-webkit-box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);}
 }
 /*! CSS Used from: https://openclassrooms.com/bundles/crud/css/main-28286c21.css ; media=all */
 @media all{

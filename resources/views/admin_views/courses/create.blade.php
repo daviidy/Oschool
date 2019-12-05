@@ -437,13 +437,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             </div>
         </div>
     </form>
-    <div class="tch-learn-more" text="about creating a course in the Teachable Knowledge Base" label="admin.courses.new">
-        <div class="alert alert-info">
-            <!---->
-            <div ng-transclude="" ng-class="{ 'border-left': title }" class="alert-text-wrapper"><a ng-href="https://support.teachable.com/hc/en-us/articles/220340327-Create-and-Set-Up-Your-Course-?src=admin"
-                  href="https://support.teachable.com/hc/en-us/articles/220340327-Create-and-Set-Up-Your-Course-?src=admin" target="_blank">En savoir plus sur</a><span class="space"></span><span ng-bind="text"> la création d'un cours dans la base de connaissances</span></div>
-        </div>
-    </div><br><br>
+    @include('includes.information')<br><br>
 </div>
 
 @endsection
