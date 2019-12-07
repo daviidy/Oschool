@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Contracts\Auth\CanResetPassword;
+use Illuminate\Support\Facades\File;
 
 use App\Notifications\PasswordReset;
 
@@ -127,7 +128,7 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->belongsToMany('App\Task');
     }
-    
+
 
      //function for relationship between
     //user and deliverables (one to many)
@@ -136,9 +137,35 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany('App\Deliverable');
     }
 
-    
-        public function routeNotificationForMail($notification)
-        {
-            return $this->email;
+
+    public function routeNotificationForMail($notification)
+    {
+        return $this->email;
+    }
+
+
+    public static function boot() {
+    parent::boot();
+
+    static::deleting(function($user) { // before delete() method call this
+
+        if (File::exists(public_path('/images/users/default/' . $user->image))) {
+            File::delete(public_path('/images/users/default/' . $user->image));
         }
+         $user->certificates()->delete();
+         $user->deliverables()->delete();
+         $user->purchases()->delete();
+         $user->results()->delete();
+         $user->answers()->delete();
+         $user->schools()->delete();
+
+         // do the rest of the cleanup...
+    });
+}
+
+
+
+
+
+
 }
