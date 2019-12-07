@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\School;
+use App\User;
+use App\Author;
 
 class LiveSearchController extends Controller
 {
@@ -128,7 +130,7 @@ class LiveSearchController extends Controller
        {
         $output .= '
         <tr>
-         <td><a href="/users/'.$row->id.'">'.$row->name.'</a></td>
+         <td><a target="__blank" href="/users/'.$row->id.'">'.$row->name.'</a></td>
          <td>'.$row->email.'</td>
 
         </tr>
@@ -152,4 +154,153 @@ class LiveSearchController extends Controller
 
      }
     }
+
+
+
+    function searchCoursesAdmin(Request $request)
+    {
+     if($request->ajax())
+     {
+      $output = '';
+      $query = $request->get('query');
+      if($query != '')
+      {
+       $data = DB::table('courses')
+         ->where('name', 'like', '%'.$query.'%')
+         ->orderBy('name', 'asc')
+         ->get();
+
+      }
+      else
+      {
+       $data = DB::table('courses')
+         ->orderBy('name', 'asc')
+         ->get();
+      }
+      $total_row = $data->count();
+      if($total_row > 0)
+      {
+       foreach($data as $row)
+       {
+        $author = Author::find($row->author_id);
+        if ($author) {
+            $output .= '
+            <tr>
+             <td><a target="__blank" href="/schoolAdmin/'.$row->school_id.'/courses/'.$row->id.'/information">'.$row->name.'</a></td>
+             <td>'.$author->full_name.'</td>
+             <td>'.$row->state.'</td>
+             <td>'.$row->type.'</td>
+            </tr>
+            ';
+        }
+        else {
+            $output .= '
+            <tr>
+             <td><a target="__blank" href="/schoolAdmin/'.$row->school_id.'/courses/'.$row->id.'/information">'.$row->name.'</a></td>
+             <td>Aucun auteur</td>
+             <td>'.$row->state.'</td>
+             <td>'.$row->type.'</td>
+            </tr>
+            ';
+        }
+
+       }
+      }
+      else
+      {
+       $output = '
+       <tr>
+        <td align="center" colspan="5">Aucun résultat pour cette recherche</td>
+       </tr>
+       ';
+      }
+      $data = array(
+       'table_data'  => $output,
+       'total_data'  => $total_row
+      );
+
+      echo json_encode($data);
+
+     }
+    }
+
+
+
+    function searchSchoolsAdmin(Request $request)
+    {
+     if($request->ajax())
+     {
+      $output = '';
+      $query = $request->get('query');
+      if($query != '')
+      {
+       $data = DB::table('schools')
+         ->where('name', 'like', '%'.$query.'%')
+         ->orderBy('name', 'asc')
+         ->get();
+
+      }
+      else
+      {
+       $data = DB::table('schools')
+         ->orderBy('name', 'asc')
+         ->get();
+      }
+      $total_row = $data->count();
+      if($total_row > 0)
+      {
+       foreach($data as $row)
+       {
+        $user = User::find($row->user_id);
+        $school = School::find($row->id);
+        $nombre_cours = count($school->courses->where("type", "course"));
+        $nombre_parcours = count($school->courses->where("type", "path"));
+
+        if ($user) {
+            $output .= '
+            <tr>
+             <td><a target="__blank" href="/schoolAdmin/'.$row->id.'">'.$row->name.'</a></td>
+             <td><a href="/users/'.$user->id.'">'.$user->name.'</a></td>
+             <td>'.$row->state.'</td>
+             <td>'.$nombre_cours.'</td>
+             <td>'.$nombre_parcours.'</td>
+            </tr>
+            ';
+        }
+        else {
+            $output .= '
+            <tr>
+             <td><a target="__blank" href="/schoolAdmin/'.$row->id.'">'.$row->name.'</a></td>
+             <td>Aucun propriétaire</td>
+             <td>'.$row->state.'</td>
+             <td>'.$nombre_cours.'</td>
+             <td>'.$nombre_parcours.'</td>
+            </tr>
+            ';
+        }
+
+       }
+      }
+      else
+      {
+       $output = '
+       <tr>
+        <td align="center" colspan="5">Aucun résultat pour cette recherche</td>
+       </tr>
+       ';
+      }
+      $data = array(
+       'table_data'  => $output,
+       'total_data'  => $total_row
+      );
+
+      echo json_encode($data);
+
+     }
+    }
+
+
+
+
+
 }

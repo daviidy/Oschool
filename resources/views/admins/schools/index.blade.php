@@ -17,7 +17,7 @@
                             <input id="search" _ngcontent-c18="" placeholder="Chercher des écoles" type="text" class="ng-pristine ng-valid ng-touched">
                           </div>
                       </div>
-                      <h3 align="center">Total des résultats : <span id="total_records">629</span></h3>
+                      <h3 align="center">Total des résultats : <span id="total_records"></span></h3>
                   </section>
 
             </div>
@@ -41,7 +41,6 @@
                                 <th>Statut</th>
                                 <th>Nombre de cours</th>
                                 <th>Nombre de parcours</th>
-                                <th>Supprimer</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -79,6 +78,42 @@
     <!-- end basic table  -->
     <!-- ============================================================== -->
 </div>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function(){
+
+ fetch_customer_data();
+
+ function fetch_customer_data(query = '')
+ {
+  $.ajax({
+   url:"/ajax_school_search_admin",
+   method:'GET',
+   data:{query:query},
+   dataType:'json',
+   success:function(data)
+   {
+    $('tbody').html(data.table_data);
+    $('#total_records').text(data.total_data);
+    },
+    error: function (xhr, msg) {
+      console.log(msg + '\n' + xhr.responseText);
+  }
+  })
+ }
+
+ $(document).on('keyup', '#search', function(){
+  var query = $(this).val();
+  fetch_customer_data(query);
+ });
+});
+</script>
 
 
 

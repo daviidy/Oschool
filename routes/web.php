@@ -277,6 +277,8 @@ Route::get('/getCertificate/{course}', 'CourseController@getCertificate');
 
 Route::get('/ajax_course_search/{school}', 'LiveSearchController@action');
 Route::get('/ajax_user_search_admin', 'LiveSearchController@searchUsersAdmin');
+Route::get('/ajax_course_search_admin', 'LiveSearchController@searchCoursesAdmin');
+Route::get('/ajax_school_search_admin', 'LiveSearchController@searchSchoolsAdmin');
 
 
 //
