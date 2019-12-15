@@ -338,6 +338,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                            {{number_format((count($user->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}%
                            @else
                            {{number_format((count($user->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}
+                           @endif
                        </td>
                         <td>
                             <!---->
