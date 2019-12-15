@@ -116,7 +116,8 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect('/user/admin')->with('status', 'Utilisateur définitivement supprimé');
+        //return redirect('/user/admin')->with('status', 'Utilisateur définitivement supprimé');
+        return redirect()->back()->with('status', 'Utilisateur définitivement supprimé');
     }
 
 
