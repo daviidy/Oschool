@@ -154,6 +154,16 @@ class Course extends Model
                  return $this->belongsToMany('App\Coupon');
              }
 
+             /**
+              * [users description]
+              * relationship one to many with Course model
+              * @return [array] [description]
+              */
+              public function quizzes()
+              {
+                  return $this->hasMany('App\Quiz');
+              }
+
 
            public static function boot() {
            parent::boot();
@@ -174,6 +184,12 @@ class Course extends Model
                 foreach ($course->pricings as $pricing) {
                     $pricing->purchases()->delete();
                     $pricing->delete();
+                }
+
+                foreach ($course->quizzes as $quiz) {
+                    $quiz->questions()->delete();
+                    $quiz->results()->delete();
+                    $quiz->delete();
                 }
                 // do the rest of the cleanup...
            });
