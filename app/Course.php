@@ -156,7 +156,7 @@ class Course extends Model
 
              /**
               * [users description]
-              * relationship one to many with Course model
+              * relationship one to many with Quiz model
               * @return [array] [description]
               */
               public function quizzes()
@@ -173,8 +173,7 @@ class Course extends Model
                if (File::exists(public_path('/images/courses/logos/' . $course->logo))) {
                    File::delete(public_path('/images/courses/logos/' . $course->logo));
                }
-                $course->lessons()->delete();
-                $course->sections()->delete();
+
                 foreach ($course->projects as $project) {
                     $project->tasks()->delete();
                     $project->resources()->delete();
@@ -191,6 +190,9 @@ class Course extends Model
                     $quiz->results()->delete();
                     $quiz->delete();
                 }
+
+                $course->lessons()->delete();
+                $course->sections()->delete();
                 // do the rest of the cleanup...
            });
        }
