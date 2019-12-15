@@ -42,6 +42,7 @@
                                 <th>Auteur</th>
                                 <th>Statut</th>
                                 <th>Type</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>

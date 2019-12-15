@@ -128,10 +128,20 @@ class LiveSearchController extends Controller
       {
        foreach($data as $row)
        {
+        $token = csrf_token();
         $output .= '
         <tr>
          <td><a target="__blank" href="/users/'.$row->id.'">'.$row->name.'</a></td>
          <td>'.$row->email.'</td>
+         <td>
+             <form action="/users/'.$row->id.'" method="post">
+                 <input type="hidden" name="_token" value="'.$token.'">
+                 <input type="hidden" name="_method" value="delete">
+                 <button style="background:#dc4f2f;"
+                     class="btn btn-xs btn-rounded btn-danger"><i class="fa fa-trash"></i>
+                 </button>
+             </form>
+         </td>
 
         </tr>
         ';
@@ -182,6 +192,7 @@ class LiveSearchController extends Controller
       {
        foreach($data as $row)
        {
+        $token = csrf_token();
         $author = Author::find($row->author_id);
         if ($author) {
             $output .= '
@@ -190,6 +201,15 @@ class LiveSearchController extends Controller
              <td>'.$author->full_name.'</td>
              <td>'.$row->state.'</td>
              <td>'.$row->type.'</td>
+             <td>
+                 <form action="/courses/'.$row->id.'" method="post">
+                     <input type="hidden" name="_token" value="'.$token.'">
+                     <input type="hidden" name="_method" value="delete">
+                     <button style="background:#dc4f2f;"
+                         class="btn btn-xs btn-rounded btn-danger"><i class="fa fa-trash"></i>
+                     </button>
+                 </form>
+             </td>
             </tr>
             ';
         }
@@ -251,6 +271,7 @@ class LiveSearchController extends Controller
       {
        foreach($data as $row)
        {
+        $token = csrf_token();
         $user = User::find($row->user_id);
         $school = School::find($row->id);
         $nombre_cours = count($school->courses->where("type", "course"));
@@ -264,6 +285,15 @@ class LiveSearchController extends Controller
              <td>'.$row->state.'</td>
              <td>'.$nombre_cours.'</td>
              <td>'.$nombre_parcours.'</td>
+             <td>
+                 <form action="/schools/'.$row->id.'" method="post">
+                     <input type="hidden" name="_token" value="'.$token.'">
+                     <input type="hidden" name="_method" value="delete">
+                     <button style="background:#dc4f2f;"
+                         class="btn btn-xs btn-rounded btn-danger"><i class="fa fa-trash"></i>
+                     </button>
+                 </form>
+             </td>
             </tr>
             ';
         }
@@ -275,6 +305,15 @@ class LiveSearchController extends Controller
              <td>'.$row->state.'</td>
              <td>'.$nombre_cours.'</td>
              <td>'.$nombre_parcours.'</td>
+             <td>
+                 <form action="/schools/'.$row->id.'" method="post">
+                     <input type="hidden" name="_token" value="'.$token.'">
+                     <input type="hidden" name="_method" value="delete">
+                     <button style="background:#dc4f2f;"
+                         class="btn btn-xs btn-rounded btn-danger"><i class="fa fa-trash"></i>
+                     </button>
+                 </form>
+             </td>
             </tr>
             ';
         }

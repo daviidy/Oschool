@@ -41,6 +41,7 @@
                                 <th>Statut</th>
                                 <th>Nombre de cours</th>
                                 <th>Nombre de parcours</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>

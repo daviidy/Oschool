@@ -321,6 +321,14 @@
     <script src="/admin/assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="/admin/assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="/admin/assets/libs/js/dashboard-ecommerce.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('.token').val('{{csrf_token()}}');
+});
+
+    </script>
+
 </body>
 
 </html>
