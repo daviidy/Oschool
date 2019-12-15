@@ -187,7 +187,10 @@ class Course extends Model
 
                 foreach ($course->quizzes as $quiz) {
                     $quiz->questions()->delete();
-                    $quiz->results()->delete();
+                    foreach ($quiz->results as $result) {
+                        $result->answers()->delete();
+                    }
+
                     $quiz->delete();
                 }
 
