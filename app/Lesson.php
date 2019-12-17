@@ -84,7 +84,21 @@ class Lesson extends Model
                 File::delete(public_path('/images/lessons/images/' . $lesson->image));
             }
              $lesson->medias()->delete();
-             $lesson->quizzes()->delete();
+             foreach ($lesson->quizzes as $quiz) {
+
+                 foreach ($quiz->results as $result) {
+                     $result->answers()->delete();
+                     $result->delete();
+                 }
+
+                 foreach ($quiz->questions as $question) {
+                     $question->options()->delete();
+                     $question->delete();
+                 }
+
+
+                 $quiz->delete();
+             }
              // do the rest of the cleanup...
         });
     }

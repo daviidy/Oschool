@@ -320,7 +320,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     @foreach ($deliverables as $deliverable)
 
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
-                        <td><span>{{Auth::user()->name}}</span><span class="space"></span><span class="space"></span>
+                        <td><span>{{$deliverable->user->name}}</span><span class="space"></span><span class="space"></span>
                             <!---->
                         </td>
                         {{-- <td what="type"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg">

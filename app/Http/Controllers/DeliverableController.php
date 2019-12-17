@@ -50,6 +50,13 @@ class DeliverableController extends Controller
     {
         $deliverable = Deliverable::create($request->all());
         $deliverable->save();
+        //send mail to the school owner
+        $school = School::find($deliverable->course_id);
+
+         Mail::send('mails.users.projects.notification', ['deliverable' => $deliverable], function($message) use($deliverable){
+           $message->to($school->user->email, 'Cher(ère) Partenaire')->subject('Un étudiant a soumis ses travaux pour le projet '.$deliverable->project->title);
+           $message->from('eventsoschool@gmail.com', 'Oschool');
+         });
         return back()->with('success', 'Votre projet a été envoyé');
     }
 
@@ -119,6 +126,15 @@ class DeliverableController extends Controller
         $deliverable = Deliverable::where('project_id', $request->project_id)->where('user_id', Auth::user()->id)->first();
         $deliverable->status = null;
         $deliverable->save();
+
+        //send mail to the school owner
+        $school = School::find($deliverable->course_id);
+
+         Mail::send('mails.users.projects.notification', ['deliverable' => $deliverable], function($message) use($deliverable){
+           $message->to($school->user->email, 'Cher(ère) Partenaire')->subject('Un étudiant a soumis ses travaux pour le projet '.$deliverable->project->title);
+           $message->from('eventsoschool@gmail.com', 'Oschool');
+         });
+
         return back()->with('success', 'Vos travaux ont bien été renvoyés');
     }
 

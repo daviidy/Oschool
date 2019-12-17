@@ -22,8 +22,7 @@ class CouponController extends Controller
      */
     public function index(School $school, Course $course)
     {
-        $coupons = Coupon::paginate(100);
-        return view('admin_views.coupons.index', ['course' => $course, 'school' => $school, 'coupons'=>$coupons]);
+        return view('admin_views.coupons.index', ['course' => $course, 'school' => $school]);
     }
 
     /**

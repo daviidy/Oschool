@@ -220,6 +220,7 @@ class CourseController extends Controller
         $course->delete();
         //return redirect('/schoolAdmin/'.$course->school_id.'/courses')->with('status', 'Cours supprimé');
         return redirect()->back()->with('status', 'Cours supprimé');
+        return redirect('home')->with('status', 'Cours supprimé');
     }
 
 
