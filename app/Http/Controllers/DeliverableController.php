@@ -26,7 +26,7 @@ class DeliverableController extends Controller
      */
     public function index(School $school, Project $project, Course $course )
     {
-        $deliverables = DB::table('deliverables')->where('course_id', $course->id)->orderBy('created_at', 'desc')->paginate(15);
+        $deliverables = Deliverable::where('course_id', $course->id)->orderBy('created_at', 'desc')->paginate(15);
         return view('admin_views.deliverables.index', ['school' => $school,'deliverables' => $deliverables,  'project' => $project, 'course' => $course]);
     }
 
