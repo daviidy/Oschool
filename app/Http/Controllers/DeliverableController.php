@@ -98,6 +98,7 @@ class DeliverableController extends Controller
     {
         $deliverable->update($request->all());
         $user = User::find($request->user_id);
+        if ($request->task_id) {
             foreach ($request->task_id as $task_id)
             {
 
@@ -110,6 +111,8 @@ class DeliverableController extends Controller
                     $user->tasks()->attach($task);
                 }
             }
+        }
+
 
         $deliverable->save();
         //send mail to the student
