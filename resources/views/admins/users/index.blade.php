@@ -51,6 +51,9 @@
                             <tr>
                                 <th>Nom</th>
                                 <th>Email</th>
+                                <th>Rôle(s)</th>
+                                <th>Ajouter rôle</th>
+                                <th>Supprimer rôle</th>
                                 <th>Action</th>
 
                             </tr>

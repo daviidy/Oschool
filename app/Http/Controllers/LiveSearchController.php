@@ -134,6 +134,39 @@ class LiveSearchController extends Controller
          <td><a target="__blank" href="/users/'.$row->id.'">'.$row->name.'</a></td>
          <td>'.$row->email.'</td>
          <td>
+         Type 1 ='.$row->type1.'<br/>
+         Type 2 ='.$row->type2.'<br/>
+         Type 3 ='.$row->type3.'<br/>
+         </td>
+         <td>
+             <form action="/users/'.$row->id.'" method="post">
+                 <input type="hidden" name="_token" value="'.$token.'">
+                 <input type="hidden" name="_method" value="patch">
+                 <select name="role">
+                     <option value="admin" '.($row->type1 == 'admin' ? 'disabled' : '').'>Administrateur</option>
+                     <option value="teacher" '.($row->type2 == 'teacher' ? 'disabled' : '').'>Professeur</option>
+                     <option value="owner" '.($row->type3 == 'owner' ? 'disabled' : '').'>Propriétaire d\'école</option>
+                 </select>
+                 <button style="background:#4D90CC;"
+                     class="btn btn-xs btn-rounded btn-primary">Ajouter le rôle</i>
+                 </button>
+             </form>
+         </td>
+         <td>
+         <form action="/users/deleteRole" method="post">
+             <input type="hidden" name="_token" value="'.$token.'">
+             <input type="hidden" name="user_id" value="'.$row->id.'">
+             <select name="role">
+                 <option value="admin" '.($row->type1 == 'admin' ? '' : 'disabled').'>Administrateur</option>
+                 <option value="teacher" '.($row->type2 == 'teacher' ? '' : 'disabled').'>Professeur</option>
+                 <option value="owner" '.($row->type3 == 'owner' ? '' : 'disabled').'>Propriétaire d\'école</option>
+             </select>
+             <button style="background:#dc4f2f;"
+                 class="btn btn-xs btn-rounded btn-primary">Supprimer le rôle</i>
+             </button>
+         </form>
+         </td>
+         <td>
              <form action="/users/'.$row->id.'" method="post">
                  <input type="hidden" name="_token" value="'.$token.'">
                  <input type="hidden" name="_method" value="delete">

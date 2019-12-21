@@ -78,6 +78,22 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        if ($request->role) {
+            if ($request->role == 'admin') {
+                $user->type1 = $request->role;
+                $user->save();
+            }
+            elseif ($request->role == 'teacher') {
+                $user->type2 = $request->role;
+                $user->save();
+            }
+            elseif ($request->role == 'owner') {
+                $user->type3 = $request->role;
+                $user->save();
+            }
+
+            return redirect()->back()->with('status', 'Modifications effectuées');
+        }
         $user->update($request->all());
 
         if($request->hasFile('image')){
@@ -89,6 +105,30 @@ class UserController extends Controller
         }
 
         return redirect()->back()->with('status', 'Modifications effectuées');
+    }
+
+
+
+    public function deleteRole(Request $request)
+    {
+        $user = User::find($request->user_id);
+        if ($request->role) {
+            if ($request->role == 'admin') {
+                $user->type1 = 'default';
+                $user->save();
+            }
+            elseif ($request->role == 'teacher') {
+                $user->type2 = 'none';
+                $user->save();
+            }
+            elseif ($request->role == 'owner') {
+                $user->type3 = 'none';
+                $user->save();
+            }
+
+            return redirect()->back()->with('status', 'Modifications effectuées');
+        }
+
     }
 
 

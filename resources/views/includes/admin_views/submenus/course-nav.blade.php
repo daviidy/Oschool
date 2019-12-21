@@ -5,7 +5,7 @@
         {{-- style="background-image: url(/images/courses/logos/{{$course->logo}})" --}}
         <div  class="course-name-placeholder" style="">
             <div class="row">
-                <div ng-bind="course.name" class="placeholder-course-name">{{$course->name}}</div>
+                <div ng-bind="course.name" class="placeholder-course-name">{{ str_limit($course->name, $limit = 100, $end = '...')}}</div>
             </div>
             @if($course->type == 'course')
             <div class="row"><a href="{{ route('course.slug', $course->slug) }}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
