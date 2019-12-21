@@ -369,6 +369,7 @@ class LessonController extends Controller
                                   'question_id' => $question->id,
                                   'text' => $option_input->option,
                                   'correct' => $option_input->correct,
+                                  'quiz_id' => $quiz->id,
               ]);
         }
 

@@ -290,7 +290,7 @@
                         <!---->
                     </ul>
                     @include('includes.admin_views.submenus.site-nav')
-                   
+
                     @include('includes.admin_views.submenus.users-nav')
                     @if(\Route::current()->getName() == 'schoolSettings')
                     @include('includes.admin_views.submenus.settings-nav')
@@ -1111,8 +1111,14 @@ console.log(JSON.stringify(positions));
           processData:false,
           data: dataImage,
           success: function(data) {
+
               $.amaran({'message':'La question du quiz a bien été ajoutée'});
+              $("#bloc-question .reponses").remove();
+              var question = $('#question-text').val('');
+
+              /*
               window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+$("input[name=course_id]").val()+'/curriculum/'+$("input[name=section_id]").val()+'/lessons/'+$("input[name=lesson_id]").val()+'/edit/#quiz';
+              */
           },
           error: function (xhr, msg) {
             console.log(msg + '\n' + xhr.responseText);

@@ -138,7 +138,7 @@ class QuizController extends Controller
                 array_push($options, $option);
             }
         }
-        $percentage = DB::table('answers')->where('result_id', $result->id)->where('correct', 1)->count() / DB::table('options')->where('quiz_id', $quiz->id)->where('correct', 1)->count();
+        $percentage = Answer::where('result_id', $result->id)->where('correct', 1)->count() / Option::where('quiz_id', $quiz->id)->where('correct', 1)->count();
         $result->quiz_result = $percentage * 100;
         $result->save();
 

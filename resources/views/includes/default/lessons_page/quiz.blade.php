@@ -26,8 +26,8 @@
                     </div>
                    @endif
                     @foreach($quiz->questions->sortBy('position') as $question)
-                    <div id="{{$quiz->id}}" class="quiz Quiz single">
-                        <div class="quiz-progress">{{$question->position - 1}} / {{count($quiz->questions)}}</div>
+                    <div style="margin-top: 6rem;" id="{{$quiz->id}}" class="quiz Quiz single">
+                        <div class="quiz-progress">{{$question->position}} / {{count($quiz->questions)}}</div>
                         <div class="quiz-question-outer" style="height: 168px;">
                             <div>
                                 <article class="Quiz-item">
@@ -47,7 +47,7 @@
                                         </div>
                                         @else
                                         <div class="quiz-answer-container">
-                                            <div style="border: {{$option->correct == 1 ? '1px solid #2ecc71' : ''}}" role="button" class="quiz-answer">
+                                            <div role="button" class="quiz-answer">
                                                 <span id="option{{$option->id}}" class="quiz-answer-text">{{$option->text}}</span>
                                             </div>
                                             <div class="quiz-answer-icon">
@@ -76,7 +76,7 @@
                             Soumettre
                         </button>
                         @endif
-                        <button class="btn btn-primary pull-right" date-test="continue-button">
+                        <button id="continue-button" class="btn btn-primary pull-right">
                             Continuer ›
                         </button>
                     </div>
@@ -99,6 +99,10 @@ $('.quiz-answer').on('click', function(){
 
     $(this).parent().toggleClass('selected');
 
+});
+
+$('#continue-button').click(function() {
+    location.reload();
 });
 
 
@@ -125,9 +129,11 @@ $("#check").on('click', function(event) {
         },
         cache: false,
         success: function (data){
-            alert('succès');
             console.log(data.options);
             console.log(data.result);
+
+            $("#check").remove();
+            $("#continue-button").addClass('is-visible');
             //pour chaque options du quiz
             $.each(data.options, function(index, value){
 
