@@ -14,7 +14,7 @@
     <div class="schools-list ">
         @foreach(Auth::user()->createSchools as $school)
         <a href="{{url('schoolAdmin', $school)}}" class="school-card school-has-default-thumbnail"
-          style="background-image: url(/images/schools/logos/{{$school->logo}});" target="_blank">
+          style="background-image: url(/images/schools/logos/{{$school->logo}});background-position: center;" target="_blank">
             <div class="school-info">
                 <img class="school-favicon" src="/images/schools/backgrounds/flavicon-school.svg">
                 <p class="school-name">{{$school->name}}</p>
