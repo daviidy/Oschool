@@ -160,7 +160,7 @@
           <img src="/images/divers/bora.png">
           <img src="/images/divers/final.png">
           <img src="/images/divers/LogoM-1.png">
-          <img src="/images/divers/Logo-1.png">
+          <!--img src="/images/divers/Logo-1.png"-->
         </div>
 
       </div>
