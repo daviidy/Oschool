@@ -109,8 +109,8 @@
               <li class="dropdown-only"><a href="{{route('login')}}">Salle de classe</a></li>
               <!--li class="dropdown-only"><a href="/login?src=nav">Entreprises</a></li-->
               <li><a href="{{url('schools')}}">Nos écoles</a></li>
-              <li><a href="https://events.oschoolelearning.com">Evénements</a></li>
-              <li><a href="/corporate">Entreprises</a></li>
+              <!--li><a href="https://events.oschoolelearning.com">Evénements</a></li-->
+              <li><a href="/corporate">Business</a></li>
               <!--li><a href="/blog/resources">Blog</a></li-->
             </ul>
           </div>
