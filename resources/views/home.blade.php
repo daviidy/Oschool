@@ -103,8 +103,8 @@
                 }
             }
         </style>
-        <div class="container">
-            <div class="row">
+        <div class="container cno">
+            <div class="row rn">
                 <div class="col-xs-12">
                     <h1 class="default-header">Commencez gratuitement</h1>
                     <h1>
@@ -112,7 +112,6 @@
                     <h2 class="default-paragraph">Nous voyons un avenir brillant où tout le monde, partout peuvent poursuivre leur plein potentiel académique.</h2>
                 </div>
             </div>
-
         </div>
     </section>
 

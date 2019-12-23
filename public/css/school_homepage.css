@@ -875,6 +875,8 @@
   .row{margin-right:-15px;margin-left:-15px;}
   .row:before,.row:after{display:table;content:" ";}
   .row:after{clear:both;}
+  .rn:after{clear:none !important;}
+  .cno:after{clear:none !important;}
   .col-md-1,.col-sm-2,.col-sm-3,.col-md-3,.col-sm-4,.col-md-4,.col-md-5,.col-sm-6,.col-md-6,.col-md-7,.col-sm-8,.col-md-8,.col-xs-12,.col-sm-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
   .col-xs-12{float:left;}
   .col-xs-12{width:100%;}
