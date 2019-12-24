@@ -170,6 +170,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/new-section', 'Sec
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/new-lecture', 'LessonController@create')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/lessons/{lesson}/edit', 'LessonController@edit')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/{section}/lessons/{lesson}/quiz/{quiz}/edit', 'QuizController@edit')->name('course');
+Route::get('/schoolAdmin/{school}/courses/{course}/curriculum/sections/{section}/edit', 'SectionController@edit')->name('course');
 
 
 //path curriculum

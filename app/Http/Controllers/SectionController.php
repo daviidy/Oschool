@@ -65,10 +65,15 @@ class SectionController extends Controller
      * @param  \App\Section  $section
      * @return \Illuminate\Http\Response
      */
-    public function edit(Section $section)
-    {
-        //
-    }
+     public function edit(School $school, Course $course, Section $section)
+     {
+         if (Auth::check()) {
+             return view('admin_views.sections.edit', ['school' => $school, 'course' => $course, 'section' => $section]);
+         }
+         else {
+             return redirect('home');
+         }
+     }
 
     /**
      * Update the specified resource in storage.
@@ -79,7 +84,9 @@ class SectionController extends Controller
      */
     public function update(Request $request, Section $section)
     {
-        //
+        $section->update($request->all());
+
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum')->with('status', 'Le titre de la section a bien été modifié');
     }
 
     /**

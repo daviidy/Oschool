@@ -1,5 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
-@section('title', 'Ajouter une section')
+@section('title', 'Modifier une section')
 @section('content')
 
 <style media="screen">
@@ -161,7 +161,7 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Nouvelle section
+                    <!---->Modifier la section "{{$section->title}}"
                 </div>
                 <!---->
                 <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -169,13 +169,13 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
             <!---->
         </div>
     </div>
-    <form method="post" action="{{route('sections.store')}}" class="ng-valid-maxlength ng-dirty ng-valid-parse ng-valid ng-valid-required" style="">
+    <form method="post" action="{{url('sections', $section)}}" class="ng-valid-maxlength ng-dirty ng-valid-parse ng-valid ng-valid-required" style="">
         <div ng-show="!section.if || section.if()" id="section-new_section" class="row tch-section-wrapper" form="newSectionForm" section="{ name: 'new_section' }" save="save" save-label="Create Section">
             <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
                 <!---->
                 <!---->
                 <h2 ng-if="section.name" class="tch-subheading">
-                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Nouvelle section</span>
+                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Modifier la section "{{$section->title}}"</span>
                     <!---->
                     <!---->
                     <!---->
@@ -189,6 +189,7 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                 <!---->
             </div>
             @csrf
+            {{ method_field('patch') }}
             <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
                 <div ng-transclude="">
                     <div form="newSectionForm" label="Section Name" for="name">
@@ -203,7 +204,8 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                                 <!---->
                                 <!---->
                             </label-block>
-                            <div ng-transclude=""><input name="title" maxlength="100" placeholder="e.g. Introduction" type="text" required=""
+                            <div ng-transclude="">
+                                <input value="{{$section->title}}" name="title" maxlength="100" placeholder="e.g. Introduction" type="text" required=""
                                   class="form-control ng-valid-maxlength ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" style="">
                               </div>
                               <input value="{{$course->id}}" name="course_id" maxlength="100" placeholder="e.g. Introduction" type="text" required=""
