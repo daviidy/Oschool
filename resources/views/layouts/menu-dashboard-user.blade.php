@@ -9,22 +9,11 @@
     <meta name="csrf-param" content="authenticity_token">
     <meta name="csrf-token" content="ildpJPED1QZAA6S9PlLQu8LcX5Nhm1HCzRtimwNod32RzV1uu8EjrhmTwF2Q0i/FqGTOdZ35d2f4wJXvM7/gFQ==">
     <link rel="stylesheet" type="text/css" href="chrome-extension://immhpnclomdloikkpcefncmfgjbkojmh/css/emoji.css">
-    <script
-      src="https://www.googleadservices.com/pagead/conversion/959285871/?random=1564082424761&amp;cv=9&amp;fst=1564082424761&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=3&amp;u_tz=0&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fsso.teachable.com%2Fsecure%2Fteachable_accounts%2Fprofile&amp;tiba=myTeachable&amp;async=1&amp;rfmt=3&amp;fmt=4">
-    </script>
-    <script
-      src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/959285871/?random=1564082424770&amp;cv=9&amp;fst=1564082424770&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=3&amp;u_tz=0&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;sendb=1&amp;data=location%3Dhttps%3A%2F%2Fsso.teachable.com%2Fsecure%2Fteachable_accounts%2Fprofile%3Bpath%3D%2Fsecure%2Fteachable_accounts%2Fprofile%3Bname%3DmyTeachable%3Breferrer%3D%3Bsearch%3D%3Btitle%3DmyTeachable%3Burl%3Dhttps%3A%2F%2Fsso.teachable.com%2Fsecure%2Fteachable_accounts%2Fprofile&amp;frm=0&amp;url=https%3A%2F%2Fsso.teachable.com%2Fsecure%2Fteachable_accounts%2Fprofile&amp;tiba=myTeachable&amp;async=1&amp;rfmt=3&amp;fmt=4">
-    </script>
-    <script
-      src="https://www.googleadservices.com/pagead/conversion/959285871/?random=1564082424774&amp;cv=9&amp;fst=1564082424774&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=3&amp;u_tz=0&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fsso.teachable.com%2Fsecure%2Fteachable_accounts%2Fprofile&amp;tiba=myTeachable&amp;async=1&amp;rfmt=3&amp;fmt=4">
-    </script>
-    <script
-      src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/959285871/?random=1564082424779&amp;cv=9&amp;fst=1564082424779&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=3&amp;u_tz=0&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;sendb=1&amp;data=path%3D%2Fsecure%2Fteachable_accounts%2Fprofile%3Breferrer%3D%3Bsearch%3D%3Btitle%3DmyTeachable%3Burl%3Dhttps%3A%2F%2Fsso.teachable.com%2Fsecure%2Fteachable_accounts%2Fprofile&amp;frm=0&amp;url=https%3A%2F%2Fsso.teachable.com%2Fsecure%2Fteachable_accounts%2Fprofile&amp;tiba=myTeachable&amp;async=1&amp;rfmt=3&amp;fmt=4">
-    </script>
+
 
     <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
 
-    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
 <script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
 </script>

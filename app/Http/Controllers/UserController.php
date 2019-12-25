@@ -94,7 +94,13 @@ class UserController extends Controller
 
             return redirect()->back()->with('status', 'Modifications effectuées');
         }
+
         $user->update($request->all());
+
+        if ($request->full) {
+            $user->telephone = $request->full;
+            $user->save();
+        }
 
         if($request->hasFile('image')){
           $image = $request->file('image');

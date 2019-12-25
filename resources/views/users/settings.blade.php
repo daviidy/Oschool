@@ -124,6 +124,30 @@ p{font-size:18px;font-weight:200;line-height:28px;}
 .form-control::-moz-placeholder{color:#b2bcc5;opacity:1;}
 }
 
+/*pour la longueur de l'input telephone*/
+.iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
+
+    width: 100%;
+    color: #8492a6;
+    background: #fff;
+    height: 47px;
+    padding: 6px 135px !important;
+    margin-bottom: 1.2rem;
+    border-radius: 26px;
+    border-color: #dfe3ee;
+}
+
+</style>
+
+
+<!--CSS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/css/intlTelInput.css">
+<style>
+    .iti__flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/img/flags.png") !important;}
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .iti__flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/img/flags@2x.png") !important;}
+    }
 </style>
 
 <div class="main my-teachable-dashboard">
@@ -174,6 +198,21 @@ p{font-size:18px;font-weight:200;line-height:28px;}
                         <span class="input-icon"></span>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="edit-user-tel">
+                        Numéro de téléphone
+                        @if(Auth::user()->telephone)
+                        <strong>
+                        ({{Auth::user()->telephone}})
+                        </strong>
+                        @endif
+                    </label>
+                    <div class="control-input">
+                        <input placeholder="" class="form-control" id="edit-user-tel" name="telephone" required="required" type="tel" value="{{Auth::user()->tel}}">
+                        <span class="input-icon"></span>
+                    </div>
+                </div>
                 <!--
                 <a id="change-pw-btn">Change Password</a>
                 <div class="form-group hidden" id="change-pw-form-group">
@@ -206,5 +245,20 @@ p{font-size:18px;font-weight:200;line-height:28px;}
         </div>
     </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/intlTelInput.js"></script>
+
+<script>
+    var input = document.querySelector("#edit-user-tel");
+    window.intlTelInput(input, {
+
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/utils.js",
+    preferredCountries: ["ci", "sn", "cm", "ml"],
+    autoPlaceholder: "polite",
+    hiddenInput: "full",
+
+  });
+  </script>
+  <script class="iti-load-utils" async="" src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/utils.js"></script>
 
 @endsection
