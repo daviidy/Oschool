@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/wecash', function () {
+    return view('pricings.wecash');
+});
+
 Route::get('/corporate', function () {
     return view('corporate');
 });
