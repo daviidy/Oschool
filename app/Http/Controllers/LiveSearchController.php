@@ -7,6 +7,7 @@ use DB;
 use App\School;
 use App\User;
 use App\Author;
+use App\Category;
 
 class LiveSearchController extends Controller
 {
@@ -350,6 +351,72 @@ class LiveSearchController extends Controller
             </tr>
             ';
         }
+
+       }
+      }
+      else
+      {
+       $output = '
+       <tr>
+        <td align="center" colspan="5">Aucun résultat pour cette recherche</td>
+       </tr>
+       ';
+      }
+      $data = array(
+       'table_data'  => $output,
+       'total_data'  => $total_row
+      );
+
+      echo json_encode($data);
+
+     }
+    }
+
+
+
+    function searchCategoriesAdmin(Request $request)
+    {
+     if($request->ajax())
+     {
+      $output = '';
+      $query = $request->get('query');
+      if($query != '')
+      {
+       $data = DB::table('categories')
+         ->where('name', 'like', '%'.$query.'%')
+         ->orderBy('name', 'asc')
+         ->get();
+
+      }
+      else
+      {
+       $data = DB::table('categories')
+         ->orderBy('name', 'asc')
+         ->get();
+      }
+      $total_row = $data->count();
+      if($total_row > 0)
+      {
+       foreach($data as $row)
+       {
+        $token = csrf_token();
+
+            $output .= '
+            <tr>
+             <td>'.$row->name.'</td>
+             <td>
+                 <form action="/categories/'.$row->id.'" method="post">
+                     <input type="hidden" name="_token" value="'.$token.'">
+                     <input type="hidden" name="_method" value="delete">
+                     <button style="background:#dc4f2f;"
+                         class="btn btn-xs btn-rounded btn-danger"><i class="fa fa-trash"></i>
+                     </button>
+                 </form>
+                 <a href="/categories/'.$row->id.'/edit">Modifier</a>
+             </td>
+            </tr>
+            ';
+
 
        }
       }

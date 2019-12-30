@@ -448,7 +448,7 @@
 
                             </div>
 
-                            
+
 
                                 <div class="col-sm-12 add-top-margin-25">
 
@@ -467,7 +467,7 @@
                                                         <option value="{{$course_db->id}}">{{$course_db->name}}</option>
                                                     @endforeach
                                           </select>
-                                      
+
                                   </div>
 
                                  <input style="display: none;" type="text" name="school_id" value="">
