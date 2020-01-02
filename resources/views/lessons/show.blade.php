@@ -122,6 +122,51 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
 </style>
 
 
+<!--pour les fichiers telechargeables-->
+<style media="screen">
+/*! CSS Used from: https://platform.mindvalley.com/quests-b802371a1b4d00452c37a4f69743503a.css?vsn=d */
+section{display:block;}
+a{background-color:transparent;-webkit-text-decoration-skip:objects;}
+*,:after,:before{box-sizing:inherit;}
+*,:after,:before{border:0 solid #95989d;}
+.button{display:inline-block;background-color:#3c434e;border-radius:9999px;text-decoration:none;text-align:center;color:#c1c1c1;padding:1rem 2rem;font-size:1rem;font-weight:600;line-height:1;}
+.button:hover{cursor:pointer;background-color:#62686e;}
+.button--primary{background-color:#4D90CC;border-width:1px;border-color:#4D90CC;color:#fff;}
+.button--primary:hover{background-color:#6cb2eb;}
+.coverWrapper{position:relative;padding-top:56.25%;}
+.cover{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;background-size:cover;background-color:#62686e;background-position:50%;}
+.bg-grey-darker{background-color:#2c313b;}
+.rounded{border-radius:.25rem;}
+.rounded-lg{border-radius:.5rem;}
+.hidden{display:none;}
+.flex{display:-ms-flexbox;display:flex;}
+.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap;}
+.items-center{-ms-flex-align:center;align-items:center;}
+.flex-initial{-ms-flex:initial;flex:initial;}
+.flex-grow{-ms-flex-positive:1;flex-grow:1;}
+.font-bold{font-weight:700;}
+.my-2{margin-top:.5rem;margin-bottom:.5rem;}
+.mt-0{margin-top:0;}
+.mb-6{margin-bottom:1.5rem;}
+.p-2{padding:.5rem;}
+.p-3{padding:.75rem;}
+.text-grey-light{color:#95989d;}
+.text-white{color:#fff;}
+.text-base{font-size:1rem;}
+.uppercase{text-transform:uppercase;}
+.w-32{width:8rem;}
+.w-full{width:100%;}
+@media (min-width:768px){
+.md\:rounded-lg{border-radius:.5rem;}
+.md\:block{display:block;}
+.md\:flex-no-wrap{-ms-flex-wrap:nowrap;flex-wrap:nowrap;}
+.md\:my-6{margin-top:1.5rem;margin-bottom:1.5rem;}
+.md\:p-3{padding:.75rem;}
+.md\:text-2xl{font-size:1.5rem;}
+.md\:w-48{width:12rem;}
+.md\:w-auto{width:auto;}
+}
+</style>
 
 
 <div class="course-sidebar lecture-page navbar-collapse navbar-sidebar-collapse collapse" id="courseSidebar" aria-expanded="false" style="height: 31px;">
@@ -238,6 +283,26 @@ button{font-family:inherit;font-size:inherit;line-height:inherit;}
     <div id="video">
         {!!$lesson->video!!}
     </div>
+
+    <h2>Ressources à télécharger</h2>
+    @if($lesson->medias)
+    @foreach($lesson->medias as $media)
+    <section class="flex flex-wrap md:flex-no-wrap items-center bg-grey-darker text-white rounded-lg p-2 md:p-3 mt-0 mb-6 md:my-6">
+        <div class="flex-initial w-32 md:w-48 p-3 rounded md:rounded-lg">
+            <div class="coverWrapper rounded md:rounded-lg">
+                <div class="cover rounded md:rounded-lg" style="background-image: url(&quot;/images/divers/resource_icon.png&quot;);"></div>
+            </div>
+        </div>
+        <div class="flex-grow p-3">
+
+            <div class="text-base md:text-2xl font-bold my-2">
+                {{$media->name}}
+            </div>
+        </div>
+        <div class="flex-initial p-3 w-full md:w-auto"><a download target="_blank" href="/images/lessons/resources/{{$media->name}}" class="button button--primary w-full" style="width: max-content;">Téléchargez</a></div>
+    </section>
+    @endforeach
+    @endif
 
   <div class="lecture-attachment lecture-attachment-type-text" id="lecture-attachment-21119459">
     <div class="attachment-data"></div>

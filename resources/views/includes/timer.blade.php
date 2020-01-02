@@ -6,7 +6,7 @@
 
 <section id="sticky-banner" class="permanent-stick sticky green-countdown timer"  >
     <div class="content-container">
-      <h3 class="header">DEAL DE L'ANNEE ! 60% DE REDUCTION PENDANT 3 MOIS !</h3>
+      <h3 class="header">VOICI LA MEILLEURE FACON DE COMMENCER L'ANNEE</h3>
         <div  id="sticky-banner-countdown" class="countdown-timer-component" data-on-end="">
     <div class="data-payload" data-end="2019-12-01T23:59:00-05:00"></div>
     <div class="days-container">
@@ -27,10 +27,10 @@
     </div>
   </div>
 
-      <a class="desktop btn button register-button sticky-banner-button" href="https://oschoolelearning.com/schools">
+      <a class="desktop btn  register-button sticky-banner-button" href="https://oschoolelearning.com/schools">
         Profitez de l'offre
       </a>
-      <a class="mobile btn button register-button sticky-banner-button" href="https://oschoolelearning.com/schools">
+      <a class="mobile btn  register-button sticky-banner-button" href="https://oschoolelearning.com/schools">
         Go
       </a>
     </div>
@@ -41,7 +41,7 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 31, 2019 12:31:25").getTime();
+var countDownDate = new Date("Jan 08, 2020 12:31:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
