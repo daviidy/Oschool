@@ -281,7 +281,7 @@ header,svg{display:none;}
                             <p class="trial-banner bg-gray-light text-color-dark">
                                 Commencez dès maintenant <span class="regular">et sans engagement</span>
                             </p>
-                            <img style="border-radius: 8px;box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);" src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                            <img style="border-radius: 8px;box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);width:100%;" src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
                             <!--
                             <form class="new_account_signup" id="signupForm" data-featurette="Treehouse.SimpleSignupForm" action="/subscribe/register_free_trial" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"
                                   class="placeholder-processed"><input type="hidden" name="authenticity_token" value="6/X13Mh0nk1E+2Xscuq2IhcwJKqhoKgnQS7cfvJrrUwWyNHIzUawYe432n3ljIQzP6hWDrQK9+RAYVO1EvC3Ww==" class="placeholder-processed">
