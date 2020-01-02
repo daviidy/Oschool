@@ -430,6 +430,42 @@ class PurchaseController extends Controller
 
     }
 
+    public function add(School $school, Course $course, User $user)
+    {
+        //on retrouve le dernier achat fait par l'étudiant
+        $last_purchase = $user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->last();
+        //on détermine le prix et l'offre de cet achat
+        //on crée un nouveau purchase pour le student
+        $purchase=Purchase::create([
+                          'price' => $last_purchase->price,
+                          'date' => Carbon::now(),
+                          'user_id' => $user->id,
+                          'pricing_id' => $last_purchase->pricing_id,
+                          'course_id' => $course->id,
+                          'status' => 'Validé',
+                        ]);
+
+
+        //envoi mail utilisateur
+         Mail::send('mails.users.purchases.success', ['purchase' => $purchase], function($message) use($purchase){
+           $message->to($purchase->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre paiement a été enregistré avec succès !');
+           $message->from('eventsoschool@gmail.com', 'Oschool');
+         });
+
+         $admins = User::where('type1', 'admin')->orderby('id', 'asc')->paginate(1000);
+
+         foreach ($admins as $admin) {
+           //envoi mail admin
+           Mail::send('mails.admins.purchases.success', ['purchase' => $purchase], function($message) use($admin){
+             $message->to($admin->email, 'Aux Admins Oschool')->subject('Un achat a été ajouté manuellement');
+             $message->from('eventsoschool@gmail.com', 'Oschool');
+           });
+         }
+
+
+        return redirect()->back()->with('status', 'Achat ajouté avec succès');
+    }
+
 
 
     /**

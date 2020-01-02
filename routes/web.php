@@ -204,6 +204,9 @@ Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseControl
 
 //delete user from the course
 Route::post('/unsubscribe', 'CourseController@unsubscribe');
+
+//ajouter manuellement un achat
+Route::get('/schoolAdmin/{school}/courses/{course}/students/{user}/subscribe', 'PurchaseController@add');
 /*
 
 Route::get('/schoolAdmin/{school}/courses', 'CourseController@coursesForAdmin');

@@ -315,12 +315,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <td>
                             @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type == "Abonnement" || $user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type == "Plan de paiement")
                             @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->times - count($course->purchases->where('user_id', $user->id)->where('status','Validé')) == 0)
-                            Il ne reste plus rien à payer
+                            Aucune
                             @else
                             {{Carbon\Carbon::parse($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->last()->date)->addDays(30)}}
                             @endif
                             @else
-                            Il ne reste plus rien à payer
+                            Aucune
                             @endif
                         </td>
                        <td>
@@ -328,14 +328,20 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                            @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->times - count($course->purchases->where('user_id', $user->id)->where('status','Validé')) == 0)
                            Il ne reste plus rien à payer
                            @else
+                           Il reste à payer
                            {{$user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->price}} FCFA
+                           <span>
+                               <strong>
+                                   {{$user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->times - count($course->purchases->where('user_id', $user->id)->where('status','Validé'))}} fois
+                               </strong>
+                           </span>
                            @endif
                            @else
                            Il ne reste plus rien à payer
                            @endif
                        </td>
                        <td>
-                           @if($course->id == 'course')
+                           @if($course->type == 'course')
                            {{number_format((count($user->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}%
                            @else
                            {{number_format((count($user->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}
@@ -356,6 +362,18 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                       id="test-id-unpublish-btn"
                                       class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i></button>
                                 </form>
+                                @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type == "Abonnement" || $user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type == "Plan de paiement")
+                                @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->times - count($course->purchases->where('user_id', $user->id)->where('status','Validé')) == 0)
+                                Il ne reste plus rien à payer
+                                @else
+                                <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/students/{{$user->id}}/subscribe">
+
+                                    Ajouter un achat
+                                </a>
+                                @endif
+                                @else
+                                @endif
+
                             </div>
                             <!---->
                         </td>
