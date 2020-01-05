@@ -284,8 +284,9 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
         {!!$lesson->video!!}
     </div>
 
-    <h2>Ressources à télécharger</h2>
+
     @if($lesson->medias)
+    <h2>Ressources à télécharger</h2>
     @foreach($lesson->medias as $media)
     <section class="flex flex-wrap md:flex-no-wrap items-center bg-grey-darker text-white rounded-lg p-2 md:p-3 mt-0 mb-6 md:my-6">
         <div class="flex-initial w-32 md:w-48 p-3 rounded md:rounded-lg">
