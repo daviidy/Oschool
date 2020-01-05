@@ -136,7 +136,7 @@
             <div class="image" style="background-image: url(/images/schools/logos/{{$school->logo}});"></div>
             <div class="bottom" data-mh="school-cards">
               <h1>{{$school->name}}</h1>
-              <p class="default-paragraph">{{$school->heading}}</p>
+              <p class="default-paragraph">{{ str_limit($school->heading, $limit = 100, $end = '...') }}</p>
               <!--
               <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/6Owd2hlXSIuRnIvjZ6Ft">
           -->

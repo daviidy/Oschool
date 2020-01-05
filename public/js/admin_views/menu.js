@@ -24,7 +24,7 @@ $("#createAuthor").hide();
         success: function(data) {
             $("#selectAuthor").show();
             $("#listAuthor option:selected").removeAttr("selected");
-            $('#listAuthor').append("<option selected value='"+ data.id +"'>"+ data.full_name +"</option>")
+            $('#listAuthor').append("<option selected value='"+ data.id +"'>"+ data.full_name +"</option>");
             $('#inputCreateAuthor').hide();
 
       $.amaran({'message':"Auteur bien ajouté!"});
