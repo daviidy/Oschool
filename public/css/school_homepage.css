@@ -191,12 +191,7 @@
   @media (min-width: 768px){
   .example-schools .row:nth-of-type(2) .school-card .bottom{min-height:280px;}
   }
-  @media (min-width: 992px){
-  .example-schools .row:nth-of-type(2) .school-card .bottom{min-height:300px;}
-  }
-  @media (min-width: 1200px){
-  .example-schools .row:nth-of-type(2) .school-card .bottom{min-height:150px;}
-  }
+
   .example-schools .row:nth-of-type(2) .school-card .bottom h1{font-family:'TeachableSans-Bold';color:#2c2f33;font-size:18px;line-height:25px;margin-bottom:10px;}
   .example-schools .row:nth-of-type(2) .school-card .bottom img{position:absolute;border-radius:100%;bottom:26px;left:30px;height:40px;width:40px;}
   .example-schools .row:nth-of-type(2) .school-card .bottom p:first-of-type{padding-bottom:70px;}
