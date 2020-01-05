@@ -285,7 +285,7 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
     </div>
 
 
-    @if($lesson->medias)
+    @if(count($lesson->medias) > 0)
     <h2>Ressources à télécharger</h2>
     @foreach($lesson->medias as $media)
     <section class="flex flex-wrap md:flex-no-wrap items-center bg-grey-darker text-white rounded-lg p-2 md:p-3 mt-0 mb-6 md:my-6">
