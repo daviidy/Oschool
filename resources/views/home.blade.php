@@ -270,7 +270,7 @@ header,svg{display:none;}
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
                                 A Oschool, on vous propose encore mieux: un programme.
                                 Commencez à apprendre à partir de 15 000 FCFA.
-                                Cette promotion finit le 9 janvier.
+                                Cette promotion finit le 15 janvier.
                             </h2>
                         </div>
                     </div>
