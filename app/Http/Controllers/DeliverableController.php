@@ -51,7 +51,8 @@ class DeliverableController extends Controller
         $deliverable = Deliverable::create($request->all());
         $deliverable->save();
         //send mail to the school owner
-        $school = School::find($deliverable->course_id);
+        $course = Course::find($deliverable->course_id);
+        $school = School::find($course->school_id);
 
          Mail::send('mails.users.projects.notification', ['deliverable' => $deliverable], function($message) use($deliverable){
            $message->to($school->user->email, 'Cher(ère) Partenaire')->subject('Un étudiant a soumis ses travaux pour le projet '.$deliverable->project->title);
