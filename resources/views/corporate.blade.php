@@ -1,5 +1,5 @@
 @extends('layouts.menu')
-@section('title', 'La destination de l\'apprentissage en milieu de travail')
+@section('title', 'La destination de l\'apprentissage en milieu de travail et en milieu scolaire')
 @section('description', 'Apprendre et améliorer les compétences dans les domaines des affaires, de la technologie, du design, etc. Enseigné par des experts pour aider votre main-d\'œuvre à faire face à la situation.')
 @section('image', '/images/divers/corporate.png')
 @section('content')
@@ -850,74 +850,74 @@ hr{border-color:#ececec;}
 </style>
 
 <section class="hero-partial _1569">
-<style>
-._1569 {
-  margin-bottom: 0px;
-}
+    <style>
+    ._1569 {
+      margin-bottom: 0px;
+    }
 
-@media (max-width: 991px) {
-  ._1569 {
-    margin-bottom: 0px;
-  }
-}
+    @media (max-width: 991px) {
+      ._1569 {
+        margin-bottom: 0px;
+      }
+    }
 
-@media (max-width: 767px) {
-  ._1569 {
-    margin-bottom: 0px;
-  }
-}
+    @media (max-width: 767px) {
+      ._1569 {
+        margin-bottom: 0px;
+      }
+    }
 
-._1569 h1 {
-  max-width: 770px;
-}
+    ._1569 h1 {
+      max-width: 770px;
+    }
 
-._1569 h2 {
-  max-width: 600px;
-  font-size: 16px;
-  line-height: 28px;
-}
+    ._1569 h2 {
+      max-width: 600px;
+      font-size: 16px;
+      line-height: 28px;
+    }
 
-@media (max-width: 767px) {
-  ._1569 .hero-div {
-    min-height: 550px;
-  }
-}
+    @media (max-width: 767px) {
+      ._1569 .hero-div {
+        min-height: 550px;
+      }
+    }
 
-@media (min-width: 768px) {
+    @media (min-width: 768px) {
 
-  ._1569 .hero-div,
-  ._1569 .container,
-  ._1569 .row,
-  ._1569 .col-xs-12 {
-    min-height: 465px;
-  }
+      ._1569 .hero-div,
+      ._1569 .container,
+      ._1569 .row,
+      ._1569 .col-xs-12 {
+        min-height: 465px;
+      }
 
-  ._1569 .container {
-    padding-top: 85px;
-  }
-}
+      ._1569 .container {
+        padding-top: 85px;
+      }
+    }
 
 
-</style>
-<div id="segment-event" type="hidden" value=""></div>
-<div class="hero-div" style="background-image: url(/images/divers/corporate.png);">
-<div class="container hero-container">
-  <div class="row">
-    <div class="col-xs-12 vertically-align-contents-except-xs">
-      <div class="hero-text hero-text-center">
+    </style>
+    <div id="segment-event" type="hidden" value=""></div>
+    <div class="hero-div" style="background-image: url(/images/divers/corporate.png);">
+    <div class="container hero-container">
+      <div class="row">
+        <div class="col-xs-12 vertically-align-contents-except-xs">
+          <div class="hero-text hero-text-center">
 
-          <h1>Faire progresser les compétences</h1>
+              <h1>Améliorez l'expérience d'apprentissage au sein de votre école ou entreprise</h1>
 
-          <h2>Apprendre et améliorer les compétences dans les domaines des affaires, de la technologie, du design, etc. Enseigné par des experts pour aider votre main-d'œuvre à faire face à la situation.</h2>
+              <h2>Utilisez les offres d'Oschool pour mieux gérer votre manière de former et de se former.</h2>
 
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
+    </div>
 </section>
 
-
+<!--pour les écoles-->
 
     <section class="text-column-big-image _58">
         <style>
@@ -979,26 +979,28 @@ hr{border-color:#ececec;}
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="small-uppercase-text small-header"></h1>
-                    <h2 class="default-header big-header">NOTRE OFFRE, LOCATION DE LA PLATEFORME, TEAM BUILDING</h2>
+                    <h2 id="schools" class="default-header big-header">POUR LES UNIVERSITES ET GRANDES ECOLES</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-5 left-column">
-                    <h1 class="default-green-header">NOTRE OFFRE</h1>
+                    <h1 class="default-green-header">Gestion des inscriptions en ligne et de la scolarité</h1>
                     <div class="default-paragraph-container markdown-area">
-                        <p>Oschool a développé la plateforme LMS afin de répondre aux besoins de ses clients et de faire face au développement grandissant de la formation à distance.</p>
+                        <p>Oschool permet la gestion d'école en tenant compte de ses critères spécifiques.
+                            Ce système de gestion de vie scolaire réduit le travail administratif des écoles et des enseignants.</p>
                     </div>
-                    <h1 class="default-green-header">Oschoolelearning.com :</h1>
+                    <h1 class="default-green-header">Gestion des absences, messagerie interne, notes</h1>
                     <div class="default-paragraph-container markdown-area">
                         <ul>
-                          <li>Vous aide à digitaliser votre formation.</li>
-                          <li>Accueille vos cours e-learning pour un coût attractif</li>
+                          <li>Voici autant de fonctionnalités que vous propose Oschool.</li>
+                          <li>Un outil tout en un pour tous les différents acteurs de l'établissement: administration,
+                          enseignants, parents.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-7 right-column">
-                    <img data-src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/DfsKuQA2QziBB1whe0zD"
-                      src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/DfsKuQA2QziBB1whe0zD" data-loaded="true">
+                    <img style="width: 100%;right:0;" data-src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/DfsKuQA2QziBB1whe0zD"
+                      src="/images/divers/school-offer.png" data-loaded="true">
                 </div>
             </div>
         </div>
@@ -1053,109 +1055,601 @@ hr{border-color:#ececec;}
             <div class="row">
                 <div class="col-xs-12 col-md-7 left-column">
                     <img data-src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/Gxm0GAuWSuKMKIj9kFVG"
-                      src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/Gxm0GAuWSuKMKIj9kFVG" data-loaded="true">
+                       src="/images/divers/student-learning.jpg" data-loaded="true">
                 </div>
                 <div class="col-xs-12 col-md-5 right-column">
-                    <h1 class="default-green-header">LOCATION DE LA PLATEFORME</h1>
+                    <h1 class="default-green-header">Système de Gestion des Cours</h1>
                     <div class="default-paragraph-container markdown-area">
-                        <p>Oschoolelearning.com est disponible en location mode SaaS pour accueillir vos propres cours e-learning à un coût très attractif. Dans ce cas, la plateforme peut être personnalisée à vos couleurs. Nous proposons également une journée de formation à l’utilisation et à l’administration de la plateforme LMS.</p>
+                        <p>Créez vos propres cours, et mettez-les à la disposition de vos étudiants.
+                        Ces derniers pourront depuis n'importe où et n'importe quel appareil, consulter leurs cours ou faires leurs devoirs.</p><br>
+                        <p>Le suivi des étudiants est donc mieux centralisé et la tâche pour l'administration et les étudiants.</p>
                     </div>
                     <h1 class="default-green-header">Le principe :</h1>
                     <div class="default-paragraph-container markdown-area">
                         <ul>
-                          <li>Nous personnalisons la plateforme LMS « à vos couleurs » ainsi que les attestations de passage.</li>
-                          <li>La location d’oschoolelearning.com est annuelle.</li>
-                          <li>Un droit d’accès est facturé par apprenant.</li>
+                          <li>Intégrez notre Système de Gestion des Cours à votre site web</li>
+                          <li>Intégrez les cours de l'année scolaire par classe</li>
+                          <li>Seuls les étudiants inscrits pourront y avoir accès</li>
                           <li>Le LMS  est simple d’utilisation et ergonomique, néanmoins, nous pouvons vous proposer une journée de formation à son utilisation et à son administration.</li>
                           <li>Il est possible de réaliser la gestion administrative de la plateforme pour vous.</li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="green-quote _60">
+
+    <section style="margin-bottom: 12rem;" class="six-icons _62">
         <style>
-            ._60 {
-                margin-bottom: 40px;
+            ._62 {
+                margin-bottom: 200px;
             }
 
             @media (max-width: 991px) {
-                ._60 {
-                    margin-bottom: 40px;
+                ._62 {
+                    margin-bottom: 100px;
                 }
             }
 
             @media (max-width: 767px) {
-                ._60 {
-                    margin-bottom: 60px;
+                ._62 {
+                    margin-bottom: 100px;
                 }
             }
 
-            ._60 .left-column {
-                background-color: #F4FAFA
+            ._62 div.image {
+                margin-left: auto;
+                margin-right: auto;
+                width: 350px;
+                height: 206px;
+                margin-bottom: 10px;
             }
 
-            ._60 .color {
-                background-color: #F4FAFA
+            ._62 h2 {
+                max-width: 630px;
+            }
+
+            ._62 div.default-green-header {
+                color: #1EA69A;
+                margin-bottom: 7px;
+            }
+
+            ._62 .markdown-area p,
+            ._62 .icon-header {
+                text-align: left;
+            }
+
+            /*CUSTOM EXPID2 CODE*/
+            ._62 {
+                background-color: #FFFFFF
+            }
+
+            ._62 {
+                padding-top: 0px;
+            }
+
+            @media (max-width: 991px) {
+                ._62 {
+                    padding-top: 0px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                ._62 {
+                    padding-top: 0px;
+                }
+            }
+
+            ._62 {
+                padding-bottom: 0px;
+            }
+
+            @media (max-width: 991px) {
+                ._62 {
+                    padding-bottom: 0px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                ._62 {
+                    padding-bottom: 0px;
+                }
             }
         </style>
-
-        <div class="color">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h1 class="default-green-header ">TEAM BUILDING </h1>
-                        <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p></p>
-                        </div>
-                        <h1 class="default-green-header ">Use our domain to connect your own</h1>
-                        <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p>Oschool conçoit vos formations digitales sur-mesure en prêtant autant d'attention au fond (conseil, accompagnement, design des stratégies digitales, architecture de programmes de formation complexes, le tout reposant sur notre méthode pédagogique) qu'à la forme (simulations réalistes, e-learning, applications, vidéo, collaborative training, présentiel et même réalité virtuelle et augmentée)</p>
-                        </div>
-                        <h1 class="default-green-header ">Reach students worldwide in any language</h1>
-                        <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
-                            <p>Modify the language used in any part of your site to support international audiences.</p>
-                        </div>
+        <div class="container">
+            <div class="row headers-row">
+                <div class="col-xs-12">
+                    <h1 class="small-uppercase-text small-header"></h1>
+                    <h2 class="default-header">Améliorez l'expérience d'apprentissage au sein de votre école</h2>
+                </div>
+            </div>
+            <div class="row first-row">
+                <div class="col-xs-12 col-md-4">
+                    <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/Ji9T55JSQ2FLL7ZPv2tY" data-loaded="true"
+                      style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/Ji9T55JSQ2FLL7ZPv2tY&quot;);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;">Devoirs</div>
+                    <div class="default-paragraph markdown-area">
+                        <p>Gérez les exercices, devoirs et notes de vos étudiants</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/0ZTc1MHQvyQZYSKqrzlN" data-loaded="true"
+                      style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/0ZTc1MHQvyQZYSKqrzlN&quot;);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;">Attestation et diplômes</div>
+                    <div class="default-paragraph markdown-area">
+                        <p>Délivrez vos certificats et diplômes de façon numérique</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/n9RSphCQRYWhg2dchvrC" data-loaded="true"
+                      style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/n9RSphCQRYWhg2dchvrC&quot;);"></div>
+                    <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;">Création des cours en quelques clics</div>
+                    <div class="default-paragraph markdown-area">
+                        <p>Notre Système de Gestion des Cours est tellement facile à prendre en main que même un enfant de 6 ans pourrait y créer ses propres cours</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid">
+    </section>
+
+
+    <section style="margin-bottom: 12rem;" class="cta-partial _12">
+        <style>
+            ._12 {
+                margin-bottom: 85px;
+            }
+
+            @media (max-width: 991px) {
+                ._12 {
+                    margin-bottom: 85px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                ._12 {
+                    margin-bottom: 85px;
+                }
+            }
+
+            /*CUSTOM EXPID2 CODE*/
+            ._12 {
+                background-color: #FFFFFF
+            }
+
+            ._12 {
+                padding-top: 0px;
+            }
+
+            @media (max-width: 991px) {
+                ._12 {
+                    padding-top: 0px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                ._12 {
+                    padding-top: 0px;
+                }
+            }
+
+            ._12 {
+                padding-bottom: 0px;
+            }
+
+            @media (max-width: 991px) {
+                ._12 {
+                    padding-bottom: 0px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                ._12 {
+                    padding-bottom: 0px;
+                }
+            }
+        </style>
+        <div class="container">
             <div class="row">
-                <div class="col-md-7 left-column match-height" style="height: 664px;">
-                    <div class="text">
-                        <h1 class="default-green-header">TEAM BUILDING </h1>
-                        <div class="default-paragraph-container markdown-area">
-                            <p>Vous êtes une entreprise et vous souhaitez pouvoir présenter à vos employés une offre e-learning complète et adaptée à vos besoins.</p>
-                        </div>
-                        <h1 class="default-green-header"></h1>
-                        <div class="default-paragraph-container markdown-area">
-                            <p>Oschool conçoit vos formations digitales sur-mesure en prêtant autant d'attention au fond <b> (conseil, accompagnement, design des stratégies digitales, architecture de programmes de formation complexes, le tout reposant sur notre méthode pédagogique)</b> qu'à la forme (simulations réalistes, e-learning, applications, vidéo, collaborative training, présentiel et même réalité virtuelle et augmentée)</p>
-                        </div>
-                        <h1 class="default-green-header"></h1>
-                        <div class="default-paragraph-container markdown-area">
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-5 right-column match-height clearfix" style="height:;">
-                    <div class="image" data-background-image="/images/divers/corporate-1.jpg" data-loaded="true"
-                      style="background-image: url(/images/divers/corporate-1.jpg);"></div>
-                    <!--div class="quote">
-                        <img class="orange-circle" src="/assets/blockquote-orange-d24380ebe646a526fc1fa70b279fa6531394ee3ddc19bf7bca406c709a6f08f3.svg">
-                        <blockquote>“It was important to us that our courses would look beautiful and that the software would be easy to use.”</blockquote>
-                        <cite>
-                            James Blatch, <a href="https://selfpublishingformula.com" target="_blank" rel="noopener noreferrer">Self Publishing Formula</a>
-                        </cite>
-                    </div-->
+                <div class="col-xs-12">
+                    <h1 class="small-uppercase-text">CHOISISSEZ OSCHOOL POUR VOTRE ECOLE</h1>
+                    <h2 class="default-header" style="max-width: 750px">Demandez rapidement un rendez-vous pour une démonstration gratuite</h2>
+                    <a target="_blank" href="https://calendly.com/yaodavidarmel/rendez-vous-oschool-university" class="orange-button">Commencez maintenant</a>
                 </div>
             </div>
         </div>
     </section>
 
+
+
+<!--pour les entreprises-->
+
+<section class="text-column-big-image _58">
+    <style>
+        ._58 {
+            margin-bottom: 450px;
+        }
+
+        @media (max-width: 991px) {
+            ._58 {
+                margin-bottom: 100px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            ._58 {
+                margin-bottom: 50px;
+            }
+        }
+
+        ._58 h2 {
+            max-width: 530px;
+        }
+
+        @media (min-width: 992px) {
+            ._58 img {
+                margin-left: -30%;
+            }
+        }
+
+        @media (max-width: 991px) {
+            ._58 img {
+                margin-left: 0%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            ._58 img {
+                margin-left: 0%;
+            }
+        }
+
+        @media (max-width: 991px) {
+            ._58 .right-column {
+                display: none;
+            }
+
+            ._58 .left-column .default-paragraph-container:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            ._58 .right-column {
+                display: none;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="small-uppercase-text small-header"></h1>
+                <h2 id="schools" class="default-header big-header">POUR LES ENTREPRISES</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-5 left-column">
+                <h1 class="default-green-header">Révélez le potentiel de votre équipe</h1>
+                <div class="default-paragraph-container markdown-area">
+                    <p>Formez vos équipes, reconvertissez vos collaborateurs, ou recruter de nouveaux talents</p>
+                </div>
+                <h1 class="default-green-header">Formez daans votre coeur de métier et gagnez de l'argent</h1>
+                <div class="default-paragraph-container markdown-area">
+                    <p>Créez votre école sur oschoolelearning.com et gagnez de l'argent sur chaque inscription à une de vos formations.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-7 right-column">
+                <img  data-src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/DfsKuQA2QziBB1whe0zD"
+                  src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/DfsKuQA2QziBB1whe0zD" data-loaded="true">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section style="margin-bottom: 12rem;" class="six-icons _75">
+    <style>
+        ._75 {
+            margin-bottom: 110px;
+        }
+
+        @media (max-width: 991px) {
+            ._75 {
+                margin-bottom: 100px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            ._75 {
+                margin-bottom: 100px;
+            }
+        }
+
+        ._75 div.image {
+            margin-left: 0;
+            margin-right: 0;
+            width: 44px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        ._75 h2 {
+            max-width: none;
+        }
+
+        ._75 div.default-green-header {
+            color: #1EA69A;
+            margin-bottom: 7px;
+        }
+
+        ._75 .markdown-area p,
+        ._75 .icon-header {
+            text-align: left;
+        }
+
+        @media (min-width: 992px) {
+            ._75 .row.first-row {
+                margin-bottom: 80px;
+            }
+        }
+
+        /*CUSTOM EXPID2 CODE*/
+        ._75 {
+            background-color: #FFFFFF
+        }
+
+        ._75 {
+            padding-top: 0px;
+        }
+
+        @media (max-width: 991px) {
+            ._75 {
+                padding-top: 0px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            ._75 {
+                padding-top: 0px;
+            }
+        }
+
+        ._75 {
+            padding-bottom: 0px;
+        }
+
+        @media (max-width: 991px) {
+            ._75 {
+                padding-bottom: 0px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            ._75 {
+                padding-bottom: 0px;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="row headers-row">
+            <div class="col-xs-12">
+                <h2 class="default-header">Découvrez pourquoi vous devez choisir Oschool comme destination pour l'apprentissage de vos employés</h2>
+            </div>
+        </div>
+        <div class="row first-row">
+            <div class="col-xs-12 col-md-4">
+                <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/UbyPdmSqTFuik2orzOkv" data-loaded="true"
+                  style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/UbyPdmSqTFuik2orzOkv&quot;);"></div>
+                <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;">Hébergement transparent</div>
+                <div class="default-paragraph markdown-area">
+                    <p>Oschool héberge le contenu de votre cours pour vous et sauvegarde vos données de site et d'étudiant afin que vous n'ayez pas à vous en soucier.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/rhI8RO51QoCLGIPU9ye5" data-loaded="true"
+                  style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/rhI8RO51QoCLGIPU9ye5&quot;);"></div>
+                <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;">Propriété des données</div>
+                <div class="default-paragraph markdown-area">
+                    <p>Posséder et contrôler tout le contenu et les données des étudiants de vos écoles et cours.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/skHFuyn6RZeeDKAHh6TD" data-loaded="true"
+                  style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/skHFuyn6RZeeDKAHh6TD&quot;);"></div>
+                <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;">Surveillance 24/7</div>
+                <div class="default-paragraph markdown-area">
+                    <p>Nous travaillons 24 heures sur 24 pour résoudre les problèmes à mesure qu'ils surviennent et nous assurer que vos portes restent ouvertes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/II8GXOCDTGG1Kii5Snbu" data-loaded="true"
+                  style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/II8GXOCDTGG1Kii5Snbu&quot;);"></div>
+                <div class="icon-header default-green-header match-height-green-headers-row-2" style="height: 28px;">Mises àç jour instantanées</div>
+                <div class="default-paragraph markdown-area">
+                    <p>Recevez automatiquement les dernières fonctionnalités immédiatement, sans avoir à mettre à jour manuellement.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/YOMRf9jWSh2o8GKeuaRz" data-loaded="true"
+                  style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/YOMRf9jWSh2o8GKeuaRz&quot;);"></div>
+                <div class="icon-header default-green-header match-height-green-headers-row-2" style="height: 28px;">Certificat SSL</div>
+                <div class="default-paragraph markdown-area">
+                    <p>Un certificat SSL 2048 bits protège les informations de vos étudiants et/ou employés pendant la connexion et le paiement.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/TRPVPYfRGuZiLWvEgoIm" data-loaded="true"
+                  style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/TRPVPYfRGuZiLWvEgoIm&quot;);"></div>
+                <div class="icon-header default-green-header match-height-green-headers-row-2" style="height: 28px;">Données de paiement sécurisées</div>
+                <div class="default-paragraph markdown-area">
+                    <p>Nous travaillons uniquement avec des prestataires de paiement conformes au niveau 1 PCI, afin que vos données et celles de vos utilisateurs soient en sécurité.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="green-quote _60">
+    <style>
+        ._60 {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 991px) {
+            ._60 {
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            ._60 {
+                margin-bottom: 60px;
+            }
+        }
+
+        ._60 .left-column {
+            background-color: #F4FAFA
+        }
+
+        ._60 .color {
+            background-color: #F4FAFA
+        }
+    </style>
+
+    <div class="color">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="default-green-header ">TEAM BUILDING </h1>
+                    <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
+                        <p></p>
+                    </div>
+                    <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
+                        <p>Oschool conçoit vos formations digitales sur-mesure en prêtant autant d'attention au fond (conseil, accompagnement, design des stratégies digitales, architecture de programmes de formation complexes, le tout reposant sur notre méthode pédagogique) qu'à la forme (simulations réalistes, e-learning, applications, vidéo, collaborative training, présentiel et même réalité virtuelle et augmentée)</p>
+                    </div>
+                    <h1 class="default-green-header ">Reach students worldwide in any language</h1>
+                    <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
+                        <p>Modify the language used in any part of your site to support international audiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 left-column match-height" style="height: 664px;">
+                <div class="text">
+                    <h1 class="default-green-header">TEAM BUILDING </h1>
+                    <div class="default-paragraph-container markdown-area">
+                        <p>Vous êtes une entreprise et vous souhaitez pouvoir présenter à vos employés une offre e-learning complète et adaptée à vos besoins.</p>
+                    </div>
+                    <h1 class="default-green-header"></h1>
+                    <div class="default-paragraph-container markdown-area">
+                        <p>Oschool conçoit vos formations digitales sur-mesure en prêtant autant d'attention au fond <b> (conseil, accompagnement, design des stratégies digitales, architecture de programmes de formation complexes, le tout reposant sur notre méthode pédagogique)</b> qu'à la forme (simulations réalistes, e-learning, applications, vidéo, collaborative training, présentiel et même réalité virtuelle et augmentée)</p>
+                    </div>
+                    <h1 class="default-green-header"></h1>
+                    <div class="default-paragraph-container markdown-area">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-5 right-column match-height clearfix" style="height:;">
+                <div class="image" data-background-image="/images/divers/corporate-1.jpg" data-loaded="true"
+                  style="background-image: url(/images/divers/corporate-1.jpg);"></div>
+                <!--div class="quote">
+                    <img class="orange-circle" src="/assets/blockquote-orange-d24380ebe646a526fc1fa70b279fa6531394ee3ddc19bf7bca406c709a6f08f3.svg">
+                    <blockquote>“It was important to us that our courses would look beautiful and that the software would be easy to use.”</blockquote>
+                    <cite>
+                        James Blatch, <a href="https://selfpublishingformula.com" target="_blank" rel="noopener noreferrer">Self Publishing Formula</a>
+                    </cite>
+                </div-->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section  class="cta-partial _12">
+    <style>
+        ._12 {
+            margin-bottom: 85px;
+        }
+
+        @media (max-width: 991px) {
+            ._12 {
+                margin-bottom: 85px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            ._12 {
+                margin-bottom: 85px;
+            }
+        }
+
+        /*CUSTOM EXPID2 CODE*/
+        ._12 {
+            background-color: #FFFFFF
+        }
+
+        ._12 {
+            padding-top: 0px;
+        }
+
+        @media (max-width: 991px) {
+            ._12 {
+                padding-top: 0px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            ._12 {
+                padding-top: 0px;
+            }
+        }
+
+        ._12 {
+            padding-bottom: 0px;
+        }
+
+        @media (max-width: 991px) {
+            ._12 {
+                padding-bottom: 0px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            ._12 {
+                padding-bottom: 0px;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="small-uppercase-text">CHOISISSEZ OSCHOOL POUR VOTRE ENTREPRISE</h1>
+                <h2 class="default-header" style="max-width: 750px">Demandez rapidement un rendez-vous pour une démonstration gratuite</h2>
+                <a target="_blank" href="https://calendly.com/yaodavidarmel/rendez-vous-oschool-university" class="orange-button">Commencez maintenant</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--
 
         <section class="cta-partial _69">
             <style>
@@ -1232,6 +1726,8 @@ hr{border-color:#ececec;}
                 </div>
             </div>
         </section>
+
+    -->
 
     <section class="id-tag _61">
         <style>
