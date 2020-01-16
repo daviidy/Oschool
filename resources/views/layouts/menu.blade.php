@@ -71,9 +71,9 @@
       <button class="my-close-button"><img src="https://teachable.com/assets/modal-x-c7f43ce3b8f64f3d597ce12e57caa7ddbf0778d3f163dc92b4a768067ddd2c3f.svg"></button>
     </div>
 
-    {{-- timer --}}
+    {{-- timer
     @include('includes.timer');
-    {{-- timer --}}
+    timer --}}
 
 
     <section class="_1568 clearfix transparent nav-menu">

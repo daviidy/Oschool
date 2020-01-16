@@ -265,12 +265,12 @@ header,svg{display:none;}
                     <div class="col col-50-lg">
                         <div class="hero-title">
                             <h1 class="text-color-white text-1-lg m-t-0-xs">
-                                Quelle est votre résolution pour 2020 ?
+                                Explorez nos écoles et trouvez le parfait programme pour votre carrière
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                A Oschool, on vous propose encore mieux: un programme.
-                                Commencez à apprendre à partir de 15 000 FCFA.
-                                Cette promotion finit le 15 janvier.
+                                A Oschool, apprenez les compétences le splus
+                                recherchées par les entreprises, construisez des projets incroyables
+                                et donnez vie à votre métier de rêve.
                             </h2>
                         </div>
                     </div>
