@@ -44,8 +44,17 @@ class ResourceController extends Controller
      */
     public function store(Request $request)
     {
-        $resource = Resource::create($request->all()
-    + ['position' => Resource::where('project_id', $request->project_id)->max('position') + 1]);
+        $resource = Resource::create([
+                            'title' => $request->title,
+                            'link' => 'aucun',
+                            'position' => Resource::where('project_id', $request->project_id)->max('position') + 1,
+                            'project_id' => $request->project_id,
+                        ]);
+
+        $course = Course::where('name', $request->title)->first();
+        $resource->link = "/course/".$course->slug;
+        $resource->type = "course";
+        $resource->save();
 
         return redirect('/schoolAdmin/'.$request->school_id.'/paths/'.$request->course_id.'/curriculum');
     }

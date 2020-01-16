@@ -152,6 +152,9 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
 </style>
 
 
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+
 <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
     <div what="page header" class="tch-section-nav tch-page-header" icon="icon icon-list3" text="New Section">
         <div ng-class="{ 'has-sections': sections }" class="tch-section-nav-wrapper affixed">
@@ -161,7 +164,7 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Nouvelle ressource pour le projet: {{$project->title}}
+                    <!---->Ajouter un cours à la spécialisation {{$course->name}} pour le projet: {{$project->title}}
                 </div>
                 <!---->
                 <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -204,9 +207,14 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                                 <!---->
                             </label-block>
                             <div ng-transclude="">
-                                <input name="title" maxlength="100" placeholder="Mettre le nom de la ressource" type="text" required=""
-                                  class="form-control ng-valid-maxlength ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" style="">
-                              </div>
+
+                                  <select class="js-example-basic-multiple" name="title" style="width:250px;">
+                                    @foreach ($school->courses->where('type', 'course') as $course)
+                                    <option value="{{$course->name}}">{{$course->name}}</option>
+                                    @endforeach
+                                 </select>
+
+                             </div>
                               <input value="{{$course->id}}" name="course_id" maxlength="100" placeholder="e.g. Introduction" type="text" required=""
                                     class="form-control ng-valid-maxlength ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" style="display: none;">
                             <input value="{{$school->id}}" name="school_id" maxlength="100" placeholder="e.g. Introduction" type="text" required=""
@@ -217,6 +225,11 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                         </div>
                         <!---->
                         <!---->
+
+                        {{--
+
+                            <input name="title" maxlength="100" placeholder="Mettre le nom de la ressource" type="text" required=""
+                              class="form-control ng-valid-maxlength ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" style="">
 
                         <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group has-success">
                             <label-block required-label="requiredLabel">
@@ -256,6 +269,7 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                               </div>
 
                         </div>
+                        --}}
 
 
                     </div>
@@ -271,7 +285,14 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
     </form>
 </div>
 
+<!--pour le multiple select-->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
 
+</script>
 
 
 

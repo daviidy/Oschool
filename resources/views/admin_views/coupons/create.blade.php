@@ -520,6 +520,7 @@
             };
           </script>
 
+<!--pour le multiple select-->
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
 <script>
 $(document).ready(function() {

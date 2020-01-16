@@ -532,6 +532,54 @@ button.btn{border:none;}
 </style>
 
 
+
+<!--pour les fichiers telechargeables-->
+<style media="screen">
+/*! CSS Used from: https://platform.mindvalley.com/quests-b802371a1b4d00452c37a4f69743503a.css?vsn=d */
+section{display:block;}
+a{background-color:transparent;-webkit-text-decoration-skip:objects;}
+*,:after,:before{box-sizing:inherit;}
+*,:after,:before{border:0 solid #95989d;}
+.button{display:inline-block;background-color:#3c434e;border-radius:9999px;text-decoration:none;text-align:center;color:#c1c1c1;padding:1rem 2rem;font-size:1rem;font-weight:600;line-height:1;}
+.button:hover{cursor:pointer;background-color:#62686e;}
+.button--primary{background-color:#4D90CC;border-width:1px;border-color:#4D90CC;color:#fff;}
+.button--primary:hover{background-color:#6cb2eb;}
+.coverWrapper{position:relative;padding-top:56.25%;}
+.cover{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;background-size:cover;background-color:#62686e;background-position:50%;}
+.bg-grey-darker{background-color:#2c313b;}
+.rounded{border-radius:.25rem;}
+.rounded-lg{border-radius:.5rem;}
+.hidden{display:none;}
+.flex{display:-ms-flexbox;display:flex;}
+.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap;}
+.items-center{-ms-flex-align:center;align-items:center;}
+.flex-initial{-ms-flex:initial;flex:initial;}
+.flex-grow{-ms-flex-positive:1;flex-grow:1;}
+.font-bold{font-weight:700;}
+.my-2{margin-top:.5rem;margin-bottom:.5rem;}
+.mt-0{margin-top:0;}
+.mb-6{margin-bottom:1.5rem;}
+.p-2{padding:.5rem;}
+.p-3{padding:.75rem;}
+.text-grey-light{color:#95989d;}
+.text-white{color:#fff;}
+.text-base{font-size:1rem;}
+.uppercase{text-transform:uppercase;}
+.w-32{width:8rem;}
+.w-full{width:100%;}
+@media (min-width:768px){
+.md\:rounded-lg{border-radius:.5rem;}
+.md\:block{display:block;}
+.md\:flex-no-wrap{-ms-flex-wrap:nowrap;flex-wrap:nowrap;}
+.md\:my-6{margin-top:1.5rem;margin-bottom:1.5rem;}
+.md\:p-3{padding:.75rem;}
+.md\:text-2xl{font-size:1.5rem;}
+.md\:w-48{width:12rem;}
+.md\:w-auto{width:auto;}
+}
+</style>
+
+
 <main class="content">
 
     <section class="course-hero-enrolled content__container--full-width">
@@ -649,7 +697,7 @@ button.btn{border:none;}
                                 </div>
                                 @else
                                 <div class="course-hero-unenrolled__cta" data-gtm-tag="start-course sign-in">
-                                    <a class="btn btn--primary" enroll-link="">Commencer le cours</a>
+                                    <a href="#program" class="btn btn--primary" enroll-link="">Commencer la spécialsation</a>
                                 </div>
                                 @endif
 
@@ -710,19 +758,18 @@ button.btn{border:none;}
     </section>
 
 
-    <h2 class="course-detail__section__title">Projets ({{count($course->projects)}})</h2>
+    <h2 class="course-detail__section__title">Programme ({{count($course->projects)}} projets)</h2>
 
 
     <myg-accordion class="myg-accordion js-accordion course-detail__module-accordion ng-isolate-scope" selected-item-id="'module-section-1'" scroll-to-selected-item="false" item-active-class="myg-accordion__item--active" item-delay-on-open="300"
       open-multiple-panels="true" label-aria-opened="'Libellé aria pour le panneau en accordéon fermé'" label-aria-closed="'Libellé aria pour le panneau en accordéon fermé'">
 
       @foreach($course->projects as $project)
-        <div class="myg-accordion__item js-accordion-item " id="module-section-1">
+        <div id="program" class="myg-accordion__item js-accordion-item " id="module-section-1">
             <div class="myg-accordion__header js-accordion-title" tabindex="0">
                 <h4 class="myg-accordion__title heading--h3">
-                    <a href="/path/{{$course->slug}}/projects/{{$project->slug}}">
-                        {{$project->title}}
-                    </a>
+                        Projet {{$loop->index + 1}} à réaliser: {{$project->title}}&nbsp;
+                        <strong>({{count($project->resources)}} cours à suivre)</strong>
                 </h4>
                 <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
                 <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
@@ -732,13 +779,13 @@ button.btn{border:none;}
 
 
 
-                    @foreach($project->resources as $resource)
+                    @foreach($project->resources->sortBy('position') as $resource)
 
-                    <a href="{{$resource->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
+                    <a target="_blank" href="{{$resource->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
                         <div class="module-progress-card__icon">
                             <img src="/images/divers/resource_icon.png" alt="{{$resource->title}}">
                         </div>
-                        <h4 class="module-progress-card__title">{{$resource->title}}</h4>
+                        <h4 class="module-progress-card__title">Cours {{$loop->index + 1}}: {{$resource->title}}</h4>
                         <!--
                         <p class="module-progress-card__duration">
                             <i class="material-icons">access_time</i><span>15&nbsp;min</span>
@@ -757,6 +804,21 @@ button.btn{border:none;}
                     </a>
 
                     @endforeach
+
+                    <section class="flex flex-wrap md:flex-no-wrap items-center bg-grey-darker text-white rounded-lg p-2 md:p-3 mt-0 mb-6 md:my-6">
+                        <div class="flex-initial w-32 md:w-48 p-3 rounded md:rounded-lg">
+                            <div class="coverWrapper rounded md:rounded-lg">
+                                <div class="cover rounded md:rounded-lg" style="background-image: url(&quot;https://i.pinimg.com/originals/fd/cf/00/fdcf00ceb5aca780e9521ea64e863f6d.jpg&quot;);"></div>
+                            </div>
+                        </div>
+                        <div class="flex-grow p-3">
+
+                            <div class="text-base md:text-2xl font-bold my-2">
+                                Projet à faire: {{$project->title}}
+                            </div>
+                        </div>
+                        <div class="flex-initial p-3 w-full md:w-auto"><a target="_blank" href="/path/{{$course->slug}}/projects/{{$project->slug}}" class="button button--primary w-full" style="width: max-content;">Voir</a></div>
+                    </section>
 
                 </div>
             </div>
