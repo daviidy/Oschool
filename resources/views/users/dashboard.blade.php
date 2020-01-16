@@ -47,7 +47,7 @@
     <h1>Mes cours</h1>
     <div class="schools-list ">
         @foreach(Auth::user()->courses as $course)
-        @if($course->type == 'course')
+        @if($course->type == 'mooc')
         <a href="/course/enrolled/{{$course->slug}}" class="school-card school-has-default-thumbnail"
           style="background-image: url('/images/courses/logos/{{$course->logo}}');" target="_blank">
             <div class="school-info">

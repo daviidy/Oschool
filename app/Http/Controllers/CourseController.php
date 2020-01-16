@@ -105,7 +105,7 @@ class CourseController extends Controller
     {
         $course = Course::where('slug', $slug)->firstOrFail();
 
-        if ($course->type == 'course') {
+        if ($course->type == 'mooc') {
             return view('courses.show', ['course' => $course]);
         }
         elseif ($course->type == 'path' || $course->type == 'bootcamp') {
@@ -290,7 +290,7 @@ class CourseController extends Controller
      public function curriculum(School $school, Course $course)
      {
          if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
-             if ($course->type == "course") {
+             if ($course->type == "mooc") {
                  return view('admin_views.courses.curriculum', ['school' => $school, 'course' => $course]);
              }
              elseif ($course->type == "path" || $course->type == "bootcamp") {
