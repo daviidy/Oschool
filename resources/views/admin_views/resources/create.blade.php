@@ -209,8 +209,8 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                             <div ng-transclude="">
 
                                   <select class="js-example-basic-multiple" name="title" style="width:250px;">
-                                    @foreach ($school->courses->where('type', 'course') as $course)
-                                    <option value="{{$course->name}}">{{$course->name}}</option>
+                                    @foreach($school->courses->where('type', 'mooc') as $data)
+                                    <option value="{{$data->name}}">{{$data->name}}</option>
                                     @endforeach
                                  </select>
 

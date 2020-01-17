@@ -151,6 +151,8 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
 
 </style>
 
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+
 
 <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
     <div what="page header" class="tch-section-nav tch-page-header" icon="icon icon-list3" text="New Section">
@@ -205,8 +207,11 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                                 <!---->
                             </label-block>
                             <div ng-transclude="">
-                                <input name="title" maxlength="100" value="{{$resource->title}}" type="text" required=""
-                                  class="form-control ng-valid-maxlength ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" style="">
+                                <select class="js-example-basic-multiple" name="title" style="width:250px;">
+                                  @foreach($school->courses->where('type', 'mooc') as $data)
+                                  <option value="{{$data->name}}">{{$data->name}}</option>
+                                  @endforeach
+                               </select>
                               </div>
                               <input value="{{$course->id}}" name="course_id" maxlength="100" placeholder="e.g. Introduction" type="text" required=""
                                     class="form-control ng-valid-maxlength ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" style="display: none;">
@@ -216,6 +221,10 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                         </div>
                         <!---->
                         <!---->
+
+                        {{--
+                        <input name="title" maxlength="100" value="{{$resource->title}}" type="text" required=""
+                          class="form-control ng-valid-maxlength ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" style="">
 
                         <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group has-success">
                             <label-block required-label="requiredLabel">
@@ -256,6 +265,8 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
 
                         </div>
 
+                        --}}
+
 
                     </div>
                 </div>
@@ -271,7 +282,14 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
 </div>
 
 
+<!--pour le multiple select-->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
 
+</script>
 
 
 

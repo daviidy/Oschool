@@ -401,7 +401,7 @@
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="POST" action="{{route('coupons.store')}}" enctype="multipart/form-data class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="editor-container">
+            <form method="POST" action="{{route('coupons.store')}}" enctype="multipart/form-data" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="editor-container">
                 @csrf
                 {{ method_field('POST') }}
                     <!---->
