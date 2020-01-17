@@ -257,6 +257,22 @@ class LessonController extends Controller
         return response()->json($data);
     }
 
+
+    //update lesson title
+    public function updateTitle(Request $request, Lesson $lesson)
+    {
+        $data = Lesson::find($request->lesson_id);
+         $slug = new SlugLesson();
+         $data->title = $request->title;
+         $data->slug = $slug->createSlug($request->title);
+         $data->save();
+
+
+        return response()->json($data);
+    }
+
+
+
     public function saveNewPositions(Request $request)
     {
             foreach ($request->positions as $position) {
