@@ -385,6 +385,8 @@ class CourseController extends Controller
                          'course_name' => $course->name,
                          'certificate_number' => $certificate->number,
                          'date' => $certificate->date,
+                         'school_name' => $course->school->name,
+                         'course_logo' => $course->logo,
                      ];
 
                      /*
@@ -412,6 +414,8 @@ class CourseController extends Controller
                          'course_name' => $course->name,
                          'certificate_number' => $certificate->number,
                          'date' => $certificate->date,
+                         'school_name' => $course->school->name,
+                         'course_logo' => $course->logo,
 
                      ];
 
