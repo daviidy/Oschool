@@ -108,7 +108,7 @@
           <a id="tab1">Cours</a>
         </li>
         <li class="nav-item nav-link nav-link-2">
-          <a id="tab2">Carrières</a>
+          <a id="tab2">Spécialisations</a>
         </li>
 
         <li class="nav-item nav-link nav-link-2">

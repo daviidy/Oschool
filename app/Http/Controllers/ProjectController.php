@@ -96,8 +96,10 @@ class ProjectController extends Controller
         $data = Project::find($request->project_id);
         $data->update($request->all());
 
+        /*
           $slug = new SlugProject();
           $data->slug = $slug->createSlug($request->title);
+          */
           $data->save();
 
 

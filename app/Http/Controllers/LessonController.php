@@ -225,9 +225,10 @@ class LessonController extends Controller
     {
         $data = Lesson::find($request->lesson_id);
         $data->update($request->all());
-
+        /*
           $slug = new SlugLesson();
           $data->slug = $slug->createSlug($request->title);
+          */
           $data->save();
 
           if ($request->hasFile('downloadable_files') ) {

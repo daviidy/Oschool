@@ -467,7 +467,7 @@ button:focus{outline:none;}
           <!---->
           <!---->
           <section class="sectionWrapper sectionWrapper--audio">
-              <h3>De l'aide pour réaliser ce projet</h3><br>
+              <h3>Les cours à suivre pour réaliser ce projet</h3><br>
               @foreach($project->resources->sortBy('position') as $resource)
               <a target="_blank" href="{{$resource->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
                   <div class="module-progress-card__icon">
