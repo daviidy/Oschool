@@ -394,6 +394,7 @@ class CourseController extends Controller
                      $pdf = PDF::loadHTML($html);
                      return $pdf->stream();
                       */
+                     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'helvetica']);
                      $pdf = PDF::loadView('pdf.certificate', $data);
                      $pdf->setPaper('A4', 'landscape');
                      return $pdf->download('certificat_'.$course->name.'_oschool.pdf');
@@ -419,6 +420,7 @@ class CourseController extends Controller
 
                      ];
 
+                     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'helvetica']);
                      $pdf = PDF::loadView('pdf.certificate', $data);
                      return $pdf->download('certificat_'.$course->name.'_oschool.pdf');
                  }
