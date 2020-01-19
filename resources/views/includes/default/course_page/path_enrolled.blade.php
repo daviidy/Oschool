@@ -797,9 +797,22 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
                             </span>
                         </div>
                     -->
+                        <!--checker si l'utilsateur a fini de suivre les cours-->
+                        @auth
+                        @if(count(Auth::user()->courses->where('name', $resource->title)) > 0)
+                        @foreach(Auth::user()->courses->where('name', $resource->title) as $course_oschool)
+                        @if(count(Auth::user()->lessons->where('course_id', $course_oschool->id)) == count($course_oschool->lessons))
+                        <div class="module-progress-card__cta">
+                            <i style="background: green; border-radius: 50%; color: white;" class="material-icons">done</i>
+                        </div>
+                        @else
                         <div class="module-progress-card__cta">
                             <i class="material-icons">arrow_forward</i>
                         </div>
+                        @endif
+                        @endforeach
+                        @endif
+                        @endauth
 
                     </a>
 
@@ -817,7 +830,48 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
                                 Projet à faire: {{$project->title}}
                             </div>
                         </div>
-                        <div class="flex-initial p-3 w-full md:w-auto"><a target="_blank" href="/path/{{$course->slug}}/projects/{{$project->slug}}" class="button button--primary w-full" style="width: max-content;">Voir</a></div>
+                        @auth
+                        @php
+                        //on définit une variable nombre_de_cours_finis
+                        $nombre_de_cours_finis = 0;
+                        //pour chaque ressource, on trouve le cours associé
+                            foreach ($project->resources as $resource) {
+                                //si user a finit ce cours on itère nombre_de_cours_finis à 1
+                                if (count(Auth::user()->courses->where('name', $resource->title)) > 0) {
+                                    foreach (Auth::user()->courses->where('name', $resource->title) as $course_db) {
+                                        if (count(Auth::user()->lessons->where('course_id', $course_db->id)) == count($course_db->lessons)) {
+                                            $nombre_de_cours_finis += 1;
+                                        }
+                                    }
+                                }
+                            }
+
+                            //si nombre_de_cours_finis est égal au nombre de ressources du projet
+                            if ($nombre_de_cours_finis == count($project->resources)) {
+                                //on définit une variable do_project à yes
+                                $do_project = 'yes';
+                            }
+                            else {
+                                //sinon on définit une variable do_project à no
+                                $do_project = 'no';
+                            }
+                        @endphp
+
+                        @if($do_project == 'yes')
+                        <div class="flex-initial p-3 w-full md:w-auto">
+                            <a style="font-size: 1.5rem;" target="_blank" href="/path/{{$course->slug}}/projects/{{$project->slug}}" class="button button--primary w-full" style="width: max-content;">
+                                Voir
+                            </a>
+                        </div>
+                        @else
+                        <div class="flex-initial p-3 w-full md:w-auto">
+                            <a style="font-size: 1.5rem;" target="_blank" class="button button--primary w-full" style="width: max-content;">
+                                Terminer le(s) cours ci-dessus pour faire le projet
+                            </a>
+                        </div>
+                        @endif
+
+                        @endauth
                     </section>
 
                 </div>
