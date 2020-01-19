@@ -768,7 +768,7 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
         <div id="program" class="myg-accordion__item js-accordion-item " id="module-section-1">
             <div class="myg-accordion__header js-accordion-title" tabindex="0">
                 <h4 class="myg-accordion__title heading--h3">
-                        Projet {{$loop->index + 1}} à réaliser: {{$project->title}}&nbsp;
+                        Module {{$loop->index + 1}}&nbsp;
                         <strong>({{count($project->resources)}} cours à suivre)</strong>
                 </h4>
                 <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
