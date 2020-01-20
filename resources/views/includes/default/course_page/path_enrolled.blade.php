@@ -860,7 +860,7 @@ img{max-width:100%;}
                 <div class="PlatformFeatures__SectionText-jd5lu4-4 chyPnR">
                     <div class="PlatformFeatures__SectionHeading-jd5lu4-7 khraDZ">Correction des travaux</div>
                     <div class="PlatformFeatures__Description-jd5lu4-10 iQZnPq">
-                        Après chauqe projet soumis, nous évaluerons vos travaux et vous
+                        Après chaque projet soumis, nous évaluerons vos travaux et vous
                         serez notifié lorsque l'évaluation sera disponible.
                     </div>
                 </div>
