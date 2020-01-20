@@ -759,7 +759,7 @@ img{max-width:100%;}
                                 </div>
                                 @else
                                 <div class="course-hero-unenrolled__cta" data-gtm-tag="start-course sign-in">
-                                    <a href="#program" class="btn btn--primary" enroll-link="">Commencer la spécialsation</a>
+                                    <a href="#program" class="btn btn--primary" enroll-link="">Continuez la spécialsation</a>
                                 </div>
                                 @endif
 
