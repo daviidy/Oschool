@@ -580,6 +580,68 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
 </style>
 
 
+<!--pour les informations importantes-->
+<style media="screen">
+/*! CSS Used from: Embedded */
+svg:not(:root).svg-inline--fa{overflow:visible;}
+.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-0.125em;}
+.svg-inline--fa.fa-w-14{width:0.875em;}
+.fa-sm{font-size:0.875em;}
+/*! CSS Used from: https://www.educative.io/static/css/81.03265360.chunk.css */
+img{border:0;}
+svg:not(:root){overflow:hidden;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*,:after,:before{box-sizing:border-box;}
+img{vertical-align:middle;}
+/*! CSS Used from: Embedded */
+.kuwfjR{display:flex;flex:0 0 auto;flex-direction:column;-webkit-box-align:center;align-items:center;background:rgb(231, 233, 254);margin-top:60px;}
+.kGjzhd{margin-top:-8%;height:100%;max-height:200px;width:100%;background-repeat:no-repeat;position:absolute;left:0px;right:0px;}
+.ezQqqw{display:flex;width:100%;flex:1 1 0%;-webkit-box-align:center;align-items:center;margin-top:0px;overflow:visible;position:relative;min-width:320px;max-width:500px;min-height:380px;flex-direction:column;}
+@media (max-width: 780px){
+.ezQqqw{flex-direction:column;min-height:320px;}
+}
+@media (max-width: 480px){
+.ezQqqw{max-width:320px;min-height:320px;}
+}
+.chyPnR{text-align:center;padding:20px;flex-direction:column;font-size:18px;color:black;}
+@media (max-width: 780px){
+.chyPnR{font-size:16px;}
+}
+@media (max-width: 480px){
+.chyPnR{font-size:16px;margin-left:0px;margin-right:0px;text-align:center;-webkit-box-align:center;align-items:center;}
+}
+.khraDZ{margin-bottom:20px;font-weight:900;font-size:30px;text-align:center;width:100%;}
+@media (max-width: 780px){
+.khraDZ{font-size:18px;margin:20px 0px;}
+}
+@media (max-width: 780px){
+.fHmFtR{margin-right:0px;margin-top:0px;}
+}
+@media (max-width: 480px){
+.fHmFtR{max-width:280px;}
+}
+.fSMDND{height:160px;}
+.dJyfUX{display:flex;flex-wrap:wrap;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:100%;max-width:1024px;padding:0px 40px;}
+@media (max-width: 480px){
+.dJyfUX{padding:0px 20px;margin-top:50px;}
+}
+.cXWxVP{display:flex;color:rgb(75, 73, 255);transition:all 0.2s ease 0s;font-size:20px;font-weight:700;margin-bottom:30px;border:2px solid rgb(75, 73, 255);border-radius:16px;cursor:pointer;}
+.cXWxVP:hover{color:white;background:rgb(75, 73, 255);border-color:transparent;}
+.cXWxVP:hover > div{border-color:white;}
+.cXWxVP div{margin-right:7px;}
+.cXWxVP svg{margin:2px 0px;}
+@media (max-width: 730px){
+.cXWxVP{display:none;}
+}
+.fZkWMM{border-right:2px solid rgb(75, 73, 255);height:45px;padding:8px 20px;}
+.gSIeam{height:45px;padding:10px;}
+img{max-width:100%;}
+</style>
+
 <main class="content">
 
     <section class="course-hero-enrolled content__container--full-width">
@@ -756,6 +818,67 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
             </div>
         </div>
     </section>
+
+
+    <div style="margin: 70px -92px;" class="PlatformFeatures-jd5lu4-0 kuwfjR">
+        <div class="PlatformFeatures__CurvedSection-jd5lu4-1 kGjzhd"><svg viewBox="0 0 1000 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path d="M 0,108 L 1100,108 C 1000.17569,36 891.509022,3.42382372e-14 774,3.42382372e-14 C 597.736468,3.42382372e-14 445.360536,71.09 275.96831,71.09 C 106.576083,71.09 106.576083,1.28896893e-13 0,0 C 0,72 0,108 0,108 Z"
+                      fill="#E7E9FE"></path>
+                </g>
+            </svg></div>
+        <div class="PlatformFeatures__Content-jd5lu4-13 dJyfUX">
+            <div class="PlatformFeatures__Section-jd5lu4-3 ezQqqw">
+                <div class="PlatformFeatures__SectionImage-jd5lu4-9 fHmFtR">
+                    <div class="PlatformFeatures__Image-jd5lu4-11 fSMDND"><img src="https://www.educative.io/static/media/bookImage.17e76a33.svg" loading="lazy" alt="Better than videos" class="features" width="275px" height="246px"></div>
+                </div>
+                <div class="PlatformFeatures__SectionText-jd5lu4-4 chyPnR">
+                    <div class="PlatformFeatures__SectionHeading-jd5lu4-7 khraDZ">Suivez bien les cours</div>
+                    <div class="PlatformFeatures__Description-jd5lu4-10 iQZnPq">Il est obligatoire de suivre tous les cours de cette spécialisation
+                        pour réaliser le(s) projet(s).
+                    </div>
+                </div>
+            </div>
+            <div class="PlatformFeatures__Section-jd5lu4-3 ezQqqw">
+                <div class="PlatformFeatures__SectionImage-jd5lu4-9 fHmFtR">
+                    <div class="PlatformFeatures__Image-jd5lu4-11 fSMDND"><img src="https://www.educative.io/static/media/codeImage.3f6b0977.svg" loading="lazy" alt="Slick coding environments" class="features" width="275px" height="252px"></div>
+                </div>
+                <div class="PlatformFeatures__SectionText-jd5lu4-4 chyPnR">
+                    <div class="PlatformFeatures__SectionHeading-jd5lu4-7 khraDZ">Faites les exercices et beaucoup de recherches</div>
+                    <div class="PlatformFeatures__Description-jd5lu4-10 iQZnPq">
+                        Les cours sont jonchés d'exercice et ressources spécialement conçues
+                        pour vous aider à réaliser les projets. En plus de tout cela,
+                        servez vous beaucoup de Google et de la communauté Oschool pour résoudre vos problèmes.
+                        Pensez à faire vos recherches en anglais.
+                    </div>
+                </div>
+            </div>
+            <div class="PlatformFeatures__Section-jd5lu4-3 ezQqqw">
+                <div class="PlatformFeatures__SectionImage-jd5lu4-9 fHmFtR">
+                    <div class="PlatformFeatures__Image-jd5lu4-11 fSMDND"><img src="https://www.educative.io/static/media/setupImage.8e246fdf.svg" loading="lazy" alt="No set-up required" class="features" width="250px" height="308px"></div>
+                </div>
+                <div class="PlatformFeatures__SectionText-jd5lu4-4 chyPnR">
+                    <div class="PlatformFeatures__SectionHeading-jd5lu4-7 khraDZ">Correction des travaux</div>
+                    <div class="PlatformFeatures__Description-jd5lu4-10 iQZnPq">
+                        Après chauqe projet soumis, nous évaluerons vos travaux et vous
+                        serez notifié lorsque l'évaluation sera disponible.
+                    </div>
+                </div>
+            </div>
+            <div class="PlatformFeatures__Section-jd5lu4-3 ezQqqw">
+                <div class="PlatformFeatures__SectionImage-jd5lu4-9 fHmFtR">
+                    <div class="PlatformFeatures__Image-jd5lu4-11 fSMDND"><img src="https://www.educative.io/static/media/tracksImage.a01b14ea.svg" loading="lazy" alt="Learning tracks" class="features" width="265px" height="248px"></div>
+                </div>
+                <div class="PlatformFeatures__SectionText-jd5lu4-4 chyPnR">
+                    <div class="PlatformFeatures__SectionHeading-jd5lu4-7 khraDZ">Certificats</div>
+                    <div class="PlatformFeatures__Description-jd5lu4-10 iQZnPq">
+                        Vos certificats sont téléchargeables ou partageables sur LinkedIn.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
     <h2 class="course-detail__section__title">Programme ({{count($course->projects)}} projets)</h2>

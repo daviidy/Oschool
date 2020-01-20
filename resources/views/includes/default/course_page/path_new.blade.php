@@ -923,7 +923,7 @@ button,html [type=button]{-webkit-appearance:button;}
         </div>
     </section>
 
-    <div class="container__2pOQhMH63ZlM4TpcZhwliA">
+    <div style="margin-bottom: 6rem;" class="container__2pOQhMH63ZlM4TpcZhwliA">
 
     <div class="contentContainer__3rYV5hCbkX8Z5A1gQ1uzq4">
         <div class="content__19X6PISinqrnIPYq7yW9O-">
