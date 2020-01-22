@@ -32,4 +32,24 @@ class Section extends Model
        {
            return $this->hasMany('App\Lesson');
        }
+
+
+       public static function boot() {
+       parent::boot();
+
+       static::deleting(function($section) { // before delete() method call this
+
+
+
+            foreach ($section->lessons as $lesson) {
+
+                $lesson->delete();
+            }
+            // do the rest of the cleanup...
+       });
+   }
+
+
+
+
 }
