@@ -284,7 +284,20 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                               </a>
                             <!---->
                         </span>
-                        <div class="pull-right"><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/new-lecture" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">Nouvelle leçon</a></div>
+                        <div class="pull-right">
+                            <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/new-lecture" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
+                                Nouvelle leçon
+                            </a>
+                            <div class="btn-group">
+                                <form action="{{ route('sections.destroy', $section) }}" method="post">
+                                    {{ csrf_field() }}
+                                    {{ method_field('delete') }}
+                                    <button style="background:#dc4f2f;"
+                                        class="tch-btn-icon-fa fastclickable tch-btn-content-primary"><i class="fa fa-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <ol ui-tree-nodes="" ng-model="lectureSection.lectures" data-type="lecture" class="lesson-list list-unstyled lecture-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty">
                         <!---->

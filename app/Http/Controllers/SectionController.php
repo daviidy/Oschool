@@ -97,6 +97,7 @@ class SectionController extends Controller
      */
     public function destroy(Section $section)
     {
-        //
+        $section->delete();
+        return redirect('/schoolAdmin/'.$section->course->school_id.'/courses/'.$section->course_id.'/curriculum')->with('status', 'Section supprimée');
     }
 }
