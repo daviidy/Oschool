@@ -185,7 +185,7 @@
                         <li what="nav item" ui-sref-active="active" style="display:none"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('email_students') || permissions.can('view_gated_email')" text="Emails" icon="icon icon-envelope" sref="admin.emails">
-                            <!----><a what="link" ui-sref="admin.emails" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/emails">
+                            <!----><a what="link" ui-sref="admin.emails" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/email">
                                 <!----><i ng-if="::icon" ng-class="::icon" tooltip="Emails" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-envelope"></i>
                                 <!---->
                                 <!---->
