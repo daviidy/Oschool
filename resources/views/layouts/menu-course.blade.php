@@ -538,17 +538,16 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
                 </a>
               </li>
 
-
-              <li>
+              <!--li>
                 <a class="fedora-navbar-link navbar-link" href="https://events.oschoolelearning.com" target="">
                   Evénements
                 </a>
-              </li>
+              </li-->
 
 
               <li>
                 <a class="navbar-link fedora-navbar-link" href="/corporate">
-                  Entreprises
+                  Business
                 </a>
               </li>
               <li>
