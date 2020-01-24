@@ -532,6 +532,116 @@ button.btn{border:none;}
 </style>
 
 
+
+<!--pour les fichiers telechargeables-->
+<style media="screen">
+/*! CSS Used from: https://platform.mindvalley.com/quests-b802371a1b4d00452c37a4f69743503a.css?vsn=d */
+section{display:block;}
+a{background-color:transparent;-webkit-text-decoration-skip:objects;}
+*,:after,:before{box-sizing:inherit;}
+*,:after,:before{border:0 solid #95989d;}
+.button{display:inline-block;background-color:#3c434e;border-radius:9999px;text-decoration:none;text-align:center;color:#c1c1c1;padding:1rem 2rem;font-size:1rem;font-weight:600;line-height:1;}
+.button:hover{cursor:pointer;background-color:#62686e;}
+.button--primary{background-color:#4D90CC;border-width:1px;border-color:#4D90CC;color:#fff;}
+.button--primary:hover{background-color:#6cb2eb;}
+.coverWrapper{position:relative;padding-top:56.25%;}
+.cover{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;background-size:cover;background-color:#62686e;background-position:50%;}
+.bg-grey-darker{background-color:#2c313b;}
+.rounded{border-radius:.25rem;}
+.rounded-lg{border-radius:.5rem;}
+.hidden{display:none;}
+.flex{display:-ms-flexbox;display:flex;}
+.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap;}
+.items-center{-ms-flex-align:center;align-items:center;}
+.flex-initial{-ms-flex:initial;flex:initial;}
+.flex-grow{-ms-flex-positive:1;flex-grow:1;}
+.font-bold{font-weight:700;}
+.my-2{margin-top:.5rem;margin-bottom:.5rem;}
+.mt-0{margin-top:0;}
+.mb-6{margin-bottom:1.5rem;}
+.p-2{padding:.5rem;}
+.p-3{padding:.75rem;}
+.text-grey-light{color:#95989d;}
+.text-white{color:#fff;}
+.text-base{font-size:1rem;}
+.uppercase{text-transform:uppercase;}
+.w-32{width:8rem;}
+.w-full{width:100%;}
+@media (min-width:768px){
+.md\:rounded-lg{border-radius:.5rem;}
+.md\:block{display:block;}
+.md\:flex-no-wrap{-ms-flex-wrap:nowrap;flex-wrap:nowrap;}
+.md\:my-6{margin-top:1.5rem;margin-bottom:1.5rem;}
+.md\:p-3{padding:.75rem;}
+.md\:text-2xl{font-size:1.5rem;}
+.md\:w-48{width:12rem;}
+.md\:w-auto{width:auto;}
+}
+</style>
+
+
+<!--pour les informations importantes-->
+<style media="screen">
+/*! CSS Used from: Embedded */
+svg:not(:root).svg-inline--fa{overflow:visible;}
+.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-0.125em;}
+.svg-inline--fa.fa-w-14{width:0.875em;}
+.fa-sm{font-size:0.875em;}
+/*! CSS Used from: https://www.educative.io/static/css/81.03265360.chunk.css */
+img{border:0;}
+svg:not(:root){overflow:hidden;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*,:after,:before{box-sizing:border-box;}
+img{vertical-align:middle;}
+/*! CSS Used from: Embedded */
+.kuwfjR{display:flex;flex:0 0 auto;flex-direction:column;-webkit-box-align:center;align-items:center;background:rgb(231, 233, 254);margin-top:60px;}
+.kGjzhd{margin-top:-8%;height:100%;max-height:200px;width:100%;background-repeat:no-repeat;position:absolute;left:0px;right:0px;}
+.ezQqqw{display:flex;width:100%;flex:1 1 0%;-webkit-box-align:center;align-items:center;margin-top:0px;overflow:visible;position:relative;min-width:320px;max-width:500px;min-height:380px;flex-direction:column;}
+@media (max-width: 780px){
+.ezQqqw{flex-direction:column;min-height:320px;}
+}
+@media (max-width: 480px){
+.ezQqqw{max-width:320px;min-height:320px;}
+}
+.chyPnR{text-align:center;padding:20px;flex-direction:column;font-size:18px;color:black;}
+@media (max-width: 780px){
+.chyPnR{font-size:16px;}
+}
+@media (max-width: 480px){
+.chyPnR{font-size:16px;margin-left:0px;margin-right:0px;text-align:center;-webkit-box-align:center;align-items:center;}
+}
+.khraDZ{margin-bottom:20px;font-weight:900;font-size:30px;text-align:center;width:100%;}
+@media (max-width: 780px){
+.khraDZ{font-size:18px;margin:20px 0px;}
+}
+@media (max-width: 780px){
+.fHmFtR{margin-right:0px;margin-top:0px;}
+}
+@media (max-width: 480px){
+.fHmFtR{max-width:280px;}
+}
+.fSMDND{height:160px;}
+.dJyfUX{display:flex;flex-wrap:wrap;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:100%;max-width:1024px;padding:0px 40px;}
+@media (max-width: 480px){
+.dJyfUX{padding:0px 20px;margin-top:50px;}
+}
+.cXWxVP{display:flex;color:rgb(75, 73, 255);transition:all 0.2s ease 0s;font-size:20px;font-weight:700;margin-bottom:30px;border:2px solid rgb(75, 73, 255);border-radius:16px;cursor:pointer;}
+.cXWxVP:hover{color:white;background:rgb(75, 73, 255);border-color:transparent;}
+.cXWxVP:hover > div{border-color:white;}
+.cXWxVP div{margin-right:7px;}
+.cXWxVP svg{margin:2px 0px;}
+@media (max-width: 730px){
+.cXWxVP{display:none;}
+}
+.fZkWMM{border-right:2px solid rgb(75, 73, 255);height:45px;padding:8px 20px;}
+.gSIeam{height:45px;padding:10px;}
+img{max-width:100%;}
+</style>
+
 <main class="content">
 
     <section class="course-hero-enrolled content__container--full-width">
@@ -649,7 +759,7 @@ button.btn{border:none;}
                                 </div>
                                 @else
                                 <div class="course-hero-unenrolled__cta" data-gtm-tag="start-course sign-in">
-                                    <a class="btn btn--primary" enroll-link="">Commencer le cours</a>
+                                    <a href="#program" class="btn btn--primary" enroll-link="">Continuez la spécialsation</a>
                                 </div>
                                 @endif
 
@@ -710,19 +820,79 @@ button.btn{border:none;}
     </section>
 
 
-    <h2 class="course-detail__section__title">Projets ({{count($course->projects)}})</h2>
+    <div style="margin: 70px -92px;" class="PlatformFeatures-jd5lu4-0 kuwfjR">
+        <div class="PlatformFeatures__CurvedSection-jd5lu4-1 kGjzhd"><svg viewBox="0 0 1000 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path d="M 0,108 L 1100,108 C 1000.17569,36 891.509022,3.42382372e-14 774,3.42382372e-14 C 597.736468,3.42382372e-14 445.360536,71.09 275.96831,71.09 C 106.576083,71.09 106.576083,1.28896893e-13 0,0 C 0,72 0,108 0,108 Z"
+                      fill="#E7E9FE"></path>
+                </g>
+            </svg></div>
+        <div class="PlatformFeatures__Content-jd5lu4-13 dJyfUX">
+            <div class="PlatformFeatures__Section-jd5lu4-3 ezQqqw">
+                <div class="PlatformFeatures__SectionImage-jd5lu4-9 fHmFtR">
+                    <div class="PlatformFeatures__Image-jd5lu4-11 fSMDND"><img src="https://www.educative.io/static/media/bookImage.17e76a33.svg" loading="lazy" alt="Better than videos" class="features" width="275px" height="246px"></div>
+                </div>
+                <div class="PlatformFeatures__SectionText-jd5lu4-4 chyPnR">
+                    <div class="PlatformFeatures__SectionHeading-jd5lu4-7 khraDZ">Suivez bien les cours</div>
+                    <div class="PlatformFeatures__Description-jd5lu4-10 iQZnPq">Il est obligatoire de suivre tous les cours de cette spécialisation
+                        pour réaliser le(s) projet(s).
+                    </div>
+                </div>
+            </div>
+            <div class="PlatformFeatures__Section-jd5lu4-3 ezQqqw">
+                <div class="PlatformFeatures__SectionImage-jd5lu4-9 fHmFtR">
+                    <div class="PlatformFeatures__Image-jd5lu4-11 fSMDND"><img src="https://www.educative.io/static/media/codeImage.3f6b0977.svg" loading="lazy" alt="Slick coding environments" class="features" width="275px" height="252px"></div>
+                </div>
+                <div class="PlatformFeatures__SectionText-jd5lu4-4 chyPnR">
+                    <div class="PlatformFeatures__SectionHeading-jd5lu4-7 khraDZ">Faites les exercices et beaucoup de recherches</div>
+                    <div class="PlatformFeatures__Description-jd5lu4-10 iQZnPq">
+                        Les cours sont jonchés d'exercice et ressources spécialement conçues
+                        pour vous aider à réaliser les projets. En plus de tout cela,
+                        servez vous beaucoup de Google et de la communauté Oschool pour résoudre vos problèmes.
+                        Pensez à faire vos recherches en anglais.
+                    </div>
+                </div>
+            </div>
+            <div class="PlatformFeatures__Section-jd5lu4-3 ezQqqw">
+                <div class="PlatformFeatures__SectionImage-jd5lu4-9 fHmFtR">
+                    <div class="PlatformFeatures__Image-jd5lu4-11 fSMDND"><img src="https://www.educative.io/static/media/setupImage.8e246fdf.svg" loading="lazy" alt="No set-up required" class="features" width="250px" height="308px"></div>
+                </div>
+                <div class="PlatformFeatures__SectionText-jd5lu4-4 chyPnR">
+                    <div class="PlatformFeatures__SectionHeading-jd5lu4-7 khraDZ">Correction des travaux</div>
+                    <div class="PlatformFeatures__Description-jd5lu4-10 iQZnPq">
+                        Après chaque projet soumis, nous évaluerons vos travaux et vous
+                        serez notifié lorsque l'évaluation sera disponible.
+                    </div>
+                </div>
+            </div>
+            <div class="PlatformFeatures__Section-jd5lu4-3 ezQqqw">
+                <div class="PlatformFeatures__SectionImage-jd5lu4-9 fHmFtR">
+                    <div class="PlatformFeatures__Image-jd5lu4-11 fSMDND"><img src="https://www.educative.io/static/media/tracksImage.a01b14ea.svg" loading="lazy" alt="Learning tracks" class="features" width="265px" height="248px"></div>
+                </div>
+                <div class="PlatformFeatures__SectionText-jd5lu4-4 chyPnR">
+                    <div class="PlatformFeatures__SectionHeading-jd5lu4-7 khraDZ">Certificats</div>
+                    <div class="PlatformFeatures__Description-jd5lu4-10 iQZnPq">
+                        Vos certificats sont téléchargeables ou partageables sur LinkedIn.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <h2 class="course-detail__section__title">Programme ({{count($course->projects)}} projets)</h2>
 
 
     <myg-accordion class="myg-accordion js-accordion course-detail__module-accordion ng-isolate-scope" selected-item-id="'module-section-1'" scroll-to-selected-item="false" item-active-class="myg-accordion__item--active" item-delay-on-open="300"
       open-multiple-panels="true" label-aria-opened="'Libellé aria pour le panneau en accordéon fermé'" label-aria-closed="'Libellé aria pour le panneau en accordéon fermé'">
 
       @foreach($course->projects as $project)
-        <div class="myg-accordion__item js-accordion-item " id="module-section-1">
+        <div id="program" class="myg-accordion__item js-accordion-item " id="module-section-1">
             <div class="myg-accordion__header js-accordion-title" tabindex="0">
                 <h4 class="myg-accordion__title heading--h3">
-                    <a href="/path/{{$course->slug}}/projects/{{$project->slug}}">
-                        {{$project->title}}
-                    </a>
+                        Module {{$loop->index + 1}}&nbsp;
+                        <strong>({{count($project->resources)}} cours à suivre)</strong>
                 </h4>
                 <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
                 <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>
@@ -732,13 +902,13 @@ button.btn{border:none;}
 
 
 
-                    @foreach($project->resources as $resource)
+                    @foreach($project->resources->sortBy('position') as $resource)
 
-                    <a href="{{$resource->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
+                    <a target="_blank" href="{{$resource->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
                         <div class="module-progress-card__icon">
                             <img src="/images/divers/resource_icon.png" alt="{{$resource->title}}">
                         </div>
-                        <h4 class="module-progress-card__title">{{$resource->title}}</h4>
+                        <h4 class="module-progress-card__title">Cours {{$loop->index + 1}}: {{$resource->title}}</h4>
                         <!--
                         <p class="module-progress-card__duration">
                             <i class="material-icons">access_time</i><span>15&nbsp;min</span>
@@ -750,13 +920,82 @@ button.btn{border:none;}
                             </span>
                         </div>
                     -->
+                        <!--checker si l'utilsateur a fini de suivre les cours-->
+                        @auth
+                        @if(count(Auth::user()->courses->where('name', $resource->title)) > 0)
+                        @foreach(Auth::user()->courses->where('name', $resource->title) as $course_oschool)
+                        @if(count(Auth::user()->lessons->where('course_id', $course_oschool->id)) == count($course_oschool->lessons))
+                        <div class="module-progress-card__cta">
+                            <i style="background: green; border-radius: 50%; color: white;" class="material-icons">done</i>
+                        </div>
+                        @else
                         <div class="module-progress-card__cta">
                             <i class="material-icons">arrow_forward</i>
                         </div>
+                        @endif
+                        @endforeach
+                        @endif
+                        @endauth
 
                     </a>
 
                     @endforeach
+
+                    <section class="flex flex-wrap md:flex-no-wrap items-center bg-grey-darker text-white rounded-lg p-2 md:p-3 mt-0 mb-6 md:my-6">
+                        <div class="flex-initial w-32 md:w-48 p-3 rounded md:rounded-lg">
+                            <div class="coverWrapper rounded md:rounded-lg">
+                                <div class="cover rounded md:rounded-lg" style="background-image: url(&quot;https://i.pinimg.com/originals/fd/cf/00/fdcf00ceb5aca780e9521ea64e863f6d.jpg&quot;);"></div>
+                            </div>
+                        </div>
+                        <div class="flex-grow p-3">
+
+                            <div class="text-base md:text-2xl font-bold my-2">
+                                Projet à faire: {{$project->title}}
+                            </div>
+                        </div>
+                        @auth
+                        @php
+                        //on définit une variable nombre_de_cours_finis
+                        $nombre_de_cours_finis = 0;
+                        //pour chaque ressource, on trouve le cours associé
+                            foreach ($project->resources as $resource) {
+                                //si user a finit ce cours on itère nombre_de_cours_finis à 1
+                                if (count(Auth::user()->courses->where('name', $resource->title)) > 0) {
+                                    foreach (Auth::user()->courses->where('name', $resource->title) as $course_db) {
+                                        if (count(Auth::user()->lessons->where('course_id', $course_db->id)) == count($course_db->lessons)) {
+                                            $nombre_de_cours_finis += 1;
+                                        }
+                                    }
+                                }
+                            }
+
+                            //si nombre_de_cours_finis est égal au nombre de ressources du projet
+                            if ($nombre_de_cours_finis == count($project->resources)) {
+                                //on définit une variable do_project à yes
+                                $do_project = 'yes';
+                            }
+                            else {
+                                //sinon on définit une variable do_project à no
+                                $do_project = 'no';
+                            }
+                        @endphp
+
+                        @if($do_project == 'yes')
+                        <div class="flex-initial p-3 w-full md:w-auto">
+                            <a style="font-size: 1.5rem;" target="_blank" href="/path/{{$course->slug}}/projects/{{$project->slug}}" class="button button--primary w-full" style="width: max-content;">
+                                Voir
+                            </a>
+                        </div>
+                        @else
+                        <div class="flex-initial p-3 w-full md:w-auto">
+                            <a style="font-size: 1.5rem;" target="_blank" class="button button--primary w-full" style="width: max-content;">
+                                Terminer le(s) cours ci-dessus pour faire le projet
+                            </a>
+                        </div>
+                        @endif
+
+                        @endauth
+                    </section>
 
                 </div>
             </div>

@@ -616,6 +616,33 @@ $('#createLecture').on('click', function() {
 });
 
 
+//changer le titre d'une lecon automatiquement après modification de l'input
+$("input[name=title]").on("change", function() {
+
+var dataImage = new FormData();
+dataImage.append('_token', '{{csrf_token()}}');
+dataImage.append('school_id', $("input[name=school_id]").val());
+dataImage.append('course_id', $("input[name=course_id]").val());
+dataImage.append('section_id', $("input[name=section_id]").val());
+dataImage.append('lesson_id', $("input[name=lesson_id]").val());
+dataImage.append('title', $("input[name=title]").val());
+
+$.ajax({
+    type: 'post',
+    url: '/updateLectureTitle',
+    contentType: false,
+    processData: false,
+    data: dataImage,
+    success: function(data) {
+        $.amaran({'message':"Le titre de la leçon a bien été modifié !"});
+    },
+    error: function (xhr, msg) {
+      console.log(msg + '\n' + xhr.responseText);
+  }
+});
+
+});
+
 
 //mettre à jour une lecon
 $('#updateLecture').on('click', function() {
@@ -1225,6 +1252,34 @@ console.log(JSON.stringify(positions));
   $('.multiple-choice').on('click', '.answer-remove', function(e) {
     e.preventDefault();
       $(this).parents('.reponses').remove();
+  });
+
+
+
+  //changer le titre du projet automatiquement après modification de l'input
+  $("#projectTitle").on("change", function() {
+
+  var dataImage = new FormData();
+  dataImage.append('_token', '{{csrf_token()}}');
+  dataImage.append('school_id', $("input[name=school_id]").val());
+  dataImage.append('course_id', $("input[name=course_id]").val());
+  dataImage.append('project_id', $("input[name=project_id]").val());
+  dataImage.append('title', $("input[name=title]").val());
+
+  $.ajax({
+      type: 'post',
+      url: '/updateProjectTitle',
+      contentType: false,
+      processData: false,
+      data: dataImage,
+      success: function(data) {
+          $.amaran({'message':"Le titre du projet a bien été modifié !"});
+      },
+      error: function (xhr, msg) {
+        console.log(msg + '\n' + xhr.responseText);
+    }
+  });
+
   });
 
 

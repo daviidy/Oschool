@@ -1218,7 +1218,7 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
                         <form class="form-inline editable-wrap editable-text ng-pristine ng-valid fastclickable" role="form" ng-click="$event.stopPropagation();" editable-form="$form" blur="cancel">
                             @csrf
                             <div class="editable-controls form-group" ng-class="{'has-error': $error}">
-                                <input value="{{$project->title}}" placeholder="Titre du projet" name="title" type="text" class="editable-has-buttons editable-input form-control input-sm ng-pristine ng-valid ng-not-empty ng-touched" ng-model="$data"
+                                <input id="projectTitle" value="{{$project->title}}" placeholder="Titre du projet" name="title" type="text" class="editable-has-buttons editable-input form-control input-sm ng-pristine ng-valid ng-not-empty ng-touched" ng-model="$data"
                                   style="">
                                   <input style="display: none;" type="text" name="school_id" value="{{$school->id}}">
                                   <input style="display: none;" type="text" name="course_id" value="{{$course->id}}">

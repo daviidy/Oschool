@@ -265,23 +265,23 @@ header,svg{display:none;}
                     <div class="col col-50-lg">
                         <div class="hero-title">
                             <h1 class="text-color-white text-1-lg m-t-0-xs">
-                                Quelle est votre résolution pour 2020 ?
+                                Explorez nos écoles et trouvez le parfait programme pour votre carrière
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                A Oschool, on vous propose encore mieux: un programme.
-                                Commencez à apprendre à partir de 15 000 FCFA.
-                                Cette promotion finit le 9 janvier.
+                                A Oschool, apprenez les compétences le splus
+                                recherchées par les entreprises, construisez des projets incroyables
+                                et donnez vie à votre métier de rêve.
                             </h2>
                         </div>
                     </div>
                     <div class="col col-50-lg m-t-2-xs m-t-0-lg">
 
 
-                        <div class="form-card m-b-0-xs homepage2018">
+                        <div style="text-align: center;" class="form-card m-b-0-xs homepage2018">
                             <p class="trial-banner bg-gray-light text-color-dark">
                                 Commencez dès maintenant <span class="regular">et sans engagement</span>
                             </p>
-                            <img style="border-radius: 8px;box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);width:100%;" src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                            <img style="border-radius: 8px;/*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/width:63%;" src="/images/divers/courses.png" alt="">
                             <!--
                             <form class="new_account_signup" id="signupForm" data-featurette="Treehouse.SimpleSignupForm" action="/subscribe/register_free_trial" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"
                                   class="placeholder-processed"><input type="hidden" name="authenticity_token" value="6/X13Mh0nk1E+2Xscuq2IhcwJKqhoKgnQS7cfvJrrUwWyNHIzUawYe432n3ljIQzP6hWDrQK9+RAYVO1EvC3Ww==" class="placeholder-processed">

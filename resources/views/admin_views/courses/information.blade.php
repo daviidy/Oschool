@@ -498,7 +498,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 </h2>
             </div>
             <div class="tch-section-content tch-thumbnail-link-wrapper col-lg-3 col-md-5 col-sm-5 col-xs-5">
-              @if($course->type == 'course')
+              @if($course->type == 'mooc')
               <a ng-click="cancel()" href="{{ route('course.slug', $course->slug) }}" target="_blank" id="test-id-preview-sales-page"
                   class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-visitor.jpg"><i class="fa fa-external-link"></i><br><strong>Page de vente&nbsp;</strong>
                     <div class="muted">en tant que visiteur</div>
@@ -511,7 +511,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                   </a>
                     @endif
             </div>
-            @if($course->type == 'course')
+            @if($course->type == 'mooc')
             <div class="tch-section-content tch-thumbnail-link-wrapper col-lg-3 col-md-5 col-sm-5 col-xs-5 shift-right">
               <a ng-click="cancel()" href="/course/enrolled/{{$course->slug}}" target="_blank" id="test-id-preview-curriculum-btn"
                   class="tch-thumbnail-link text-center fastclickable"><img src="/images/courses/preview-as-enrolled-student.jpg"><i class="fa fa-external-link"></i>
@@ -795,7 +795,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 <div ng-transclude="">
                                     <select name="type"
                                       class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-api-validate">
-                                        <option {{$course->type == 'course' ? 'selected' : ''}} value="course" selected>Cours</option>
+                                        <option {{$course->type == 'mooc' ? 'selected' : ''}} value="mooc" selected>Cours</option>
                                         <option {{$course->type == 'path' ? 'selected' : ''}} label="" value="path">Parcours</option>
                                         <option {{$course->type == 'bootcamp' ? 'selected' : ''}} label="" value="bootcamp">Bootcamp</option>
                                     </select>

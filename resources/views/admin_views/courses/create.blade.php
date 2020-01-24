@@ -362,7 +362,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             </label-block>
                             <div ng-transclude="">
                                 <select name="type" what="author" ng-model="course.author_bio_id" ng-options="author.id as author.name for author in authors | orderBy:'name'" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
-                                    <option label="" value="course">Cours</option>
+                                    <option label="" value="mooc">Cours</option>
                                     <option label="" value="path">Parcours</option>
                                     <option label="" value="bootcamp">Bootcamp</option>
                                 </select>

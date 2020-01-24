@@ -343,8 +343,8 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                             {{$coupon->value}} %
                         </td>
                         <td>
-                            @foreach($coupon->courses as $course)
-                            {{$course->name}},
+                            @foreach($coupon->courses as $data)
+                            {{$course->data}},
                             @endforeach
                         </td>
                         <td>

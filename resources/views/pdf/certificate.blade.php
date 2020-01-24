@@ -191,16 +191,22 @@ div.cls_011 {
 <body>
 <div style="position:absolute;left:50%;margin-left:-420px;top:26px;width:841px;height:595px;border-style:outset;overflow:hidden">
     <div style="position:absolute;left:0px;top:0px">
-      <img src="http://deviens-developpeur.com/wp-content/uploads/2019/10/certificate.png" width=841 height=595></div>
-    <div style="position:absolute;left: 197.52px;top: 60.11px;" class="cls_002">
-      <span class="cls_002">{{$username}}</span>
-    </div>
-    <div style="position:absolute;left:197.52px;top:199.53px" class="cls_007">
-      <span class="cls_007">a validé et obtenu le certificat :</span>
-    </div>
-    <div style="position:absolute;left:197.52px;top:245.14px;width: 50%;" class="cls_008">
-      <span class="cls_008">{{$course_name}}</span>
-    </div>
+      <img src="{{public_path('images/courses/certificat-oschool.png')}}" width=841 height=595></div>
+      <div style="position:absolute;left: 197.52px;top: 60.11px;" class="cls_002">
+        <span style="font-size: 18px;" class="cls_002">{{$school_name}}</span>
+      </div>
+      <div style="position:absolute;left: 197.52px;top: 148.11px;" class="cls_002">
+        <span class="cls_002">{{$username}}</span>
+      </div>
+      <div style="position:absolute;left:197.52px;top:199.53px" class="cls_007">
+        <span class="cls_007">a validé et obtenu le certificat :</span>
+      </div>
+      <div style="position:absolute;left:197.52px;top:245.14px;width: 50%;" class="cls_008">
+        <span class="cls_008">{{$course_name}}</span>
+      </div>
+      <div style="position:absolute;left:197.52px;top:302.14px;width: 50%;" class="cls_008">
+        <img width="250" src="{{public_path('images/courses/logos/'.$course_logo)}}" alt="">
+      </div>
     <div style="position:absolute;left:558.00px;top:544.31px" class="cls_010">
       <span class="cls_010">Certificat n° {{$certificate_number}} - Délivré le {{$date}}</span>
     </div>

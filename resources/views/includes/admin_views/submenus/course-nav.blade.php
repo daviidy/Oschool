@@ -5,9 +5,13 @@
         {{-- style="background-image: url(/images/courses/logos/{{$course->logo}})" --}}
         <div  class="course-name-placeholder" style="">
             <div class="row">
-                <div ng-bind="course.name" class="placeholder-course-name">{{ str_limit($course->name, $limit = 100, $end = '...')}}</div>
+                <div ng-bind="course.name" class="placeholder-course-name">
+                    {{ str_limit($course->name, $limit = 100, $end = '...')}}
+                    <br>
+                    ({{$course->type}})
+                </div>
             </div>
-            @if($course->type == 'course')
+            @if($course->type == 'mooc')
             <div class="row"><a href="{{ route('course.slug', $course->slug) }}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
             @endif
             @if($course->type == 'path' || $course->type == 'bootcamp')
@@ -44,7 +48,7 @@
         <!---->
     </li>
     <!---->
-    @if($course->type == 'course')
+    @if($course->type == 'mooc')
     <li what="nav item" ui-sref-active="active"
       ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }" text="Curriculum"
       sref="admin.courses.course.curriculum" onboarding-tooltip-if="course.has_published_lecture == false &amp;&amp; course.bundled_courses_count == 0" onboarding-tooltip-text="Create and publish at least one lecture to complete this step" class="">

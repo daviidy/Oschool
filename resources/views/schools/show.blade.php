@@ -108,7 +108,7 @@
           <a id="tab1">Cours</a>
         </li>
         <li class="nav-item nav-link nav-link-2">
-          <a id="tab2">Carrières</a>
+          <a id="tab2">Spécialisations</a>
         </li>
 
         <li class="nav-item nav-link nav-link-2">
@@ -152,7 +152,7 @@
         <div class="row">
           @if(count($school->courses) > 0)
             @foreach($school->courses as $course)
-                @if($course->type == 'course' && $course->state == 'active')
+                @if($course->type == 'mooc' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
               <div class="school-card">

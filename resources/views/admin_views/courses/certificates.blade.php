@@ -108,7 +108,7 @@ a:active,a:focus,a:hover{color:#24292d;}
       </div>
       <div class="navbar">
         <div class="navbar-container">
-          <div class="navbar-leftNavigation"><a href="/course/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon> <span class="navbar-linkText">Retour au cours</span></a>
+          <div class="navbar-leftNavigation"><a href="/course/enrolled/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon> <span class="navbar-linkText">Retour au cours</span></a>
           </div>
           <div class="navbar-title">
             Certificat pour le cours {{$course->name}}
@@ -130,9 +130,9 @@ a:active,a:focus,a:hover{color:#24292d;}
         <div _ngcontent-sc24="" class="contain contain--small ng-star-inserted">
             <div _ngcontent-sc24="" class="promo-banner">
                 <div _ngcontent-sc24="" class="promo-banner__image desktop-image"
-                  style="background-image:url(//images.ctfassets.net/2y9b3o528xhq/1ZS3OPXIw5zDis6UAxkk2s/178a00db8c5a5eeec66eca016e1e3a97/smiling_man_wearing_headset.jpg);background-position:right;"></div>
+                  style="background-image:url(/images/divers/dev-web1.png);background-position:center;"></div>
                 <div _ngcontent-sc24="" class="promo-banner__image mobile-image"
-                  style="background-image:url(//images.ctfassets.net/2y9b3o528xhq/1jcJQeEKO3e2XrXoSwdB23/f73309ca736a06be43a1c529ed3c7eef/smiling_man_wearing_headset__mobile.jpg);background-position:right;"></div>
+                  style="background-image:url(/images/divers/dev-web1.png);background-position:center;"></div>
                   @if(count(Auth::user()->lessons->where('course_id', $course->id)) == count($course->lessons))
                 <div _ngcontent-sc24="" class="promo-banner__content">
                     <div _ngcontent-sc24="" class="promo-banner__flag uppercase white"></div>
@@ -160,7 +160,7 @@ a:active,a:focus,a:hover{color:#24292d;}
                           Télécharger
                       </a>
                       @else
-                      <a href="#" _ngcontent-sc24="" class="button btn sm button--white">
+                      <a href="/course/enrolled/{{$course->slug}}" _ngcontent-sc24="" class="button btn sm button--white">
                           Revenir au cours
                       </a>
                       @endif

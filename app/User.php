@@ -164,7 +164,10 @@ class User extends Authenticatable implements MustVerifyEmail
          $user->purchases()->delete();
          $user->results()->delete();
          $user->answers()->delete();
-         $user->schools()->delete();
+         foreach ($user->createSchools as $school) {
+             $school->authors()->delete();
+             $school->delete();
+         }
 
          // do the rest of the cleanup...
     });

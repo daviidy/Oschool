@@ -707,6 +707,18 @@ button,html [type=button]{-webkit-appearance:button;}
 .container__2pOQhMH63ZlM4TpcZhwliA{position:relative;}
 .content__19X6PISinqrnIPYq7yW9O-{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;padding:4rem 0;}
 
+
+</style>
+
+<!--images des descriptions-->
+<style media="screen">
+@media only screen and (max-width: 600px) {
+    .img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 </style>
 
 <main class="content">
@@ -881,23 +893,37 @@ button,html [type=button]{-webkit-appearance:button;}
                 <h2 class="how-it-works__title">Fonctionnement</h2>
                 <div class="how-it-works__boxes">
                     <div class="how-it-works__boxes__box">
-                        <h3 class="how-it-works__boxes__box__title">Validez les {{count($course->projects)}}&nbsp;projets de ce parcours</h3>
-                        <p class="how-it-works__boxes__box__description">Ce sont des projets professionnalisatns qui vous aideront à acquérir un bloc de compétences précis</p>
+                        <h3 class="how-it-works__boxes__box__title">Suivez les cours</h3>
+                        <p class="how-it-works__boxes__box__description">
+                            Une Spécialisation Oschool est une série de cours axés sur la maîtrise d'une compétence.
+                            Pour commencer, inscrivez-vous directement à la Spécialisation ou passez en revue ses cours
+                            et choisissez celui par lequel vous souhaitez commencer. Il est possible de terminer seulement
+                            un cours : vous pouvez suspendre votre formation ou résilier votre abonnement à tout moment.
+                            Rendez-vous sur votre tableau de bord d'étudiant pour suivre vos inscriptions aux cours et vos progrès.
+                        </p>
                     </div>
                     <div class="how-it-works__boxes__box">
-                        <h3 class="how-it-works__boxes__box__title">Passez l'examen final</h3>
-                        <p class="how-it-works__boxes__box__description">Réalisez le dernier projet de ce parcours, qui reprendra tout ce que vous aurez appris depuis le début.</p>
+                        <h3 class="how-it-works__boxes__box__title">Réalisez les {{count($course->projects)}} projets pratiques de cette spécialisation</h3>
+                        <p class="how-it-works__boxes__box__description">
+                            Chaque module est sanctionné par des projets de la vie réelle qui vpous permettront d'appliquer ce que vous arez appris et de monter rapidement en compétences.
+                            Vous devez réussir le(s) projet(s) pour terminer
+                            la Spécialisation et obtenir votre Certificat. Des cours sont mis à votre disposition, pour vous aider à réaliser les projets.
+                            Vous devrez obligatoirement terminer le(s) cours avant d'entamer le projet.
+                        </p>
                     </div>
                     <div class="how-it-works__boxes__box">
                         <h3 class="how-it-works__boxes__box__title">Partagez votre certificat</h3>
-                        <p class="how-it-works__boxes__box__description">Téléchargez et mettez en avant votre nouvelle qualification sur LinkedIn et votre CV.</p>
+                        <p class="how-it-works__boxes__box__description">
+                            Téléchargez et mettez en avant votre nouvelle qualification sur LinkedIn et votre CV.
+                            Ou vous pouvez le partager avec des employeurs éventuels et votre réseau professionnel.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container__2pOQhMH63ZlM4TpcZhwliA">
+    <div style="margin-bottom: 6rem;" class="container__2pOQhMH63ZlM4TpcZhwliA">
 
     <div class="contentContainer__3rYV5hCbkX8Z5A1gQ1uzq4">
         <div class="content__19X6PISinqrnIPYq7yW9O-">

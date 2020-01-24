@@ -225,9 +225,10 @@ class LessonController extends Controller
     {
         $data = Lesson::find($request->lesson_id);
         $data->update($request->all());
-
+        /*
           $slug = new SlugLesson();
           $data->slug = $slug->createSlug($request->title);
+          */
           $data->save();
 
           if ($request->hasFile('downloadable_files') ) {
@@ -255,6 +256,22 @@ class LessonController extends Controller
 
         return response()->json($data);
     }
+
+
+    //update lesson title
+    public function updateTitle(Request $request, Lesson $lesson)
+    {
+        $data = Lesson::find($request->lesson_id);
+         $slug = new SlugLesson();
+         $data->title = $request->title;
+         $data->slug = $slug->createSlug($request->title);
+         $data->save();
+
+
+        return response()->json($data);
+    }
+
+
 
     public function saveNewPositions(Request $request)
     {

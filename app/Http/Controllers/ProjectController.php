@@ -96,8 +96,10 @@ class ProjectController extends Controller
         $data = Project::find($request->project_id);
         $data->update($request->all());
 
+        /*
           $slug = new SlugProject();
           $data->slug = $slug->createSlug($request->title);
+          */
           $data->save();
 
 
@@ -112,6 +114,22 @@ class ProjectController extends Controller
 
         return response()->json($data);
     }
+
+    //update project title
+    public function updateTitle(Request $request, Project $project)
+    {
+        $data = Project::find($request->project_id);
+         $slug = new SlugProject();
+         $data->title = $request->title;
+         $data->slug = $slug->createSlug($request->title);
+         $data->save();
+
+
+        return response()->json($data);
+    }
+
+
+
 
     /**
      * Remove the specified resource from storage.

@@ -105,7 +105,7 @@ class CourseController extends Controller
     {
         $course = Course::where('slug', $slug)->firstOrFail();
 
-        if ($course->type == 'course') {
+        if ($course->type == 'mooc') {
             return view('courses.show', ['course' => $course]);
         }
         elseif ($course->type == 'path' || $course->type == 'bootcamp') {
@@ -290,7 +290,7 @@ class CourseController extends Controller
      public function curriculum(School $school, Course $course)
      {
          if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
-             if ($course->type == "course") {
+             if ($course->type == "mooc") {
                  return view('admin_views.courses.curriculum', ['school' => $school, 'course' => $course]);
              }
              elseif ($course->type == "path" || $course->type == "bootcamp") {
@@ -385,6 +385,8 @@ class CourseController extends Controller
                          'course_name' => $course->name,
                          'certificate_number' => $certificate->number,
                          'date' => $certificate->date,
+                         'school_name' => $course->school->name,
+                         'course_logo' => $course->logo,
                      ];
 
                      /*
@@ -392,6 +394,7 @@ class CourseController extends Controller
                      $pdf = PDF::loadHTML($html);
                      return $pdf->stream();
                       */
+                     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'helvetica']);
                      $pdf = PDF::loadView('pdf.certificate', $data);
                      $pdf->setPaper('A4', 'landscape');
                      return $pdf->download('certificat_'.$course->name.'_oschool.pdf');
@@ -412,9 +415,12 @@ class CourseController extends Controller
                          'course_name' => $course->name,
                          'certificate_number' => $certificate->number,
                          'date' => $certificate->date,
+                         'school_name' => $course->school->name,
+                         'course_logo' => $course->logo,
 
                      ];
 
+                     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'helvetica']);
                      $pdf = PDF::loadView('pdf.certificate', $data);
                      return $pdf->download('certificat_'.$course->name.'_oschool.pdf');
                  }
