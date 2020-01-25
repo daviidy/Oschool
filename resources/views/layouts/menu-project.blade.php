@@ -2,6 +2,32 @@
   class="icon-events-icons-ready icon-events-typefaces-gilroy-ready icon-events-typefaces-gilroy-normal-normal-ready icon-events-typefaces-gilroy-500-normal-ready icon-events-typefaces-open-sans-ready icon-events-typefaces-open-sans-700-normal-ready icon-events-typefaces-open-sans-400-italic-ready icon-events-typefaces-open-sans-400-normal-ready icon-events-typefaces-gilroy-600-normal-ready icon-events-typefaces-gilroy-bold-normal-ready">
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PDKHLDR');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '363403814223522');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+  <img height="1" width="1"
+  src="https://www.facebook.com/tr?id=363403814223522&ev=PageView
+  &noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
 
@@ -107,6 +133,11 @@ ion-icon.hydrated.md {
 <body id="body" class="page page--light"
   data-bearer="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJodHRwczovL2hvbWUubWluZHZhbGxleS5jb20vbG9naW5Qcm92aWRlciI6ImF1dGgwIiwibmFtZSI6IkRhdmlkIiwiZW1haWwiOiJ5YW9kYXZpZGFybWVsQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovL2xvZ2luLm1pbmR2YWxsZXkuY29tLyIsInN1YiI6ImF1dGgwfDUyMjE0OTUiLCJhdWQiOiJLUmFGbUNla3RBdFhSNnNkMmd1bVdWRlFhNkFuWG53RiIsImlhdCI6MTU3MTkzODQ0OSwiZXhwIjoxNTczMTQ4MDQ5fQ.SPtNAb3AHG7i_7d8pEWpfZsQ2oZNEiUULKzMThWIfsw"
   cz-shortcut-listen="true">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDKHLDR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 
   <div id="app">
     <div>
