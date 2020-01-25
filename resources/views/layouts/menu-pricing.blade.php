@@ -69,6 +69,8 @@
   <meta name="og:image" content="/images/divers/money.png"/>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+<!--pour le footer-->
+
   <style media="screen">
   /*! CSS Used from: http://localhost:8000/css/school_homepage.css */
 @media all{
