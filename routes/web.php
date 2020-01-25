@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+
 Route::get('/wecash', function () {
     return view('pricings.wecash');
 });
