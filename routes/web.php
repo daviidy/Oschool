@@ -35,6 +35,7 @@ Route::post('/login/user', 'CustomAuthController@loginUser');
 
 Route::get('/users/billings', 'UserController@billings');
 
+Route::get('/schools/{school}/courses', 'schoolController@showCourses');
 
 
 Route::get('/users/settings', 'UserController@edit');

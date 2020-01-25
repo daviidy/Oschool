@@ -145,7 +145,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <li class="dropdown">
               <a aria-expanded="false" aria-haspopup="true" class="fedora-navbar-link navbar-link dropdown-toggle open-my-profile-dropdown" data-toggle="dropdown">
-                <img class="gravatar" src="/images/users/default/{{Auth::user()->image}}" alt="yaodavidarmel@gmail.com">
+                <img class="gravatar" src="/images/users/default/{{Auth::user()->image}}" >
                 <span class="navbar-current-user">{{Auth::user()->name}}</span>
               </a>
               <ul class="dropdown-menu">

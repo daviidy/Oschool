@@ -70,6 +70,12 @@ class SchoolController extends Controller
     }
 
 
+    public function showCourses(School $school)
+    {
+        return view('schools.showCourses', ['school' => $school]);
+    }
+
+
     /**
      * [showForAdmin description]
      * @param  School $school [description]
