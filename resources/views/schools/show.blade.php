@@ -248,13 +248,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
         </div>
         <div class="row">
           @if(count($school->courses) > 0)
-          @php
-          $count = 0;
-          @endphp
             @foreach($school->courses as $course)
-            @php
-            if($count == 6) break;
-            @endphp
                 @if($course->type == 'mooc' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
@@ -270,11 +264,9 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             </a>
           </div>
             @endif
-
-            @php
-            $count++;
-            @endphp
-
+            @if($loop->iteration == 6)
+            @break
+            @endif
           @endforeach
           @else
           <div class="row">
@@ -341,13 +333,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
         </div>
         <div class="row">
           @if(count($school->courses) > 0)
-              @php
-              $count2 = 0;
-              @endphp
             @foreach($school->courses as $course)
-            @php
-            if($count2 == 6) break;
-            @endphp
                 @if($course->type == 'path' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('path.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
@@ -363,10 +349,6 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             </a>
           </div>
             @endif
-
-            @php
-            $count2++;
-            @endphp
 
           @endforeach
           @else
@@ -434,13 +416,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
         </div>
         <div class="row">
           @if(count($school->courses) > 0)
-           @php
-           $count3 = 0;
-           @endphp
             @foreach($school->courses as $course)
-                  @php
-                  if($count3 == 6) break;
-                  @endphp
                 @if($course->type == 'bootcamp' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('path.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
@@ -456,10 +432,6 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
             </a>
           </div>
             @endif
-
-            @php
-            $count3++;
-            @endphp
 
           @endforeach
           @else
