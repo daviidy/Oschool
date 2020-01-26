@@ -165,7 +165,7 @@
 <div id="tabs" class="border-bottom">
     <ul class="nav-container nav-container_1570">
         <li class="nav-item nav-link nav-link-1">
-          <a id="tab1">Cours</a>
+          <a id="tab1">MOOC</a>
         </li>
         <li class="nav-item nav-link nav-link-2">
           <a id="tab2">Spécialisations</a>
@@ -204,7 +204,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h1 style="margin-top: 2rem;" class="default-header">Les cours de {{$school->name}}</h1>
+            <h1 style="margin-top: 2rem;" class="default-header">Les MOOC de {{$school->name}}</h1>
             <p class="default-paragraph">Toutes ces formations sont professionnalisantes et font partie des meilleures sur le marché</p>
 
           </div>
@@ -289,7 +289,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h1 style="margin-top: 2rem;" class="default-header">Les formations diplômantes de {{$school->name}}</h1>
+            <h1 style="margin-top: 2rem;" class="default-header">Les Spécialisations de {{$school->name}}</h1>
             <p class="default-paragraph">Toutes ces formations sont professionnalisantes et font partie des meilleures sur le marché</p>
 
           </div>

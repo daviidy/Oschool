@@ -128,7 +128,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </style>
       <div class="container">
         <div class="row">
-          <a class="create-course" href="{{route('login')}}">Salle de classe</a>
+          @guest
+          <a class="create-course" href="{{route('login')}}">Connectez-vous</a>
+          @endguest
+          @auth
+          <a class="create-course" href="{{route('login')}}">Ma salle de classe</a>
+          @endauth
           <a class="teachable-logo" href="/" title="Teachable - Create a Course"><img src="/images/schools/logos/logo_oschool_blanc.png" alt="" style="width: 130px;"></a>
           <!--a class="log-in" href="/login?src=nav">Entreprises</a-->
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -138,7 +143,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </button>
           <div class="navbar-collapse collapse">
             <ul>
-              <li class="dropdown-only"><a href="{{route('login')}}">Salle de classe</a></li>
+              @guest
+              <li class="dropdown-only"><a href="{{route('login')}}">Tableau de bord</a></li>
+              @endguest
+              @auth
+              <li class="dropdown-only"><a href="{{route('login')}}">Ma salle de classe</a></li>
+              @endauth
               <!--li class="dropdown-only"><a href="/login?src=nav">Entreprises</a></li-->
               <li><a href="{{url('schools')}}">Nos écoles</a></li>
               <!--li><a href="https://events.oschoolelearning.com">Evénements</a></li-->
