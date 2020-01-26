@@ -9,20 +9,81 @@
 
 
 
-/*! CSS Used from: https://oschool.ci/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.8.3 ; media=all */
+/*! CSS Used from: http://localhost:8000/css/school_homepage.css */
+@media all{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+*:focus{outline:none;}
+a,a:hover{color:inherit;text-decoration:inherit;}
+a:focus{color:inherit;text-decoration:none;}
+body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
+}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+@media print{
+*,:after,:before{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;}
+}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:focus{outline:none;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
+}
+*,:after,:before{box-sizing:border-box;}
+@media screen{
+span{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+body *{box-sizing:border-box;}
+}
+@media screen{
+span{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+body *{box-sizing:border-box;}
+}
+@media all{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+*:focus{outline:none;}
+a,a:hover{color:inherit;text-decoration:inherit;}
+a:focus{color:inherit;text-decoration:none;}
+body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
+}
+/*! CSS Used from: Embedded ; media=screen */
+@media screen{
 @media all{
 .elementor-animation-grow{transition-duration:.3s;transition-property:transform;}
 .elementor-animation-grow:active,.elementor-animation-grow:focus,.elementor-animation-grow:hover{transform:scale(1.1);}
 }
-/*! CSS Used from: https://oschool.ci/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.8.3 ; media=all */
 @media all{
-.elementor *,.elementor :after,.elementor :before{-webkit-box-sizing:border-box;box-sizing:border-box;}
-.elementor a{-webkit-box-shadow:none;box-shadow:none;text-decoration:none;}
-.elementor-align-center{text-align:center;}
 .elementor-align-center .elementor-button{width:auto;}
-.elementor-widget-wrap>.elementor-element{width:100%;}
-.elementor-widget{position:relative;}
-.elementor-element .elementor-widget-container{-webkit-transition:background .3s,border .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;transition:background .3s,border .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;-o-transition:background .3s,border .3s,border-radius .3s,box-shadow .3s;transition:background .3s,border .3s,border-radius .3s,box-shadow .3s;transition:background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;}
 .elementor-button{display:inline-block;line-height:1;background-color:#818a91;color:#fff;fill:#fff;text-align:center;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;}
 .elementor-button:focus,.elementor-button:hover,.elementor-button:visited{color:#fff;}
 .elementor-button-content-wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
@@ -33,33 +94,9 @@
 .elementor-button span{text-decoration:inherit;}
 .elementor-element.elementor-button-info .elementor-button{background-color:#4D90CC;}
 }
-/*! CSS Used from: https://oschool.ci/wp-content/uploads/elementor/css/global.css?ver=1579279829 ; media=all */
 @media all{
 .elementor-widget-button a.elementor-button,.elementor-widget-button .elementor-button{font-weight:500;background-color:#61ce70;}
 }
-/*! CSS Used from: https://oschool.ci/wp-content/uploads/elementor/css/post-18075.css?ver=1579282321 ; media=all */
-@media all{
-.elementor-18075 .elementor-element.elementor-element-6ead36da .elementor-button .elementor-align-icon-left{margin-right:9px;}
-.elementor-18075 .elementor-element.elementor-element-6ead36da a.elementor-button,.elementor-18075 .elementor-element.elementor-element-6ead36da .elementor-button{font-family:"Montserrat", Sans-serif;font-size:14px;font-weight:600;letter-spacing:0px;fill:#ffffff;color:#ffffff;background-color:#4C8ECA;border-radius:5px 5px 5px 5px;padding:15px 40px 15px 40px;}
-.elementor-18075 .elementor-element.elementor-element-6ead36da a.elementor-button:hover,.elementor-18075 .elementor-element.elementor-element-6ead36da .elementor-button:hover,.elementor-18075 .elementor-element.elementor-element-6ead36da a.elementor-button:focus,.elementor-18075 .elementor-element.elementor-element-6ead36da .elementor-button:focus{color:#4C8ECA;background-color:#FFFFFF;border-color:#4C8ECA;}
-.elementor-18075 .elementor-element.elementor-element-6ead36da .elementor-button{border-style:double;border-width:1px 1px 1px 1px;}
-.elementor-18075 .elementor-element.elementor-element-6ead36da > .elementor-widget-container{padding:20px 0px 0px 0px;}
-}
-/*! CSS Used from: https://oschool.ci/wp-content/plugins/forget-about-shortcode-buttons/public/css/button-styles.css?ver=2.1.2 ; media=all */
-@media all{
-/*! @import https://oschool.ci/wp-content/plugins/forget-about-shortcode-buttons/public/css/font-awesome.min.css */
-.fa-globe:before{content:"\f0ac";}
-/*! end @import */
-}
-/*! CSS Used from: https://oschool.ci/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.9.0 ; media=all */
-@media all{
-.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1;}
-.fa-globe:before{content:"\f0ac";}
-}
-
-/*! CSS Used from: https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=4.3.0 ; media=all */
-@media all{
-.fa-globe:before{content:"\f0ac";}
 }
 
 </style>
@@ -211,7 +248,13 @@
         </div>
         <div class="row">
           @if(count($school->courses) > 0)
+          @php
+          $count = 0;
+          @endphp
             @foreach($school->courses as $course)
+            @php
+            if($count == 6) break;
+            @endphp
                 @if($course->type == 'mooc' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
@@ -227,9 +270,11 @@
             </a>
           </div>
             @endif
-            @if($loop->iteration == 6)
-            @break
-            @endif
+
+            @php
+            $count++;
+            @endphp
+
           @endforeach
           @else
           <div class="row">
@@ -296,7 +341,13 @@
         </div>
         <div class="row">
           @if(count($school->courses) > 0)
+              @php
+              $count2 = 0;
+              @endphp
             @foreach($school->courses as $course)
+            @php
+            if($count2 == 6) break;
+            @endphp
                 @if($course->type == 'path' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('path.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
@@ -312,9 +363,11 @@
             </a>
           </div>
             @endif
-            @if($loop->iteration == 6)
-            @break
-            @endif
+
+            @php
+            $count2++;
+            @endphp
+
           @endforeach
           @else
           <div class="row">
@@ -381,7 +434,13 @@
         </div>
         <div class="row">
           @if(count($school->courses) > 0)
+           @php
+           $count3 = 0;
+           @endphp
             @foreach($school->courses as $course)
+                  @php
+                  if($count3 == 6) break;
+                  @endphp
                 @if($course->type == 'bootcamp' && $course->state == 'active')
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('path.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
@@ -397,9 +456,11 @@
             </a>
           </div>
             @endif
-            @if($loop->iteration == 6)
-            @break
-            @endif
+
+            @php
+            $count3++;
+            @endphp
+
           @endforeach
           @else
           <div class="row">

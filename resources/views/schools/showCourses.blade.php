@@ -302,6 +302,11 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="user-profile">
+                                      <a href="/home">
+                                        Tableau de bord
+                                      </a>
+                                    </li>
+                                    <li class="user-profile">
                                       <a href="/users/settings">
                                         Modifier votre profil
                                       </a>
@@ -352,7 +357,7 @@
                                 @elseif($type == 'path')
                                 Spécialisations
                                 @elseif($type == 'bootcamp')
-                                Fomrations en salle
+                                Formations en salle
                                 @else
                                 Tous
                                 @endif
