@@ -35,21 +35,17 @@
     <link
       href="https://themes2.teachablecdn.com/themecss/production/base.css?_=d5b075d37bf7&amp;brand_course_heading=%23ffffff&amp;brand_heading=%23134361&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%23134361&amp;brand_secondary=%23ff3f20&amp;brand_text=%234d4d4d&amp;logged_out_homepage_background_image_overlay=0.5&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F5mHijVFBS4qf8vcfzak0"
       rel="stylesheet" data-turbolinks-track="true">
-    <title>Oschool  </title>
-    <link rel="canonical" href="https://missionfx.us/p/free">
-    <meta property="og:title" content="MFX FREE Training!">
-    <meta property="og:url" content="https://missionfx.us/courses/628848">
-    <meta property="og:image" content="https://www.filepicker.io/api/file/kLBGwV6RUqfG6oPXeMUu">
-    <meta name="brand_video_player_color" content="#ff3f20">
+    <title>Tous les cours de {{$school->name}} | Oschool</title>
+    <meta property="og:title" content="Tous les cours de {{$school->name}} | Oschool">
+    <meta property="og:image" content="/images/schools/logos/{{$school->logo}}">
+    <meta name="brand_video_player_color" content="#4D90CC">
 
 
 
-    <script src="/js/fedora.js" data-turbolinks-track="true"></script>
+    <script src="/js/all_courses/fedora.js" data-turbolinks-track="true"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
-    <meta id="iris-url" data-iris-url="https://eventable.teachable.cloud">
-    <link href="/blog/rss" rel="alternate" title="RSS Feed" type="application/rss+xml">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
@@ -266,8 +262,8 @@
                     </button>
                     <!-- Site logo -->
 
-                    <a class="school-title navbar-brand" href="https://missionfx.us?sa=24eeaa8f-34a1-4b4a-af1a-abcb45954657">
-                        MissionFX
+                    <a style="padding: 0px;" class="school-title navbar-brand" href="/">
+                        <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf">
                     </a>
 
 
@@ -279,16 +275,16 @@
 
                             <li>
 
-                                <a class="fedora-navbar-link navbar-link" href="/courses/enrolled" target="">
-                                    My Courses
+                                <a class="fedora-navbar-link navbar-link" href="/home" target="">
+                                    Mes cours
                                 </a>
 
                             </li>
 
                             <li>
 
-                                <a class="fedora-navbar-link navbar-link current-page" href="/courses" target="">
-                                    All Courses
+                                <a class="fedora-navbar-link navbar-link current-page" href="/schools" target="">
+                                    Nos écoles
                                 </a>
 
                             </li>
@@ -297,43 +293,42 @@
                             <!-- If more than 5 links, collapse the rest in a dropdown -->
 
 
-
+                            @auth
                             <!-- User Menu -->
                             <li class="dropdown">
                                 <a aria-expanded="false" aria-haspopup="true" class="fedora-navbar-link navbar-link dropdown-toggle open-my-profile-dropdown" data-toggle="dropdown">
-                                    <img class="gravatar" src="https://s.gravatar.com/avatar/9c275cba24f7c939201cda28f832f8e0?d=mm" alt="yaodavidarmel@gmail.com">
-                                    <span class="navbar-current-user">David Armel Yao</span>
+                                  <img class="gravatar" src="/images/users/default/{{Auth::user()->image}}" alt="yaodavidarmel@gmail.com">
+                                  <span class="navbar-current-user">{{Auth::user()->name}}</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="user-profile">
-                                        <a href="/current_user/profile">
-                                            Edit Profile
-                                        </a>
+                                      <a href="/home">
+                                        Tableau de bord
+                                      </a>
+                                    </li>
+                                    <li class="user-profile">
+                                      <a href="/users/settings">
+                                        Modifier votre profil
+                                      </a>
                                     </li>
                                     <li>
-                                        <a href="/current_user/subscriptions">
-                                            Manage Subscriptions
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/current_user/credit_card">
-                                            Add / Change Credit Card
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/current_user/contact">
-                                            Contact
-                                        </a>
+
+                                      <a href="/users/billings"col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2"rent_user/subscriptions">
+                                        Gérer vos abonnements
+                                      </a>
                                     </li>
                                     <li class="user-signout">
-                                        <a href="/sign_out">
-                                            Log Out
-                                        </a>
+                                      <a href="{{ route('logout') }}"
+                                         onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">Se déconnecter</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                                     </li>
                                 </ul>
 
                             </li>
-
+                            @endauth
                         </ul>
 
                     </div>
@@ -353,48 +348,60 @@
                     <!-- Filter: Category -->
                     <div class="pull-left course-filter">
                         <div class="filter-label">
-                            Category:
+                            Types de formation:
                         </div>
                         <div class="btn-group">
                             <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-
-                                All <span class="caret"></span>
+                                @if($type == 'mooc')
+                                MOOC
+                                @elseif($type == 'path')
+                                Spécialisations
+                                @elseif($type == 'bootcamp')
+                                Formations en salle
+                                @else
+                                Tous
+                                @endif
+                                <span class="caret"></span>
 
                             </button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/courses">All</a></li>
+                                <li><a href="/schools/{{$school->id}}/courses">Tous</a></li>
+                                <li><a href="/schools/{{$school->id}}/courses/filter/mooc">MOOC</a></li>
+                                <li><a href="/schools/{{$school->id}}/courses/filter/path">Spécialisations</a></li>
+                                <li><a href="/schools/{{$school->id}}/courses/filter/bootcamp">Formations en salle</a></li>
 
                             </ul>
                         </div>
                     </div>
-                    <!-- Filter: Author -->
+                    <!-- Filter: Category
                     <div class="pull-left course-filter">
                         <div class="filter-label">
-                            Author:
+                            Catégories:
                         </div>
                         <div class="btn-group">
                             <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
 
-                                All <span class="caret"></span>
+                                Tous <span class="caret"></span>
 
                             </button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/courses">All</a></li>
-
-                                <li><a href="/courses/author/224556">Momodou</a></li>
-
-                                <li><a href="/courses/author/226142">Nick Shawn</a></li>
+                                <li><a href="/schools/{{$school->id}}/courses/filter/all">Tous</a></li>
+                                <li><a href="/schools/{{$school->id}}/courses/filter/mooc">MOOC</a></li>
+                                <li><a href="/schools/{{$school->id}}/courses/filter/path">Spécialisations</a></li>
+                                <li><a href="/schools/{{$school->id}}/courses/filter/bootcamp">Formations en salle</a></li>
 
                             </ul>
                         </div>
                     </div>
+                -->
 
                     <!-- Search Box -->
                     <div class="col-lg-4 col-md-4 col-xs-12 pull-right">
-                        <form role="search" method="get" action="/courses">
+                        <form role="search" method="get" action="/search">
+                            @csrf
                             <div class="input-group">
-                                <label for="search-courses" class="sr-only">Find a course</label>
-                                <input class="form-control search input-lg" data-list=".list" id="search-courses" name="query" placeholder="Find a course" type="text">
+                                <label for="search-courses" class="sr-only">Trouver un cours</label>
+                                <input class="form-control search input-lg" data-list=".list" id="search-courses" name="query" placeholder="Trouvez un cours" type="text">
                                 <span class="input-group-btn">
                                     <button aria-label="Search Courses" id="search-course-button" class="btn search btn-default btn-lg" type="submit"><i class="fa fa-search" title="Search"></i></button>
                                 </span>
@@ -407,28 +414,45 @@
 
                 <div class="row course-list list">
                     <!-- Course Listing -->
+                    @foreach($courses as $course)
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
                             <div class="row">
-                                <a href="/p/full" data-role="course-box-link">
+                                <a href="{{ route('course.slug', $course->slug) }}" data-role="course-box-link">
                                     <div class="col-lg-12">
                                         <!-- Course Image, Name & Subtitle (everyone) -->
                                         <div class="course-box-image-container">
-                                            <img class="course-box-image" src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/GXTeRPkES6BenzadtwuP" role="presentation">
+                                            <img class="course-box-image" src="/images/courses/logos/{{$course->logo}}" role="presentation">
                                         </div>
                                         <div class="course-listing-title" role="heading" aria-level="2" title="The MissionFX Full Program">
-                                            The MissionFX Full Program
+                                            {{$course->name}}
                                         </div>
                                         <!-- Progress bar (enrolled users) -->
-                                        <div class="col-xs-12 hidden" aria-hidden="true">
+                                        @auth
+                                        @if(Auth::user()->courses->contains($course->id))
+                                        <div class="col-xs-12" aria-hidden="false">
                                             <div class="progressbar">
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-474431"></div>
+                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: 0%;" aria-valuenow="0%"></div>
                                             </div>
                                         </div>
+                                        @endif
+                                        @endauth
+
+                                        @guest
                                         <!-- Subtitle (unenrolled users) -->
                                         <div class="course-listing-subtitle" title="Trading made simple" role="heading" aria-level="3">
-                                            Trading made simple
+                                            {{ str_limit($course->subtitle, $limit = 100, $end = '...') }}
                                         </div>
+                                        @endguest
+                                        @auth
+                                        @if(!Auth::user()->courses->contains($course->id))
+                                        <!-- Subtitle (unenrolled users) -->
+                                        <div class="course-listing-subtitle" title="Trading made simple" role="heading" aria-level="3">
+                                            {{ str_limit($course->subtitle, $limit = 100, $end = '...') }}
+                                        </div>
+                                        @endif
+                                        @endauth
+
                                     </div>
                                 </a>
                             </div>
@@ -437,9 +461,9 @@
                                     <!-- Bundle Info (everyone) -->
 
                                     <!-- Author Image and Name (everyone) -->
-                                    <img align="left" class="img-circle" src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:30,height:30/https://www.filepicker.io/api/file/3dCpCpST5SDOeB2cnkuz" alt="Nick Shawn">
+                                    <img align="left" class="img-circle" src="/images/users/authors/{{$course->author->image}}" alt="{{$course->author->full_name}}">
                                     <div class="small course-author-name">
-                                        Nick Shawn
+                                        {{$course->author->full_name}}
                                     </div>
 
                                 </div>
@@ -462,60 +486,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Course Listing -->
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div data-course-id="628848" data-course-url="/courses/enrolled/628848" ,="" class="course-listing">
-                            <div class="row">
-                                <a href="/courses/enrolled/628848" data-role="course-box-link">
-                                    <div class="col-lg-12">
-                                        <!-- Course Image, Name & Subtitle (everyone) -->
-                                        <div class="course-box-image-container">
-                                            <img class="course-box-image" src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/kLBGwV6RUqfG6oPXeMUu" role="presentation">
-                                        </div>
-                                        <div class="course-listing-title" role="heading" aria-level="2" title="MFX FREE Training!">
-                                            MFX FREE Training!
-                                        </div>
-                                        <!-- Progress bar (enrolled users) -->
-                                        <div class="col-xs-12" aria-hidden="false">
-                                            <div class="progressbar">
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: 0%;" aria-valuenow="0%"></div>
-                                            </div>
-                                        </div>
-                                        <!-- Subtitle (unenrolled users) -->
-                                        <div class="course-listing-subtitle hidden" title="" role="heading" aria-level="3" aria-hidden="true">
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="course-listing-extra-info col-xs-12" aria-hidden="false">
-                                <div class="pull-left">
-                                    <!-- Bundle Info (everyone) -->
-
-                                    <!-- Author Image and Name (everyone) -->
-                                    <img align="left" class="img-circle" src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:30,height:30/https://www.filepicker.io/api/file/3dCpCpST5SDOeB2cnkuz" alt="Nick Shawn">
-                                    <div class="small course-author-name">
-                                        Nick Shawn
-                                    </div>
-
-                                </div>
-                                <!-- Progress percentage (enrolled users) -->
-                                <div class="pull-right" aria-hidden="false">
-                                    <div class="small course-progress">
-                                        <span class="percentage" id="percent-complete-628848" data-course-id="628848">0%</span>
-                                        <br>
-                                        COMPLETE
-                                    </div>
-                                </div>
-                                <!-- Price (unenrolled users) -->
-                                <div class="pull-right hidden" aria-hidden="true">
-                                    <div class="small course-price" id="course-box-price-product-1280927">
-                                        FREE
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
                 <div class="row">

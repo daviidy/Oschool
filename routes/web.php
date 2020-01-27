@@ -123,6 +123,23 @@ Route::post('/editTask', 'ProjectController@editTask');
 Route::post('/applyCoupon', 'CouponController@applyCoupon');
 
 
+
+//school all courses
+Route::get('/schools/{school}/courses', 'SchoolController@showCourses');
+
+//school all moocs
+Route::get('/schools/{school}/courses/filter/mooc', 'SchoolController@showMooc');
+
+//school all moocs
+Route::get('/schools/{school}/courses/filter/path', 'SchoolController@showPath');
+
+//school all moocs
+Route::get('/schools/{school}/courses/filter/bootcamp', 'SchoolController@showBootcamp');
+
+/*
+Route::get('/search', ['as' => 'search', 'uses' => 'SchoolController@search']);
+*/
+
 //routes for school admin dashboard
 
 //school admin dashboard

@@ -15,7 +15,7 @@
         			<table style="max-width:600px;text-align:center">
         				<tbody>
         					<tr>
-        						<td style="padding:25px 0"><a href="https://oschoolelearning.com" target="_blank"><img alt="Mindvalley Logo" border="0" src="https://oschoolelearning.com/images/schools/logos/oschool_2.png" style="width:204px" class="CToWUd"></a></td>
+        						<td style="padding:25px 0"><a href="https://oschoolelearning.com" target="_blank"><img alt="Oschool" border="0" src="https://oschoolelearning.com/images/schools/logos/oschool_2.png" style="width:204px" class="CToWUd"></a></td>
         					</tr>
         					<tr>
         						<td style="padding:0 0 20px 0">

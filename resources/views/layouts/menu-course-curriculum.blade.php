@@ -63,16 +63,20 @@
 
   </style>
 
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
   <link rel="stylesheet" media="screen" href="/css/fedora.css" data-turbolinks-track="true">
 
   <link href="/css/theme.css" rel="stylesheet" data-turbolinks-track="true">
+  <!--meta name="asset_host" content="https://fedora.teachablecdn.com"-->
+  <script src="https://fedora.teachablecdn.com/assets/application-1373410a4fe18258bccdd558991a1b1ed4c62390e2116938378a10bc0ff046cf.js" data-turbolinks-track="true"></script>
+
+  <script src="https://fedora.teachablecdn.com/packs/student-d0390011b83863c240d7.js"></script>
+
   <title>{{$course->name}} | Oschool</title>
   <meta name="description" content="Programme du cours {{$course->name}}">
   <meta name="og:image" content="@yield('image')"/>
-  <!--meta name="asset_host" content="https://fedora.teachablecdn.com"-->
-  <script src="https://fedora.teachablecdn.com/assets/application-1373410a4fe18258bccdd558991a1b1ed4c62390e2116938378a10bc0ff046cf.js" data-turbolinks-track="true"></script>
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <script src="https://fedora.teachablecdn.com/packs/student-d0390011b83863c240d7.js"></script>
+
 
 
 
@@ -157,7 +161,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li>
 
                   <a href="/users/billings"col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2"rent_user/subscriptions">
-                    Gerer vos abonnements
+                    Gérer vos abonnements
                   </a>
                 </li>
                 <!--li>

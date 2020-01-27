@@ -26,7 +26,7 @@ class AddTelephoneFieldToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->dropColumn('telephone');
         });
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ChangeDefaultValueStatusFieldInPricingsTable extends Migration
+class EditFullTextTypeFieldLessonsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class ChangeDefaultValueStatusFieldInPricingsTable extends Migration
      */
     public function up()
     {
-        Schema::table('pricings', function (Blueprint $table) {
-            $table->string('status')->default('0')->change();
+        Schema::table('lessons', function (Blueprint $table) {
+            $table->longText('full_text')->change();
         });
     }
 
@@ -25,8 +25,8 @@ class ChangeDefaultValueStatusFieldInPricingsTable extends Migration
      */
     public function down()
     {
-        Schema::table('pricings', function (Blueprint $table) {
-            $table->dropColumn('status');
+        Schema::table('lessons', function (Blueprint $table) {
+            $table->dropColumn('full_text');
         });
     }
 }

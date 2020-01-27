@@ -106,7 +106,13 @@ class CourseController extends Controller
         $course = Course::where('slug', $slug)->firstOrFail();
 
         if ($course->type == 'mooc') {
-            return view('courses.show', ['course' => $course]);
+            //si user connecté et inscrit au cours
+            if (Auth::check() && Auth::user()->courses->contains($course->id)) {
+            return view('courses.curriculum', ['course' => $course]);
+            }
+            else {
+                return view('courses.show', ['course' => $course]);
+            }
         }
         elseif ($course->type == 'path' || $course->type == 'bootcamp') {
             return view('paths.show', ['course' => $course]);
@@ -114,7 +120,6 @@ class CourseController extends Controller
 
 
     }
-
 
     /**
      * Display the specified resource, this time with slug.

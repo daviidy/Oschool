@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\School;
 use Auth;
 use App\User;
+use App\Course;
 use App\Author;
 use Image;
+use Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
@@ -67,6 +69,14 @@ class SchoolController extends Controller
     public function show(School $school)
     {
         return view('schools.show', ['school' => $school]);
+    }
+
+    //to show school all courses
+    public function showCourses(School $school)
+    {
+        $type = 'all';
+        $courses = Course::where('school_id', $school->id)->get();
+        return view('schools.showCourses', ['school' => $school, 'courses' => $courses, 'type' => $type]);
     }
 
 
@@ -325,6 +335,33 @@ class SchoolController extends Controller
         return response()->json($data);
     }
 
+
+
+    //filters
+
+    //to show school mooc
+    public function showMooc(School $school)
+    {
+        $type = 'mooc';
+        $courses = Course::where('school_id', $school->id)->where('type', 'mooc')->get();
+        return view('schools.showCourses', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+    }
+
+    //to show school path
+    public function showPath(School $school)
+    {
+        $type = 'path';
+        $courses = Course::where('school_id', $school->id)->where('type', 'path')->get();
+        return view('schools.showCourses', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+    }
+
+    //to show school bootcamp
+    public function showBootcamp(School $school)
+    {
+        $type = 'bootcamp';
+        $courses = Course::where('school_id', $school->id)->where('type', 'bootcamp')->get();
+        return view('schools.showCourses', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+    }
 
 
 }
