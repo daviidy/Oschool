@@ -75,7 +75,7 @@ class SchoolController extends Controller
     public function showCourses(School $school)
     {
         $type = 'all';
-        $courses = Course::where('school_id', $school->id)->get();
+        $courses = Course::where('school_id', $school->id)->where('state', 'active')->get();
         return view('schools.showCourses', ['school' => $school, 'courses' => $courses, 'type' => $type]);
     }
 
@@ -337,7 +337,7 @@ class SchoolController extends Controller
     public function showMooc(School $school)
     {
         $type = 'mooc';
-        $courses = Course::where('school_id', $school->id)->where('type', 'mooc')->get();
+        $courses = Course::where('school_id', $school->id)->where('type', 'mooc')->where('state', 'active')->get();
         return view('schools.showCourses', ['school' => $school, 'courses' => $courses, 'type' => $type]);
     }
 
@@ -345,7 +345,7 @@ class SchoolController extends Controller
     public function showPath(School $school)
     {
         $type = 'path';
-        $courses = Course::where('school_id', $school->id)->where('type', 'path')->get();
+        $courses = Course::where('school_id', $school->id)->where('type', 'path')->where('state', 'active')->get();
         return view('schools.showCourses', ['school' => $school, 'courses' => $courses, 'type' => $type]);
     }
 
@@ -353,7 +353,7 @@ class SchoolController extends Controller
     public function showBootcamp(School $school)
     {
         $type = 'bootcamp';
-        $courses = Course::where('school_id', $school->id)->where('type', 'bootcamp')->get();
+        $courses = Course::where('school_id', $school->id)->where('type', 'bootcamp')->where('state', 'active')->get();
         return view('schools.showCourses', ['school' => $school, 'courses' => $courses, 'type' => $type]);
     }
 
