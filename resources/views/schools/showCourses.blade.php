@@ -293,7 +293,7 @@
                             <!-- If more than 5 links, collapse the rest in a dropdown -->
 
 
-
+                            @auth
                             <!-- User Menu -->
                             <li class="dropdown">
                                 <a aria-expanded="false" aria-haspopup="true" class="fedora-navbar-link navbar-link dropdown-toggle open-my-profile-dropdown" data-toggle="dropdown">
@@ -328,7 +328,7 @@
                                 </ul>
 
                             </li>
-
+                            @endauth
                         </ul>
 
                     </div>
