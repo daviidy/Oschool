@@ -27,6 +27,8 @@
         }
     </style>
 
+    <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
     <meta name="csrf-param" content="authenticity_token">
