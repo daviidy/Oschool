@@ -59,7 +59,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
     <meta name="description" content="@yield('description')">
-    <link rel="stylesheet" href="/css/school_homepage.css">
     <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
 
     <meta name="csrf-param" content="authenticity_token">
@@ -150,6 +149,9 @@
 .navbar-fedora {
     background-color: rgba(0, 0, 0, 0.97)!important;
   }
+  .nav.navbar-nav>li .fedora-navbar-link.active, .nav.navbar-nav>li .fedora-navbar-link:hover {
+    background-color: #080808 !important;
+}
 input.form-control:focus {
     border-color: #6aace6!important;}
   *:focus{outline:none;}
