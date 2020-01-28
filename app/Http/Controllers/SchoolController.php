@@ -79,11 +79,10 @@ class SchoolController extends Controller
         return view('schools.showCourses', ['school' => $school, 'courses' => $courses, 'type' => $type]);
     }
 
-
-    public function showCourses(School $school)
+    /*public function showCourses(School $school)
     {
         return view('schools.showCourses', ['school' => $school]);
-    }
+    }*/
 
 
     /**
