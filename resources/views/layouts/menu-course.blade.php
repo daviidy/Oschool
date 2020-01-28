@@ -583,9 +583,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
               </li>
               <li>
+              @guest
                 <a href="{{route('login')}}"  class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn">
-                  Salle de classe
+                  Connectez-vous
                 </a>
+                @endguest
+              </li>
+              <li>
+              @auth
+                <a href="{{route('login')}}"  class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn">
+                  Ma salle de classe
+                </a>
+                @endauth
               </li>
             </ul>
           </div>
