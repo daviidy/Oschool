@@ -58,6 +58,10 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
+    <meta name="description" content="@yield('description')">
+    <link rel="stylesheet" href="/css/school_homepage.css">
+    <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
+
     <meta name="csrf-param" content="authenticity_token">
     <meta name="csrf-token" content="HeqVIhV2BIM+5L/O9hmz4Xe/NArfgYeexyUKDpkq1FZYRcRUOb+xHcp5LOYHoG6857NlE68F2NuyvWcJIrSe1Q==">
     <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-31ff648fd5e6158c77c31e785844877b6666554feab422e57ca5a96aa5587b9e.css" data-turbolinks-track="true">
@@ -143,6 +147,9 @@
 .btn-default.btn-lg.btn-course-filter.dropdown-toggle{
   color: #4d90cc !important;
 }
+.navbar-fedora {
+    background-color: rgba(0, 0, 0, 0.97)!important;
+  }
 input.form-control:focus {
     border-color: #6aace6!important;}
   *:focus{outline:none;}
