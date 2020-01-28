@@ -112,7 +112,8 @@ class LessonController extends Controller
      */
     public function showSlug($slugCourse, $slug)
     {
-        $lesson = Lesson::where('slug', $slug)->firstOrFail();
+        $course = Course::where('slug', $slugCourse)->firstOrFail();
+        $lesson = Lesson::where('slug', $slug)->where('course_id', $course->id)->firstOrFail();
         //on cherche la prochaine lesson dans la meme section
         $next_lesson = Lesson::where('course_id', $lesson->course_id)
         ->where('section_id', $lesson->section_id)
