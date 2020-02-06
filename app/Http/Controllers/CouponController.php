@@ -55,7 +55,7 @@ class CouponController extends Controller
             }
         }
 
-        return back()->with('status', 'Nouveau ajouté');
+        return back()->with('status', 'Nouveau coupon ajouté');
     }
 
     /**

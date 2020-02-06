@@ -76,6 +76,7 @@ Route::resource('deliverables', 'DeliverableController');
 
 Route::resource('coupons', 'CouponController');
 
+Route::resource('informations', 'InformationController');
 
 /*
 
@@ -188,6 +189,10 @@ Route::get('/schoolAdmin/{school}/course/{course}/project/{project}/deliverables
 
 //course students
 Route::get('/schoolAdmin/{school}/courses/{course}/students', 'CourseController@students')->name('course');
+
+//course Notification
+Route::get('/schoolAdmin/{school}/informations', 'InformationController@index');
+Route::get('/schoolAdmin/{school}/informations/create', 'InformationController@create');
 
 //course curriculum
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum')->name('course');

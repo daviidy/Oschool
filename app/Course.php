@@ -164,6 +164,17 @@ class Course extends Model
                   return $this->hasMany('App\Quiz');
               }
 
+              /**
+              * [users description]
+              * relationship many to many with Courses model
+              * @return [array] [description]
+              */
+
+            public function informations()
+              {
+                  return $this->belongsToMany('App\Information');
+              }
+
 
            public static function boot() {
            parent::boot();
