@@ -17,7 +17,17 @@
                             <div class="card-body">
                                 <h5 class="text-muted">Total Revenus</h5>
                                 <div class="metric-value d-inline-block">
-                                    <h1 class="mb-1">{{$purchases->where('status', 'Validé')->sum('price')}} FCFA</h1>
+                                    <h1 class="mb-1">
+                                        @php
+                                        $revenue = 0;
+                                        @endphp
+                                        @foreach($purchases->where('status', 'Validé') as $purchase)
+                                        @php
+                                        $revenue += $purchase->pricing->price;
+                                        @endphp
+                                        @endforeach
+                                        {{$revenue}} FCFA
+                                    </h1>
                                 </div>
                                 <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                     <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
@@ -57,6 +67,7 @@
                         </div>
                     </div>
                 -->
+                <!--
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card">
                             <div class="card-body">
@@ -73,6 +84,7 @@
                             <div id="sparkline-revenue4"></div>
                         </div>
                     </div>
+                -->
                 </div>
                 <div class="row">
                     <!-- ============================================================== -->
@@ -102,6 +114,7 @@
                                         </thead>
                                         <tbody>
                                             @foreach($purchases as $purchase)
+                                            @if($purchase->status = 'Validé')
                                             <tr>
                                                 <td>{{$purchase->id}}</td>
                                                 <td>
@@ -115,6 +128,7 @@
                                                 <td>{{$purchase->user->name}}</td>
                                                 <td><span class="badge-dot {{$purchase->status == null ? 'badge-danger' : 'badge-success'}} mr-1"></span>{{$purchase->status == null ? 'Non validé' : 'Validé'}} </td>
                                             </tr>
+                                            @endif
                                             @endforeach
 
                                             <tr>

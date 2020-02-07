@@ -111,7 +111,7 @@
                                 <td>{{$purchase->date}}</td>
                                 <td>{{$purchase->user->name}}</td>
                                 <td><span class="badge-dot {{$purchase->status == null ? 'badge-danger' : 'badge-success'}} mr-1"></span>{{$purchase->status == null ? 'Non validé' : 'Validé'}} </td>
-                                <td>{{$purchase->price}} FCFA</td>
+                                <td>{{$purchase->pricing->price}} FCFA</td>
                             </tr>
                             @endforeach
 
