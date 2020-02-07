@@ -71,9 +71,11 @@ class InformationController extends Controller
      * @param  \App\Information  $information
      * @return \Illuminate\Http\Response
      */
-    public function edit(Information $information)
+    public function edit(School $school, Information $information)
     {
         //
+        return view('admin_views.informations.edit', ['school' => $school, 'information'=>$information]);
+
     }
 
     /**
@@ -117,5 +119,7 @@ class InformationController extends Controller
     public function destroy(Information $information)
     {
         //
+        $information->delete();
+        return back()->with('status', 'Notification supprimée');
     }
 }

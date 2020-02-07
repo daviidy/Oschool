@@ -193,6 +193,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/students', 'CourseController@
 //course Notification
 Route::get('/schoolAdmin/{school}/informations', 'InformationController@index');
 Route::get('/schoolAdmin/{school}/informations/create', 'InformationController@create');
+Route::get('/schoolAdmin/{school}/informations/{information}/edit', 'InformationController@edit');
 
 //course curriculum
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum')->name('course');

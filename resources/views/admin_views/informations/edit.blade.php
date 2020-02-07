@@ -1,5 +1,5 @@
 @extends('layouts.admin_views.menu-school')
-@section('title', 'Ajouter une nouvelle information')
+@section('title', 'Modifier la notification')
 @section('content')
 
 <style media="screen">
@@ -379,6 +379,7 @@
         </style>
 <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
 
+
         <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
             <div what="page header" class="tch-section-nav tch-page-header" icon="icon icon-cash-dollar" text="Pricing">
                 <div ng-class="{ 'has-sections': sections }" class="tch-section-nav-wrapper affixed">
@@ -388,7 +389,7 @@
                             <!---->
                             <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                             <!---->
-                            <!---->Ajouter un nouveau coupon
+                            <!---->Modifié une nouvelle notification
                         </div>
                         <!---->
                         <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -401,12 +402,12 @@
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="POST" action="{{route('informations.store')}}" enctype="multipart/form-data" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="information-container">
-                @csrf
+            <form method="POST" action="{{url('informations',$information)}}" enctype="multipart/form-data" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="editor-container">
+              @csrf
+                {{ method_field('patch') }}
                     <!---->
                     <!---->
-                    <div ng-if="planType" class="" style="">
-                      <a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/informations" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+                  <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/informations" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
                         <!---->
                         <!---->
                         <!---->
@@ -415,7 +416,7 @@
                             <div ng-if="planType == 'free'" class="col-sm-12">
                                     <br>
                                 {{-- <div class="input-group input-group-image"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg"></div> --}}
-                                <div class="input-group input-group-label"><span>Ajoutez une nouvelle information</span></div>
+                                <div class="input-group input-group-label"><span>Modification de la notification</span></div>
                             </div>
                             <!---->
                             <!---->
@@ -423,38 +424,34 @@
                             <!---->
                             <div ng-show="products.length > 0" class="">
                             <div class="col-sm-12 add-top-margin-25">
-                                <label for="code">Texte</label>
-                                <br>
-                                <input type="hidden" name="text">
-                                <div class="" id="editorInformation" style="height: 300px;">
-
-                                </div>
+                              <label for="code">Texte</label>
+                              <br>
+                              <input type="hidden" name="text" value="{{$information->text}}">
+                              <div class="" id="editorInfo" style="height: 300px;">
+                                @if($information->text)
+                                  {!!$information->text!!}
+                                @endif
+                              </div>
 
                             </div>
-
-
 
                                 <div class="col-sm-12 add-top-margin-25">
 
                                     <label for="status">Cours </label>
+                                    {{-- <br> --}}
+                                    {{-- <p>Cours deja selectionnee</p> --}}
+                                        {{-- @foreach ($coupon->courses as $coupon) --}}
+                                            {{-- <p>{{dd($coupon)}}</p> --}}
+                                        {{-- @endforeach --}}
                                         <br>
-                                      {{-- <select size="1" multiple id="courses_id" name="courses_id[]" style="width:250px;">
-
-                                        @foreach ($allCourses as $course_db)
-                                                <option value="{{$course_db->id}}">{{$course_db->name}}</option>
-                                            @endforeach
-
-                                      </select> --}}
-
-                                      <select class="js-example-basic-multiple" name="courses_id[]" multiple="multiple" style="width:250px;">
-                                            @foreach ($school->courses as $course_db)
-                                                        <option value="{{$course_db->id}}">{{$course_db->name}}</option>
-                                                    @endforeach
-                                          </select>
-
+                                        <select class="js-example-basic-multiple" name="courses_id[]" multiple="multiple" style="width:270px;">
+                                                @foreach ($school->courses as $course_db)
+                                                  <option {{$information->courses->contains($course_db->id) ? 'selected' : ''}}  value="{{$course_db->id}}">{{$course_db->name}}</option>
+                                                @endforeach
+                                         </select>
                                   </div>
 
-                                 <input style="display: none;" type="text" name="school_id" value="">
+                                 {{-- <input style="display: none;" type="text" name="school_id" value=""> --}}
                                  {{-- <input style="display: none;" type="text" name="type" value="Free"> --}}
                                  {{-- <input style="display: none;" type="text" name="recurring" value="No"> --}}
 
@@ -462,7 +459,7 @@
                             </div>
                             {{-- <input style="display: none;" type="hidden" name="project_id" value="{{$project->id}}"> --}}
                             {{-- <input style="display: none;" type="hidden" name="user_id" value="{{Auth::user()->id}}"> --}}
-                            <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Créé la notification</button></div>
+                            <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Modifié le coupon</button></div>
                         </div>
                     </div>
                     <!---->
@@ -479,7 +476,7 @@
 
 
         <script>
-            var quillComment = new Quill('#editorInformation', {
+            var quillComment = new Quill('#editorInfo', {
             modules: {
                 toolbar: [
                 ['bold', 'italic'],
@@ -507,7 +504,6 @@
             };
           </script>
 
-<!--pour le multiple select-->
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
 <script>
 $(document).ready(function() {
@@ -515,5 +511,7 @@ $(document).ready(function() {
 });
 
 </script>
+
+
 
         @endsection
