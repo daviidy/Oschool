@@ -369,7 +369,7 @@
         .re-formatting{display:none!important;}
         a{color:#1ea69a;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
         a:hover,a:focus{color:#167b72;text-decoration:none;}
-        .slide-show{-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-timing-function:ease-in;transition-timing-function:ease-in;max-height:1000px;overflow:hidden;}
+        .slide-show{-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-timing-function:ease-in;transition-timing-function:ease-in;overflow:hidden;}
         .add-top-margin{margin-top:15px;}
         .add-top-margin-25{margin-top:25px;}
         .redactor-editor{max-height:300px;}
