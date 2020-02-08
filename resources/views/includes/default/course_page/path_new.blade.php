@@ -933,7 +933,7 @@ button,html [type=button]{-webkit-appearance:button;}
                         <h2 class="tracksTitle__1YnzuBiOIL9TSmJwT5LmE_">Ce que vous allez réaliser</h2>
                     </div>
                     <div class="tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ">
-                        @foreach($course->projects as $project)
+                        @foreach($course->projects->sortBy('position') as $project)
                         <div class="trackDetailContainer__2N5WdI63tXUqfACKnAAqiH" data-testid="path-marketing-syllabus-track-1">
                             <div class="trackDetailNumber__1aYtKDcpYbCP8ZLTf_Pio8">{{$loop->index + 1}}</div>
                             <div class="trackDetailText__2m-7z-7ZEv69iZ8XMALzuT">
