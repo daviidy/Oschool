@@ -331,7 +331,10 @@ class PurchaseController extends Controller
                          if ($course->type == 'path') {
                              foreach ($course->resources as $resource) {
                                  $course_path = Course::where('name', $resource->title)->first();
-                                 $user->courses()->attach($course_path);
+                                 if (!$user->courses->contains($course_path->id)) {
+                                     $user->courses()->attach($course_path);
+                                 }
+
                              }
                          }
 

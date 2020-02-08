@@ -451,7 +451,10 @@ class LessonController extends Controller
     public function completeLesson(Request $request)
     {
         $lesson = Lesson::find($request['id']);
-        Auth::user()->lessons()->attach($lesson);
+        if (!Auth::user()->lessons->contains($lesson->id)) {
+            Auth::user()->lessons()->attach($lesson);
+        }
+
 
         $next_lesson = Lesson::where('course_id', $lesson->course_id)
         ->where('section_id', $lesson->section_id)
