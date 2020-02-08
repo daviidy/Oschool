@@ -67,6 +67,19 @@ class PurchaseController extends Controller
         //et le transid
         if (Auth::check()) {
 
+            if ($pricing->course->type == 'mooc') {
+                //si user connecté et inscrit au cours
+                if (Auth::user()->courses->contains($pricing->course->id)) {
+                return view('courses.curriculum', ['course' => $pricing->course]);
+                }
+                else {
+                    return view('courses.show', ['course' => $pricing->course]);
+                }
+            }
+            elseif ($pricing->course->type == 'path' || $pricing->course->type == 'bootcamp') {
+                return view('paths.show', ['course' => $pricing->course]);
+            }
+
             if ($pricing->type == "Free") {
                 $purchase=Purchase::create([
                                   'price' => 0,

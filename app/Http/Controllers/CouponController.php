@@ -118,6 +118,7 @@ class CouponController extends Controller
         $course = Course::find($request->course_id);
         $pricing = Pricing::find($request->pricing_id);
 
+        //on check si il n'ya pas de code coupon
         if ($coupon === null || !$coupon->courses->contains($course->id) || Carbon::parse($coupon->date_exp) < $date) {
             return redirect('/course/'.$course->slug.'/checkout/'.$pricing->id)->with('status', 'Coupon Invalide');
         }
