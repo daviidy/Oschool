@@ -73,7 +73,7 @@ class PurchaseController extends Controller
                 return view('courses.curriculum', ['course' => $pricing->course]);
                 }
                 else {
-                    continue;
+                    break;
                 }
             }
             elseif ($pricing->course->type == 'path' || $pricing->course->type == 'bootcamp') {
@@ -81,7 +81,7 @@ class PurchaseController extends Controller
                 return view('paths.show', ['course' => $pricing->course]);
                 }
                 else {
-                    continue;
+                    break;
                 }
 
             }
