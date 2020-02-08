@@ -248,7 +248,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
         </div>
         <div class="row">
           @if(count($school->courses) > 0)
-            @foreach($school->courses->where('type', 'mooc')->where('state', 'active')->take(7) as $course)
+            @foreach($school->courses->where('type', 'mooc')->where('state', 'active')->take(6) as $course)
           <div class="col-xs-12 col-sm-6 col-md-4 ">
             <a href="{{ route('course.slug', $course->slug) }}" target="_blank" rel="noopener noreferrer">
               <div class="school-card">
