@@ -290,7 +290,7 @@ class PurchaseController extends Controller
 
                         }
 
-
+                        //sinon on l'inscrit au cours
 
                     else {
 
@@ -310,6 +310,15 @@ class PurchaseController extends Controller
                              $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande a été traitée avec succès');
                              $message->from('eventsoschool@gmail.com', 'Oschool');
                            });
+                         }
+
+                         //si c'est une spécialisation on l'inscrit
+                         //à tous les cours de cxette spécialisation
+                         if ($course->type == 'path') {
+                             foreach ($course->resources as $resource) {
+                                 $course_path = Course::where('name', $resource->title)->first();
+                                 $user->courses()->attach($course_path);
+                             }
                          }
 
 
@@ -420,6 +429,7 @@ class PurchaseController extends Controller
             Auth::user()->schools()->attach($school);
         }
 
+
         if ($course->type == 'mooc') {
             return redirect('/course/enrolled/'.$course->slug);
         }
@@ -430,6 +440,8 @@ class PurchaseController extends Controller
 
     }
 
+
+    //fonction pour rajouter un achat
     public function add(School $school, Course $course, User $user)
     {
         //on retrouve le dernier achat fait par l'étudiant
