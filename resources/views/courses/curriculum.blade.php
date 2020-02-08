@@ -9,7 +9,7 @@
   <!-- Course Progress -->
   <div class="course-progress">
     <div class="progressbar">
-      <div class="progressbar-fill" style="min-width: {{{{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}}}%;"></div>
+      <div class="progressbar-fill" style="min-width: {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}%;"></div>
     </div>
     <div class="small course-progress">
       <span class="percentage">
