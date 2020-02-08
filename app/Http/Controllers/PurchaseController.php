@@ -73,11 +73,17 @@ class PurchaseController extends Controller
                 return view('courses.curriculum', ['course' => $pricing->course]);
                 }
                 else {
-                    return view('courses.show', ['course' => $pricing->course]);
+                    continue;
                 }
             }
             elseif ($pricing->course->type == 'path' || $pricing->course->type == 'bootcamp') {
+                if (Auth::user()->courses->contains($pricing->course->id)) {
                 return view('paths.show', ['course' => $pricing->course]);
+                }
+                else {
+                    continue;
+                }
+
             }
 
             if ($pricing->type == "Free") {
