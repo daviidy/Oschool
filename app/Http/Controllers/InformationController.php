@@ -107,7 +107,7 @@ class InformationController extends Controller
         }
       }
 
-      return back()->with('status', 'Nouvelle information ajoutée');
+      return back()->with('status', 'Nouvelle information ajoutée avec succès');
     }
 
     /**
@@ -120,6 +120,6 @@ class InformationController extends Controller
     {
         //
         $information->delete();
-        return back()->with('status', 'Notification supprimée');
+        return back()->with('status', 'Notification supprimée avec succès');
     }
 }
