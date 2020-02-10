@@ -288,7 +288,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
                     @foreach($course->users as $user)
-                        @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)
+                        @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id))
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
                         <td what="id"><span ng-bind="'#' + product.id">{{$user->name}}</span><span class="space"></span><span class="space"></span>
                             <!---->
