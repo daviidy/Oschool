@@ -402,7 +402,7 @@
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="POST" action="{{url('informations',$information)}}" enctype="multipart/form-data" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="editor-container">
+            <form method="POST" action="{{url('informations',$information)}}" enctype="multipart/form-data" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="information-container">
               @csrf
                 {{ method_field('patch') }}
                     <!---->
