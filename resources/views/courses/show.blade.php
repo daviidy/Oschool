@@ -376,9 +376,11 @@ button{line-height:inherit;}
                     <span class="lecture-icon">
                       <img src="https://img.icons8.com/color/48/000000/circled-play--v1.png" width="20">
                     </span>
+                    <!--
                     <div class="btn-primary btn-sm pull-right lecture-start">
                       Start
                     </div>
+                -->
                     {{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}
                   </a>
                     @endauth
@@ -388,9 +390,11 @@ button{line-height:inherit;}
                       <span class="lecture-icon">
                         <img src="https://img.icons8.com/color/48/000000/circled-play--v1.png" width="20">
                       </span>
+                      <!--
                       <div class="btn-primary btn-sm pull-right lecture-start">
                         Start
                       </div>
+                  -->
                       {{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}
                     </a>
                       @endguest

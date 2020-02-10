@@ -887,7 +887,7 @@ img{max-width:100%;}
     <myg-accordion class="myg-accordion js-accordion course-detail__module-accordion ng-isolate-scope" selected-item-id="'module-section-1'" scroll-to-selected-item="false" item-active-class="myg-accordion__item--active" item-delay-on-open="300"
       open-multiple-panels="true" label-aria-opened="'Libellé aria pour le panneau en accordéon fermé'" label-aria-closed="'Libellé aria pour le panneau en accordéon fermé'">
 
-      @foreach($course->projects as $project)
+      @foreach($course->projects->sortBy('position') as $project)
         <div id="program" class="myg-accordion__item js-accordion-item " id="module-section-1">
             <div class="myg-accordion__header js-accordion-title" tabindex="0">
                 <h4 class="myg-accordion__title heading--h3">

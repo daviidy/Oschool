@@ -11,6 +11,7 @@
             <!-- ============================================================== -->
 
 
+
 @if(!empty($status))
 
     <div class="card-body">
@@ -95,11 +96,12 @@
                                 <th class="border-0">Date</th>
                                 <th class="border-0">Client</th>
                                 <th class="border-0">Statut</th>
-                                <th class="border-0">Prix</th>
+                                <th class="border-0">Prix (FCFA)</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($current_month_purchases as $purchase)
+                            @if($purchase->pricing->type !== "Free")
                             <tr>
                                 <td>{{$purchase->id}}</td>
                                 <td>
@@ -111,8 +113,9 @@
                                 <td>{{$purchase->date}}</td>
                                 <td>{{$purchase->user->name}}</td>
                                 <td><span class="badge-dot {{$purchase->status == null ? 'badge-danger' : 'badge-success'}} mr-1"></span>{{$purchase->status == null ? 'Non validé' : 'Validé'}} </td>
-                                <td>{{$purchase->price}} FCFA</td>
+                                <td class="price">{{$purchase->pricing->price}}</td>
                             </tr>
+                            @endif
                             @endforeach
 
                         </tbody>
@@ -126,7 +129,7 @@
                                 <th></th>
                                 <th></th>
                                 <th>Total</th>
-                                <th>{{$current_month_purchases->sum('price')}} FCFA</th>
+                                <th id="revenue"></th>
                             </tr>
                         </tfoot>
                     </table>
@@ -139,6 +142,35 @@
     <!-- ============================================================== -->
 </div>
 
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+
+<script>
+
+
+$(document).ready(function(){
+
+var revenue = 0;
+
+var prices = $('.price');
+
+
+//on met les noms dans le tableau
+for (i = 0; i < prices.length; i++) {
+    revenue += parseInt(prices[i].textContent);
+}
+
+$('#revenue').text(revenue);
+
+
+});
+
+
+
+</script>
 
 
 

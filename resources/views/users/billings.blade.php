@@ -196,7 +196,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:'TeachableSans-Regular';font-size:2
                         @if(count($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')) > 0)
                         @foreach($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé') as $purchase)
                         <tr data-v-3e7bb260="">
-                            <td data-v-3e7bb260="" class="order"><a data-v-3e7bb260="" href="/api/v2/invoices/download?id=2c92a0fe6ccd01e7016cf2303dcc16d0">
+                            <td data-v-3e7bb260="" class="order"><a data-v-3e7bb260="">
                                     {{$purchase->trans_id}}
                                     <img data-v-3e7bb260="" src="https://s92.mindvalley.us/mindvalley/media/images/ico-pdf.svg" alt="Invoice"></a></td>
                             <td>{{$course->name}}</td>

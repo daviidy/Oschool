@@ -287,8 +287,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 </thead>
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
-                    @foreach($course->users->sortByDesc('id') as $user)
-                        @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first())
+                    @foreach($course->users as $user)
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
                         <td what="id"><span ng-bind="'#' + product.id">{{$user->name}}</span><span class="space"></span><span class="space"></span>
                             <!---->
@@ -300,7 +299,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">{{$user->email}}</span>
                             <!---->
                         </td>
-                        <td what="name">{{$user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type}}</td>
+                        <td what="name">
+                            @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing)
+                            {{$user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type}}
+                            @endif
+                        </td>
                         <td what="price" ng-bind="formatProductPrice(product)">
                             @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type == "Abonnement" || $user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type == "Plan de paiement")
                             @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->times - count($course->purchases->where('user_id', $user->id)->where('status','Validé')) == 0)
@@ -378,7 +381,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                         </td>
                     </tr>
-                        @endif
                     @endforeach
 
                     <!---->

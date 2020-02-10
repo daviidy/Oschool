@@ -67,6 +67,20 @@ class PurchaseController extends Controller
         //et le transid
         if (Auth::check()) {
 
+            if ($pricing->course->type == 'mooc') {
+                //si user connecté et inscrit au cours
+                if (Auth::user()->courses->contains($pricing->course->id)) {
+                return view('courses.curriculum', ['course' => $pricing->course]);
+                }
+
+            }
+            elseif ($pricing->course->type == 'path' || $pricing->course->type == 'bootcamp') {
+                if (Auth::user()->courses->contains($pricing->course->id)) {
+                return view('paths.show', ['course' => $pricing->course]);
+                }
+
+            }
+
             if ($pricing->type == "Free") {
                 $purchase=Purchase::create([
                                   'price' => 0,
@@ -290,7 +304,7 @@ class PurchaseController extends Controller
 
                         }
 
-
+                        //sinon on l'inscrit au cours
 
                     else {
 
@@ -310,6 +324,18 @@ class PurchaseController extends Controller
                              $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande a été traitée avec succès');
                              $message->from('eventsoschool@gmail.com', 'Oschool');
                            });
+                         }
+
+                         //si c'est une spécialisation on l'inscrit
+                         //à tous les cours de cxette spécialisation
+                         if ($course->type == 'path') {
+                             foreach ($course->resources as $resource) {
+                                 $course_path = Course::where('name', $resource->title)->first();
+                                 if (!$user->courses->contains($course_path->id)) {
+                                     $user->courses()->attach($course_path);
+                                 }
+
+                             }
                          }
 
 
@@ -420,6 +446,7 @@ class PurchaseController extends Controller
             Auth::user()->schools()->attach($school);
         }
 
+
         if ($course->type == 'mooc') {
             return redirect('/course/enrolled/'.$course->slug);
         }
@@ -430,6 +457,8 @@ class PurchaseController extends Controller
 
     }
 
+
+    //fonction pour rajouter un achat
     public function add(School $school, Course $course, User $user)
     {
         //on retrouve le dernier achat fait par l'étudiant
