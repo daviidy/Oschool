@@ -42,12 +42,12 @@ class SendSubscriptionEmail extends Command
      */
     public function handle()
     {
-        /*
+
         Mail::send('mails.test', ['test' => 'test'], function($message){
           $message->to('yaodavidarmel@gmail.com', 'A David')->subject('Automatisation OK!');
           $message->from('eventsoschool@gmail.com', 'Oschool');
         });
-        */
+
 
 
         //we take the date of today
