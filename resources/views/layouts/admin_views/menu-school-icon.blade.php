@@ -29,6 +29,8 @@
     <link rel="icon" href="/images/schools/logos/image-profil.png" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
       <link rel="stylesheet" href="/nProgress/nprogress.css">
