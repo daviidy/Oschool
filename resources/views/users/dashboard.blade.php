@@ -27,11 +27,35 @@
 
     @endif
     @endif
+<!--on vérifie si l'utilisateur est inscrit à au moins une école-->
+    @if(count(Auth::user()->schools) > 0)
+       <!--si oui, pour chaque école dans laquelle il est inscrit-->
+            @foreach(Auth::user()->schools as $school)
+                <!--on parcourt chaque information de cette école-->
+                @foreach($school->courses as $course)
+                    @foreach($course->informations as $information)
+                          <!--met ici le code HTML pour les infos-->
+                          <div class="centered spacer">
+                              <div class="alertMessage alertMessage--info">
+                                  <span class="bullet bullet--small bullet--orange-alt alertMessage__icon"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                                  <div class="alertMessage__text">
+                                    {!!$information->text!!}
+                                  </div>
+                              </div>
+                          </div>
+                          <!--n'oublie pas de mettre le style css tout en haut-->
+                    @endforeach
+                @endforeach
+            @endforeach
+        @endif
+
+
 
     @if(count(Auth::user()->schools) > 0)
     <h1>Les écoles dans lesquelles je suis inscrit</h1>
     <div class="schools-list ">
         @foreach(Auth::user()->schools as $school)
+
         <a href="{{url('schools', $school)}}" class="school-card school-has-default-thumbnail"
           style="background-image: url('/images/schools/logos/{{$school->logo}}');" target="_blank">
             <div class="school-info">
