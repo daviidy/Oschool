@@ -34,12 +34,12 @@ Auth::routes();
 Route::post('/register/user', 'CustomAuthController@addUser');
 Route::post('/login/user', 'CustomAuthController@loginUser');
 
-Route::get('/users/billings', 'UserController@billings');
+Route::get('/users/billings', 'UserController@billings')->name('users.billings');
 
 Route::get('/schools/{school}/courses', 'schoolController@showCourses');
 
 
-Route::get('/users/settings', 'UserController@edit');
+Route::get('/users/settings', 'UserController@edit')->name('users.settings');
 
 
 

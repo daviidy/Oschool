@@ -81,6 +81,9 @@ class PurchaseController extends Controller
 
             }
 
+            //si l'offre est gratuite, alors
+            //on redirige user vers
+            //la vue free
             if ($pricing->type == "Free") {
                 $purchase=Purchase::create([
                                   'price' => 0,

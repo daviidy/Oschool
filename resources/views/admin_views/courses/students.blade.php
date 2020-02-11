@@ -288,6 +288,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
                     @foreach($course->users as $user)
+                        @if(count($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)) > 0)
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
                         <td what="id"><span ng-bind="'#' + product.id">{{$user->name}}</span><span class="space"></span><span class="space"></span>
                             <!---->
@@ -300,9 +301,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                         </td>
                         <td what="name">
-                            @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing)
                             {{$user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type}}
-                            @endif
                         </td>
                         <td what="price" ng-bind="formatProductPrice(product)">
                             @if($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type == "Abonnement" || $user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id)->first()->pricing->type == "Plan de paiement")
@@ -381,6 +380,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                         </td>
                     </tr>
+                        @endif
                     @endforeach
 
                     <!---->

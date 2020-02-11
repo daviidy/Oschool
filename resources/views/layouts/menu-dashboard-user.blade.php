@@ -199,18 +199,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <a href="/user/admin">Tableau de bord admin</a>
                             </li>
                             @endif
-                            <li class="nav-item-profile selected">
+                            <li class="nav-item-profile {{\Route::current()->getName() == 'home' ? 'selected' : ''}}">
                                 <a href="/home">Mes écoles</a>
                             </li>
                             @if(Auth::user()->isAdmin() || Auth::user()->isOwner())
-                            <li class="nav-item-create">
+                            <li class="nav-item-create {{\Route::current()->getName() == 'schools.create' ? 'selected' : ''}}">
                                 <a href="{{route('schools.create')}}">Créer une nouvelle école / classe</a>
                             </li>
                             @endif
-                            <li class="nav-item-settings">
+                            <li class="nav-item-settings {{\Route::current()->getName() == 'users.settings' ? 'selected' : ''}}">
                                 <a href="/users/settings">Mes paramètres</a>
                             </li>
-                            <li class="nav-item-billing">
+                            <li class="nav-item-billing {{\Route::current()->getName() == 'users.billings' ? 'selected' : ''}}">
                                 <a href="/users/billings">Facturation</a>
                             </li>
                             <li class="nav-item-help">
@@ -251,24 +251,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <a href="/user/admin">Tableau de bord admin</a>
                     </li>
                     @endif
-                    <li class="nav-item-profile selected">
+                    <li class="nav-item-profile {{\Route::current()->getName() == 'home' ? 'selected' : ''}}">
                         <a href="/home">Mes écoles</a>
                     </li>
                     @if(Auth::user()->isAdmin() || Auth::user()->isOwner())
-                    <li class="nav-item-create">
+                    <li class="nav-item-create {{\Route::current()->getName() == 'schools.create' ? 'selected' : ''}}">
                         <a href="{{route('schools.create')}}">Créer une nouvelle école / classe</a>
                     </li>
                     @endif
-                    <li class="nav-item-settings selected">
+                    <li class="nav-item-settings {{\Route::current()->getName() == 'users.settings' ? 'selected' : ''}}">
                         <a href="/users/settings">Mes paramètres</a>
                     </li>
-                    <li class="nav-item-billing selected">
+                    <li class="nav-item-billing {{\Route::current()->getName() == 'users.billings' ? 'selected' : ''}}">
                         <a href="/users/billings">Facturation</a>
                     </li>
-                    <li class="nav-item-help selected">
+                    <li class="nav-item-help">
                         <a id="my_teachable_help_form" href="https://support.oschoolelearning.com">Aidez-moi</a>
                     </li>
-                    <li class="nav-item-logout selected">
+                    <li class="nav-item-logout">
                         <a href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">Se déconnecter</a>
