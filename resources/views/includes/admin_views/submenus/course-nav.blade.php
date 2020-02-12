@@ -3,6 +3,21 @@
         <!---->
         <!---->
         {{-- style="background-image: url(/images/courses/logos/{{$course->logo}})" --}}
+        <div ng-if="course.image_url" style="background-image: url(&quot;/images/courses/logos/{{$course->logo}}&quot;);" class="course-image">
+            <div class="course-image-overlay">
+                @if($course->type == 'mooc')
+                <a id="preview" class="tch-btn-content-transparent tch-btn-sm fastclickable">
+                    Aperçu
+                </a>
+                @endif
+                @if($course->type == 'path' || $course->type == 'bootcamp')
+                <a id="preview" class="tch-btn-content-transparent tch-btn-sm fastclickable">
+                    Aperçu
+                </a>
+                @endif
+            </div>
+        </div>
+        <!--
         <div  class="course-name-placeholder" style="">
             <div class="row">
                 <div ng-bind="course.name" class="placeholder-course-name">
@@ -18,6 +33,7 @@
             <div class="row"><a href="{{ route('path.slug', $course->slug) }}" target="_blank" id="test-id-course-preview-btn" class="tch-btn-content-transparent tch-btn-sm fastclickable">Aperçu</a></div>
             @endif
         </div>
+    -->
         <!---->
     </div>
     <li what="nav item" ui-sref-active="active"
