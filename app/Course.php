@@ -175,6 +175,7 @@ class Course extends Model
                   return $this->belongsToMany('App\Information');
               }
 
+              
 
            public static function boot() {
            parent::boot();

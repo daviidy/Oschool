@@ -78,6 +78,9 @@ Route::resource('coupons', 'CouponController');
 
 Route::resource('informations', 'InformationController');
 
+Route::resource('sessions', 'SessionController');
+
+
 /*
 
 Route::get('/admin', 'AdminController@admin')
@@ -194,6 +197,11 @@ Route::get('/schoolAdmin/{school}/courses/{course}/students', 'CourseController@
 Route::get('/schoolAdmin/{school}/informations', 'InformationController@index');
 Route::get('/schoolAdmin/{school}/informations/create', 'InformationController@create');
 Route::get('/schoolAdmin/{school}/informations/{information}/edit', 'InformationController@edit');
+
+//course Session
+Route::get('/schoolAdmin/{school}/sessions', 'SessionController@index');
+Route::get('/schoolAdmin/{school}/sessions/create', 'SessionController@create');
+Route::get('/schoolAdmin/{school}/sessions/{session}', 'SessionController@show');
 
 //course curriculum
 Route::get('/schoolAdmin/{school}/courses/{course}/curriculum', 'CourseController@curriculum')->name('course');
