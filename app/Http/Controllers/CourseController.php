@@ -104,10 +104,10 @@ class CourseController extends Controller
     public function showSlug($slug)
     {
         $course = Course::where('slug', $slug)->firstOrFail();
-        if (!Auth::user()->isAdmin() && !Auth::user()->isOwner()) {
+        if (Auth::check() && !Auth::user()->isAdmin() && !Auth::user()->isOwner()) {
             if ($course->type == 'mooc') {
                 //si user connecté et inscrit au cours
-                if (Auth::check() && Auth::user()->courses->contains($course->id)) {
+                if (Auth::user()->courses->contains($course->id)) {
                 return view('courses.curriculum', ['course' => $course]);
                 }
                 else {
