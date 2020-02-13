@@ -158,8 +158,21 @@ class CourseController extends Controller
     {
         $course = Course::where('slug', $slug)->firstOrFail();
 
+        if (Auth::check() && !Auth::user()->isAdmin() && !Auth::user()->isOwner()) {
 
-        return view('courses.curriculum', ['course' => $course]);
+            if (Auth::user()->courses->contains($course->id)) {
+                return view('courses.curriculum', ['course' => $course]);
+            }
+            else {
+                return view('courses.show', ['course' => $course]);
+            }
+
+        }
+        else {
+            return view('courses.curriculum', ['course' => $course]);
+        }
+
+
     }
 
     /**
