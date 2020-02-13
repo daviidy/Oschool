@@ -104,19 +104,29 @@ class CourseController extends Controller
     public function showSlug($slug)
     {
         $course = Course::where('slug', $slug)->firstOrFail();
-
-        if ($course->type == 'mooc') {
-            //si user connecté et inscrit au cours
-            if (Auth::check() && Auth::user()->courses->contains($course->id)) {
-            return view('courses.curriculum', ['course' => $course]);
+        if (!Auth::user()->isAdmin() && !Auth::user()->isOwner()) {
+            if ($course->type == 'mooc') {
+                //si user connecté et inscrit au cours
+                if (Auth::check() && Auth::user()->courses->contains($course->id)) {
+                return view('courses.curriculum', ['course' => $course]);
+                }
+                else {
+                    return view('courses.show', ['course' => $course]);
+                }
             }
-            else {
+            elseif ($course->type == 'path' || $course->type == 'bootcamp') {
+                return view('paths.show', ['course' => $course]);
+            }
+        }
+        else {
+            if ($course->type == 'mooc') {
                 return view('courses.show', ['course' => $course]);
             }
+            else {
+                return view('paths.show', ['course' => $course]);
+            }
         }
-        elseif ($course->type == 'path' || $course->type == 'bootcamp') {
-            return view('paths.show', ['course' => $course]);
-        }
+
 
 
     }
