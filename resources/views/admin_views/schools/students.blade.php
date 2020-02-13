@@ -755,6 +755,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         </tr>
                         <!---->
                         @foreach($school->users as $user)
+                        @if($user->type1 == 'default')
                         <tr what="user" which="davidyfreelance@gmail.com" ng-repeat="user in users" class="border-bottom">
                             <td class="user-name-container"><input what="select user checkbox" type="checkbox" ng-model="user.userSelected" ng-change="updateSelectedUsers(user)" ng-checked="user.userSelected" ng-hide="(user.id === currentUser._id)"
                                   class="pull-left ng-pristine ng-untouched ng-valid ng-empty {{$user->isAdmin() || $user->isOwner() ? 'ng-hide' : ''}}">
@@ -802,6 +803,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                   ng-bind="getAffiliateCode(user)">507165_ajxeso0q</span></td>
                             <td ng-hide="hideEmailButton" class="ng-hide"><button ng-click="emailUser(user.id)" class="tch-btn-content-secondary tch-btn-icon pull-right fastclickable"><i class="fa fa-envelope-o"></i></button></td>
                         </tr>
+                        @endif
                         @endforeach
                         <!---->
 

@@ -757,6 +757,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         </tr>
                         <!---->
                         @foreach($school->users as $user)
+                        @if($user->isOwner())
                         <tr what="user" which="davidyfreelance@gmail.com" ng-repeat="user in users" class="border-bottom">
                             <td class="user-name-container"><input what="select user checkbox" type="checkbox" ng-model="user.userSelected" ng-change="updateSelectedUsers(user)" ng-checked="user.userSelected" ng-hide="(user.id === currentUser._id)"
                                   class="pull-left ng-pristine ng-untouched ng-valid ng-empty {{$user->isAdmin() || $user->isOwner() ? 'ng-hide' : ''}}">

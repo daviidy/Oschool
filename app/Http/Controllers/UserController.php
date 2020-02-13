@@ -19,19 +19,16 @@ class UserController extends Controller
      */
     public function index(School $school)
     {
-        $users = User::orderby('id','asc')->paginate(50);
         return view('admin_views.schools.users', ['school' => $school]);
     }
 
     public function students(School $school)
     {
-        $users = User::where('type1', 'default')->orderby('id','asc')->paginate(50);
         return view('admin_views.schools.students', ['school' => $school]);
     }
 
     public function owners(School $school)
     {
-        $users = User::where('type3', 'owner')->orderby('id','asc')->paginate(50);
         return view('admin_views.schools.owners', ['school' => $school]);
     }
 

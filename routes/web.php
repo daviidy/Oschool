@@ -168,6 +168,14 @@ Route::get('/schoolAdmin/{school}/sales/transactions', 'SchoolController@schoolT
 Route::get('/schoolAdmin/{school}/sales/statements', 'SchoolController@schoolStatements');
 
 
+//routes for events tab
+//school events
+Route::get('/schoolAdmin/{school}/sessions', 'SessionController@index')->name('admin');
+
+Route::get('/schoolAdmin/{school}/sessions/create', 'SessionController@create')->name('admin');
+
+
+
 //routes for users tab
 //school users
 Route::get('/schoolAdmin/{school}/users', 'UserController@index')->name('userSettings');
