@@ -144,7 +144,7 @@ Route::get('/search', ['as' => 'search', 'uses' => 'SchoolController@search']);
 //routes for school admin dashboard
 
 //school admin dashboard
-Route::get('/schoolAdmin/{school}', 'SchoolController@showForAdmin');
+Route::get('/schoolAdmin/{school}', 'SchoolController@showForAdmin')->name('admin');
 
 //school settings
 Route::get('/schoolAdmin/{school}/settings/general', 'SchoolController@edit')->name('schoolSettings');
@@ -153,7 +153,7 @@ Route::get('/schoolAdmin/{school}/settings/general', 'SchoolController@edit')->n
 Route::get('/schoolAdmin/{school}/settings/payments', 'SchoolController@schoolPayments')->name('schoolSettings');
 
 //school students
-Route::get('/schoolAdmin/{school}/users/students', 'SchoolController@schoolStudents');
+Route::get('/schoolAdmin/{school}/users', 'SchoolController@schoolStudents')->name('userSettings');
 
 //school owners
 Route::get('/schoolAdmin/{school}/users/owners', 'SchoolController@schoolOwners');
@@ -167,6 +167,19 @@ Route::get('/schoolAdmin/{school}/sales/transactions', 'SchoolController@schoolT
 //school statements from oschool
 Route::get('/schoolAdmin/{school}/sales/statements', 'SchoolController@schoolStatements');
 
+
+//routes for users tab
+//school users
+Route::get('/schoolAdmin/{school}/users', 'UserController@index')->name('userSettings');
+
+//school owners
+Route::get('/schoolAdmin/{school}/owners', 'UserController@owners')->name('userSettings');
+
+//school students
+Route::get('/schoolAdmin/{school}/students', 'UserController@students')->name('userSettings');
+
+//school authors
+Route::get('/schoolAdmin/{school}/authors', 'UserController@authors')->name('userSettings');
 
 //routes for course admin dashboard
 
@@ -188,7 +201,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/deliverables', 'DeliverableCo
 Route::get('/schoolAdmin/{school}/course/{course}/project/{project}/deliverables/{deliverable}/edit', 'DeliverableController@edit')->name('deliverable');
 
 //course students
-Route::get('/schoolAdmin/{school}/courses/{course}/students', 'CourseController@students')->name('course');
+Route::get('/schoolAdmin/{school}/courses/{course}/students', 'CourseController@students')->name('userSettings');
 
 //course Notification
 Route::get('/schoolAdmin/{school}/informations', 'InformationController@index');
@@ -289,7 +302,9 @@ Route::post('/monthlyPayments', 'AdminController@monthlyPayments');
 // for authors
 
 Route::get('/schoolAdmin/{school}/authors/{author}/edit', 'AuthorController@edit');
-Route::get('/schoolAdmin/{school}/authors', 'AuthorController@index');
+
+//Route::get('/schoolAdmin/{school}/authors', 'AuthorController@index');
+
 Route::get('/schoolAdmin/{school}/authors/create', 'AuthorController@create');
 Route::post('/updateAuthor/{author}', 'AuthorController@update');
 

@@ -1,5 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
-@section('title', 'Liste des propriétaires')
+@section('title', 'Liste des utilisateurs')
 @section('content')
 
 <style media="screen">
@@ -534,7 +534,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Liste des propriétaires de cette école
+                    <!---->Liste des utilisateurs à ce cours
                     <div class="tch-btn-header-icon-2">
                       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="20" height="40"viewBox="0 0 172 172"style=" fill:#000000;position: relative;bottom: 8px;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g fill="#3498db"><path d="M129.07556,30.25717l12.67131,12.67175l-98.8199,98.81645l-12.67131,-12.67175z"></path><path d="M141.73757,129.08237l-12.67077,12.66723l-98.80691,-98.8345l12.67077,-12.66723z"></path></g><path d="" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path></g></g></svg>
                     </div>
@@ -545,7 +545,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <!----><a id="download-csv-button" ng-if="permissions.can('view_students') &amp;&amp; permissions.can('export_csv_data')" what="email csv button" ng-click="csvProcess()" ng-autodisable="" class="tch-btn-header-secondary fastclickable">
                         Exporter en fichier CSV</a>
                         <!----><span class="space"></span>
-                        <!----><span class="space"></span><a id="import-students" what="import students" ng-click="openImportModal()" ng-show="::canImportUsers" class="tch-btn-header-primary fastclickable">Ajouter des propriétaires</a>
+                        <!----><span class="space"></span><a id="import-students" what="import students" ng-click="openImportModal()" ng-show="::canImportUsers" class="tch-btn-header-primary fastclickable">Ajouter des utilisateurs</a>
                     </div>
                 </div>
             </div>
@@ -711,7 +711,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                           class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"><i class="fa fa-angle-right"></i></button></div>
                 </div>
                 <div class="tch-page-nav-count _2JQIJ">Affichage de<span ng-bind="' ' + (meta.from) + '  -  ' + meta.to + ' '" what="student count"> 1 - 2 </span> of<span what="student count" ng-bind="' ' + (meta.total >= 10000 ? '10,000+' : meta.total)">
-                        2</span><span class="student-count"> Propriéteires</span><span class="space"></span><span class="space"></span>
+                        2</span><span class="student-count"> Utilisateurs</span><span class="space"></span><span class="space"></span>
                     <!---->
                     <!---->
                 </div>
@@ -732,7 +732,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             </th>
                             <th what="email column header" ng-click="toggleSort('email')" class="users-table-header _22oLp">Email<span class="space"></span><i ng-show="stateParams.sort_key === 'email' &amp;&amp; stateParams.sort_direction === 'ASC'"
                                   class="fa fa-angle-up ng-hide"></i><i ng-show="(stateParams.sort_key === 'email' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
-                                  <!--
                             <th what="unsubscribe code column header" ng-click="toggleSort('unsubscribe_from_marketing_emails')" ng-show="showColumn(title, 'unsubscribe')" class="users-table-header _22oLp">Total achats<span class="space"></span><i
                                   ng-show="stateParams.sort_key === 'unsubscribe_from_marketing_emails' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
                                   ng-show="(stateParams.sort_key === 'unsubscribe_from_marketing_emails' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
@@ -753,7 +752,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                   ng-show="stateParams.sort_key === 'affiliate_code' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
                                   ng-show="(stateParams.sort_key === 'affiliate_code' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
                             <th></th>
-                        -->
                         </tr>
                         <!---->
                         @foreach($school->users as $user)
@@ -772,19 +770,37 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     <!----><span what="name" ng-bind="user.name" ui-sref="admin.users.user.information({ id: user.id })" class="user-label _2kIOe" href="/admin/users/32429890/information">{{$user->name}}</span><br></div>
                             </td>
                             <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span what="email" ng-bind="user.email">{{$user->email}}</span></td>
+                            @php
+                            $total = 0;
+                            @endphp
+                            @if(count($user->purchases) > 0)
+                            @foreach($user->purchases->where('status', 'Validé') as $purchase)
+                            @php
+                            $total += $purchase->pricing->price;
+                            @endphp
+                            @endforeach
+                            @endif
+                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'unsubscribe')" class="_2kIOe" href="/admin/users/32429890/information"><span ng-bind="getUnsubscribeFromMarketingEmails(user)">{{$total}}</span>
+                            </td>
 
-
-                            <!--
                             <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span am-time-ago="user.created_at">{{$user->created_at}}</span></td>
                             <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'role')" class="_2kIOe ng-hide" href="/admin/users/32429890/information"><span what="role"
                                   ng-bind="user.custom_role_name || 'Admin'">Admin</span><a href="javascript:void(0)" tooltip-class="grey" tooltip-html-unsafe="" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
                                   class="tch-btn-tooltip"><i><img ng-src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-key.svg" src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-key.svg"></i></a></td>
-
+                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'purchases')" class="_2kIOe" href="/admin/users/32429890/information"><span
+                                  ng-bind="(user.transactions_gross / 100) | currency">
+                                      @foreach($user->courses as $course)
+                                      @if(!$loop->last)
+                                      {{$course->name}},
+                                      @else
+                                      {{$course->name}},
+                                      @endif
+                                      @endforeach
+                                  </span></td>
                             <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'revenue share')" class="_2kIOe ng-hide" href="/admin/users/32429890/information"><span ng-bind="getRevenueShare(user)">0%</span></td>
                             <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'affiliate code')" class="_2kIOe ng-hide" href="/admin/users/32429890/information"><span
                                   ng-bind="getAffiliateCode(user)">507165_ajxeso0q</span></td>
                             <td ng-hide="hideEmailButton" class="ng-hide"><button ng-click="emailUser(user.id)" class="tch-btn-content-secondary tch-btn-icon pull-right fastclickable"><i class="fa fa-envelope-o"></i></button></td>
-                        -->
                         </tr>
                         @endforeach
                         <!---->
