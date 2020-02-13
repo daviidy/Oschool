@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\School;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
@@ -16,9 +17,24 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(School $school)
     {
-        //
+        return view('admin_views.schools.users', ['school' => $school]);
+    }
+
+    public function students(School $school)
+    {
+        return view('admin_views.schools.students', ['school' => $school]);
+    }
+
+    public function owners(School $school)
+    {
+        return view('admin_views.schools.owners', ['school' => $school]);
+    }
+
+    public function authors(School $school)
+    {
+        return view('admin_views.schools.authors', ['school' => $school]);
     }
 
     /**

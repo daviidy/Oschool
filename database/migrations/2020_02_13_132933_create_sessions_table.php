@@ -17,9 +17,10 @@ class CreateSessionsTable extends Migration
             $table->bigIncrements('id');
             $table->dateTime('date');
             $table->string('link');
-            $table->integer('user_id');
-            $table->text('comment');
-            $table->string('status');
+            $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->longText('comment')->nullable();
+            $table->boolean('status')->nullable();
             $table->timestamps();
         });
     }

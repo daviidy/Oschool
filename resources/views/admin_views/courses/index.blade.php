@@ -336,7 +336,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                         <div class="tch-course-listing-sales-label">Ventes</div>
                                     </div>
                                     <div class="tch-course-listing-enrollment tch-course-listing-footer-section">
-                                        <div ng-bind="::courseStats[course.id].enrolled" what="course-total-enrolled" class="tch-course-listing-enrollment-total">0</div>
+                                        <div ng-bind="::courseStats[course.id].enrolled" what="course-total-enrolled" class="tch-course-listing-enrollment-total">{{count($course->users)}}</div>
                                         <div class="tch-course-listing-enrollment-label">Inscrit(e)(s)</div>
                                     </div>
                                 </div>

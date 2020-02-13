@@ -6,6 +6,7 @@ use App\Session;
 use App\Course;
 use App\School;
 use App\User;
+
 use Illuminate\Http\Request;
 
 class SessionController extends Controller
@@ -15,10 +16,12 @@ class SessionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(User $User)
+
+    
+    public function index(School $school)
     {
-        //
-        return view('admin_views.sessions.index', ['user' => $user]);
+        return view('admin_views.sessions.index', ['school' => $school]);
+
     }
 
     /**
@@ -26,11 +29,10 @@ class SessionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(User $User)
-    {
-        //
-         return view('admin_views.sessions.create', ['user' => $user]);
 
+    public function create(School $school)
+    {
+        return view('admin_views.sessions.create', ['school' => $school]);
     }
 
     /**
