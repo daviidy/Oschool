@@ -304,19 +304,21 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             <table ng-if="products.length > 0" class="tch-table draggable-products">
                 <thead>
                     <tr>
-                        <th>Cours</th>
-                        <th>Texte</th>
+                        <th>Date de la session</th>
+                        <th>Animateur</th>
+                        <th>Etudiant</th>
+                        <th>Commentaire</th>
                     </tr>
                 </thead>
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
-                    @foreach ($school->courses as $course)
-                    @foreach ($course->informations as $information)
+                    @foreach ($school->sessions as $session)
+                    
 
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
-                        <td><span>{{$course->name}}</span><span class="space"></span><span class="space"></span>
+                        {{--<td><span>{{$course->name}}</span><span class="space"></span><span class="space"></span>
                             <!---->
-                        </td>
+                        </td>--}}
                         {{-- <td what="type"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg">
                             <!---->
                             <!---->
@@ -326,7 +328,22 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                         </td> --}}
                         <td what="comment">
                             <div>
-                               {!!$information->text!!}
+                               {{$session->date}}
+                            </div>
+                        </td>
+                        <td what="comment">
+                            <div>
+                               {{$session->user_id}}
+                            </div>
+                        </td>
+                        <td what="comment">
+                            <div>
+                               {{$session->user_id}}
+                            </div>
+                        </td>
+                        <td what="comment">
+                            <div>
+                               {{$session->comment}}
                             </div>
                         </td>
 
@@ -362,7 +379,6 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
 
                     </tr>
 
-                    @endforeach
                     @endforeach
                     <!---->
                 </tbody>
