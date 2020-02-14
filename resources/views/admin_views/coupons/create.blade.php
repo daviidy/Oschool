@@ -396,6 +396,9 @@
                     <!---->
                 </div>
             </div>
+
+            @include('includes.status')
+
             <div class="tch-inline-form">
 
                 <div class="slide-show" style="">

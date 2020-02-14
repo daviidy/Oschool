@@ -78,8 +78,7 @@
         .btn:hover,.btn:focus{color:white;text-decoration:none;}
         .btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);}
         .btn-block{display:block;width:100%;}
-        .alert{padding:15px;margin-bottom:22px;border:1px solid transparent;border-radius:4px;}
-        .alert-info{color:#4d90cc;background-color:#4d90cc3b;border-color:#4d90cc3b;}
+
         .pull-right{float:right!important;}
         tr.border-bottom td{border-bottom:1pt solid #f3f3f3;}
         [disabled]{cursor:default!important;pointer-events:none;}
@@ -145,15 +144,7 @@
         @media screen and (max-width: 1000px){
         .tch-btn-tooltip{display:none;}
         }
-        .alert{background:none;color:#20272d;padding:14px 25px 14px 25px;text-shadow:none;border-radius:3px;font-family:"TeachableSans";line-height:21px;letter-spacing:0.2px;margin-bottom:26px;font-weight:400;font-size:11px;font-weight:500;display:-webkit-box;display:-ms-flexbox;display:flex;position:relative;-webkit-box-align:center;-ms-flex-align:center;align-items:center;letter-spacing:0.5px;font-size:12px;}
-        .alert a{color:#f1c40f;font-weight:bold;}
-        .alert a:hover{text-decoration:underline;}
-        .alert{padding:14px 25px 14px 47px;background:none;border:1px solid #e0e0e0;color:#6f6c6c;}
-        .alert:before{font-family:FontAwesome;position:absolute;margin-left:-30px;display:block;top:calc(50% - 15px);padding:5px;font-size:20px;color:#809196;opacity:0.9;}
-        .alert a{text-decoration:underline;font-weight:600;}
-        .alert-info{background:#4d90cc3b;border:1px solid #4d90cc3b;color:#4D90CC;}
-        .alert-info:before{content:'\F059';color:#4D90CC;}
-        .alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#4D90CC;text-decoration:underline;}
+
         .tch-learn-more{text-align:center;}
         .tch-learn-more .alert{display:inline-block;margin:auto;}
         .tch-page-header .tch-btn-hamburger{margin-right:9px!important;float:left;margin-top:-6px!important;padding:5px 1px;margin-top:3px;text-align:center;}
@@ -389,7 +380,7 @@
                             <!---->
                             <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                             <!---->
-                            <!---->Modifié un nouveau coupon
+                            <!---->Modifier un nouveau coupon
                         </div>
                         <!---->
                         <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -397,12 +388,15 @@
                     <!---->
                 </div>
             </div>
+
+            @include('includes.status')
+
             <div class="tch-inline-form">
 
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="POST" action="{{route('coupon.update', $coupon->id)}}" enctype="multipart/form-data class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="editor-container">
+            <form method="POST" action="{{route('coupon.update', $coupon->id)}}" enctype="multipart/form-data" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="editor-container">
                 {{ csrf_field() }}
                 {{ method_field('post') }}
                     <!---->
@@ -475,7 +469,7 @@
                             </div>
                             {{-- <input style="display: none;" type="hidden" name="project_id" value="{{$project->id}}"> --}}
                             {{-- <input style="display: none;" type="hidden" name="user_id" value="{{Auth::user()->id}}"> --}}
-                            <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Modifié le coupon</button></div>
+                            <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Modifier le coupon</button></div>
                         </div>
                     </div>
                     <!---->

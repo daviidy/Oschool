@@ -267,6 +267,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             <!---->
         </div>
     </div>
+    @include('includes.status')
     <div class="tch-inline-form">
     <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/coupons/create">Nouveau Coupon</a></div>
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">

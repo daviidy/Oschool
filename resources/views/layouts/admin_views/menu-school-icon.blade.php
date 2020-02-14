@@ -235,6 +235,23 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     }
     </style>
 
+    <style media="screen">
+    .alert{padding:15px;margin-bottom:22px;border:1px solid transparent;border-radius:8px !important;}
+    .alert-info{color:#4d90cc;background-color:#4d90cc3b;border-color:#4d90cc3b;}
+    .alert{background:none;color:#20272d;padding:14px 25px 14px 25px;text-shadow:none;border-radius:3px;font-family:"TeachableSans";line-height:21px;letter-spacing:0.2px;margin-bottom:26px;font-weight:400;font-size:11px;font-weight:500;display:-webkit-box;display:-ms-flexbox;display:flex;position:relative;-webkit-box-align:center;-ms-flex-align:center;align-items:center;letter-spacing:0.5px;font-size:12px;}
+    .alert a{color:#f1c40f;font-weight:bold;}
+    .alert a:hover{text-decoration:underline;}
+    .alert{padding:14px 25px 14px 47px;background:#1EA69A !important;border:1px solid #e0e0e0;color:#fff !important;}
+    .alert:before{font-family:FontAwesome;position:absolute;margin-left:-30px;display:block;top:calc(50% - 15px);padding:5px;font-size:20px;color:#809196;opacity:0.9;}
+    .alert a{text-decoration:underline;font-weight:600;}
+    .alert-info{background:#4d90cc3b;border:1px solid #4d90cc3b;color:#4D90CC;}
+    .alert-info:before{content:'\F059';color:#4D90CC;}
+    .alert-info a,.alert-info a:hover,.alert-info a:active,.alert-info a:focus{font-weight:300;color:#4D90CC;text-decoration:underline;}
+
+    </style>
+
+
+
 
 <script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59'); </script>
 
@@ -248,11 +265,15 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  {{--
     @if (session('status'))
     <div style="z-index: 10000;" class="w3-panel w3-red w3-display-container">
         {{ session('status') }}
     </div>
     @endif
+    --}}
+
+
 
 
 
