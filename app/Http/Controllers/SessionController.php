@@ -44,6 +44,17 @@ class SessionController extends Controller
     public function store(Request $request)
     {
         //
+        $session = Session::create($request->all());
+        if(is_array($request->school_id))
+        {
+            foreach($request->school_id as $school_id)
+            {
+                $school_found = School::find($school_id);
+                $session->schools()->attach($school_found);
+            }
+        }
+
+        return back()->with('status', 'Nouvelle session programmée');
     }
 
     /**

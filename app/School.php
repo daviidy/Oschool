@@ -66,6 +66,11 @@ class School extends Model
          return $this->hasMany('App\Author');
      }
 
+     public function sessions()
+      {
+          return $this->hasMany('App\Session');
+      }
+
 
      public static function boot() {
      parent::boot();

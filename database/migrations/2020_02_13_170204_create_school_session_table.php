@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSessionsTable extends Migration
+class CreateSchoolSessionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateSessionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sessions', function (Blueprint $table) {
+        Schema::create('school_session', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->dateTime('date');
-            $table->string('link');
-            $table->integer('user_id');
-            $table->text('comment');
-            $table->string('status');
+            $table->integer('school_id')->unsigned();
+            $table->integer('session_id')->unsigned();
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateSessionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sessions');
+        Schema::dropIfExists('school_session');
     }
 }

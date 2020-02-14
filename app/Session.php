@@ -8,11 +8,12 @@ class Session extends Model
 {
     //
         protected $fillable = [
-                        'date'
-                        'link'
-                        'user_id'
-                        'comment'
-                        'status'
+                        'date',
+                        'link',
+                        'user_id',
+                        'school_id',
+                        'comment',
+                        'status',
                          ];
      /**
       * [users description]
@@ -28,7 +29,14 @@ class Session extends Model
 
       public function teacher()
       {
-          return $this->belongsToMany('App\User');
+          return $this->belongsTo('App\User');
       }
+
+      public function school()
+      {
+          return $this->belongsTo('App\School');
+      }
+
+      
 
 }

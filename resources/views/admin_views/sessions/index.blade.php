@@ -312,8 +312,8 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                 </thead>
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
-                    @foreach ($school->courses as $course)
-                    @foreach ($course->informations as $information)
+                    @foreach ($school->sessions as $session)
+                    
 
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
                         {{--<td><span>{{$course->name}}</span><span class="space"></span><span class="space"></span>
@@ -379,7 +379,6 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
 
                     </tr>
 
-                    @endforeach
                     @endforeach
                     <!---->
                 </tbody>

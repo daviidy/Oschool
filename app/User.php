@@ -158,6 +158,10 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsToMany('App\Session');
     }
 
+public function sessionsTeacher()
+      {
+          return $this->hasMany('App\Session');
+      }
 
 
     public static function boot() {

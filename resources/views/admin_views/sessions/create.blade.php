@@ -498,7 +498,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                             <!---->
                             <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                             <!---->
-                            <!---->Ajouter un nouveau coupon
+                            <!---->Ajouter une nouvelle session
                         </div>
                         <!---->
                         <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -511,12 +511,12 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="POST" action="{{route('informations.store')}}" enctype="multipart/form-data" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="information-container">
+            <form method="POST" action="{{route('sessions.store')}}" enctype="multipart/form-data" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="information-container">
                 @csrf
                     <!---->
                     <!---->
                     <div ng-if="planType" class="" style="">
-                      <a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/informations" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+                      <a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/sessions" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
                         <!---->
                         <!---->
                         <!---->
@@ -533,12 +533,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                             <!---->
                             <div ng-show="products.length > 0" class="">
                             <div class="col-sm-12 add-top-margin-25">
-                                <label for="code">Texte</label>
-                                <br>
-                                <input type="hidden" name="text">
-                                <div class="" id="editorInformation" style="height: 300px;">
-
-                                </div>
+                                
 
                             </div>
 
@@ -557,9 +552,13 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                                       </select> --}}
 
                                       <select class="js-example-basic-multiple" name="courses_id[]" multiple="multiple" style="width:250px;">
-                                            @foreach ($school->courses as $course_db)
-                                                        <option value="{{$course_db->id}}">{{$course_db->name}}</option>
+                                            @foreach ($school->courses as $path)
+                                                        <option value="{{$path->id}}">{{$path->name}}</option>
                                                     @endforeach
+                                                    @foreach ($school->users as $user)
+                                                        <option value="{{$user->name}}">{{$user->name}}</option>
+                                                    @endforeach
+
                                           </select>
 
                                   </div>
@@ -592,341 +591,72 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                     <!----><span ng-if="!onboardingPricingPageCheckoutSuccess">Welcome, </span>
                     <!---->David Yao!</h2>
                 <!---->
-                <p class="survey-container__customize m-t-4-xs p-h-3-xs">We want your experience to be perfect for your needs. Please answer a few questions to help us get to know you better.</p>
-                <form name="surveyForm" sf-schema="survey.schema" sf-form="survey.form" sf-model="survey" ng-submit="submitSurvey(surveyForm, survey)" class="ng-pristine ng-valid ng-valid-schema-form">
+                <p class="survey-container__customize m-t-4-xs p-h-3-xs">.</p>
+
+
+                <form action="{{route('sessions.store')}}" name="surveyForm" sf-schema="survey.schema" sf-form="survey.form" sf-model="survey" ng-submit="submitSurvey(surveyForm, survey)" class="ng-pristine ng-valid ng-valid-schema-form" id="information-container">
+                        @csrf
+
+                                              <a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/sessions" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+
                     <bootstrap-decorator form="schemaForm.form[0]">
                         <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                          class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Are you a business owner?</label><select ng-model="model['question_1']" ng-model-options="form.ngModelOptions"
-                              ng-disabled="form.readonly" sf-changed="form" schema-validate="form" ng-options="item.value as item.name group by item.group for item in form.titleMap" name="question_1" default-option="Please choose an option..."
-                              class="form-control ">
-                                <option value="" disabled="" selected="selected" style="display: none;">Please choose an option...</option>
-                                <option label="Yes, I work on my business full-time" value="string:a">Yes, I work on my business full-time</option>
-                                <option label="Yes, I work on my business part-time" value="string:b">Yes, I work on my business part-time</option>
-                                <option label="No, I created this account for my employer" value="string:d">No, I created this account for my employer</option>
-                                <option label="No, just exploring" value="string:c">No, just exploring</option>
-                            </select></div>
+                          class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Date et heure</label>
+                          <input type="datetime-local" name="date">
+
+                          </div>
                     </bootstrap-decorator>
-                    <bootstrap-decorator form="schemaForm.form[1]">
-                        <!---->
-                    </bootstrap-decorator>
-                    <bootstrap-decorator form="schemaForm.form[2]">
-                        <!---->
-                    </bootstrap-decorator>
-                    <bootstrap-decorator form="schemaForm.form[3]">
-                        <!---->
-                    </bootstrap-decorator>
-                    <bootstrap-decorator form="schemaForm.form[4]">
-                        <!---->
-                    </bootstrap-decorator>
+                    
                     <bootstrap-decorator form="schemaForm.form[5]">
                         <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                          class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Which topic is most relevant to your business or content?</label><select ng-model="model['question_2']"
-                              ng-model-options="form.ngModelOptions" ng-disabled="form.readonly" sf-changed="form" schema-validate="form" ng-options="item.value as item.name group by item.group for item in form.titleMap" name="question_2"
-                              default-option="Please choose an option..." class="form-control ">
-                                <option value="" disabled="" selected="selected" style="display: none;">Please choose an option...</option>
-                                <option label="Personal Development" value="string:a">Personal Development</option>
-                                <option label="Business &amp; Marketing" value="string:b">Business &amp; Marketing</option>
-                                <option label="Finance &amp; Investing" value="string:c">Finance &amp; Investing</option>
-                                <option label="Software &amp; Technology" value="string:d">Software &amp; Technology</option>
-                                <option label="Health &amp; Wellness" value="string:e">Health &amp; Wellness</option>
-                                <option label="Fitness &amp; Nutrition" value="string:f">Fitness &amp; Nutrition</option>
-                                <option label="Family &amp; Parenting" value="string:g">Family &amp; Parenting</option>
-                                <option label="Fashion &amp; Beauty" value="string:h">Fashion &amp; Beauty</option>
-                                <option label="Arts &amp; Crafting" value="string:i">Arts &amp; Crafting</option>
-                                <option label="Design &amp; UX" value="string:j">Design &amp; UX</option>
-                                <option label="Music &amp; Instruments" value="string:k">Music &amp; Instruments</option>
-                                <option label="Photo &amp; Video" value="string:l">Photo &amp; Video</option>
-                                <option label="Food &amp; Drink" value="string:m">Food &amp; Drink</option>
-                                <option label="Acting &amp; Entertainment" value="string:n">Acting &amp; Entertainment</option>
-                                <option label="Academics &amp; Languages" value="string:o">Academics &amp; Languages</option>
-                                <option label="Spirituality &amp; Worship" value="string:p">Spirituality &amp; Worship</option>
-                                <option label="Something else" value="string:q">Something else</option>
-                            </select></div>
+                          class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Lien de la séance</label>
+                          <input type="url" name="link">
+
+                          
+                    </div>
                     </bootstrap-decorator>
                     <bootstrap-decorator form="schemaForm.form[6]">
+                        {{Auth::user()->id}}
+                        <input type="hidden" name="user_id">
                         <!---->
                     </bootstrap-decorator>
                     <bootstrap-decorator form="schemaForm.form[7]">
                         <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                          class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">What category best describes your business stage?</label><select ng-model="model['question_3']"
-                              ng-model-options="form.ngModelOptions" ng-disabled="form.readonly" sf-changed="form" schema-validate="form" ng-options="item.value as item.name group by item.group for item in form.titleMap" name="question_3"
-                              default-option="Please choose an option..." class="form-control ">
-                                <option value="" disabled="" selected="selected" style="display: none;">Please choose an option...</option>
-                                <option label="I prefer not to answer" value="string:f">I prefer not to answer</option>
-                                <option label="$0 - $5k in annual revenue" value="string:a">$0 - $5k in annual revenue</option>
-                                <option label="$5k - $25k in annual revenue" value="string:b">$5k - $25k in annual revenue</option>
-                                <option label="$25k - $100k in annual revenue" value="string:c">$25k - $100k in annual revenue</option>
-                                <option label="$100k - $500k in annual revenue" value="string:d">$100k - $500k in annual revenue</option>
-                                <option label="$500k or greater in annual revenue" value="string:e">$500k or greater in annual revenue</option>
-                                <option label="I'm not a business" value="string:g">I'm not a business</option>
-                            </select></div>
+                          class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Commentaire</label>
+                          
+                                <input type="hidden" name="comment">
+                                <div class="" id="editorInformation" style="height: 300px;">
+
+                                </div>
+
+                          
+                        </div>
                     </bootstrap-decorator>
+
                     <bootstrap-decorator form="schemaForm.form[8]">
                         <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                          class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Which country are you located in?</label><select ng-model="model['billing_country']" ng-model-options="form.ngModelOptions"
-                              ng-disabled="form.readonly" sf-changed="form" schema-validate="form" ng-options="item.value as item.name group by item.group for item in form.titleMap" name="billing_country" default-option="Please choose an option..."
-                              class="form-control ">
-                                <option value="" disabled="" selected="selected" style="display: none;">Please choose an option...</option>
-                                <option label="United States" value="string:USA">United States</option>
-                                <option label="Afghanistan" value="string:AFG">Afghanistan</option>
-                                <option label="Albania" value="string:ALB">Albania</option>
-                                <option label="Algeria" value="string:DZA">Algeria</option>
-                                <option label="American Samoa" value="string:ASM">American Samoa</option>
-                                <option label="Andorra" value="string:AND">Andorra</option>
-                                <option label="Angola" value="string:AGO">Angola</option>
-                                <option label="Anguilla" value="string:AIA">Anguilla</option>
-                                <option label="Antarctica" value="string:ATA">Antarctica</option>
-                                <option label="Antigua and Barbuda" value="string:ATG">Antigua and Barbuda</option>
-                                <option label="Argentina" value="string:ARG">Argentina</option>
-                                <option label="Armenia" value="string:ARM">Armenia</option>
-                                <option label="Aruba" value="string:ABW">Aruba</option>
-                                <option label="Australia" value="string:AUS">Australia</option>
-                                <option label="Austria" value="string:AUT">Austria</option>
-                                <option label="Azerbaijan" value="string:AZE">Azerbaijan</option>
-                                <option label="Bahamas" value="string:BHS">Bahamas</option>
-                                <option label="Bahrain" value="string:BHR">Bahrain</option>
-                                <option label="Bangladesh" value="string:BGD">Bangladesh</option>
-                                <option label="Barbados" value="string:BRB">Barbados</option>
-                                <option label="Belarus" value="string:BLR">Belarus</option>
-                                <option label="Belgium" value="string:BEL">Belgium</option>
-                                <option label="Belize" value="string:BLZ">Belize</option>
-                                <option label="Benin" value="string:BEN">Benin</option>
-                                <option label="Bermuda" value="string:BMU">Bermuda</option>
-                                <option label="Bhutan" value="string:BTN">Bhutan</option>
-                                <option label="Bolivia, Plurinational State of" value="string:BOL">Bolivia, Plurinational State of</option>
-                                <option label="Bonaire, Sint Eustatius and Saba" value="string:BES">Bonaire, Sint Eustatius and Saba</option>
-                                <option label="Bosnia and Herzegovina" value="string:BIH">Bosnia and Herzegovina</option>
-                                <option label="Botswana" value="string:BWA">Botswana</option>
-                                <option label="Bouvet Island" value="string:BVT">Bouvet Island</option>
-                                <option label="Brazil" value="string:BRA">Brazil</option>
-                                <option label="British Indian Ocean Territory" value="string:IOT">British Indian Ocean Territory</option>
-                                <option label="Brunei Darussalam" value="string:BRN">Brunei Darussalam</option>
-                                <option label="Bulgaria" value="string:BGR">Bulgaria</option>
-                                <option label="Burkina Faso" value="string:BFA">Burkina Faso</option>
-                                <option label="Burundi" value="string:BDI">Burundi</option>
-                                <option label="Cambodia" value="string:KHM">Cambodia</option>
-                                <option label="Cameroon" value="string:CMR">Cameroon</option>
-                                <option label="Canada" value="string:CAN">Canada</option>
-                                <option label="Cape Verde" value="string:CPV">Cape Verde</option>
-                                <option label="Cayman Islands" value="string:CYM">Cayman Islands</option>
-                                <option label="Central African Republic" value="string:CAF">Central African Republic</option>
-                                <option label="Chad" value="string:TCD">Chad</option>
-                                <option label="Chile" value="string:CHL">Chile</option>
-                                <option label="China" value="string:CHN">China</option>
-                                <option label="Christmas Island" value="string:CXR">Christmas Island</option>
-                                <option label="Cocos (Keeling) Islands" value="string:CCK">Cocos (Keeling) Islands</option>
-                                <option label="Colombia" value="string:COL">Colombia</option>
-                                <option label="Comoros" value="string:COM">Comoros</option>
-                                <option label="Congo" value="string:COG">Congo</option>
-                                <option label="Congo, the Democratic Republic of the" value="string:COD">Congo, the Democratic Republic of the</option>
-                                <option label="Cook Islands" value="string:COK">Cook Islands</option>
-                                <option label="Costa Rica" value="string:CRI">Costa Rica</option>
-                                <option label="Croatia" value="string:HRV">Croatia</option>
-                                <option label="Cuba" value="string:CUB">Cuba</option>
-                                <option label="Curaçao" value="string:CUW">Curaçao</option>
-                                <option label="Cyprus" value="string:CYP">Cyprus</option>
-                                <option label="Czech Republic" value="string:CZE">Czech Republic</option>
-                                <option label="Côte d'Ivoire" value="string:CIV">Côte d'Ivoire</option>
-                                <option label="Denmark" value="string:DNK">Denmark</option>
-                                <option label="Djibouti" value="string:DJI">Djibouti</option>
-                                <option label="Dominica" value="string:DMA">Dominica</option>
-                                <option label="Dominican Republic" value="string:DOM">Dominican Republic</option>
-                                <option label="Ecuador" value="string:ECU">Ecuador</option>
-                                <option label="Egypt" value="string:EGY">Egypt</option>
-                                <option label="El Salvador" value="string:SLV">El Salvador</option>
-                                <option label="Equatorial Guinea" value="string:GNQ">Equatorial Guinea</option>
-                                <option label="Eritrea" value="string:ERI">Eritrea</option>
-                                <option label="Estonia" value="string:EST">Estonia</option>
-                                <option label="Ethiopia" value="string:ETH">Ethiopia</option>
-                                <option label="Falkland Islands (Malvinas)" value="string:FLK">Falkland Islands (Malvinas)</option>
-                                <option label="Faroe Islands" value="string:FRO">Faroe Islands</option>
-                                <option label="Fiji" value="string:FJI">Fiji</option>
-                                <option label="Finland" value="string:FIN">Finland</option>
-                                <option label="France" value="string:FRA">France</option>
-                                <option label="French Guiana" value="string:GUF">French Guiana</option>
-                                <option label="French Polynesia" value="string:PYF">French Polynesia</option>
-                                <option label="French Southern Territories" value="string:ATF">French Southern Territories</option>
-                                <option label="Gabon" value="string:GAB">Gabon</option>
-                                <option label="Gambia" value="string:GMB">Gambia</option>
-                                <option label="Georgia" value="string:GEO">Georgia</option>
-                                <option label="Germany" value="string:DEU">Germany</option>
-                                <option label="Ghana" value="string:GHA">Ghana</option>
-                                <option label="Gibraltar" value="string:GIB">Gibraltar</option>
-                                <option label="Greece" value="string:GRC">Greece</option>
-                                <option label="Greenland" value="string:GRL">Greenland</option>
-                                <option label="Grenada" value="string:GRD">Grenada</option>
-                                <option label="Guadeloupe" value="string:GLP">Guadeloupe</option>
-                                <option label="Guam" value="string:GUM">Guam</option>
-                                <option label="Guatemala" value="string:GTM">Guatemala</option>
-                                <option label="Guernsey" value="string:GGY">Guernsey</option>
-                                <option label="Guinea" value="string:GIN">Guinea</option>
-                                <option label="Guinea-Bissau" value="string:GNB">Guinea-Bissau</option>
-                                <option label="Guyana" value="string:GUY">Guyana</option>
-                                <option label="Haiti" value="string:HTI">Haiti</option>
-                                <option label="Heard Island and McDonald Islands" value="string:HMD">Heard Island and McDonald Islands</option>
-                                <option label="Holy See (Vatican City State)" value="string:VAT">Holy See (Vatican City State)</option>
-                                <option label="Honduras" value="string:HND">Honduras</option>
-                                <option label="Hong Kong" value="string:HKG">Hong Kong</option>
-                                <option label="Hungary" value="string:HUN">Hungary</option>
-                                <option label="Iceland" value="string:ISL">Iceland</option>
-                                <option label="India" value="string:IND">India</option>
-                                <option label="Indonesia" value="string:IDN">Indonesia</option>
-                                <option label="Iran, Islamic Republic of" value="string:IRN">Iran, Islamic Republic of</option>
-                                <option label="Iraq" value="string:IRQ">Iraq</option>
-                                <option label="Ireland" value="string:IRL">Ireland</option>
-                                <option label="Isle of Man" value="string:IMN">Isle of Man</option>
-                                <option label="Israel" value="string:ISR">Israel</option>
-                                <option label="Italy" value="string:ITA">Italy</option>
-                                <option label="Jamaica" value="string:JAM">Jamaica</option>
-                                <option label="Japan" value="string:JPN">Japan</option>
-                                <option label="Jersey" value="string:JEY">Jersey</option>
-                                <option label="Jordan" value="string:JOR">Jordan</option>
-                                <option label="Kazakhstan" value="string:KAZ">Kazakhstan</option>
-                                <option label="Kenya" value="string:KEN">Kenya</option>
-                                <option label="Kiribati" value="string:KIR">Kiribati</option>
-                                <option label="Korea, Democratic People's Republic of" value="string:PRK">Korea, Democratic People's Republic of</option>
-                                <option label="Korea, Republic of" value="string:KOR">Korea, Republic of</option>
-                                <option label="Kuwait" value="string:KWT">Kuwait</option>
-                                <option label="Kyrgyzstan" value="string:KGZ">Kyrgyzstan</option>
-                                <option label="Lao People's Democratic Republic" value="string:LAO">Lao People's Democratic Republic</option>
-                                <option label="Latvia" value="string:LVA">Latvia</option>
-                                <option label="Lebanon" value="string:LBN">Lebanon</option>
-                                <option label="Lesotho" value="string:LSO">Lesotho</option>
-                                <option label="Liberia" value="string:LBR">Liberia</option>
-                                <option label="Libya" value="string:LBY">Libya</option>
-                                <option label="Liechtenstein" value="string:LIE">Liechtenstein</option>
-                                <option label="Lithuania" value="string:LTU">Lithuania</option>
-                                <option label="Luxembourg" value="string:LUX">Luxembourg</option>
-                                <option label="Macao" value="string:MAC">Macao</option>
-                                <option label="Macedonia, the Former Yugoslav Republic of" value="string:MKD">Macedonia, the Former Yugoslav Republic of</option>
-                                <option label="Madagascar" value="string:MDG">Madagascar</option>
-                                <option label="Malawi" value="string:MWI">Malawi</option>
-                                <option label="Malaysia" value="string:MYS">Malaysia</option>
-                                <option label="Maldives" value="string:MDV">Maldives</option>
-                                <option label="Mali" value="string:MLI">Mali</option>
-                                <option label="Malta" value="string:MLT">Malta</option>
-                                <option label="Marshall Islands" value="string:MHL">Marshall Islands</option>
-                                <option label="Martinique" value="string:MTQ">Martinique</option>
-                                <option label="Mauritania" value="string:MRT">Mauritania</option>
-                                <option label="Mauritius" value="string:MUS">Mauritius</option>
-                                <option label="Mayotte" value="string:MYT">Mayotte</option>
-                                <option label="Mexico" value="string:MEX">Mexico</option>
-                                <option label="Micronesia, Federated States of" value="string:FSM">Micronesia, Federated States of</option>
-                                <option label="Moldova, Republic of" value="string:MDA">Moldova, Republic of</option>
-                                <option label="Monaco" value="string:MCO">Monaco</option>
-                                <option label="Mongolia" value="string:MNG">Mongolia</option>
-                                <option label="Montenegro" value="string:MNE">Montenegro</option>
-                                <option label="Montserrat" value="string:MSR">Montserrat</option>
-                                <option label="Morocco" value="string:MAR">Morocco</option>
-                                <option label="Mozambique" value="string:MOZ">Mozambique</option>
-                                <option label="Myanmar" value="string:MMR">Myanmar</option>
-                                <option label="Namibia" value="string:NAM">Namibia</option>
-                                <option label="Nauru" value="string:NRU">Nauru</option>
-                                <option label="Nepal" value="string:NPL">Nepal</option>
-                                <option label="Netherlands" value="string:NLD">Netherlands</option>
-                                <option label="New Caledonia" value="string:NCL">New Caledonia</option>
-                                <option label="New Zealand" value="string:NZL">New Zealand</option>
-                                <option label="Nicaragua" value="string:NIC">Nicaragua</option>
-                                <option label="Niger" value="string:NER">Niger</option>
-                                <option label="Nigeria" value="string:NGA">Nigeria</option>
-                                <option label="Niue" value="string:NIU">Niue</option>
-                                <option label="Norfolk Island" value="string:NFK">Norfolk Island</option>
-                                <option label="Northern Mariana Islands" value="string:MNP">Northern Mariana Islands</option>
-                                <option label="Norway" value="string:NOR">Norway</option>
-                                <option label="Oman" value="string:OMN">Oman</option>
-                                <option label="Pakistan" value="string:PAK">Pakistan</option>
-                                <option label="Palau" value="string:PLW">Palau</option>
-                                <option label="Palestine, State of" value="string:PSE">Palestine, State of</option>
-                                <option label="Panama" value="string:PAN">Panama</option>
-                                <option label="Papua New Guinea" value="string:PNG">Papua New Guinea</option>
-                                <option label="Paraguay" value="string:PRY">Paraguay</option>
-                                <option label="Peru" value="string:PER">Peru</option>
-                                <option label="Philippines" value="string:PHL">Philippines</option>
-                                <option label="Pitcairn" value="string:PCN">Pitcairn</option>
-                                <option label="Poland" value="string:POL">Poland</option>
-                                <option label="Portugal" value="string:PRT">Portugal</option>
-                                <option label="Puerto Rico" value="string:PRI">Puerto Rico</option>
-                                <option label="Qatar" value="string:QAT">Qatar</option>
-                                <option label="Romania" value="string:ROU">Romania</option>
-                                <option label="Russian Federation" value="string:RUS">Russian Federation</option>
-                                <option label="Rwanda" value="string:RWA">Rwanda</option>
-                                <option label="Réunion" value="string:REU">Réunion</option>
-                                <option label="Saint Barthélemy" value="string:BLM">Saint Barthélemy</option>
-                                <option label="Saint Helena, Ascension and Tristan da Cunha" value="string:SHN">Saint Helena, Ascension and Tristan da Cunha</option>
-                                <option label="Saint Kitts and Nevis" value="string:KNA">Saint Kitts and Nevis</option>
-                                <option label="Saint Lucia" value="string:LCA">Saint Lucia</option>
-                                <option label="Saint Martin (French part)" value="string:MAF">Saint Martin (French part)</option>
-                                <option label="Saint Pierre and Miquelon" value="string:SPM">Saint Pierre and Miquelon</option>
-                                <option label="Saint Vincent and the Grenadines" value="string:VCT">Saint Vincent and the Grenadines</option>
-                                <option label="Samoa" value="string:WSM">Samoa</option>
-                                <option label="San Marino" value="string:SMR">San Marino</option>
-                                <option label="Sao Tome and Principe" value="string:STP">Sao Tome and Principe</option>
-                                <option label="Saudi Arabia" value="string:SAU">Saudi Arabia</option>
-                                <option label="Senegal" value="string:SEN">Senegal</option>
-                                <option label="Serbia" value="string:SRB">Serbia</option>
-                                <option label="Seychelles" value="string:SYC">Seychelles</option>
-                                <option label="Sierra Leone" value="string:SLE">Sierra Leone</option>
-                                <option label="Singapore" value="string:SGP">Singapore</option>
-                                <option label="Sint Maarten (Dutch part)" value="string:SXM">Sint Maarten (Dutch part)</option>
-                                <option label="Slovakia" value="string:SVK">Slovakia</option>
-                                <option label="Slovenia" value="string:SVN">Slovenia</option>
-                                <option label="Solomon Islands" value="string:SLB">Solomon Islands</option>
-                                <option label="Somalia" value="string:SOM">Somalia</option>
-                                <option label="South Africa" value="string:ZAF">South Africa</option>
-                                <option label="South Georgia and the South Sandwich Islands" value="string:SGS">South Georgia and the South Sandwich Islands</option>
-                                <option label="South Sudan" value="string:SSD">South Sudan</option>
-                                <option label="Spain" value="string:ESP">Spain</option>
-                                <option label="Sri Lanka" value="string:LKA">Sri Lanka</option>
-                                <option label="Sudan" value="string:SDN">Sudan</option>
-                                <option label="Suriname" value="string:SUR">Suriname</option>
-                                <option label="Svalbard and Jan Mayen" value="string:SJM">Svalbard and Jan Mayen</option>
-                                <option label="Swaziland" value="string:SWZ">Swaziland</option>
-                                <option label="Sweden" value="string:SWE">Sweden</option>
-                                <option label="Switzerland" value="string:CHE">Switzerland</option>
-                                <option label="Syrian Arab Republic" value="string:SYR">Syrian Arab Republic</option>
-                                <option label="Taiwan" value="string:TWN">Taiwan</option>
-                                <option label="Tajikistan" value="string:TJK">Tajikistan</option>
-                                <option label="Tanzania, United Republic of" value="string:TZA">Tanzania, United Republic of</option>
-                                <option label="Thailand" value="string:THA">Thailand</option>
-                                <option label="Timor-Leste" value="string:TLS">Timor-Leste</option>
-                                <option label="Togo" value="string:TGO">Togo</option>
-                                <option label="Tokelau" value="string:TKL">Tokelau</option>
-                                <option label="Tonga" value="string:TON">Tonga</option>
-                                <option label="Trinidad and Tobago" value="string:TTO">Trinidad and Tobago</option>
-                                <option label="Tunisia" value="string:TUN">Tunisia</option>
-                                <option label="Turkey" value="string:TUR">Turkey</option>
-                                <option label="Turkmenistan" value="string:TKM">Turkmenistan</option>
-                                <option label="Turks and Caicos Islands" value="string:TCA">Turks and Caicos Islands</option>
-                                <option label="Tuvalu" value="string:TUV">Tuvalu</option>
-                                <option label="Uganda" value="string:UGA">Uganda</option>
-                                <option label="Ukraine" value="string:UKR">Ukraine</option>
-                                <option label="United Arab Emirates" value="string:ARE">United Arab Emirates</option>
-                                <option label="United Kingdom" value="string:GBR">United Kingdom</option>
-                                <option label="United States Minor Outlying Islands" value="string:UMI">United States Minor Outlying Islands</option>
-                                <option label="Uruguay" value="string:URY">Uruguay</option>
-                                <option label="Uzbekistan" value="string:UZB">Uzbekistan</option>
-                                <option label="Vanuatu" value="string:VUT">Vanuatu</option>
-                                <option label="Venezuela, Bolivarian Republic of" value="string:VEN">Venezuela, Bolivarian Republic of</option>
-                                <option label="Viet Nam" value="string:VNM">Viet Nam</option>
-                                <option label="Virgin Islands, British" value="string:VGB">Virgin Islands, British</option>
-                                <option label="Virgin Islands, U.S." value="string:VIR">Virgin Islands, U.S.</option>
-                                <option label="Wallis and Futuna" value="string:WLF">Wallis and Futuna</option>
-                                <option label="Western Sahara" value="string:ESH">Western Sahara</option>
-                                <option label="Yemen" value="string:YEM">Yemen</option>
-                                <option label="Zambia" value="string:ZMB">Zambia</option>
-                                <option label="Zimbabwe" value="string:ZWE">Zimbabwe</option>
-                                <option label="Åland Islands" value="string:ALA">Åland Islands</option>
-                            </select></div>
+                          class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Etudiant(es) concerné(es)</label>
+
+                          <select class="js-example-basic-multiple" name="user_id[]" multiple="multiple" style="width:250px;">
+                                            @foreach ($school->courses->where('type', 'path') as $course_db)
+                                                        <option value="{{$course_db->id}}">{{$course_db->name}}</option>
+                                                    @endforeach
+                                                    @foreach ($school->courses->where('type', 'bootcamp') as $course_db)
+                                                        <option value="{{$course_db->id}}">{{$course_db->name}}</option>
+                                                    @endforeach
+                                                    @foreach ($school->users as $user)
+                                                        <option value="{{$user->name}}">{{$user->name}}</option>
+                                                    @endforeach
+
+                                          </select>
+
+
+                          </div>
                     </bootstrap-decorator>
-                    <bootstrap-decorator form="schemaForm.form[9]">
-                        <!---->
-                    </bootstrap-decorator>
-                    <bootstrap-decorator form="schemaForm.form[10]">
-                        <!---->
-                    </bootstrap-decorator>
+                    
                     <bootstrap-decorator form="schemaForm.form[11]">
                         <div class="form-group schema-form-submit ">
-                            <!----><input type="submit" class="btn tch-btn-header-primary-block " value="Enter my School" ng-disabled="form.readonly" ng-if="form.type === 'submit'">
+                            <!----><input type="submit" class="btn tch-btn-header-primary-block " value="Créez la séssion" ng-disabled="form.readonly" ng-if="form.type === 'submit'">
                             <!---->
                             <!---->
                         </div>
