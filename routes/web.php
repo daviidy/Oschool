@@ -78,7 +78,7 @@ Route::resource('coupons', 'CouponController');
 
 Route::resource('informations', 'InformationController');
 
-Route::resource('sessions', 'SessionController');
+Route::resource('classrooms', 'ClassroomController');
 
 
 /*
@@ -173,9 +173,9 @@ Route::get('/schoolAdmin/{school}/sales/statements', 'SchoolController@schoolSta
 
 //routes for events tab
 //school events
-Route::get('/schoolAdmin/{school}/sessions', 'SessionController@index')->name('admin');
+Route::get('/schoolAdmin/{school}/classrooms', 'ClassroomController@index')->name('admin');
 
-Route::get('/schoolAdmin/{school}/sessions/create', 'SessionController@create')->name('admin');
+Route::get('/schoolAdmin/{school}/classrooms/create', 'ClassroomController@create')->name('admin');
 
 
 

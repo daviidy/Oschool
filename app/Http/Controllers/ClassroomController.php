@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Classroom;
+use App\School;
 use Illuminate\Http\Request;
 
 class ClassroomController extends Controller
@@ -14,7 +15,7 @@ class ClassroomController extends Controller
      */
      public function index(School $school)
      {
-         return view('admin_views.sessions.index', ['school' => $school]);
+         return view('admin_views.classrooms.index', ['school' => $school]);
 
      }
 
@@ -26,7 +27,7 @@ class ClassroomController extends Controller
 
      public function create(School $school)
      {
-         return view('admin_views.sessions.create', ['school' => $school]);
+         return view('admin_views.classrooms.create', ['school' => $school]);
      }
 
      /**
@@ -38,13 +39,13 @@ class ClassroomController extends Controller
      public function store(Request $request)
      {
          //
-         $session = Session::create($request->all());
+         $classroom = Classroom::create($request->all());
          if(is_array($request->school_id))
          {
              foreach($request->school_id as $school_id)
              {
                  $school_found = School::find($school_id);
-                 $session->schools()->attach($school_found);
+                 $classroom->schools()->attach($school_found);
              }
          }
 

@@ -268,7 +268,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
         </div>
     </div>
     <div class="tch-inline-form">
-    <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/sessions/create">Nouvelle Session</a></div>
+    <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/classrooms/create">Nouvelle Session</a></div>
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
             <!---->
             {{-- <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
@@ -312,8 +312,8 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                 </thead>
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
-                    @foreach ($school->sessions as $session)
-                    
+                    @foreach ($school->classrooms as $classroom)
+
 
                     <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
                         {{--<td><span>{{$course->name}}</span><span class="space"></span><span class="space"></span>
@@ -328,22 +328,22 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                         </td> --}}
                         <td what="comment">
                             <div>
-                               {{$session->date}}
+                               {{$classroom->date}}
                             </div>
                         </td>
                         <td what="comment">
                             <div>
-                               {{$session->user_id}}
+                               {{$classroom->user_id}}
                             </div>
                         </td>
                         <td what="comment">
                             <div>
-                               {{$session->user_id}}
+                               {{$classroom->user_id}}
                             </div>
                         </td>
                         <td what="comment">
                             <div>
-                               {{$session->comment}}
+                               {{$classroom->comment}}
                             </div>
                         </td>
 

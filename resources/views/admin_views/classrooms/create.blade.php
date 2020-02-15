@@ -511,12 +511,12 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                 <div class="slide-show" style="">
             <!---->
             <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="POST" action="{{route('sessions.store')}}" enctype="multipart/form-data" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="information-container">
+            <form method="POST" action="{{route('classrooms.store')}}" enctype="multipart/form-data" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="information-container">
                 @csrf
                     <!---->
                     <!---->
                     <div ng-if="planType" class="" style="">
-                      <a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/sessions" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+                      <a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/classrooms" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
                         <!---->
                         <!---->
                         <!---->
@@ -533,7 +533,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                             <!---->
                             <div ng-show="products.length > 0" class="">
                             <div class="col-sm-12 add-top-margin-25">
-                                
+
 
                             </div>
 
@@ -594,10 +594,10 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                 <p class="survey-container__customize m-t-4-xs p-h-3-xs">.</p>
 
 
-                <form action="{{route('sessions.store')}}" name="surveyForm" sf-schema="survey.schema" sf-form="survey.form" sf-model="survey" ng-submit="submitSurvey(surveyForm, survey)" class="ng-pristine ng-valid ng-valid-schema-form" id="information-container">
+                <form action="{{route('classrooms.store')}}" name="surveyForm" sf-schema="survey.schema" sf-form="survey.form" sf-model="survey" ng-submit="submitSurvey(surveyForm, survey)" class="ng-pristine ng-valid ng-valid-schema-form" id="information-container">
                         @csrf
 
-                                              <a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/sessions" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
+                                              <a ng-click="resetPlanType()" href="/schoolAdmin/{{$school->id}}/classrooms" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
 
                     <bootstrap-decorator form="schemaForm.form[0]">
                         <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
@@ -606,13 +606,13 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 
                           </div>
                     </bootstrap-decorator>
-                    
+
                     <bootstrap-decorator form="schemaForm.form[5]">
                         <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
                           class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Lien de la séance</label>
                           <input type="url" name="link">
 
-                          
+
                     </div>
                     </bootstrap-decorator>
                     <bootstrap-decorator form="schemaForm.form[6]">
@@ -623,13 +623,13 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                     <bootstrap-decorator form="schemaForm.form[7]">
                         <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
                           class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Commentaire</label>
-                          
+
                                 <input type="hidden" name="comment">
                                 <div class="" id="editorInformation" style="height: 300px;">
 
                                 </div>
 
-                          
+
                         </div>
                     </bootstrap-decorator>
 
@@ -653,7 +653,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 
                           </div>
                     </bootstrap-decorator>
-                    
+
                     <bootstrap-decorator form="schemaForm.form[11]">
                         <div class="form-group schema-form-submit ">
                             <!----><input type="submit" class="btn tch-btn-header-primary-block " value="Créez la séssion" ng-disabled="form.readonly" ng-if="form.type === 'submit'">

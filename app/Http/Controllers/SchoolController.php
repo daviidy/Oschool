@@ -7,7 +7,7 @@ use Auth;
 use App\User;
 use App\Course;
 use App\Author;
-use App\Session;
+use App\Classroom;
 use Image;
 use Input;
 use Illuminate\Support\Facades\Session;
