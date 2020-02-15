@@ -267,6 +267,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             <!---->
         </div>
     </div>
+    @include('includes.status')
     <div class="tch-inline-form">
     <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/classrooms/create">Nouvelle Session</a></div>
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
@@ -333,17 +334,19 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                         </td>
                         <td what="comment">
                             <div>
-                               {{$classroom->user_id}}
+                               {{$classroom->teacher->name}}
                             </div>
                         </td>
                         <td what="comment">
                             <div>
-                               {{$classroom->user_id}}
+                            @foreach($classroom->users as $user)
+                              {{$user->name}},
+                            @endforeach
                             </div>
                         </td>
                         <td what="comment">
                             <div>
-                               {{$classroom->comment}}
+                               {!!$classroom->comment!!}
                             </div>
                         </td>
 
@@ -354,14 +357,14 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                             <!---->
                             <!---->
                             <div ng-if="product.is_published" class="pull-right">
-                            <a href="/schoolAdmin/{{$school->id}}/informations/{{$information->id}}/edit">
+                            <a href="/schoolAdmin/{{$school->id}}/classrooms/{{$classroom->id}}/edit">
                                     <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
                                 </a>
 
 
 
 
-                                <form action="{{ route('informations.destroy', $information->id) }}" method="post">
+                                <form action="{{ route('classrooms.destroy', $classroom->id) }}" method="post">
                                     @csrf
                                     {{ method_field('delete') }}
                                     <button

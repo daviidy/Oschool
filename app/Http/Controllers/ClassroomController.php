@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Classroom;
 use App\School;
+use App\User;
+use App\Course;
 use Illuminate\Http\Request;
 
 class ClassroomController extends Controller
@@ -40,12 +42,27 @@ class ClassroomController extends Controller
      {
          //
          $classroom = Classroom::create($request->all());
-         if(is_array($request->school_id))
+         if(is_array($request->users))
          {
-             foreach($request->school_id as $school_id)
+             foreach($request->users as $user_id)
              {
-                 $school_found = School::find($school_id);
-                 $classroom->schools()->attach($school_found);
+                 //on vérifie s'il s'agit d'un cours
+                 $course = Course::where('name', $user_id)->first();
+                 //si c'est pas un cours, c'est un user
+                 //on retrouve le user et on
+                 //l'associe a la classroom
+                 if ($course === null) {
+                     $user = User::where('name', $user_id)->first();
+                     $classroom->users()->attach($user);
+                 }
+                 //si c'est un cours, on recupere tous les users
+                 //de ce cours et on les associe a la classroom
+                 else {
+                     foreach ($course->users as $user) {
+                         $classroom->users()->attach($user);
+                     }
+                 }
+
              }
          }
 
