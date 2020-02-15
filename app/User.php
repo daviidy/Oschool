@@ -153,14 +153,14 @@ class User extends Authenticatable implements MustVerifyEmail
     //function for relationship between
     //user and session (many to many)
 
-    public function sessions()
+    public function classrooms()
     {
-        return $this->belongsToMany('App\Session');
+        return $this->belongsToMany('App\Classroom');
     }
 
-public function sessionsTeacher()
+public function classroomsTeacher()
       {
-          return $this->hasMany('App\Session');
+          return $this->hasMany('App\Classroom');
       }
 
 

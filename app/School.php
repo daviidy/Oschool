@@ -66,9 +66,9 @@ class School extends Model
          return $this->hasMany('App\Author');
      }
 
-     public function sessions()
+     public function classrooms()
       {
-          return $this->hasMany('App\Session');
+          return $this->hasMany('App\Classroom');
       }
 
 
