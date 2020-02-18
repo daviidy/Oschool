@@ -28,7 +28,7 @@ class Classroom extends Model
 
   public function teacher()
   {
-      return $this->belongsTo('App\User');
+      return $this->belongsTo('App\User', 'user_id');
   }
 
   public function school()
