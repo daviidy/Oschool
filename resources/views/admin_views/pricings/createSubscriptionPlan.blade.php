@@ -474,6 +474,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <!---->
         </div>
     </div>
+        @include('includes.status')
+
     <div class="tch-inline-form">
 
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-show" style="">
