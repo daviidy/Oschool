@@ -11,6 +11,16 @@
 |
 */
 
+Route::group(
+    [
+        'domain' => '{subdomain}.' . config('app.domain'),
+    ],
+    function(){
+        //Route::get('/', 'FrontendController@show')->name('website.subdomain');
+        Route::get('/schoolAdmin/{school}', 'SchoolController@showForBusiness')->name('website.subdomain');
+    }
+);
+
 Route::get('/', function () {
     return view('home');
 });
@@ -80,6 +90,8 @@ Route::resource('informations', 'InformationController');
 
 Route::resource('classrooms', 'ClassroomController');
 
+//for create school with subdoamin or attached domains
+Route::post('/createSchoolBusiness', 'SchoolController@createSchoolBusiness')->name('schools.storeBusiness');
 
 /*
 

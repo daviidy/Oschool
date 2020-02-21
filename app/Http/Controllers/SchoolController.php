@@ -12,6 +12,7 @@ use Image;
 use Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class SchoolController extends Controller
 {
@@ -60,6 +61,20 @@ class SchoolController extends Controller
        return redirect()->back()->with('status', 'L\'école a bien été créée');
     }
 
+    public function createSchoolBusiness(Request $request)
+    {
+        $school=School::create([
+
+                          'name' => $request['name'],
+                          'slug' => Str::slug($request->input('name'), '-') . '-' . uniqid(),
+                          'user_id' => $request['user_id'],
+                          'domain' => $request->input('domain'),
+
+                        ]);
+
+       return redirect()->back()->with('status', 'L\'école a bien été créée');
+    }
+
     /**
      * Display the specified resource.
      *
@@ -95,6 +110,21 @@ class SchoolController extends Controller
     public function showForAdmin(School $school)
     {
         if (Auth::check()) {
+        return view('admin_views.schools.show', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
+    }
+
+    public function showForBusiness(School $school, Request $request)
+    {
+        if (Auth::check()) {
+        $subdomain = $request->route('domain') ?? $request->route('subdomain');
+        $school = School::where('id', $subdomain)
+            ->orWhere('slug', $subdomain)
+            ->orWhere('domain', $subdomain)
+            ->firstOrFail();
         return view('admin_views.schools.show', ['school' => $school]);
         }
         else {
