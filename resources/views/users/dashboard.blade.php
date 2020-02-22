@@ -5,12 +5,26 @@
 
 <div class="main my-teachable-dashboard">
 
-    @if(Auth::user()->isAdmin() || Auth::user()->isOwner())
+
 
     @if(count(Auth::user()->createSchools) > 0)
     <h1>Les écoles que je possède</h1>
 
+    @if(Auth::user()->isOwner())
+    <div class="schools-list ">
+        @foreach(Auth::user()->createSchools as $school)
+        <a href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}" class="school-card school-has-default-thumbnail"
+          style="background-image: url(/images/schools/logos/{{$school->logo}});;" target="_blank">
+            <div class="school-info">
+                <img class="school-favicon" src="/images/schools/backgrounds/flavicon-school.svg">
+                <p class="school-name">{{$school->name}}</p>
+            </div>
+        </a>
+        @endforeach
 
+    </div>
+    @endif
+    @if(Auth::user()->isAdmin())
     <div class="schools-list ">
         @foreach(Auth::user()->createSchools as $school)
         <a href="{{url('schoolAdmin', $school)}}" class="school-card school-has-default-thumbnail"
@@ -18,14 +32,13 @@
             <div class="school-info">
                 <img class="school-favicon" src="/images/schools/backgrounds/flavicon-school.svg">
                 <p class="school-name">{{$school->name}}</p>
-
             </div>
         </a>
         @endforeach
 
     </div>
-
     @endif
+
     @endif
 <!--on vérifie si l'utilisateur est inscrit à au moins une école-->
     @if(count(Auth::user()->schools) > 0)
