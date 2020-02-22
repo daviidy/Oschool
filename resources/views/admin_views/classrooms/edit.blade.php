@@ -484,6 +484,77 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 ._1zr_y :focus{outline:none;}
 /*! CSS Used from: Embedded */
 ._1zr_y :focus{outline:none;}
+
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    border-radius: 13px;
+    padding: 10px 30px 9px 22px;
+    margin-bottom: 20px;
+}
+
+.select2-hidden-accessible {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+}
+
+.select2-container {
+    display: block;
+    max-width: 100% !important;
+    width: auto !important;
+}
+
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+}
+
+.select2-container .select2-selection--single {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    outline: none;
+    position: relative;
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    font-family: Montserrat-SemiBold;
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.2;
+    padding-left: 0px;
+    background-color: transparent;
+}
 </style>
 
 
@@ -594,11 +665,17 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                             <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
                               class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Statut</label>
 
-                              <select class="js-example-basic-multiple" name="users[]" multiple="multiple" style="width:250px;">
-                                        <option>Réalisée</option>
-                                        <option>Annulée</option>
-                                
-                              </select>
+                              <div class="wrap-input100 input100-select bg1">
+                                        <span class="label-input100"></span>
+                                                <div>
+                                                        <select class="js-select3" name="statut">
+                                                            <option>Réalisée</option>
+                                                            <option>Annulée</option>
+                                                        </select>
+                                                        <div class="dropDownSelect3"></div>
+                                                </div>
+                                        </div>
+
 
 
                               </div>
@@ -663,6 +740,14 @@ $(document).ready(function() {
     $('.js-example-basic-multiple').select2();
 });
 
+</script>
+<script>
+         $(".js-select3").each(function(){
+                $(this).select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $(this).next('.dropDownSelect3')
+                 });
+                })
 </script>
 
         @endsection
