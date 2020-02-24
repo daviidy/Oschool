@@ -91,7 +91,7 @@ Route::resource('informations', 'InformationController');
 Route::resource('classrooms', 'ClassroomController');
 
 //for create school with subdoamin or attached domains
-Route::post('/createSchoolBusiness', 'SchoolController@createSchoolBusiness')->name('schools.storeBusiness');
+Route::post('/storeSchoolBusiness', 'SchoolController@storeSchoolBusiness')->name('schools.storeBusiness');
 
 /*
 

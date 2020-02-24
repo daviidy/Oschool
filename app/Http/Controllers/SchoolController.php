@@ -13,6 +13,7 @@ use Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Services\SlugSchool;
 
 class SchoolController extends Controller
 {
@@ -61,7 +62,7 @@ class SchoolController extends Controller
        return redirect()->back()->with('status', 'L\'école a bien été créée');
     }
 
-    public function createSchoolBusiness(Request $request)
+    public function storeSchoolBusiness(Request $request)
     {
         $school=School::create([
 
@@ -71,6 +72,10 @@ class SchoolController extends Controller
                           'domain' => $request->input('domain'),
 
                         ]);
+
+        $slug = new SlugSchool();
+        $school->slug = $slug->createSlug($request->name);
+        $school->save();
 
        return redirect()->back()->with('status', 'L\'école a bien été créée');
     }
