@@ -352,7 +352,6 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
 
                         {{-- <td what="price" ng-bind="formatProductPrice(product)">
                         </td> --}}
-
                         <td>
                             <!---->
                             <!---->
@@ -378,7 +377,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                             </div>
                             <!---->
                         </td>
-
+                        
 
                     </tr>
 

@@ -189,6 +189,9 @@ Route::get('/schoolAdmin/{school}/classrooms', 'ClassroomController@index')->nam
 
 Route::get('/schoolAdmin/{school}/classrooms/create', 'ClassroomController@create')->name('admin');
 
+Route::get('/schoolAdmin/{school}/classrooms/{classroom}/edit', 'ClassroomController@edit')->name('admin');
+
+
 
 
 //routes for users tab

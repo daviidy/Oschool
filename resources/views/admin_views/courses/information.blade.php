@@ -612,6 +612,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     </select>
                                     @endif
                                     <br>
+                                        @include('includes.status')
+
                                     <div class="tch-inline-form">
                                         <div id="addAuthor" class="btn btn-block btn-attached fastclickable">
                                             Nouveau auteur
