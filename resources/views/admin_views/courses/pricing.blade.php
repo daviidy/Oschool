@@ -267,6 +267,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <!---->
         </div>
     </div>
+        @include('includes.status')
+
     <div class="tch-inline-form">
         <div id="test-id-add-product-btn" ng-click="form.toggle()" class="btn btn-block btn-attached fastclickable">Nouvelle offre de prix<i class="fa fa-angle-down icon-arrow-down"></i></div>
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">

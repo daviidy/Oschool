@@ -787,6 +787,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <td ng-hide="hideEmailButton" class="ng-hide"><button ng-click="emailUser(user.id)" class="tch-btn-content-secondary tch-btn-icon pull-right fastclickable"><i class="fa fa-envelope-o"></i></button></td>
                         -->
                         </tr>
+                        @endif
                         @endforeach
                         <!---->
 

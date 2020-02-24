@@ -86,9 +86,11 @@ class ClassroomController extends Controller
      * @param  \App\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function edit(Classroom $classroom)
+    public function edit(School $school, Classroom $classroom)
     {
         //
+         return view('admin_views.classrooms.edit', ['school' => $school, 'classroom'=>$classroom]);
+
     }
 
     /**
@@ -101,6 +103,8 @@ class ClassroomController extends Controller
     public function update(Request $request, Classroom $classroom)
     {
         //
+        $classroom->update($request->all());
+        return redirect('admin_views.classrooms')->with('status', 'Session modifié avec seccès');
     }
 
     /**
@@ -112,5 +116,7 @@ class ClassroomController extends Controller
     public function destroy(Classroom $classroom)
     {
         //
+        $classroom->delete();
+        return back()->with('status', 'Session supprimée avec succès');
     }
 }

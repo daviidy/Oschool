@@ -442,6 +442,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <!---->
         </div>
     </div>
+        @include('includes.status')
+
     <div class="tch-inline-form">
 
         <div class="slide-show" style="">

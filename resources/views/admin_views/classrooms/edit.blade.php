@@ -1,5 +1,5 @@
-@extends('layouts.admin_views.menu-school-icon')
-@section('title', 'Evaluer un projet')
+@extends('layouts.admin_views.menu-school')
+@section('title', 'Modifier la session')
 @section('content')
 
 <style media="screen">
@@ -369,7 +369,7 @@
         .re-formatting{display:none!important;}
         a{color:#1ea69a;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
         a:hover,a:focus{color:#167b72;text-decoration:none;}
-        .slide-show{-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-timing-function:ease-in;transition-timing-function:ease-in;overflow:hidden;}
+        .slide-show{-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-timing-function:ease-in;transition-timing-function:ease-in;max-height:1000px;overflow:hidden;}
         .add-top-margin{margin-top:15px;}
         .add-top-margin-25{margin-top:25px;}
         .redactor-editor{max-height:300px;}
@@ -378,6 +378,187 @@
 
         </style>
 
+<!-- pour le style du nouveau formulaire -->
+<style media="screen">
+/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-a21282c5c0e83db0650b.css ; media=screen */
+@media screen{
+input,select{color:inherit;font:inherit;margin:0;}
+select{text-transform:none;}
+input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+input::-moz-focus-inner{border:0;padding:0;}
+input{line-height:normal;}
+input,select{color:inherit;font:inherit;margin:0;}
+select{text-transform:none;}
+input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+input::-moz-focus-inner{border:0;padding:0;}
+input{line-height:normal;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+p,h2{orphans:3;widows:3;}
+h2{page-break-after:avoid;}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+input,select{font-family:inherit;font-size:inherit;line-height:inherit;}
+h2{font-family:inherit;font-weight:700;line-height:1.1;color:inherit;}
+h2{margin-top:22px;margin-bottom:11px;}
+h2{font-size:38px;}
+p{margin:0 0 11px;}
+.col-sm-6,.col-xs-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
+.col-xs-12{float:left;}
+.col-xs-12{width:100%;}
+@media (min-width: 768px){
+.col-sm-6{float:left;}
+.col-sm-6{width:50%;}
+.col-sm-offset-3{margin-left:25%;}
+}
+label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
+.form-control{display:block;width:100%;height:41px;padding:6px 12px;font-size:13px;line-height:1.72222;color:#95a5a6;background-color:white;background-image:none;border:1px solid #ccc;border-radius:5px;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);-webkit-transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;-webkit-transition:border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;}
+.form-control:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);}
+.form-control::-moz-placeholder{color:#999;opacity:1;}
+.form-control:-ms-input-placeholder{color:#999;}
+.form-control::-webkit-input-placeholder{color:#999;}
+.form-control::-ms-expand{background-color:transparent;border:0;}
+.form-group{margin-bottom:15px;}
+.has-feedback{position:relative;}
+.has-feedback .form-control{padding-right:51.25px;}
+.btn{display:inline-block;margin-bottom:0;font-weight:normal;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;padding:6px 12px;font-size:13px;line-height:1.72222;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.btn:focus,.btn:active:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.btn:hover,.btn:focus{color:white;text-decoration:none;}
+.btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);}
+[disabled]{cursor:default!important;pointer-events:none;}
+.tch-btn-header-primary-block{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
+.tch-btn-header-primary-block:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block:active:hover,.tch-btn-header-primary-block:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
+.tch-btn-header-primary-block:active{background-image:none;}
+.tch-btn-header-primary-block:focus{outline:0!important;}
+.tch-btn-header-primary-block:focus{outline:0!important;}
+.tch-btn-header-primary-block:focus{outline:0!important;}
+label{font-weight:normal;color:#808080;margin-bottom:12px;}
+.control-label{margin-bottom:5px;color:#47505e!important;}
+.form-control::-moz-placeholder{color:#97999b;opacity:1;}
+.form-control:-ms-input-placeholder{color:#97999b;}
+.form-control::-webkit-input-placeholder{color:#97999b;}
+.form-control{border:1px solid #dbdbdb;color:#20272d;font-family:system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;font-size:13px;line-height:1.467;padding:12px 14px;height:auto;border-radius:5px;-webkit-box-shadow:none;box-shadow:none;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:"border .25s linear, color .25s linear, background-color .25s linear";transition:"border .25s linear, color .25s linear, background-color .25s linear";}
+.form-control:focus{outline:0;border:1px solid rgba(0, 0, 0, .34)!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+select.form-control{-moz-appearance:none;appearance:none;-webkit-appearance:none;background:url("//assets.teachablecdn.com/admin/assets/images/select-up-down.png") right 12px center #fff no-repeat;background-size:15px;}
+.form-group{position:relative;margin-bottom:28px;}
+h2{font-family:inherit;color:inherit;}
+h2{margin-top:22px;margin-bottom:11px;}
+h2{font-size:var(--fs6);line-height:var(--lh6);font-weight:bold;}
+p{margin:0 0 11px;font-size:var(--fs-1);line-height:var(--lh-1);}
+.control-label{font-size:14px;}
+.survey-container{background:#fff url("//assets.teachablecdn.com/admin/assets/images/onboarding-survey-bg.svg") no-repeat;background-size:50%;border-radius:8px;border:1px solid #eeeeee;padding:0px 50px;}
+@media screen and (min-width: 1000px){
+.survey-container{padding:0px 72px;}
+}
+@media screen and (min-width: 2120px){
+.survey-container{background-size:400px;}
+}
+@media screen and (max-width: 767px){
+.survey-container{height:100%;}
+}
+@media screen and (max-width: 414px){
+.survey-container{margin:0;padding:0 24px;border-radius:0;-webkit-box-shadow:none;box-shadow:none;min-height:100vh;}
+}
+.survey-container__header{font-size:22px;line-height:40px;}
+.survey-container__customize{font-size:13px;color:#828282;}
+.survey-container label.control-label{color:#849492;margin-top:38px;margin-bottom:10px;text-align:left;display:block;white-space:pre-line;line-height:24px;font-weight:500;font-size:15px;}
+.survey-container select{height:54px;border:1px solid #d4d4d4;}
+.survey-container .tch-btn-header-primary-block{max-width:300px;}
+}
+/*! CSS Used from: Embedded */
+html body .text-center-xs{text-align:center;}
+html body .m-b-0-xs{margin-bottom:0;}
+html body .p-t-3-xs{padding-top:16px;}
+html body .p-h-3-xs{padding-left:16px;padding-right:16px;}
+html body .m-t-4-xs{margin-top:24px;}
+@media only screen and (min-width:768px){
+html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
+}
+.w-6{font-weight:600;}
+*,:after,:before{box-sizing:inherit;}
+/*! CSS Used from: Embedded */
+._1zr_y :focus{outline:none;}
+/*! CSS Used from: Embedded */
+._1zr_y :focus{outline:none;}
+
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    border-radius: 13px;
+    padding: 10px 30px 9px 22px;
+    margin-bottom: 20px;
+}
+
+.select2-hidden-accessible {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+}
+
+.select2-container {
+    display: block;
+    max-width: 100% !important;
+    width: auto !important;
+}
+
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+}
+
+.select2-container .select2-selection--single {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    outline: none;
+    position: relative;
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    font-family: Montserrat-SemiBold;
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.2;
+    padding-left: 0px;
+    background-color: transparent;
+}
+</style>
+
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
 
         <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
             <div what="page header" class="tch-section-nav tch-page-header" icon="icon icon-cash-dollar" text="Pricing">
@@ -388,7 +569,7 @@
                             <!---->
                             <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                             <!---->
-                            <!---->Ajouter un commentaire
+                            <!---->Ajouter une nouvelle session
                         </div>
                         <!---->
                         <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -396,132 +577,177 @@
                     <!---->
                 </div>
             </div>
-                @include('includes.status')
-
+            @include('includes.status')
             <div class="tch-inline-form">
 
-                <div class="slide-show" style="">
-            <!---->
-            <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
-            <form method="POST" action="{{url('deliverables', $deliverable)}}" class="inline-form-wrapper ng-pristine ng-valid ng-valid-maxlength" style="" enctype="multipart/form-data" id="editor-container">
-                @csrf
-                {{ method_field('patch') }}
+                <div class="survey-container col-sm-6 col-sm-offset-3 col-xs-12 m-v-6-m">
+                    <h2 class="survey-container__header p-t-3-xs m-b-0-xs text-center-xs w-6">
+                        <!---->
+                        <!----><span ng-if="!onboardingPricingPageCheckoutSuccess">Modifier </span>
+                        <!----> la session
+                    </h2>
                     <!---->
-                    <!---->
-                    <div ng-if="planType" class="" style=""><a ng-click="resetPlanType()" href="/schoolAdmin/courses/{{$course->id}}/deliverable" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
-                        <!---->
-                        <!---->
-                        <!---->
-                        <div class="inline-form-container col-sm-6 col-sm-offset-3">
-                            <!---->
-                            <div ng-if="planType == 'free'" class="col-sm-12">
-                                    <p><h4>Lien :</h4>  <a href="{{$deliverable->link}}">Lien du projet soumis</a></p>
-                                    <br>
-                                {{-- <div class="input-group input-group-image"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg"></div> --}}
-                                <div class="input-group input-group-label"><span>Commentaire</span></div>
-                            </div>
-                            <!---->
-                            <!---->
-                            <!---->
-                            <!---->
-                            <div ng-show="products.length > 0" class="">
-                            <div class="col-sm-12 add-top-margin-25">
-                                  </div>
-
-                                <div class="col-sm-12 add-top-margin-25">
-                                        @if($deliverable->comment == null)
-                                        <input type="hidden" value="" name="comment">
-                                        <div id="editorComment" style="height: 300px;">
-
-                                        </div>
-                                        @else
-                                        <input type="hidden" value="" name="comment">
-                                        <div id="editorComment" style="height: 300px;">
-                                              {!!$deliverable->comment!!}
-                                        </div>
-                                        @endif
-                                        <br>
+                    <p class="survey-container__customize m-t-4-xs p-h-3-xs">.</p>
 
 
-                                        <label for="task">Parmi les taches suivants, lesquelles l'etudiant a t-il valide ?</label>
-                                            @foreach($project->tasks as $task)
-                                        <input {{$deliverable->user->tasks->contains($task->id) ? 'checked' : ''}} type="checkbox" name="task_id[]" value="{{$task->id}}">{{$task->heading}} <br>
+                    <form enctype="multipart/form-data" method="post" action="{{url('classrooms',$classroom)}}" class="ng-pristine ng-valid ng-valid-schema-form" id="information-container">
+                            {{ csrf_field() }}
+                            {{ method_field('patch') }}
 
-                                            @endforeach
+                         <a href="/schoolAdmin/{{$school->id}}/classrooms" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
 
-                                        <br>
+                        <bootstrap-decorator form="schemaForm.form[0]">
+                            <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Date et heure</label>
+                              <input type="text" name="date" value="{{$classroom->date}}" placeholder="{{$classroom->date}}">
 
+                              </div>
+                        </bootstrap-decorator>
 
-                                            <label for="status">Statut : </label>
-
-                                      <select name="status" id="status" style="width:250px;">
-
-                                              @if($deliverable->status == 1)
-
-                                              <option value="1" selected>Valide</option>
-                                              <option value="0" >A retravailler</option>
-
-                                              @elseif($deliverable->status == 0)
-
-                                                  <option value="1">Valide</option>
-                                                  <option value="0" selected>A retravailler</option>
-                                            @else
-
-                                        <option value="1">Valide</option>
-                                        <option value="0">A retravailler</option>
-
-                                        @endif
-                                        </select>
-                                  </div>
-
-                                 <input style="display: none;" type="text" name="school_id" value="">
-                                 {{-- <input style="display: none;" type="text" name="type" value="Free"> --}}
-                                 {{-- <input style="display: none;" type="text" name="recurring" value="No"> --}}
+                        <bootstrap-decorator form="schemaForm.form[5]">
+                            <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Lien de la séance</label>
+                              <input type="url" name="link" value="{{$classroom->link}}">
 
 
-                            </div>
-                            <input style="display: none;" type="hidden" name="project_id" value="{{$project->id}}">
-                            <input style="display: none;" type="hidden" name="user_id" value="{{$deliverable->user->id}}">
-                            <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Ajouter le commentaire</button></div>
                         </div>
-                    </div>
-                    <!---->
-                </form>
-            </ng-include>
-        </div>
+                        </bootstrap-decorator>
+                        <bootstrap-decorator form="schemaForm.form[6]">
+
+                            <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                            <!---->
+                        </bootstrap-decorator>
+                        <bootstrap-decorator form="schemaForm.form[6]">
+
+                            <input type="hidden" name="school_id" value="{{$school->id}}">
+                            <!---->
+                        </bootstrap-decorator>
+                        <bootstrap-decorator form="schemaForm.form[7]">
+                            <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Commentaire</label>
+
+                                    <input type="hidden" name="comment" value="{{$classroom->comment}}">
+                                    <div class="" id="editorClassroom" style="height: 300px;">
+                                        @if($classroom->comment)
+                                          {!!$classroom->comment!!}
+                                        @endif
+                                    </div>
+
+
+                            </div>
+                        </bootstrap-decorator>
+
+                        <bootstrap-decorator form="schemaForm.form[8]">
+                            <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Etudiant(es) concerné(es)</label>
+
+                              <select class="js-example-basic-multiple" name="users[]" multiple="multiple" style="width:250px;">
+                                @foreach($school->courses->where('type', 'path') as $course_path)
+                                @if(count($course_path->users) > 0)
+                                    <option value="{{$course_path->name}}">{{$course_path->name}}</option>
+                                @endif
+                                @endforeach
+                                @foreach($school->courses->where('type', 'bootcamp') as $course_bootcamp)
+                                @if(count($course_bootcamp->users) > 0)
+                                    <option value="{{$course_bootcamp->name}}">{{$course_bootcamp->name}}</option>
+                                @endif
+                                @endforeach
+                                @foreach($school->users as $user)
+                                    <option {{$classroom->users->contains($user->id) ? 'selected' : ''}} value="{{$user->name}}">{{$user->name}}</option>
+                                @endforeach
+
+                              </select>
+
+
+                              </div>
+                        </bootstrap-decorator>
+                        <bootstrap-decorator form="schemaForm.form[8]">
+                            <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Statut</label>
+
+                              <div class="wrap-input100 input100-select bg1">
+                                        <span class="label-input100"></span>
+                                                <div>
+                                                        <select class="js-select3" name="statut">
+                                                            <option>Réalisée</option>
+                                                            <option>Annulée</option>
+                                                        </select>
+                                                        <div class="dropDownSelect3"></div>
+                                                </div>
+                                        </div>
+
+
+
+                              </div>
+                        </bootstrap-decorator>
+
+                        <bootstrap-decorator form="schemaForm.form[11]">
+                            <div class="form-group schema-form-submit ">
+                                <!----><input type="submit" class="btn tch-btn-header-primary-block " value="Créez la session">
+                                <!---->
+                                <!---->
+                            </div>
+                        </bootstrap-decorator>
+                    </form>
+                </div>
 
             </div><br>
+
+
+
             @include('includes.information')
         </div>
+
+
 
 
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
 
         <script>
-            var quillComment = new Quill('#editorComment', {
+            var quillComment = new Quill('#editorClassroom', {
             modules: {
                 toolbar: [
                 ['bold', 'italic'],
-                ['link', 'blockquote', 'code-block', 'image','align'],
-                [{ list: 'ordered' }, { list: 'bullet' }]
+                ['link','align'],
                 ]
             },
             placeholder: 'Ajouter votre commentaire...',
             theme: 'snow'
             });
 
-            var formC = document.getElementById('editor-container');
-            formC.onsubmit = function() {
-            // Populate hidden form on submit
-            var comment = document.querySelector('input[name=comment]');
-            comment.value = quillComment.root.innerHTML;
-            // alert("Submitted",quillComment.root.innerHTML ,$(formC).serialize(), $(formC).serializeArray());
+            //a la sumissio  du formulmaire ob recupêre
+            //le contenu de la div qui a le texte riche
+            //et on met ce contenu dans l'input hidden
+            var form = document.getElementById('information-container');
+            form.onsubmit = function() {
+              // Populate hidden form on submit
+              var text = document.querySelector('input[name=comment]');
+              text.value = quillComment.root.innerHTML;
 
-            // No back end to actually submit to!
-            // alert('Open the console to see the submit data!')
-            return true;
+            //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+
+              // No back end to actually submit to!
+            //   alert('Open the console to see the submit data!')
+              return true;
             };
           </script>
+
+<!--pour le multiple select-->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+
+</script>
+<script>
+         $(".js-select3").each(function(){
+                $(this).select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $(this).next('.dropDownSelect3')
+                 });
+                })
+</script>
 
         @endsection
