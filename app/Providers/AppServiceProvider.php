@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \URL::forceScheme('https');
+        //\URL::forceScheme('https');
         VerifyEmail::toMailUsing(function ($notifiable) {
             $verifyUrl = URL::temporarySignedRoute(
                 'verification.verify', Carbon::now()->addMinutes(60), ['id' => $notifiable->getKey()]
