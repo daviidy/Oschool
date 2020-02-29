@@ -170,6 +170,17 @@ class UserController extends Controller
 
     }
 
+    public function sessions()
+    {
+        if (Auth::check()) {
+            return view('users.sessions');
+        }
+        else {
+            return redirect('home');
+        }
+
+    }
+
     /**
      * Remove the specified resource from storage.
      *

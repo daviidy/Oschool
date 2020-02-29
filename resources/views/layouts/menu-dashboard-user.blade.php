@@ -162,6 +162,11 @@
     content: "\f05a";
     color: #4d90cc;
 }
+
+.fa-slideshare:before {
+    content: "\f1e7";
+    color: #4d90cc;
+}
     </style>
 
 </head>
@@ -259,6 +264,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <a href="{{route('schools.create')}}">Créer une nouvelle école / classe</a>
                     </li>
                     @endif
+                    <li class="nav-item-settings {{\Route::current()->getName() == 'users.sessions' ? 'selected' : ''}}">
+                        <a href="/users/sessions">Mes sessions</a>
+                    </li>
                     <li class="nav-item-settings {{\Route::current()->getName() == 'users.settings' ? 'selected' : ''}}">
                         <a href="/users/settings">Mes paramètres</a>
                     </li>

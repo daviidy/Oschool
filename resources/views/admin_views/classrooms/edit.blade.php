@@ -599,7 +599,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                         <bootstrap-decorator form="schemaForm.form[0]">
                             <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
                               class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Date et heure</label>
-                              <input type="text" name="date" value="{{$classroom->date}}" placeholder="{{$classroom->date}}">
+                              {{$classroom->date}}
 
                               </div>
                         </bootstrap-decorator>
@@ -669,8 +669,8 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                                         <span class="label-input100"></span>
                                                 <div>
                                                         <select class="js-select3" name="statut">
-                                                            <option>Réalisée</option>
                                                             <option>Annulée</option>
+                                                            <option>Réalisée</option>
                                                         </select>
                                                         <div class="dropDownSelect3"></div>
                                                 </div>

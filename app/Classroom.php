@@ -13,6 +13,7 @@ class Classroom extends Model
                     'school_id',
                     'comment',
                     'status',
+                    'statut',
                      ];
  /**
   * [users description]
