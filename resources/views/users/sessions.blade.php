@@ -6,7 +6,9 @@
 <!--for user infos-->
 
 <style media="screen">
-
+.link_ a{
+      text-decoration: none !important;
+    }
 /*! CSS Used from: https://openclassrooms.com/bundles/common/css/master-0c0987a7.css ; media=all */
 @media all{
 h1{color:rgba(0,0,0,.92);margin:10px 0;font-weight:700;}
@@ -636,102 +638,7 @@ div.mce-edit-area{background:#fff;filter:none;}
     </style>
 
 
-    <!--pour le status-->
-    <style media="screen">
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
-
-//----- Global
-body {
-  font-family:'Open Sans';
-  line-height:200%;
-  background:#d75f70;
-}
-
-
-.btn {
-  margin-top:30px;
-  padding:2.2% 5.5%;
-  display:inline-block;
-  -webkit-transition:all linear 0.15s;
-  transition:all linear 0.15s;
-  border-radius:3px;
-  background:#ff00003b;
-  font-weight: bold;
-  text-decoration:none;
-  text-transform:uppercase;
-  color:#333;
-  
-  &:hover {
-    opacity:0.75;
-  }
-}
-
-//----- Popoup
-.popup-wrap {
-  width:100%;
-  height:100%;
-  display:none;
-  position:absolute;
-  top:0px;
-  left:0px;
-  content:'';
-  background:rgba(0,0,0,0.85);
-}
-
-.popup-box {
-  width:400px;
-  padding:70px;
-  transform:translate(-50%, -50%) scale(0.5);
-  position:absolute;
-  top:50%;
-  left:50%;
-  box-shadow:0px 2px 16px rgba(0,0,0,0.5);
-  border-radius:3px;
-  background:#fff;
-  text-align:center;
-  
-  
-  .close-btn {
-    width:35px;
-    height:35px;
-    display:inline-block;
-    position:absolute;
-    top:10px;
-    right:10px;
-    -webkit-transition:all ease 0.5s;
-    transition:all ease 0.5s;
-    border-radius:1000px;
-    background:#d75f70;
-    font-weight:bold;
-    text-decoration:none;
-    color:#fff;
-    line-height:190%;
     
-    &:hover {
-      -webkit-transform:rotate(180deg);
-      transform:rotate(180deg);
-    }
-  }
-}
-
-.transform-in, .transform-out {
-  display:block;
-  -webkit-transition:all ease 0.5s;
-  transition:all ease 0.5s;
-}
-
-.transform-in {
-  -webkit-transform:translate(-50%, -50%) scale(1);
-  transform:translate(-50%, -50%) scale(1);
-}
-
-.transform-out {
-  -webkit-transform:translate(-50%, -50%) scale(0.5);
-  transform:translate(-50%, -50%) scale(0.5);
-}
-
-    </style>
-
 
 
 <!--on vérifie si l'utilisateur est inscrit à au moins une école-->
@@ -786,7 +693,7 @@ body {
                                     {{ Carbon\Carbon::parse($classroom->date)->format('d-m-Y H:i') }}
                                 </td>
 
-                                <td class="">
+                                <td class="link_">
                                   <a href="{{$classroom->link}}">Clique et suit la session</a>
                                     
                                 </td>
@@ -795,9 +702,9 @@ body {
                                     {{$classroom->teacher->name}}
                                 </td>
 
-                                <td class="">
+                                <td class="link_">
                                   @if($classroom->comment)
-                                    <a id="preview" class="tch-btn-content-transparent tch-btn-sm fastclickable popup-btn">
+                                    <a href="#ex{{$classroom->id}}" rel="modal:open">
                                             Voir le commentaire du professeur
                                     </a>
                                     @endif
@@ -813,7 +720,7 @@ body {
                                     {{ Carbon\Carbon::parse($classroom->date)->format('d-m-Y H:i') }}
                                 </td>
 
-                                <td class="">
+                                <td class="link_">
                                   <a href="{{$classroom->link}}">Clique et suit la session</a>
                                     
                                 </td>
@@ -822,9 +729,9 @@ body {
                                     {{$classroom->teacher->name}}
                                 </td>
 
-                                <td class="">
+                                <td class="link_">
                                   @if($classroom->comment)
-                                    <a id="preview" class="tch-btn-content-transparent tch-btn-sm fastclickable popup-btn">
+                                    <a href="#ex{{$classroom->id}}" rel="modal:open">
                                             Voir le commentaire du professeur
                                     </a>
                                     @endif
@@ -839,7 +746,7 @@ body {
                                     {{ Carbon\Carbon::parse($classroom->date)->format('d-m-Y H:i') }}
                                 </td>
 
-                                <td class="">
+                                <td class="link_">
                                   <a href="{{$classroom->link}}">Clique et suit la session</a>
                                     
                                 </td>
@@ -848,9 +755,9 @@ body {
                                     {{$classroom->teacher->name}}
                                 </td>
 
-                                <td class="">
+                                <td class="link_">
                                     @if($classroom->comment)
-                                    <a id="preview" class="tch-btn-content-transparent tch-btn-sm fastclickable popup-btn">
+                                    <a href="#ex{{$classroom->id}}" rel="modal:open">
                                             Voir le commentaire du professeur
                                     </a>
                                     @endif
@@ -868,54 +775,18 @@ body {
             </div>
 
             
-              <div class="popup-wrap" style="display: none">
-                  <div class="popup-box">
-                    <h2>Commentaire</h2>
-
-                    <h3>{!!$classroom->comment!!}</h3>
-                    
-                    <a class="btn  close-btn popup-close" href="#">Fermer</a>
-                  </div>
-                </div>
+              <!-- Modal HTML embedded directly into document -->
+               @foreach($school->classrooms as $classroom)
+              <div id="ex{{$classroom->id}}" class="modal">
+                <h2 style="text-align: center; color: #4d90cc">Voir les commentaires du professeur</h2>
+                <br><br>
+                {!!$classroom->comment!!}
+                <!--a href="#" rel="modal:close">Close</a-->
+              </div>
+              @endforeach
 
             @endif
 </section>
-
-<script type="text/javascript">
-  $(document).ready(function() {
-  $('.popup-btn').click(function(e) {
-    $('.popup-wrap').fadeIn(500);
-    $('.popup-box').removeClass('transform-out').addClass('transform-in');
-
-    e.preventDefault();
-  });
-
-  $('.popup-close').click(function(e) {
-    $('.popup-wrap').fadeOut(500);
-    $('.popup-box').removeClass('transform-in').addClass('transform-out');
-
-    e.preventDefault();
-  });
-});
-</script>
-<script type="text/javascript">
-
-$("#preview").on('click', function(){
-
-$('#popup-background').css('display', 'block');
-$('#popup-preview').css('display', 'block');
-
-});
-
-$("#cancel-preview").on('click', function(){
-
-$('#popup-background').css('display', 'none');
-$('#popup-preview').css('display', 'none');
-
-});
-
-</script>
-
 
 @endsection
 
