@@ -61,9 +61,7 @@
                 @endforeach
             @endforeach
         @endif
-
-
-
+    
     @if(count(Auth::user()->schools) > 0)
     <h1>Les écoles dans lesquelles je suis inscrit</h1>
     <div class="schools-list ">

@@ -442,6 +442,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     <!---->
     <!---->
     <!---->
+    @include('includes.status')
     <ng-include src="'courses/course/information/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-publish">
         <div ng-show="!section.if || section.if()" id="section-publish" class="row tch-section-wrapper" section="section">
             <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
@@ -612,7 +613,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     </select>
                                     @endif
                                     <br>
-                                        @include('includes.status')
 
                                     <div class="tch-inline-form">
                                         <div id="addAuthor" class="btn btn-block btn-attached fastclickable">
