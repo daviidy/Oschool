@@ -167,8 +167,7 @@
 
 
 
-
-
     </div>
+
 
     @endsection

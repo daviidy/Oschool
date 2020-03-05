@@ -268,7 +268,7 @@ header,svg{display:none;}
                                 Explorez nos écoles et trouvez le parfait programme pour votre carrière
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                A Oschool, apprenez les compétences le splus
+                                A Oschool, apprenez les compétences les plus
                                 recherchées par les entreprises, construisez des projets incroyables
                                 et donnez vie à votre métier de rêve.
                             </h2>

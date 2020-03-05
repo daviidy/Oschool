@@ -1,84 +1,33 @@
-@extends('layouts.menu-school')
-@section('content')
+    @extends('layouts.menu-school')
 
+    @section('content')
     <div role="main" class="view-school">
 
 
 
         <div class="view-directory course-directory signed-in-directory">
             <div class="container">
-                <div class="row search">
 
-                    <!-- Filter: Category -->
-                    <div class="pull-left course-filter">
-                        <div class="filter-label">
-                            Types de formation:
-                        </div>
-                        <div class="btn-group">
-                            <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                @if($type == 'mooc')
-                                MOOC
-                                @elseif($type == 'path')
-                                Spécialisations
-                                @elseif($type == 'bootcamp')
-                                Formations en salle
-                                @else
-                                Tous
-                                @endif
-                                <span class="caret"></span>
+                <h2 style="text-align: center;">{{$school->name}}</h2>
 
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/schools/{{$school->id}}/courses">Tous</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/mooc">MOOC</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/path">Spécialisations</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/bootcamp">Formations en salle</a></li>
-
-                            </ul>
+                <!--pour le slider-->
+                <div class="css-gl013y">
+                    <div class="css-1ncomx8">
+                        <h2 class="css-1ac5tn2">{{$school->heading}}</h2>
+                        <div class="css-1npclfr">
+                            <p>{!!$school->description!!}</p>
+                            <p><strong><a>{{$school->city}} {{$school->state}} {{$school->street}}</a></strong></p>
                         </div>
                     </div>
-                    <!-- Filter: Category
-                    <div class="pull-left course-filter">
-                        <div class="filter-label">
-                            Catégories:
-                        </div>
-                        <div class="btn-group">
-                            <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-
-                                Tous <span class="caret"></span>
-
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/schools/{{$school->id}}/courses/filter/all">Tous</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/mooc">MOOC</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/path">Spécialisations</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/bootcamp">Formations en salle</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                -->
-
-                    <!-- Search Box -->
-                    <div class="col-lg-4 col-md-4 col-xs-12 pull-right">
-                        <form role="search" method="get" action="/search">
-                            @csrf
-                            <div class="input-group">
-                                <label for="search-courses" class="sr-only">Trouver un cours</label>
-                                <input class="form-control search input-lg" data-list=".list" id="search-courses" name="query" placeholder="Trouvez un cours" type="text">
-                                <span class="input-group-btn">
-                                    <button aria-label="Search Courses" id="search-course-button" class="btn search btn-default btn-lg" type="submit"><i class="fa fa-search" title="Search"></i></button>
-                                </span>
-                            </div>
-                        </form>
-                    </div>
+                    <div class="css-3cg4xb"><img src="/images/schools/backgrounds/{{$school->background}}" alt="filesharing mobile + security badge" class="css-9whsf3"></div>
                 </div>
-                <!-- Filter Title & Description-->
 
-
+                <h2 style="text-align: center;">Les cours de {{$school->name}}</h2>
                 <div class="row course-list list">
+
                     <!-- Course Listing -->
-                    @foreach($courses as $course)
+                    @foreach($school->courses->take(3) as $course)
+                    @if($course->state == 'active')
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
                             <div class="row">
@@ -150,19 +99,21 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                     @endforeach
 
                 </div>
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <center>
-
-
+                          <a class="btn btn-md btn-primary" href="/schools/{{$school->id}}/courses">View All Courses</a>
                         </center>
                     </div>
                 </div>
                 <br>
             </div>
+
+
         </div>
 
 
@@ -170,5 +121,6 @@
 
 
     </div>
+
 
     @endsection

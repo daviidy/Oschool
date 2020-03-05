@@ -325,6 +325,8 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
 </style>
 
 
+
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -356,10 +358,14 @@ a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
               <div class="col-sm-10 col-sm-offset-1">
 
                 @error('email')
-                <div class="error" id="error_email">Entrez un email valide svp</div>
+                <div class="alert alert-danger">
+                {{$message}}
+                </div>
                 @enderror
                 @error('password')
-                <div class="error" id="error_pw">{{$message}}</div>
+                <div class="alert alert-danger">
+                {{$message}}
+                </div>
                 @enderror
 
                 <form method="POST" action="{{ route('login') }}" class="new_teachable_account" id="new_teachable_account" accept-charset="UTF-8">

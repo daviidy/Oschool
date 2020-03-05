@@ -359,15 +359,21 @@
           <div class="fields">
             <div class="row">
               <div class="col-sm-10 col-sm-offset-1">
-                @error('full_name')
-                <div class="error" id="error_username">Entrez un nom valide svp.</div>
-                @enderror
-                @error('email')
-                <div class="error" id="error_email">Entrez un email valide svp</div>
-                @enderror
-                @error('password')
-                <div class="error" id="error_pw">{{$message}}</div>
-                @enderror
+                  @error('full_name')
+                  <div class="alert alert-danger">
+                  {{$message}}
+                  </div>
+                  @enderror
+                  @error('email')
+                  <div class="alert alert-danger">
+                  {{$message}}
+                  </div>
+                  @enderror
+                  @error('password')
+                  <div class="alert alert-danger">
+                  {{$message}}
+                  </div>
+                  @enderror
 
                 <form method="POST" action="{{ route('register') }}" class="new_teachable_account" id="new_teachable_account" accept-charset="UTF-8">
                     @csrf
@@ -413,7 +419,7 @@
 
                     <br>
                     <div class="card-body">
-                      <div class="template-demo"> 
+                      <div class="template-demo">
                        <a style="text-decoration:none;" href="{{ url('login/facebook') }}"> <button type="button" class="btn btn-social-icon btn-outline-facebook">
                           <i class="fa fa-facebook"></i>
                         </button> </a>
@@ -421,17 +427,17 @@
                        <a style="text-decoration:none;" href="{{ url('login/gmail') }}"> <button type="button" class="btn btn-social-icon btn-outline-youtube">
                           <i class="fa fa-google"></i>
                         </button></a>
-                        
+
                        <a style="text-decoration:none;" href="{{ url('login/github') }}"> <button type="button" class="btn btn-social-icon btn-outline-github">
                           <i class="fa fa-github"></i>
                         </button> </a>
 
-                        
+
                        <a style="text-decoration:none;" href="{{ url('login/linkedin') }}"> <button type="button" class="btn btn-social-icon btn-outline-linkedin">
                           <i class="fa fa-linkedin"></i>
                         </button></a>
-                        
-                      
+
+
                       </div>
                       {{-- <div class="template-demo"> <button type="button" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></button> <button type="button" class="btn btn-social-icon btn-youtube"><i class="fa fa-youtube"></i></button> <button type="button" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></button> <button type="button" class="btn btn-social-icon btn-dribbble"><i class="fa fa-dribbble"></i></button> <button type="button" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></button> <button type="button" class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></button> </div> --}}
                       {{-- <div class="template-demo"> <button type="button" class="btn btn-social-icon btn-facebook btn-rounded"><i class="fa fa-facebook"></i></button> <button type="button" class="btn btn-social-icon btn-youtube btn-rounded"><i class="fa fa-youtube"></i></button> <button type="button" class="btn btn-social-icon btn-twitter btn-rounded"><i class="fa fa-twitter"></i></button> <button type="button" class="btn btn-social-icon btn-dribbble btn-rounded"><i class="fa fa-dribbble"></i></button> <button type="button" class="btn btn-social-icon btn-linkedin btn-rounded"><i class="fa fa-linkedin"></i></button> <button type="button" class="btn btn-social-icon btn-instagram btn-rounded"><i class="fa fa-instagram"></i></button> </div> --}}
