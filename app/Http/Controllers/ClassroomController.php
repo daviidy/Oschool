@@ -104,7 +104,9 @@ class ClassroomController extends Controller
     {
         //
         $classroom->update($request->all());
-        return redirect('admin_views.classrooms')->with('status', 'Session modifié avec seccès');
+
+        $classroom->save();
+        return redirect('/schoolAdmin/'.$classroom->school->id.'/classrooms')->with('status', 'Session modifié avec seccès');
     }
 
     /**

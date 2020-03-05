@@ -313,10 +313,13 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                 </thead>
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
+                    
+
                     @foreach ($school->classrooms as $classroom)
+                    <!--si la session est annulée qu'elle soit en rouge-->
 
-
-                    <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
+                    	@if($classroom->statut =="Annulée")
+                    	<tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle" style="background-color: #ff00003b;">
                         {{--<td><span>{{$course->name}}</span><span class="space"></span><span class="space"></span>
                             <!---->
                         </td>--}}
@@ -381,6 +384,141 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
 
                     </tr>
 
+                    <!--sinon si la session est réalisée qu'elle soit en Vert-->
+
+                    @elseif($classroom->statut =="Réalisée")
+                    <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle" style="background-color: #4fcc4d3b;">
+                        {{--<td><span>{{$course->name}}</span><span class="space"></span><span class="space"></span>
+                            <!---->
+                        </td>--}}
+                        {{-- <td what="type"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Gratuit</span>
+                            <!---->
+                        </td> --}}
+                        <td what="comment">
+                            <div>
+                               {{$classroom->date}}
+                            </div>
+                        </td>
+                        <td what="comment">
+                            <div>
+                               {{$classroom->teacher->name}}
+                            </div>
+                        </td>
+                        <td what="comment">
+                            <div>
+                            @foreach($classroom->users as $user)
+                              {{$user->name}},
+                            @endforeach
+                            </div>
+                        </td>
+                        <td what="comment">
+                            <div>
+                               {!!$classroom->comment!!}
+                            </div>
+                        </td>
+
+                        {{-- <td what="price" ng-bind="formatProductPrice(product)">
+                        </td> --}}
+                        <td>
+                            <!---->
+                            <!---->
+                            <div ng-if="product.is_published" class="pull-right">
+                            <a href="/schoolAdmin/{{$school->id}}/classrooms/{{$classroom->id}}/edit">
+                                    <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
+                                </a>
+
+
+
+
+                                <form action="{{ route('classrooms.destroy', $classroom->id) }}" method="post">
+                                    @csrf
+                                    {{ method_field('delete') }}
+                                    <button
+                                        id="test-id-unpublish-btn"
+                                        class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i>
+                                    </button>
+                                </form>
+
+
+
+                            </div>
+                            <!---->
+                        </td>
+                        
+
+                    </tr>
+                    @else
+
+                    <!--sinon pas de couler-->
+                    <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
+                        {{--<td><span>{{$course->name}}</span><span class="space"></span><span class="space"></span>
+                            <!---->
+                        </td>--}}
+                        {{-- <td what="type"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Gratuit</span>
+                            <!---->
+                        </td> --}}
+                        <td what="comment">
+                            <div>
+                               {{$classroom->date}}
+                            </div>
+                        </td>
+                        <td what="comment">
+                            <div>
+                               {{$classroom->teacher->name}}
+                            </div>
+                        </td>
+                        <td what="comment">
+                            <div>
+                            @foreach($classroom->users as $user)
+                              {{$user->name}},
+                            @endforeach
+                            </div>
+                        </td>
+                        <td what="comment">
+                            <div>
+                               {!!$classroom->comment!!}
+                            </div>
+                        </td>
+
+                        {{-- <td what="price" ng-bind="formatProductPrice(product)">
+                        </td> --}}
+                        <td>
+                            <!---->
+                            <!---->
+                            <div ng-if="product.is_published" class="pull-right">
+                            <a href="/schoolAdmin/{{$school->id}}/classrooms/{{$classroom->id}}/edit">
+                                    <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
+                                </a>
+
+
+
+
+                                <form action="{{ route('classrooms.destroy', $classroom->id) }}" method="post">
+                                    @csrf
+                                    {{ method_field('delete') }}
+                                    <button
+                                        id="test-id-unpublish-btn"
+                                        class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i>
+                                    </button>
+                                </form>
+
+
+
+                            </div>
+                            <!---->
+                        </td>
+                        
+
+                    </tr>
+                    	@endif
                     @endforeach
                     <!---->
                 </tbody>
@@ -400,6 +538,14 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
     @include('includes.information')
 </div>
 <script type="text/javascript" src="/js/admin_views/curriculum.js"></script>
+<script>
+		$(".js-select3").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect3')
+			});
+		})
+		</script>
 
 
 @endsection

@@ -44,6 +44,13 @@
     <script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
     </script>
 
+    <!-- Remember to include jQuery :) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
     <style media="screen">
     .oc-body a, .oc-body div:not([class^=mce-]), .oc-body hr, .oc-body li, .oc-body main, .oc-body p, .oc-body section, .oc-body span, .oc-body ul {
       box-sizing: border-box;
@@ -162,6 +169,11 @@
     content: "\f05a";
     color: #4d90cc;
 }
+
+.fa-slideshare:before {
+    content: "\f1e7";
+    color: #4d90cc;
+}
     </style>
 
 </head>
@@ -259,6 +271,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <a href="{{route('schools.create')}}">Créer une nouvelle école / classe</a>
                     </li>
                     @endif
+                    <li class="nav-item-settings {{\Route::current()->getName() == 'users.sessions' ? 'selected' : ''}}">
+                        <a href="/users/sessions">Mes sessions</a>
+                    </li>
                     <li class="nav-item-settings {{\Route::current()->getName() == 'users.settings' ? 'selected' : ''}}">
                         <a href="/users/settings">Mes paramètres</a>
                     </li>
