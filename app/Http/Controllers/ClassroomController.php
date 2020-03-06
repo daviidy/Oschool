@@ -106,7 +106,7 @@ class ClassroomController extends Controller
         $classroom->update($request->all());
 
         $classroom->save();
-        return redirect('/schoolAdmin/'.$classroom->school->id.'/classrooms')->with('status', 'Session modifié avec seccès');
+        return redirect('/schoolAdmin/'.$classroom->school->id.'/classrooms')->with('status', 'Session modifiée avec succès');
     }
 
     /**

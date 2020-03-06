@@ -99,6 +99,9 @@ Route::resource('informations', 'InformationController');
 
 Route::resource('classrooms', 'ClassroomController');
 
+Route::resource('faqs', 'FaqController');
+
+
 //for create school with subdoamin or attached domains
 Route::post('/storeSchoolBusiness', 'SchoolController@storeSchoolBusiness')->name('schools.storeBusiness');
 
@@ -176,6 +179,9 @@ Route::get('/schoolAdmin/{school}/settings/general', 'SchoolController@edit')->n
 //school payments
 Route::get('/schoolAdmin/{school}/settings/payments', 'SchoolController@schoolPayments')->name('schoolSettings');
 
+//school payments
+Route::get('/schoolAdmin/{school}/payments', 'SchoolController@schoolmonthlyPayments')->name('admin');
+
 //school students
 Route::get('/schoolAdmin/{school}/users', 'SchoolController@schoolStudents')->name('userSettings');
 
@@ -199,6 +205,16 @@ Route::get('/schoolAdmin/{school}/classrooms', 'ClassroomController@index')->nam
 Route::get('/schoolAdmin/{school}/classrooms/create', 'ClassroomController@create')->name('admin');
 
 Route::get('/schoolAdmin/{school}/classrooms/{classroom}/edit', 'ClassroomController@edit')->name('admin');
+
+
+//routes for faq tab
+//school faq
+
+Route::get('/schoolAdmin/{school}/faqs', 'FaqController@index')->name('schoolSettings');
+
+Route::get('/schoolAdmin/{school}/faqs/create', 'FaqController@create')->name('schoolSettings');
+
+Route::get('/schoolAdmin/{school}/faqs/{faq}/edit', 'FaqController@edit')->name('schoolSettings');
 
 
 
@@ -333,6 +349,8 @@ Route::get('/user/admin/payments', 'AdminController@paymentIndex');
 Route::post('/users/deleteRole', 'UserController@deleteRole');
 
 Route::post('/monthlyPayments', 'AdminController@monthlyPayments');
+
+
 
 
 // for authors

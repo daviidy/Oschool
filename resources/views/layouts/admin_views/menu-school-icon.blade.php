@@ -342,7 +342,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_students')" text="Users" icon="icon icon-users" sref="admin.users.students" include-active-state="admin.users" class="" style="">
-                            <!----><a what="link" ui-sref="admin.users.students" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/users/students">
+                            <!----><a what="link" ui-sref="admin.users.students" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/users">
                                 <!----><i style="{{\Route::current()->getName() == 'userSettings' ? 'color: #fff;' : ''}}" ng-if="::icon" ng-class="::icon" tooltip="Users" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-users"></i>
                                 <!---->
                                 <!---->
@@ -358,12 +358,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <li what="nav item" ui-sref-active="active"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_financial')" text="Sales" icon="icon icon-cash-dollar" sref="admin.transactions">
-                            <!----><a what="link" ui-sref="admin.transactions" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/sales">
+                            <!----><a what="link" ui-sref="admin.transactions" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/payments">
                                 <!----><i ng-if="::icon" ng-class="::icon" tooltip="Sales" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-cash-dollar"></i>
                                 <!---->
                                 <!---->
                                 <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Sales</span></a>
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Ventes</span></a>
                             <!---->
                             <!---->
                             <!---->
