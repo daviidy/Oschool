@@ -667,7 +667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://twitter.com/OschoolLearning" target="_blank">Twitter</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/oschool-ci-5823b8141/" target="_blank">Linkedin</a>
+            <a href="https://www.linkedin.com/school/11128322" target="_blank">Linkedin</a>
           </li>
           <li>
             <a href="https://www.instagram.com/oschool_e_learning/" target="_blank">instagram</a>

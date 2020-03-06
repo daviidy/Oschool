@@ -136,6 +136,9 @@ ul{margin-top:0;margin-bottom:10px;}
 a{color:#ff3f20;}
 a:hover,a:active{color:#b91a00;}
 a,a:active,a:hover,a:focus{text-decoration:none;}
+a:hover, a:active {
+    color: #4d90cc;
+}
 p{font-size:18px;font-weight:200;line-height:28px;}
 h4{color:#134361;}
 footer{bottom:0;width:100%;background-color:#134361;position:absolute;color:#bac1c7;padding:39px 0 42px;}
@@ -560,6 +563,28 @@ img{display:block;}
         }
     }
 
+    .course-listing:hover .course-listing-title {
+    color: #4d90cc;
+    transition: all linear 0.1s;
+    }
+
+    .course-listing:hover {
+        box-shadow: 0px 0px 0px 1px #4d90cc;
+        border: 1px solid #4d90cc;
+        transition: all linear 0.1s;
+    }
+
+    .navbar-fedora {
+        background-color: black;
+    }
+
+    .btn-default.btn-lg.btn-course-filter.dropdown-toggle {
+    color: #4d90cc !important;
+  }
+
+  a:hover, a:active {
+    color: #4d90cc !important;
+}
     </style>
 
 

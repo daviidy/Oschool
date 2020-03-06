@@ -59,8 +59,8 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 }
 .hoHWfD{color:rgb(0, 0, 0);margin-top:2px;font-size:12px;text-align:center;margin-left:5px;transition:all 0.2s ease 0s;}
 .hoHWfD:hover{color:rgb(85, 83, 255);}
-.feiHSd{border-radius:99px;color:rgb(85, 83, 255);background-color:rgb(255, 255, 255);border:1px solid rgb(85, 83, 255);font-size:14px;font-weight:900;text-align:center;padding:12px 33px 10px;transition:all 0.2s ease 0s;margin:15px 0px;width:195px;}
-.feiHSd:hover,.feiHSd:focus{background:rgb(85, 83, 255);color:rgb(255, 255, 255);outline:none;}
+.feiHSd{border-radius:99px;color:#4d90cc;background-color:rgb(255, 255, 255);border:1px solid #4d90cc;font-size:14px;font-weight:900;text-align:center;padding:12px 33px 10px;transition:all 0.2s ease 0s;margin:15px 0px;width:195px;}
+.feiHSd:hover,.feiHSd:focus{background:#4d90cc;color:rgb(255, 255, 255);outline:none;}
 .feiHSd:hover,.feiHSd:focus{transform:scale(1.05);}
 .fIjoWc{width:310px;min-width:310px;margin:24px 16px;border-radius:16px;transition:all 0.2s ease 0s;cursor:pointer;display:flex;box-shadow:rgb(229, 229, 229) 0px 4px 0.9em;background:rgb(255, 255, 255);-webkit-box-align:center;align-items:center;padding-bottom:15px;flex-direction:column;}
 .fIjoWc:focus{text-decoration:none;color:rgb(0, 0, 0);}
@@ -81,7 +81,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 @media (min-width: 780px){
 .hfoAcr{order:initial;}
 }
-.iJUnuo{display:flex;font-size:12px;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;color:rgb(85, 83, 255);text-transform:uppercase;width:max-content;margin-top:15px;padding:12px 20px;align-self:center;}
+.iJUnuo{display:flex;font-size:12px;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;color:#4d90cc;text-transform:uppercase;width:max-content;margin-top:15px;padding:12px 20px;align-self:center;}
 .iJUnuo svg{margin-right:5px;}
 .jTmokI{display:flex;-webkit-box-align:center;align-items:center;margin:15px 0px 0px 10px;font-size:12px;-webkit-box-pack:start;justify-content:flex-start;color:rgb(85, 83, 255);text-transform:uppercase;width:max-content;padding:12px 20px;align-self:center;}
 .jTmokI svg{margin-right:5px;}
@@ -121,7 +121,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 @media (max-width: 780px){
 .hztfNk .my-masonry-grid_column{margin:auto;}
 }
-.lgEkUi{border-radius:99px;border:1px solid rgb(85, 83, 255);font-size:14px;font-weight:900;text-align:center;padding:12px 33px 10px;transition:all 0.2s ease 0s;background:rgb(85, 83, 255);color:rgb(255, 255, 255);display:block;flex:inherit;margin:0px auto;}
+.lgEkUi{border-radius:99px;border:1px solid rgb(85, 83, 255);font-size:14px;font-weight:900;text-align:center;padding:12px 33px 10px;transition:all 0.2s ease 0s;background:rgb(85, 83, 255);color:rgb(255, 255, 255);display:block;flex:inherit;margin:0px auto 20px auto;}
 .lgEkUi:hover,.lgEkUi:focus{background:rgb(85, 83, 255);color:rgb(255, 255, 255);outline:none;}
 .lgEkUi:hover,.lgEkUi:focus{border-color:rgb(35, 32, 204);background:rgb(35, 32, 204);}
 .lgEkUi:hover,.lgEkUi:focus{transform:scale(1.05);}
@@ -149,6 +149,10 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 .dqIQNG:hover{background-color:rgb(241, 241, 255);color:rgb(85, 83, 255);}
 @media (max-width: 480px){
 .dqIQNG{width:25%;}
+}
+
+.navbar-fedora {
+    background-color: black;
 }
 </style>
 
@@ -212,8 +216,8 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                                         <g transform="translate(629.000000, 761.000000)">
                                             <g transform="translate(87.000000, 270.000000)">
                                                 <rect fill="#C8C7FF" opacity="0.404129464" x="6" y="4" width="11" height="15" rx="2"></rect>
-                                                <rect fill="#C8C7FF" x="3" y="2" width="11" height="15" rx="2"></rect>
-                                                <rect fill="#4B49FF" x="0" y="0" width="11" height="15" rx="2"></rect>
+                                                <rect fill="#4d90cc3b" x="3" y="2" width="11" height="15" rx="2"></rect>
+                                                <rect fill="#6aace6" x="0" y="0" width="11" height="15" rx="2"></rect>
                                                 <polyline stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="4 5 7 7.27517236 4 10"></polyline>
                                             </g>
                                         </g>

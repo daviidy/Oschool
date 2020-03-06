@@ -7,7 +7,9 @@
                 <div class="_e30ab864"><img class="_21dae779" src="/images/divers/login_subdomain.png"></div>
                 <div class="_1644449">Connectez-vous à {{$school->name}}</div>
                 <div class="_d6611e81">
-                    <div class="_eaf002ed"><a class="_71544996"><span class="_82a246cb"><svg width="100%" height="100%" viewBox="0 0 20 20">
+                    <div class="_eaf002ed">
+                        <a class="_71544996" href="{{ url('login/facebook') }}">
+                            <span class="_82a246cb"><svg width="100%" height="100%" viewBox="0 0 20 20">
                                     <g id="Symbols" stroke="none" stroke-width="1">
                                         <g id="done_circle" fill-rule="nonzero">
                                             <g id="Shape">
@@ -17,8 +19,15 @@
                                             </g>
                                         </g>
                                     </g>
-                                </svg></span><span class="_95a1a91b">CONTINUE WITH FACEBOOK</span></a></div>
-                    <div class="_7cf3baca"><a class="_71544996"><span class="_82a246cb"><svg width="100%" height="100%" viewBox="0 0 14 14">
+                                </svg>
+                            </span>
+                                <span class="_95a1a91b">CONTINUER AVEC FACEBOOK</span>
+                        </a>
+                    </div>
+                    <div class="_7cf3baca">
+                        <a class="_71544996" href="{{ url('login/gmail') }}">
+                            <span class="_82a246cb">
+                                <svg width="100%" height="100%" viewBox="0 0 14 14">
                                     <g id="Symbols" stroke="none" stroke-width="1">
                                         <g id="done_circle" fill-rule="nonzero">
                                             <g id="Shape">
@@ -26,22 +35,31 @@
                                             </g>
                                         </g>
                                     </g>
-                                </svg></span><span class="_95a1a91b">CONTINUE WITH GOOGLE</span></a></div>
-                    <div class="_964b105c"><a class="_71544996"><span class="_82a246cb"><svg width="100%" height="100%" viewBox="0 0 17 20">
-                                    <g id="Symbols" stroke="none" stroke-width="1">
-                                        <g id="done_circle" fill-rule="nonzero">
-                                            <g id="Shape">
-                                                <path
-                                                  d="M16.464 15.558c-.302.698-.66 1.34-1.074 1.93-.564.805-1.026 1.362-1.382 1.67-.552.509-1.144.769-1.777.783-.455 0-1.003-.129-1.642-.391-.64-.262-1.229-.391-1.767-.391-.564 0-1.17.13-1.817.39-.648.263-1.17.4-1.57.413-.608.026-1.213-.241-1.817-.803-.386-.337-.869-.913-1.447-1.73-.62-.873-1.13-1.884-1.529-3.038C.214 13.145 0 11.94 0 10.771c0-1.338.29-2.492.868-3.46a5.093 5.093 0 0 1 1.818-1.838 4.891 4.891 0 0 1 2.459-.694c.482 0 1.115.15 1.901.443.784.294 1.287.443 1.508.443.165 0 .724-.174 1.672-.522.897-.323 1.654-.457 2.273-.404 1.68.136 2.942.798 3.781 1.99-1.502.91-2.245 2.186-2.23 3.821.013 1.274.475 2.334 1.383 3.176.412.39.872.692 1.383.907-.11.321-.228.63-.352.925zM12.61.4c0 .999-.364 1.931-1.091 2.794-.878 1.026-1.939 1.618-3.09 1.525a3.108 3.108 0 0 1-.023-.378c0-.959.417-1.985 1.158-2.823a4.46 4.46 0 0 1 1.411-1.06c.57-.277 1.108-.43 1.615-.457.014.133.02.267.02.4z">
-                                                </path>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg></span><span class="_95a1a91b">CONTINUE WITH APPLE</span></a></div>
+                                </svg>
+                            </span>
+                            <span class="_95a1a91b">CONTINUER AVEC GOOGLE</span>
+                        </a>
+                    </div>
+                    <div class="_964b105c">
+                        <a class="_71544996" href="{{ url('login/github') }}">
+                            <span class="_82a246cb">
+                                <?xml version="1.0"?><svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
+                            </span>
+                            <span class="_95a1a91b">CONTINUER AVEC GITHUB</span>
+                        </a>
+                </div>
+                <div class="__964b105c">
+                        <a class="_71544996" href="{{ url('login/github') }}">
+                            <span class="_82a246cb">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px"><path fill="#fff" d="M8.421 14h.052 0C11.263 14 13 12 13 9.5 12.948 6.945 11.263 5 8.526 5 5.789 5 4 6.945 4 9.5 4 12 5.736 14 8.421 14zM4 17H13V43H4zM44 26.5c0-5.247-4.253-9.5-9.5-9.5-3.053 0-5.762 1.446-7.5 3.684V17h-9v26h9V28h0c0-2.209 1.791-4 4-4s4 1.791 4 4v15h9C44 43 44 27.955 44 26.5z"/></svg>
+                            </span>
+                            <span class="_95a1a91b">CONTINUER AVEC LINKEDIN</span>
+                        </a>
+                </div>
                 </div>
                 <div class="_86bb084a">
                     <div class="_4dfd0c8c"></div>
-                    <div class="_409742f4">or log in with email</div>
+                    <div class="_409742f4">ou connectez-vous par e-mail</div>
                     <div class="_4dfd0c8c"></div>
                 </div>
                 <form method="POST" action="{{ route('login') }}" class="new_teachable_account" id="new_teachable_account" accept-charset="UTF-8">
@@ -81,7 +99,13 @@
                     </div>
                 </div>
 
-                <div class="_18c8ec60">Forgot Password?</div>
+                <div class="_18c8ec60">
+                    @if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}"> 
+                        Mot de passe oublié?
+                    </a>
+                    @endif
+                </div>
                 @error('email')
                 <div class="_b4d26ce">
                     <span class="_904926a1">
@@ -97,10 +121,10 @@
                 </div>
                 @enderror
                 <div class="_bf9bb0cc" id="login-button">
-                    <button style="background: transparent;border: none;" type="submit" class="_6142989a"><span>LOGIN</span></button>
+                    <button style="background: transparent;border: none;" type="submit" class="_6142989a"><span>Connectez-vous</span></button>
                 </div>
                 </form>
-                <div class="_a2fa3940">Don't have an account? <span class="_9020a18">Sign up</span></div>
+                <div class="_a2fa3940">Vous n'avez pas de compte? <a href="{{route('register')}}"> <span class="_9020a18">Inscrivez-vous</span></a></div>
             </div>
         </div>
 
