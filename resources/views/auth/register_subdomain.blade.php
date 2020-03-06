@@ -77,7 +77,27 @@
                     </div>
                 </div>
                 <div class="_18c8ec60">Forgot Password?</div>
-                <div class="_b4d26ce"><span class="_904926a1">Wrong email or password.</span></div>
+                @error('full_name')
+                <div class="_b4d26ce">
+                    <span class="_904926a1">
+                        {{$message}}
+                    </span>
+                </div>
+                @enderror
+                @error('email')
+                <div class="_b4d26ce">
+                    <span class="_904926a1">
+                        {{$message}}
+                    </span>
+                </div>
+                @enderror
+                @error('password')
+                <div class="_b4d26ce">
+                    <span class="_904926a1">
+                        {{$message}}
+                    </span>
+                </div>
+                @enderror
                 <div class="_bf9bb0cc" id="login-button"><a class="_6142989a"><span>LOGIN</span></a></div>
                 <div class="_a2fa3940">Don't have an account? <span class="_9020a18">Sign up</span></div>
             </div>

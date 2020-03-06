@@ -434,6 +434,7 @@
                                 <br>
                                 <input type="date" name="date_exp" id="date_exp">
                                 <br>
+                                <input hidden type="text" name="school_id" value="{{$school->id}}">
                                 <label for="value">Valeur du coupon</label>
                                 <br>
                                 <select name="value" id="value">
@@ -473,7 +474,6 @@
 
                                   </div>
 
-                                 <input style="display: none;" type="text" name="school_id" value="">
                                  {{-- <input style="display: none;" type="text" name="type" value="Free"> --}}
                                  {{-- <input style="display: none;" type="text" name="recurring" value="No"> --}}
 

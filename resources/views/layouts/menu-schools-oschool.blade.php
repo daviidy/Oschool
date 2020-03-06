@@ -67,9 +67,9 @@
     <link
       href="https://themes2.teachablecdn.com/themecss/production/base.css?_=d5b075d37bf7&amp;brand_course_heading=%23ffffff&amp;brand_heading=%23134361&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%23134361&amp;brand_secondary=%23ff3f20&amp;brand_text=%234d4d4d&amp;logged_out_homepage_background_image_overlay=0.5&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F5mHijVFBS4qf8vcfzak0"
       rel="stylesheet" data-turbolinks-track="true">
-    <title>Tous les cours de {{$school->name}} | Oschool</title>
-    <meta property="og:title" content="Tous les cours de {{$school->name}} | Oschool">
-    <meta property="og:image" content="/images/schools/logos/{{$school->logo}}">
+    <title>@yield('title') | Oschool</title>
+    <meta property="og:title" content="@yield('title') | Oschool">
+    <meta property="og:image" content="/images/schools/logos/logo_oschool_blanc.png">
     <meta name="brand_video_player_color" content="#4D90CC">
 
 
@@ -84,7 +84,6 @@
 
 
     <!--pour le footer-->
-    @if($school->user->isAdmin())
 
     <style media="screen">
     /*! CSS Used from: https://fedora.teachablecdn.com/assets/bootstrap-31ff648fd5e6158c77c31e785844877b6666554feab422e57ca5a96aa5587b9e.css ; media=screen */
@@ -329,41 +328,7 @@ footer .container .row ul li a:hover{text-decoration:underline;}
 @font-face{font-family:'TeachableSans-Bold';src:url(//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot);src:url(//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.eot?#iefix) format("embedded-opentype"),url(//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.woff) format("woff"),url(//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Bold.ttf) format("truetype");}
     </style>
 
-    @else
-    <style media="screen">
-    footer{
-        position: relative;
-    }
-    /*! CSS Used from: https://fedora.teachablecdn.com/assets/pages-a388a8b392c084dae7e42369a8aeefcf045074993ddb806fe6bbd528c07e53c2.css ; media=screen */
-@media screen{
-div,span,a,img,ul,li,footer{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-footer{display:block;}
-ul{list-style:none;}
-.footer__wrapper,.footer__inner{width:100%;}
-@media only screen and (min-width: 768px){
-.footer__wrapper{max-width:var(--base-width-cutoff);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}
-}
-*,*:before,*:after{box-sizing:inherit;}
-a{text-decoration:none;color:var(--brand_secondary);}
-img{display:block;}
-.using-mouse :focus{outline:none;}
-.footer{padding:20px;background-color:var(--brand_primary);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}
-.footer__inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:1.4rem;line-height:2rem;font-weight:400;text-align:center;}
-.footer__list+.footer__list{margin-top:20px;}
-.footer__inner a,.footer__inner{color:var(--brand_navbar_text);}
-.footer__inner a:hover{text-decoration:underline;}
-.footer__copyright{font-size:1.8rem;}
-@media only screen and (min-width: 768px){
-.footer__inner{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;text-align:left;}
-.footer__list.legal-links{margin-top:0;}
-.powered-by{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;}
-}
-.powered-by{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin-top:20px;}
-.powered-by-logo{height:15px;display:inline-block;}
-}
-    </style>
 
-    @endif
 
 
     <!--pour le slider-->
@@ -586,69 +551,17 @@ img{display:block;}
                         <span class="icon-bar"></span>
                     </button>
                     <!-- Site logo -->
-                    @if($school->user->type3 == 'owner')
-                     @if($school->logo == 'image.jpg')
-                    <a class="navbar__title" href="{{url('schools', $school)}}">
-                      {{$school->name}}
-                    </a>
-                    @else
-                    <a style="padding: 5px;" class="school-title navbar-brand" href="{{ route('website.subdomain.home', ['subdomain' => $school->slug]) }}">
-                        <img width="50" src="/images/schools/logos/{{$school->logo}}" alt="logo" id="nhf">
-                    </a>
-                    @endif
-                    @else
+
                     <a style="padding: 0px;" class="school-title navbar-brand" href="/">
                         <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf">
                     </a>
-                    @endif
+
 
 
                     <!-- Header Menu -->
                     <div class="collapse navbar-collapse navbar-header-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             @auth
-                            @if(Auth::user()->createSchools->contains($school->id))
-                            <li>
-
-                                <a class="fedora-navbar-link navbar-link" href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}" target="">
-                                    Admin
-                                </a>
-
-                            </li>
-                            @endif
-
-                            @if(Auth::user()->isOwner() && Auth::user()->createSchools->contains($school->id))
-                            <li>
-
-                                <a class="fedora-navbar-link navbar-link" href="{{ route('website.subdomain.previewIn', ['school' => $school->id, 'subdomain' => $school->slug]) }}" target="">
-                                    Aperçu inscrit
-                                </a>
-
-                            </li>
-                            <li>
-
-                                <a class="fedora-navbar-link navbar-link" href="{{ route('website.subdomain.previewOut', ['school' => $school->id, 'subdomain' => $school->slug]) }}" target="">
-                                    Aperçu visiteur
-                                </a>
-
-                            </li>
-                            @elseif(Auth::user()->isAdmin() && Auth::user()->createSchools->contains($school->id))
-                            <li>
-
-                                <a class="fedora-navbar-link navbar-link" href="{{url('schoolAdmin', $school)}}" target="">
-                                    Aperçu inscrit
-                                </a>
-
-                            </li>
-                            <li>
-
-                                <a class="fedora-navbar-link navbar-link" href="{{url('schoolAdmin', $school)}}" target="">
-                                    Aperçu visiteur
-                                </a>
-
-                            </li>
-                            @endif
-
 
                             <li>
 
@@ -659,15 +572,8 @@ img{display:block;}
                             </li>
                             @endauth
 
-                            <li>
 
-                                <a class="fedora-navbar-link navbar-link" href="/home" target="">
-                                    Tous les cours
-                                </a>
 
-                            </li>
-
-                            @if($school->user->type1 == 'admin')
                             <li>
 
                                 <a class="fedora-navbar-link navbar-link current-page" href="/schools" target="">
@@ -675,7 +581,6 @@ img{display:block;}
                                 </a>
 
                             </li>
-                            @endif
 
 
                             <!-- If more than 5 links, collapse the rest in a dropdown -->
@@ -728,7 +633,6 @@ img{display:block;}
     @yield('content')
 
 
-    @if($school->user->isAdmin())
     <footer style="bottom: 0 !important;position: relative;">
       <div class="container">
         <div class="row">
@@ -736,7 +640,7 @@ img{display:block;}
 
               <h4> <img src="/images/schools/logos/oschool_2.png" alt="" style="width: 130px;"> </h4>
               <p> <br> Oschool vous offre la possibilité de poursuivre des diplômes et certificats 100% en ligne, auprès des meilleures universités d’Afrique.</p>
-              <p>© 2019 OSCHOOL. TOUS DROITS RÉSERVÉS.</p>
+              <p>© <span id="year">2019</span> OSCHOOL. TOUS DROITS RÉSERVÉS.</p>
           </div>
           <div class="col-sm-2 second-section">
             <ul class="new-homepage-footer-links">
@@ -826,52 +730,6 @@ img{display:block;}
         </div-->
       </div>
     </footer>
-
-    @else
-
-    <footer class="">
-        <div class="footer">
-            <div class="footer__wrapper">
-                <div class="footer__inner">
-                    <ul class="footer__list">
-                        <li class="footer__copyright">
-                            ©
-                            {{$school->name}}
-                            <span id="year"></span>
-                        </li>
-
-                    </ul>
-                    <ul class="footer__list legal-links">
-                        <!--
-                        <li>
-                            <a href="/p/terms">
-                                Terms of Use
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/p/privacy">
-                                Privacy Policy
-                            </a>
-                        </li>
-                    -->
-
-                        <li>
-
-                            <a class="powered-by" href="https://oschoolelearning.com">
-                                <span class="powered-by-text">Créez votre plateforme de formation avec</span>
-                                <img src="/images/schools/logos/logo_oschool_blanc.png" />
-                            </a>
-
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    @endif
-
 
 
 

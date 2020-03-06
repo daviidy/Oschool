@@ -13,6 +13,7 @@ class Coupon extends Model
     protected $fillable = ['date_exp',
                            'code',
                            'value',
+                           'school_id',
                          ];
      /**
       * [users description]
@@ -23,5 +24,15 @@ class Coupon extends Model
       {
           return $this->belongsToMany('App\Course');
       }
+
+      /**
+       * [users description]
+       * relationship one to many with School model
+       * @return [array] [description]
+       */
+       public function school()
+       {
+           return $this->belongsTo('App\School');
+       }
 
 }

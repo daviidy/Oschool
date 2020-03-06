@@ -89,18 +89,25 @@ class SchoolController extends Controller
      */
     public function show(School $school)
     {
-        if (Auth::check()) {
-
-            $type = 'all';
-            $courses = Course::where('school_id', $school->id)->where('state', 'active')->get();
-            return view('schools.showBusinessIn', ['school' => $school, 'courses' => $courses, 'type' => $type]);
-
+        if ($school->user->isAdmin()) {
+            return view('schools.show', ['school' => $school]);
         }
+
         else {
-            $type = 'all';
-            $courses = Course::where('school_id', $school->id)->where('state', 'active')->get();
-            return view('schools.showBusinessOut', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+            if (Auth::check()) {
+
+                $type = 'all';
+                $courses = Course::where('school_id', $school->id)->where('state', 'active')->get();
+                return view('schools.showBusinessIn', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+
+            }
+            else {
+                $type = 'all';
+                $courses = Course::where('school_id', $school->id)->where('state', 'active')->get();
+                return view('schools.showBusinessOut', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+            }
         }
+
     }
 
 
@@ -503,7 +510,7 @@ class SchoolController extends Controller
      }
 
 
-     //page users home
+     //subdomain users home
      public function showBusinessHomeUsers(Request $request)
      {
          $subdomain = $request->route('domain') ?? $request->route('subdomain');

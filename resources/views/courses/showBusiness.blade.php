@@ -560,8 +560,8 @@ button{line-height:inherit;}
 
 
 
-<!--
 
+<!--
   <div class="course-block block closing_letter even-stripe" id="block-183311">
 
     <div class="container">

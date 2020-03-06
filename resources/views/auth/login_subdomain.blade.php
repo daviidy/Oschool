@@ -44,6 +44,8 @@
                     <div class="_409742f4">or log in with email</div>
                     <div class="_4dfd0c8c"></div>
                 </div>
+                <form method="POST" action="{{ route('login') }}" class="new_teachable_account" id="new_teachable_account" accept-charset="UTF-8">
+                    @csrf
                 <div class="_d70702c3">
                     <div class="_9830536">
                         <div class="_3f41241d">
@@ -58,7 +60,8 @@
                                         </g>
                                     </g>
                                 </svg></div>
-                        </div><input class="_9a11307b" placeholder="Your Email" type="email">
+                        </div>
+                        <input name="email" class="_9a11307b" placeholder="Email" type="email" required>
                     </div>
                     <div class="_9830536">
                         <div class="_3f41241d">
@@ -73,12 +76,30 @@
                                         </g>
                                     </g>
                                 </svg></div>
-                        </div><input class="_9a11307b" placeholder="Your Password" type="password">
+                        </div>
+                        <input name="password" class="_9a11307b" placeholder="Mot de passe" type="password" required>
                     </div>
                 </div>
+
                 <div class="_18c8ec60">Forgot Password?</div>
-                <div class="_b4d26ce"><span class="_904926a1">Wrong email or password.</span></div>
-                <div class="_bf9bb0cc" id="login-button"><a class="_6142989a"><span>LOGIN</span></a></div>
+                @error('email')
+                <div class="_b4d26ce">
+                    <span class="_904926a1">
+                        {{$message}}
+                    </span>
+                </div>
+                @enderror
+                @error('password')
+                <div class="_b4d26ce">
+                    <span class="_904926a1">
+                        {{$message}}
+                    </span>
+                </div>
+                @enderror
+                <div class="_bf9bb0cc" id="login-button">
+                    <button style="background: transparent;border: none;" type="submit" class="_6142989a"><span>LOGIN</span></button>
+                </div>
+                </form>
                 <div class="_a2fa3940">Don't have an account? <span class="_9020a18">Sign up</span></div>
             </div>
         </div>

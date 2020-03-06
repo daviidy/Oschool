@@ -559,8 +559,277 @@ header,svg{display:none;}
         </div>
     </section>
 
+    <section class="five-simple-steps _6">
+        <style>
+            ._6 {
+                margin-bottom: 150px;
+            }
+
+            @media (max-width: 991px) {
+                ._6 {
+                    margin-bottom: 100px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                ._6 {
+                    margin-bottom: 75px;
+                }
+            }
+        </style>
+        <!--
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="default-header">Pourquoi choisir Oschool?</h1>
+                    <ul class="steps-nav">
+                        <div class="line"></div>
+                        <li class="steps active" data-step="1">
+                            <a href="#step1" data-scroll="false">
+                                <h2>1</h2>
+                                <p>Projets de la vie réelle conçus par des experts de l'industrie</p>
+                            </a>
+                        </li>
+                        <li class="steps" data-step="2">
+                            <a href="#step2" data-scroll="false">
+                                <h2>2</h2>
+                                <p>Mentorat</p>
+                            </a>
+                        </li>
+                        <li class="steps" data-step="3">
+                            <a href="#step3" data-scroll="false">
+                                <h2>3</h2>
+                                <p>Programme d'apprentissage flexible</p>
+                            </a>
+                        </li>
+                        <li class="steps" data-step="4">
+                            <a href="#step4" data-scroll="false">
+                                <h2>4</h2>
+                                <p>Accompagnement à l'emploi</p>
+                            </a>
+                        </li>
+                        <li class="steps" data-step="5">
+                            <a href="#step5" data-scroll="false">
+                                <h2>5</h2>
+                                <p>Parcours diplômants et certifiants</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row second-row active" data-step="1" id="step1">
+                <div class="col-md-7 image-column">
+                    <img src="/images/divers/step-1.svg">
+                </div>
+                <div class="col-md-5">
+                    <h1 class="default-header">Projets de la vie réelle conçus par des experts de l'industrie</h1>
+                    <p class="default-paragraph">Avec des projets du monde réel construits en partenariat avec des experts du secteur, vous serez en mesure de constituer un portefeuille prêt à l'emploi, et directement utilisable par les entreprises.</p>
+                    <!--a class="next-step green-button">Suivant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a-->
+                </div>
+            </div>
+            <div class="row second-row" data-step="2" id="step2">
+                <div class="col-md-7 image-column">
+                    <img src="/images/divers/step-2.svg">
+                </div>
+                <div class="col-md-5">
+                    <h1 class="default-header">Mentorat</h1>
+                    <p class="default-paragraph">Obtenez un mentor compétent qui oriente votre apprentissage et qui se concentre sur les réponses à vos questions, vous motive et vous garde sur la bonne voie.</p>
+                    <!--a class="next-step green-button">Suivant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a-->
+                </div>
+            </div>
+            <div class="row second-row" data-step="3" id="step3">
+                <div class="col-md-7 image-column">
+                    <img src="/images/divers/step-3.svg">
+                </div>
+                <div class="col-md-5">
+                    <h1 class="default-header">Programme d'apprentissage flexible</h1>
+                    <p class="default-paragraph">Obtenez un plan d'apprentissage personnalisé sur mesure pour votre vie bien remplie. Avec des paiements mensuels faciles, vous pouvez apprendre à votre rythme et atteindre vos objectifs personnels.</p>
+                    <!--a class="next-step green-button">Suivant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a-->
+                </div>
+            </div>
+            <div class="row second-row" data-step="4" id="step4">
+                <div class="col-md-7 image-column">
+                    <img src="/images/divers/step-4.svg">
+                </div>
+                <div class="col-md-5">
+                    <h1 class="default-header">Accompagnement à l'emploi</h1>
+                    <p class="default-paragraph">Vous aurez accès à des sessions de coaching en carrière, à des conseils de préparation aux entretiens, à des résumés de CV et à des critiques de profils professionnels en ligne pour vous aider à progresser dans votre carrière.</p>
+                    <!--a class="next-step green-button" style="background: #FF6D2C;">Commencez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a-->
+                </div>
+            </div>
+            <div class="row second-row" data-step="5" id="step5">
+                <div class="col-md-7 image-column">
+                    <img src="/images/divers/step-5.svg">
+                </div>
+                <div class="col-md-5">
+                    <h1 class="default-header">Parcours diplômants et certifiants</h1>
+                    <p class="default-paragraph">Ces parcours constitués de projets professionnalisants, vous aident à être tout de suite opérationnels pour les entreprises</p>
+                    <a href="{{url('schools')}}" class="next-step green-button" style="background: #4D90CC;">Commencez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                </div>
+            </div>
+        </div>
+    -->
+    </section>
+    <script type="text/javascript">
+    $('.steps-nav a').on('click', function (event) {
+        event.preventDefault();
+
+        $('.active').removeClass('active');
+        $(this).parent().addClass('active');
+        $('.second-row').hide();
+        $($(this).attr('href')).show();
+    });
+
+    $('.steps-nav a:first .next-step').trigger('click'); // Default
+
+    </script>
+    <section class="showcase _7">
+        <style>
+
+        .slick-active + .slick-center{
+
+            img{
+                opacity: 1;
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+                margin-left: -105%;
+                transition: all 0.5s ease;
+                }
+            }
+
+            .slick-active{
+                img{
+                    opacity: .8;
+                    transition: all 0.5s ease;
+                    width: 200px;
+                    margin: 150px 0px 0px 88px;
+
+                }
+            }
 
 
+
+
+
+            ._7 {
+                margin-bottom: 150px;
+            }
+
+            @media (max-width: 991px) {
+                ._7 {
+                    margin-bottom: 75px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                ._7 {
+                    margin-bottom: 85px;
+                }
+            }
+        </style>
+        <div class="container-fluid">
+            <div class="row">
+                <h1 class="default-header">Nos partenaires exclusifs</h1>
+                <p class="default-paragraph subheader">Si notre école en est là aujourd’hui, c’est aussi grâce aux coups de main précieux et à la confiance que nous ont accordés nos partenaires !</p>
+            </div>
+            <div class="slider-parent">
+                <div class="homepage-slider">
+                            <div class="item">
+                                <img class="big-image" src="/images/divers/dave_slider.jpg">
+
+                            </div>
+                            <div class="item">
+                                <img class="big-image" src="/images/divers/feature1.png">
+
+                            </div>
+                            <div class="item">
+                                <img class="big-image" src="/images/divers/feature2.png">
+
+                            </div>
+                            <div class="item">
+                                <img class="big-image" src="/images/divers/os-2.png">
+
+                            </div>
+                            <div class="item">
+                                <img class="big-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IC5in4HlQB23O5MEj7nu">
+
+                            </div>
+
+
+                            {{-- <div class="item">
+                                <img class="big-image" src="https://s3.amazonaws.com/cms-uploaded-images/xry5vzxQSuaMySPNhaug_Nicole%20Walters%20Headshot.png">
+                                <div class="text big-image-text">
+                                    <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
+                                    <p class="default-paragraph">Nicole Walters, $1k in 1 Day Academy</p>
+                                </div>
+                            </div> --}}
+
+
+
+                </div>
+            </div>
+            <div class="small-text">
+                <div class="text active">
+                    <img class="person-image" src="/images/divers/dave_slider.jpg">
+                    <p class="default-paragraph">David YAO, Entrepreneur et codeur</p>
+                </div>
+                <div class="text">
+                    <img class="person-image" src="https://s3.amazonaws.com/cms-uploaded-images/3RWSdMQlinGJY7diShFw_nicole-walters.jpg">
+                    <p class="default-paragraph">Nicole Walters, $1k in 1 Day Academy</p>
+                </div>
+                <div class="text">
+                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jRczQFwrTHGEeyIgTWJG">
+                    <p class="default-paragraph">Teela Cunningham, Every Tuesday</p>
+                </div>
+                <div class="text">
+                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/IgamM6IzTySKfgHAeNUV">
+                    <p class="default-paragraph">Melyssa Griffin, melyssagriffin.com</p>
+                </div>
+                <div class="text">
+                    <img class="person-image" src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/jT5L8vR1qWrKfiUg3gCQ">
+                    <p class="default-paragraph">Peter Nowell, Sketch Master</p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/js/index.js"></script>
+
+        <div class="container container-beneath-slider">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 column">
+                    <h1 class="default-green-header">Partagez vos certificats sur LinkedIn</h1>
+                    <p class="default-paragraph">
+                        Tous nos certificats sont partageables sur LinkedIn.
+                        Vous pourrez ainsi faire valoir facilement
+                        vos compétences auprès de potentiels recruteurs.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-4 column">
+                    <h1 class="default-green-header">Mentorat</h1>
+                    <p class="default-paragraph">Chaque semaine, un expert de votre domaine professionnel suit vos progrès</p>
+                </div>
+                <div class="col-xs-12 col-md-4 column">
+                    <h1 class="default-green-header">Accompagnement à l'emploi</h1>
+                    <p class="default-paragraph">Vous aurez accès à des sessions de coaching de carrière, à des conseils de préparation aux entretiens, à des résumés de CV et à des critiques de profils professionnels en ligne pour vous aider à progresser dans votre carrière.</p>
+                </div>
+            </div>
+            <div class="row last-row">
+                <div class="col-xs-12">
+                    <a href="{{url('schools')}}" class="dark-green-button">Commencez dès maintenant</a>
+                    <!--p class="default-paragraph">En collaboration avec les leaders de l'industrie</p>
+                    <div class="clearfix company-logos">
+                        <img src="/images/divers/cinetpay.png">
+                        <img src="/images/divers/Epistrophe.jpg">
+                        <img src="/images/divers/bora.png">
+                        <img src="/images/divers/final.png">
+                        <img src="/images/divers/LogoM-1.png">
+                        <img src="/images/divers/Logo-1.png">
+                    </div-->
+
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="testimonial-cards _8">
         <style>
