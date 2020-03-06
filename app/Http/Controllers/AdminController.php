@@ -138,6 +138,31 @@ class AdminController extends Controller
       }
     }
 
+    /**
+     * [monthlyPayments description]
+     * @param  Request $request [description]
+     * @return [type]           [description]
+     */
+    public function schoolmonthlyPayments( School $school, Request $request)
+
+    {
+      //on récupere le mois et l'annee choisi par le prof, et on les caste en entier
+      //ensuite on selectionne toutes les sessions du mois, de l'annee et appartenant
+      //au prof
+      if (Auth::check()) {
+
+        $month = (int)$request['month'];
+        $year = (int)$request['year'];
+        //ensemble de tous les achats du mois sélectionné
+        $current_month_purchases = Purchase::whereMonth('date', '=', $month)->whereYear('date', '=', $year)->where('status', 'Validé')->get();
+        return view('admin_views.schools.payments', ['current_month_purchases' => $current_month_purchases])->with('status', 'Retrouvez ci-dessous la liste des achats pour le mois sélectionné');
+      }
+
+      else {
+        return redirect('home');
+      }
+    }
+
 
 
 

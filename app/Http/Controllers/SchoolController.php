@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\School;
 use Auth;
 use App\User;
+use App\Purchase;
 use App\Course;
 use App\Author;
 use App\Classroom;
+use App\Faq;
 use Image;
 use Input;
 use Illuminate\Support\Facades\Session;
@@ -169,6 +171,48 @@ class SchoolController extends Controller
             return redirect('home');
         }
     }
+
+
+/**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\School  $school
+     * @return \Illuminate\Http\Response
+     */
+    public function schoolFaqs(School $school)
+    {
+        if (Auth::check()) {
+        return view('admin_views.school.faq', ['school' => $school]);
+        }
+        else {
+            return redirect('home');
+        }
+    }
+
+    /**
+     * [monthlyPayments description]
+     * @param  Request $request [description]
+     * @return [type]           [description]
+     */
+    public function schoolmonthlyPayments(School $school, Request $request)
+
+    {
+      //on récupere le mois et l'annee choisi par le prof, et on les caste en entier
+      //ensuite on selectionne toutes les sessions du mois, de l'annee et appartenant
+      //au prof
+      if (Auth::check()) {
+
+        //ensemble de tous les achats du mois en cours
+        $current_month_purchases = Purchase::whereMonth('date', '=', date('m'))->where('status', 'Validé')->get();
+        return view('admin_views.schools.payments', ['school' => $school, 'current_month_purchases' => $current_month_purchases])->with('status', 'Retrouvez ci-dessous la liste des achats pour le mois sélectionné');
+      }
+
+      else {
+        return redirect('home');
+      }
+    }
+
+
 
     /**
      * Show the form for editing the specified resource.

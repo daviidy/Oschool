@@ -7,8 +7,19 @@
 <!--pour le bouton "tous les cours"-->
 <style media="screen">
 
+.faq{
+    background-color: #f7f7f7;
+    padding: 25px;
+          }
+.faq-question h2{
+  font-size: 20px;
+    font-weight: 600;
+}
 
-
+.faq-answer p{
+  text-align: left !important;
+  margin: 0!important;
+}
 /*! CSS Used from: http://localhost:8000/css/school_homepage.css */
 @media all{
 a{background-color:transparent;}
@@ -215,6 +226,9 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
         <li class="nav-item nav-link nav-link-2">
           <a id="tab4">A propos de cette école</a>
         </li>
+        <li class="nav-item nav-link nav-link-2">
+          <a id="tab5">FAQ</a>
+        </li>
 
     </ul>
   </div>
@@ -400,6 +414,7 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
           ._1571 {
             margin-bottom: 0px;
           }
+
         }
       </style>
       <div class="container">
@@ -492,6 +507,87 @@ body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:
               <p>{!!$school->description!!}</p>
             </div>
           </div>
+
+
+
+        {{--
+        @include('includes.default.school_page.advantages')
+        --}}
+        <div class="row logos">
+          <div class="col-xs-12">
+            <p class="default-paragraph">Les leaders du marché utilisent Oschool pour la formation du personnel.</p>
+            <div class="clearfix company-logos">
+              <img src="/images/divers/cinetpay.png">
+              <img src="/images/divers/Epistrophe.jpg">
+              <img src="/images/divers/bora.png">
+              <img src="/images/divers/final.png">
+              <img src="/images/divers/LogoM-1.png">
+              <img src="/images/divers/Logo-1.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+</div>
+
+<div id="tab5C" class="nav-partial nav-partial-3" style="display: none;">
+    <section class="example-schools _1571">
+      <style>
+        ._1571 {
+          margin-bottom: 0px;
+        }
+
+        @media (max-width: 991px) {
+          ._1571 {
+            margin-bottom: 0px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          ._1571 {
+            margin-bottom: 0px;
+          }
+        }
+      </style>
+      
+          <div class="row">
+            <div class="col-xs-12">
+              <h1 style="margin-top: 2rem;" class="default-header"><i class="fa fa-question-circle"></i>FAQ de {{$school->name}}</h1>
+              
+
+                
+                  <div class="course-block block faq odd-stripe" id="block-183309">
+                      <div class="container">
+                        
+                        <div class="row">
+                          <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+                            @foreach($school-> faqs as $faq)
+                            <div class="faq-question">
+                              
+                              <h2>{{$faq->questions}}</h2><br>
+                             
+                            </div>
+                            <div class="faq-answer">
+                              
+                              {!!$faq->reponses!!}
+                             
+                          </div>
+                          <br>
+                          <hr>
+                          <br>
+                          @endforeach
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+                
+         
+
+          </div>
+          <br><br>
 
 
 
