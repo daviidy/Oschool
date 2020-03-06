@@ -77,6 +77,16 @@ class School extends Model
           return $this->hasMany('App\Faq');
       }
 
+      /**
+       * [users description]
+       * relationship one to many with Coupon model
+       * @return [array] [description]
+       */
+       public function coupons()
+       {
+           return $this->hasMany('App\Coupon');
+       }
+
 
      public static function boot() {
      parent::boot();

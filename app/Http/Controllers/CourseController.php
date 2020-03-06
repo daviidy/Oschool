@@ -91,7 +91,12 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        return view('courses.show', ['course' => $course]);
+        if ($school->user->isAdmin()) {
+            return view('courses.show', ['course' => $course]);
+        }
+        else {
+            return view('courses.showBusiness', ['course' => $course]);
+        }
     }
 
 

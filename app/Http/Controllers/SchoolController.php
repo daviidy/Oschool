@@ -91,8 +91,29 @@ class SchoolController extends Controller
      */
     public function show(School $school)
     {
-        return view('schools.show', ['school' => $school]);
+        if ($school->user->isAdmin()) {
+            return view('schools.show', ['school' => $school]);
+        }
+
+        else {
+            if (Auth::check()) {
+
+                $type = 'all';
+                $courses = Course::where('school_id', $school->id)->where('state', 'active')->get();
+                return view('schools.showBusinessIn', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+
+            }
+            else {
+                $type = 'all';
+                $courses = Course::where('school_id', $school->id)->where('state', 'active')->get();
+                return view('schools.showBusinessOut', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+            }
+        }
+
     }
+
+
+
 
     //to show school all courses
     public function showCourses(School $school)
@@ -114,6 +135,7 @@ class SchoolController extends Controller
      * @return \Illuminate\Http\Response
      * [function to show school dashboard to admin]
      */
+    //tableau admin pour oschool
     public function showForAdmin(School $school)
     {
         if (Auth::check()) {
@@ -124,20 +146,7 @@ class SchoolController extends Controller
         }
     }
 
-    public function showForBusiness(School $school, Request $request)
-    {
-        if (Auth::check()) {
-        $subdomain = $request->route('domain') ?? $request->route('subdomain');
-        $school = School::where('id', $subdomain)
-            ->orWhere('slug', $subdomain)
-            ->orWhere('domain', $subdomain)
-            ->firstOrFail();
-        return view('admin_views.schools.show', ['school' => $school]);
-        }
-        else {
-            return redirect('home');
-        }
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -316,7 +325,7 @@ class SchoolController extends Controller
         }
 
         if($request->hasFile('background')){
-          $image = $request->file('logo');
+          $image = $request->file('background');
           $filename = time() . '.' . $image->getClientOriginalExtension();
           Image::make($image)->save(public_path('/images/schools/backgrounds/' . $filename));
           $school->background = $filename;
@@ -441,6 +450,129 @@ class SchoolController extends Controller
         $courses = Course::where('school_id', $school->id)->where('type', 'bootcamp')->where('state', 'active')->get();
         return view('schools.showCourses', ['school' => $school, 'courses' => $courses, 'type' => $type]);
     }
+
+
+    /*
+    for subdomain schools
+     */
+
+     //tableau admin pour sous domaine
+     public function showForBusiness($school_id, Request $request)
+     {
+         if (Auth::check()) {
+         $subdomain = $request->route('domain') ?? $request->route('subdomain');
+         $school = School::where('id', $subdomain)
+             ->orWhere('slug', $subdomain)
+             ->orWhere('domain', $subdomain)
+             ->firstOrFail();
+         return view('admin_views.schools.show', ['school' => $school]);
+         }
+         else {
+             return redirect('home');
+         }
+     }
+
+
+     //apercu ecole en mode inscrit
+     public function showBusinessIn($school_id, Request $request)
+     {
+         $subdomain = $request->route('domain') ?? $request->route('subdomain');
+         $school = School::where('id', $subdomain)
+             ->orWhere('slug', $subdomain)
+             ->orWhere('domain', $subdomain)
+             ->firstOrFail();
+         if (Auth::check() && Auth::user()->createSchools->contains($school->id)) {
+             $type = 'all';
+             $courses = Course::where('school_id', $school->id)->where('state', 'active')->get();
+             return view('schools.showBusinessIn', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+         }
+     }
+
+     //apercu ecole en mode visiteur
+     public function showBusinessOut($school_id, Request $request)
+     {
+         $subdomain = $request->route('domain') ?? $request->route('subdomain');
+         $school = School::where('id', $subdomain)
+             ->orWhere('slug', $subdomain)
+             ->orWhere('domain', $subdomain)
+             ->firstOrFail();
+         if (Auth::check() && Auth::user()->createSchools->contains($school->id)) {
+
+             return view('schools.showBusinessOut', ['school' => $school]);
+         }
+     }
+
+     //page d'accueil du sous domaine
+     public function showBusinessHome(Request $request)
+     {
+         $subdomain = $request->route('domain') ?? $request->route('subdomain');
+         $school = School::where('id', $subdomain)
+             ->orWhere('slug', $subdomain)
+             ->orWhere('domain', $subdomain)
+             ->firstOrFail();
+             if (Auth::check()) {
+
+                 $type = 'all';
+                 $courses = Course::where('school_id', $school->id)->where('state', 'active')->get();
+                 return view('schools.showBusinessIn', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+
+             }
+             else {
+                 $type = 'all';
+                 $courses = Course::where('school_id', $school->id)->where('state', 'active')->get();
+                 return view('schools.showBusinessOut', ['school' => $school, 'courses' => $courses, 'type' => $type]);
+             }
+
+     }
+
+     //page de login du sous domaine
+     public function showBusinessLogin(Request $request)
+     {
+         $subdomain = $request->route('domain') ?? $request->route('subdomain');
+         $school = School::where('id', $subdomain)
+             ->orWhere('slug', $subdomain)
+             ->orWhere('domain', $subdomain)
+             ->firstOrFail();
+
+         return view('auth.login_subdomain', ['school' => $school]);
+
+
+     }
+
+     //page de register du sous domaine
+     public function showBusinessRegister(Request $request)
+     {
+         $subdomain = $request->route('domain') ?? $request->route('subdomain');
+         $school = School::where('id', $subdomain)
+             ->orWhere('slug', $subdomain)
+             ->orWhere('domain', $subdomain)
+             ->firstOrFail();
+
+         return view('auth.register_subdomain', ['school' => $school]);
+
+
+     }
+
+
+     //subdomain users home
+     public function showBusinessHomeUsers(Request $request)
+     {
+         $subdomain = $request->route('domain') ?? $request->route('subdomain');
+         $school = School::where('id', $subdomain)
+             ->orWhere('slug', $subdomain)
+             ->orWhere('domain', $subdomain)
+             ->firstOrFail();
+
+        if (Auth::check()) {
+            return view('users.dashboard_subdomain');
+        }
+
+        else {
+            return view('auth.login_subdomain', ['school' => $school]);
+        }
+
+
+     }
 
 
 }

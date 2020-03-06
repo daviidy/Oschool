@@ -96,6 +96,7 @@
                                                         <input type="text" name="code" id="coupon_code" autocomplete="off" class="spc__inline-form-input" placeholder="Coupon code" data-checkout-inline-input="">
                                                         <input style="display: none;" type="text" name="course_id" value="{{$pricing->course->id}}" class="spc__inline-form-input">
                                                         <input style="display: none;" type="text" name="pricing_id" value="{{$pricing->id}}" class="spc__inline-form-input">
+                                                        <input style="display: none;" type="text" name="school_id" value="{{$pricing->course->school_id}}" class="spc__inline-form-input">
 
                                                         <div class="spc__inline-form-success" data-checkout-inline-success=""></div>
 

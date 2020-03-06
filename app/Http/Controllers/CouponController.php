@@ -114,7 +114,7 @@ class CouponController extends Controller
     public function applyCoupon(Request $request)
     {
         $date = Carbon::now();
-        $coupon = Coupon::where('code', $request->code)->first();
+        $coupon = Coupon::where('code', $request->code)->where('school_id', $request->school_id)->first();
         $course = Course::find($request->course_id);
         $pricing = Pricing::find($request->pricing_id);
 

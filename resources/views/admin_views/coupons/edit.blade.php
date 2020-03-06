@@ -425,6 +425,7 @@
                                 <br>
                                 <label for="code">Date d'expiration</label>
                                 <br>
+                                <input hidden type="text" name="school_id" value="{{$school->id}}">
                                 <input type="date" name="date_exp" id="date_exp" value="{{$coupon->date_exp}}">
                                 <br>
                                 <label for="value">Valeur du coupon</label>

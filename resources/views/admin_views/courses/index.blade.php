@@ -284,8 +284,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             -->
                 <!---->
                 <div ng-if="ctrl.search" class="filter-search">
-                    <!----><input id="search" type="text" placeholder="Rechercher des cours par nom"
-                      class="form-control input-search-icon">
+                    <!----><input id="search" type="text" placeholder="Rechercher des cours par nom" class="form-control input-search-icon">
                     <!---->
                     <!---->
                     <!---->
