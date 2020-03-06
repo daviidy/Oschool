@@ -10,7 +10,7 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
 div,h1,h2,a,article,header,section{margin-top:0;}
 *,*:before,*:after{box-sizing:inherit;}
 a{-webkit-transition:all 200ms ease;-moz-transition:all 200ms ease;transition:all 200ms ease;color:#4a90e2;}
-a:active,a:hover,a:focus{-webkit-transition:all 200ms ease;-moz-transition:all 200ms ease;transition:all 200ms ease;outline:none;color:#4a90e2;}
+a:active,a:hover,a:focus{-webkit-transition:all 200ms ease;-moz-transition:all 200ms ease;transition:all 200ms ease;outline:none;color:#4d90cc;}
 .button{-webkit-transition:all 200ms ease,font-size 200ms ease;-moz-transition:all 200ms ease,font-size 200ms ease;transition:all 200ms ease,font-size 200ms ease;display:inline-block;padding:0.5rem 1rem;border:2px solid transparent;border-radius:100px;font-family:"Montserrat",Sans-Serif;font-size:1em;font-weight:500;line-height:normal;text-align:center;text-decoration:none;}
 .button:active,.button:focus,.button:hover{-webkit-transition:all 300ms ease,box-shadow 400ms ease;-moz-transition:all 300ms ease,box-shadow 400ms ease;transition:all 300ms ease,box-shadow 400ms ease;box-shadow:0 4px 8px 0 rgba(0,0,0,0.15);}
 .button-primary{border:2px solid #4a90e2;background-color:#4a90e2;color:#fff;border-radius:0px;}
@@ -21,7 +21,7 @@ a:active,a:hover,a:focus{-webkit-transition:all 200ms ease;-moz-transition:all 2
 :-ms-input-placeholder{color:#9c9c9c;}
 :-moz-placeholder{color:#9c9c9c;}
 ::placeholder{color:#9c9c9c;}
-h1,h2{margin:0 0 1rem;font-family:"Montserrat",sans-serif;line-height:1.2;}
+h1,h2{margin:0 0 1rem;font-family: "TeachableSans", Helvetica, Arial, sans-serif;line-height:1.2;}
 h1{font-size:3.36698rem;}
 h2{font-size:2.52587rem;}
 @media all and (min-width: 768px){
@@ -63,8 +63,8 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
 @media all and (min-width: 992px){
 .banner .section__headings{margin:0;}
 }
-.banner .section__heading{font-family:"Roboto",sans-serif;font-size:3.15733em;font-weight:700;}
-.banner .section__subheading{font-family:"Montserrat",sans-serif;font-size:1em;}
+.banner .section__heading{font-family: "TeachableSans", Helvetica, Arial, sans-serif;font-size:3.15733em;font-weight:700;}
+.banner .section__subheading{font-family: "TeachableSans", Helvetica, Arial, sans-serif;font-size:1em;}
 .banner .section__button-group{display:-webkit-box;display:-moz-box;display:box;display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:flex;-webkit-box-lines:multiple;-moz-box-lines:multiple;box-lines:multiple;-webkit-flex-wrap:wrap;-moz-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:start;-moz-box-align:start;box-align:start;-webkit-align-items:flex-start;-moz-align-items:flex-start;-ms-align-items:flex-start;-o-align-items:flex-start;align-items:flex-start;-ms-flex-align:start;margin-bottom:2rem;}
 .banner .section__button-group:after,.banner .section__button-group:before{-webkit-flex-basis:0;-moz-flex-basis:0;flex-basis:0;-ms-flex-preferred-size:0;order:1;}
 .banner .section__button-group .button{display:-webkit-box;display:-moz-box;display:box;display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:flex;-webkit-align-self:center;-moz-align-self:center;align-self:center;-ms-flex-item-align:center;-webkit-flex-basis:auto;-moz-flex-basis:auto;flex-basis:auto;-ms-flex-preferred-size:auto;-webkit-box-pack:center;-moz-box-pack:center;box-pack:center;-webkit-justify-content:center;-moz-justify-content:center;-ms-justify-content:center;-o-justify-content:center;justify-content:center;-ms-flex-pack:center;-webkit-box-ordinal-group:2;-moz-box-ordinal-group:2;box-ordinal-group:2;-webkit-order:2;-moz-order:2;order:2;-ms-flex-order:2;}
@@ -106,6 +106,19 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
 .banner___ce384 .section__heading___ce384{font-size:3rem;}
 }
 
+
+.btn-primary, .btn-primary:active, .btn-primary:focus {
+    background: #4d90cc !important;
+    border: 1px solid #4d90cc !important;
+}
+
+.btn-primary:hover, .btn-primary:active:hover, .btn-primary:focus:hover {
+    background: #6aace6 !important;
+    border: 1px solid #6aace6 !important;
+    }
+    body{
+        font-family: "TeachableSans", Helvetica, Arial, sans-serif!important;
+    }
     </style>
 
 
@@ -133,7 +146,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
 
                             <section class="section__button-group">
 
-                                <a class="button button-primary" href="/cart/add_product/614643?price_id=650383">Enroll Now</a>
+                                <a class="button button-primary" href="/cart/add_product/614643?price_id=650383">Inscrivez-vous maintenant</a>
 
 
                             </section>
@@ -245,13 +258,13 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <center>
-                          <a class="btn btn-md btn-primary" href="/schools/{{$school->id}}/courses">View All Courses</a>
+                          <a class="btn btn-md btn-primary" href="/schools/{{$school->id}}/courses">Voir tous les cours</a>
                         </center>
                     </div>
                 </div>
                 <br>
 
-                <div class="css-gl013y">
+                <!--div class="css-gl013y">
                     <div class="css-1ncomx8">
                         <h2 class="css-1ac5tn2">{{$school->heading}}</h2>
                         <div class="css-1npclfr">
@@ -260,7 +273,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                         </div>
                     </div>
                     <div class="css-3cg4xb"><img src="/images/schools/backgrounds/{{$school->background}}" alt="filesharing mobile + security badge" class="css-9whsf3"></div>
-                </div>
+                </div-->
             </div>
 
 
