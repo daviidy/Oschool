@@ -377,7 +377,7 @@ button{-webkit-appearance:button;cursor:pointer;}
 button[disabled]{cursor:default;}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 input{line-height:normal;}
-input[type='checkbox']{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0;}
+/*input[type='checkbox']{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0;}*/
 table{border-collapse:collapse;border-spacing:0;}
 td,th{padding:0;}
 .fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
@@ -719,35 +719,30 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <table class="tch-table student-table">
                     <tbody>
                         <tr>
-                            <th what="name column header" class="users-table-header _22oLp"><input what="select all users checkbox" type="checkbox" ng-model="bulk.selectAllOnPage" ng-change="highlightAllUsers()" ng-checked="bulk.selectAllOnPage"
-                                  class="pull-left ng-pristine ng-untouched ng-valid ng-empty">
-                                <!---->
-                                <ng-include ng-show="selectedCount > 0" src="'users/common/bulk-actions.html'" class="ng-hide">
-                                    <!---->
-                                </ng-include><span class="space"></span><span class="space"></span>
-                                <!----><span ng-if="selectedCount === 0" ng-click="toggleSort('name')" class="fastclickable">Nom</span>
-                                <!----><span class="space"></span><i ng-show="stateParams.sort_key === 'name' &amp;&amp; stateParams.sort_direction === 'ASC' &amp;&amp; selectedCount === 0" class="fa fa-angle-up ng-hide"></i><i
-                                  ng-show="stateParams.sort_key === 'name' &amp;&amp; stateParams.sort_direction === 'DESC' &amp;&amp; selectedCount === 0" class="fa fa-angle-down ng-hide"></i>
-                            </th>
-                            <th what="email column header" ng-click="toggleSort('email')" class="users-table-header _22oLp">Email<span class="space"></span><i ng-show="stateParams.sort_key === 'email' &amp;&amp; stateParams.sort_direction === 'ASC'"
+                            <th what="email column header" ng-click="toggleSort('email')" class="users-table-header _22oLp">#<span class="space"></span><i ng-show="stateParams.sort_key === 'email' &amp;&amp; stateParams.sort_direction === 'ASC'"
                                   class="fa fa-angle-up ng-hide"></i><i ng-show="(stateParams.sort_key === 'email' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
-                            <th what="unsubscribe code column header" ng-click="toggleSort('unsubscribe_from_marketing_emails')" ng-show="showColumn(title, 'unsubscribe')" class="users-table-header _22oLp">Total achats<span class="space"></span><i
+                            <th what="email column header" ng-click="toggleSort('email')" class="users-table-header _22oLp">Image<span class="space"></span><i ng-show="stateParams.sort_key === 'email' &amp;&amp; stateParams.sort_direction === 'ASC'"
+                                  class="fa fa-angle-up ng-hide"></i><i ng-show="(stateParams.sort_key === 'email' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
+                            <th what="unsubscribe code column header" ng-click="toggleSort('unsubscribe_from_marketing_emails')" ng-show="showColumn(title, 'unsubscribe')" class="users-table-header _22oLp">Cours associé<span class="space"></span><i
                                   ng-show="stateParams.sort_key === 'unsubscribe_from_marketing_emails' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
                                   ng-show="(stateParams.sort_key === 'unsubscribe_from_marketing_emails' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
 
-                            <th what="joined column header" ng-click="toggleSort('joined_at')" class="users-table-header _22oLp">Inscrit le<span class="space"></span><i
+                            <th what="joined column header" ng-click="toggleSort('joined_at')" class="users-table-header _22oLp">Id Transaction<span class="space"></span><i
                                   ng-show="stateParams.sort_key === 'joined_at' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
                                   ng-show="(stateParams.sort_key === 'joined_at' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
-                            <th what="custom role column header" ng-click="toggleSort('custom_roles.name')" ng-show="showColumn(title, 'role')" class="users-table-header _22oLp ng-hide">Role<span class="space"></span><i
+                            <th what="custom role column header" ng-click="toggleSort('custom_roles.name')" ng-show="showColumn(title, 'role')" class="users-table-header _22oLp ">Type de la formule<span class="space"></span><i
                                   ng-show="stateParams.sort_key === 'custom_role' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
                                   ng-show="(stateParams.sort_key === 'custom_role' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
-                            <th what="purchases gross column header" ng-click="toggleSort('transactions_gross')" ng-show="showColumn(title, 'purchases')" class="users-table-header _22oLp">Cours suivi(s)<span class="space"></span><i
+                            <th what="purchases gross column header" ng-click="toggleSort('transactions_gross')" ng-show="showColumn(title, 'purchases')" class="users-table-header _22oLp">Date<span class="space"></span><i
                                   ng-show="stateParams.sort_key === 'transactions_gross' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
                                   ng-show="(stateParams.sort_key === 'transactions_gross' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
-                            <th what="revenue share gross column header" ng-click="toggleSort('revenue_share')" ng-show="showColumn(title, 'revenue share')" class="users-table-header _22oLp ng-hide">Commission<span class="space"></span><i
+                            <th what="revenue share gross column header" ng-click="toggleSort('revenue_share')" ng-show="showColumn(title, 'revenue share')" class="users-table-header _22oLp ">Client<span class="space"></span><i
                                   ng-show="stateParams.sort_key === 'revenue_share' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
                                   ng-show="(stateParams.sort_key === 'revenue_share' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
-                            <th what="affiliate code column header" ng-click="toggleSort('affiliate_code')" ng-show="showColumn(title, 'affiliate code')" class="users-table-header _22oLp ng-hide">Affiliate Code<span class="space"></span><i
+                            <th what="affiliate code column header" ng-click="toggleSort('affiliate_code')" ng-show="showColumn(title, 'affiliate code')" class="users-table-header _22oLp">Statut<span class="space"></span><i
+                                  ng-show="stateParams.sort_key === 'affiliate_code' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
+                                  ng-show="(stateParams.sort_key === 'affiliate_code' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
+                            <th what="affiliate code column header" ng-click="toggleSort('affiliate_code')" ng-show="showColumn(title, 'affiliate code')" class="users-table-header _22oLp">Prix (FCFA)<span class="space"></span><i
                                   ng-show="stateParams.sort_key === 'affiliate_code' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
                                   ng-show="(stateParams.sort_key === 'affiliate_code' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
                             <th></th>
@@ -759,35 +754,22 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             
 
                         <tr what="user" which="davidyfreelance@gmail.com" ng-repeat="user in users" class="border-bottom">
-                            <td class="user-name-container"><input what="select user checkbox" type="checkbox" ng-model="user.userSelected" ng-change="updateSelectedUsers(user)" ng-checked="user.userSelected" ng-hide="(user.id === currentUser._id)"
-                                  class="pull-left ng-pristine ng-untouched ng-valid ng-empty {{$user->isAdmin() || $user->isOwner() ? 'ng-hide' : ''}}">
-                                <div ng-show="(user.id === currentUser._id)" class="pull-left checkbox-placeholder ng-hide"></div>
-                                <div what="user info wrapper" ui-sref="admin.users.user.information({ id: user.id })" class="user-info-wrapper" href="/admin/users/32429890/information">
-                                    <img gravatar-src-once="user.email" align="left" gravatar-size="50"
-                                      class="user-avatar img-circle" src="/images/users/default/{{$user->image}}">
-                                    <!---->
-                                    <!---
-                                    <div ng-if="user.is_teachable_account" class="myteachable-icon-overlay">&nbsp;</div>
-                                    <div ng-if="parseRole(user).indexOf('Primary Owner') > -1" class="primary-owner-badge"><span>P</span></div>
-                                -->
-                                    <!----><span what="name" ng-bind="user.name" ui-sref="admin.users.user.information({ id: user.id })" class="user-label _2kIOe" href="/admin/users/32429890/information">{{$purchase->user->name}}</span><br></div>
-                            </td>
-                            <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span what="email" ng-bind="user.email">{{$user->email}}</span></td>
                             
-                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'unsubscribe')" class="_2kIOe" href="/admin/users/32429890/information"><span ng-bind="getUnsubscribeFromMarketingEmails(user)">{{$purchase->pricing->type}}</span>
+                            <td ui-sref="" class="_2kIOe" href="/admin/users/32429890/information"><span what="email" ng-bind="user.email">{{$purchase->id}}</span></td>
+                            <td ui-sref="" class="_2kIOe" href="/admin/users/32429890/information"><span what="email" ng-bind="user.email"><div class="m-r-10"><img src="/images/courses/logos/{{$purchase->course->logo}}" alt="{{$purchase->course->name}}" class="rounded" width="45"></div></span></td>
+
+                            <td ui-sref="" class="_2kIOe" href="/admin/users/32429890/information"><span what="email" ng-bind="user.email">{{ucfirst($purchase->course->name)}}</span></td>
+                            
+                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'unsubscribe')" class="_2kIOe" href="/admin/users/32429890/information"><span ng-bind="getUnsubscribeFromMarketingEmails(user)">{{$purchase->trans_id}}</span>
                             </td>
 
-                            <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span am-time-ago="user.created_at">{{$user->created_at}}</span></td>
-                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'role')" class="_2kIOe ng-hide" href="/admin/users/32429890/information"><span what="role"
-                                  ng-bind="user.custom_role_name || 'Admin'">Admin</span><a href="javascript:void(0)" tooltip-class="grey" tooltip-html-unsafe="" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
+                            <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span am-time-ago="user.created_at">{{$purchase->pricing->type}}</span></td>
+                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'role')" class="_2kIOe " href="/admin/users/32429890/information"><span what="role"
+                                  ng-bind="user.custom_role_name || 'Admin'">{{$purchase->date}}</span><a href="javascript:void(0)" tooltip-class="grey" tooltip-html-unsafe="" tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
                                   class="tch-btn-tooltip"><i><img ng-src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-key.svg" src="https://fedora.teachablecdn.com/admin/assets/images/icons/icon-key.svg"></i></a></td>
-                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'purchases')" class="_2kIOe" href="/admin/users/32429890/information"><span
-                                  ng-bind="(user.transactions_gross / 100) | currency">
-                                      
-                                  </span></td>
-                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'revenue share')" class="_2kIOe ng-hide" href="/admin/users/32429890/information"><span ng-bind="getRevenueShare(user)">0%</span></td>
-                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'affiliate code')" class="_2kIOe ng-hide" href="/admin/users/32429890/information"><span
-                                  ng-bind="getAffiliateCode(user)">507165_ajxeso0q</span></td>
+                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'purchases')" class="_2kIOe" href="/admin/users/32429890/information"><span> {{$purchase->user->name}} </span></td>
+                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'revenue share')" class="_2kIOe {{$purchase->status == null ? 'badge-danger' : 'badge-success'}}" href="/admin/users/32429890/information"><span ng-bind="getRevenueShare(user)">{{$purchase->status == null ? 'Non validé' : 'Validé'}}</span></td>
+                            <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'affiliate code')" class="_2kIOe " href="/admin/users/32429890/information"><span ng-bind="getAffiliateCode(user)">{{$purchase->pricing->price}} </span></td>
                             <td ng-hide="hideEmailButton" class="ng-hide"><button ng-click="emailUser(user.id)" class="tch-btn-content-secondary tch-btn-icon pull-right fastclickable"><i class="fa fa-envelope-o"></i></button></td>
                         </tr>
 
