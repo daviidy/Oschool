@@ -564,7 +564,7 @@ class SchoolController extends Controller
              ->firstOrFail();
 
         if (Auth::check()) {
-            return view('users.dashboard_subdomain');
+            return view('users.dashboard_subdomain', ['school' => $school]);
         }
 
         else {

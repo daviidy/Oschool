@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DeleteTableClassroomsToFaq extends Migration
+class DeleteSchoolIdReferencesFaqsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class DeleteTableClassroomsToFaq extends Migration
     public function up()
     {
         Schema::table('faqs', function (Blueprint $table) {
-            $table->dropColumn('classroom_id');
+            $table->dropColumn('school_id');
         });
     }
 
@@ -26,7 +26,7 @@ class DeleteTableClassroomsToFaq extends Migration
     public function down()
     {
         Schema::table('faqs', function (Blueprint $table) {
-            $table->dropColumn('classroom_id');
+            //
         });
     }
 }

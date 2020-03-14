@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTableSchoolIdInFaq extends Migration
+class AddSchoolIdForeaignKeyFaqsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddTableSchoolIdInFaq extends Migration
      */
     public function up()
     {
-        
         Schema::table('faqs', function (Blueprint $table) {
-            $table->integer('school_id')->unsigned();
+            $table->bigInteger('school_id')->unsigned()->nullable();
+            $table->foreign('school_id')->references('id')->on('schools');
         });
     }
 
@@ -27,9 +27,7 @@ class AddTableSchoolIdInFaq extends Migration
     public function down()
     {
         Schema::table('faqs', function (Blueprint $table) {
-            //
-         $table->integer('school_id')->unsigned();
-
+            $table->dropColumn('school_id');
         });
     }
 }

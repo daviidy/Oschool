@@ -67,7 +67,7 @@
     <link
       href="https://themes2.teachablecdn.com/themecss/production/base.css?_=d5b075d37bf7&amp;brand_course_heading=%23ffffff&amp;brand_heading=%23134361&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%23134361&amp;brand_secondary=%23ff3f20&amp;brand_text=%234d4d4d&amp;logged_out_homepage_background_image_overlay=0.5&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F5mHijVFBS4qf8vcfzak0"
       rel="stylesheet" data-turbolinks-track="true">
-    <title>Tous les cours de {{$school->name}} | Oschool</title>
+    <title>@yield('title') | {{$school->user->isAdmin() ? 'Oschool' : $school->name}}</title>
     <meta property="og:title" content="Tous les cours de {{$school->name}} | Oschool">
     <meta property="og:image" content="/images/schools/logos/{{$school->logo}}">
     <meta name="brand_video_player_color" content="#4D90CC">
@@ -587,6 +587,36 @@ img{display:block;}
 }
     </style>
 
+    <!--pour la fleche du menu-->
+    <style media="screen">
+
+.nav-icon-back{width:40px;font-size:29px;padding:20px;padding-left:15px;padding-right:15px;cursor:pointer;color:#eeeeee;line-height:66px;vertical-align:middle;opacity:0.9;}
+.nav-icon-back:hover{opacity:1;}
+.nav-icon-back i{background:#fff;width:40px;height:40px;padding:0px;text-align:center;font-size:26px;padding-top:6px;border-radius:25px;font-weight:200;color:#4d4d4d;}
+.lecture-left{width:349px;height:46px!important;float:left;}
+.lecture-left .nav-icon-back{width:50px!important;height:50px;padding:10px;line-height:20px;display:block;float:left;text-align:center;}
+.lecture-left .nav-icon-back i{width:25px;height:25px;font-size:20px;padding-top:2px;}
+.lecture-left .nav-icon-back:hover{text-decoration:none;}
+@media screen and (min-width: 768px) and (max-width: 991px){
+.lecture-left{width:300px;}
+}
+@media screen and (max-width: 767px){
+.lecture-left{width:150px;}
+}
+/*! CSS Used from: https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css */
+.fa{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.fa-angle-left:before{content:"\f104";}
+
+.full-width {
+    background-color: #4d4d4d;
+    height: 46px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+    </style>
+
 
 </head>
 
@@ -597,7 +627,14 @@ img{display:block;}
   <!-- End Google Tag Manager (noscript) -->
 
     <!-- HEADER -->
-    <header class="">
+    <header class="full-width">
+        @if(\Route::current()->getName() == 'website.subdomain.home_users')
+        <div class="lecture-left">
+            <a class="nav-icon-back" aria-label="Back to courses" href="/">
+                <i class="fa fa-angle-left" title="Back to courses"></i>
+            </a>
+        </div>
+        @else
         <!-- Navbar -->
         <div class="navbar navbar-fedora navbar-fixed-top is-at-top bs-docs-nav is-signed-in" id="navbar" role="navigation">
             <div class="container">
@@ -710,7 +747,7 @@ img{display:block;}
                             <!-- User Menu -->
                             <li class="dropdown">
                                 <a aria-expanded="false" aria-haspopup="true" class="fedora-navbar-link navbar-link dropdown-toggle open-my-profile-dropdown" data-toggle="dropdown">
-                                  <img class="gravatar" src="/images/users/default/{{Auth::user()->image}}" alt="yaodavidarmel@gmail.com">
+                                  <img class="gravatar" src="/images/users/default/{{Auth::user()->image}}" alt="{{Auth::user()->email}}">
                                   <span class="navbar-current-user">{{Auth::user()->name}}</span>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -748,6 +785,7 @@ img{display:block;}
                 </div>
             </div>
         </div>
+        @endif
     </header>
 
     @yield('content')

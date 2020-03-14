@@ -16,12 +16,12 @@ Route::group(
         'domain' => '{subdomain}.' . config('app.domain'),
     ],
     function(){
+        Route::get('/', 'SchoolController@showBusinessHome')->name('website.subdomain.home');
         //Route::get('/', 'FrontendController@show')->name('website.subdomain');
         Route::get('/schoolAdmin/{school}', 'SchoolController@showForBusiness')->name('website.subdomain');
         Route::get('/schools/{school}/preview-out', 'SchoolController@showBusinessOut')->name('website.subdomain.previewOut');
         Route::get('/schools/{school}/preview-in', 'SchoolController@showBusinessIn')->name('website.subdomain.previewIn');
-        Auth::routes();
-        Route::get('/', 'SchoolController@showBusinessHome')->name('website.subdomain.home');
+
         Route::get('/login', 'SchoolController@showBusinessLogin')->name('website.subdomain.login');
         Route::get('/register', 'SchoolController@showBusinessRegister')->name('website.subdomain.register');
         Route::get('/home', 'SchoolController@showBusinessHomeUsers')->name('website.subdomain.home_users');

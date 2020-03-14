@@ -197,7 +197,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                                         @if(Auth::user()->courses->contains($course->id))
                                         <div class="col-xs-12" aria-hidden="false">
                                             <div class="progressbar">
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: 0%;" aria-valuenow="0%"></div>
+                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: {{number_format((count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100)}}%;" aria-valuenow="0%"></div>
                                             </div>
                                         </div>
                                         @endif
