@@ -337,7 +337,11 @@ p{margin:0;}
                             </div>
                             <div style="z-index: 999;" class="w-full px-6 lg:px-8 pb-8">
                                 <h4 class="text-white font-gilroy-bold md:text-3xl text-2xl text-center pb-4">{{$school->name}}</h4>
-                                <p class="text-base font-gilroy-regular text-white leading-normal text-left">{{$school->heading}}</p>
+                                <!--
+                                <p class="text-base font-gilroy-regular text-white leading-normal text-left">
+                                    {{$school->heading}}
+                                </p>
+                            -->
 
                                 <div class="mt-4 mr-4 md:mt-6 md:mr-6 lg:mt-8 lg:mr-8 rounded px-4 py-3 bg-black opacity-75 absolute pin-t pin-r font-gilroy-medium">
                                     <p class="text-white text-base before-green-dot">{{count($school->courses)}} cours</p>
