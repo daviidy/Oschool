@@ -61,7 +61,7 @@ class SchoolController extends Controller
 
                         ]);
 
-       return redirect()->back()->with('status', 'L\'école a bien été créée');
+       return redirect('home')->with('status', 'L\'école a bien été créée');
     }
 
     public function storeSchoolBusiness(Request $request)
@@ -79,7 +79,7 @@ class SchoolController extends Controller
         $school->slug = $slug->createSlug($request->name);
         $school->save();
 
-       return redirect()->back()->with('status', 'L\'école a bien été créée');
+       return redirect('home')->with('status', 'L\'école a bien été créée');
     }
 
     /**
