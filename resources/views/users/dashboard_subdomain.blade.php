@@ -105,7 +105,7 @@ h3{font-size:1.6rem;}
 
 </style>
 
-<div role="main" class="view-school">
+<div style="margin-top: 45px;" role="main" class="view-school">
 
 
     <div class="headingOverflow__UFZQ2dgsxI9wLTOZBpj5l" role="presentation">
@@ -140,6 +140,14 @@ h3{font-size:1.6rem;}
                         <!-- <p>83</p> -->
                     </div>
                 </a>
+                @if($school->user_id == Auth::user()->id)
+                <a style="color: #EA5252;" class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
+                    <div class="statContainer__3vkcPCpgY9KLbdlgaArthp">
+                        <p style="font-weight: bold;">Tableau d'adminstration de l'école</p>
+                        <!-- <p>83</p> -->
+                    </div>
+                </a>
+                @endif
 
             </div>
         </div>

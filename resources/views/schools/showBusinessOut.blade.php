@@ -30,7 +30,7 @@ h2{font-size:2.8416rem;}
 }
 @media all and (min-width: 992px){
 h1{font-size:4.20873em;}
-h2{font-size:3.15733em;}
+h2{font-size:2.15733em;}
 }
 h1[class*="__heading"]{margin-bottom:1rem;font-size:2.5rem;text-align:center;}
 @media all and (min-width: 768px){
@@ -96,7 +96,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
 .banner__wrapper:after,.banner__wrapper:before{-webkit-flex-basis:0;-moz-flex-basis:0;flex-basis:0;-ms-flex-preferred-size:0;order:1;}
 .button-primary{border:2px solid #4a90e2;background-color:#4a90e2;color:#fff;border-radius:0px!important;}
 .button-primary:active,.button-primary:focus,.button-primary:hover{border-color:#4a90e2;background-color:#4a90e2;color:#fff;}
-.banner___ce384{background:linear-gradient(rgba(0,0,0,0.66), rgba(0,0,0,0.66)),url(https://s3.amazonaws.com/thinkific-import/88925/tvgNqW7SMk0slAfUZ9zw_academy-thumb.png);position:relative;background-repeat:no-repeat;background-size:cover;background-position:left;}
+.banner___ce384{background:linear-gradient(rgba(0,0,0,0.66), rgba(0,0,0,0.66)),url(/images/schools/backgrounds/{{$school->background}});position:relative;background-repeat:no-repeat;background-size:cover;background-position:left;}
 .banner___ce384 .section__heading___ce384{color:#ffffff;}
 .banner___ce384 .section__subheading___ce384{color:#ffffff;}
 .banner___ce384 .section__heading___ce384{text-align:left;}
@@ -146,7 +146,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
 
                             <section class="section__button-group">
 
-                                <a class="button button-primary" href="/cart/add_product/614643?price_id=650383">Inscrivez-vous maintenant</a>
+                                <a class="button button-primary" href="/register">Inscrivez-vous maintenant</a>
 
 
                             </section>
@@ -174,7 +174,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                 </div>
             -->
 
-                <h2 style="text-align: center;">Les cours de {{$school->name}}</h2>
+                <h2 style="padding-top: 2rem; text-align: center;">Les cours de {{$school->name}}</h2>
                 <div class="row course-list list">
 
                     <!-- Course Listing -->

@@ -62,7 +62,7 @@
                     <div class="_409742f4">ou inscrivez-vous par e-mail</div>
                     <div class="_4dfd0c8c"></div>
                 </div>
-                <form method="POST" action="{{ route('register') }}" class="new_teachable_account" id="new_teachable_account" accept-charset="UTF-8">
+                <form style="width: 100%;" method="POST" action="{{ route('register') }}" class="new_teachable_account" id="new_teachable_account" accept-charset="UTF-8">
                     @csrf
                 <div class="_d70702c3">
                     <div class="_9830536">

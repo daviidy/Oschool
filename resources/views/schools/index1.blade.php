@@ -223,7 +223,7 @@ h4,p{margin:0;}
 .text-2xl{font-size:1.5rem;}
 .w-80{width:20rem;}
 .w-full{width:100%;}
-.mv-button-blue{font-family:Gilroy-Bold;background-color:#4D90CC;color:#fff;border-radius:9999px;display:inline-block;padding-left:3rem;padding-right:3rem;padding-top:.75rem;padding-bottom:.75rem;padding-top:1rem;margin-top:2rem;text-decoration:none;}
+.mv-button-blue{font-family:Gilroy-Bold;background-color:#2a8cf8;color:#fff;border-radius:9999px;display:inline-block;padding-left:3rem;padding-right:3rem;padding-top:.75rem;padding-bottom:.75rem;padding-top:1rem;margin-top:2rem;text-decoration:none;}
 .mv-button-blue:hover{background-color:#1d519f;}
 @media (min-width: 768px){
 .md\:shadow-lg{-webkit-box-shadow:0 15px 30px 0 rgba(0,0,0,0.11),0 5px 15px 0 rgba(0,0,0,0.08);box-shadow:0 15px 30px 0 rgba(0,0,0,0.11),0 5px 15px 0 rgba(0,0,0,0.08);}
@@ -288,13 +288,6 @@ p{margin:0;}
 @font-face{font-family:'Gilroy-Medium';src:url(https://www.mindvalley.com/assets/webfonts/35707B_9_0.eot);src:url("https://www.mindvalley.com/assets/webfonts/35707B_9_0.eot#iefix") format("embedded-opentype"),url(https://www.mindvalley.com/assets/webfonts/35707B_9_0.woff2) format("woff2"),url(https://www.mindvalley.com/assets/webfonts/35707B_9_0.woff) format("woff"),url(https://www.mindvalley.com/assets/webfonts/35707B_9_0.ttf) format("truetype");}
 @font-face{font-family:'Gilroy-Medium';src:url("https://static.mindvalley.com/global/webfonts/35707B_9_0.eot");src:url("https://static.mindvalley.com/global/webfonts/35707B_9_0.eot#iefix") format("embedded-opentype"),url("https://static.mindvalley.com/global/webfonts/35707B_9_0.woff2") format("woff2"),url("https://static.mindvalley.com/global/webfonts/35707B_9_0.woff") format("woff"),url("https://static.mindvalley.com/global/webfonts/35707B_9_0.ttf") format("truetype");}
 
-.filter{
-    position: absolute;
-    width: 100%;
-    height: inherit;
-    background-color: rgba(0, 0, 0, .3);
-    border-radius: .625rem;
-}
 
 </style>
 
@@ -324,6 +317,60 @@ p{margin:0;}
                 </svg>
                 Nos écoles
             </div>
+            <div class="my-masonry-grid">
+                @php
+                $counter = 1;
+                @endphp
+                @foreach($schools as $school)
+                @if($counter % 3 == 1)
+                <div class="my-masonry-grid_column" style="width: 33.3333%;">
+                @endif
+                    <a class="WorkTile__ResponsiveTile-sc-7ava27-0 fIjoWc" href="{{url('schools', $school)}}">
+                        <div style="background:url(/images/schools/logos/{{$school->logo}}) center center / cover no-repeat;" class="WorkTile__CoverImg-sc-7ava27-1 jRnmqO">
+                            <!--
+                            <button class="Price-ucxtf-0 WorkTile__Price-sc-7ava27-2 bAldwA">
+                                $49
+                            </button>
+                        -->
+                        </div>
+                        <div class="AuthorWrapper-sc-1x5lkup-0 WorkTile__AuthorWrapper-sc-7ava27-6 hfoAcr">
+                            <!--
+                            <div size="20" class="UserPic-iyi4aa-0 bhzjht" overflow="hidden">
+                                <div class=" sb-avatar sb-avatar--src" style="display: inline-block; vertical-align: middle; width: 20px; height: 20px; border-radius: 100%; font-family: Helvetica, Arial, sans-serif;"><img class=" sb-avatar__image"
+                                      width="20px" height="20px" src="https://lh3.googleusercontent.com/1-n5n_sp4WcrkExvFWQ7krTVCbf9_bLQxWpyqClWvOEMyHPVMvldmdKJVfZDkeTOQNhJd1lRRCML1oj4O8vdl68DB5Ua=s100" alt="Dmytro Danylyk" title="Dmytro Danylyk"
+                                      style="max-width: 100%; width: 20px; height: 20px; border-radius: 100%;"></div>
+                            </div>
+
+                            <div class="AuthorName-njytr8-0 hoHWfD">
+                                Dmytro Danylyk
+                            </div>
+                        -->
+                        </div>
+                        <div class="Title-lm7kt8-0 WorkTile__WorkTitle-sc-7ava27-5 csuynr">{{$school->name}}</div>
+                        <div class="LessonCountWrapper-sc-17cuvu8-0 WorkTile__LessonCountWrapper-sc-7ava27-12 iJUnuo"><svg width="17px" height="19px" viewBox="0 0 17 19" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-716.000000, -1031.000000)">
+                                        <g transform="translate(629.000000, 761.000000)">
+                                            <g transform="translate(87.000000, 270.000000)">
+                                                <rect fill="#C8C7FF" opacity="0.404129464" x="6" y="4" width="11" height="15" rx="2"></rect>
+                                                <rect fill="#4d90cc3b" x="3" y="2" width="11" height="15" rx="2"></rect>
+                                                <rect fill="#6aace6" x="0" y="0" width="11" height="15" rx="2"></rect>
+                                                <polyline stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="4 5 7 7.27517236 4 10"></polyline>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>{{count($school->courses)}} Cours</div><button class="Button-ktk5iw-0 Button-sc-1rispbr-0 feiHSd">VOIR L'ECOLE</button>
+                    </a>
+                @if($counter % 3 == 0)
+                </div>
+                @endif
+                @php
+                $counter++;
+                @endphp
+                @endforeach
+
+            </div>
 
             <div class="container mx-auto px-0-force">
                 <div class="flex lg:flex-wrap flex-to-scroll-container ml-2 lg:-mx-4">
@@ -332,10 +379,7 @@ p{margin:0;}
                     <div class="flex-to-scroll-item w-80 lg:w-1/3 px-2 lg:px-4 pb-4 lg:pb-8">
                         <div class="flex items-end text-center rounded lg:h-128 h-96 bg-cover retina-bg relative md:shadow-lg" srcset="https://static.mindvalley.com/public/assets/2018/07/C42I_bg-school.jpg"
                           style="background-image: url('/images/schools/logos/{{$school->logo}}')">
-                            <div class="filter">
-
-                            </div>
-                            <div style="z-index: 999;" class="w-full px-6 lg:px-8 pb-8">
+                            <div class="w-full px-6 lg:px-8 pb-8">
                                 <h4 class="text-white font-gilroy-bold md:text-3xl text-2xl text-center pb-4">{{$school->name}}</h4>
                                 <p class="text-base font-gilroy-regular text-white leading-normal text-left">{{$school->name}}</p>
 

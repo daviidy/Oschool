@@ -534,7 +534,12 @@ class SchoolController extends Controller
              ->orWhere('domain', $subdomain)
              ->firstOrFail();
 
-         return view('auth.login_subdomain', ['school' => $school]);
+        if (Auth::check()) {
+            return redirect('home');
+        }
+        else {
+            return view('auth.login_subdomain', ['school' => $school]);
+        }
 
 
      }
@@ -548,8 +553,12 @@ class SchoolController extends Controller
              ->orWhere('domain', $subdomain)
              ->firstOrFail();
 
-         return view('auth.register_subdomain', ['school' => $school]);
-
+             if (Auth::check()) {
+                 return redirect('home');
+             }
+             else {
+                 return view('auth.register_subdomain', ['school' => $school]);
+             }
 
      }
 
@@ -562,6 +571,11 @@ class SchoolController extends Controller
              ->orWhere('slug', $subdomain)
              ->orWhere('domain', $subdomain)
              ->firstOrFail();
+        //si on ne retrouve pas l'école
+        //on revient à la page précédente
+        if ($school === null) {
+          return redirect()->back();
+        }
 
         if (Auth::check()) {
             return view('users.dashboard_subdomain', ['school' => $school]);
