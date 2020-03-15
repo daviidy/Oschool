@@ -6,6 +6,7 @@ use App\Classroom;
 use App\School;
 use App\User;
 use App\Course;
+use Mail;
 use Illuminate\Http\Request;
 
 class ClassroomController extends Controller
@@ -54,12 +55,20 @@ class ClassroomController extends Controller
                  if ($course === null) {
                      $user = User::where('name', $user_id)->first();
                      $classroom->users()->attach($user);
+                     Mail::send('mails.users.sessions.planning', ['classroom' => $classroom, 'user' => $user], function($message) use($user){
+                       $message->to($user->email, 'Planification d\'une session de formation')->subject('Planification d\'une session de formation');
+                       $message->from('eventsoschool@gmail.com', 'Oschool');
+                     });
                  }
                  //si c'est un cours, on recupere tous les users
                  //de ce cours et on les associe a la classroom
                  else {
                      foreach ($course->users as $user) {
                          $classroom->users()->attach($user);
+                         Mail::send('mails.users.sessions.planning', ['classroom' => $classroom, 'user' => $user], function($message) use($user){
+                           $message->to($user->email, 'Planification d\'une session de formation')->subject('Planification d\'une session de formation');
+                           $message->from('eventsoschool@gmail.com', 'Oschool');
+                         });
                      }
                  }
 
