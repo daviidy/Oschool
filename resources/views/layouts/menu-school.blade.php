@@ -739,6 +739,16 @@ img{display:block;}
                             </li>
                             @endif
 
+                            @guest
+                            <li>
+
+                                <a class="fedora-navbar-link navbar-link current-page" href="/login" target="">
+                                    Connexion
+                                </a>
+
+                            </li>
+                            @endguest
+
 
                             <!-- If more than 5 links, collapse the rest in a dropdown -->
 

@@ -589,6 +589,23 @@ footer .container .row ul li a:hover{text-decoration:underline;}
 
                             </li>
 
+                            <li>
+
+                                <a class="fedora-navbar-link navbar-link current-page" href="/corporate" target="">
+                                    Business
+                                </a>
+
+                            </li>
+                            @guest
+                            <li>
+
+                                <a class="fedora-navbar-link navbar-link current-page" href="/login" target="">
+                                    Connexion
+                                </a>
+
+                            </li>
+                            @endguest
+
 
                             <!-- If more than 5 links, collapse the rest in a dropdown -->
 
