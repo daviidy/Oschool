@@ -328,6 +328,7 @@ p{margin:0;}
             <div class="container mx-auto px-0-force">
                 <div class="flex lg:flex-wrap flex-to-scroll-container ml-2 lg:-mx-4">
                     @foreach($schools as $school)
+                    @if($school->status == 'active' && $school->user->isAdmin())
                     <!-- Item 1 -->
                     <div class="flex-to-scroll-item w-80 lg:w-1/3 px-2 lg:px-4 pb-4 lg:pb-8">
                         <div class="flex items-end text-center rounded lg:h-128 h-96 bg-cover retina-bg relative md:shadow-lg" srcset="https://static.mindvalley.com/public/assets/2018/07/C42I_bg-school.jpg"
@@ -354,6 +355,7 @@ p{margin:0;}
                         </div>
                     </div>
                     <!-- End of Item 1 -->
+                    @endif
                     @endforeach
 
 
