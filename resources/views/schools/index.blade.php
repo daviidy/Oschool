@@ -231,7 +231,7 @@ h4,p{margin:0;}
 }
 @media (min-width: 992px){
 .lg\:flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap;}
-.lg\:h-128{height:50rem;}
+.lg\:h-128{height:32rem;}
 .lg\:-mx-4{margin-top: 4rem;margin-left:-1rem;margin-right:-1rem;}
 .lg\:px-4{padding-left:1rem;padding-right:1rem;}
 .lg\:px-8{padding-left:2rem;padding-right:2rem;}
