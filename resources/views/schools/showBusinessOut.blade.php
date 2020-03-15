@@ -1,5 +1,7 @@
     @extends('layouts.menu-school')
 
+    @section('title', 'Accueil')
+
     @section('content')
 
     <style media="screen">

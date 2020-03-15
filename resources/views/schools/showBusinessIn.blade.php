@@ -1,4 +1,5 @@
 @extends('layouts.menu-school')
+@section('title', 'Tous les cours')
 @section('content')
 
     <div role="main" class="view-school">
@@ -66,9 +67,11 @@
                             <div class="input-group">
                                 <label for="search-courses" class="sr-only">Trouver un cours</label>
                                 <input class="form-control search input-lg" data-list=".list" id="search-courses" name="query" placeholder="Trouvez un cours" type="text">
+                                <!--
                                 <span class="input-group-btn">
                                     <button aria-label="Search Courses" id="search-course-button" class="btn search btn-default btn-lg" type="submit"><i class="fa fa-search" title="Search"></i></button>
                                 </span>
+                            -->
                             </div>
                         </form>
                     </div>

@@ -4,6 +4,43 @@
 @section('image', '/images/divers/corporate.png')
 @section('content')
 
+
+<!--bouton call to action-->
+<style media="screen">
+/*! CSS Used from: https://www.udacity.com/styles.0412f4d3de5fb86b36a8.css */
+a{background-color:transparent;}
+a{border-bottom:none;text-decoration:none;-webkit-transition:color 0.3s ease;transition:color 0.3s ease;}
+a:active,a:focus,a:hover{color:#24292d;}
+.button,.button--blue,.button--white{display:block;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-align:center;white-space:nowrap;vertical-align:top;text-decoration:none;vertical-align:middle;height:3rem;padding:0 0.5rem;text-transform:uppercase;font-size:16px;font-weight:600;font-size:0.813rem;line-height:2.625rem;-webkit-font-smoothing:antialiased;border-radius:0.25rem;letter-spacing:0.125rem;-webkit-transition:all 0.3s ease;transition:all 0.3s ease;}
+.button--blue,.button--white{box-shadow:8px 10px 20px 0px rgba(46, 61, 73, 0.15);}
+.button--blue:hover,.button--white:hover{box-shadow:2px 4px 8px 0px rgba(46, 61, 73, 0.2);}
+.button--blue{width:13.75rem;color:#fff;background-color:#4D90CC;border:0.125rem solid transparent;}
+.button--blue:focus,.button--blue:hover{outline:none;color:white;border-color:transparent;background-color:#029fcb;}
+.button--white{width:13.75rem;color:#4D90CC;background-color:#fff;border:0.125rem solid transparent;}
+.button--white:focus,.button--white:hover{outline:none;color:#1cccfd;border-color:transparent;background-color:#f2f2f2;}
+
+/*! CSS Used from: Embedded */
+*[_ngcontent-iridium-us-c23],*[_ngcontent-iridium-us-c23]::after,*[_ngcontent-iridium-us-c23]::before{box-sizing:inherit;}
+*[_ngcontent-iridium-us-c23],*[_ngcontent-iridium-us-c23]::after,*[_ngcontent-iridium-us-c23]::before{box-sizing:inherit;}
+*[_ngcontent-iridium-us-c23],*[_ngcontent-iridium-us-c23]::after,*[_ngcontent-iridium-us-c23]::before{box-sizing:inherit;}
+.content[_ngcontent-iridium-us-c23]   .btn_wrapper[_ngcontent-iridium-us-c23]{padding-bottom:1em;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;flex-wrap:wrap;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;}
+@media screen and (min-width: 48rem){
+.content[_ngcontent-iridium-us-c23]   .btn_wrapper[_ngcontent-iridium-us-c23]{-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;}
+}
+a.button--white[_ngcontent-iridium-us-c23]{background:#fff;color:#4D90CC;}
+a.button--white[_ngcontent-iridium-us-c23]:hover{color:#fff;background:#4D90CC;}
+.btn[_ngcontent-iridium-us-c23]{letter-spacing:0.125rem;display:block;width:17.5rem;margin:0.35rem auto;}
+@media screen and (min-width: 48rem){
+.btn[_ngcontent-iridium-us-c23]{display:inline-block;margin:0 0.35rem;}
+}
+.button.hide-on-mobile[_ngcontent-iridium-us-c23]{display:none;}
+@media screen and (min-width: 48rem){
+.button.hide-on-mobile[_ngcontent-iridium-us-c23]{display:inline-block;margin-bottom:0;margin-right:0.75rem;}
+}
+
+</style>
+
+
 <style media="screen">
 /*! CSS Used from: https://teachable.com/assets/pages-f96915a54d791314c17147bc824a14df73c1814a49ffca8fc920660733f1f1a4.css ; media=all */
 @media all{
@@ -910,9 +947,31 @@ hr{border-color:#ececec;}
 
               <h2>Utilisez les offres d'Oschool pour mieux gérer votre manière de former et de se former.</h2>
 
+              <div style="margin-top: 2rem;" _ngcontent-iridium-us-c23="" class="btn_wrapper">
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!----><a href="#schools" _ngcontent-iridium-us-c23="" class="button btn button--white hide-on-mobile ng-star-inserted">Ecoles et universités</a>
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!----><a href="#companies" _ngcontent-iridium-us-c23="" class="button btn button--blue ng-star-inserted">Entreprises</a>
+                <!---->
+                <!---->
+                <!---->
+                <!---->
           </div>
         </div>
+
       </div>
+
+
+    </div>
     </div>
     </div>
 </section>
@@ -999,7 +1058,7 @@ hr{border-color:#ececec;}
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-7 right-column">
-                    <img style="width: 100%;right:0;" data-src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/DfsKuQA2QziBB1whe0zD"
+                    <img style="width: 80%;right:0;border-radius: 10px;box-shadow: 5px 10px 18px #888888;" data-src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/DfsKuQA2QziBB1whe0zD"
                       src="/images/divers/school-offer.png" data-loaded="true">
                 </div>
             </div>
@@ -1055,7 +1114,7 @@ hr{border-color:#ececec;}
             <div class="row">
                 <div class="col-xs-12 col-md-7 left-column">
                     <img data-src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/Gxm0GAuWSuKMKIj9kFVG"
-                       src="/images/divers/student-learning.jpg" data-loaded="true">
+                       src="https://oschoolelearning.com/images/courses/logos/1580161319.png" data-loaded="true">
                 </div>
                 <div class="col-xs-12 col-md-5 right-column">
                     <h1 class="default-green-header">Système de Gestion des Cours</h1>
@@ -1326,7 +1385,7 @@ hr{border-color:#ececec;}
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="small-uppercase-text small-header"></h1>
-                <h2 id="schools" class="default-header big-header">POUR LES ENTREPRISES</h2>
+                <h2 id="companies" class="default-header big-header">POUR LES ENTREPRISES</h2>
             </div>
         </div>
         <div class="row">
@@ -1335,14 +1394,14 @@ hr{border-color:#ececec;}
                 <div class="default-paragraph-container markdown-area">
                     <p>Formez vos équipes, reconvertissez vos collaborateurs, ou recruter de nouveaux talents</p>
                 </div>
-                <h1 class="default-green-header">Formez daans votre coeur de métier et gagnez de l'argent</h1>
+                <h1 class="default-green-header">Formez dans votre coeur de métier et gagnez de l'argent</h1>
                 <div class="default-paragraph-container markdown-area">
                     <p>Créez votre école sur oschoolelearning.com et gagnez de l'argent sur chaque inscription à une de vos formations.</p>
                 </div>
             </div>
-            <div class="col-xs-12 col-md-7 right-column">
+            <div style="width: 0%;" class="col-xs-12 col-md-7 right-column">
                 <img  data-src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/DfsKuQA2QziBB1whe0zD"
-                  src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/DfsKuQA2QziBB1whe0zD" data-loaded="true">
+                  src="https://oschoolelearning.com/images/divers/courses.png" data-loaded="true">
             </div>
         </div>
     </div>
@@ -1469,7 +1528,7 @@ hr{border-color:#ececec;}
             <div class="col-xs-12 col-md-4">
                 <div class="image" data-background-image="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/II8GXOCDTGG1Kii5Snbu" data-loaded="true"
                   style="background-image: url(&quot;https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/auto_image/compress/quality=value:90/II8GXOCDTGG1Kii5Snbu&quot;);"></div>
-                <div class="icon-header default-green-header match-height-green-headers-row-2" style="height: 28px;">Mises àç jour instantanées</div>
+                <div class="icon-header default-green-header match-height-green-headers-row-2" style="height: 28px;">Mises à jour instantanées</div>
                 <div class="default-paragraph markdown-area">
                     <p>Recevez automatiquement les dernières fonctionnalités immédiatement, sans avoir à mettre à jour manuellement.</p>
                 </div>
@@ -1534,10 +1593,12 @@ hr{border-color:#ececec;}
                     <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
                         <p>Oschool conçoit vos formations digitales sur-mesure en prêtant autant d'attention au fond (conseil, accompagnement, design des stratégies digitales, architecture de programmes de formation complexes, le tout reposant sur notre méthode pédagogique) qu'à la forme (simulations réalistes, e-learning, applications, vidéo, collaborative training, présentiel et même réalité virtuelle et augmentée)</p>
                     </div>
+                    <!--
                     <h1 class="default-green-header ">Reach students worldwide in any language</h1>
                     <div class="default-paragraph-container default-paragraph-spacing markdown-area ">
                         <p>Modify the language used in any part of your site to support international audiences.</p>
                     </div>
+                -->
                 </div>
             </div>
         </div>
