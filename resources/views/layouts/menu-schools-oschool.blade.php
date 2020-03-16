@@ -67,7 +67,7 @@
     <link
       href="https://themes2.teachablecdn.com/themecss/production/base.css?_=d5b075d37bf7&amp;brand_course_heading=%23ffffff&amp;brand_heading=%23134361&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%23134361&amp;brand_secondary=%23ff3f20&amp;brand_text=%234d4d4d&amp;logged_out_homepage_background_image_overlay=0.5&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F5mHijVFBS4qf8vcfzak0"
       rel="stylesheet" data-turbolinks-track="true">
-    <title>@yield('title') | Oschool</title>
+    <title>@yield('title') | {{$school->user->isAdmin() ? 'Oschool' : $school->name}}</title>
     <meta property="og:title" content="@yield('title') | Oschool">
     <meta property="og:image" content="/images/schools/logos/logo_oschool_blanc.png">
     <meta name="brand_video_player_color" content="#4D90CC">
@@ -538,6 +538,13 @@ footer .container .row ul li a:hover{text-decoration:underline;}
 
     <!-- HEADER -->
     <header class="">
+        @if(\Route::current()->getName() == 'website.subdomain.home_users')
+        <div class="lecture-left">
+            <a class="nav-icon-back" aria-label="Back to courses" href="https://tradeacademyportal.com/courses?_ga=2.184954145.926911586.1584221427-678881830.1560982867">
+                <i class="fa fa-angle-left" title="Back to courses"></i>
+            </a>
+        </div>
+        @else
         <!-- Navbar -->
         <div class="navbar navbar-fedora navbar-fixed-top is-at-top bs-docs-nav is-signed-in" id="navbar" role="navigation">
             <div class="container">
@@ -581,6 +588,23 @@ footer .container .row ul li a:hover{text-decoration:underline;}
                                 </a>
 
                             </li>
+
+                            <li>
+
+                                <a class="fedora-navbar-link navbar-link current-page" href="/corporate" target="">
+                                    Business
+                                </a>
+
+                            </li>
+                            @guest
+                            <li>
+
+                                <a class="fedora-navbar-link navbar-link current-page" href="/login" target="">
+                                    Connexion
+                                </a>
+
+                            </li>
+                            @endguest
 
 
                             <!-- If more than 5 links, collapse the rest in a dropdown -->
@@ -628,6 +652,7 @@ footer .container .row ul li a:hover{text-decoration:underline;}
                 </div>
             </div>
         </div>
+        @endif
     </header>
 
     @yield('content')
