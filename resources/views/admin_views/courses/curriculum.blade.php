@@ -251,6 +251,7 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
             <!---->
         </div>
     </div>
+    @include('includes.status')
     <div class="row">
         <!---->
         <div ng-show="selectedLectures.length == 0 &amp;&amp; selectedLectureSections.length > 0" class="bulk-actions cssFade ng-animate ng-hide"><span class="title">Bulk actions:</span>

@@ -45,7 +45,7 @@ class SectionController extends Controller
     {
         $section = Section::create($request->all()
     + ['position' => Section::where('course_id', $request->course_id)->max('position') + 1]);
-        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
+        return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum')->with('status', 'Nouvelle section programmée');
     }
 
     /**

@@ -537,6 +537,8 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                             <input type="hidden" name="school_id" value="{{$school->id}}">
                             <!---->
                         </bootstrap-decorator>
+                        
+                        
                         <bootstrap-decorator form="schemaForm.form[7]">
                             <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
                               class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Réponses</label>
