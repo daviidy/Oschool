@@ -615,6 +615,11 @@ img{display:block;}
     width: 100%;
 }
 
+.full-width .navbar-fedora .navbar-header-collapse {
+    float: right;
+    padding-right: 0px!important;
+}
+
     </style>
 
 
