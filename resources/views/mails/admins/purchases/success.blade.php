@@ -16,7 +16,7 @@
 <body>
   <table style="width:100%;max-width:960px;position: relative;left:0;right:0;margin: 0 auto;border-collapse: collapse;border-spacing: 0;font-size: 14px;line-height: 24px;color: #333;font-family: Microsoft YaHei;">
     <tr>
-      <td style="padding: 20px 7.5% 0;display: block;"><img width="100" src="https://code.oschool.ci/avilon/img/logo-oschool.png" /></td>
+      <td style="padding: 20px 7.5% 0;display: block;"><img width="100" src="https://oschoolelearning.com/images/schools/logos/oschool.png" /></td>
     </tr>
     <tr>
       <td style="padding: 20px 7.5% 0;">Chère, cher Admin ,</td>
