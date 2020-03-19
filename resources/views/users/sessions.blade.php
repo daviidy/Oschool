@@ -643,9 +643,7 @@ div.mce-edit-area{background:#fff;filter:none;}
 
 <!--on vérifie si l'utilisateur est inscrit à au moins une école-->
     @if(count(Auth::user()->schools) > 0)
-       <!--si oui, pour chaque école dans laquelle il est inscrit-->
-            @foreach(Auth::user()->schools as $school)
-                <!--on parcourt chaque session de cette école-->
+       
                 
 
 
@@ -676,68 +674,22 @@ div.mce-edit-area{background:#fff;filter:none;}
                                 <th class="text-center">
                                     Commentaire
                                 </th>
+                                <th class="text-center">
+                                	Statut
+                                </th>
                                 
                             </tr>
                         </thead>
                         <tbody>
+                        	<!--si oui, pour chaque école dans laquelle il est inscrit-->
+            @foreach(Auth::user()->schools as $school)
+                <!--on parcourt chaque session de cette école-->
+                @if(count($school->classrooms) > 0)
                           @foreach($school->classrooms as $classroom)
                           <!--On affiche la session programé-->
 
                           <!--met ici le code HTML pour les infos-->
-                          @if($classroom->statut =="Annulée")
-                            <tr class="dashboardTable__projectWorkInProgress" style="background-color: #ff00003b;">
-                                <td class="">
-                                    {{$loop->index + 1}}
-                                </td>
-                                <td class="text-left ">
-                                    {{ Carbon\Carbon::parse($classroom->date)->format('d-m-Y H:i') }}
-                                </td>
-
-                                <td class="link_">
-                                  <a href="{{$classroom->link}}">Clique et suit la session</a>
-                                    
-                                </td>
-
-                                <td class="">
-                                    {{$classroom->teacher->name}}
-                                </td>
-
-                                <td class="link_">
-                                  @if($classroom->comment)
-                                    <a href="#ex{{$classroom->id}}" rel="modal:open">
-                                            Voir le commentaire du professeur
-                                    </a>
-                                    @endif
-                                    
-                                </td>
-                            </tr>
-                            @elseif($classroom->statut =="Réalisée")
-                            <tr class="dashboardTable__projectWorkInProgress" style="background-color: #4fcc4d3b;">
-                                <td class="">
-                                    {{$loop->index + 1}}
-                                </td>
-                                <td class="text-left ">
-                                    {{ Carbon\Carbon::parse($classroom->date)->format('d-m-Y H:i') }}
-                                </td>
-
-                                <td class="link_">
-                                  <a href="{{$classroom->link}}">Clique et suit la session</a>
-                                    
-                                </td>
-
-                                <td class="">
-                                    {{$classroom->teacher->name}}
-                                </td>
-
-                                <td class="link_">
-                                  @if($classroom->comment)
-                                    <a href="#ex{{$classroom->id}}" rel="modal:open">
-                                            Voir le commentaire du professeur
-                                    </a>
-                                    @endif
-                                </td>
-                            </tr>
-                            @else
+                          
                             <tr class="dashboardTable__projectWorkInProgress">
                                 <td class="">
                                     {{$loop->index + 1}}
@@ -756,20 +708,36 @@ div.mce-edit-area{background:#fff;filter:none;}
                                 </td>
 
                                 <td class="link_">
-                                    @if($classroom->comment)
+                                  @if($classroom->comment)
                                     <a href="#ex{{$classroom->id}}" rel="modal:open">
                                             Voir le commentaire du professeur
                                     </a>
                                     @endif
+                                    
                                 </td>
+                                @if($classroom->statut =="Annulée")
+                                <td style="color: #ff00003b; font-weight: bold;">
+                                	Annulée
+                                </td>
+                                @elseif($classroom->statut =="Réalisée")
+                                <td style="color: #4fcc4d3b; font-weight: bold;">
+                                	Réalisée
+                                </td>
+                                @else
+                                <td style="font-weight: bold;">
+                                	Planifiée
+                                </td>
+                                @endif
                             </tr>
-                            @endif
+                            
+                            
                             @endforeach
-
+                            @endif
+                    		@endforeach
 
                         </tbody>
                     </table>
-                    @endforeach
+                    
                     
                 </div>
             </div>
@@ -785,8 +753,9 @@ div.mce-edit-area{background:#fff;filter:none;}
               </div>
               @endforeach
 
-            @endif
+            
 </section>
+@endif
 
 @endsection
 

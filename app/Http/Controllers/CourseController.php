@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Course;
+use App\Faq;
 use App\School;
 use App\Category;
 use App\Pricing;
@@ -397,7 +398,7 @@ class CourseController extends Controller
      }
 
 
-
+     
 
      /**
       * [certificates description]

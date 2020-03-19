@@ -13,7 +13,7 @@
 
 <style media="screen">
 /*! CSS Used from: https://www.codecademy.com/webpack/116.5a38711ce87647cf476a.chunk.css */
-.btn__2v-TLC9Odx5KkacwG29i-V{display:-webkit-inline-flex;display:inline-flex;-webkit-justify-content:center;justify-content:center;font-weight:700;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;border:1px solid transparent;border-radius:2px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:.375rem 1rem;font-size:1rem;line-height:1.5;min-width:8rem;transition:all .1s ease-in-out;}
+.btn__2v-TLC9Odx5KkacwG29i-V{display:-webkit-inline-flex;display:inline-flex;-webkit-justify-content:center;justify-content:center;font-weight:700;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;border:1px solid transparent;border-radius:2px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:.375rem .250rem;font-size:1rem;line-height:1.5;min-width:8rem;transition:all .1s ease-in-out;}
 .btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_{color:#fff;background-color:#141c3a;border-color:transparent;}
 .btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:hover{box-shadow:0 2px 4px rgba(0,0,0,.3);}
 .btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px #141c3a;}
@@ -70,9 +70,10 @@ h3{font-size:1.6rem;}
 @media only screen and (min-width:48rem){
 .container__25St-wPttEa00dbsIQGsRH .completedItemActionText__3pVene1PtZPiBdHWdsFkNI{display:block;}
 }
-.contentContainer__2XpraB__ZsFvtgeXy-hiqA{margin-left:1rem;}
+.contentContainer__2XpraB__ZsFvtgeXy-hiqA{margin-left:4rem;}
 .title__YKjOCEmg015vuLRonUC5l{font-size:2rem;margin-bottom:0;font-family:Regular Patch,Regular Bold,Nunito Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;}
 .icon__3QtI7CVFmElvsok-AOAylb{justify-self:center;color:#141e3b;height:3rem;}
+.icon__3QtI7CVFmElvsok-AOAylb img{width: 60px !important; padding-left: 15px;}
 .icon__3QtI7CVFmElvsok-AOAylb>svg{height:100%;width:100%;}
 .description__3LED2LwLhklkpJ5MtcAQxn{margin-bottom:0;}
 .checkmarkContainer__3dnfL_MfYE1XU6TAon23UH,.displayHorizontal__1BPiAmdwij91rwcegVMI2f{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;}
@@ -103,6 +104,10 @@ h3{font-size:1.6rem;}
 .completionsContainer__2IYN9k4PNi5y8XGTuQdIeG{grid-column:1/-1;padding-top:0;}
 }
 
+.full-width .navbar-fedora .navbar-header-collapse {
+    float: right;
+    padding-right: 0px !important;
+}
 </style>
 
 <div style="margin-top: 45px;" role="main" class="view-school">
@@ -128,13 +133,13 @@ h3{font-size:1.6rem;}
               </a>
             <div class="section__2v9mQhyESDhguULKoR_J7P">
                 <h2 class="sectionTitle__3Cht9NEhb0XxciVgKArgPR">Menu</h2>
-                <a class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="/users/betaNinja94590/achievements">
+                <a class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="/users/billings_business">
                     <div class="statContainer__3vkcPCpgY9KLbdlgaArthp">
                         <p>Facturation</p>
                         <!-- <p>83</p> -->
                     </div>
                 </a>
-                <a class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="/users/betaNinja94590/achievements">
+                <a class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="/users/contact_business">
                     <div class="statContainer__3vkcPCpgY9KLbdlgaArthp">
                         <p>Contact</p>
                         <!-- <p>83</p> -->
@@ -170,7 +175,15 @@ h3{font-size:1.6rem;}
                                         <path d="m18 2-12 12-5.5-5.5 1.41-1.41 4.09 4.08 10.59-10.58z" transform="translate(3 5)"></path>
                                     </svg>
                                 </div>
-                                <span class="description__3LED2LwLhklkpJ5MtcAQxn">{{number_format((count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100)}}%</span>
+                                @if($course->type == 'mooc')
+                                @if(count($course->lessons) > 0)
+                                <span class="description__3LED2LwLhklkpJ5MtcAQxn">{{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}%</span>
+                                @endif
+                                @else
+                                @if(count($course->projects) > 0)
+                                <span class="description__3LED2LwLhklkpJ5MtcAQxn">{{number_format((count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}%;</span>
+                                @endif
+                                @endif
                             </div>
                         </div>
                         <div class="completedItemAction__3lR3-Ea8ycEaHNmEorQkwU"><span class="completedItemActionText__3pVene1PtZPiBdHWdsFkNI">Voir</span></div>

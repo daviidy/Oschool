@@ -423,7 +423,6 @@ button{line-height:inherit;}
             <i class="fa fa-question-circle"></i>
             FAQ OSCHOOL
           </h2>
-          <br>
           <div class="faq-question">
             C’est quoi Oschool ?
           </div>

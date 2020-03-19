@@ -175,6 +175,11 @@ class Course extends Model
                   return $this->belongsToMany('App\Information');
               }
 
+            public function faqs()
+                {
+                    return $this->hasMany('App\Faq');
+                }
+
               
 
            public static function boot() {

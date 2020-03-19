@@ -11,10 +11,16 @@ class Faq extends Model
                     'questions',
                     'reponses',
                     'school_id',
+                    
                      ];
 
     public function school()
-  {
-      return $this->belongsTo('App\School');
-  }
+      {
+          return $this->belongsTo('App\School');
+      }
+
+    public function courses()
+      {
+          return $this->belongsTo('App\Course');
+      }
 }

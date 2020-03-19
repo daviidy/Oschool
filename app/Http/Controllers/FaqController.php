@@ -41,7 +41,7 @@ class FaqController extends Controller
     public function store(Request $request)
     {
         $faq = Faq::create($request->all());
-        return back()->with('status', 'Nouvelle session programmée');
+        return back()->with('status', 'Nouvelle faq programmée');
 
     }
 
@@ -80,6 +80,20 @@ class FaqController extends Controller
     {
         $faq->update($request->all());      
         return redirect('/schoolAdmin/'.$faq->school->id.'/faqs')->with('status', 'Faq modifié avec seccès');
+    }
+
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\School  $school
+     * @return \Illuminate\Http\Response
+     */
+    public function courseFaqs(School $school, Course $course)
+    {
+        
+        return view('admin_views.school.faq', ['course' => $course]);
+        
     }
 
     /**

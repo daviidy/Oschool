@@ -98,9 +98,13 @@
                                         @auth
                                         @if(Auth::user()->courses->contains($course->id))
                                         <div class="col-xs-12" aria-hidden="false">
-                                            <div class="progressbar">
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: {{number_format((count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100)}}%;" aria-valuenow="0%"></div>
-                                            </div>
+                                            @if($course->type == 'mooc')
+                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: 
+                                                {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}%;" aria-valuenow="0%"></div>
+                                                @else
+                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: 
+                                                {{number_format((count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}%;" aria-valuenow="0%"></div>
+                                                @endif
                                         </div>
                                         @endif
                                         @endauth
