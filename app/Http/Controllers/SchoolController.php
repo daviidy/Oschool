@@ -606,9 +606,6 @@ class SchoolController extends Controller
                        $message->from('eventsoschool@gmail.com', 'Oschool');
                      });
 
-                 }
-
-
 
 
          return back()->with('status', 'Votre message a bien été envoyé');
