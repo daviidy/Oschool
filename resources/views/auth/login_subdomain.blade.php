@@ -6,7 +6,7 @@
             <div class="_9fffb9c6" id="login-container">
                 <div class="_e30ab864"><img class="_21dae779" src="/images/divers/login_subdomain.png"></div>
                 <div class="_1644449">Connectez-vous à {{$school->name}}</div>
-                <div class="_d6611e81">
+                <!--div class="_d6611e81">
                     <div class="_eaf002ed">
                         <a class="_71544996" href="{{ url('login/facebook') }}">
                             <span class="_82a246cb"><svg width="100%" height="100%" viewBox="0 0 20 20">
@@ -49,14 +49,14 @@
                         </a>
                 </div>
                 <div class="__964b105c">
-                        <a class="_71544996" href="{{ url('login/github') }}">
+                        <a class="_71544996" href="{{ url('login/linkedin') }}">
                             <span class="_82a246cb">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px"><path fill="#fff" d="M8.421 14h.052 0C11.263 14 13 12 13 9.5 12.948 6.945 11.263 5 8.526 5 5.789 5 4 6.945 4 9.5 4 12 5.736 14 8.421 14zM4 17H13V43H4zM44 26.5c0-5.247-4.253-9.5-9.5-9.5-3.053 0-5.762 1.446-7.5 3.684V17h-9v26h9V28h0c0-2.209 1.791-4 4-4s4 1.791 4 4v15h9C44 43 44 27.955 44 26.5z"/></svg>
                             </span>
                             <span class="_95a1a91b">CONTINUER AVEC LINKEDIN</span>
                         </a>
                 </div>
-                </div>
+                </div -->
                 <div class="_86bb084a">
                     <div class="_4dfd0c8c"></div>
                     <div class="_409742f4">ou connectez-vous par e-mail</div>

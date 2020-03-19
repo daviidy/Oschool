@@ -25,6 +25,10 @@ Route::group(
         Route::get('/login', 'SchoolController@showBusinessLogin')->name('website.subdomain.login');
         Route::get('/register', 'SchoolController@showBusinessRegister')->name('website.subdomain.register');
         Route::get('/home', 'SchoolController@showBusinessHomeUsers')->name('website.subdomain.home_users');
+
+        Route::get('/users/billings_business', 'UserController@BillingsBusiness')->name('website.subdomain.users_billings');
+
+        Route::get('/users/contact_business', 'SchoolController@contactSubDomain')->name('website.subdomain.users_billings');
     }
 );
 
