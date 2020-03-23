@@ -265,12 +265,10 @@ header,svg{display:none;}
                     <div class="col col-50-lg">
                         <div class="hero-title">
                             <h1 class="text-color-white text-1-lg m-t-0-xs">
-                                Explorez nos écoles et trouvez le parfait programme pour votre carrière
+                                Oschool s'engage contre le COVID-19
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                A Oschool, apprenez les compétences les plus
-                                recherchées par les entreprises, construisez des projets incroyables
-                                et donnez vie à votre métier de rêve.
+                                Toutes nos spécialisations sont à 3500 F CFA pour les mois de mars et avril 2020. Utilisez le coupon OSCHOOLESPOIR.
                             </h2>
                         </div>
                     </div>
@@ -281,7 +279,7 @@ header,svg{display:none;}
                             <p class="trial-banner bg-gray-light text-color-dark">
                                 Commencez dès maintenant <span class="regular">et sans engagement</span>
                             </p>
-                            <img style="border-radius: 8px;/*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/width:63%;" src="/images/divers/courses.png" alt="">
+                            <img style="border-radius: 8px;/*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/width:63%;" src="/images/divers/python.png" alt="">
                             <!--
                             <form class="new_account_signup" id="signupForm" data-featurette="Treehouse.SimpleSignupForm" action="/subscribe/register_free_trial" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"
                                   class="placeholder-processed"><input type="hidden" name="authenticity_token" value="6/X13Mh0nk1E+2Xscuq2IhcwJKqhoKgnQS7cfvJrrUwWyNHIzUawYe432n3ljIQzP6hWDrQK9+RAYVO1EvC3Ww==" class="placeholder-processed">

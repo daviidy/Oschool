@@ -32,7 +32,7 @@
     .btn:active{box-shadow:none;}
     body.body-public :hover{-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
     .sticky{position:fixed;top:0;z-index:1000;}
-    #sticky-banner.green-countdown{background-color:#2C2F33;color:white;}
+    #sticky-banner.green-countdown{background-color:#ec5252;color:white;}
     #sticky-banner.green-countdown a.sticky-banner-button{color:white;background-color:#4D90CC;transition:background-color 0.2s ease;}
     #sticky-banner.green-countdown a.sticky-banner-button:hover{background-color:#2b6090;}
     #sticky-banner{height:50px;width:100%;font-size:12px;letter-spacing:initial;}
@@ -66,7 +66,7 @@
     #sticky-banner .countdown-timer-component *{margin-left:4px;}
     }
     #sticky-banner .countdown-timer-component p.countdown-label{font-size:11px;}
-    #sticky-banner .countdown-timer-component p.countdown-number{font-family:"TeachableSans-Bold";font-size:22px;line-height:22px; padding-top: 10px;}
+    #sticky-banner .countdown-timer-component p.countdown-number{font-family:"TeachableSans-Bold";font-size:22px;line-height:22px; padding-top: 10px;margin: 0!important;}
     }
     /*! CSS Used fontfaces */
     @font-face{font-family:'TeachableSans-Regular';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.ttf") format("truetype");}
@@ -82,6 +82,3 @@
 
 
 /* button */
-
-
-

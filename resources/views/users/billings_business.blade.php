@@ -228,14 +228,14 @@ h3{font-size:1.6rem;}
                         <!-- <p>83</p> -->
                     </div>
                 </a>
-                <a class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="/users/betaNinja94590/achievements">
+                <a class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="/users/contact_business">
                     <div class="statContainer__3vkcPCpgY9KLbdlgaArthp">
                         <p>Contact</p>
                         <!-- <p>83</p> -->
                     </div>
                 </a>
                 @if($school->user_id == Auth::user()->id)
-                <a style="color: #EA5252;" class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
+                <a style="color: #4d90cc;" class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
                     <div class="statContainer__3vkcPCpgY9KLbdlgaArthp">
                         <p style="font-weight: bold;">Tableau d'adminstration de l'école</p>
                         <!-- <p>83</p> -->

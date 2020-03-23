@@ -1,6 +1,204 @@
-@extends('layouts.admin_views.menu-school-icon')
-@section('title', 'Créer des faqs')
+@extends('layouts.menu-school')
+@section('title', 'Envoyer un message')
+
 @section('content')
+
+<style media="screen">
+
+/*! CSS Used from: https://home.mindvalley.com/assets/darkui-4558cb3c34b34b80e42befe8a8a15be26e7ddb11a5a44679cd0f1f90179af548.css ; media=all */
+@media all{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+td,th{padding:0;}
+@media print{
+*,*:before,*:after{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+tr,img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+p{orphans:3;widows:3;}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#4D90CC;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+.col-sm-9{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+@media (min-width: 768px){
+.col-sm-9{float:left;}
+.col-sm-9{
+    width:100%;
+    
+}
+}
+table{background-color:transparent;}
+th{text-align:left;}
+}
+/*! CSS Used from: https://home.mindvalley.com/packs/app-c7d9f990427b05dbc9d6ddcf5ac45b3c.css ; media=screen */
+@media screen{
+a[data-v-669dc8b3]{margin-top: 15px;cursor:pointer;display:inline-block;min-height:42px;padding:10px 30px;font-size:15px;color:#fff;text-decoration:none;text-align:center;font-family:Gilroy-Semibold,sans-serif;background-color:#4D90CC;border-radius:35px;vertical-align:middle;}
+a[data-v-669dc8b3]:hover{background-color:#66afe9;}
+a[data-v-669dc8b3]{cursor:pointer;display:inline-block;min-height:42px;padding:10px 30px;font-size:15px;color:#fff;text-decoration:none;text-align:center;font-family:Gilroy-Semibold,sans-serif;background-color:#4D90CC;border-radius:35px;vertical-align:middle;}
+a[data-v-669dc8b3]:hover{background-color:#4e9ff8;}
+@media (max-width:768px){
+a[data-v-669dc8b3]{padding-left:30px;padding-right:30px;}
+}
+@media (max-width:480px){
+a[data-v-669dc8b3]{padding-left:20px;padding-right:20px;}
+}
+img[data-v-285a3986]{height:27px;width:auto;}
+td[data-v-3e7bb260]{font-family:Gilroy-Regular,sans-serif;font-size:14px;color:#2c313b;}
+td.status[data-v-3e7bb260]{font-family:Gilroy-Semibold,sans-serif;text-transform:capitalize;max-width:110px;}
+td.status .green[data-v-3e7bb260]{color:#18bb9c;}
+@media (max-width:700px){
+td.status[data-v-3e7bb260]{max-width:none;padding-bottom:20px!important;}
+}
+td.order[data-v-3e7bb260]{color:#4D90CC;min-width:110px;}
+@media (max-width:700px){
+td.order[data-v-3e7bb260]{padding-top:20px!important;}
+}
+td.order a[data-v-3e7bb260]:hover{color:#4D90CC;text-decoration:none;}
+td.order img[data-v-3e7bb260]{display:inline-block;margin-left:10px;width:11px;height:auto;}
+.table-wrapper{padding:20px 0 0;}
+.table-wrapper table{width:100%;}
+.table-wrapper table tr{border-bottom:1px solid #dfdfdf;}
+.table-wrapper table tr:last-child{border-bottom:none;}
+.table-wrapper table tr.header{border-bottom:4px solid #dfdfdf;}
+.table-wrapper table tr th{font-family:'TeachableSans-Regular';font-size:14px;color:#62686e;padding:10px 5px;}
+@media (max-width:700px){
+.table-wrapper table tr th{display:none;}
+}
+.table-wrapper table tr td{padding:10px 5px;}
+@media (max-width:700px){
+.table-wrapper table tr td{display:block;}
+}
+.empty p[data-v-bd11ec86]{font-family:'TeachableSans-Regular';font-size:14px;font-weight:500;line-height:18px;color:#2c313b;}
+.empty img[data-v-bd11ec86]{margin:8px 0 22px;}
+@media (max-width:500px){
+.empty img[data-v-bd11ec86]{width:100%;}
+}
+h4[data-v-bd11ec86]{margin-top:0;font-family:'TeachableSans-Regular';font-size:20px;letter-spacing:.2px;color:#333;}
+.inner-content[data-v-bd11ec86]{padding:40px;padding-bottom:20px;background-color:#fff;border-radius:4px;margin-bottom:30px;}
+@media (max-width:767px){
+.inner-content[data-v-bd11ec86]{padding:20px;}
+}
+}
+
+</style>
+
+
+
+
+<style media="screen">
+
+/*! CSS Used from: https://www.codecademy.com/webpack/252.332e4eb85b77bff782aa.chunk.css */
+.headingOverflow__UFZQ2dgsxI9wLTOZBpj5l{height:7.5rem;overflow:hidden;position:relative;width:100%;}
+.heading__19kuxLfU5IL99jrtWG9oR6{background-color:#f6f5fa;height:100%;margin-left:-5%;position:relative;width:110%;}
+</style>
+
+
+<style media="screen">
+/*! CSS Used from: https://www.codecademy.com/webpack/116.5a38711ce87647cf476a.chunk.css */
+.btn__2v-TLC9Odx5KkacwG29i-V{display:-webkit-inline-flex;display:inline-flex;-webkit-justify-content:center;justify-content:center;font-weight:700;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;border:1px solid transparent;border-radius:2px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:.375rem .200rem;font-size:1rem;line-height:1.5;min-width:8rem;transition:all .1s ease-in-out;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_{color:#fff;background-color:#141c3a;border-color:transparent;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:hover{box-shadow:0 2px 4px rgba(0,0,0,.3);}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px #141c3a;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:focus,.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:hover{text-decoration:none;color:#fff;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:focus:active,.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:hover:active{box-shadow:0 2px 4px rgba(0,0,0,.3);}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:active{background-color:#10162e;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:disabled{background-color:#525252;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_:disabled:hover{box-shadow:none;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_.outline__ew2jvSIM6pGG9P_gw6Bm5{font-size:2rem;color:#141c3a;background-color:initial;border:1px solid #141c3a;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_.outline__ew2jvSIM6pGG9P_gw6Bm5:focus,.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_.outline__ew2jvSIM6pGG9P_gw6Bm5:hover{background-color:#141c3a;box-shadow:none;color:#fff;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_.outline__ew2jvSIM6pGG9P_gw6Bm5:focus:active,.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_.outline__ew2jvSIM6pGG9P_gw6Bm5:hover:active{background-color:#434961;box-shadow:none;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_.outline__ew2jvSIM6pGG9P_gw6Bm5:hover{box-shadow:0 2px 4px 0 rgba(0,0,0,.3);}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_.outline__ew2jvSIM6pGG9P_gw6Bm5:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px #141c3a;}
+.btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_.outline__ew2jvSIM6pGG9P_gw6Bm5:disabled{border-color:#525252;color:#525252;background-color:initial;}
+.block__2Zi7TViIIVUdz7kEnuWrCI{display:-webkit-flex;display:flex;width:100%;}
+.basicBtn__3xa1QN1wgQsDZ1jCBiNCJ_{display:inline-block;text-align:center;text-decoration:none;white-space:nowrap;vertical-align:middle;cursor:pointer;font-family:inherit;}
+.basicBtn__3xa1QN1wgQsDZ1jCBiNCJ_:active:focus,.basicBtn__3xa1QN1wgQsDZ1jCBiNCJ_:focus{outline:none;}
+.basicBtn__3xa1QN1wgQsDZ1jCBiNCJ_:focus,.basicBtn__3xa1QN1wgQsDZ1jCBiNCJ_:hover:focus{text-decoration:none;}
+.basicBtn__3xa1QN1wgQsDZ1jCBiNCJ_:active{background-image:none;outline:0;}
+.basicBtn__3xa1QN1wgQsDZ1jCBiNCJ_:disabled{cursor:not-allowed;opacity:.65;}
+/*! CSS Used from: https://www.codecademy.com/webpack/161.7cccb66f8cc09f379705.chunk.css */
+*,:after,:before{box-sizing:inherit;}
+main{display:block;}
+h1,h2,h3,p{margin-top:0;}
+p{margin-bottom:1rem;}
+a{color:#4b35ef;text-decoration:none;background-color:initial;-webkit-text-decoration-skip:objects;}
+a:hover{text-decoration:underline;}
+img{vertical-align:middle;border-style:none;}
+svg:not(:root){overflow:hidden;}
+h1,h2,h3{margin-bottom:1rem;font-weight:700;line-height:1.1;color:#292929;}
+h1{font-size:3rem;}
+h1,h2{font-family:Regular Patch,Regular Bold,Nunito Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;}
+h2{font-size:2.2rem;}
+h3{font-size:1.6rem;}
+/*! CSS Used from: https://www.codecademy.com/webpack/3.85a6bc776f3ac72fff82.chunk.css */
+.contentContainer__2hNipbbqs3wX_aJ0xS9qxf{/*height:100%*/;padding-left:1rem;padding-right:1rem;max-width:calc(1440px + 12rem);margin-left:auto;margin-right:auto;}
+@media only screen and (min-width:48rem){
+.contentContainer__2hNipbbqs3wX_aJ0xS9qxf{padding-left:2rem;padding-right:2rem;}
+}
+@media only screen and (min-width:64rem){
+.contentContainer__2hNipbbqs3wX_aJ0xS9qxf{padding-left:3rem;padding-right:3rem;}
+}
+@media only screen and (min-width:75rem){
+.contentContainer__2hNipbbqs3wX_aJ0xS9qxf{padding-left:6rem;padding-right:6rem;}
+}
+/*! CSS Used from: https://www.codecademy.com/webpack/portal-scenes-Profile.85063e05f76b3ef885d1.chunk.css */
+.container__25St-wPttEa00dbsIQGsRH{padding:1rem 0;width:100%;color:#000;border-bottom:1px solid #dddce0;display:grid;-webkit-align-items:center;align-items:center;grid-template-columns:3rem auto 1fr;}
+.container__25St-wPttEa00dbsIQGsRH:focus,.container__25St-wPttEa00dbsIQGsRH:hover{text-decoration:none;opacity:1;}
+.container__25St-wPttEa00dbsIQGsRH:focus .completedItemActionText__3pVene1PtZPiBdHWdsFkNI,.container__25St-wPttEa00dbsIQGsRH:hover .completedItemActionText__3pVene1PtZPiBdHWdsFkNI{opacity:1;}
+.container__25St-wPttEa00dbsIQGsRH .completedItemAction__3lR3-Ea8ycEaHNmEorQkwU{padding:0;margin-left:auto;}
+.container__25St-wPttEa00dbsIQGsRH .completedItemAction__3lR3-Ea8ycEaHNmEorQkwU:focus .completedItemActionText__3pVene1PtZPiBdHWdsFkNI,.container__25St-wPttEa00dbsIQGsRH .completedItemAction__3lR3-Ea8ycEaHNmEorQkwU:hover .completedItemActionText__3pVene1PtZPiBdHWdsFkNI{opacity:1;}
+.container__25St-wPttEa00dbsIQGsRH .completedItemActionText__3pVene1PtZPiBdHWdsFkNI{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#6400e4;display:none;font-size:2rem;font-weight:700;opacity:0;transition:opacity .2s;margin-right:1rem;}
+.container__25St-wPttEa00dbsIQGsRH .completedItemActionText__3pVene1PtZPiBdHWdsFkNI:focus,.container__25St-wPttEa00dbsIQGsRH .completedItemActionText__3pVene1PtZPiBdHWdsFkNI:hover{opacity:1;}
+@media only screen and (min-width:48rem){
+.container__25St-wPttEa00dbsIQGsRH .completedItemActionText__3pVene1PtZPiBdHWdsFkNI{display:block;}
+}
+.contentContainer__2XpraB__ZsFvtgeXy-hiqA{margin-left:1rem;}
+.title__YKjOCEmg015vuLRonUC5l{font-size:2rem;margin-bottom:0;font-family:Regular Patch,Regular Bold,Nunito Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;}
+.icon__3QtI7CVFmElvsok-AOAylb{justify-self:center;color:#141e3b;height:3rem;}
+.icon__3QtI7CVFmElvsok-AOAylb>svg{height:100%;width:100%;}
+.description__3LED2LwLhklkpJ5MtcAQxn{margin-bottom:0;}
+.checkmarkContainer__3dnfL_MfYE1XU6TAon23UH,.displayHorizontal__1BPiAmdwij91rwcegVMI2f{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;}
+.checkmarkContainer__3dnfL_MfYE1XU6TAon23UH{background-color:#ffc740;border-radius:4rem;margin-right:.5rem;height:1.5rem;width:1.5rem;-webkit-justify-content:center;justify-content:center;}
+.contentSection__CjgKQE1eGe6XewpT-OS6X{margin-bottom:4rem;}
+.contentSection__CjgKQE1eGe6XewpT-OS6X .content__2DN9BFszqr0gflo9T6mSHU{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;}
+@media screen and (max-width:48rem){
+.contentSection__CjgKQE1eGe6XewpT-OS6X .content__2DN9BFszqr0gflo9T6mSHU{margin-top:2rem;}
+}
+.sectionTitle__1mdYH5tkx9LiyHvrrmE6aW{font-size:2.125rem;text-transform:uppercase;}
+.container__3TWtjj2MEnV9meZq0ZjTTC{grid-column:1/3;position:relative;top:-3rem;width:100%;}
+@media screen and (max-width:48rem){
+.container__3TWtjj2MEnV9meZq0ZjTTC{grid-column:1/-1;}
+}
+.avatar__2tJZ_OU8usiTvOekfHdMza{border-radius:99rem;border:4px solid #fff;display:block;height:10rem;width:10rem;margin-bottom:2rem;}
+.handle__sEzDhz5n_Lipz8sfgqzma{overflow:hidden;text-overflow:ellipsis;font-family:Regular Patch,Regular Bold,Nunito Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-size:2.6rem;white-space:nowrap;}
+.label__2YO_cDf1Lu9PDDsn62kz6L{color:#4b4b4d;font-size:2rem;}
+.editButton__2nNpny-WbdD9O6JrG1F92A{margin-top:1rem;}
+.section__2v9mQhyESDhguULKoR_J7P{margin-top:2rem;padding-top:1.5rem;border-top:1px solid #dddce0;color:#000;}
+.sectionTitle__3Cht9NEhb0XxciVgKArgPR{font-size:2.125rem;text-transform:none;}
+.statContainer__3vkcPCpgY9KLbdlgaArthp{-webkit-justify-content:space-between;justify-content:space-between;}
+.statContainer__3vkcPCpgY9KLbdlgaArthp{display:-webkit-flex;display:flex;}
+.achievementsLink__jD_YGGUP5QvyO0nWE_LOb{color:#000;}
+.achievementsLink__jD_YGGUP5QvyO0nWE_LOb:hover{text-decoration:none;color:#6400e4;}
+.contentContainer__1jAAu1zndUT3xNQdVbprTL{display:grid;grid-template-columns:repeat(12,1fr);margin-bottom:8rem;}
+.completionsContainer__2IYN9k4PNi5y8XGTuQdIeG{grid-column:4/-1;padding-top:5.25rem;}
+@media screen and (max-width:48rem){
+.completionsContainer__2IYN9k4PNi5y8XGTuQdIeG{grid-column:1/-1;padding-top:0;}
+}
+.full-width .navbar-fedora .navbar-header-collapse {
+    float: right;
+    padding-right: 0px !important;
+}
+
+</style>
+
+<!--Form style-->
 
 <style media="screen">
 
@@ -322,7 +520,7 @@
         .col-sm-6,.col-sm-12{float:left;}
         .col-sm-6{width:50%;}
         .col-sm-12{width:100%;}
-        .col-sm-offset-3{margin-left:25%;}
+        .col-sm-offset-3{margin-left:10% !important;}
         }
         .form-control{display:block;width:100%;height:41px;padding:6px 12px;font-size:13px;line-height:1.72222;color:#95a5a6;background-color:white;background-image:none;border:1px solid #ccc;border-radius:5px;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);-webkit-transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;-webkit-transition:border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;}
         .form-control:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);}
@@ -427,10 +625,10 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .btn:hover,.btn:focus{color:white;text-decoration:none;}
 .btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);}
 [disabled]{cursor:default!important;pointer-events:none;}
-.tch-btn-header-primary-block{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
-.tch-btn-header-primary-block:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block{color:white;background-color:#4D90CC;border:1px solid #4d90cc;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
+.tch-btn-header-primary-block:focus{color:white;background-color:#6aace6;border-color:#6aace6;}
+.tch-btn-header-primary-block:hover{color:white;background-color:#6aace6;border-color:#6aace6;}
+.tch-btn-header-primary-block:active{color:white;background-color:#6aace6;border-color:#6aace6;}
 .tch-btn-header-primary-block:active:hover,.tch-btn-header-primary-block:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
 .tch-btn-header-primary-block:active{background-image:none;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
@@ -450,7 +648,7 @@ h2{margin-top:22px;margin-bottom:11px;}
 h2{font-size:var(--fs6);line-height:var(--lh6);font-weight:bold;}
 p{margin:0 0 11px;font-size:var(--fs-1);line-height:var(--lh-1);}
 .control-label{font-size:14px;}
-.survey-container{background:#fff url("//assets.teachablecdn.com/admin/assets/images/onboarding-survey-bg.svg") no-repeat;background-size:50%;border-radius:8px;border:1px solid #eeeeee;padding:0px 50px;}
+.survey-container{/*background:#fff url("//assets.teachablecdn.com/admin/assets/images/onboarding-survey-bg.svg") no-repeat*;*/background-size:50%;border-radius:8px;border:1px solid #eeeeee;padding:0px 50px;}
 @media screen and (min-width: 1000px){
 .survey-container{padding:0px 72px;}
 }
@@ -487,96 +685,139 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 </style>
 
 
-<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+<div style="margin-top: 45px;" role="main" class="view-school">
 
-        <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content" style="">
-            <div what="page header" class="tch-section-nav tch-page-header" icon="icon icon-cash-dollar" text="Pricing">
-                <div ng-class="{ 'has-sections': sections }" class="tch-section-nav-wrapper affixed">
-                    <div ng-class="{ 'extra-height': sections.length > 1, 'has-beta-banner': hasBetaBanner }" class="tch-section-nav-placeholder"></div>
-                    <div ng-class="{ 'fixed': fixed }" class="tch-section-nav-box dynamic-width">
-                        <div what="text" class="tch-section-nav-title">
-                            <!---->
-                            <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
-                            <!---->
-                            <!---->Créer des faqs
-                        </div>
-                        <!---->
-                        <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
+
+    <div class="headingOverflow__UFZQ2dgsxI9wLTOZBpj5l" role="presentation">
+        <div class="heading__19kuxLfU5IL99jrtWG9oR6" style="background-color:#f6f5fa;color:blue"></div>
+    </div>
+
+    <main class="contentContainer__2hNipbbqs3wX_aJ0xS9qxf contentContainer__1jAAu1zndUT3xNQdVbprTL">
+        <div class="container__3TWtjj2MEnV9meZq0ZjTTC">
+            <h1 class="handle__sEzDhz5n_Lipz8sfgqzma"><img src="/images/users/default/{{Auth::user()->image}}" class="avatar__2tJZ_OU8usiTvOekfHdMza" alt="David's avatar">{{ucfirst(Auth::user()->name)}}</h1>
+            <!--
+            <p class="label__2YO_cDf1Lu9PDDsn62kz6L">/
+                betaNinja94590</p>
+            <p class="label__2YO_cDf1Lu9PDDsn62kz6L"><span>Last coded
+                    14 days ago</span><br>Joined
+                Oct 24, 2017</p>
+            -->
+                <a class="basicBtn__3xa1QN1wgQsDZ1jCBiNCJ_ btn__2v-TLC9Odx5KkacwG29i-V btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_ block__2Zi7TViIIVUdz7kEnuWrCI outline__ew2jvSIM6pGG9P_gw6Bm5 editButton__2nNpny-WbdD9O6JrG1F92A"
+              data-btn="true" href="/account">
+                  Modifier
+              </a>
+            <div class="section__2v9mQhyESDhguULKoR_J7P">
+                <h2 class="sectionTitle__3Cht9NEhb0XxciVgKArgPR">Menu</h2>
+                <a class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="/users/billings_business">
+                    <div class="statContainer__3vkcPCpgY9KLbdlgaArthp">
+                        <p>Facturation</p>
+                        <!-- <p>83</p> -->
                     </div>
-                    <!---->
-                </div>
+                </a>
+                <a class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="/users/contact_business">
+                    <div class="statContainer__3vkcPCpgY9KLbdlgaArthp">
+                        <p>Contact</p>
+                        <!-- <p>83</p> -->
+                    </div>
+                </a>
+                @if($school->user_id == Auth::user()->id)
+                <a style="color: #4d90cc;" class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
+                    <div class="statContainer__3vkcPCpgY9KLbdlgaArthp">
+                        <p style="font-weight: bold;">Tableau d'adminstration de l'école</p>
+                        <!-- <p>83</p> -->
+                    </div>
+                </a>
+                @endif
+
             </div>
-            @include('includes.status')
-            <div class="tch-inline-form">
+        </div>
+        <div class="completionsContainer__2IYN9k4PNi5y8XGTuQdIeG">
 
-                <div class="survey-container col-sm-6 col-sm-offset-3 col-xs-12 m-v-6-m">
-                    <h2 class="survey-container__header p-t-3-xs m-b-0-xs text-center-xs w-6">
-                        <!---->
-                        <!----><span ng-if="!onboardingPricingPageCheckoutSuccess">Créer </span>
-                        <!---->une nouvelle faq
-                    </h2>
+                <div data-v-27efbf01="" class="col-sm-9">
                     <!---->
-                    <p class="survey-container__customize m-t-4-xs p-h-3-xs">.</p>
+                    <!---->
+                    
 
+                    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
 
-                    <form enctype="multipart/form-data" method="post" action="{{route('faqs.store')}}" class="ng-pristine ng-valid ng-valid-schema-form" id="information-container">
-                            @csrf
+                
+                    
+                    @include('includes.status')
+                    
 
-                         <a href="/schoolAdmin/{{$school->id}}/faqs" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a>
-
-                        <bootstrap-decorator form="schemaForm.form[5]">
-                            <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Question</label>
-                              <input type="text" name="questions">
-
-
-                        </div>
-                        </bootstrap-decorator>
-                        <bootstrap-decorator form="schemaForm.form[6]">
-
-                            <input type="hidden" name="school_id" value="{{$school->id}}">
+                        <div class="survey-container col-sm-6 col-sm-offset-3 col-xs-12 m-v-6-m">
+                            <h2 class="survey-container__header p-t-3-xs m-b-0-xs text-center-xs w-6">
+                                <!---->
+                                <!----><span ng-if="!onboardingPricingPageCheckoutSuccess">Envoyer </span>
+                                <!---->un message au propriétaire
+                            </h2>
                             <!---->
-                        </bootstrap-decorator>
-                        
-                        
-                        <bootstrap-decorator form="schemaForm.form[7]">
-                            <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Réponses</label>
+                            
 
-                                    <input type="hidden" name="reponses" value="">
-                                    <div class="" id="editorFaq" style="height: 300px;">
+
+                            <form enctype="multipart/form-data" method="post" action="{{route('website.subdomain.submit_contact_business')}}" class="ng-pristine ng-valid ng-valid-schema-form" id="information-container">
+                                    @csrf
+
+                                 <!--a href="/schoolAdmin/{{$school->id}}/faqs" class="tch-inline-back fastclickable"><i what="fa-chevron-left" class="fa fa-chevron-left"></i></a-->
+
+                                <bootstrap-decorator form="schemaForm.form[5]">
+                                    <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
+                                      class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Question</label>
+                                      <input type="text" name="questions">
+
+
+                                </div>
+                                </bootstrap-decorator>
+                                <bootstrap-decorator form="schemaForm.form[6]">
+
+                                    <input type="hidden" name="student_mail" value="{{Auth::user()->mail}}">
+                                    <input type="hidden" name="user_id" value="{{$school->user->id}}">
+                                    <!---->
+                                </bootstrap-decorator>
+                                
+                                
+                                <bootstrap-decorator form="schemaForm.form[7]">
+                                    <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
+                                      class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Message</label>
+
+                                            <input type="hidden" name="content" value="">
+                                            <div class="" id="editorContact" style="height: 300px;">
+
+                                            </div>
+
 
                                     </div>
+                                </bootstrap-decorator>
 
+                                <bootstrap-decorator form="schemaForm.form[11]">
+                                    <div class="form-group schema-form-submit ">
+                                        <!----><input type="submit" class="btn tch-btn-header-primary-block " value="Envoyer ">
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                </bootstrap-decorator>
+                            </form>
+                        </div>
 
-                            </div>
-                        </bootstrap-decorator>
-
-                        <bootstrap-decorator form="schemaForm.form[11]">
-                            <div class="form-group schema-form-submit ">
-                                <!----><input type="submit" class="btn tch-btn-header-primary-block " value="Créez faq">
-                                <!---->
-                                <!---->
-                            </div>
-                        </bootstrap-decorator>
-                    </form>
+                    <!---->
+                    <!---->
+                    <!---->
                 </div>
-
-            </div><br>
-
-
-
-            @include('includes.information')
+                    
         </div>
+    </main>
+
+</div>
 
 
 
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+                
 
-        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
 
         <script>
-            var quillComment = new Quill('#editorFaq', {
+            var quillComment = new Quill('#editorContact', {
             modules: {
                 toolbar: [
                 ['bold', 'italic'],
@@ -593,7 +834,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
             var form = document.getElementById('information-container');
             form.onsubmit = function() {
               // Populate hidden form on submit
-              var text = document.querySelector('input[name=reponses]');
+              var text = document.querySelector('input[name=content]');
               text.value = quillComment.root.innerHTML;
 
             //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
@@ -604,13 +845,15 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
             };
           </script>
 
-<!--pour le multiple select-->
-<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
-});
 
-</script>
+        <!--pour le multiple select-->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
+        });
 
-        @endsection
+        </script>
+
+
+@endsection

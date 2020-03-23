@@ -81,7 +81,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
 
     <!--pour le footer-->
     @if($school->user->isAdmin())
@@ -133,7 +137,7 @@ ul{margin-top:0;margin-bottom:10px;}
 .container:after,.row:after{clear:both;}
 }
 /*! CSS Used from: https://themes2.teachablecdn.com/themecss/production/base.css?_=d5b075d37bf7&brand_course_heading=%23ffffff&brand_heading=%23134361&brand_homepage_heading=%23ffffff&brand_navbar_fixed_text=%23ffffff&brand_navbar_text=%23ffffff&brand_primary=%23134361&brand_secondary=%23ff3f20&brand_text=%234d4d4d&logged_out_homepage_background_image_overlay=0.5&logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F5mHijVFBS4qf8vcfzak0 */
-a{color:#ff3f20;}
+a{color:#4d90cc;}
 a:hover,a:active{color:#b91a00;}
 a,a:active,a:hover,a:focus{text-decoration:none;}
 a:hover, a:active {
@@ -143,7 +147,7 @@ p{font-size:18px;font-weight:200;line-height:28px;}
 h4{color:#134361;}
 footer{bottom:0;width:100%;background-color:#134361;position:absolute;color:#bac1c7;padding:39px 0 42px;}
 footer a{color:inherit;}
-footer a:hover,footer a:focus{color:#ff3f20;}
+footer a:hover,footer a:focus{color:#4d90cc;}
 footer a{color:#bac1c7;}
 footer a:hover,footer a:focus{color:#fff;text-decoration:none;}
 /*! CSS Used from: Embedded ; media=screen */
@@ -564,13 +568,13 @@ img{display:block;}
     }
 
     .course-listing:hover .course-listing-title {
-    color: #4d90cc;
+    color: #4d90cc !important;
     transition: all linear 0.1s;
     }
 
     .course-listing:hover {
-        box-shadow: 0px 0px 0px 1px #4d90cc;
-        border: 1px solid #4d90cc;
+        box-shadow: 0px 0px 0px 1px #4d90cc !important;
+        border: 1px solid #4d90cc !important;
         transition: all linear 0.1s;
     }
 
@@ -958,6 +962,11 @@ img{display:block;}
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
+
+      <!-- Include the Quill library -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="/js/quill/image-resize.min.js"></script>
+  <script src="/js/quill/video-resize.min.js"></script>
 
 
 

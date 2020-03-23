@@ -174,7 +174,17 @@
     content: "\f1e7";
     color: #4d90cc;
 }
+
+.alertMessage__icon_left{
+    right: 15px !important;
+    height: 30px;
+    line-height: 1.625rem;
+    position: absolute;
+    top: 20px;
+    color: #4D90CC;
+}
     </style>
+
 
 </head>
 

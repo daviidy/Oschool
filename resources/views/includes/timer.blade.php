@@ -6,9 +6,9 @@
 
 <section id="sticky-banner" class="permanent-stick sticky green-countdown timer"  >
     <div class="content-container">
-      <h3 class="header">VOICI LA MEILLEURE FACON DE COMMENCER L'ANNEE</h3>
+      <h3 class="header">Toutes nos spécialisations sont à 3500 F CFA! Utilisez le coupon OSCHOOLESPOIR</h3>
         <div  id="sticky-banner-countdown" class="countdown-timer-component" data-on-end="">
-    <div class="data-payload" data-end="2019-12-01T23:59:00-05:00"></div>
+    <div class="data-payload" data-end="2020-05-01T23:59:00-05:00"></div>
     <div class="days-container">
       <p class="countdown-number days" id="days"></p>
       <p class="countdown-label days-label">JOURS</p>
@@ -41,7 +41,7 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Feb 01, 2020 23:59:59").getTime();
+var countDownDate = new Date("May 01, 2020 23:59:59").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
