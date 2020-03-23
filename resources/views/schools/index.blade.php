@@ -153,6 +153,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 
 .navbar-fedora {
     background-color: black;
+    top: 50px;
 }
 </style>
 

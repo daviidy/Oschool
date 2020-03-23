@@ -66,7 +66,7 @@
     #sticky-banner .countdown-timer-component *{margin-left:4px;}
     }
     #sticky-banner .countdown-timer-component p.countdown-label{font-size:11px;}
-    #sticky-banner .countdown-timer-component p.countdown-number{font-family:"TeachableSans-Bold";font-size:22px;line-height:22px; padding-top: 10px;}
+    #sticky-banner .countdown-timer-component p.countdown-number{font-family:"TeachableSans-Bold";font-size:22px;line-height:22px; padding-top: 10px;margin: 0!important;}
     }
     /*! CSS Used fontfaces */
     @font-face{font-family:'TeachableSans-Regular';src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot");src:url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.eot?#iefix") format("embedded-opentype"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.woff") format("woff"),url("//d2oz8i5n9se8ej.cloudfront.net/fonts/teachable-sans/TeachableSans-Regular.ttf") format("truetype");}
@@ -82,6 +82,3 @@
 
 
 /* button */
-
-
-

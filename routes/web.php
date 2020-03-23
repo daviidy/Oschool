@@ -28,9 +28,13 @@ Route::group(
 
         Route::get('/users/billings_business', 'UserController@BillingsBusiness')->name('website.subdomain.users_billings');
 
-        Route::get('/users/contact_business', 'SchoolController@contactSubDomain')->name('website.subdomain.users_billings');
+        Route::get('/users/contact_business', 'UserController@showFormContactSubDomain')->name('website.subdomain.contact_business');
     }
 );
+
+Route::post('/submit_contact_business', 'SchoolController@contactSubDomain')->name('website.subdomain.submit_contact_business');
+
+
 
 Route::get('/', function () {
     return view('home');

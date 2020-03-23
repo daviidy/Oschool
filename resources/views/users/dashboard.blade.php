@@ -54,6 +54,7 @@
                                   <div class="alertMessage__text">
                                     {!!$information->text!!}
                                   </div>
+                                  <span class=" alertMessage__icon_left">Marquer comme lu</span>
                               </div>
                           </div>
                           <!--n'oublie pas de mettre le style css tout en haut-->

@@ -12,6 +12,7 @@ use App\Classroom;
 use App\Faq;
 use Image;
 use Input;
+use Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -591,28 +592,27 @@ class SchoolController extends Controller
 
      public function contactSubDomain(Request $request)
      {
+
          
+                
                  //on vas prendre l'input sujet et message ainsi que
-                // le mail de l'utilisateur et celui du propriétaire
-                 $user = User::find($request->user_id);
+                // le mail de l'étudiant
                  
-                    //on retrouve le proprietaire de l'école dans la bdd
-                     $user = User::where('name', $user_id)->first();
+   
                      $content = $request->content;
-                     $user_mail = $request->user_mail
+                     $student_mail = $request->student_mail;
+
+                //on retrouve le proprio du school
+                $user = User::find($request->user_id);
                      
-                     Mail::send('mails.users.contact.send', ['user' => $user, 'content' => $content, 'user_mail' => $user_mail], function($message) use($user){
+                     Mail::send('mails.users.contact.send', ['user' => $user, 'content' => $content, 'student_mail' => $student_mail], function($message) use($user){
                        $message->to($user->email, 'Un.e étudiant.e vous a envoyé un message')->subject('Un.e étudiant.e vous a envoyé un message');
                        $message->from('eventsoschool@gmail.com', 'Oschool');
                      });
-                 
-                 }
 
-             
-         
-
-         return back()->with('status', 'Votre message a bien été envoyé');
-     }
+                     return back()->with('status', 'Votre message a bien été envoyé');
+    
+    }
 
 
 
