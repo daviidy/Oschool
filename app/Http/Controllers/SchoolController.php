@@ -593,9 +593,6 @@ class SchoolController extends Controller
      public function contactSubDomain(Request $request)
      {
 
-
-
-
                  //on vas prendre l'input sujet et message ainsi que
                 // le mail de l'étudiant
 
@@ -607,7 +604,6 @@ class SchoolController extends Controller
                 $user = User::find($request->user_id);
 
                      Mail::send('mails.users.contact.send', ['user' => $user, 'content' => $content, 'student_mail' => $student_mail], function($message) use($user){
-
                  //on vas prendre l'input sujet et message ainsi que
                 // le mail de l'utilisateur et celui du propriétaire
                  $user = User::find($request->user_id);
@@ -626,14 +622,10 @@ class SchoolController extends Controller
 
                      return back()->with('status', 'Votre message a bien été envoyé');
 
-    }
+                    }
+                  );
 
+                     return back()->with('status', 'Votre message a bien été envoyé');
+                 }
 
-
-         return back()->with('status', 'Votre message a bien été envoyé');
-     }
-
-
-
-
-}
+        }
