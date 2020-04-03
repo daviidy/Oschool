@@ -25,6 +25,16 @@ class Section extends Model
 
       /**
        * [users description]
+       * relationship one to one with Drip model
+       * @return [array] [description]
+       */
+       public function drip()
+       {
+           return $this->hasOne('App\Drip');
+       }
+
+      /**
+       * [users description]
        * relationship one to many with Course model
        * @return [array] [description]
        */

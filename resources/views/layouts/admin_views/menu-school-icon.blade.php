@@ -295,9 +295,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     <!---->
     <!---->
     <div ui-view="" class="" style="">
-        <script>
-            _.contains = _.includes
-        </script>
+
         <!---->
         <!---->
         <div ui-view="onboarding" ng-if="::!currentUser.show_custom_role_upgrade"></div>
@@ -587,6 +585,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
     @if(\Route::current()->getName() == 'course')
     @include('includes.admin_views.popups-admin')
+    @include('includes.admin_views.popups-date-section')
+    @include('includes.admin_views.popups-days-section')
     @endif
 
 

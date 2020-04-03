@@ -579,7 +579,16 @@ class SchoolController extends Controller
         }
 
         if (Auth::check()) {
-            return view('users.dashboard_subdomain', ['school' => $school]);
+            //si le user est le proprio de l'ecole
+            //on l'envoie au tableau de bord d'admin
+            //de l'école
+            if ($school->user_id == Auth::user()->id) {
+                return view('admin_views.schools.show', ['school' => $school]);
+            }
+            else {
+                return view('users.dashboard_subdomain', ['school' => $school]);
+            }
+
         }
 
         else {

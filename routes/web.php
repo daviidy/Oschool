@@ -109,6 +109,8 @@ Route::resource('classrooms', 'ClassroomController');
 
 Route::resource('faqs', 'FaqController');
 
+Route::resource('drips', 'DripController');
+
 
 //for create school with subdoamin or attached domains
 Route::post('/storeSchoolBusiness', 'SchoolController@storeSchoolBusiness')->name('schools.storeBusiness');
@@ -298,6 +300,9 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pricing/{pricing}/editOnePurc
 
 Route::get('/schoolAdmin/{school}/courses/{course}/pricing/createPaymentPlan', 'PricingController@createPaymentPlan')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/pricing/{pricing}/editPaymentPlan', 'PricingController@editPaymentPlan')->name('course');
+
+//course drip
+Route::get('/schoolAdmin/{school}/courses/{course}/drips', 'DripController@index')->name('course');
 
 //course certificates
 Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseController@certificates')->name('course');
