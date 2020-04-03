@@ -645,7 +645,7 @@ img{display:block;}
         </div>
         @else
         <!-- Navbar -->
-        <div class="navbar navbar-fedora navbar-fixed-top is-at-top bs-docs-nav is-signed-in" id="navbar" role="navigation">
+        <div style="background: #{{$school->color->navbar_links}};" class="navbar navbar-fedora navbar-fixed-top is-at-top bs-docs-nav is-signed-in" id="navbar" role="navigation">
             <div class="container">
                 <div class="navbar-header navbar-header-courses">
                     <button class="navbar-toggle" data-target=".navbar-header-collapse" data-toggle="collapse" type="button">
@@ -911,7 +911,7 @@ img{display:block;}
 
     @else
 
-    <footer class="">
+    <footer style="background: #{{$school->color->navbar_links}}" class="">
         <div class="footer">
             <div class="footer__wrapper">
                 <div class="footer__inner">

@@ -5,6 +5,10 @@
     @section('content')
 
     <style media="screen">
+
+
+
+
     /*! CSS Used from: Embedded */
 article,header,section{display:block;}
 h1{font-size:2em;}
@@ -138,17 +142,17 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
 
                             <header class="section__headings">
 
-                                <h1 class="section__heading section__heading___ce384">{{$school->name}}</h1>
+                                <h1 style="color: #{{$school->color->homepage_heading_subtitle}} !important;" class="section__heading section__heading___ce384">{{$school->name}}</h1>
 
 
-                                <h2 class="section__subheading section__subheading___ce384">{{$school->heading}}</h2>
+                                <h2 style="color: #{{$school->color->homepage_heading_subtitle}} !important;" class="section__subheading section__subheading___ce384">{{$school->heading}}</h2>
 
                             </header>
 
 
                             <section class="section__button-group">
 
-                                <a class="button button-primary" href="/register">Inscrivez-vous maintenant</a>
+                                <a style="border-color: #{{$school->color->buttons_links}}; background: #{{$school->color->buttons_links}};" class="button button-primary" href="/register">Inscrivez-vous maintenant</a>
 
 
                             </section>
@@ -205,7 +209,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                                                 @endif
                                                 @else
                                                 @if(count($course->projects) > 0)
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: 
+                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width:
                                                 {{number_format((count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}%;" aria-valuenow="0%"></div>
                                                 @endif
                                                 @endif

@@ -111,6 +111,8 @@ Route::resource('faqs', 'FaqController');
 
 Route::resource('drips', 'DripController');
 
+Route::resource('colors', 'ColorController');
+
 
 //for create school with subdoamin or attached domains
 Route::post('/storeSchoolBusiness', 'SchoolController@storeSchoolBusiness')->name('schools.storeBusiness');

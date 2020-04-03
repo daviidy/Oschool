@@ -28,6 +28,16 @@ class School extends Model
                            'domain'
                          ];
 
+     /**
+      * [users description]
+      * relationship one to one with Color model
+      * @return [array] [description]
+      */
+      public function color()
+      {
+          return $this->hasOne('App\Color');
+      }
+
     /**
      * [users description]
      * relationship many to many with User model
