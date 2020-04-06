@@ -426,8 +426,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                           </div>
                         <div class="col-sm-12 add-top-margin-25">
-                            {{-- <input type="text" name="bio" maxlength="100" placeholder="La bio de l'autheur"
-                              class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"> --}}
+                             <input type="text" name="headline" placeholder="Titre de l'auteur"
+                              class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
 
                           </div>
                           <br>

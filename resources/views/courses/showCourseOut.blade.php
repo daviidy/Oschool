@@ -619,9 +619,9 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                                           </div>
                                     </div>
                                 </a>
-                                <a class="AuthorName-sc-76j66q-0 izXbvw" href="/profile/view/4728896371032064">
+                                <a class="AuthorName-sc-76j66q-0 izXbvw" href="/authors/{{$course->author->id}}/show">
                                     @if($course->author->full_name)
-                                    {{$course->author->full_name}}
+                                    {{ucfirst($course->author->full_name)}}
                                     @endif
                                 </a>
                             </div>

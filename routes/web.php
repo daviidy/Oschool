@@ -373,6 +373,7 @@ Route::post('/monthlyPayments', 'AdminController@monthlyPayments');
 // for authors
 
 Route::get('/schoolAdmin/{school}/authors/{author}/edit', 'AuthorController@edit');
+Route::get('/authors/{author}/show', 'AuthorController@show');
 
 //Route::get('/schoolAdmin/{school}/authors', 'AuthorController@index');
 
