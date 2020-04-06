@@ -340,7 +340,7 @@ padding: 3px 18px!important;
                 </a>
                 @else
                 <a style="padding: 5px;" class="navbar-brand header-logo" href="{{ route('website.subdomain.home', ['subdomain' => $pricing->course->school->slug]) }}">
-                    <img width="50" src="/images/schools/logos/{{$pricing->course->school->logo}}" alt="logo" id="nhf">
+                    <img style="width: {{$school->color->logo_width}}%;" src="/images/schools/logos/{{$pricing->course->school->logo}}" alt="logo" id="nhf">
                 </a>
                 @endif
                 @else

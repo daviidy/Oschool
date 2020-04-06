@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\School;
 use Auth;
 use App\User;
+use App\Color;
 use App\Purchase;
 use App\Course;
 use App\Author;
@@ -79,6 +80,10 @@ class SchoolController extends Controller
         $slug = new SlugSchool();
         $school->slug = $slug->createSlug($request->name);
         $school->save();
+
+        $color = Color::create();
+
+        $color->school()->associate($school)->save();
 
        return redirect('home')->with('status', 'L\'école a bien été créée');
     }

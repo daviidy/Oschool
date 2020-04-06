@@ -1829,6 +1829,54 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             </div>
                         </div>
 
+                        <div class="col-sm-4">
+                            <div what="brand text" form="themeColorsForm" label="Body Text" for="brand_text" label-description="<body>, <p>">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_text" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Largeur du logo</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input type="number" style="border-radius: 5px;" required name="logo_width" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="{{$school->color->logo_width}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_text" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div ng-show="showButtonsBar" class="tab-bottom">
@@ -2231,6 +2279,55 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                             <div class="col-sm-8">
                                                 <div class="input-group">
                                                     <input style="border-radius: 5px;" required name="body_text" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_text" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div what="brand text" form="themeColorsForm" label="Body Text" for="brand_text" label-description="<body>, <p>">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_text" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Largeur du logo</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">&lt;body&gt;, &lt;p&gt;</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input type="number" style="border-radius: 5px;" required name="logo_width" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
                                                 </div>
                                             </div>
                                         </div>

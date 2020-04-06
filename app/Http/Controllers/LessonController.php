@@ -131,7 +131,8 @@ class LessonController extends Controller
                 //si la section de la lecon en question
                 //a été planifiée pour un nombre de jours après l'inscription
                 //de l'étudiant
-                if ($lesson->section->drip->days !== null) {
+
+                if ($lesson->section->drip && $lesson->section->drip->days !== null) {
 
                     //on va déterminer la date de disponibilité prévue
                     $day_availability = Carbon::parse($purchase->date)->addDays((int)$lesson->section->drip->days);
@@ -157,7 +158,7 @@ class LessonController extends Controller
 
                 //si la section de la lecon en question
                 //a été planifiée pour une date spécifique
-                if ($lesson->section->drip->date !== null) {
+                if ($lesson->section->drip && $lesson->section->drip->date !== null) {
 
                     //on va déterminer la date de disponibilité prévue
                     $day_availability = Carbon::parse($lesson->section->drip->date);

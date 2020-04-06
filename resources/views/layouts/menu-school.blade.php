@@ -678,7 +678,7 @@ img{display:block;}
                     </a>
                     @else
                     <a style="padding: 5px;" class="school-title navbar-brand" href="{{ route('website.subdomain.home', ['subdomain' => $school->slug]) }}">
-                        <img width="50" src="/images/schools/logos/{{$school->logo}}" alt="logo" id="nhf">
+                        <img style="width: {{$school->color->logo_width}}%;" src="/images/schools/logos/{{$school->logo}}" alt="logo" id="nhf">
                     </a>
                     @endif
                     @else

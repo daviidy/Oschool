@@ -595,7 +595,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 </div>
 @endif
 
-    <div class="PageSummary__Head-sc-19qsvz4-21 bVDUT" style="margin-top: 15rem;min-height: 800px;padding: 2rem;">
+    <div class="PageSummary__Head-sc-19qsvz4-21 bVDUT" style="margin-top: 5rem;min-height: 800px;padding: 12rem;">
     <div class="PageSummary__TopLeft-sc-19qsvz4-40 elHFLP">
         <div class="AuthorAndTitle-v6znyq-0 krbfLT">
             <h1 class="MuiTypography-root Typography-ngwq8z-0 Title-sc-1kew2f7-0 kWrPey MuiTypography-h1 MuiTypography-alignLeft" m="0,4,2,0">{{$course->name}}</h1>

@@ -14,7 +14,8 @@ class Color extends Model
                            'buttons_links',
                            'course_page_heading',
                            'body_text',
-                           'school_id'
+                           'school_id',
+                           'logo_width'
                          ];
 
 
