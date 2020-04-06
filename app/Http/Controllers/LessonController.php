@@ -8,7 +8,9 @@ use App\Course;
 use App\Section;
 use App\Quiz;
 use App\Question;
+use App\Purchase;
 use App\Option;
+use Carbon\Carbon;
 use Image;
 use Auth;
 use App\Media;
@@ -112,87 +114,165 @@ class LessonController extends Controller
      */
     public function showSlug($slugCourse, $slug)
     {
-        $course = Course::where('slug', $slugCourse)->firstOrFail();
-        $lesson = Lesson::where('slug', $slug)->where('course_id', $course->id)->firstOrFail();
-        //on cherche la prochaine lesson dans la meme section
-        $next_lesson = Lesson::where('course_id', $lesson->course_id)
-        ->where('section_id', $lesson->section_id)
-        ->where('status', 'active')
-        ->where('position', '>', $lesson->position)
-        ->orderBy('position', 'asc')
-        ->first();
+        if (Auth::check()) {
 
-        //si on atteint le max de lecons dans la section
-        if ($next_lesson === null) {
-            //on recupere la prochaine section
-            $next_section = Section::where('course_id', $lesson->course_id)
-            ->where('position', '>', $lesson->section->position)
+            $course = Course::where('slug', $slugCourse)->firstOrFail();
+            $lesson = Lesson::where('slug', $slug)->where('course_id', $course->id)->firstOrFail();
+            $today = Carbon::now();
+            $purchase = $lesson->section->course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')->first();
+            $days = Carbon::now();
+            $available = '';
+            $status = '';
+
+
+
+            //si le lecon n'est pas gratutie
+            if ($lesson->free_lesson == 'no') {
+                //si la section de la lecon en question
+                //a été planifiée pour un nombre de jours après l'inscription
+                //de l'étudiant
+                if ($lesson->section->drip->days !== null) {
+
+                    //on va déterminer la date de disponibilité prévue
+                    $day_availability = Carbon::parse($purchase->date)->addDays((int)$lesson->section->drip->days);
+
+                    //ensuite on va vérifier si la date prévue est aujourd'hui
+                    //ou parmi les jours précédents
+                    if ($day_availability == $today || $day_availability < $today) {
+                        //si oui on définit une variable available = 1
+                        //et on définit une variable days à 0
+                        $available = '1';
+                        $status = '1';
+                    }
+                    else {
+                        //sinon, on définit une variable available = 0
+                        //on calcule les jours restants et on met le
+                        //résultat dans la variable days
+                        $available = '0';
+                        $days = $day_availability->diffInDays($today);
+                        $status = '0';
+                    }
+                }
+
+
+                //si la section de la lecon en question
+                //a été planifiée pour une date spécifique
+                if ($lesson->section->drip->date !== null) {
+
+                    //on va déterminer la date de disponibilité prévue
+                    $day_availability = Carbon::parse($lesson->section->drip->date);
+
+                    //ensuite on va vérifier si la date prévue est aujourd'hui
+                    //ou parmi les jours précédents
+                    if ($day_availability == $today || $day_availability < $today) {
+                        //si oui on définit une variable available = 1
+                        //et on définit une variable days à 0
+                        $available = '1';
+                        $days = '0';
+                        $status = '1';
+                    }
+                    else {
+                        //sinon, on définit une variable available = 0
+                        //on calcule les jours restants et on met le
+                        //résultat dans la variable days
+                        $available = '0';
+                        $days = $lesson->section->drip->date;
+                        $status = '0';
+                    }
+                }
+
+            }
+
+            //on cherche la prochaine lesson dans la meme section
+            $next_lesson = Lesson::where('course_id', $lesson->course_id)
+            ->where('section_id', $lesson->section_id)
+            ->where('status', 'active')
+            ->where('position', '>', $lesson->position)
             ->orderBy('position', 'asc')
             ->first();
 
-            //dans le cas ou c'est la dernière lesson
-            //c'est a dire qu'il n'ya pas plus de section suivantes
-            if ($next_section === null) {
-                $next_lesson = $lesson;
-            }
-
-            else {
-                $next_lesson = Lesson::where('course_id', $lesson->course_id)
-                ->where('section_id', $next_section->id)
-                ->where('status', 'active')
+            //si on atteint le max de lecons dans la section
+            if ($next_lesson === null) {
+                //on recupere la prochaine section
+                $next_section = Section::where('course_id', $lesson->course_id)
+                ->where('position', '>', $lesson->section->position)
                 ->orderBy('position', 'asc')
                 ->first();
+
+                //dans le cas ou c'est la dernière lesson
+                //c'est a dire qu'il n'ya pas plus de section suivantes
+                if ($next_section === null) {
+                    $next_lesson = $lesson;
+                }
+
+                else {
+                    $next_lesson = Lesson::where('course_id', $lesson->course_id)
+                    ->where('section_id', $next_section->id)
+                    ->where('status', 'active')
+                    ->orderBy('position', 'asc')
+                    ->first();
+                }
+
+
             }
 
-
-        }
-
-        $previous_lesson = Lesson::where('course_id', $lesson->course_id)
-        ->where('section_id', $lesson->section_id)
-        ->where('status', 'active')
-        ->where('position', '<', $lesson->position)
-        ->orderBy('position', 'desc')
-        ->first();
-
-        //si on atteint le max de lecons dans la section
-        if ($previous_lesson === null) {
-            //on recupere la section précédente
-            $previous_section = Section::where('course_id', $lesson->course_id)
-            ->where('position', '<', $lesson->section->position)
+            $previous_lesson = Lesson::where('course_id', $lesson->course_id)
+            ->where('section_id', $lesson->section_id)
+            ->where('status', 'active')
+            ->where('position', '<', $lesson->position)
             ->orderBy('position', 'desc')
             ->first();
 
-            //dans le cas ou c'est la premiere lesson
-            if ($previous_section === null) {
+            //si on atteint le max de lecons dans la section
+            if ($previous_lesson === null) {
+                //on recupere la section précédente
+                $previous_section = Section::where('course_id', $lesson->course_id)
+                ->where('position', '<', $lesson->section->position)
+                ->orderBy('position', 'desc')
+                ->first();
+
+                //dans le cas ou c'est la premiere lesson
+                if ($previous_section === null) {
+                    $previous_lesson = $lesson;
+                }
+
+                else {
+                    $previous_lesson = Lesson::where('course_id', $lesson->course_id)
+                    ->where('section_id', $previous_section->id)
+                    ->where('status', 'active')
+                    ->orderBy('position', 'desc')
+                    ->first();
+                }
+
+
+            }
+
+            //si, malgré tout ça next ou previous sont null
+
+            if ($next_lesson === null) {
+                $next_lesson = $lesson;
+            }
+
+            if ($previous_lesson === null) {
                 $previous_lesson = $lesson;
             }
 
-            else {
-                $previous_lesson = Lesson::where('course_id', $lesson->course_id)
-                ->where('section_id', $previous_section->id)
-                ->where('status', 'active')
-                ->orderBy('position', 'desc')
-                ->first();
-            }
 
+            return view('lessons.show', ['lesson' => $lesson,
+                                         'next_lesson' => $next_lesson,
+                                         'previous_lesson' => $previous_lesson,
+                                         'days' => $days,
+                                         'available' => $available,
+                                         'status' => $status
+                                     ]);
 
         }
 
-        //si, malgré tout ça next ou previous sont null
-
-        if ($next_lesson === null) {
-            $next_lesson = $lesson;
-        }
-
-        if ($previous_lesson === null) {
-            $previous_lesson = $lesson;
+        else {
+            return redirect()->back()->with('status', 'Connectez-vous pour accéder à cette leçon');
         }
 
 
-        return view('lessons.show', ['lesson' => $lesson,
-                                     'next_lesson' => $next_lesson,
-                                     'previous_lesson' => $previous_lesson
-                                 ]);
     }
 
 

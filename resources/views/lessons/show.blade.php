@@ -168,6 +168,58 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
 }
 </style>
 
+<style media="screen">
+/*! CSS Used from: Embedded */
+.MuiTypography-root{margin:0;}
+.MuiTypography-h1{margin:16px;font-size:3.1875rem;text-align:center;font-family:"Nunito Sans", Verdana, Helvetica, sans-serif;font-weight:400;line-height:1.167;letter-spacing:-0.01562em;}
+@media (min-width:600px){
+.MuiTypography-h1{font-size:4.4987rem;}
+}
+@media (min-width:800px){
+.MuiTypography-h1{font-size:4.9272rem;}
+}
+@media (min-width:1025px){
+.MuiTypography-h1{font-size:5.3556rem;}
+}
+.MuiTypography-alignLeft{text-align:left;}
+/*! CSS Used from: https://www.educative.io/static/css/92.3705e7dd.chunk.css */
+h1{font-size:2em;margin:.67em 0;}
+svg:not(:root){overflow:hidden;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
+}
+*,:after,:before{box-sizing:border-box;}
+h1{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h1{margin-top:20px;margin-bottom:10px;}
+h1{font-size:36px;}
+::-ms-clear{display:none;}
+/*! CSS Used from: Embedded */
+.RLTEg{flex:0 1 700px;display:flex;flex-direction:column;justify-content:space-evenly;height:auto;z-index:1;}
+@media screen and (max-width: 480px){
+.RLTEg{margin:0px -118px 0px -21px;}
+}
+@media only screen and (min-width: 1024px){
+.RLTEg{flex:1 1 0%;flex-direction:row;-webkit-box-pack:justify;justify-content:space-between;max-width:850px;text-align:left;margin-bottom:70px;}
+}
+.ghvulQ{font-weight:600;margin-left:0px;}
+.kuacRj{font-weight:400;font-size:20px;color:rgb(0, 0, 0);letter-spacing:0px;margin:15px 35px 0px 0px;}
+@media only screen and (max-width: 480px){
+.kuacRj{padding-left:17px;width:300px;font-size:16px;}
+}
+@media only screen and (max-width: 780px) and (orientation: landscape){
+.kuacRj{width:550px;font-size:16px;}
+}
+@media only screen and (max-width: 480px){
+.fAJiCk .main-img{width:220px;margin-top:-30px;}
+}
+.ieGesu{margin-top:20px;}
+.dwPCQe{display:flex;flex-direction:column;}
+@media only screen and (max-width: 780px){
+.dwPCQe{-webkit-box-align:center;align-items:center;}
+}
+
+</style>
+
 
 <div class="course-sidebar lecture-page navbar-collapse navbar-sidebar-collapse collapse" id="courseSidebar" aria-expanded="false" style="height: 31px;">
   <h2 style="padding-bottom: 0px">Programme du cours</h2>
@@ -226,7 +278,7 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
               </span>
               <div class="title-container">
                 <span class="lecture-icon">
-                  <img width="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADbElEQVRoge2YTWhUVxTHf+fla2bMpDOogWknEcXQioJCA5G6sK6KliAuGpq2Qm0Rt9JNF6UQtAguXEjFgiJ2o5sWigq2ddOgCz8aXAhCFsHWZBKrVmcSk8lMJnnHRRI6efcleeObmUZ4Pxi479x7zz3/e9+de96FgICAgICA1xjx2nDfqdurC3ZdkmlttSx7na1Wi2XpW6rEQeMgMSAGhOa6hIvKOWCyqJxWJCNoBvQ5SEpVUiiD1MpgYTo39PtX7z33JaCnR62+2N0vBe0GOoCIV7FlIgvcRrl45fC75xBRt0auAj7quV+fj01eVvigoiF6Rn5NhHXvmUPtBWeN5dY8F5s8tnKCB9DdI1n5zq3GWIH3z/8Rio5F/0F5o/KBlcQYYRJXDrVni43GCjRmGrevwOABmiRHh9NoCLBgQ3XiKR1bZaPTZu4BkfVVieZVUJYXoD5X4Oi+NlpXh/24WBQR28MKoEk/g2xtbeLkJ5s4uLOFSEONH1cGghiT6yJAon4HqrGEzm3NnP18C53bmhHP5/3SKKx12gwBIqwqz3AQDdVycGcLJz7exDuJxnK4XIvqgukw94CWT8A8G5sjHO96m6/3bGBNtN6Pq/rd3w8scOB2EpddAMyemDva4pzev5nu7W9SV/Oq79WzhuKnqgmYJ1Rn0d2R4NRnm9nRFi+9fz4cKn52zYWqgQJT03bJ/aZWyYKErtalzQSzeX1FyBVsfrn7mJ//fERhxjVDXgqNrOkfKzZUTYACvf3P+PHGMOmskRV7Zfynrq6ZYoMhQIQJLXlilmbgSZYzvUP0Pxr35Udg1GkzBKgy4WuUItLZAhdvjnDt/r+UY1IUMk6byyukL0r4VHZlxlau3nvKhZsjZKdmlu/gneVXACTlZ4S+v0c5dz3FcDrnx81iPHQazD0AD/ys9pFLAz56L43AA6fNPAdU/6pYBH5xic0QYLuoXCm4xWYIGI+N30LMzbICGJOI3HEaDQG9B3blsDlbnZhK4gfnjQQskguFRsPfgP5W+Zg8czUR5lu3isX/8FWl82TfFyCf8v9dLd4S1QuXD7efL+lq0Y0PT9+L1+amkrYl61Q0KUgSm1YsOyZIbPaSlyZg/pO0gf9EZ4H8XPnF3C8NZEAzKjIkSgpkUGAwb+dTXi93AwICAgICXmteAqwlCST6n6m2AAAAAElFTkSuQmCC">
+                  <img width="30" src="https://ophi.org.uk/wp-content/uploads/Play-icon-transparent.png">
                 </span>
                 <span class="lecture-name">
                   {{$section_lesson->title ? $section_lesson->title : 'Nouvelle leçon'}}
@@ -244,7 +296,7 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
             </span>
             <div class="title-container">
               <span class="lecture-icon">
-                <img width="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADbElEQVRoge2YTWhUVxTHf+fla2bMpDOogWknEcXQioJCA5G6sK6KliAuGpq2Qm0Rt9JNF6UQtAguXEjFgiJ2o5sWigq2ddOgCz8aXAhCFsHWZBKrVmcSk8lMJnnHRRI6efcleeObmUZ4Pxi479x7zz3/e9+de96FgICAgICA1xjx2nDfqdurC3ZdkmlttSx7na1Wi2XpW6rEQeMgMSAGhOa6hIvKOWCyqJxWJCNoBvQ5SEpVUiiD1MpgYTo39PtX7z33JaCnR62+2N0vBe0GOoCIV7FlIgvcRrl45fC75xBRt0auAj7quV+fj01eVvigoiF6Rn5NhHXvmUPtBWeN5dY8F5s8tnKCB9DdI1n5zq3GWIH3z/8Rio5F/0F5o/KBlcQYYRJXDrVni43GCjRmGrevwOABmiRHh9NoCLBgQ3XiKR1bZaPTZu4BkfVVieZVUJYXoD5X4Oi+NlpXh/24WBQR28MKoEk/g2xtbeLkJ5s4uLOFSEONH1cGghiT6yJAon4HqrGEzm3NnP18C53bmhHP5/3SKKx12gwBIqwqz3AQDdVycGcLJz7exDuJxnK4XIvqgukw94CWT8A8G5sjHO96m6/3bGBNtN6Pq/rd3w8scOB2EpddAMyemDva4pzev5nu7W9SV/Oq79WzhuKnqgmYJ1Rn0d2R4NRnm9nRFi+9fz4cKn52zYWqgQJT03bJ/aZWyYKErtalzQSzeX1FyBVsfrn7mJ//fERhxjVDXgqNrOkfKzZUTYACvf3P+PHGMOmskRV7Zfynrq6ZYoMhQIQJLXlilmbgSZYzvUP0Pxr35Udg1GkzBKgy4WuUItLZAhdvjnDt/r+UY1IUMk6byyukL0r4VHZlxlau3nvKhZsjZKdmlu/gneVXACTlZ4S+v0c5dz3FcDrnx81iPHQazD0AD/ys9pFLAz56L43AA6fNPAdU/6pYBH5xic0QYLuoXCm4xWYIGI+N30LMzbICGJOI3HEaDQG9B3blsDlbnZhK4gfnjQQskguFRsPfgP5W+Zg8czUR5lu3isX/8FWl82TfFyCf8v9dLd4S1QuXD7efL+lq0Y0PT9+L1+amkrYl61Q0KUgSm1YsOyZIbPaSlyZg/pO0gf9EZ4H8XPnF3C8NZEAzKjIkSgpkUGAwb+dTXi93AwICAgICXmteAqwlCST6n6m2AAAAAElFTkSuQmCC">
+                <img width="30" src="https://ophi.org.uk/wp-content/uploads/Play-icon-transparent.png">
               </span>
               <span class="lecture-name">
                 {{$section_lesson->title ? $section_lesson->title : 'Nouvelle leçon'}}
@@ -273,10 +325,48 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
   <meta id="lecture-completion-data" data-last-lecture-id="10371330" data-last-lecture-url="/courses/532534/lectures/10371330" data-is-completed="true" data-can-access-lecture="true" data-compliance-enabled="false" data-valid-for-completion="true">
   <h2 id="lecture_heading" class="section-title" data-lecture-id="10371838" data-next-lecture-id="10385724" data-lecture-url="/courses/532534/lectures/10371838" data-next-lecture-url="/courses/532534/lectures/10385724" ,=""
     data-previous-lecture-url="" data-previous-lecture-id="">
-    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#4d90cc"><path d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667zM71.66667,118.25v-64.5l43,32.25z"></path></g></g></svg>
+    <img width="50" src="https://ophi.org.uk/wp-content/uploads/Play-icon-transparent.png" alt="">
     &nbsp;
     {{$lesson->title}}
   </h2>
+
+  @if($lesson->section->drip && $status == '0')
+
+
+
+  <div class="Title-m6u0oe-0 RLTEg">
+    <div class="LandingPageFeature__TitleText-sc-19d35qp-3 dwPCQe">
+        <h1 class="MuiTypography-root Typography-ngwq8z-0 Heading-sc-1jljnqo-0 ghvulQ MuiTypography-h1 MuiTypography-alignLeft" ml="0">
+            @if($lesson->section->drip->date)
+            Ce cours sera disponible le {{Carbon\Carbon::parse($lesson->section->drip->date)->format('d-m-Y')}}
+            @elseif($lesson->section->drip->days)
+            Ce cours sera disponible dans {{$days}} jours
+            @endif
+        </h1>
+        <div class="Tagline-sc-1p09yld-0 kuacRj">Un peu de patience ;)</div>
+    </div>
+    <div class="LandingPageFeature__MainImg-sc-19d35qp-2 ieGesu">
+            <img width="400" src="https://oschoolelearning.com/images/courses/logos/1580161319.png" alt="">
+    </div>
+</div>
+
+
+
+  @elseif($lesson->free_lesson == 'no' && !Auth::user()->courses->contains($lesson->section->course->id))
+  <div class="Title-m6u0oe-0 RLTEg">
+    <div class="LandingPageFeature__TitleText-sc-19d35qp-3 dwPCQe">
+        <h1 class="MuiTypography-root Typography-ngwq8z-0 Heading-sc-1jljnqo-0 ghvulQ MuiTypography-h1 MuiTypography-alignLeft" ml="0">
+            Veulliez vous inscrire à ce cours ppour suivre
+            cette leçon
+        </h1>
+        <div class="Tagline-sc-1p09yld-0 kuacRj">Un peu de patience ;)</div>
+    </div>
+    <div class="LandingPageFeature__MainImg-sc-19d35qp-2 ieGesu">
+            <img width="400" src="https://oschoolelearning.com/images/courses/logos/1580161319.png" alt="">
+    </div>
+</div>
+
+@else
 
   <!-- Attachment Blocks -->
 
@@ -309,30 +399,7 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
     <div class="attachment-data"></div>
 
     <div class="attachment-data"></div>
-    {{-- <div class="lecture-text-container">
-      <p></p>
-      <p>Most traders have their attention on one thing. When to enter and exit a trade, which is very important.</p>
-      <p>More important is each strategy individually and mastering each strategy. As you go through this course put your attention on each strategy individually and make sure you can apply it! </p>
-      <p>When you have <strong style="color: rgb(37, 129, 53);">COMPLETED</strong> the course, I want to give you the opportunity to get a <strong>FREE 1-on-1 WEBINAR training</strong> with myself or one of my top coaches. This will be a screen
-        sharing session where we focus directly on you and your progress. These&nbsp;visual hands on&nbsp;trainings have helped many students 10x their rate of learning and really boosted their confidence on the charts! </p>
-      <p>To enter to win this webinar you <strong>MUST BE 100% completed with the course</strong> and receive your certificate of completion.&nbsp;</p>
-      <p>Remember to <strong>click the blue “Complete and continue” button&nbsp;</strong>(below is a reference photo) as you complete each lecture so that when you are 100% done you get your certificate!</p>
-      <p><img data-imageloader="" data-imageloader-src="https://www.filepicker.io/api/file/xiYAGEoSqSqp9P7ogYFm" style="max-width: 100%;"
-          src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:1000/https://www.filepicker.io/api/file/xiYAGEoSqSqp9P7ogYFm" data-imageloader-current-size="1000" class="is-loaded"></p>
-      <p><strong style="color: rgb(185, 57, 54);">Here are the rules / instructions to enter: </strong></p>
-      <p>1. You have to be 100% complete with the course and receive your completion certificate!</p>
-      <p>2. You will need to fill out this form:</p>
-      <p><a href="https://thetradeacademy.wufoo.com/forms/win-a-free-1on1-webinar" target="_blank">https://thetradeacademy.wufoo.com/forms/win-a-free-1on1-webinar</a></p>
-      <p>3. You will need a laptop. Since this is a webinar training, we need to be able to share screens with you.</p>
-      <p>The winner will be notified via email or phone call weekly.</p>
-      <p>Best of luck to you!</p>
-      <p>Once you have read this lecture, go ahead and <strong>click the blue “Complete and continue” button </strong>and continue through the course!</p>
-      <p class="ql-align-center"><strong>CUSTOMER SUPPORT INFORMATION</strong></p>
-      <p>IF YOU HAVE ANY QUESTIONS ABOUT YOUR ACCOUNT PLEASE REACH OUT TO US.</p>
-      <p>For technical questions relating to trading email Leo at <a href="mailto:leo@thetradeacademy.com" target="_blank">leo@thetradeacademy.com</a></p>
-      <p>For account questions email our support team: happy@thetradeacademy.com</p>
-      <p></p>
-    </div> --}}
+
     <div class="lecture-text-container">
       <p></p>
       <p>{!!$lesson->full_text!!}</p>
@@ -347,6 +414,7 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects;}
   @include('includes.default.lessons_page.quiz')
   @endif
 
+  @endif
 
   <!-- Comments -->
 

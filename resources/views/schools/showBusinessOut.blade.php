@@ -114,12 +114,12 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
 
 
 .btn-primary, .btn-primary:active, .btn-primary:focus {
-    background: #4d90cc !important;
-    border: 1px solid #4d90cc !important;
+    background: #{{$school->color->buttons_links}} !important;
+    border: 1px solid #{{$school->color->buttons_links}} !important;
 }
 
 .btn-primary:hover, .btn-primary:active:hover, .btn-primary:focus:hover {
-    background: #6aace6 !important;
+    background: #{{$school->color->buttons_links}} !important;
     border: 1px solid #6aace6 !important;
     }
     body{
@@ -273,22 +273,22 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <center>
-                          <a class="btn btn-md btn-primary" href="/schools/{{$school->id}}/courses">Voir tous les cours</a>
+                          <a style="background: #{{$school->color->buttons_links}};" class="btn btn-md btn-primary" href="/schools/{{$school->id}}/courses">Voir tous les cours</a>
                         </center>
                     </div>
                 </div>
                 <br>
 
-                <!--div class="css-gl013y">
+                <div class="css-gl013y">
                     <div class="css-1ncomx8">
                         <h2 class="css-1ac5tn2">{{$school->heading}}</h2>
                         <div class="css-1npclfr">
                             <p>{!!$school->description!!}</p>
-                            <p><strong><a>{{$school->city}} {{$school->state}} {{$school->street}}</a></strong></p>
+                            <p><strong><a style="color: #{{$school->color->buttons_links}};">{{$school->city}} {{$school->state}} {{$school->street}}</a></strong></p>
                         </div>
                     </div>
                     <div class="css-3cg4xb"><img src="/images/schools/backgrounds/{{$school->background}}" alt="filesharing mobile + security badge" class="css-9whsf3"></div>
-                </div-->
+                </div
             </div>
 
 

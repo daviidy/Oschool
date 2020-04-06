@@ -65,7 +65,7 @@
     <meta name="csrf-token" content="HeqVIhV2BIM+5L/O9hmz4Xe/NArfgYeexyUKDpkq1FZYRcRUOb+xHcp5LOYHoG6857NlE68F2NuyvWcJIrSe1Q==">
     <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-31ff648fd5e6158c77c31e785844877b6666554feab422e57ca5a96aa5587b9e.css" data-turbolinks-track="true">
     <link
-      href="https://themes2.teachablecdn.com/themecss/production/base.css?_=d5b075d37bf7&amp;brand_course_heading=%23ffffff&amp;brand_heading=%23134361&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%23134361&amp;brand_secondary=%23ff3f20&amp;brand_text=%234d4d4d&amp;logged_out_homepage_background_image_overlay=0.5&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F5mHijVFBS4qf8vcfzak0"
+      href="/css/theme-school.css"
       rel="stylesheet" data-turbolinks-track="true">
     <title>@yield('title') | {{$school->user->isAdmin() ? 'Oschool' : $school->name}}</title>
     <meta property="og:title" content="Tous les cours de {{$school->name}} | Oschool">
@@ -568,13 +568,13 @@ img{display:block;}
     }
 
     .course-listing:hover .course-listing-title {
-    color: #4d90cc !important;
+    color: #{{$school->color->buttons_links}} !important;
     transition: all linear 0.1s;
     }
 
     .course-listing:hover {
         box-shadow: 0px 0px 0px 1px #4d90cc !important;
-        border: 1px solid #4d90cc !important;
+        border: 1px solid #{{$school->color->buttons_links}} !important;
         transition: all linear 0.1s;
     }
 
@@ -587,7 +587,7 @@ img{display:block;}
   }
 
   a:hover, a:active {
-    color: #4d90cc !important;
+    color: #{{$school->color->navbar_links}} !important;
 }
     </style>
 
@@ -627,6 +627,20 @@ img{display:block;}
     </style>
 
 
+    <style media="screen">
+    .fedora-navbar-link:hover {
+            background-color: #{{$school->color->navbar_footer}} !important;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: #{{$school->color->headings}} !important;
+        }
+        .nav.navbar-nav>li .fedora-navbar-link{
+            color: #{{$school->color->navbar_links}};
+        }
+    </style>
+
+
 </head>
 
 <body cz-shortcut-listen="true" >
@@ -645,7 +659,7 @@ img{display:block;}
         </div>
         @else
         <!-- Navbar -->
-        <div style="background: #{{$school->color->navbar_links}};" class="navbar navbar-fedora navbar-fixed-top is-at-top bs-docs-nav is-signed-in" id="navbar" role="navigation">
+        <div style="background: #{{$school->color->navbar_footer}};" class="navbar navbar-fedora navbar-fixed-top is-at-top bs-docs-nav is-signed-in" id="navbar" role="navigation">
             <div class="container">
                 <div class="navbar-header navbar-header-courses">
                     <button class="navbar-toggle" data-target=".navbar-header-collapse" data-toggle="collapse" type="button">
@@ -659,7 +673,7 @@ img{display:block;}
                     <!-- Site logo -->
                     @if($school->user->type3 == 'owner')
                      @if($school->logo == 'image.jpg')
-                    <a class="navbar__title" href="{{url('schools', $school)}}">
+                    <a class="navbar__title" href="{{ route('website.subdomain.home', ['subdomain' => $school->slug]) }}">
                       {{$school->name}}
                     </a>
                     @else
@@ -911,7 +925,7 @@ img{display:block;}
 
     @else
 
-    <footer style="background: #{{$school->color->navbar_links}}" class="">
+    <footer style="background: #{{$school->color->navbar_footer}}; color: #{{$school->color->body_text}};" class="">
         <div class="footer">
             <div class="footer__wrapper">
                 <div class="footer__inner">
@@ -938,9 +952,8 @@ img{display:block;}
                     -->
 
                         <li>
-
+                            <span class="powered-by-text">Créez votre plateforme de formation avec</span>
                             <a class="powered-by" href="https://oschoolelearning.com">
-                                <span class="powered-by-text">Créez votre plateforme de formation avec</span>
                                 <img src="/images/schools/logos/logo_oschool_blanc.png" />
                             </a>
 

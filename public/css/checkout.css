@@ -115,8 +115,8 @@ input[type=checkbox]:focus{outline:thin dotted;outline:5px auto -webkit-focus-ri
 .hidden{display:none!important;visibility:hidden!important;}
 }
 /*! CSS Used from: https://themes2.teachablecdn.com/themecss/production/base.css?_=0e34779b46fb&brand_course_heading=%23ffffff&brand_heading=%232b3636&brand_homepage_heading=%23ffffff&brand_navbar_fixed_text=%23ffffff&brand_navbar_text=%23ffffff&brand_primary=%23000000&brand_secondary=%2339719a&brand_text=%232b3636&logged_out_homepage_background_image_overlay=0.84&logged_out_homepage_background_image_url=https%3A%2F%2Fd2vvqscadf4c1f.cloudfront.net%2Fb7yh7DKMSKeGh9UPYbDI_CardSpring.jpg */
-.btn-primary,.btn-primary:active,.btn-primary:focus{background:#4d90cc!important;border:1px solid #4d90cc!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
-.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#6aace6!important;border:1px solid #6aace6!important;color:#fff;}
+.btn-primary,.btn-primary:active,.btn-primary:focus{background:#4d90cc;border:1px solid #4d90cc;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
+.btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#6aace6;border:1px solid #6aace6;color:#fff;}
 @media screen and (max-width: 767px){
 .btn-primary,.btn-primary:active,.btn-primary:focus{font-size:15px;}
 }

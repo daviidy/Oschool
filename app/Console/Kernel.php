@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         'App\Console\Commands\SendSubscriptionEmail',
+        'App\Console\Commands\SendSectionDrip',
 
     ];
 
@@ -28,6 +29,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
         $schedule->command('subscription:email')->dailyAt('13:00');
+        $schedule->command('section:drip')->dailyAt('00:00');
         //$schedule->command('subscription:email')->everyMinute();
     }
 

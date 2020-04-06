@@ -401,7 +401,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             @if(!$section->drip)
                             <p class="choices" style="color: black; cursor: default;">Publier <span id="{{$section->id}}" class="show-date-section" style="cursor: pointer;"> <strong>à une date spécifique</strong> </span> ou <span id="{{$section->id}}" class="show-days-section" style="cursor: pointer;"> <strong>à un nombre de jours après l'inscription</strong> </span>  </p>
                             @elseif($section->drip->date !== null)
-                            <p style="color: black; cursor: default;">Cette section sera publiée le<span> <strong>{{$section->drip->date}}</strong> </span>  </p>
+                            <p style="color: black; cursor: default;">Cette section sera publiée le<span> <strong>{{Carbon\Carbon::parse($section->drip->date)->format('d-m-Y')}}</strong> </span>  </p>
                             @elseif($section->drip->days !== null)
                             <p style="color: black; cursor: default;">Cette section sera publiée<span> <strong>{{$section->drip->days}}</strong> jours après inscription au cours </span>  </p>
                             @endif

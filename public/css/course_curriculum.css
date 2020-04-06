@@ -104,7 +104,7 @@ ul ul{margin-bottom:0;}
 }
 }
 /*! CSS Used from: https://themes.teachablecdn.com/themecss/production.css?_=56db37594f88&brand_course_heading=%23ffffff&brand_heading=%23000000&brand_homepage_heading=%23ffffff&brand_navbar_fixed_text=%23e3e3e3&brand_navbar_text=%23ffffff&brand_primary=%234d4d4d&brand_secondary=%230071bc&brand_text=%234d4d4d&font=Arial&logged_out_homepage_background_image_overlay=0.0&logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FU4pfmJMDQ9mzsRTQHFQ2 */
-.btn-primary,.btn-primary:active,.btn-primary:focus{background:#4d90cc!important;border:1px solid #4d90cc!important;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
+.btn-primary,.btn-primary:active,.btn-primary:focus{background:#4d90cc;border:1px solid #4d90cc;font-weight:600!important;outline:none!important;color:#fff;border-radius:20px;padding:3px 18px!important;}
 .btn-primary:hover,.btn-primary:active:hover,.btn-primary:focus:hover{outline:none!important;text-decoration:none;background:#4d90cc!important;border:1px solid #4d90cc!important;color:#fff;}
 @media screen and (max-width: 767px){
 .btn-primary,.btn-primary:active,.btn-primary:focus{font-size:15px;}

@@ -635,6 +635,8 @@ class SchoolController extends Controller
                   );
 
                      return back()->with('status', 'Votre message a bien été envoyé');
-                 }
-
         }
+
+
+
+}

@@ -93,6 +93,35 @@
 <script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
 </script>
 
+
+<style media="screen">
+.btn-primary:hover, .btn-primary:active:hover, .btn-primary:focus:hover {
+    outline: none !important;
+    text-decoration: none;
+    background: #{{$course->school->color->buttons_links}} !important;
+    border: 1px solid #{{$course->school->color->buttons_links}} !important;
+    color: #fff
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:focus {
+    outline: none !important;
+    text-decoration: none;
+    background: #{{$course->school->color->buttons_links}} !important;
+    border: 1px solid #{{$course->school->color->buttons_links}} !important;
+    color: #fff;
+}
+
+.course-sidebar .course-progress {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    margin-top: 10px !important;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: #{{$course->school->color->buttons_links}};
+}
+</style>
+
 </head>
 
 <body class="body-content-view" cz-shortcut-listen="true">
@@ -105,7 +134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Lecture Header -->
   <header class="full-width half-height is-signed-in">
     <div class="navbar navbar-fedora">
-      <div class="navbar-header">
+      <div style="background: #{{$course->school->color->navbar_footer}};" class="navbar-header">
         <div class="lecture-left">
         <a class="nav-icon-back" aria-label="Présentation de la leçon" href="/course/{{$course->slug}}">
             <i class="fa fa-angle-left" title="Présentation de la leçon"></i>

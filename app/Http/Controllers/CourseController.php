@@ -110,27 +110,64 @@ class CourseController extends Controller
     public function showSlug($slug)
     {
         $course = Course::where('slug', $slug)->firstOrFail();
+        $school = School::find($course->school_id);
+        //si l'utilisateur est connecté
+        //et n'est ni admin ni owner
         if (Auth::check() && !Auth::user()->isAdmin() && !Auth::user()->isOwner()) {
-            if ($course->type == 'mooc') {
-                //si user connecté et inscrit au cours
-                if (Auth::user()->courses->contains($course->id)) {
-                return view('courses.curriculum', ['course' => $course]);
+            //si le proprio de l'école
+            //est admin
+            if ($course->school->user->isAdmin()) {
+                if ($course->type == 'mooc') {
+                    //si user connecté et inscrit au cours
+                    if (Auth::user()->courses->contains($course->id)) {
+                    return view('courses.curriculum', ['course' => $course]);
+                    }
+                    else {
+                        return view('courses.show', ['course' => $course]);
+                    }
+                }
+                elseif ($course->type == 'path' || $course->type == 'bootcamp') {
+                    return view('paths.show', ['course' => $course]);
+                }
+            }
+            //sinon (proprio owner)
+            else {
+                if ($course->type == 'mooc') {
+                    //si user connecté et inscrit au cours
+                    if (Auth::user()->courses->contains($course->id)) {
+                    return view('courses.curriculum', ['course' => $course]);
+                    }
+                    else {
+                        return view('courses.showCourseOut', ['course' => $course, 'school' => $school]);
+                    }
+                }
+                elseif ($course->type == 'path' || $course->type == 'bootcamp') {
+                    return view('paths.show', ['course' => $course]);
+                }
+            }
+
+        }
+        //sinon (utilisateur pas connecté)
+        //ou utilisateur admin ou owner
+        else {
+            //si user est proprio
+            if ($course->school->user->isOwner()) {
+                if ($course->type == 'mooc') {
+                    return view('courses.showCourseOut', ['course' => $course, 'school' => $school]);
                 }
                 else {
-                    return view('courses.show', ['course' => $course]);
+                    return view('paths.show', ['course' => $course]);
                 }
             }
-            elseif ($course->type == 'path' || $course->type == 'bootcamp') {
-                return view('paths.show', ['course' => $course]);
-            }
-        }
-        else {
-            if ($course->type == 'mooc') {
-                return view('courses.show', ['course' => $course]);
-            }
             else {
-                return view('paths.show', ['course' => $course]);
+                if ($course->type == 'mooc') {
+                    return view('courses.show', ['course' => $course]);
+                }
+                else {
+                    return view('paths.show', ['course' => $course]);
+                }
             }
+
         }
 
 
@@ -398,7 +435,7 @@ class CourseController extends Controller
      }
 
 
-     
+
 
      /**
       * [certificates description]
@@ -473,6 +510,22 @@ class CourseController extends Controller
             return redirect()->back();
         }
      }
+
+
+
+     /*
+     for subdomin schools
+      */
+      //apercu ecole en mode visiteur
+      public function showCourseOut($course_id, Request $request)
+      {
+          $subdomain = $request->route('domain') ?? $request->route('subdomain');
+          $course = Course::find($course_id);
+          if (Auth::check() && Auth::user()->createSchools->contains($school->id)) {
+
+              return view('schools.showBusinessOut', ['school' => $school]);
+          }
+      }
 
 
 
