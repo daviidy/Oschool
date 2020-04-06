@@ -746,7 +746,7 @@ img{display:block;}
 
                             <li>
 
-                                <a class="fedora-navbar-link navbar-link" href="/home" target="">
+                                <a class="fedora-navbar-link navbar-link" href="/schools/{{$school->id}}/courses" target="">
                                     Tous les cours
                                 </a>
 

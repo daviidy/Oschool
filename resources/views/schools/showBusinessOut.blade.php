@@ -190,7 +190,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                         <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
                             <div class="row">
                                 <a href="{{ route('course.slug', $course->slug) }}" data-role="course-box-link">
-                                    <div class="col-lg-12">
+                                    <div style="width: 100%;" class="col-lg-12">
                                         <!-- Course Image, Name & Subtitle (everyone) -->
                                         <div class="course-box-image-container">
                                             <img class="course-box-image" src="/images/courses/logos/{{$course->logo}}" role="presentation">
@@ -201,7 +201,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                                         <!-- Progress bar (enrolled users) -->
                                         @auth
                                         @if(Auth::user()->courses->contains($course->id))
-                                        <div class="col-xs-12" aria-hidden="false">
+                                        <div style="width: 85%;" class="col-xs-12" aria-hidden="false">
                                             <div class="progressbar">
                                                 @if($course->type == 'mooc')
                                                 @if(count($course->lessons) > 0)
@@ -279,16 +279,22 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                 </div>
                 <br>
 
-                <div class="css-gl013y">
-                    <div class="css-1ncomx8">
-                        <h2 class="css-1ac5tn2">{{$school->heading}}</h2>
-                        <div class="css-1npclfr">
-                            <p>{!!$school->description!!}</p>
-                            <p><strong><a style="color: #{{$school->color->buttons_links}};">{{$school->city}} {{$school->state}} {{$school->street}}</a></strong></p>
-                        </div>
-                    </div>
-                    <div class="css-3cg4xb"><img src="/images/schools/backgrounds/{{$school->background}}" alt="filesharing mobile + security badge" class="css-9whsf3"></div>
-                </div
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+
+                                    <div class="css-gl013y">
+                                        <div class="css-1ncomx8">
+                                            <h2 class="css-1ac5tn2">{{$school->heading}}</h2>
+                                            <div class="css-1npclfr">
+                                                <p>{!!$school->description!!}</p>
+                                                <p><strong><a style="color: #{{$school->color->buttons_links}};">{{$school->city}} {{$school->state}} {{$school->street}}</a></strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="css-3cg4xb"><img src="/images/schools/backgrounds/{{$school->background}}" alt="filesharing mobile + security badge" class="css-9whsf3"></div>
+                                    </div>
+                                </div>
+                </div>
+
             </div>
 
 
