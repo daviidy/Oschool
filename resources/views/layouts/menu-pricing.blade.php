@@ -339,7 +339,7 @@ padding: 3px 18px!important;
                   {{$pricing->course->school->name}}
                 </a>
                 @else
-                <a style="padding: 5px;" class="navbar-brand header-logo" href="{{ route('website.subdomain.home', ['subdomain' => $pricing->course->school->slug]) }}">
+                <a style="width: 20%; padding: 5px;" class="navbar-brand header-logo" href="{{ route('website.subdomain.home', ['subdomain' => $pricing->course->school->slug]) }}">
                     <img style="width: {{$school->color->logo_width}}%;" src="/images/schools/logos/{{$pricing->course->school->logo}}" alt="logo" id="nhf">
                 </a>
                 @endif
