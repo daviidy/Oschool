@@ -352,11 +352,11 @@ h1{font-size:36px;}
 
 
 
-  @elseif($lesson->free_lesson == 'no' && !Auth::user()->courses->contains($lesson->section->course->id))
+  @elseif($lesson->free_lesson == 'no' && !Auth::user()->courses->contains($lesson->section->course->id) && !$lesson->section->course->school->user->isOwner())
   <div class="Title-m6u0oe-0 RLTEg">
     <div class="LandingPageFeature__TitleText-sc-19d35qp-3 dwPCQe">
         <h1 class="MuiTypography-root Typography-ngwq8z-0 Heading-sc-1jljnqo-0 ghvulQ MuiTypography-h1 MuiTypography-alignLeft" ml="0">
-            Veulliez vous inscrire à ce cours ppour suivre
+            Veullez vous inscrire à ce cours pour suivre
             cette leçon
         </h1>
         <div class="Tagline-sc-1p09yld-0 kuacRj">Un peu de patience ;)</div>
