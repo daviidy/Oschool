@@ -667,15 +667,11 @@ class SchoolController extends Controller
                          try {
                          $curl = curl_init();
                          $postfield = '';
-                         $header = array(
-                            'Authorization: Basic '. base64_encode("fQKw5VK0TZ6QmBJ3a5DeQ:j8C02JtK3DcEZ4j7DNnaCjul2jq27Tc6")
-                        );
                          foreach ($params as $index => $value) {
                          $postfield .= $index . '=' . $value . "&";
                          }
                          $postfield = substr($postfield, 0, -1);
                          curl_setopt_array($curl, array(
-                         CURLOPT_HTTPHEADER => $header,
                          CURLOPT_URL => $url,
                          CURLOPT_RETURNTRANSFER => true,
                          CURLOPT_ENCODING => "",
@@ -688,6 +684,7 @@ class SchoolController extends Controller
                          CURLOPT_HTTPHEADER => array(
                          "cache-control: no-cache",
                          "content-type: application/x-www-form-urlencoded",
+                         'Authorization: Basic '. base64_encode("fQKw5VK0TZ6QmBJ3a5DeQ:j8C02JtK3DcEZ4j7DNnaCjul2jq27Tc6"),
                          ),
                          ));
                          $response = curl_exec($curl);
