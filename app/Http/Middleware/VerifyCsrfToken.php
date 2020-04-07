@@ -23,7 +23,7 @@ class VerifyCsrfToken extends Middleware
         '/deleteSchool',
         '/updateSchool',
         '/notify',
-        '/thank-you'
+        '/thank-you',
         '/redirect',
     ];
 }
