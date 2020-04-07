@@ -654,6 +654,73 @@ class SchoolController extends Controller
 
         public function callback(Request $request)
         {
+
+            function getZoomToken(Request $request)
+            {
+                //si user est connecté on fait l'api call
+                //vers zoom pour récuperer le token
+                if (Auth::check()) {
+
+
+                    function postData($params, $url)
+                        {
+                         try {
+                         $curl = curl_init();
+                         $postfield = '';
+                         foreach ($params as $index => $value) {
+                         $postfield .= $index . '=' . $value . "&";
+                         }
+                         $postfield = substr($postfield, 0, -1);
+                         curl_setopt_array($curl, array(
+                         CURLOPT_URL => $url,
+                         CURLOPT_RETURNTRANSFER => true,
+                         CURLOPT_ENCODING => "",
+                         CURLOPT_MAXREDIRS => 10,
+                         CURLOPT_TIMEOUT => 45,
+                         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                         CURLOPT_CUSTOMREQUEST => "POST",
+                         CURLOPT_POSTFIELDS => $postfield,
+                         CURLOPT_SSL_VERIFYPEER => false,
+                         CURLOPT_HTTPHEADER => array(
+                         "cache-control: no-cache",
+                         "content-type: application/x-www-form-urlencoded",
+                         ),
+                         ));
+                         $response = curl_exec($curl);
+                         $err = curl_error($curl);
+                         curl_close($curl);
+                         if ($err) {
+                         throw new Exception("cURL Error #:" . $err);
+                         return $err;
+                         } else {
+                         return $response;
+                         }
+                         } catch (Exception $e) {
+                         throw new Exception($e);
+                         }
+                        }
+                      $params = array('grant_type' => 'authorization_code',
+                                      'code' => $reques['code'],
+                                      'redirect_uri' => '/callback',
+                                      );
+                      $url = "https://zoom.us/oauth/token";
+                      //Appel de fonction postData()
+                      $resultat = postData($params, $url) ;
+                      $signature = json_decode($resultat, true);
+
+
+                      /*
+                      Session::put('trans_id', $temps);
+
+                      */
+
+                }
+
+
+
+            }//fin getZoomToken
+
+
             if ($request->has('code')) {
                 getZoomToken($request['code']);
             }
@@ -661,76 +728,9 @@ class SchoolController extends Controller
                 Session::put('token', $request['access_token']);
                 return view('schools.integrations', ['school' => $school]);
             }
-        }
-
-
-
-
-
-        public function getZoomToken(Request $request)
-        {
-            //si user est connecté on fait l'api call
-            //vers zoom pour récuperer le token
-            if (Auth::check()) {
-
-
-                function postData($params, $url)
-                    {
-                     try {
-                     $curl = curl_init();
-                     $postfield = '';
-                     foreach ($params as $index => $value) {
-                     $postfield .= $index . '=' . $value . "&";
-                     }
-                     $postfield = substr($postfield, 0, -1);
-                     curl_setopt_array($curl, array(
-                     CURLOPT_URL => $url,
-                     CURLOPT_RETURNTRANSFER => true,
-                     CURLOPT_ENCODING => "",
-                     CURLOPT_MAXREDIRS => 10,
-                     CURLOPT_TIMEOUT => 45,
-                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                     CURLOPT_CUSTOMREQUEST => "POST",
-                     CURLOPT_POSTFIELDS => $postfield,
-                     CURLOPT_SSL_VERIFYPEER => false,
-                     CURLOPT_HTTPHEADER => array(
-                     "cache-control: no-cache",
-                     "content-type: application/x-www-form-urlencoded",
-                     ),
-                     ));
-                     $response = curl_exec($curl);
-                     $err = curl_error($curl);
-                     curl_close($curl);
-                     if ($err) {
-                     throw new Exception("cURL Error #:" . $err);
-                     return $err;
-                     } else {
-                     return $response;
-                     }
-                     } catch (Exception $e) {
-                     throw new Exception($e);
-                     }
-                    }
-                  $params = array('grant_type' => 'authorization_code',
-                                  'code' => $reques['code'],
-                                  'redirect_uri' => '/callback',
-                                  );
-                  $url = "https://zoom.us/oauth/token";
-                  //Appel de fonction postData()
-                  $resultat = postData($params, $url) ;
-                  $signature = json_decode($resultat, true);
-
-
-                  /*
-                  Session::put('trans_id', $temps);
-
-                  */
-
-            }
-
-
 
         }
+
 
 
 
