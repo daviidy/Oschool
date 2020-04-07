@@ -700,7 +700,7 @@ class SchoolController extends Controller
                          }
                         }
                       $params = array('grant_type' => 'authorization_code',
-                                      'code' => $reques['code'],
+                                      'code' => $request,
                                       'redirect_uri' => 'https://oschoolelearning.com/callback',
                                       );
                       $url = "https://zoom.us/oauth/token";
