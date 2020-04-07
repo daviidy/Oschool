@@ -641,6 +641,23 @@ img{display:block;}
     </style>
 
 
+    <style media="screen">
+    @media all and (max-width: 768px){
+
+        .course-box-image-container{
+            width: 111%;
+        }
+        .course-listing{
+            width: 88%;
+        }
+        .section__button-group{
+            width: 50%;
+        }
+
+    }
+    </style>
+
+
 </head>
 
 <body cz-shortcut-listen="true" >
