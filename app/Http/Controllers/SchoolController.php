@@ -655,7 +655,7 @@ class SchoolController extends Controller
         public function callback(Request $request)
         {
 
-            function getZoomToken(Request $request)
+            function getZoomToken($request)
             {
                 //si user est connecté on fait l'api call
                 //vers zoom pour récuperer le token
