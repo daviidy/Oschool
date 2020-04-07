@@ -429,7 +429,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <div style="background-image: url(https://www.pngitem.com/pimgs/m/403-4037306_zoom-meeting-icon-png-transparent-png-zoom-meeting.png)" class="tch-course-listing-image"></div>
                         <div what="course name" ng-bind="::course.name" class="tch-course-listing-title _2kIOe">
                             Intégration ZOOM <br>
-                            <a target="_blank" href="https://zoom.us/oauth/authorize?response_type=code&client_id=fQKw5VK0TZ6QmBJ3a5DeQ&redirect_uri=https://oschoolelearning.com/callback?state="{{$school->id}}>
+                            <a target="_blank" href="https://zoom.us/oauth/authorize?response_type=code&client_id=fQKw5VK0TZ6QmBJ3a5DeQ&redirect_uri=https://oschoolelearning.com/callback?state={{$school->id}}">
                             <p class="choices" style="color: black; cursor: default;"><span style="cursor: pointer;"> <strong>Cliquez ici pour autoriser l' application</strong> </span></p>
                             </a>
                         </div>
