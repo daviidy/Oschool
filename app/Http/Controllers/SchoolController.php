@@ -730,7 +730,9 @@ class SchoolController extends Controller
 
 
             if ($request->has('code')) {
-                getZoomToken($request['code']);
+                //getZoomToken($request['code']);
+                Session::put('code', $request['code']);
+                return view('schools.integrations', ['school' => $school]);
             }
             elseif ($request->has('access_token')) {
                 Session::put('token', $request['access_token']);
