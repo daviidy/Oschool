@@ -350,7 +350,7 @@ Route::get('/thank-you', 'PurchaseController@thankYou');
 Route::get('/schoolAdmin/{school}/integrations', 'SchoolController@integrations')->name('notify');
 
 //api zoom
-Route::post('/redirect', 'SchoolController@redirect')->name('notify');
+Route::post('/callback', 'SchoolController@callback')->name('notify');
 
 
 

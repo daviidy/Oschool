@@ -104,7 +104,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                     @foreach($author->courses as $course)
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
-                            <div style="width: 100%;" class="row">
+                            <div style="width: 109%;" class="row">
                                 <a href="{{ route('course.slug', $course->slug) }}" data-role="course-box-link">
                                     <div class="col-lg-12">
                                         <!-- Course Image, Name & Subtitle (everyone) -->

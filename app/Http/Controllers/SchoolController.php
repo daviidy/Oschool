@@ -652,10 +652,22 @@ class SchoolController extends Controller
         }
 
 
+        public function callback(Resquest $request)
+        {
+            if ($request->has('code')) {
+                getZoomToken($request['code']);
+            }
+            elseif ($request->has('access_token')) {
+                Session::put('token', $request['access_token']);
+                return view('schools.integrations', ['school' => $school]);
+            }
+        }
 
 
 
-        public function redirect(Request $request)
+
+
+        public function getZoomToken(Request $request)
         {
             //si user est connecté on fait l'api call
             //vers zoom pour récuperer le token
@@ -699,21 +711,11 @@ class SchoolController extends Controller
                      throw new Exception($e);
                      }
                     }
-                    $time = Carbon::now();
-                    $temps = date("YmdHis");
-                  $params = array('cpm_amount' => $price,
-                                  'cpm_currency' => 'CFA',
-                                  'cpm_site_id' => '113043',
-                                  'cpm_trans_id' => $temps,
-                                  'cpm_trans_date' => $time,
-                                  'cpm_payment_config' => 'SINGLE',
-                                  'cpm_page_action' => 'PAYMENT',
-                                  'cpm_version' => 'V1',
-                                  'cpm_language' => 'fr',
-                                  'cpm_designation' => 'Abonnement à la formation '.$pricing->course->name,
-                                  'apikey' => '134714631658c289ed716950.86091611',
+                  $params = array('grant_type' => 'authorization_code',
+                                  'code' => $reques['code'],
+                                  'redirect_uri' => '/callback',
                                   );
-                  $url = "https://api.cinetpay.com/v1/?method=getSignatureByPost";
+                  $url = "https://zoom.us/oauth/token";
                   //Appel de fonction postData()
                   $resultat = postData($params, $url) ;
                   $signature = json_decode($resultat, true);
@@ -723,33 +725,9 @@ class SchoolController extends Controller
                   Session::put('trans_id', $temps);
 
                   */
-                  Session::put('signature', str_replace('"',"",$resultat));
 
-                  //on crée l'achat qui aura un status en cours par défaut
-                  $purchase=Purchase::create([
-                                    'price' => $price,
-                                    'trans_id' => $temps,
-                                    'signature' => str_replace('"',"",$resultat),
-                                    'date' => Carbon::now(),
-                                    'user_id' => Auth::user()->id,
-                                    'pricing_id' => $pricing->id,
-                                    'course_id' => $pricing->course_id,
-                                  ]);
-
-                  return view('pricings.show',['signature' => str_replace('"',"",$resultat),
-                                               'temps' => $temps,
-                                               'time' => $time,
-                                               'purchase' => $purchase,
-                                               'pricing' => $pricing,
-                                             ]);
             }
 
-            //si user est pas connecté on redirige directement
-            //vers la page de pricings show
-
-            else {
-                return view('pricings.show',['pricing' => $pricing,]);
-            }
 
 
         }

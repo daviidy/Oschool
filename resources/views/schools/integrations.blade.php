@@ -377,6 +377,17 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
     @include('includes.status')
 
+    @if(session('access_token'))
+    <div class="card-body">
+
+      <div class="status alert alert-success" role="alert">
+          {{session('access_token')}}
+      </div>
+
+
+    </div>
+    @endif
+
     <div ng-if="courses.length > 0">
     <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
         <div class="course-list__header">
@@ -396,7 +407,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <div style="background-image: url(https://www.pngitem.com/pimgs/m/403-4037306_zoom-meeting-icon-png-transparent-png-zoom-meeting.png)" class="tch-course-listing-image"></div>
                         <div what="course name" ng-bind="::course.name" class="tch-course-listing-title _2kIOe">
                             Intégration ZOOM <br>
-                            <a target="_blank" href="https://zoom.us/oauth/authorize?response_type=code&client_id=fQKw5VK0TZ6QmBJ3a5DeQ&redirect_uri=https://oschoolelearning.com/home">
+                            <a target="_blank" href="https://zoom.us/oauth/authorize?client_id=6IC_DR98Tbi0raaOvGRAvA&response_type=code&redirect_uri=https%3A%2F%2Foschoolelearning.com%2Fcallback">
                             <p class="choices" style="color: black; cursor: default;"><span style="cursor: pointer;"> <strong>Cliquez ici pour autoriser l' application</strong> </span></p>
                             </a>
                         </div>
