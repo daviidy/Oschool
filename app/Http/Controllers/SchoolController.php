@@ -652,7 +652,7 @@ class SchoolController extends Controller
         }
 
 
-        public function callback(Resquest $request)
+        public function callback(Request $request)
         {
             if ($request->has('code')) {
                 getZoomToken($request['code']);
