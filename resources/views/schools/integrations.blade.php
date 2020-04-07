@@ -388,6 +388,17 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
     @endif
 
+    @if(session('error'))
+    <div class="card-body">
+
+      <div class="status alert alert-success" role="alert">
+          {{session('error')}}
+      </div>
+
+
+    </div>
+    @endif
+
     <div ng-if="courses.length > 0">
     <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
         <div class="course-list__header">

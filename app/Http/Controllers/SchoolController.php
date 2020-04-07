@@ -715,7 +715,11 @@ class SchoolController extends Controller
                       */
 
                      Session::put('token', $json['access_token']);
-                     return view('schools.integrations', ['school' => $school]);
+                     if ($json['error']) {
+                         Session::put('error', $json['error']);
+                         return view('schools.integrations', ['school' => $school]);
+                     }
+
 
                 }
 
