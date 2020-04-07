@@ -32,6 +32,15 @@ class HomeController extends Controller
         return view('users.dashboard');
     }
 
+    public function redirect(){
+        if ($request['code']) {
+            return reirect('home');
+        }
+        else {
+            return view('home');
+        }
+    }
+
 
 
 
