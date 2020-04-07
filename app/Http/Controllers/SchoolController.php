@@ -655,11 +655,10 @@ class SchoolController extends Controller
         public function callback(Request $request)
         {
 
-            function getZoomToken($request)
+            function getZoomToken($code, $state)
             {
                 //si user est connecté on fait l'api call
                 //vers zoom pour récuperer le token
-                if (Auth::check()) {
 
 
                     function postData($params, $url)
@@ -684,7 +683,7 @@ class SchoolController extends Controller
                          CURLOPT_HTTPHEADER => array(
                          "cache-control: no-cache",
                          "content-type: application/x-www-form-urlencoded",
-                         'Authorization: Basic '. base64_encode("fQKw5VK0TZ6QmBJ3a5DeQ:j8C02JtK3DcEZ4j7DNnaCjul2jq27Tc6"),
+                         "Authorization: Basic ". base64_encode("fQKw5VK0TZ6QmBJ3a5DeQ:j8C02JtK3DcEZ4j7DNnaCjul2jq27Tc6"),
                          ),
                          ));
                          $response = curl_exec($curl);
@@ -701,7 +700,7 @@ class SchoolController extends Controller
                          }
                         }
                       $params = array('grant_type' => 'authorization_code',
-                                      'code' => $request,
+                                      'code' => $code,
                                       'redirect_uri' => 'https://oschoolelearning.com/callback',
                                       );
                       $url = "https://zoom.us/oauth/token";
@@ -716,23 +715,20 @@ class SchoolController extends Controller
                       */
 
                      Session::put('token', $json['access_token']);
-                     if ($json['error']) {
-                         Session::put('error', $json['error']);
-                         return view('schools.integrations', ['school' => $school]);
-                     }
 
+                     $school = School::find($state);
 
-                }
+					return view('schools.integrations', ['school' => $school]);
 
 
 
             }//fin getZoomToken
 
 
-            if ($request->has('code')) {
-                //getZoomToken($request['code']);
-                Session::put('code', $request['code']);
-                return view('schools.integrations', ['school' => $school]);
+            if ($request->has('code') && $request->has('state')) {
+                getZoomToken($request['code'], $request['state']);
+                //Session::put('code', $request['code']);
+                //return view('schools.integrations', ['school' => $school]);
             }
             elseif ($request->has('access_token')) {
                 Session::put('token', $request['access_token']);
