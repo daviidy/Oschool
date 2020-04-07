@@ -38,7 +38,9 @@ Route::post('/submit_contact_business', 'SchoolController@contactSubDomain')->na
 
 
 
-Route::get('/', 'HomeController@redirect');
+Route::get('/', function () {
+    return view('home');
+});
 
 
 Route::get('/wecash', function () {
