@@ -24,5 +24,6 @@ class VerifyCsrfToken extends Middleware
         '/updateSchool',
         '/notify',
         '/thank-you'
+        '/redirect',
     ];
 }

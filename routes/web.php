@@ -347,6 +347,12 @@ Route::post('renew', 'PurchaseController@renew');
 Route::post('/thank-you', 'PurchaseController@thankYou');
 Route::get('/thank-you', 'PurchaseController@thankYou');
 
+Route::get('/schoolAdmin/{school}/integrations', 'SchoolController@integrations')->name('notify');
+
+//api zoom
+Route::get('/redirect', 'SchoolController@redirect')->name('notify');
+
+
 
 //make user subscribe for free
 Route::post('/subscribeForFree', 'PurchaseController@subscribeForFree');
