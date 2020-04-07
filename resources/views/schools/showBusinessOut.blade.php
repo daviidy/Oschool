@@ -188,9 +188,9 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                     @if($course->state == 'active')
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
-                            <div class="row">
+                            <div style="width: 100%;" class="row">
                                 <a href="{{ route('course.slug', $course->slug) }}" data-role="course-box-link">
-                                    <div style="width: 100%;" class="col-lg-12">
+                                    <div class="col-lg-12">
                                         <!-- Course Image, Name & Subtitle (everyone) -->
                                         <div class="course-box-image-container">
                                             <img class="course-box-image" src="/images/courses/logos/{{$course->logo}}" role="presentation">
