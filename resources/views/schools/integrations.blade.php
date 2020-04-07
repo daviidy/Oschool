@@ -377,11 +377,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
     @include('includes.status')
 
-    @if(session('access_token'))
+    @if(session('token'))
     <div class="card-body">
 
       <div class="status alert alert-success" role="alert">
-          {{session('access_token')}}
+          {{session('token')}}
       </div>
 
 

@@ -701,18 +701,21 @@ class SchoolController extends Controller
                         }
                       $params = array('grant_type' => 'authorization_code',
                                       'code' => $reques['code'],
-                                      'redirect_uri' => '/callback',
+                                      'redirect_uri' => 'https://oschoolelearning.com/callback',
                                       );
                       $url = "https://zoom.us/oauth/token";
                       //Appel de fonction postData()
                       $resultat = postData($params, $url) ;
-                      $signature = json_decode($resultat, true);
+                      $json = json_decode($resultat, true);
 
 
                       /*
                       Session::put('trans_id', $temps);
 
                       */
+
+                     Session::put('token', $json['access_token']);
+                     return view('schools.integrations', ['school' => $school]);
 
                 }
 
