@@ -34,7 +34,7 @@ class HomeController extends Controller
 
     public function redirect(){
         if ($request['code']) {
-            return reirect('home');
+            return redirect('home');
         }
         else {
             return view('home');
