@@ -679,7 +679,7 @@ class SchoolController extends Controller
                          CURLOPT_POSTFIELDS => $postfield,
                          CURLOPT_SSL_VERIFYPEER => true,
                          CURLOPT_HTTPHEADER => array(
-                         "Authorization: Basic ". base64_encode("fQKw5VK0TZ6QmBJ3a5DeQ:j8C02JtK3DcEZ4j7DNnaCjul2jq27Tc6"),
+                         "Authorization: Basic ". base64_encode("IMCA3UZyQISOyBdKQR3oeA:qyANCnjRxNsoaUmpCtzfWXYn9Y8jS6Ju"),
                          ),
                          ));
                          $response = curl_exec($curl);
@@ -734,7 +734,7 @@ class SchoolController extends Controller
                          CURLOPT_MAXREDIRS => 10,
                          CURLOPT_TIMEOUT => 45,
                          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                         CURLOPT_CUSTOMREQUEST => "POST",
+                         CURLOPT_CUSTOMREQUEST => "GET",
                          CURLOPT_POSTFIELDS => $postfield,
                          CURLOPT_SSL_VERIFYPEER => true,
                          CURLOPT_HTTPHEADER => array(
