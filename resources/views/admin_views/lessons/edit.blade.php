@@ -1197,6 +1197,9 @@ ul.tch-arrow-list li{background:url("//assets.teachablecdn.com/admin/assets/imag
 
 </style>
 
+
+<!--pour actions classes-->
+
 <style media="screen">
 /*! CSS Used from: Embedded */
 .MuiTypography-root{margin:0;}
@@ -1231,7 +1234,7 @@ h4{font-size:18px;}
 /*! CSS Used from: Embedded */
 a{color:inherit;transition:color 0.2s ease 0s;}
 a:hover{color:inherit;border-bottom:none;text-decoration:none;}
-.hqqZXZ{display:flex;width:100%;height:100%;}
+.hqqZXZ{display:flex;width:100%;height:58%;}
 .fUQatb{display:flex;flex:1 1 0%;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;flex-direction:column;height:180px;margin:10px;border-radius:4px;box-shadow:rgba(0, 0, 0, 0.1) 0px 0px 7px;transition:all 0.4s ease 0s;cursor:pointer;}
 .fUQatb:hover{box-shadow:rgba(0, 0, 0, 0.1) 1px 2px 12px;border-bottom:none;transform:translateY(-5px);}
 @media (max-width: 480px){
@@ -1796,7 +1799,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                   stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg></div>
         <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Voir la liste des meetings</h4>
-    </a><a class="styles__CategoryButton-vgii8s-4 fUQatb" href="/categories/prepare-for-interview">
+    </a><a target="_blank" class="styles__CategoryButton-vgii8s-4 fUQatb" href="/course/{{$course->slug}}/lessons/{{$lesson->slug}}">
         <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="162" height="145" viewBox="0 0 162 145" fill="none">
                 <path d="M21 21L25.5 9L38.5 2H115L127 7L135.5 19V138L106 116H39.5L27 110.5L21 96.5V21Z" fill="#F8F8FF"></path>
                 <path
@@ -1824,10 +1827,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <p>Lien de la réunion: <a href="{{$json['join_url']}}">{{$json['join_url']}}</a></p><br>
                         <p>Date et durée: {{$json['start_time']}} / {{$json['duration']}} </p><br>
                         <p>ID de l'hôte: {{$json['host_id']}}</p>
-
-                        <a href="/associateMeeting/{{$lesson->id}}/{{$json['id']}}" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
-                            Associer cette conférence à la leçon {{$lesson->title}}
-                        </a>
                     </div>
                     <div class="date-days tch-course-listing-title _2kIOe">
 

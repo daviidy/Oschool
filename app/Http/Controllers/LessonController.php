@@ -260,6 +260,61 @@ class LessonController extends Controller
                 $previous_lesson = $lesson;
             }
 
+            if ($lesson->webinar_meeting !== null) {
+                function postData($params, $url){
+                     try {
+                     $curl = curl_init();
+                     $postfield = '';
+                     foreach ($params as $index => $value) {
+                     $postfield .= $index . '=' . $value . "&";
+                     }
+                     $postfield = substr($postfield, 0, -1);
+                     curl_setopt_array($curl, array(
+                     CURLOPT_URL => $url,
+                     CURLOPT_RETURNTRANSFER => true,
+                     CURLOPT_ENCODING => "",
+                     CURLOPT_MAXREDIRS => 10,
+                     CURLOPT_TIMEOUT => 45,
+                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                     CURLOPT_CUSTOMREQUEST => "GET",
+                     CURLOPT_POSTFIELDS => $postfield,
+                     CURLOPT_SSL_VERIFYPEER => true,
+                     CURLOPT_HTTPHEADER => array(
+                     "Authorization: Bearer ". Session::get('token'),
+                     ),
+                     ));
+                     $response = curl_exec($curl);
+                     $err = curl_error($curl);
+                     curl_close($curl);
+                     if ($err) {
+                     throw new Exception("cURL Error #:" . $err);
+                     return $err;
+                     } else {
+                     return $response;
+                     }
+                     } catch (Exception $e) {
+                     throw new Exception($e);
+                     }
+                    }
+                  $params = array('type' => 'upcoming',
+                                  'page_size' => 20,
+                                  'page_number' => 1,
+                                  );
+                  $url = "https://api.zoom.us/v2/meetings/".$lesson->webinar_meeting;
+                  //Appel de fonction postData()
+                  $resultat = postData($params, $url) ;
+                  $json = json_decode($resultat, true);
+
+                  return view('lessons.show', ['lesson' => $lesson,
+                                               'next_lesson' => $next_lesson,
+                                               'previous_lesson' => $previous_lesson,
+                                               'days' => $days,
+                                               'available' => $available,
+                                               'status' => $status,
+                                               'json' => $json,
+                                           ]);
+            }
+
 
             return view('lessons.show', ['lesson' => $lesson,
                                          'next_lesson' => $next_lesson,
