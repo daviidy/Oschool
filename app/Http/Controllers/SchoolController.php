@@ -738,7 +738,7 @@ class SchoolController extends Controller
                          CURLOPT_POSTFIELDS => $postfield,
                          CURLOPT_SSL_VERIFYPEER => true,
                          CURLOPT_HTTPHEADER => array(
-                         "Authorization: Bearer ". Session::get('token');,
+                         "Authorization: Bearer ". Session::get('token'),
                          ),
                          ));
                          $response = curl_exec($curl);
