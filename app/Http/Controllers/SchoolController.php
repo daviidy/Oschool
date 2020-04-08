@@ -704,7 +704,7 @@ class SchoolController extends Controller
                       $json = json_decode($resultat, true);
 
 
-                     Session::put('token', $json['reason']);
+                     Session::put('token', $json['access_token']);
 
 					return view('schools.integrations', ['school' => $school]);
 
