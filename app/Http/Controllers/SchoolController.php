@@ -764,6 +764,8 @@ class SchoolController extends Controller
                       $resultat = postData($params, $url) ;
                       $json = json_decode($resultat, true);
 
+
+                       Session::put('error', $json['reason']);
                       return view('admin_views.meetings.index', ['school' => $lesson->section->course->school,
                                                        'json' => $json['meetings'],
                                                     ]);
