@@ -654,14 +654,11 @@ class SchoolController extends Controller
 
         public function callback(Request $request)
         {
+			$state = $request->input('state');
+			$code = $request->input('code');
+			$school = School::find($state);
 
-            function getZoomToken($code, $state)
-            {
-                //si user est connecté on fait l'api call
-                //vers zoom pour récuperer le token
-
-
-                    function postData($params, $url)
+			function postData($params, $url)
                         {
                          try {
                          $curl = curl_init();
@@ -679,10 +676,8 @@ class SchoolController extends Controller
                          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                          CURLOPT_CUSTOMREQUEST => "POST",
                          CURLOPT_POSTFIELDS => $postfield,
-                         CURLOPT_SSL_VERIFYPEER => false,
+                         CURLOPT_SSL_VERIFYPEER => true,
                          CURLOPT_HTTPHEADER => array(
-                         "cache-control: no-cache",
-                         "content-type: application/x-www-form-urlencoded",
                          "Authorization: Basic ". base64_encode("fQKw5VK0TZ6QmBJ3a5DeQ:j8C02JtK3DcEZ4j7DNnaCjul2jq27Tc6"),
                          ),
                          ));
@@ -701,7 +696,7 @@ class SchoolController extends Controller
                         }
                       $params = array('grant_type' => 'authorization_code',
                                       'code' => $code,
-                                      'redirect_uri' => 'https://oschoolelearning.com/callback',
+                                      'redirect_uri' => "https://".$school->slug."oschoolelearning.com/callback?state=".$school->id,
                                       );
                       $url = "https://zoom.us/oauth/token";
                       //Appel de fonction postData()
@@ -709,33 +704,14 @@ class SchoolController extends Controller
                       $json = json_decode($resultat, true);
 
 
-                      /*
-                      Session::put('trans_id', $temps);
-
-                      */
-
-                     Session::put('token', $json['access_token']);
-
-                     $school = School::find($state);
+                     Session::put('token', $json['reason']);
 
 					return view('schools.integrations', ['school' => $school]);
 
 
 
-            }//fin getZoomToken
 
-
-            if ($request->has('code') && $request->has('state')) {
-                getZoomToken($request['code'], $request['state']);
-                //Session::put('code', $request['code']);
-                //return view('schools.integrations', ['school' => $school]);
-            }
-            elseif ($request->has('access_token')) {
-                Session::put('token', $request['access_token']);
-                return view('schools.integrations', ['school' => $school]);
-            }
-
-        }
+        }//fin function callback
 
 
 
