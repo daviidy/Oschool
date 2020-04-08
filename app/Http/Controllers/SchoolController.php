@@ -11,6 +11,7 @@ use App\Lesson;
 use App\Course;
 use App\Author;
 use App\Classroom;
+use Exception;
 use App\Faq;
 use Image;
 use Input;
