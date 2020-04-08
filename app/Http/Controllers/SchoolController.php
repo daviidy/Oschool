@@ -759,13 +759,13 @@ class SchoolController extends Controller
                                       'page_size' => 20,
                                       'page_number' => 1,
                                       );
-                      $url = "https://api.zoom.us/v2/users/".$user->email."/meetings";
+                      $url = "https://api.zoom.us/v2/users/yaodavidarmel@gmail.com/meetings";
                       //Appel de fonction postData()
                       $resultat = postData($params, $url) ;
                       $json = json_decode($resultat, true);
 
 
-                       Session::put('error', $json['reason']);
+                       //Session::put('error', $json['reason']);
                       return view('admin_views.meetings.index', ['school' => $lesson->section->course->school,
                                                        'json' => $json['meetings'],
                                                     ]);
