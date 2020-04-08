@@ -769,6 +769,7 @@ class SchoolController extends Controller
                       return view('admin_views.meetings.index', ['school' => $lesson->course->school,
                                                        'json' => $json['meetings'],
                                                        'lesson' => $lesson,
+                                                       'course' => $lesson->course,
                                                     ]);
 
 
