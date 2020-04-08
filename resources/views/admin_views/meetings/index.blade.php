@@ -388,7 +388,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
         <!---->
         <!---->
-        @foreach($json['meetings'] as $meeting)
+        @foreach($json as $meeting)
         <div ng-if="!enableReordering" ng-show="list.length > 0" class="row tch-course-list">
             <!---->
             <div what="course" which="Techniques de vente" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }" class="tch-course-listing">

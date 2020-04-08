@@ -765,7 +765,7 @@ class SchoolController extends Controller
                       $json = json_decode($resultat, true);
 
                       return view('admin_views.meetings.index', ['school' => $lesson->section->course->school,
-                                                       'json' => $json,
+                                                       'json' => $json['meetings'],
                                                     ]);
 
 
