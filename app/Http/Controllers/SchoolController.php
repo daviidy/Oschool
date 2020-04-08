@@ -696,7 +696,7 @@ class SchoolController extends Controller
                         }
                       $params = array('grant_type' => 'authorization_code',
                                       'code' => $code,
-                                      'redirect_uri' => "https://".$school->slug."oschoolelearning.com/callback?state=".$school->id,
+                                      'redirect_uri' => "https://".$school->slug.".oschoolelearning.com/callback?state=".$school->id,
                                       );
                       $url = "https://zoom.us/oauth/token";
                       //Appel de fonction postData()
