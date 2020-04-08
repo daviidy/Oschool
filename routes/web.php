@@ -347,10 +347,11 @@ Route::post('renew', 'PurchaseController@renew');
 Route::post('/thank-you', 'PurchaseController@thankYou');
 Route::get('/thank-you', 'PurchaseController@thankYou');
 
-Route::get('/schoolAdmin/{school}/integrations', 'SchoolController@integrations')->name('notify');
+Route::get('/schoolAdmin/{school}/integrations', 'SchoolController@integrations');
 
 //api zoom
-Route::get('/callback', 'SchoolController@callback')->name('notify');
+Route::get('/callback', 'SchoolController@callback');
+Route::get('/listMeetings/{lesson}/{user}', 'SchoolController@listMeetings');
 
 
 

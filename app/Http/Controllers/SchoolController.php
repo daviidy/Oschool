@@ -7,6 +7,7 @@ use Auth;
 use App\User;
 use App\Color;
 use App\Purchase;
+use App\Lesson;
 use App\Course;
 use App\Author;
 use App\Classroom;
@@ -712,6 +713,64 @@ class SchoolController extends Controller
 
 
         }//fin function callback
+
+
+        public function listMeetings(Lesson $lesson, User $user)
+        {
+
+			function postData($params, $url)
+                        {
+                         try {
+                         $curl = curl_init();
+                         $postfield = '';
+                         foreach ($params as $index => $value) {
+                         $postfield .= $index . '=' . $value . "&";
+                         }
+                         $postfield = substr($postfield, 0, -1);
+                         curl_setopt_array($curl, array(
+                         CURLOPT_URL => $url,
+                         CURLOPT_RETURNTRANSFER => true,
+                         CURLOPT_ENCODING => "",
+                         CURLOPT_MAXREDIRS => 10,
+                         CURLOPT_TIMEOUT => 45,
+                         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                         CURLOPT_CUSTOMREQUEST => "POST",
+                         CURLOPT_POSTFIELDS => $postfield,
+                         CURLOPT_SSL_VERIFYPEER => true,
+                         CURLOPT_HTTPHEADER => array(
+                         "Authorization: Bearer ". Session::get('token');,
+                         ),
+                         ));
+                         $response = curl_exec($curl);
+                         $err = curl_error($curl);
+                         curl_close($curl);
+                         if ($err) {
+                         throw new Exception("cURL Error #:" . $err);
+                         return $err;
+                         } else {
+                         return $response;
+                         }
+                         } catch (Exception $e) {
+                         throw new Exception($e);
+                         }
+                        }
+                      $params = array('type' => 'scheduled',
+                                      'page_size' => 20,
+                                      'page_number' => 1,
+                                      );
+                      $url = "https://api.zoom.us/v2/users/".$user->email."/meetings";
+                      //Appel de fonction postData()
+                      $resultat = postData($params, $url) ;
+                      $json = json_decode($resultat, true);
+
+                      return view('schools.meetings', ['school' => $lesson->section->course->school,
+                                                       'json' => $json,
+                                                    ]);
+
+
+
+
+        }
 
 
 

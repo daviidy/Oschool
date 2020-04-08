@@ -1,5 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
-@section('title', 'Liste des coupons')
+@section('title', 'Planification du contenu')
 @section('content')
 
 <style media="screen">
