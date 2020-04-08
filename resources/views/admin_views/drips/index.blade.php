@@ -246,7 +246,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
 
 </style>
 
-
+<!--pour la liste-->
 <style media="screen">
 /*! CSS Used from: Embedded */
 .ng-hide:not(.ng-hide-animate){display:none!important;}

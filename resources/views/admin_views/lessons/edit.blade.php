@@ -1244,6 +1244,119 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 </style>
 
 
+@if($lesson->webinar_meeting !== null)
+
+<style media="screen">
+/*! CSS Used from: Embedded */
+.ng-hide:not(.ng-hide-animate){display:none!important;}
+/*! CSS Used from: https://fedora.teachablecdn.com/packs/legacy-1b0d91e1718d5ff771ed.css ; media=screen */
+@media screen{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button[disabled]{cursor:default;}
+button::-moz-focus-inner{border:0;padding:0;}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.pull-right{float:right;}
+.fa-angle-left:before{content:"\F104";}
+.fa-angle-right:before{content:"\F105";}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+button{color:inherit;font:inherit;margin:0;}
+button{overflow:visible;}
+button{text-transform:none;}
+button{-webkit-appearance:button;cursor:pointer;}
+button[disabled]{cursor:default;}
+button::-moz-focus-inner{border:0;padding:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
+button{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#30787d;text-decoration:none;}
+a:hover,a:focus{color:#09a59a;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.row{margin-right:-15px;margin-left:-15px;}
+.row:before,.row:after{display:table;content:" ";}
+.row:after{clear:both;}
+.col-sm-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
+@media (min-width: 768px){
+.col-sm-12{float:left;}
+.col-sm-12{width:100%;}
+}
+.pull-right{float:right!important;}
+[disabled]{cursor:default!important;pointer-events:none;}
+.tch-page-nav{margin-bottom:30px;height:30px;}
+.tch-page-nav-page-number{font-size:13px;color:#818181;margin-right:10px;display:block;float:left;margin-top:11px;}
+.tch-page-nav-btn{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#1ea69a;border:1px solid #1ea69a;padding:5px 20px 4px 20px!important;font-size:23px;font-weight:200;padding-top:2px;line-height:25px;}
+.tch-page-nav-btn:focus{outline:0!important;}
+.tch-page-nav-btn:focus{outline:0!important;}
+.tch-page-nav-btn:focus{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-page-nav-btn:hover{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-page-nav-btn:active{color:white;background-color:#19887e;border-color:#177f76;}
+.tch-page-nav-btn:active:hover,.tch-page-nav-btn:active:focus{color:white;background-color:#146e66;border-color:#12655e;}
+.tch-page-nav-btn:active{background-image:none;}
+.tch-page-nav-btn[disabled],.tch-page-nav-btn[disabled]:hover,.tch-page-nav-btn[disabled]:focus,.tch-page-nav-btn[disabled]:active{filter:alpha(opacity=65);opacity:0.65;background-color:#1ea69a;border-color:#1ea69a;cursor:not-allowed;-webkit-box-shadow:none;box-shadow:none;}
+.tch-course-list{position:relative;}
+.course-list__header{display:grid;grid-template-columns:152px 4fr repeat(2, 1fr);border-bottom:1px solid var(--subtle);}
+.course-list__header-item{padding:4px 16px;}
+.tch-course-listing{margin:0 16px;border-bottom:1px solid var(--subtle);}
+@media screen and (min-width: 1100px) and (max-width: 1500px){
+.tch-course-listing .tch-course-listing-image{max-height:208px;}
+}
+@media screen and (min-width: 0px) and (max-width: 1100px){
+.tch-course-listing .tch-course-listing-image{max-height:208px;}
+}
+.tch-course-listing-wrapper{display:grid;grid-template-columns:152px 4fr repeat(2, 1fr);-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:var(--clinical);padding:0px;cursor:pointer;}
+.tch-course-listing-wrapper:hover{background-color:var(--cloud);}
+.tch-course-listing-image{width:120px;height:70px;background-position:center;background-size:cover;border-radius:5px;margin:16px;border:1px solid rgba(0, 0, 0, .04);}
+.tch-course-listing-title{padding:16px;color:var(--squid-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.tch-course-listing-sales-total{margin-right:3px;}
+a{color:#1ea69a;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
+a:hover,a:focus{color:#167b72;text-decoration:none;}
+.tch-box-wrapper{background:#fff;padding:20px;border-radius:5px;border:1px solid #eeeeee;-webkit-box-shadow:1px 1px 1px 0px rgba(0, 0, 0, .04);box-shadow:1px 1px 1px 0px rgba(0, 0, 0, .04);}
+.space::before{content:'\A0';}
+}
+/*! CSS Used from: Embedded */
+*,:after,:before{box-sizing:inherit;}
+/*! CSS Used from: Embedded */
+._2kIOe,._22oLp{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;}
+._22oLp{font-size:var(--fs-3);line-height:var(--lh-3);text-transform:uppercase;}
+._22oLp{font-weight:600;}
+._2kIOe{font-weight:400;}
+._2kIOe{font-size:var(--fs-2);line-height:var(--lh-2);}
+/*! CSS Used from: Embedded */
+._1zr_y :focus{outline:none;}
+/*! CSS Used from: Embedded */
+._22oLp,._2kIOe{font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',     'Helvetica Neue', sans-serif;}
+._22oLp{font-size:var(--fs-3);line-height:var(--lh-3);text-transform:uppercase;font-weight:600;}
+._2kIOe{font-size:var(--fs-2);line-height:var(--lh-2);font-weight:400;}
+/*! CSS Used from: Embedded */
+._1zr_y :focus{outline:none;}
+/*! CSS Used from: Embedded */
+._2kIOe,._22oLp{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;}
+._22oLp{font-size:var(--fs-3);line-height:var(--lh-3);text-transform:uppercase;}
+._22oLp{font-weight:600;}
+._2kIOe{font-weight:400;}
+._2kIOe{font-size:var(--fs-2);line-height:var(--lh-2);}
+
+.choices span:hover {
+    text-decoration: underline;
+  text-decoration-color: red;
+}
+
+</style>
+
+
+@endif
+
+
 <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content">
     <div what="page header" class="disable-animations tch-section-nav tch-page-header" classes="" no-title="true">
         <div ng-class="{ 'has-sections': sections }" class="tch-section-nav-wrapper affixed">
@@ -1695,6 +1808,37 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
             </svg></div>
         <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Voir un aperçu de cette leçon</h4>
     </a></div>
+
+
+
+    @if($lesson->webinar_meeting !== null)
+    <div ng-if="!enableReordering" ng-show="list.length > 0" class="row tch-course-list">
+        <!---->
+        <div what="course" which="Techniques de vente" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }" class="tch-course-listing">
+
+                <div class="tch-course-listing-wrapper" what="course-card" course="course" course-stats="courseStats">
+                    <div style="background-image: url(/images/lessons/images/{{$lesson->image}})" class="tch-course-listing-image"></div>
+                    <div what="course name" ng-bind="::course.name" class="tch-course-listing-title _2kIOe">
+                        ID de la conférence: {{$json['id']}} <br>
+                        <p class="" style="color: black; cursor: default;">Sujet: <span style="cursor: pointer;"> <strong>{{$json['topic']}}</strong> </span></p><br>
+                        <p>Lien de la réunion: <a href="{{$json['join_url']}}">{{$json['join_url']}}</a></p><br>
+                        <p>Date et durée: {{$json['start_time']}} / {{$json['duration']}} </p><br>
+                        <p>ID de l'hôte: {{$json['host_id']}}</p>
+
+                        <a href="/associateMeeting/{{$lesson->id}}/{{$json['id']}}" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
+                            Associer cette conférence à la leçon {{$lesson->title}}
+                        </a>
+                    </div>
+                    <div class="date-days tch-course-listing-title _2kIOe">
+
+                    </div>
+
+                </div>
+            </div>
+        <!---->
+    </div>
+    <!---->
+    @endif
     <!---->
 </ui-view>
 

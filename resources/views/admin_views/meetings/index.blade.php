@@ -377,17 +377,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
     @include('includes.status')
 
-    @if(session('error'))
-    <div class="card-body">
-
-      <div class="status alert alert-success" role="alert">
-          {{session('error')}}
-      </div>
-
-
-    </div>
-    @endif
-
     <div ng-if="courses.length > 0">
     <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
         <div class="course-list__header">
@@ -412,6 +401,10 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <p>Lien de la réunion: <a href="{{$meeting['join_url']}}">{{$meeting['join_url']}}</a></p><br>
                             <p>Date et durée: {{$meeting['start_time']}} / {{$meeting['duration']}} </p><br>
                             <p>ID de l'hôte: {{$meeting['host_id']}}</p>
+
+                            <a href="/associateMeeting/{{$lesson->id}}/{{$meeting['id']}}" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
+                                Associer cette conférence à la leçon {{$lesson->title}}
+                            </a>
                         </div>
                         <div class="date-days tch-course-listing-title _2kIOe">
 

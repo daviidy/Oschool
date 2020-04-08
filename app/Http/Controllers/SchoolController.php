@@ -755,7 +755,7 @@ class SchoolController extends Controller
                          throw new Exception($e);
                          }
                         }
-                      $params = array('type' => 'scheduled',
+                      $params = array('type' => 'upcoming',
                                       'page_size' => 20,
                                       'page_number' => 1,
                                       );
@@ -766,11 +766,23 @@ class SchoolController extends Controller
 
 
                        //Session::put('error', $json['reason']);
-                      return view('admin_views.meetings.index', ['school' => $lesson->section->course->school,
+                      return view('admin_views.meetings.index', ['school' => $lesson->course->school,
                                                        'json' => $json['meetings'],
+                                                       'lesson' => $lesson,
                                                     ]);
 
 
+
+
+        }//fin function listMeetings
+
+
+        public function associateMeeting(Lesson $lesson, $meetingId)
+        {
+
+			$lesson->webinar_meeting = $meetingId;
+            $lesson->save();
+            return redirect('/schoolAdmin/'.$lesson->course->school->id.'/courses/'.$lesson->course->id.'/curriculum/'.$lesson->section->id.'/lessons/'.$lesson->id.'/edit')->with('status', 'Conférence associée avec succès');
 
 
         }

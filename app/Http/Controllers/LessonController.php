@@ -13,6 +13,8 @@ use App\Option;
 use Carbon\Carbon;
 use Image;
 use Auth;
+use Exception;
+use Illuminate\Support\Facades\Session;
 use App\Media;
 use Illuminate\Http\Request;
 use App\Services\SlugLesson;
@@ -289,6 +291,57 @@ class LessonController extends Controller
     public function edit(School $school, Course $course, Section $section, Lesson $lesson)
     {
         if (Auth::check()) {
+            if ($lesson->webinar_meeting !== null) {
+                function postData($params, $url){
+                     try {
+                     $curl = curl_init();
+                     $postfield = '';
+                     foreach ($params as $index => $value) {
+                     $postfield .= $index . '=' . $value . "&";
+                     }
+                     $postfield = substr($postfield, 0, -1);
+                     curl_setopt_array($curl, array(
+                     CURLOPT_URL => $url,
+                     CURLOPT_RETURNTRANSFER => true,
+                     CURLOPT_ENCODING => "",
+                     CURLOPT_MAXREDIRS => 10,
+                     CURLOPT_TIMEOUT => 45,
+                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                     CURLOPT_CUSTOMREQUEST => "GET",
+                     CURLOPT_POSTFIELDS => $postfield,
+                     CURLOPT_SSL_VERIFYPEER => true,
+                     CURLOPT_HTTPHEADER => array(
+                     "Authorization: Bearer ". Session::get('token'),
+                     ),
+                     ));
+                     $response = curl_exec($curl);
+                     $err = curl_error($curl);
+                     curl_close($curl);
+                     if ($err) {
+                     throw new Exception("cURL Error #:" . $err);
+                     return $err;
+                     } else {
+                     return $response;
+                     }
+                     } catch (Exception $e) {
+                     throw new Exception($e);
+                     }
+                    }
+                  $params = array('type' => 'upcoming',
+                                  'page_size' => 20,
+                                  'page_number' => 1,
+                                  );
+                  $url = "https://api.zoom.us/v2/meetings/".$lesson->webinar_meeting;
+                  //Appel de fonction postData()
+                  $resultat = postData($params, $url) ;
+                  $json = json_decode($resultat, true);
+                  return view('admin_views.lessons.edit', ['school' => $school,
+                                                           'course' => $course,
+                                                           'section' => $section,
+                                                           'lesson' => $lesson,
+                                                           'json' => $json,
+                                                       ]);
+            }
             return view('admin_views.lessons.edit', ['school' => $school, 'course' => $course, 'section' => $section, 'lesson' => $lesson]);
         }
         else {

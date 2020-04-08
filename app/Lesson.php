@@ -17,6 +17,7 @@ class Lesson extends Model
                            'status',
                            'free_lesson',
                            'video',
+                           'webinar_meeting',
 
                          ];
 
