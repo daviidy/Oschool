@@ -31,7 +31,7 @@ img{vertical-align:middle;}
 .col-sm-9{float:left;}
 .col-sm-9{
     width:100%;
-    
+
 }
 }
 table{background-color:transparent;}
@@ -736,23 +736,23 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                 <div data-v-27efbf01="" class="col-sm-9">
                     <!---->
                     <!---->
-                    
+
 
                     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
 
-                
-                    
+
+
                     @include('includes.status')
-                    
+
 
                         <div class="survey-container col-sm-6 col-sm-offset-3 col-xs-12 m-v-6-m">
                             <h2 class="survey-container__header p-t-3-xs m-b-0-xs text-center-xs w-6">
                                 <!---->
                                 <!----><span ng-if="!onboardingPricingPageCheckoutSuccess">Envoyer </span>
-                                <!---->un message au propriétaire
+                                <!---->un message à {{ucfirst($school->name)}}
                             </h2>
                             <!---->
-                            
+
 
 
                             <form enctype="multipart/form-data" method="post" action="{{route('website.subdomain.submit_contact_business')}}" class="ng-pristine ng-valid ng-valid-schema-form" id="information-container">
@@ -774,8 +774,8 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                                     <input type="hidden" name="user_id" value="{{$school->user->id}}">
                                     <!---->
                                 </bootstrap-decorator>
-                                
-                                
+
+
                                 <bootstrap-decorator form="schemaForm.form[7]">
                                     <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
                                       class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Message</label>
@@ -803,7 +803,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                     <!---->
                     <!---->
                 </div>
-                    
+
         </div>
     </main>
 
@@ -812,7 +812,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 
 
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-                
+
 
 
 
