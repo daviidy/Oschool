@@ -30,7 +30,10 @@ Route::group(
 
         Route::get('/users/contact_business', 'UserController@showFormContactSubDomain')->name('website.subdomain.contact_business');
 
-        //Route::get('/course/{slug}', 'CourseController@showCourseOut')->name('website.subdomain.course_out');
+        Route::get('/users/settings_business', 'UserController@settingsContactSubDomain')->name('website.subdomain.settings_business');
+
+
+        //Route::get('/course/{slug}','CourseController@showCourseOut')->name('website.subdomain.course_out');
     }
 );
 
@@ -133,6 +136,19 @@ Route::get('/owner', 'OwnerController@owner')
     ->name('owner');
 
     */
+
+/*CSV Route */
+/*
+Route::get('csv_file', 'CvsFileController@index');
+
+Route::get('csv_file/export', 'CsvFileController@csv_export')->name('export');
+
+Route::post('csv_file/import', 'CsvFileController@csv_import')->name('import');
+/*Route::get('/schoolAdmin/{school}/authors', 'UserController@authors')->name('userSettings');*/
+Route::get('/schoolAdmin/{school}/users/export', 'CsvFileController@csv_export')->name('export');
+
+
+
 
 //Ajax Routes
 

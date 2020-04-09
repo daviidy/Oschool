@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Course;
+use App\CsvFile;
+
 use App\Faq;
 use App\School;
 use App\Category;

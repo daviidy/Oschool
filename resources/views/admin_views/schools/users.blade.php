@@ -542,7 +542,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <!---->
                 <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons">
                     <div ng-hide="::(role == 'custom' &amp;&amp; !permissions.can('manage_custom_roles'))" class=""><span class="space"></span>
-                        <!----><a id="download-csv-button" ng-if="permissions.can('view_students') &amp;&amp; permissions.can('export_csv_data')" what="email csv button" ng-click="csvProcess()" ng-autodisable="" class="tch-btn-header-secondary fastclickable">
+                        <!----><a id="download-csv-button" ng-if="permissions.can('view_students') &amp;&amp; permissions.can('export_csv_data')" what="email csv button" ng-click="csvProcess()" ng-autodisable="" class="tch-btn-header-secondary fastclickable" href="/schoolAdmin/{{$school->id}}/users/export">
                         Exporter en fichier CSV</a>
                         <!----><span class="space"></span>
                         <!----><span class="space"></span><a id="import-students" what="import students" ng-click="openImportModal()" ng-show="::canImportUsers" class="tch-btn-header-primary fastclickable">Ajouter des utilisateurs</a>
