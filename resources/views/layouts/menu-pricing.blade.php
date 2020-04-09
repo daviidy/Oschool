@@ -264,6 +264,59 @@ footer .container .row ul li a:hover{text-decoration:underline;}
 <script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
 </script>
 
+<style media="screen">
+footer{
+    position: relative;
+}
+/*! CSS Used from: https://fedora.teachablecdn.com/assets/pages-a388a8b392c084dae7e42369a8aeefcf045074993ddb806fe6bbd528c07e53c2.css ; media=screen */
+@media screen{
+div,span,a,img,ul,li,footer{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+footer{display:block;}
+ul{list-style:none;}
+.footer__wrapper,.footer__inner{width:100%;}
+@media only screen and (min-width: 768px){
+.footer__wrapper{max-width:var(--base-width-cutoff);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}
+}
+*,*:before,*:after{box-sizing:inherit;}
+a{text-decoration:none;color:var(--brand_secondary);}
+img{display:block;}
+.using-mouse :focus{outline:none;}
+.footer{padding:20px;background-color:var(--brand_primary);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}
+.footer__inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:1.4rem;line-height:2rem;font-weight:400;text-align:center;}
+.footer__list+.footer__list{margin-top:20px;}
+.footer__inner a,.footer__inner{color:var(--brand_navbar_text);}
+.footer__inner a:hover{text-decoration:underline;}
+.footer__copyright{font-size:1.8rem;}
+@media only screen and (min-width: 768px){
+.footer__inner{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;text-align:left;}
+.footer__list.legal-links{margin-top:0;}
+.powered-by{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;}
+}
+.powered-by{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin-top:20px;}
+.powered-by-logo{height:15px;display:inline-block;}
+}
+</style>
+
+
+<style media="screen">
+.btn-primary, .btn-primary:active, .btn-primary:focus {
+background: #{{$pricing->course->school->color->buttons_links}};
+border: 1px solid #{{$pricing->course->school->color->buttons_links}};
+font-weight: 600!important;
+outline: none!important;
+color: #fff;
+border-radius: 20px;
+padding: 3px 18px!important;
+}
+
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #{{$pricing->course->school->color->buttons_links}};
+    border-color: #{{$pricing->course->school->color->buttons_links}};
+}
+</style>
+
 
 
 </head>
@@ -276,15 +329,26 @@ footer .container .row ul li a:hover{text-decoration:underline;}
 
     <header class="">
     <!-- Navbar -->
-    <div class="navbar navbar-fedora navbar-fixed-top is-at-top bs-docs-nav is-not-signed-in" id="navbar" role="navigation">
+    <div style="background: #{{$pricing->course->school->color->navbar_footer}};" class="navbar navbar-fedora navbar-fixed-top is-at-top bs-docs-nav is-not-signed-in" id="navbar" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <!-- Site logo -->
-
-                <a class="navbar-brand header-logo" href="/">
-                    <img src="/images/schools/logos/logo_oschool_blanc.png" alt="52Kards"
-                      srcset="/images/schools/logos/logo_oschool_blanc.png 2x">
+                @if($pricing->course->school->user->type3 == 'owner')
+                 @if($pricing->course->school->logo == 'image.jpg')
+                <a class="navbar__title" href="{{ route('website.subdomain.home', ['subdomain' => $pricing->course->school->slug]) }}">
+                  {{$pricing->course->school->name}}
                 </a>
+                @else
+                <a style="width: 20%; padding: 5px;" class="navbar-brand header-logo" href="{{ route('website.subdomain.home', ['subdomain' => $pricing->course->school->slug]) }}">
+                    <img style="width: {{$pricing->course->school->color->logo_width}}%;" src="/images/schools/logos/{{$pricing->course->school->logo}}" alt="logo" id="nhf">
+                </a>
+                @endif
+                @else
+                <a style="padding: 0px;" class="navbar-brand header-logo" href="/">
+                    <img src="/images/schools/logos/logo_oschool_blanc.png" alt="logo" id="nhf">
+                </a>
+                @endif
+
 
             </div>
         </div>
@@ -301,6 +365,7 @@ footer .container .row ul li a:hover{text-decoration:underline;}
   </div>
 
 
+  @if($pricing->course->school->user->isAdmin())
   <footer style="bottom: 0 !important;position: relative;">
     <div class="container">
       <div class="row">
@@ -313,20 +378,20 @@ footer .container .row ul li a:hover{text-decoration:underline;}
         <div class="col-sm-2 second-section">
           <ul class="new-homepage-footer-links">
             <h4>Oschool</h4>
-            <li>
+            <!--li>
               <a target="_blank" rel="noopener noreferrer" href="https://teachable.zendesk.com/hc/en-us">Carrières</a>
+            </li-->
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/devenir-formateur/">Devenez formateur</a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/blog">Devenez formateur</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://blog.oschoolelearning.com/faq/">FAQ</a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/podcast/everything-is-teachable">FAQ</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://support.oschoolelearning.com/qui-sommes-nous/">Qui sommes nous?</a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/podcast/everything-is-teachable">La communauté</a>
-            </li>
-            <li>
-              <a target="_blank" rel="noopener noreferrer" href="https://teachable.com/podcast/everything-is-teachable">Témoignages</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/hhbzcHE">La communauté</a>
             </li>
           </ul>
         </div>
@@ -334,16 +399,16 @@ footer .container .row ul li a:hover{text-decoration:underline;}
           <ul class="new-homepage-footer-links">
             <h4>Plus</h4>
             <li>
-              <a href="/careers">Conditions</a>
+              <a href="https://blog.oschoolelearning.com/condition/">Conditions</a>
             </li>
             <li>
-              <a href="/experts">Confidentialité</a>
+              <a href="https://blog.oschoolelearning.com/confidentialite/">Confidentialité</a>
             </li>
             <li>
-              <a href="/affiliates">Contactez-nous</a>
+              <a href="https://blog.oschoolelearning.com/contact/">Contactez-nous</a>
             </li>
             <li>
-              <a href="/affiliates">Blog</a>
+              <a href="https://blog.oschoolelearning.com">Blog</a>
             </li>
           </ul>
         </div>
@@ -351,13 +416,16 @@ footer .container .row ul li a:hover{text-decoration:underline;}
           <ul class="new-homepage-footer-links">
             <h4>Réseaux sociaux</h4>
             <li>
-              <a href="/privacy-policy">Facebook</a>
+              <a href="https://www.facebook.com/Oschool.ci/" target="_blank">Facebook</a>
             </li>
             <li>
-              <a href="/terms-of-use">Twiter</a>
+              <a href="https://twitter.com/OschoolLearning" target="_blank">Twiter</a>
             </li>
             <li>
-              <a href="/terms-of-use">Linkedin</a>
+              <a href="https://www.linkedin.com/in/oschool-ci-5823b8141/" target="_blank">Linkedin</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/oschool_e_learning/" target="_blank">instagram</a>
             </li>
           </ul>
         </div>
@@ -395,6 +463,50 @@ footer .container .row ul li a:hover{text-decoration:underline;}
       </div-->
     </div>
   </footer>
+
+  @else
+
+  <footer style="background: #{{$pricing->course->school->color->navbar_footer}}; color: #{{$pricing->course->school->color->body_text}};" class="">
+      <div class="footer">
+          <div class="footer__wrapper">
+              <div class="footer__inner">
+                  <ul class="footer__list">
+                      <li class="footer__copyright">
+                          ©
+                          {{$pricing->course->school->name}}
+                          <span id="year"></span>
+                      </li>
+
+                  </ul>
+                  <ul class="footer__list legal-links">
+                      <!--
+                      <li>
+                          <a href="/p/terms">
+                              Terms of Use
+                          </a>
+                      </li>
+                      <li>
+                          <a href="/p/privacy">
+                              Privacy Policy
+                          </a>
+                      </li>
+                  -->
+
+                      <li>
+                          <span class="powered-by-text">Créez votre plateforme de formation avec</span>
+                          <a class="powered-by" href="https://oschoolelearning.com">
+                              <img src="/images/schools/logos/logo_oschool_blanc.png" />
+                          </a>
+
+                      </li>
+
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  @endif
 
 
 

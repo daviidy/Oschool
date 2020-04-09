@@ -264,7 +264,7 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
         <div ui-tree="options" class="col-md-12 tch-ui-tree-curriculum angular-ui-tree">
             <ol ui-tree-nodes="" data-type="lectureSection" class="part-list list-unstyled section-list ng-pristine ng-untouched ng-valid angular-ui-tree-nodes ng-not-empty" style="">
                 <!---->
-                @if($course->sections)
+                @if(count($course->sections) > 0)
                 @foreach($course->sections->sortBy('position') as $section)
                 <li data-index="{{$section->id}}" data-position="{{$section->position}}" class="section-item angular-ui-tree-node" collapsed="false" style="">
                     <div what="section" class="section-heading angular-ui-tree-wrapper"><i ui-tree-handle=""

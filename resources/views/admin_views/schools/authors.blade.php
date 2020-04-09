@@ -764,8 +764,10 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                   class="pull-left ng-pristine ng-untouched ng-valid ng-empty">
                                 <div ng-show="(user.id === currentUser._id)" class="pull-left checkbox-placeholder ng-hide"></div>
                                 <div what="user info wrapper" ui-sref="admin.users.user.information({ id: user.id })" class="user-info-wrapper" href="/admin/users/32429890/information">
+                                    <a href="/schoolAdmin/{{$school->id}}/authors/{{$user->id}}/edit">
                                     <img gravatar-src-once="user.email" align="left" gravatar-size="50"
                                       class="user-avatar img-circle" src="/images/users/authors/{{$user->image}}">
+                                      </a>
                                     <!---->
                                     <!---
                                     <div ng-if="user.is_teachable_account" class="myteachable-icon-overlay">&nbsp;</div>

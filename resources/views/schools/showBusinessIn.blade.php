@@ -84,7 +84,7 @@
                     @foreach($courses as $course)
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
-                            <div class="row">
+                            <div style="width: 100%;" class="row">
                                 <a href="{{ route('course.slug', $course->slug) }}" data-role="course-box-link">
                                     <div class="col-lg-12">
                                         <!-- Course Image, Name & Subtitle (everyone) -->
@@ -97,16 +97,16 @@
                                         <!-- Progress bar (enrolled users) -->
                                         @auth
                                         @if(Auth::user()->courses->contains($course->id))
-                                        <div class="col-xs-12" aria-hidden="false">
+                                        <div style="width: 95%;" class="col-xs-12" aria-hidden="false">
                                             <div class="progressbar">
                                                 @if($course->type == 'mooc')
                                                 @if(count($course->lessons) > 0)
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: 
+                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width:
                                                 {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}%;" aria-valuenow="0%"></div>
                                                 @endif
                                                 @else
                                                 @if(count($course->projects) > 0)
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: 
+                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width:
                                                 {{number_format((count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}%;" aria-valuenow="0%"></div>
                                                 @endif
                                                 @endif

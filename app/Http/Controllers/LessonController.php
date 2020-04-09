@@ -8,9 +8,13 @@ use App\Course;
 use App\Section;
 use App\Quiz;
 use App\Question;
+use App\Purchase;
 use App\Option;
+use Carbon\Carbon;
 use Image;
 use Auth;
+use Exception;
+use Illuminate\Support\Facades\Session;
 use App\Media;
 use Illuminate\Http\Request;
 use App\Services\SlugLesson;
@@ -112,87 +116,221 @@ class LessonController extends Controller
      */
     public function showSlug($slugCourse, $slug)
     {
-        $course = Course::where('slug', $slugCourse)->firstOrFail();
-        $lesson = Lesson::where('slug', $slug)->where('course_id', $course->id)->firstOrFail();
-        //on cherche la prochaine lesson dans la meme section
-        $next_lesson = Lesson::where('course_id', $lesson->course_id)
-        ->where('section_id', $lesson->section_id)
-        ->where('status', 'active')
-        ->where('position', '>', $lesson->position)
-        ->orderBy('position', 'asc')
-        ->first();
+        if (Auth::check()) {
 
-        //si on atteint le max de lecons dans la section
-        if ($next_lesson === null) {
-            //on recupere la prochaine section
-            $next_section = Section::where('course_id', $lesson->course_id)
-            ->where('position', '>', $lesson->section->position)
+            $course = Course::where('slug', $slugCourse)->firstOrFail();
+            $lesson = Lesson::where('slug', $slug)->where('course_id', $course->id)->firstOrFail();
+            $today = Carbon::now();
+            $purchase = $lesson->section->course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')->first();
+            $days = Carbon::now();
+            $available = '';
+            $status = '';
+
+
+
+            //si le lecon n'est pas gratutie
+            if ($lesson->free_lesson == 'no') {
+                //si la section de la lecon en question
+                //a été planifiée pour un nombre de jours après l'inscription
+                //de l'étudiant
+
+                if ($lesson->section->drip && $lesson->section->drip->days !== null) {
+
+                    //on va déterminer la date de disponibilité prévue
+                    $day_availability = Carbon::parse($purchase->date)->addDays((int)$lesson->section->drip->days);
+
+                    //ensuite on va vérifier si la date prévue est aujourd'hui
+                    //ou parmi les jours précédents
+                    if ($day_availability == $today || $day_availability < $today) {
+                        //si oui on définit une variable available = 1
+                        //et on définit une variable days à 0
+                        $available = '1';
+                        $status = '1';
+                    }
+                    else {
+                        //sinon, on définit une variable available = 0
+                        //on calcule les jours restants et on met le
+                        //résultat dans la variable days
+                        $available = '0';
+                        $days = $day_availability->diffInDays($today);
+                        $status = '0';
+                    }
+                }
+
+
+                //si la section de la lecon en question
+                //a été planifiée pour une date spécifique
+                if ($lesson->section->drip && $lesson->section->drip->date !== null) {
+
+                    //on va déterminer la date de disponibilité prévue
+                    $day_availability = Carbon::parse($lesson->section->drip->date);
+
+                    //ensuite on va vérifier si la date prévue est aujourd'hui
+                    //ou parmi les jours précédents
+                    if ($day_availability == $today || $day_availability < $today) {
+                        //si oui on définit une variable available = 1
+                        //et on définit une variable days à 0
+                        $available = '1';
+                        $days = '0';
+                        $status = '1';
+                    }
+                    else {
+                        //sinon, on définit une variable available = 0
+                        //on calcule les jours restants et on met le
+                        //résultat dans la variable days
+                        $available = '0';
+                        $days = $lesson->section->drip->date;
+                        $status = '0';
+                    }
+                }
+
+            }
+
+            //on cherche la prochaine lesson dans la meme section
+            $next_lesson = Lesson::where('course_id', $lesson->course_id)
+            ->where('section_id', $lesson->section_id)
+            ->where('status', 'active')
+            ->where('position', '>', $lesson->position)
             ->orderBy('position', 'asc')
             ->first();
 
-            //dans le cas ou c'est la dernière lesson
-            //c'est a dire qu'il n'ya pas plus de section suivantes
-            if ($next_section === null) {
-                $next_lesson = $lesson;
-            }
-
-            else {
-                $next_lesson = Lesson::where('course_id', $lesson->course_id)
-                ->where('section_id', $next_section->id)
-                ->where('status', 'active')
+            //si on atteint le max de lecons dans la section
+            if ($next_lesson === null) {
+                //on recupere la prochaine section
+                $next_section = Section::where('course_id', $lesson->course_id)
+                ->where('position', '>', $lesson->section->position)
                 ->orderBy('position', 'asc')
                 ->first();
+
+                //dans le cas ou c'est la dernière lesson
+                //c'est a dire qu'il n'ya pas plus de section suivantes
+                if ($next_section === null) {
+                    $next_lesson = $lesson;
+                }
+
+                else {
+                    $next_lesson = Lesson::where('course_id', $lesson->course_id)
+                    ->where('section_id', $next_section->id)
+                    ->where('status', 'active')
+                    ->orderBy('position', 'asc')
+                    ->first();
+                }
+
+
             }
 
-
-        }
-
-        $previous_lesson = Lesson::where('course_id', $lesson->course_id)
-        ->where('section_id', $lesson->section_id)
-        ->where('status', 'active')
-        ->where('position', '<', $lesson->position)
-        ->orderBy('position', 'desc')
-        ->first();
-
-        //si on atteint le max de lecons dans la section
-        if ($previous_lesson === null) {
-            //on recupere la section précédente
-            $previous_section = Section::where('course_id', $lesson->course_id)
-            ->where('position', '<', $lesson->section->position)
+            $previous_lesson = Lesson::where('course_id', $lesson->course_id)
+            ->where('section_id', $lesson->section_id)
+            ->where('status', 'active')
+            ->where('position', '<', $lesson->position)
             ->orderBy('position', 'desc')
             ->first();
 
-            //dans le cas ou c'est la premiere lesson
-            if ($previous_section === null) {
+            //si on atteint le max de lecons dans la section
+            if ($previous_lesson === null) {
+                //on recupere la section précédente
+                $previous_section = Section::where('course_id', $lesson->course_id)
+                ->where('position', '<', $lesson->section->position)
+                ->orderBy('position', 'desc')
+                ->first();
+
+                //dans le cas ou c'est la premiere lesson
+                if ($previous_section === null) {
+                    $previous_lesson = $lesson;
+                }
+
+                else {
+                    $previous_lesson = Lesson::where('course_id', $lesson->course_id)
+                    ->where('section_id', $previous_section->id)
+                    ->where('status', 'active')
+                    ->orderBy('position', 'desc')
+                    ->first();
+                }
+
+
+            }
+
+            //si, malgré tout ça next ou previous sont null
+
+            if ($next_lesson === null) {
+                $next_lesson = $lesson;
+            }
+
+            if ($previous_lesson === null) {
                 $previous_lesson = $lesson;
             }
 
-            else {
-                $previous_lesson = Lesson::where('course_id', $lesson->course_id)
-                ->where('section_id', $previous_section->id)
-                ->where('status', 'active')
-                ->orderBy('position', 'desc')
-                ->first();
+            if ($lesson->webinar_meeting !== null) {
+                function postData($params, $url){
+                     try {
+                     $curl = curl_init();
+                     $postfield = '';
+                     foreach ($params as $index => $value) {
+                     $postfield .= $index . '=' . $value . "&";
+                     }
+                     $postfield = substr($postfield, 0, -1);
+                     curl_setopt_array($curl, array(
+                     CURLOPT_URL => $url,
+                     CURLOPT_RETURNTRANSFER => true,
+                     CURLOPT_ENCODING => "",
+                     CURLOPT_MAXREDIRS => 10,
+                     CURLOPT_TIMEOUT => 45,
+                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                     CURLOPT_CUSTOMREQUEST => "GET",
+                     CURLOPT_POSTFIELDS => $postfield,
+                     CURLOPT_SSL_VERIFYPEER => true,
+                     CURLOPT_HTTPHEADER => array(
+                     "Authorization: Bearer ". Session::get('token'),
+                     ),
+                     ));
+                     $response = curl_exec($curl);
+                     $err = curl_error($curl);
+                     curl_close($curl);
+                     if ($err) {
+                     throw new Exception("cURL Error #:" . $err);
+                     return $err;
+                     } else {
+                     return $response;
+                     }
+                     } catch (Exception $e) {
+                     throw new Exception($e);
+                     }
+                    }
+                  $params = array('type' => 'upcoming',
+                                  'page_size' => 20,
+                                  'page_number' => 1,
+                                  );
+                  $url = "https://api.zoom.us/v2/meetings/".$lesson->webinar_meeting;
+                  //Appel de fonction postData()
+                  $resultat = postData($params, $url) ;
+                  $json = json_decode($resultat, true);
+
+                  return view('lessons.show', ['lesson' => $lesson,
+                                               'next_lesson' => $next_lesson,
+                                               'previous_lesson' => $previous_lesson,
+                                               'days' => $days,
+                                               'available' => $available,
+                                               'status' => $status,
+                                               'json' => $json,
+                                           ]);
             }
 
 
+            return view('lessons.show', ['lesson' => $lesson,
+                                         'next_lesson' => $next_lesson,
+                                         'previous_lesson' => $previous_lesson,
+                                         'days' => $days,
+                                         'available' => $available,
+                                         'status' => $status
+                                     ]);
+
         }
 
-        //si, malgré tout ça next ou previous sont null
-
-        if ($next_lesson === null) {
-            $next_lesson = $lesson;
-        }
-
-        if ($previous_lesson === null) {
-            $previous_lesson = $lesson;
+        else {
+            return redirect()->back()->with('status', 'Connectez-vous pour accéder à cette leçon');
         }
 
 
-        return view('lessons.show', ['lesson' => $lesson,
-                                     'next_lesson' => $next_lesson,
-                                     'previous_lesson' => $previous_lesson
-                                 ]);
     }
 
 
@@ -208,6 +346,57 @@ class LessonController extends Controller
     public function edit(School $school, Course $course, Section $section, Lesson $lesson)
     {
         if (Auth::check()) {
+            if ($lesson->webinar_meeting !== null) {
+                function postData($params, $url){
+                     try {
+                     $curl = curl_init();
+                     $postfield = '';
+                     foreach ($params as $index => $value) {
+                     $postfield .= $index . '=' . $value . "&";
+                     }
+                     $postfield = substr($postfield, 0, -1);
+                     curl_setopt_array($curl, array(
+                     CURLOPT_URL => $url,
+                     CURLOPT_RETURNTRANSFER => true,
+                     CURLOPT_ENCODING => "",
+                     CURLOPT_MAXREDIRS => 10,
+                     CURLOPT_TIMEOUT => 45,
+                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                     CURLOPT_CUSTOMREQUEST => "GET",
+                     CURLOPT_POSTFIELDS => $postfield,
+                     CURLOPT_SSL_VERIFYPEER => true,
+                     CURLOPT_HTTPHEADER => array(
+                     "Authorization: Bearer ". Session::get('token'),
+                     ),
+                     ));
+                     $response = curl_exec($curl);
+                     $err = curl_error($curl);
+                     curl_close($curl);
+                     if ($err) {
+                     throw new Exception("cURL Error #:" . $err);
+                     return $err;
+                     } else {
+                     return $response;
+                     }
+                     } catch (Exception $e) {
+                     throw new Exception($e);
+                     }
+                    }
+                  $params = array('type' => 'upcoming',
+                                  'page_size' => 20,
+                                  'page_number' => 1,
+                                  );
+                  $url = "https://api.zoom.us/v2/meetings/".$lesson->webinar_meeting;
+                  //Appel de fonction postData()
+                  $resultat = postData($params, $url) ;
+                  $json = json_decode($resultat, true);
+                  return view('admin_views.lessons.edit', ['school' => $school,
+                                                           'course' => $course,
+                                                           'section' => $section,
+                                                           'lesson' => $lesson,
+                                                           'json' => $json,
+                                                       ]);
+            }
             return view('admin_views.lessons.edit', ['school' => $school, 'course' => $course, 'section' => $section, 'lesson' => $lesson]);
         }
         else {

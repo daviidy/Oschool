@@ -2,6 +2,15 @@
 @section('image', $course->logo)
 @section('content')
 
+<style media="screen">
+header.half-height .lecture-left {
+width: 349px;
+height: 48px!important;
+float: left;
+background-color: black !important;
+}
+</style>
+
 <div class="course-sidebar">
   <!-- Image & Title -->
 <img class="course-image" src="/images/courses/logos/{{$course->logo}}">

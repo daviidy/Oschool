@@ -145,6 +145,7 @@ h3{font-size:1.6rem;}
                         <!-- <p>83</p> -->
                     </div>
                 </a>
+                {{--
                 @if($school->user_id == Auth::user()->id)
                 <a style="color: #4d90cc;" class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
                     <div class="statContainer__3vkcPCpgY9KLbdlgaArthp">
@@ -153,6 +154,7 @@ h3{font-size:1.6rem;}
                     </div>
                 </a>
                 @endif
+                --}}
 
             </div>
         </div>

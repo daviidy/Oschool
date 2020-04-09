@@ -301,7 +301,17 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->Général
                 </div>
                 <!---->
-                <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
+                <div class="tch-section-nav-buttons">
+                    @if(Auth::user()->isAdmin())
+                    <a target="_blank" rel="noopener" class="tch-btn-header-secondary" href="{{url('schools', $school)}}">
+                        Aperçu
+                    </a>
+                    @else
+                    <a target="_blank" rel="noopener" class="tch-btn-header-secondary" href="{{ route('website.subdomain.previewOut', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
+                        Aperçu
+                    </a>
+                    @endif
+                </div>
             </div>
             <!---->
         </div>
@@ -1399,8 +1409,1019 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </form>
 </ng-include>
 
+
+@if($school->color)
+<ng-include src="'site/theme/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-colors">
+    <form method="post" enctype="multipart/form-data" action="{{url('colors', $school->color)}}" class="ng-pristine ng-valid ng-valid-required">
+        <div ng-show="!section.if || section.if()" id="section-colors" class="row tch-section-wrapper" section="section" save="true" form="themeColorsForm">
+            {{ csrf_field() }}
+            {{method_field('patch')}}
+
+            <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading section-wrapper__heading col-lg-3">
+                <!---->
+                <!---->
+                <div ng-if="section.name" class="tch-subheading">
+                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName" class="_2JQIJ">Couleurs</span>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!----><br ng-if="!removeDescriptionLineBreak">
+                    <!---->
+                    <p ng-bind-html="section.description" what="section-description" class="section-wrapper__description _3x1ps">Personnalisez les couleurs de votre école.</p>
+                    <!---->
+                    <!---->
+                    <!---->
+                </div>
+                <!---->
+            </div>
+            <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
+                <div ng-transclude="ng-transclude">
+                    <input hidden name="school_id" value="{{$school->id}}">
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div what="brand primary" form="themeColorsForm" label="Nav Bar &amp; Footer Background" for="brand_primary" label-description="Fixed, scrolling &amp; email">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_primary" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Couleur de fond du menu de navigation &amp; le pied de page</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">Fixed, scrolling &amp; email</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="navbar_footer" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="{{$school->color->navbar_footer}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_primary" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div what="brand navbar fixed text" form="themeColorsForm" label="Navigation Bar Links" for="brand_navbar_fixed_text" label-description="Links in transparent nav bar">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_navbar_fixed_text" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Liens dans le menu de navigation</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">Si menu transparent</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="navbar_links_transparent" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="{{$school->color->navbar_links_transparent}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_navbar_fixed_text" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div what="brand navbar text" form="themeColorsForm" label="Navigation Bar Links" for="brand_navbar_text" label-description="Links in solid nav bar">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_navbar_text" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Liens dans le menu de navigation</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">Links in solid nav bar</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="navbar_links" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="{{$school->color->navbar_links}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_navbar_text" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div what="brand navbar text" form="themeColorsForm" label="Buttons &amp; Links" for="brand_secondary" label-description="<a>, <button>">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_secondary" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Boutons &amp; Liens</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">&lt;a&gt;, &lt;button&gt;</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="buttons_links" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="{{$school->color->buttons_links}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_secondary" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div what="brand heading" form="themeColorsForm" label="Headings" for="brand_heading" label-description="<h2>, <h3>, <h4>, <h5>">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_heading" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Entêtes</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">&lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="headings" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="{{$school->color->headings}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_heading" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div what="brand homepage heading" form="themeColorsForm" label="Homepage Heading &amp; Subtitle" for="brand_homepage_heading" label-description="When a background is set">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_homepage_heading" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Entête page d'accueil &amp; Sous-titre</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">When a background is set</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="homepage_heading_subtitle" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="{{$school->color->homepage_heading_subtitle}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_homepage_heading" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div what="brand course page heading" form="themeColorsForm" label="Course Page Heading &amp; Subtitle" for="brand_course_heading" label-description="When a background is set">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_course_heading" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Entête page de cours &amp; Sous-titre</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">When a background is set</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="course_page_heading" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="{{$school->color->course_page_heading}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_course_heading" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div what="brand text" form="themeColorsForm" label="Body Text" for="brand_text" label-description="<body>, <p>">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_text" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Texte du corps</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">&lt;body&gt;, &lt;p&gt;</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="body_text" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="{{$school->color->body_text}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_text" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div what="brand text" form="themeColorsForm" label="Body Text" for="brand_text" label-description="<body>, <p>">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_text" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Largeur du logo</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input type="number" style="border-radius: 5px;" required name="logo_width" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="{{$school->color->logo_width}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_text" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div ng-show="showButtonsBar" class="tab-bottom">
+                    <!---->
+                    <!---->
+                    <!----><button id="test-id-save-btn" type="submit" class="tch-btn-header-primary _2po1U">Enregistrer</button>
+                    <!---->
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-include>
+@else
+<ng-include src="'site/theme/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-colors">
+    <form method="post" enctype="multipart/form-data" action="{{route('colors.store')}}" class="ng-pristine ng-valid ng-valid-required">
+        <div ng-show="!section.if || section.if()" id="section-colors" class="row tch-section-wrapper" section="section" save="true" form="themeColorsForm">
+            {{ csrf_field() }}
+
+            <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading section-wrapper__heading col-lg-3">
+                <!---->
+                <!---->
+                <div ng-if="section.name" class="tch-subheading">
+                    <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName" class="_2JQIJ">Couleurs</span>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!----><br ng-if="!removeDescriptionLineBreak">
+                    <!---->
+                    <p ng-bind-html="section.description" what="section-description" class="section-wrapper__description _3x1ps">Personnalisez les couleurs de votre école.</p>
+                    <!---->
+                    <!---->
+                    <!---->
+                </div>
+                <!---->
+            </div>
+            <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
+                <div ng-transclude="ng-transclude">
+                    <input hidden name="school_id" value="{{$school->id}}">
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div what="brand primary" form="themeColorsForm" label="Nav Bar &amp; Footer Background" for="brand_primary" label-description="Fixed, scrolling &amp; email">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_primary" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Couleur de fond du menu de navigation &amp; le pied de page</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">Fixed, scrolling &amp; email</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="navbar_footer" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_primary" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div what="brand navbar fixed text" form="themeColorsForm" label="Navigation Bar Links" for="brand_navbar_fixed_text" label-description="Links in transparent nav bar">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_navbar_fixed_text" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Liens dans le menu de navigation</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">Si menu transparent</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="navbar_links_transparent" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_navbar_fixed_text" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div what="brand navbar text" form="themeColorsForm" label="Navigation Bar Links" for="brand_navbar_text" label-description="Links in solid nav bar">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_navbar_text" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Liens dans le menu de navigation</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">Links in solid nav bar</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="navbar_links" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_navbar_text" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div what="brand navbar text" form="themeColorsForm" label="Buttons &amp; Links" for="brand_secondary" label-description="<a>, <button>">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_secondary" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Boutons &amp; Liens</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">&lt;a&gt;, &lt;button&gt;</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="buttons_links" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_secondary" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div what="brand heading" form="themeColorsForm" label="Headings" for="brand_heading" label-description="<h2>, <h3>, <h4>, <h5>">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_heading" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Entêtes</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">&lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="headings" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_heading" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div what="brand homepage heading" form="themeColorsForm" label="Homepage Heading &amp; Subtitle" for="brand_homepage_heading" label-description="When a background is set">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_homepage_heading" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Entête page d'accueil &amp; Sous-titre</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">When a background is set</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="homepage_heading_subtitle" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_homepage_heading" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div what="brand course page heading" form="themeColorsForm" label="Course Page Heading &amp; Subtitle" for="brand_course_heading" label-description="When a background is set">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_course_heading" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Entête page de cours &amp; Sous-titre</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">When a background is set</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="course_page_heading" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_course_heading" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div what="brand text" form="themeColorsForm" label="Body Text" for="brand_text" label-description="<body>, <p>">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_text" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Texte du corps</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">&lt;body&gt;, &lt;p&gt;</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="body_text" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_text" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div what="brand text" form="themeColorsForm" label="Body Text" for="brand_text" label-description="<body>, <p>">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_text" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Largeur du logo</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">&lt;body&gt;, &lt;p&gt;</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input type="number" style="border-radius: 5px;" required name="logo_width" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_text" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        {{--
+                        <div class="col-sm-4">
+                            <div what="brand video player color" form="themeColorsForm" label="Video Player" for="brand_video_player_color" label-description="Color of the video player">
+                                <!---->
+                                <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="show-errors" class="form-group">
+                                    <label-block required-label="requiredLabel">
+                                        <!---->
+                                        <!----><label for="brand_video_player_color" ng-if="label" class="control-label _2kIOe">
+                                            <!----><span ng-bind="label">Video Player</span>
+                                            <!----><span ng-if="labelDescription"><br>
+                                                <div ng-bind="labelDescription" class="small grey-italics">Color of the video player</div>
+                                            </span>
+                                            <!----></label>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </label-block>
+                                    <div ng-transclude="ng-transclude">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input style="border-radius: 5px;" required name="color1" class="jscolor form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <help-block>
+                                        <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </ng-messages>
+                                        <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="brand_video_player_color" class="help-block ng-hide"></div>
+                                    </help-block>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        --}}
+                    </div>
+                </div>
+                <div ng-show="showButtonsBar" class="tab-bottom">
+                    <!---->
+                    <!---->
+                    <!----><button id="test-id-save-btn" type="submit" class="tch-btn-header-primary _2po1U">Enregistrer</button>
+                    <!---->
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-include>
+@endif
+
     <!---->
     <!---->
+    {{--
     <ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-blog">
         <!---->
         <!---->
@@ -1459,9 +2480,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                 </div>
             </div>
+
         </div>
         <!---->
     </ng-include>
+    --}}
 
 
 
@@ -1527,5 +2550,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     <!---->
     @include('includes.information')
 </div>
+
+
+<script src="/js/jscolor.js"></script>
 
 @endsection

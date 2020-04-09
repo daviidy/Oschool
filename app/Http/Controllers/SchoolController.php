@@ -5,10 +5,13 @@ namespace App\Http\Controllers;
 use App\School;
 use Auth;
 use App\User;
+use App\Color;
 use App\Purchase;
+use App\Lesson;
 use App\Course;
 use App\Author;
 use App\Classroom;
+use Exception;
 use App\Faq;
 use Image;
 use Input;
@@ -79,6 +82,10 @@ class SchoolController extends Controller
         $slug = new SlugSchool();
         $school->slug = $slug->createSlug($request->name);
         $school->save();
+
+        $color = Color::create();
+
+        $color->school()->associate($school)->save();
 
        return redirect('home')->with('status', 'L\'école a bien été créée');
     }
@@ -579,7 +586,16 @@ class SchoolController extends Controller
         }
 
         if (Auth::check()) {
-            return view('users.dashboard_subdomain', ['school' => $school]);
+            //si le user est le proprio de l'ecole
+            //on l'envoie au tableau de bord d'admin
+            //de l'école
+            if ($school->user_id == Auth::user()->id) {
+                return view('admin_views.schools.show', ['school' => $school]);
+            }
+            else {
+                return view('users.dashboard_subdomain', ['school' => $school]);
+            }
+
         }
 
         else {
@@ -626,6 +642,153 @@ class SchoolController extends Controller
                   );
 
                      return back()->with('status', 'Votre message a bien été envoyé');
-                 }
+
 
         }
+
+
+
+        public function integrations(School $school)
+        {
+            return view('schools.integrations', ['school' => $school]);
+        }
+
+
+        public function callback(Request $request)
+        {
+			$state = $request->input('state');
+			$code = $request->input('code');
+			$school = School::find($state);
+
+			function postData($params, $url)
+                        {
+                         try {
+                         $curl = curl_init();
+                         $postfield = '';
+                         foreach ($params as $index => $value) {
+                         $postfield .= $index . '=' . $value . "&";
+                         }
+                         $postfield = substr($postfield, 0, -1);
+                         curl_setopt_array($curl, array(
+                         CURLOPT_URL => $url,
+                         CURLOPT_RETURNTRANSFER => true,
+                         CURLOPT_ENCODING => "",
+                         CURLOPT_MAXREDIRS => 10,
+                         CURLOPT_TIMEOUT => 45,
+                         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                         CURLOPT_CUSTOMREQUEST => "POST",
+                         CURLOPT_POSTFIELDS => $postfield,
+                         CURLOPT_SSL_VERIFYPEER => true,
+                         CURLOPT_HTTPHEADER => array(
+                         "Authorization: Basic ". base64_encode("IMCA3UZyQISOyBdKQR3oeA:qyANCnjRxNsoaUmpCtzfWXYn9Y8jS6Ju"),
+                         ),
+                         ));
+                         $response = curl_exec($curl);
+                         $err = curl_error($curl);
+                         curl_close($curl);
+                         if ($err) {
+                         throw new Exception("cURL Error #:" . $err);
+                         return $err;
+                         } else {
+                         return $response;
+                         }
+                         } catch (Exception $e) {
+                         throw new Exception($e);
+                         }
+                        }
+                      $params = array('grant_type' => 'authorization_code',
+                                      'code' => $code,
+                                      'redirect_uri' => "https://".$school->slug.".oschoolelearning.com/callback?state=".$school->id,
+                                      );
+                      $url = "https://zoom.us/oauth/token";
+                      //Appel de fonction postData()
+                      $resultat = postData($params, $url) ;
+                      $json = json_decode($resultat, true);
+
+
+                     Session::put('token', $json['access_token']);
+
+					return view('schools.integrations', ['school' => $school]);
+
+
+
+
+        }//fin function callback
+
+
+        public function listMeetings(Lesson $lesson, User $user)
+        {
+
+			function postData($params, $url)
+                        {
+                         try {
+                         $curl = curl_init();
+                         $postfield = '';
+                         foreach ($params as $index => $value) {
+                         $postfield .= $index . '=' . $value . "&";
+                         }
+                         $postfield = substr($postfield, 0, -1);
+                         curl_setopt_array($curl, array(
+                         CURLOPT_URL => $url,
+                         CURLOPT_RETURNTRANSFER => true,
+                         CURLOPT_ENCODING => "",
+                         CURLOPT_MAXREDIRS => 10,
+                         CURLOPT_TIMEOUT => 45,
+                         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                         CURLOPT_CUSTOMREQUEST => "GET",
+                         CURLOPT_POSTFIELDS => $postfield,
+                         CURLOPT_SSL_VERIFYPEER => true,
+                         CURLOPT_HTTPHEADER => array(
+                         "Authorization: Bearer ". Session::get('token'),
+                         ),
+                         ));
+                         $response = curl_exec($curl);
+                         $err = curl_error($curl);
+                         curl_close($curl);
+                         if ($err) {
+                         throw new Exception("cURL Error #:" . $err);
+                         return $err;
+                         } else {
+                         return $response;
+                         }
+                         } catch (Exception $e) {
+                         throw new Exception($e);
+                         }
+                        }
+                      $params = array('type' => 'upcoming',
+                                      'page_size' => 20,
+                                      'page_number' => 1,
+                                      );
+                      $url = "https://api.zoom.us/v2/users/yaodavidarmel@gmail.com/meetings";
+                      //Appel de fonction postData()
+                      $resultat = postData($params, $url) ;
+                      $json = json_decode($resultat, true);
+
+
+                       //Session::put('error', $json['reason']);
+                      return view('admin_views.meetings.index', ['school' => $lesson->course->school,
+                                                       'json' => $json['meetings'],
+                                                       'lesson' => $lesson,
+                                                       'course' => $lesson->course,
+                                                    ]);
+
+
+
+
+        }//fin function listMeetings
+
+
+        public function associateMeeting(Lesson $lesson, $meetingId)
+        {
+
+			$lesson->webinar_meeting = $meetingId;
+            $lesson->save();
+            return redirect('/schoolAdmin/'.$lesson->course->school->id.'/courses/'.$lesson->course->id.'/curriculum/'.$lesson->section->id.'/lessons/'.$lesson->id.'/edit')->with('status', 'Conférence associée avec succès');
+
+
+        }
+
+
+
+
+}

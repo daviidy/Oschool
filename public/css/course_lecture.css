@@ -190,7 +190,7 @@ h2{color:#000;}
 }
 .lecture-icon{font-size:16px;}
 header.half-height{height:46px!important;z-index:101;}
-header.half-height .lecture-left{width:349px;height:46px!important;float:left;background-color: #4d90cc!important;}
+header.half-height .lecture-left{width:349px;height:46px;float:left;background-color: #4d90cc!important;}
 header.half-height .lecture-left .nav-icon-back{width:50px!important;height:50px;padding:10px;line-height:20px;display:block;float:left;text-align:center;}
 header.half-height .lecture-left .nav-icon-back i{width:25px;height:25px;font-size:20px;padding-top:2px;}
 header.half-height .lecture-left .nav-icon-back:hover{text-decoration:none;}
@@ -208,7 +208,7 @@ header.half-height .lecture-left .settings-dropdown ul.dropdown-menu li .playbac
 header.half-height .lecture-left .settings-dropdown ul.dropdown-menu li .playback-speed:hover{color:#005289;cursor:pointer;}
 header.half-height .lecture-nav{display:flex;height:100%;margin-left:349px;}
 header.half-height .lecture-nav a.nav-btn{align-items:center;color:#fff;display:flex;flex:1;font-size:16px;justify-content:center;border-left:1px solid rgba(215,218,219,0.3);}
-header.half-height .lecture-nav a.nav-btn.complete,header.half-height .lecture-nav a.nav-btn:hover{background:#4d90cc!important;color:#fff;text-decoration:none;}
+header.half-height .lecture-nav a.nav-btn.complete,header.half-height .lecture-nav a.nav-btn:hover{background:#4d90cc;color:#fff;text-decoration:none;}
 @media screen and (min-width: 768px) and (max-width: 991px){
 header.half-height .lecture-left{width:300px;}
 header.half-height .lecture-nav{margin-left:300px;}

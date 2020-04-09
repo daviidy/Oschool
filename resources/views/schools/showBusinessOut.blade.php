@@ -5,6 +5,10 @@
     @section('content')
 
     <style media="screen">
+
+
+
+
     /*! CSS Used from: Embedded */
 article,header,section{display:block;}
 h1{font-size:2em;}
@@ -110,12 +114,12 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
 
 
 .btn-primary, .btn-primary:active, .btn-primary:focus {
-    background: #4d90cc !important;
-    border: 1px solid #4d90cc !important;
+    background: #{{$school->color->buttons_links}} !important;
+    border: 1px solid #{{$school->color->buttons_links}} !important;
 }
 
 .btn-primary:hover, .btn-primary:active:hover, .btn-primary:focus:hover {
-    background: #6aace6 !important;
+    background: #{{$school->color->buttons_links}} !important;
     border: 1px solid #6aace6 !important;
     }
     body{
@@ -138,17 +142,17 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
 
                             <header class="section__headings">
 
-                                <h1 class="section__heading section__heading___ce384">{{$school->name}}</h1>
+                                <h1 style="color: #{{$school->color->homepage_heading_subtitle}} !important;" class="section__heading section__heading___ce384">{{$school->name}}</h1>
 
 
-                                <h2 class="section__subheading section__subheading___ce384">{{$school->heading}}</h2>
+                                <h2 style="color: #{{$school->color->homepage_heading_subtitle}} !important;" class="section__subheading section__subheading___ce384">{{$school->heading}}</h2>
 
                             </header>
 
 
                             <section class="section__button-group">
 
-                                <a class="button button-primary" href="/register">Inscrivez-vous maintenant</a>
+                                <a style="border-color: #{{$school->color->buttons_links}}; background: #{{$school->color->buttons_links}};" class="button button-primary" href="/register">Inscrivez-vous maintenant</a>
 
 
                             </section>
@@ -184,7 +188,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                     @if($course->state == 'active')
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
-                            <div class="row">
+                            <div style="width: 100%;" class="row">
                                 <a href="{{ route('course.slug', $course->slug) }}" data-role="course-box-link">
                                     <div class="col-lg-12">
                                         <!-- Course Image, Name & Subtitle (everyone) -->
@@ -197,7 +201,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                                         <!-- Progress bar (enrolled users) -->
                                         @auth
                                         @if(Auth::user()->courses->contains($course->id))
-                                        <div class="col-xs-12" aria-hidden="false">
+                                        <div style="width: 85%;" class="col-xs-12" aria-hidden="false">
                                             <div class="progressbar">
                                                 @if($course->type == 'mooc')
                                                 @if(count($course->lessons) > 0)
@@ -205,7 +209,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                                                 @endif
                                                 @else
                                                 @if(count($course->projects) > 0)
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width: 
+                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width:
                                                 {{number_format((count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}%;" aria-valuenow="0%"></div>
                                                 @endif
                                                 @endif
@@ -269,22 +273,28 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <center>
-                          <a class="btn btn-md btn-primary" href="/schools/{{$school->id}}/courses">Voir tous les cours</a>
+                          <a style="background: #{{$school->color->buttons_links}};" class="btn btn-md btn-primary" href="/schools/{{$school->id}}/courses">Voir tous les cours</a>
                         </center>
                     </div>
                 </div>
                 <br>
 
-                <!--div class="css-gl013y">
-                    <div class="css-1ncomx8">
-                        <h2 class="css-1ac5tn2">{{$school->heading}}</h2>
-                        <div class="css-1npclfr">
-                            <p>{!!$school->description!!}</p>
-                            <p><strong><a>{{$school->city}} {{$school->state}} {{$school->street}}</a></strong></p>
-                        </div>
-                    </div>
-                    <div class="css-3cg4xb"><img src="/images/schools/backgrounds/{{$school->background}}" alt="filesharing mobile + security badge" class="css-9whsf3"></div>
-                </div-->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+
+                                    <div class="css-gl013y">
+                                        <div class="css-1ncomx8">
+                                            <h2 class="css-1ac5tn2">{{$school->heading}}</h2>
+                                            <div class="css-1npclfr">
+                                                <p>{!!$school->description!!}</p>
+                                                <p><strong><a style="color: #{{$school->color->buttons_links}};">{{$school->city}} {{$school->state}} {{$school->street}}</a></strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="css-3cg4xb"><img src="/images/schools/backgrounds/{{$school->background}}" alt="filesharing mobile + security badge" class="css-9whsf3"></div>
+                                    </div>
+                                </div>
+                </div>
+
             </div>
 
 

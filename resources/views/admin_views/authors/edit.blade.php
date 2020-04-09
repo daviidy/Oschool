@@ -429,6 +429,12 @@
                                     <div class="tch-btn-content-secondary fastclickable">
                                     <input id="image" type="file" name="image" value="{{$author->image}}">
                                     </div>
+
+                                    <div class="col-sm-12 add-top-margin-25">
+                                         <input value="{{$author->headline}}" type="text" name="headline" placeholder="Titre de l'auteur"
+                                          class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
+
+                                      </div>
                                 <div class="col-sm-12 add-top-margin-25">
                                     <input type="hidden" value="" name="bio">
                                       <div id="editor" style="height: 300px;">

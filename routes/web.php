@@ -29,6 +29,8 @@ Route::group(
         Route::get('/users/billings_business', 'UserController@BillingsBusiness')->name('website.subdomain.users_billings');
 
         Route::get('/users/contact_business', 'UserController@showFormContactSubDomain')->name('website.subdomain.contact_business');
+
+        //Route::get('/course/{slug}', 'CourseController@showCourseOut')->name('website.subdomain.course_out');
     }
 );
 
@@ -108,6 +110,10 @@ Route::resource('informations', 'InformationController');
 Route::resource('classrooms', 'ClassroomController');
 
 Route::resource('faqs', 'FaqController');
+
+Route::resource('drips', 'DripController');
+
+Route::resource('colors', 'ColorController');
 
 
 //for create school with subdoamin or attached domains
@@ -312,6 +318,9 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pricing/{pricing}/editOnePurc
 Route::get('/schoolAdmin/{school}/courses/{course}/pricing/createPaymentPlan', 'PricingController@createPaymentPlan')->name('course');
 Route::get('/schoolAdmin/{school}/courses/{course}/pricing/{pricing}/editPaymentPlan', 'PricingController@editPaymentPlan')->name('course');
 
+//course drip
+Route::get('/schoolAdmin/{school}/courses/{course}/drips', 'DripController@index')->name('course');
+
 //course certificates
 Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseController@certificates')->name('course');
 
@@ -351,6 +360,14 @@ Route::post('renew', 'PurchaseController@renew');
 Route::post('/thank-you', 'PurchaseController@thankYou');
 Route::get('/thank-you', 'PurchaseController@thankYou');
 
+Route::get('/schoolAdmin/{school}/integrations', 'SchoolController@integrations');
+
+//api zoom
+Route::get('/callback', 'SchoolController@callback');
+Route::get('/listMeetings/{lesson}/{user}', 'SchoolController@listMeetings')->name('course');
+Route::get('/associateMeeting/{lesson}/{meetingId}', 'SchoolController@associateMeeting')->name('course');
+
+
 
 //make user subscribe for free
 Route::post('/subscribeForFree', 'PurchaseController@subscribeForFree');
@@ -377,6 +394,7 @@ Route::post('/monthlyPayments', 'AdminController@monthlyPayments');
 // for authors
 
 Route::get('/schoolAdmin/{school}/authors/{author}/edit', 'AuthorController@edit');
+Route::get('/authors/{author}/show', 'AuthorController@show');
 
 //Route::get('/schoolAdmin/{school}/authors', 'AuthorController@index');
 

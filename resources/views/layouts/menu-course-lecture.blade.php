@@ -156,10 +156,43 @@
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    background-color: #4D90CC;
+    background-color: #{{$lesson->course->school->color->navbar_footer}};
     border: 0;
     color: white;
   }
+
+  header.half-height .lecture-left {
+    width: 349px;
+    height: 46px!important;
+    float: left;
+    background-color: #000!important;
+}
+
+header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-nav a.nav-btn:hover{
+    background: #{{$lesson->course->school->color->navbar_footer}}!important;
+}
+
+
+
+.course-section ul.section-list .section-item .item:hover {
+    color: #005289;
+    background: #{{$lesson->course->school->color->navbar_footer}};
+    opacity: 0.5;
+}
+
+.course-sidebar .course-progress {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    margin-top: 10px !important;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: #{{$lesson->course->school->color->buttons_links}};
+}
+
+a {
+    color: #000;
+}
 
   </style>
 
@@ -248,6 +281,8 @@
 
   </div>
 
+
+  @if(!$lesson->section->drip && $status !== '0' && $lesson->free_lesson == 'no' && !Auth::user()->courses->contains($lesson->section->course->id) && !$lesson->section->course->school->user->isOwner())
   <div class="lecture-nav">
     <a class="nav-btn" href="/course/{{$lesson->course->slug}}/lessons/{{$previous_lesson->slug}}" role="button" id="lecture_previous_button">
       <i class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -275,6 +310,7 @@
     </a>
     @endif
   </div>
+  @endif
 
 </header>
 

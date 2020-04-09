@@ -142,8 +142,8 @@
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:focus {
-    background: #0071bc !important;
-    border: 1px solid #0071bc !important;
+    background: #0071bc;
+    border: 1px solid #0071bc;
     font-weight: 600 !important;
     outline: none !important;
     color: #fff;
@@ -154,8 +154,8 @@
 .btn-primary:hover, .btn-primary:active:hover, .btn-primary:focus:hover {
     outline: none !important;
     text-decoration: none;
-    background: #0062a3 !important;
-    border: 1px solid #0062a3 !important;
+    background: #0062a3;
+    border: 1px solid #0062a3;
     color: #fff
 }
 
@@ -6050,7 +6050,7 @@ footer .powered-by .powered-by-logo {
     margin-top: 10px !important;
     margin-bottom: 25px;
     font-size: 13px;
-    color: #0071bc
+    color: #0071bc;
 }
 
 .course-sidebar .course-progress .course-progress-percentage {
