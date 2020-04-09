@@ -72,6 +72,11 @@ class School extends Model
           return $this->hasMany('App\Classroom');
       }
 
+    public function csv_file()
+          {
+              return $this->hasMany('App\CsvFile');
+          }
+
       public function faqs()
       {
           return $this->hasMany('App\Faq');

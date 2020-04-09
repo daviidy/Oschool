@@ -129,6 +129,19 @@ Route::get('/owner', 'OwnerController@owner')
 
     */
 
+/*CSV Route */
+/*
+Route::get('csv_file', 'CvsFileController@index');
+
+Route::get('csv_file/export', 'CsvFileController@csv_export')->name('export');
+
+Route::post('csv_file/import', 'CsvFileController@csv_import')->name('import');
+/*Route::get('/schoolAdmin/{school}/authors', 'UserController@authors')->name('userSettings');*/
+Route::get('/schoolAdmin/{school}/users/export', 'CsvFileController@csv_export')->name('export');
+
+
+
+
 //Ajax Routes
 
 Route::post('/updateSchoolStatus', 'SchoolController@updateSchoolStatus');
