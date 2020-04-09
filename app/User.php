@@ -163,6 +163,10 @@ class User extends Authenticatable implements MustVerifyEmail
           return $this->hasMany('App\Classroom');
       }
 
+    public function csv_file()
+          {
+              return $this->hasMany('App\CsvFile');
+          }
 
     public static function boot() {
     parent::boot();

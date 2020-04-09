@@ -77,7 +77,7 @@
     <script src="/js/all_courses/fedora.js" data-turbolinks-track="true"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-
+    <link rel="stylesheet" href="/css/dashboard-user/menu.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 

@@ -703,7 +703,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                 Oct 24, 2017</p>
             -->
                 <a class="basicBtn__3xa1QN1wgQsDZ1jCBiNCJ_ btn__2v-TLC9Odx5KkacwG29i-V btn-brand-dark-blue__2FtBOFhB1Sm_V0B5IdP_g_ block__2Zi7TViIIVUdz7kEnuWrCI outline__ew2jvSIM6pGG9P_gw6Bm5 editButton__2nNpny-WbdD9O6JrG1F92A"
-              data-btn="true" href="/account">
+              data-btn="true" href="/users/settings_business">
                   Modifier
               </a>
             <div class="section__2v9mQhyESDhguULKoR_J7P">
