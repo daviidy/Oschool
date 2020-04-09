@@ -56,7 +56,7 @@
                             <span class="_95a1a91b">CONTINUER AVEC LINKEDIN</span>
                         </a>
                 </div>
-                </div>
+                </div-->
                 <div class="_86bb084a">
                     <div class="_4dfd0c8c"></div>
                     <div class="_409742f4">ou inscrivez-vous par e-mail</div>
@@ -129,7 +129,7 @@
                         </div>
                         <input name="password_confirmation" class="_9a11307b" placeholder="Confirmez le mot de passe" type="password" required>
                     </div>
-                </div-->
+                </div>
 
                 <!--div class="_18c8ec60">Forgot Password?</div-->
                 @error('full_name')

@@ -30,7 +30,10 @@ Route::group(
 
         Route::get('/users/contact_business', 'UserController@showFormContactSubDomain')->name('website.subdomain.contact_business');
 
-        //Route::get('/course/{slug}', 'CourseController@showCourseOut')->name('website.subdomain.course_out');
+        Route::get('/users/settings_business', 'UserController@settingsContactSubDomain')->name('website.subdomain.settings_business');
+
+
+        //Route::get('/course/{slug}','CourseController@showCourseOut')->name('website.subdomain.course_out');
     }
 );
 
