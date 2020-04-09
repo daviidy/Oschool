@@ -53,6 +53,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'school' => ['required', 'string'],
         ]);
     }
 
@@ -72,6 +73,15 @@ class RegisterController extends Controller
             'type2' => 'none',
             'type3' => 'none',
         ]);
+        //inscription de user à l'école
+        if (!empty($data["school"])) {
+            $school = School::find($data["school"]);
+            $in_school = $user->schools->contains($school->id);
+            if (!$in_school) {
+                $user->schools()->attach($school);
+            }
+        }
+
 
         //envoi mail inscrit (mail bienvenue)
         Mail::send('mails.users.welcome', ['user' => $user], function($message) use ($user){

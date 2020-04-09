@@ -216,6 +216,10 @@
                                 <input type="password" name="password" id="password" autofocus="autofocus" class="spc__inline-form-input" placeholder="Mot de passe" required="required">
                             </div>
 
+                            <div class="spc__inline-form-inner">
+                                <input hidden type="text" name="school_id" value="{{$pricing->course->school->id}}" id="school_id" autofocus="autofocus" class="spc__inline-form-input" placeholder="Mot de passe" required="required">
+                            </div>
+
                             <div class="spc__primary-submit" data-checkout-enroll="">
                                 <button id="confirm-register" type="submit" class="btn btn-primary spc__button">
                                     <div class="loader">
@@ -476,7 +480,7 @@
                     </div>
 
                     <button id="confirm-cinetpay" type="submit" class="btn btn-primary spc__button">
-                        Abonnez-vous à la formation ({{$pricing->price}} FCFA)
+                        Je m'inscris à la formation ({{$pricing->price}} FCFA)
                     </button>
 
                 </form>
@@ -532,6 +536,7 @@ $(document).ready(function(){
                 cache: false,
                 success: function (data)
                 {
+                    $.amaran({'message':'Authentification réussie !'});
                     window.location = '/course/{{$pricing->course->slug}}/checkout/{{$pricing->id}}';
                 },
                 error: function (xhr, msg) {
@@ -547,12 +552,14 @@ $(document).ready(function(){
             var email       = $("#signup input[name=email]").val();
             var name       = $("#signup input[name=name]").val();
             var password    = $("#signup input[name=password]").val();
+            var school_id    = $("#signup input[name=school_id]").val();
             // garnish the data
             var data = {
-                _token:token,
-                email:email,
+                _token: token,
+                email: email,
                 name: name,
-                password:password
+                password: password,
+                school_id: school_id
             };
             // ajax post
             $.ajax({
@@ -561,13 +568,14 @@ $(document).ready(function(){
                 data: data,
                 cache: false,
                 success: function (data){
-                    $.amaran({'message':'Votre compte abien été crée ! Connectez-vous maintenant'});
+                    $.amaran({'message':'Votre compte a bien été crée avec succès ! Vous pouvez maintenant vous connecter'});
                     $("#signup")[0].reset(); // this reset the form to back to normal
                     $('#signup').css('display', 'none');
                     $('#login').css('display', 'block');
                     $('#register_link').css('display', 'block');
                     $(this).css('display', 'none');
                     $("#auth_title").text("Connectez-vous maintenant!");
+
                 },
                 error: function (xhr, msg) {
                   console.log(msg + '\n' + xhr.responseText);

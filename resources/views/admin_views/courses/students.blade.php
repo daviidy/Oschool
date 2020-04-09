@@ -847,7 +847,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     </span></td>
                               <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span am-time-ago="user.created_at">
                                 <div ng-if="product.is_published" class="pull-right">
-                                    <a target="_blank" href="{{url('users', $user)}}">
+                                    <a target="_blank" href="/users/show/{{$user->id}}/{{$school->id}}">
                                         <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
                                     </a>
                                     <form action="/unsubscribe" method="post">

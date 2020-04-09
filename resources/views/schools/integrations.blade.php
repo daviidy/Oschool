@@ -381,7 +381,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     <div class="card-body">
 
       <div class="status alert alert-success" role="alert">
-          {{session('token')}}
+          ZOOM est intégré à votre école
       </div>
 
 

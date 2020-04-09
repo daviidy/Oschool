@@ -72,7 +72,6 @@ Route::get('/users/settings', 'UserController@edit')->name('users.settings');
 
 
 
-
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 Route::resource('schools', 'SchoolController');
@@ -198,6 +197,9 @@ Route::get('/schoolAdmin/{school}/payments', 'SchoolController@schoolmonthlyPaym
 
 //school students
 Route::get('/schoolAdmin/{school}/users', 'SchoolController@schoolStudents')->name('userSettings');
+
+//show user profile
+Route::get('/users/show/{user}/{school}', 'UserController@show')->name('userSettings');
 
 //school owners
 Route::get('/schoolAdmin/{school}/users/owners', 'SchoolController@schoolOwners');

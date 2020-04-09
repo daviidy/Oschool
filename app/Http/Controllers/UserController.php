@@ -65,9 +65,9 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(User $user, School $school)
     {
-        return view('users.show', ['user' => $user]);
+        return view('users.show', ['user' => $user, 'school' => $school]);
     }
 
     /**

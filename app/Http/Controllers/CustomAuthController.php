@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Course;
+use App\School;
 use Auth;
 
 class CustomAuthController extends Controller
@@ -25,6 +27,20 @@ class CustomAuthController extends Controller
         $user->email    = $email;
         $user->password = $hash_password;
         $user->save();
+        //on inscrit user à l'ecole
+        $school = School::find($request->school_id);
+        $in_school = $user->schools->contains($school->id);
+        if (!$in_school) {
+            $user->schools()->attach($school);
+        }
+
+        if (Auth::guard('web')->attempt(['email' => $user->email, 'password' => $user->password])) {
+			$msg = array(
+				'status'  => 'success',
+				'message' => 'Login Successful'
+			);
+			return response()->json($msg);
+		}
     	// return a msg dumb msg with client email
     	$msg = $email." has been registered successfuly";
     	echo $msg; // or return data on json.

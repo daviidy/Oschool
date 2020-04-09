@@ -767,7 +767,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     <div ng-if="user.is_teachable_account" class="myteachable-icon-overlay">&nbsp;</div>
                                     <div ng-if="parseRole(user).indexOf('Primary Owner') > -1" class="primary-owner-badge"><span>P</span></div>
                                 -->
-                                    <!----><span what="name" ng-bind="user.name" ui-sref="admin.users.user.information({ id: user.id })" class="user-label _2kIOe" href="/admin/users/32429890/information">{{$user->name}}</span><br></div>
+                                    <!----><span class="user-label _2kIOe"><a target="_blank" href="/users/show/{{$user->id}}/{{$school->id}}">{{$user->name}}</a></span><br></div>
                             </td>
                             <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span what="email" ng-bind="user.email">{{$user->email}}</span></td>
                             @php

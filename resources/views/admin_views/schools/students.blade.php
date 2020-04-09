@@ -756,6 +756,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <!---->
                         @foreach($school->users as $user)
                         @if($user->type1 == 'default')
+
                         <tr what="user" which="davidyfreelance@gmail.com" ng-repeat="user in users" class="border-bottom">
                             <td class="user-name-container"><input what="select user checkbox" type="checkbox" ng-model="user.userSelected" ng-change="updateSelectedUsers(user)" ng-checked="user.userSelected" ng-hide="(user.id === currentUser._id)"
                                   class="pull-left ng-pristine ng-untouched ng-valid ng-empty {{$user->isAdmin() || $user->isOwner() ? 'ng-hide' : ''}}">
@@ -768,7 +769,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     <div ng-if="user.is_teachable_account" class="myteachable-icon-overlay">&nbsp;</div>
                                     <div ng-if="parseRole(user).indexOf('Primary Owner') > -1" class="primary-owner-badge"><span>P</span></div>
                                 -->
-                                    <!----><span what="name" ng-bind="user.name" ui-sref="admin.users.user.information({ id: user.id })" class="user-label _2kIOe" href="/admin/users/32429890/information">{{$user->name}}</span><br></div>
+                                    <!----><span class="user-label _2kIOe"><a target="_blank" href="/users/show/{{$user->id}}/{{$school->id}}">{{$user->name}}</a></span><br></div>
                             </td>
                             <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span what="email" ng-bind="user.email">{{$user->email}}</span></td>
                             @php
@@ -802,7 +803,9 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'affiliate code')" class="_2kIOe ng-hide" href="/admin/users/32429890/information"><span
                                   ng-bind="getAffiliateCode(user)">507165_ajxeso0q</span></td>
                             <td ng-hide="hideEmailButton" class="ng-hide"><button ng-click="emailUser(user.id)" class="tch-btn-content-secondary tch-btn-icon pull-right fastclickable"><i class="fa fa-envelope-o"></i></button></td>
+
                         </tr>
+
                         @endif
                         @endforeach
                         <!---->

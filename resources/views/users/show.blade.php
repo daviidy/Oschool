@@ -1,4 +1,4 @@
-@extends('layouts.menu-dashboard-user')
+@extends('layouts.admin_views.menu-school-icon')
 @section('title', 'A propos de '.$user->name)
 
 @section('content')
@@ -109,8 +109,8 @@ p{margin:0;}
 
 
 #STUDENT-DASHBOARD-REACT {
-    width: 100%;
-    padding-left: 27rem;
+    width: 95%;
+    padding-left: 23rem;
     padding-top: 0rem;
 }
 
@@ -506,8 +506,8 @@ div.mce-edit-area{background:#fff;filter:none;}
 
 
 #userCourses {
-    width: 100%;
-    padding-left: 28rem;
+    width: 95%;
+    padding-left: 24rem;
     padding-top: 0rem;
 }
 
@@ -561,6 +561,21 @@ div.mce-edit-area{background:#fff;filter:none;}
                             <button style="font-size: 12px;" class="button button--secondary button--compact searchField__button" type="submit" data-open-on-change="false" data-cancel-button="true" data-text-button="Retirer ce mentor"
                               data-message="Attention, retirer l'attribution de ce mentor va entraîner la suppression des éventuelles futures sessions de mentorat déjà programmées avec l'étudiant." data-force-width="480">
                                 Supprimer cet utilisateur
+                            </button>
+                        </form>
+
+                    </div>
+                    @endif
+
+                    @if(Auth::user()->isOwner() && Auth::user()->createSchools->contains($school->id))
+                    <div class="mentorshipStudent__details oc-typography-body1">
+                        <form action="/nameSchoolAdmin" method="post">
+                            {{ csrf_field() }}
+                            <input hidden type="text" name="user_id" value="{{$user->id}}">
+                            <input hidden type="text" name="user_id" value="{{$user->id}}">
+                            <button style="font-size: 12px;" class="button button--secondary button--compact searchField__button" type="submit" data-open-on-change="false" data-cancel-button="true" data-text-button="Retirer ce mentor"
+                              data-message="Attention, retirer l'attribution de ce mentor va entraîner la suppression des éventuelles futures sessions de mentorat déjà programmées avec l'étudiant." data-force-width="480">
+                                Nommer cet utilisateur admin de votre école
                             </button>
                         </form>
 
