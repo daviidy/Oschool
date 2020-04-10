@@ -707,6 +707,7 @@ class SchoolController extends Controller
 
 
                      $school->token = $json['access_token'];
+                     $school->save();
 
 					return view('schools.integrations', ['school' => $school]);
 
