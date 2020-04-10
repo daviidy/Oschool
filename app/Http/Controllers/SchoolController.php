@@ -895,7 +895,7 @@ class SchoolController extends Controller
             $user->type3 = 'owner';
             $user->save();
 
-            Mail::send('mails.users.contact.nameAdmin', ['school' => $school, 'user' => $user], function($message) use($user){
+            Mail::send('mails.users.contact.nameAdmin', ['school' => $school, 'user' => $user], function($message) use($user, $school){
 
               $message->to($user->email, 'Vos droits administrateurs')->subject('Vos droits administrateurs');
               $message->from('eventsoschool@gmail.com', $school->name);
