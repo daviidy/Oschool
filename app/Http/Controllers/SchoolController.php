@@ -901,7 +901,7 @@ class SchoolController extends Controller
               $message->from('eventsoschool@gmail.com', $school->name);
             });
 
-            return redirect()->back()->with('status', 'Cet utilisateur est maintenant administrateur de votre école')
+            return redirect()->back()->with('status', 'Cet utilisateur est maintenant administrateur de votre école');
         }
 
         public function revokeSchoolAdmin(Request $request)
@@ -918,7 +918,7 @@ class SchoolController extends Controller
               $message->from('eventsoschool@gmail.com', $school->name);
             });
 
-            return redirect()->back()->with('status', 'Cet utilisateur n\'est plus administrateur de votre école')
+            return redirect()->back()->with('status', 'Cet utilisateur n\'est plus administrateur de votre école');
         }
 
 
