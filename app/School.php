@@ -25,7 +25,8 @@ class School extends Model
                            'background',
                            'overlay',
                            'user_id',
-                           'domain'
+                           'domain',
+                           'token'
                          ];
 
      /**
