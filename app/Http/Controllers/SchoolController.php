@@ -912,7 +912,7 @@ class SchoolController extends Controller
             $user->type3 = '';
             $user->save();
 
-            Mail::send('mails.users.contact.revokeAdmin', ['school' => $school, 'user' => $user], function($message) use($user, $school){
+            Mail::send('mails.users.contact.revokeSchoolAdmin', ['school' => $school, 'user' => $user], function($message) use($user, $school){
 
               $message->to($user->email, 'Vous n\'êtes plus administrateur')->subject('Vous n\'êtes plus administrateur');
               $message->from('eventsoschool@gmail.com', $school->name);
