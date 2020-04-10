@@ -571,7 +571,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                     <div class="mentorshipStudent__details oc-typography-body1">
                         <form action="/nameSchoolAdmin" method="post">
                             {{ csrf_field() }}
-                            <input hidden type="text" name="user_id" value="{{$user->id}}">
+                            <input hidden type="text" name="school_id" value="{{$school->id}}">
                             <input hidden type="text" name="user_id" value="{{$user->id}}">
                             <button style="font-size: 12px;" class="button button--secondary button--compact searchField__button" type="submit" data-open-on-change="false" data-cancel-button="true" data-text-button="Retirer ce mentor"
                               data-message="Attention, retirer l'attribution de ce mentor va entraîner la suppression des éventuelles futures sessions de mentorat déjà programmées avec l'étudiant." data-force-width="480">

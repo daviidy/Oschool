@@ -377,11 +377,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
     @include('includes.status')
 
-    @if(session('token'))
+    @if($school->token !== null)
     <div class="card-body">
 
       <div class="status alert alert-success" role="alert">
-          ZOOM est intégré à votre école
+          ZOOM est déjà autorisé dans votre école
       </div>
 
 

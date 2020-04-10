@@ -377,6 +377,8 @@ Route::get('/associateMeeting/{lesson}/{meetingId}', 'SchoolController@associate
 //make user subscribe for free
 Route::post('/subscribeForFree', 'PurchaseController@subscribeForFree');
 
+//make user admin of a school
+Route::post('/nameSchoolAdmin', 'SchoolController@nameSchoolAdmin');
 
 //validate a lesson
 Route::post('/completeLesson', 'LessonController@completeLesson');

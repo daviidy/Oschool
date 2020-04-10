@@ -706,7 +706,7 @@ class SchoolController extends Controller
                       $json = json_decode($resultat, true);
 
 
-                     Session::put('token', $json['access_token']);
+                     $school->token = $json['access_token'];
 
 					return view('schools.integrations', ['school' => $school]);
 
@@ -739,7 +739,7 @@ class SchoolController extends Controller
                          CURLOPT_POSTFIELDS => $postfield,
                          CURLOPT_SSL_VERIFYPEER => true,
                          CURLOPT_HTTPHEADER => array(
-                         "Authorization: Bearer ". Session::get('token'),
+                         "Authorization: Bearer ". $lesson->course->school->token,
                          ),
                          ));
                          $response = curl_exec($curl);
@@ -763,6 +763,116 @@ class SchoolController extends Controller
                       //Appel de fonction postData()
                       $resultat = postData($params, $url) ;
                       $json = json_decode($resultat, true);
+
+
+                      //si le token est expiré
+                      //on fait un refresh token
+
+                      if (array_key_exists("message", $json)) {
+
+                          function refreshToken($params, $url){
+                               try {
+                               $curl = curl_init();
+                               $postfield = '';
+                               foreach ($params as $index => $value) {
+                               $postfield .= $index . '=' . $value . "&";
+                               }
+                               $postfield = substr($postfield, 0, -1);
+                               curl_setopt_array($curl, array(
+                               CURLOPT_URL => $url,
+                               CURLOPT_RETURNTRANSFER => true,
+                               CURLOPT_ENCODING => "",
+                               CURLOPT_MAXREDIRS => 10,
+                               CURLOPT_TIMEOUT => 45,
+                               CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                               CURLOPT_CUSTOMREQUEST => "POST",
+                               CURLOPT_POSTFIELDS => $postfield,
+                               CURLOPT_SSL_VERIFYPEER => true,
+                               CURLOPT_HTTPHEADER => array(
+                               "Authorization: Basic ". base64_encode("IMCA3UZyQISOyBdKQR3oeA:qyANCnjRxNsoaUmpCtzfWXYn9Y8jS6Ju"),
+                               ),
+                               ));
+                               $response = curl_exec($curl);
+                               $err = curl_error($curl);
+                               curl_close($curl);
+                               if ($err) {
+                               throw new Exception("cURL Error #:" . $err);
+                               return $err;
+                               } else {
+                               return $response;
+                               }
+                               } catch (Exception $e) {
+                               throw new Exception($e);
+                               }
+                              }
+                            $params = array('grant_type' => 'refresh_token',
+                                            'refresh_token' => $lesson->course->school->token,
+                                            );
+                            $url = "https://zoom.us/oauth/token";
+                            //Appel de fonction postData()
+                            $resultat = refreshToken($params, $url) ;
+                            $new_json = json_decode($resultat, true);
+
+                            $lesson->course->school->token = $new_json['access_token'];
+                            $lesson->course->school->save();
+
+                            //on récupère le nouveau token et on fait
+                            //l'api call zoom pour obtenir les
+                            //infos du meeting associé
+
+
+                            function postData($params, $url)
+                                        {
+                                         try {
+                                         $curl = curl_init();
+                                         $postfield = '';
+                                         foreach ($params as $index => $value) {
+                                         $postfield .= $index . '=' . $value . "&";
+                                         }
+                                         $postfield = substr($postfield, 0, -1);
+                                         curl_setopt_array($curl, array(
+                                         CURLOPT_URL => $url,
+                                         CURLOPT_RETURNTRANSFER => true,
+                                         CURLOPT_ENCODING => "",
+                                         CURLOPT_MAXREDIRS => 10,
+                                         CURLOPT_TIMEOUT => 45,
+                                         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                                         CURLOPT_CUSTOMREQUEST => "GET",
+                                         CURLOPT_POSTFIELDS => $postfield,
+                                         CURLOPT_SSL_VERIFYPEER => true,
+                                         CURLOPT_HTTPHEADER => array(
+                                         "Authorization: Bearer ". $lesson->course->school->token,
+                                         ),
+                                         ));
+                                         $response = curl_exec($curl);
+                                         $err = curl_error($curl);
+                                         curl_close($curl);
+                                         if ($err) {
+                                         throw new Exception("cURL Error #:" . $err);
+                                         return $err;
+                                         } else {
+                                         return $response;
+                                         }
+                                         } catch (Exception $e) {
+                                         throw new Exception($e);
+                                         }
+                                        }
+                                      $params = array('type' => 'upcoming',
+                                                      'page_size' => 20,
+                                                      'page_number' => 1,
+                                                      );
+                                      $url = "https://api.zoom.us/v2/users/yaodavidarmel@gmail.com/meetings";
+                                      //Appel de fonction postData()
+                                      $resultat = postData($params, $url) ;
+                                      $json = json_decode($resultat, true);
+
+
+                                      return view('admin_views.meetings.index', ['school' => $lesson->course->school,
+                                                                       'json' => $json['meetings'],
+                                                                       'lesson' => $lesson,
+                                                                       'course' => $lesson->course,
+                                                                    ]);
+                      }
 
 
                        //Session::put('error', $json['reason']);
