@@ -280,7 +280,7 @@ class LessonController extends Controller
                      CURLOPT_POSTFIELDS => $postfield,
                      CURLOPT_SSL_VERIFYPEER => true,
                      CURLOPT_HTTPHEADER => array(
-                     "Authorization: Bearer ". $lesson->course->school->token,
+                     "Authorization: Bearer ". $course->school->token,
                      ),
                      ));
                      $response = curl_exec($curl);
@@ -296,9 +296,7 @@ class LessonController extends Controller
                      throw new Exception($e);
                      }
                     }
-                  $params = array('type' => 'upcoming',
-                                  'page_size' => 20,
-                                  'page_number' => 1,
+                  $params = array('occurrence_id' => '',
                                   );
                   $url = "https://api.zoom.us/v2/meetings/".$lesson->webinar_meeting;
                   //Appel de fonction postData()
@@ -346,7 +344,7 @@ class LessonController extends Controller
                            }
                           }
                         $params = array('grant_type' => 'refresh_token',
-                                        'refresh_token' => $lesson->course->school->token,
+                                        'refresh_token' => $course->school->token,
                                         );
                         $url = "https://zoom.us/oauth/token";
                         //Appel de fonction postData()
@@ -380,7 +378,7 @@ class LessonController extends Controller
                              CURLOPT_POSTFIELDS => $postfield,
                              CURLOPT_SSL_VERIFYPEER => true,
                              CURLOPT_HTTPHEADER => array(
-                             "Authorization: Bearer ". $lesson->course->school->token,
+                             "Authorization: Bearer ". $course->school->token,
                              ),
                              ));
                              $response = curl_exec($curl);
@@ -396,9 +394,7 @@ class LessonController extends Controller
                              throw new Exception($e);
                              }
                             }
-                          $params = array('type' => 'upcoming',
-                                          'page_size' => 20,
-                                          'page_number' => 1,
+                          $params = array('occurrence_id' => '',
                                           );
                           $url = "https://api.zoom.us/v2/meetings/".$lesson->webinar_meeting;
                           //Appel de fonction postData()
@@ -494,9 +490,7 @@ class LessonController extends Controller
                      throw new Exception($e);
                      }
                     }
-                  $params = array('type' => 'upcoming',
-                                  'page_size' => 20,
-                                  'page_number' => 1,
+                  $params = array('occurrence_id' => '',
                                   );
                   $url = "https://api.zoom.us/v2/meetings/".$lesson->webinar_meeting;
                   //Appel de fonction postData()
@@ -594,9 +588,7 @@ class LessonController extends Controller
                              throw new Exception($e);
                              }
                             }
-                          $params = array('type' => 'upcoming',
-                                          'page_size' => 20,
-                                          'page_number' => 1,
+                          $params = array('occurrence_id' => '',
                                           );
                           $url = "https://api.zoom.us/v2/meetings/".$lesson->webinar_meeting;
                           //Appel de fonction postData()
