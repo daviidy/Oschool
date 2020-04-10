@@ -28,15 +28,15 @@
 .
     <tr>
       <td style="padding: 20px 7.5% 0;"> Voici les infos de la transaction  <br>
-				
+
         {!!$content!!}
       </td>
     </tr>
 
     <tr>
       <td style="padding: 20px 7.5% 0;"> Voici les infos de l'étudiant <br>
-        
-        <p>Vous pouvez répondre à l'étudiant.e en lui écrivant à son mail: {{$student_mail}}</p>
+
+        <p>Vous pouvez répondre à l'étudiant.e en lui écrivant à son mail: {{$user_mail}}</p>
       </td>
     </tr>
 
