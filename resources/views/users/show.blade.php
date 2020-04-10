@@ -513,6 +513,11 @@ div.mce-edit-area{background:#fff;filter:none;}
 
 }
 
+.card-body{
+    width: 59%;
+    margin: auto;
+}
+
 </style>
 
 @include('includes.status')
@@ -696,7 +701,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                 </thead>
                 <tbody>
                     @foreach($user->courses as $course)
-                        @if($course->type == "course")
+                        @if($course->type == "mooc")
                     <tr>
                         <td class="text-left">
                             <a class="dashboardTable__link">
