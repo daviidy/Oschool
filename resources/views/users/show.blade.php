@@ -515,7 +515,7 @@ div.mce-edit-area{background:#fff;filter:none;}
 
 </style>
 
-
+@include('includes.status')
 
 <div id="STUDENT-DASHBOARD-REACT">
     <div class="MuiPaper-root MuiPaper-elevation0 jss305 jss312"><svg class="jss309 jss313" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -567,7 +567,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                     </div>
                     @endif
 
-                    @if(Auth::user()->isOwner() && Auth::user()->createSchools->contains($school->id))
+                    @if(Auth::user()->isOwner() && Auth::user()->createSchools->contains($school->id) && !$user->isOwner())
                     <div class="mentorshipStudent__details oc-typography-body1">
                         <form action="/nameSchoolAdmin" method="post">
                             {{ csrf_field() }}
@@ -576,6 +576,21 @@ div.mce-edit-area{background:#fff;filter:none;}
                             <button style="font-size: 12px;" class="button button--secondary button--compact searchField__button" type="submit" data-open-on-change="false" data-cancel-button="true" data-text-button="Retirer ce mentor"
                               data-message="Attention, retirer l'attribution de ce mentor va entraîner la suppression des éventuelles futures sessions de mentorat déjà programmées avec l'étudiant." data-force-width="480">
                                 Nommer cet utilisateur admin de votre école
+                            </button>
+                        </form>
+
+                    </div>
+                    @endif
+
+                    @if(Auth::user()->isOwner() && Auth::user()->createSchools->contains($school->id) && $user->isOwner())
+                    <div class="mentorshipStudent__details oc-typography-body1">
+                        <form action="/revokeSchoolAdmin" method="post">
+                            {{ csrf_field() }}
+                            <input hidden type="text" name="school_id" value="{{$school->id}}">
+                            <input hidden type="text" name="user_id" value="{{$user->id}}">
+                            <button style="font-size: 12px;" class="button button--secondary button--compact searchField__button" type="submit" data-open-on-change="false" data-cancel-button="true" data-text-button="Retirer ce mentor"
+                              data-message="Attention, retirer l'attribution de ce mentor va entraîner la suppression des éventuelles futures sessions de mentorat déjà programmées avec l'étudiant." data-force-width="480">
+                                Révoquer les droits d'administrateur de cet utilisateur
                             </button>
                         </form>
 

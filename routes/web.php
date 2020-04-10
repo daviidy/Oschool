@@ -379,6 +379,7 @@ Route::post('/subscribeForFree', 'PurchaseController@subscribeForFree');
 
 //make user admin of a school
 Route::post('/nameSchoolAdmin', 'SchoolController@nameSchoolAdmin');
+Route::post('/revokeSchoolAdmin', 'SchoolController@revokeSchoolAdmin');
 
 //validate a lesson
 Route::post('/completeLesson', 'LessonController@completeLesson');

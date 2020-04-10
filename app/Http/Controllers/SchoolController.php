@@ -609,39 +609,27 @@ class SchoolController extends Controller
      public function contactSubDomain(Request $request)
      {
 
-                 //on vas prendre l'input sujet et message ainsi que
-                // le mail de l'étudiant
+         //on vas prendre l'input sujet et message ainsi que
+        // le mail de l'étudiant
 
 
-                     $content = $request->content;
-                     $student_mail = $request->student_mail;
+             $content = $request->content;
+             $student_mail = $request->student_mail;
 
-                //on retrouve le proprio du school
-                $user = User::find($request->user_id);
+            //on retrouve le proprietaire de l'école dans la bdd
+             $user = User::where('name', $user_id)->first();
+             $content = $request->content;
+             $user_mail = $request->user_mail;
 
-                     Mail::send('mails.users.contact.send', ['user' => $user, 'content' => $content, 'student_mail' => $student_mail], function($message) use($user){
-                 //on vas prendre l'input sujet et message ainsi que
-                // le mail de l'utilisateur et celui du propriétaire
-                 $user = User::find($request->user_id);
+             Mail::send('mails.users.contact.send', ['user' => $user, 'content' => $content, 'user_mail' => $user_mail], function($message) use($user){
 
-                    //on retrouve le proprietaire de l'école dans la bdd
-                     $user = User::where('name', $user_id)->first();
-                     $content = $request->content;
-                     $user_mail = $request->user_mail;
-
-                     Mail::send('mails.users.contact.send', ['user' => $user, 'content' => $content, 'user_mail' => $user_mail], function($message) use($user){
-
-                       $message->to($user->email, 'Un.e étudiant.e vous a envoyé un message')->subject('Un.e étudiant.e vous a envoyé un message');
-                       $message->from('eventsoschool@gmail.com', 'Oschool');
-                     });
+               $message->to($user->email, 'Un.e étudiant.e vous a envoyé un message')->subject('Un.e étudiant.e vous a envoyé un message');
+               $message->from('eventsoschool@gmail.com', 'Oschool');
+             });
 
 
-                     return back()->with('status', 'Votre message a bien été envoyé');
+             return back()->with('status', 'Votre message a bien été envoyé');
 
-                    }
-                  );
-
-                     return back()->with('status', 'Votre message a bien été envoyé');
 
 
         }
@@ -897,6 +885,40 @@ class SchoolController extends Controller
             return redirect('/schoolAdmin/'.$lesson->course->school->id.'/courses/'.$lesson->course->id.'/curriculum/'.$lesson->section->id.'/lessons/'.$lesson->id.'/edit')->with('status', 'Conférence associée avec succès');
 
 
+        }
+
+        public function nameSchoolAdmin(Request $request)
+        {
+            $user = User::find($request->user_id);
+            $school = School::find($request->school_id);
+
+            $user->type3 = 'owner';
+            $user->save();
+
+            Mail::send('mails.users.contact.nameAdmin', ['school' => $school, 'user' => $user], function($message) use($user){
+
+              $message->to($user->email, 'Vos droits administrateurs')->subject('Vos droits administrateurs');
+              $message->from('eventsoschool@gmail.com', $school->name);
+            });
+
+            return redirect()->back()->with('status', 'Cet utilisateur est maintenant administrateur de votre école')
+        }
+
+        public function revokeSchoolAdmin(Request $request)
+        {
+            $user = User::find($request->user_id);
+            $school = School::find($request->school_id);
+
+            $user->type3 = '';
+            $user->save();
+
+            Mail::send('mails.users.contact.revokeAdmin', ['school' => $school, 'user' => $user], function($message) use($user){
+
+              $message->to($user->email, 'Vous n\'êtes plus administrateur')->subject('Vous n\'êtes plus administrateur');
+              $message->from('eventsoschool@gmail.com', $school->name);
+            });
+
+            return redirect()->back()->with('status', 'Cet utilisateur n\'est plus administrateur de votre école')
         }
 
 

@@ -183,9 +183,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </a>
               <ul class="dropdown-menu">
                 <li class="user-profile">
-                  <a href="/users/settings">
-                    Modifier votre profil
+                  @if($course->school->user->isAdmin())
+                  <a href="/users/settings" target="_blank" class="tch-btn-header-primary">Voir l'école</a>
+                  @else
+                  <a href="{{ route('website.subdomain.settings_business', ['subdomain' => $school->slug]) }}" target="_blank" class="tch-btn-header-primary">
+                     Modifier votre profil
                   </a>
+                  @endif
                 </li>
                 <li>
 
