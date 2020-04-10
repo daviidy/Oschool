@@ -126,6 +126,10 @@ class LessonController extends Controller
             $available = '';
             $status = '';
 
+            if ($course->school->token !== null) {
+                Session::put('token', $course->school->token);
+            }
+
 
 
             //si le lecon n'est pas gratutie
@@ -261,7 +265,6 @@ class LessonController extends Controller
             }
 
             if ($lesson->webinar_meeting !== null) {
-                $course = Course::where('slug', $slugCourse)->firstOrFail();
                 function postData($params, $url){
                      try {
                      $curl = curl_init();
@@ -281,7 +284,7 @@ class LessonController extends Controller
                      CURLOPT_POSTFIELDS => $postfield,
                      CURLOPT_SSL_VERIFYPEER => true,
                      CURLOPT_HTTPHEADER => array(
-                     "Authorization: Bearer ". $course->school->token,
+                     "Authorization: Bearer ". Session::get('token'),
                      ),
                      ));
                      $response = curl_exec($curl);
@@ -345,15 +348,17 @@ class LessonController extends Controller
                            }
                           }
                         $params = array('grant_type' => 'refresh_token',
-                                        'refresh_token' => $course->school->token,
+                                        'refresh_token' => Session::get('token'),
                                         );
                         $url = "https://zoom.us/oauth/token";
                         //Appel de fonction postData()
                         $resultat = refreshToken($params, $url) ;
                         $new_json = json_decode($resultat, true);
 
-                        $lesson->course->school->token = $new_json['access_token'];
-                        $lesson->course->school->save();
+                        $course->school->token = $new_json['access_token'];
+                        $course->school->save();
+
+                        Session::put('token', $course->school->token);
 
                         //on récupère le nouveau token et on fait
                         //l'api call zoom pour obtenir les
@@ -379,7 +384,7 @@ class LessonController extends Controller
                              CURLOPT_POSTFIELDS => $postfield,
                              CURLOPT_SSL_VERIFYPEER => true,
                              CURLOPT_HTTPHEADER => array(
-                             "Authorization: Bearer ". $course->school->token,
+                             "Authorization: Bearer ". Session::get('token'),
                              ),
                              ));
                              $response = curl_exec($curl);
@@ -455,6 +460,10 @@ class LessonController extends Controller
     public function edit(School $school, Course $course, Section $section, Lesson $lesson)
     {
         if (Auth::check()) {
+            if (^$school->token !== null) {
+                Session::put('token', $school->token);
+            }
+
             if ($lesson->webinar_meeting !== null) {
                 function postData($params, $url){
                      try {
@@ -475,7 +484,7 @@ class LessonController extends Controller
                      CURLOPT_POSTFIELDS => $postfield,
                      CURLOPT_SSL_VERIFYPEER => true,
                      CURLOPT_HTTPHEADER => array(
-                     "Authorization: Bearer ". $school->token,
+                     "Authorization: Bearer ". Session::get('token'),
                      ),
                      ));
                      $response = curl_exec($curl);
@@ -539,7 +548,7 @@ class LessonController extends Controller
                            }
                           }
                         $params = array('grant_type' => 'refresh_token',
-                                        'refresh_token' => $school->token,
+                                        'refresh_token' => Session::get('token'),
                                         );
                         $url = "https://zoom.us/oauth/token";
                         //Appel de fonction postData()
@@ -548,6 +557,8 @@ class LessonController extends Controller
 
                         $school->token = $new_json['access_token'];
                         $school->save();
+
+                        Session::put('token', $school->token);
 
                         //on récupère le nouveau token et on fait
                         //l'api call zoom pour obtenir les
@@ -573,7 +584,7 @@ class LessonController extends Controller
                              CURLOPT_POSTFIELDS => $postfield,
                              CURLOPT_SSL_VERIFYPEER => true,
                              CURLOPT_HTTPHEADER => array(
-                             "Authorization: Bearer ". $school->token,
+                             "Authorization: Bearer ". Session::get('token'),
                              ),
                              ));
                              $response = curl_exec($curl);
