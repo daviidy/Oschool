@@ -460,7 +460,7 @@ class LessonController extends Controller
     public function edit(School $school, Course $course, Section $section, Lesson $lesson)
     {
         if (Auth::check()) {
-            if (^$school->token !== null) {
+            if ($school->token !== null) {
                 Session::put('token', $school->token);
             }
 
