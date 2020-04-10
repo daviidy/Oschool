@@ -617,7 +617,7 @@ class SchoolController extends Controller
              $student_mail = $request->student_mail;
 
             //on retrouve le proprietaire de l'école dans la bdd
-             $user = User::where('name', $user_id)->first();
+             $user = User::find($request->user_id);
              $content = $request->content;
              $user_mail = $request->user_mail;
 
@@ -912,7 +912,7 @@ class SchoolController extends Controller
             $user->type3 = '';
             $user->save();
 
-            Mail::send('mails.users.contact.revokeAdmin', ['school' => $school, 'user' => $user], function($message) use($user){
+            Mail::send('mails.users.contact.revokeAdmin', ['school' => $school, 'user' => $user], function($message) use($user, $school){
 
               $message->to($user->email, 'Vous n\'êtes plus administrateur')->subject('Vous n\'êtes plus administrateur');
               $message->from('eventsoschool@gmail.com', $school->name);
