@@ -261,6 +261,7 @@ class LessonController extends Controller
             }
 
             if ($lesson->webinar_meeting !== null) {
+                $course = Course::where('slug', $slugCourse)->firstOrFail();
                 function postData($params, $url){
                      try {
                      $curl = curl_init();
