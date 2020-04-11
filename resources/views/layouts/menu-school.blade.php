@@ -807,7 +807,7 @@ img{display:block;}
                                       </a>
                                     </li>
                                     <li class="user-profile">
-                                        @if($course->school->user->isAdmin())
+                                        @if($school->user->isAdmin())
                                         <a href="/users/settings" target="_blank" class="tch-btn-header-primary">Modifier votre profil</a>
                                         @else
                                         <a href="{{ route('website.subdomain.settings_business', ['subdomain' => $school->slug]) }}" target="_blank" class="tch-btn-header-primary">
@@ -817,7 +817,7 @@ img{display:block;}
                                     </li>
                                     <li>
 
-                                        @if($course->school->user->isAdmin())
+                                        @if($school->user->isAdmin())
                                         <a href="/users/billings" target="_blank" class="tch-btn-header-primary">Gérer vos abonnements</a>
                                         @else
                                         <a href="{{ route('website.subdomain.users_billings', ['subdomain' => $school->slug]) }}" target="_blank" class="tch-btn-header-primary">
