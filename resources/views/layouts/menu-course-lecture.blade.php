@@ -282,7 +282,7 @@ a {
   </div>
 
 
-  @if(!$lesson->section->drip && $status !== '0' && $lesson->free_lesson == 'no' && !Auth::user()->courses->contains($lesson->section->course->id) && !$lesson->section->course->school->user->isOwner())
+  @if(!$lesson->section->drip && $status !== '0' && Auth::user()->courses->contains($lesson->section->course->id) && !Auth::user()->isOwner())
   <div class="lecture-nav">
     <a class="nav-btn" href="/course/{{$lesson->course->slug}}/lessons/{{$previous_lesson->slug}}" role="button" id="lecture_previous_button">
       <i class="fa fa-arrow-left" aria-hidden="true"></i>

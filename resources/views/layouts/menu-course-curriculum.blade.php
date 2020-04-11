@@ -193,9 +193,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li>
                 <li>
 
-                  <a href="/users/billings"col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2"rent_user/subscriptions">
-                    Gérer vos abonnements
-                  </a>
+                    @if($school->user->isAdmin())
+                    <a href="/users/billings" target="_blank" class="tch-btn-header-primary">Gérer vos abonnements</a>
+                    @else
+                    <a href="{{ route('website.subdomain.users_billings', ['subdomain' => $school->slug]) }}" target="_blank" class="tch-btn-header-primary">
+                       Gérer vos abonnements
+                    </a>
+                    @endif
                 </li>
                 <!--li>
                   <a href="/current_user/credit_card">
