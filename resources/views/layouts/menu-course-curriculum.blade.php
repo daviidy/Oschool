@@ -193,7 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li>
                 <li>
 
-                    @if($school->user->isAdmin())
+                    @if($course->school->user->isAdmin())
                     <a href="/users/billings" target="_blank" class="tch-btn-header-primary">Gérer vos abonnements</a>
                     @else
                     <a href="{{ route('website.subdomain.users_billings', ['subdomain' => $course->school->slug]) }}" target="_blank" class="tch-btn-header-primary">
