@@ -807,15 +807,28 @@ img{display:block;}
                                       </a>
                                     </li>
                                     <li class="user-profile">
-                                      <a href="/users/settings">
-                                        Modifier votre profil
-                                      </a>
+                                        @if($course->school->user->isAdmin())
+                                        <a href="/users/settings" target="_blank" class="tch-btn-header-primary">Modifier votre profil</a>
+                                        @else
+                                        <a href="{{ route('website.subdomain.settings_business', ['subdomain' => $course->school->slug]) }}" target="_blank" class="tch-btn-header-primary">
+                                           Modifier votre profil
+                                        </a>
+                                        @endif
                                     </li>
                                     <li>
 
-                                      <a href="/users/billings"col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2"rent_user/subscriptions">
+                                        @if($course->school->user->isAdmin())
+                                        <a href="/users/billings" target="_blank" class="tch-btn-header-primary">Gérer vos abonnements</a>
+                                        @else
+                                        <a href="{{ route('website.subdomain.users_billings', ['subdomain' => $course->school->slug]) }}" target="_blank" class="tch-btn-header-primary">
+                                           Gérer vos abonnements
+                                        </a>
+                                        @endif
+                                        <!--
+                                      <a href=""col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2"rent_user/subscriptions">
                                         Gérer vos abonnements
                                       </a>
+                                  -->
                                     </li>
                                     <li class="user-signout">
                                       <a href="{{ route('logout') }}"
