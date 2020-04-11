@@ -61,7 +61,7 @@
                                     </div><br>
                                 </div>
                                 <!---->
-                                <!----><a href="https://blog.oschoolelearning.com/" target="_blank" ng-click="step.click()" ng-repeat="step in steps" ng-class="{ 'pill-completed': step.completed(), 'pill-active': step.active(), 'pill-disabled': step.disabled(), 'pill-highlighted': step.highlighted() }"
+                                <!----><a href="https://oschoolelearning.com/course/comment-prendre-en-main-votre-plateforme-de-formation-avec-oschool" target="_blank" ng-click="step.click()" ng-repeat="step in steps" ng-class="{ 'pill-completed': step.completed(), 'pill-active': step.active(), 'pill-disabled': step.disabled(), 'pill-highlighted': step.highlighted() }"
                                   class="tch-pill full-width fastclickable">
                                     <!----><span ng-if="step.liveWorkshop">
                                         <!----><img ng-if="workshopState() == 'signup' || workshopState() == 'live' || workshopState() == 'pre'" ng-src="/images/schools/icon-webinar.svg" class="icon"
@@ -70,7 +70,7 @@
                                         <!----></span>
                                     <!---->
                                     <!---->
-                                    <!----><span ng-bind="step.text | translate">Blog Oschool</span>
+                                    <!----><span ng-bind="step.text | translate">Suivez le cours de prise en main de votree école</span>
                                     <!----><span ng-if="!step.completed() &amp;&amp; !step.disabled()" class="right-arrow">›</span>
                                     <!---->
                                     <!---->
