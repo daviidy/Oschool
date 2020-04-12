@@ -697,7 +697,7 @@ class SchoolController extends Controller
                      $school->token = $json['access_token'];
                      $school->save();
 
-					return view('schools.integrations', ['school' => $school]);
+					return redirect('/schoolAdmin/'.$school->id.'/integrations')->with('status', 'ZOOM est autorisé dans votre école');
 
 
 
@@ -806,10 +806,17 @@ class SchoolController extends Controller
                             $resultat = refreshToken($params, $url) ;
                             $new_json = json_decode($resultat, true);
 
-                            $lesson->course->school->token = $new_json['access_token'];
-                            $lesson->course->school->save();
+                            //au cas où le token est invalide
+                            if (array_key_exists("message", $new_json)) {
+                                return redirect('/schoolAdmin/'.$lesson->course->school->id.'/integrations')->with('status', 'Relancez une fois de plus l\'autorisation ZOOM');
+                            }
 
-                            Session::put('token', $lesson->course->school->token);
+                            else {
+                                $lesson->course->school->token = $new_json['access_token'];
+                                $lesson->course->school->save();
+
+                                Session::put('token', $lesson->course->school->token);
+                            }
 
                             //on récupère le nouveau token et on fait
                             //l'api call zoom pour obtenir les
@@ -883,10 +890,11 @@ class SchoolController extends Controller
         }//fin function listMeetings
 
 
-        public function associateMeeting(Lesson $lesson, $meetingId)
+        public function associateMeeting(Lesson $lesson, $meetingId, $meetingLink)
         {
 
 			$lesson->webinar_meeting = $meetingId;
+            $lesson->zoom_url = $meetingLink;
             $lesson->save();
             return redirect('/schoolAdmin/'.$lesson->course->school->id.'/courses/'.$lesson->course->id.'/curriculum/'.$lesson->section->id.'/lessons/'.$lesson->id.'/edit')->with('status', 'Conférence associée avec succès');
 

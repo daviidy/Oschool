@@ -264,6 +264,7 @@ class LessonController extends Controller
                 $previous_lesson = $lesson;
             }
 
+            /*
             if ($lesson->webinar_meeting !== null) {
                 function postData($params, $url){
                      try {
@@ -428,6 +429,7 @@ class LessonController extends Controller
                                                'json' => $json,
                                            ]);
             }
+            */
 
 
             return view('lessons.show', ['lesson' => $lesson,
@@ -555,10 +557,16 @@ class LessonController extends Controller
                         $resultat = refreshToken($params, $url) ;
                         $new_json = json_decode($resultat, true);
 
-                        $school->token = $new_json['access_token'];
-                        $school->save();
+                        //au cas où le token est invalide
+                        if (array_key_exists("message", $new_json)) {
+                            return redirect('/schoolAdmin/'.$school->id.'/integrations')->with('status', 'Relancez une fois de plus l\'autorisation ZOOM');
+                        }
+                        else {
+                            $school->token = $new_json['access_token'];
+                            $school->save();
 
-                        Session::put('token', $school->token);
+                            Session::put('token', $school->token);
+                        }
 
                         //on récupère le nouveau token et on fait
                         //l'api call zoom pour obtenir les

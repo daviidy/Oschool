@@ -370,7 +370,7 @@ Route::get('/schoolAdmin/{school}/integrations', 'SchoolController@integrations'
 //api zoom
 Route::get('/callback', 'SchoolController@callback');
 Route::get('/listMeetings/{lesson}/{user}', 'SchoolController@listMeetings')->name('course');
-Route::get('/associateMeeting/{lesson}/{meetingId}', 'SchoolController@associateMeeting')->name('course');
+Route::get('/associateMeeting/{lesson}/{meetingId}/{meetingLink}', 'SchoolController@associateMeeting')->name('course');
 
 
 

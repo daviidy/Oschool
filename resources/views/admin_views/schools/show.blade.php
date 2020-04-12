@@ -70,7 +70,7 @@
                                         <!----></span>
                                     <!---->
                                     <!---->
-                                    <!----><span ng-bind="step.text | translate">Suivez le cours de prise en main de votree école</span>
+                                    <!----><span ng-bind="step.text | translate">Suivez le cours de prise en main de votre école</span>
                                     <!----><span ng-if="!step.completed() &amp;&amp; !step.disabled()" class="right-arrow">›</span>
                                     <!---->
                                     <!---->

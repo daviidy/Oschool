@@ -377,18 +377,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
     @include('includes.status')
 
-    @if($school->token !== null)
-    <div class="card-body">
-
-      <div class="status alert alert-success" role="alert">
-          ZOOM est déjà autorisé dans votre école
-      </div>
-
-
-    </div>
-    @endif
-
-
 
     <div ng-if="courses.length > 0">
     <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">

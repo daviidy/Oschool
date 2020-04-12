@@ -18,6 +18,7 @@ class Lesson extends Model
                            'free_lesson',
                            'video',
                            'webinar_meeting',
+                           'zoom_url',
 
                          ];
 

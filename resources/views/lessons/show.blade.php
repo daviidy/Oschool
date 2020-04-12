@@ -429,7 +429,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 
     <div class="styles__CategoryButtons-vgii8s-3 hqqZXZ">
 
-    <a target="_blank" class="styles__CategoryButton-vgii8s-4 fUQatb" href="{{$json['join_url']}}">
+    <a target="_blank" class="styles__CategoryButton-vgii8s-4 fUQatb" href="{{$lesson->zoom_url}}">
         <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="162" height="145" viewBox="0 0 162 145" fill="none">
                 <path d="M21 21L25.5 9L38.5 2H115L127 7L135.5 19V138L106 116H39.5L27 110.5L21 96.5V21Z" fill="#F8F8FF"></path>
                 <path
