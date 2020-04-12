@@ -708,6 +708,10 @@ class SchoolController extends Controller
         public function listMeetings(Lesson $lesson, User $user)
         {
 
+            if ($lesson->course->school->token !== null) {
+                Session::put('token', $lesson->course->school->token);
+            }
+
 			function postData($params, $url)
                         {
                          try {
@@ -728,7 +732,7 @@ class SchoolController extends Controller
                          CURLOPT_POSTFIELDS => $postfield,
                          CURLOPT_SSL_VERIFYPEER => true,
                          CURLOPT_HTTPHEADER => array(
-                         "Authorization: Bearer ". $lesson->course->school->token,
+                         "Authorization: Bearer ". Session::get('token'),
                          ),
                          ));
                          $response = curl_exec($curl);
@@ -795,7 +799,7 @@ class SchoolController extends Controller
                                }
                               }
                             $params = array('grant_type' => 'refresh_token',
-                                            'refresh_token' => $lesson->course->school->token,
+                                            'refresh_token' => Session::get('token'),
                                             );
                             $url = "https://zoom.us/oauth/token";
                             //Appel de fonction postData()
@@ -804,6 +808,8 @@ class SchoolController extends Controller
 
                             $lesson->course->school->token = $new_json['access_token'];
                             $lesson->course->school->save();
+
+                            Session::put('token', $lesson->course->school->token);
 
                             //on récupère le nouveau token et on fait
                             //l'api call zoom pour obtenir les
@@ -830,7 +836,7 @@ class SchoolController extends Controller
                                          CURLOPT_POSTFIELDS => $postfield,
                                          CURLOPT_SSL_VERIFYPEER => true,
                                          CURLOPT_HTTPHEADER => array(
-                                         "Authorization: Bearer ". $lesson->course->school->token,
+                                         "Authorization: Bearer ". Session::get('token'),
                                          ),
                                          ));
                                          $response = curl_exec($curl);

@@ -381,6 +381,7 @@
                     <label class="control-label" for="name">Nom et prénoms</label>
                     <div class="control-input">
                       <input required autofocus="autofocus" class="form-control input-hg" value="" type="text" name="name" id="modal_name_field">
+                      <input hidden value="none" name="school" class="_9a11307b" type="text" required>
                     </div>
                   </div>
                   <div class="group">

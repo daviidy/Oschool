@@ -74,7 +74,7 @@ class RegisterController extends Controller
             'type3' => 'none',
         ]);
         //inscription de user à l'école
-        if (!empty($data["school"])) {
+        if (!empty($data["school"]) && $data['school'] !== 'none') {
             $school = School::find($data["school"]);
             $in_school = $user->schools->contains($school->id);
             if (!$in_school) {

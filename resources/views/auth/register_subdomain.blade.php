@@ -96,6 +96,7 @@
                                 </svg></div>
                         </div>
                         <input name="email" class="_9a11307b" placeholder="Email" type="email" required>
+                        <input hidden value="{{$school->id}}" name="school" class="_9a11307b" type="text" required>
                     </div>
                     <div class="_9830536">
                         <div class="_3f41241d">
