@@ -402,9 +402,17 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <p>Date et durée: {{$meeting['start_time']}} / {{$meeting['duration']}} </p><br>
                             <p>ID de l'hôte: {{$meeting['host_id']}}</p>
 
-                            <a href="/associateMeeting/{{$lesson->id}}/{{$meeting['id']}}/{{$meeting['join_url']}}" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
-                                Associer cette conférence à la leçon
-                            </a>
+                            <form class="" action="/associateMeeting" method="post">
+                                @csrf
+                                <input type="text" name="lesson_id" value="{{$lesson->id}}">
+                                <input type="text" name="meeting_id" value="{{$meeting['id']}}">
+                                <input type="text" name="meeting_url" value="{{$meeting['join_url']}}">
+
+                                <button type="submit" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
+                                    Associer cette conférence à la leçon
+                                </button>
+                            </form>
+
                         </div>
                         <div class="date-days tch-course-listing-title _2kIOe">
 

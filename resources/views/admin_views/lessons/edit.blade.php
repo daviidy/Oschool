@@ -1234,7 +1234,7 @@ h4{font-size:18px;}
 /*! CSS Used from: Embedded */
 a{color:inherit;transition:color 0.2s ease 0s;}
 a:hover{color:inherit;border-bottom:none;text-decoration:none;}
-.hqqZXZ{display:flex;width:100%;height:58%;}
+.hqqZXZ{display:flex;width:100%;height:35%;}
 .fUQatb{display:flex;flex:1 1 0%;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;flex-direction:column;height:180px;margin:10px;border-radius:4px;box-shadow:rgba(0, 0, 0, 0.1) 0px 0px 7px;transition:all 0.4s ease 0s;cursor:pointer;}
 .fUQatb:hover{box-shadow:rgba(0, 0, 0, 0.1) 1px 2px 12px;border-bottom:none;transform:translateY(-5px);}
 @media (max-width: 480px){
@@ -1406,6 +1406,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <!---->
         </div>
     </div>
+    @include('includes.status')
     <tabs data="tabs" type="tabs" class="add-lecture-attachment-nav-tabs">
         <div>
             <div class="tab-container" type="tabs" vertical="" justified="">
@@ -1781,7 +1782,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 </svg></div>
             <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Créer une classe</h4>
         </a>
-    <a target="_blank" class="styles__CategoryButton-vgii8s-4 fUQatb" href="/listMeetings/{{$lesson->id}}/{{Auth::user()->id}}">
+    <a class="styles__CategoryButton-vgii8s-4 fUQatb" href="/listMeetings/{{$lesson->id}}/{{Auth::user()->id}}">
         <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="164" height="144" viewBox="0 0 164 144" fill="none">
                 <rect x="20" y="82" width="135" height="36" rx="18" fill="#FFCDB2"></rect>
                 <rect x="41" y="112" width="95" height="6" fill="#ED956E"></rect>

@@ -890,13 +890,13 @@ class SchoolController extends Controller
         }//fin function listMeetings
 
 
-        public function associateMeeting(Lesson $lesson, $meetingId, $meetingLink)
+        public function associateMeeting(Request $request)
         {
-
-			$lesson->webinar_meeting = $meetingId;
-            $lesson->zoom_url = $meetingLink;
+            $lesson = Lesson::find($request->lesson_id);
+			$lesson->webinar_meeting = $request->meeting_id;
+            $lesson->zoom_url = $request->meeting_url;
             $lesson->save();
-            return redirect('/schoolAdmin/'.$lesson->course->school->id.'/courses/'.$lesson->course->id.'/curriculum/'.$lesson->section->id.'/lessons/'.$lesson->id.'/edit')->with('status', 'Conférence associée avec succès');
+            return redirect('/schoolAdmin/'.$lesson->course->school->id.'/courses/'.$lesson->course->id.'/curriculum/'.$lesson->section->id.'/lessons/'.$lesson->id.'/edit')->with('status', 'Conférence associée avec cette leçon avec succès');
 
 
         }
