@@ -458,16 +458,10 @@
 
                                     <label for="status">Course </label>
                                         <br>
-                                      {{-- <select size="1" multiple id="courses_id" name="courses_id[]" style="width:250px;">
 
-                                        @foreach ($allCourses as $course_db)
-                                                <option value="{{$course_db->id}}">{{$course_db->name}}</option>
-                                            @endforeach
-
-                                      </select> --}}
 
                                       <select class="js-example-basic-multiple" name="courses_id[]" multiple="multiple" style="width:250px;">
-                                            @foreach ($allCourses as $course_db)
+                                            @foreach ($school->courses as $course_db)
                                                         <option value="{{$course_db->id}}">{{$course_db->name}}</option>
                                                     @endforeach
                                           </select>

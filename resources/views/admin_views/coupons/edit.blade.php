@@ -456,7 +456,7 @@
                                         {{-- @endforeach --}}
                                         <br>
                                         <select class="js-example-basic-multiple" name="courses_id[]" multiple="multiple" style="width:270px;">
-                                                @foreach ($allCourses as $course_db)
+                                                @foreach ($school->courses as $course_db)
                                                                 <option {{$coupon->courses->contains($course_db->id) ? 'selected' : ''}}  value="{{$course_db->id}}">{{$course_db->name}}</option>
                                                 @endforeach
                                          </select>
