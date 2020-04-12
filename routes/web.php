@@ -371,6 +371,7 @@ Route::get('/schoolAdmin/{school}/integrations', 'SchoolController@integrations'
 Route::get('/callback', 'SchoolController@callback');
 Route::get('/listMeetings/{lesson}/{user}', 'SchoolController@listMeetings')->name('course');
 Route::post('/associateMeeting', 'SchoolController@associateMeeting')->name('course');
+Route::post('/dissociateMeeting', 'SchoolController@dissociateMeeting')->name('course');
 
 
 

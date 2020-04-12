@@ -901,6 +901,17 @@ class SchoolController extends Controller
 
         }
 
+
+        public function dissociateMeeting(Request $request)
+        {
+            $lesson = Lesson::find($request->lesson_id);
+            $lesson->webinar_meeting = null;
+            $lesson->save();
+            return redirect('/schoolAdmin/'.$lesson->course->school->id.'/courses/'.$lesson->course->id.'/curriculum/'.$lesson->section->id.'/lessons/'.$lesson->id.'/edit')->with('status', 'Conférence dissociée de cette leçon avec succès');
+
+
+        }
+
         public function nameSchoolAdmin(Request $request)
         {
             $user = User::find($request->user_id);

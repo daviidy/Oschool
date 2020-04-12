@@ -1828,6 +1828,15 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <p>Lien de la réunion: <a href="{{$json['join_url']}}">{{$json['join_url']}}</a></p><br>
                         <p>Date et durée: {{$json['start_time']}} / {{$json['duration']}} </p><br>
                         <p>ID de l'hôte: {{$json['host_id']}}</p>
+
+                        <form class="" action="/dissociateMeeting" method="post">
+                            @csrf
+                            <input hidden type="text" name="lesson_id" value="{{$lesson->id}}">
+
+                            <button type="submit" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
+                                Détacher cette conférence
+                            </button>
+                        </form>
                     </div>
                     <div class="date-days tch-course-listing-title _2kIOe">
 
