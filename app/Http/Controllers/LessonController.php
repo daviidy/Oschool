@@ -558,7 +558,7 @@ class LessonController extends Controller
                         $new_json = json_decode($resultat, true);
 
                         //au cas où le token est invalide
-                        if (array_key_exists("message", $new_json)) {
+                        if (array_key_exists("message", $new_json) || array_key_exists("error", $new_json)) {
                             return redirect('/schoolAdmin/'.$school->id.'/integrations')->with('status', 'Relancez une fois de plus l\'autorisation ZOOM');
                         }
                         else {
