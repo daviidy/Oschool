@@ -21,7 +21,8 @@ class Course extends Model
                            'author_id',
                            'logo',
                            'category_id',
-                           'type'
+                           'type',
+                           'result'
                          ];
 
 
@@ -180,7 +181,7 @@ class Course extends Model
                     return $this->hasMany('App\Faq');
                 }
 
-              
+
 
            public static function boot() {
            parent::boot();
