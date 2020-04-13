@@ -639,7 +639,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
             </div>
             <div class="StatContainer-sc-14kfqpa-0 ivAKiS">
                 <div class="StatCount-sc-4edfhu-0 liQwTV">{{count($course->lessons)}}</div>
-                <div class="StatName-asb5y5-0 iIHdSa">Leçons</div>
+                <div class="StatName-asb5y5-0 iIHdSa">Leçon(s)</div>
             </div>
             <div class="StatContainer-sc-14kfqpa-0 ivAKiS">
                 <div class="StatCount-sc-4edfhu-0 liQwTV">{{count($course->quizzes)}}</div>
@@ -653,14 +653,14 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
             </div>
             <div class="StatContainer-sc-14kfqpa-0 ivAKiS">
                 <div class="StatCount-sc-4edfhu-0 liQwTV">{{count($course->users)}}</div>
-                <div class="StatName-asb5y5-0 iIHdSa">Inscrits</div>
+                <div class="StatName-asb5y5-0 iIHdSa">Inscrit(s)</div>
             </div>
         </span>
-        <div class="PageSummary__VideoWrap-sc-19qsvz4-19 ivfIYc">
-            <p class="PageSummary__Description-sc-19qsvz4-17 iAdXyW">
-                {!!$course->description!!}
-            </p>
+        <div style="padding: 3rem;" class="">
+            {!!$course->description!!}
         </div>
+
+
         <div class="CollectionTabs__Container-sc-1c3sbsw-2 bDBfQP">
             <div id="collection-tabs" class="CollectionTabs-sc-1c3sbsw-0 kQyDxi">
                 <ul role="tablist" class="nav nav-tabs">
