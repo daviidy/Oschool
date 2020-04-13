@@ -436,6 +436,25 @@ class CourseController extends Controller
         }
      }
 
+     //administrer le certificat d'un cours
+     public function certificateAdmin(School $school, Course $course)
+     {
+         if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
+         return view('admin_views.courses.certificate_admin', ['school' => $school, 'course' => $course]);
+        }
+        else {
+            return redirect('home');
+        }
+     }
+
+     public function addResult(Request $request)
+     {
+         $course = Course::find($request->course_id);
+         $course->result = $request->result;
+         $course->save();
+         return redirect()->back()->with('status', 'La note de passage a bien été ajoutée');
+
+     }
 
 
 

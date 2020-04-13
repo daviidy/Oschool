@@ -327,7 +327,7 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pricing/{pricing}/editPayment
 Route::get('/schoolAdmin/{school}/courses/{course}/drips', 'DripController@index')->name('course');
 
 //course certificates
-Route::get('/schoolAdmin/{school}/courses/{course}/certificates', 'CourseController@certificates')->name('course');
+Route::get('/schoolAdmin/{school}/courses/{course}/certificate', 'CourseController@certificateAdmin')->name('course');
 
 //delete user from the course
 Route::post('/unsubscribe', 'CourseController@unsubscribe');
@@ -348,6 +348,9 @@ Route::get('/schoolAdmin/{school}/courses/{course}/pricing', 'CourseController@c
 
 Route::get('/schoolAdmin/{school}/courses/{course}/certificate', 'CourseController@courseCerficate');
 */
+
+Route::post('/addResult', 'CourseController@addResult');
+
 
 
 //vue pour le front end

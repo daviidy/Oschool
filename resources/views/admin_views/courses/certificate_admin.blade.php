@@ -1,5 +1,5 @@
-@extends('layouts.admin_views.menu-school')
-@section('title', 'Intégrations')
+@extends('layouts.admin_views.menu-school-icon')
+@section('title', 'Certificat d\'achèvement')
 @section('content')
 
 <style media="screen">
@@ -246,7 +246,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
 
 </style>
 
-
+<!--pour la liste-->
 <style media="screen">
 /*! CSS Used from: Embedded */
 .ng-hide:not(.ng-hide-animate){display:none!important;}
@@ -364,7 +364,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Intégration d'applications tierces à votre école
+                    <!---->Planification du contenu
                     <div class="tch-btn-header-icon-2">
                       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="20" height="40"viewBox="0 0 172 172"style=" fill:#000000;position: relative;bottom: 8px;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g fill="#3498db"><path d="M129.07556,30.25717l12.67131,12.67175l-98.8199,98.81645l-12.67131,-12.67175z"></path><path d="M141.73757,129.08237l-12.67077,12.66723l-98.80691,-98.8345l12.67077,-12.66723z"></path></g><path d="" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path></g></g></svg>
                     </div>
@@ -377,12 +377,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
     @include('includes.status')
 
-
     <div ng-if="courses.length > 0">
     <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
         <div class="course-list__header">
             <span class="course-list__header-item"></span>
-            <span class="course-list__header-item _22oLp">Applications</span>
+            <span class="course-list__header-item _22oLp">Administration certificat</span>
             <span class="course-list__header-item _22oLp"></span>
             <span
               class="course-list__header-item _22oLp"></span>
@@ -394,15 +393,20 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <div what="course" which="Techniques de vente" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }" class="tch-course-listing">
 
                     <div class="tch-course-listing-wrapper" what="course-card" course="course" course-stats="courseStats">
-                        <div style="background-image: url(https://www.pngitem.com/pimgs/m/403-4037306_zoom-meeting-icon-png-transparent-png-zoom-meeting.png)" class="tch-course-listing-image"></div>
+                        <div style="background-image: url(https://media-public.canva.com/MADDT1Eof7I/1/thumbnail_large.png)" class="tch-course-listing-image"></div>
                         <div what="course name" ng-bind="::course.name" class="tch-course-listing-title _2kIOe">
-                            Intégration ZOOM <br>
-                            {{--
-                            <p class="choices" style="color: black; cursor: default;"><span style="cursor: pointer;"> <strong>ZOOM est autorisé dans votre école</strong> </span></p>
-                            --}}
-                            <a target="_blank" href="https://zoom.us/oauth/authorize?response_type=code&client_id=IMCA3UZyQISOyBdKQR3oeA&redirect_uri=https://{{$school->slug}}.oschoolelearning.com/callback?state={{$school->id}}">
-                            <p class="choices" style="color: black; cursor: default;"><span style="cursor: pointer;"> <strong>Cliquez ici pour autoriser l'application</strong> </span></p>
-                            </a>
+                            Quelle est la note (en %) globale requise pour avoir le certificat ?<br>
+
+                            <form class="" action="/addResult" method="post">
+                                @csrf
+                                <input type="number" name="result" value="{{$course->result ? $course->result : ''}}">
+                                <input hidden type="text" name="course_id" value="{{$course->id}}">
+
+                                <button type="submit" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
+                                    Asjouter la note
+                                </button>
+                            </form>
+
                         </div>
                         <div class="date-days tch-course-listing-title _2kIOe">
 
@@ -412,8 +416,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 </div>
             <!---->
         </div>
-        <!---->
-
     </div><br>
     {{--
     <div ng-show="ctrl.meta.number_of_pages > 1" class="col-sm-12 tch-page-nav ng-hide" meta="meta">
@@ -429,19 +431,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     @include('includes.information')
 </div>
 <script type="text/javascript" src="/js/admin_views/curriculum.js"></script>
-
-<script type="text/javascript">
-
-var timeleft = 10;
-var downloadTimer = setInterval(function(){
-  if(timeleft <= 0){
-    clearInterval(downloadTimer);
-  }
-  document.getElementById("progressBar").value = 10 - timeleft;
-  timeleft -= 1;
-}, 1000);
-
-</script>
 
 
 @endsection
