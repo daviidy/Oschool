@@ -113,14 +113,6 @@ class School extends Model
              File::delete(public_path('/images/schools/logos/' . $school->logo));
          }
          foreach ($school->courses as $course) {
-             foreach ($course->lessons() as $lesson) {
-                 $medias = $lesson->medias;
-                 foreach ($medias as $media) {
-                     if (File::exists(public_path('/images/lessons/resources/' . $media->name))) {
-                         File::delete(public_path('/images/lessons/resources/' . $media->name));
-                     }
-                 }
-             }
              $course->lessons()->delete();
              $course->sections()->delete();
              $course->projects()->delete();
