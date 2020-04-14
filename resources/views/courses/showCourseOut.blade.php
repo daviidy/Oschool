@@ -396,7 +396,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 }
 .bVDUT{display:flex;flex-direction:row;-webkit-box-pack:justify;justify-content:space-between;}
 @media (max-width: 660px){
-.bVDUT{flex-direction:column;}
+.bVDUT{flex-direction:column; padding: 0px!important;}
 }
 .hxzHfa{display:flex;flex-direction:column;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;border-radius:4px;width:232px;box-shadow:rgb(229, 229, 229) 0px 0px 0.9em;padding:16px;transition:all 0.2s ease 0s;position:relative;background:rgb(250, 250, 250);}
 .hJcWvf{display:flex;flex-direction:column;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;border-radius:4px;width:232px;box-shadow:rgb(229, 229, 229) 0px 0px 0.9em;padding:16px;margin-bottom:16px;transition:all 0.2s ease 0s;position:relative;background:rgb(250, 250, 250);}
@@ -536,6 +536,16 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
   .pricing .card:hover .btn {
     opacity: 1;
   }
+  
+}
+
+@media (max-width: 660px){
+.centre{
+    display: block!important;
+  }
+  .pricing .card{
+    margin-bottom: 15px;
+  }
 }
 
 .fa-ul li{
@@ -547,7 +557,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 }
 
 .centre{
-    display: flex!important;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
