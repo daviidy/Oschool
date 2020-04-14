@@ -151,7 +151,7 @@
                                 <!-- Price (unenrolled users) -->
                                 <div class="pull-right">
                                     <div class="small course-price" id="course-box-price-product-1461563">
-                                        $1,497
+                                        <!--$1,497-->
                                     </div>
                                 </div>
                             </div>
