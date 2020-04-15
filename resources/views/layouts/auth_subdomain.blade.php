@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
+
         <meta charset="utf-8">
         <title></title>
 
@@ -24,8 +26,15 @@ input:hover,input:active,input:focus{outline:0px!important;-webkit-appearance:no
 ._4dfd0c8c{background-color:#d2d3da;height:2px;flex:1;margin:0px 5px;}
 ._6142989a{font-size:16px;font-family:FibraOne-Bold, Gotham Rounded A, Gotham Rounded B, Segoe UI, Roboto, Oxygen, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;letter-spacing:0.9px;padding:5px;text-decoration:none;display:flex;flex-direction:row;justify-content:center;align-items:center;color:#ffffff;}
 ._65e52571{display:flex;justify-content:center;align-items:center;width:100%;max-width:1000px;flex-shrink:0;flex-grow:1;padding:50px 50px;box-sizing:border-box;}
+
+
+@media (min-width: 900px){
+
+._9fffb9c6{padding:0px 0px 50px 0px;flex-direction: column;}
+}
+
 @media (max-width: 499px){
-._65e52571{padding:0px 0px 50px 0px;}
+._65e52571{padding:0px 0px 0px 0px;}
 }
 @media (max-width: 899px){
 ._65e52571{flex-direction:column;}
@@ -50,7 +59,7 @@ input:hover,input:active,input:focus{outline:0px!important;-webkit-appearance:no
 ._9a11307b:focus{outline:none;}
 ._9fffb9c6{display:flex;flex-flow:column;align-items:center;max-width:400px;flex-grow:1;background-color:#ffffff;box-shadow:0px 0px 6px 0px #0000001a;border-radius:8px;padding:32px 32px;box-sizing:border-box;}
 @media (max-width: 500px){
-._9fffb9c6{box-shadow:none;}
+._9fffb9c6{box-shadow:none; padding: 15px 15px;}
 }
 ._a2fa3940{margin-top:8px;color:#b0b2be;font-size:16px;text-align:center;font-family: "TeachableSans", Helvetica, Arial, sans-serif;}
 ._ae9eeff3{width:20px;height:16px;}
