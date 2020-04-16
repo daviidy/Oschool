@@ -59,7 +59,7 @@ input:hover,input:active,input:focus{outline:0px!important;-webkit-appearance:no
 ._9a11307b:focus{outline:none;}
 ._9fffb9c6{display:flex;flex-flow:column;align-items:center;max-width:400px;flex-grow:1;background-color:#ffffff;box-shadow:0px 0px 6px 0px #0000001a;border-radius:8px;padding:32px 32px;box-sizing:border-box;}
 @media (max-width: 500px){
-._9fffb9c6{box-shadow:none; padding: 15px 15px;}
+._9fffb9c6{box-shadow:none; padding: 14px 14px;}
 }
 ._a2fa3940{margin-top:8px;color:#b0b2be;font-size:16px;text-align:center;font-family: "TeachableSans", Helvetica, Arial, sans-serif;}
 ._ae9eeff3{width:20px;height:16px;}
