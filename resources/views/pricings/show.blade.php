@@ -88,7 +88,7 @@
                                             <button class="binary-toggle__label" data-binary-toggle-label="" id="add_coupon">
                                                 Ajouter un Code Coupon
                                             </button>
-
+                                            @auth
                                             @if($pricing->password !== null)
 
                                             <div id="input_coupon" class="binary-toggle__label {{session('status') ? '' : 'hidden'}}" data-binary-toggle-content="">
@@ -163,6 +163,7 @@
                                             </div>
 
                                             @endif
+                                            @endauth
 
                                         </div>
                                     </div>
