@@ -389,7 +389,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             line-height: 1.3;
             padding: .6em 1.4em .5em .8em;
             width: 100%;
-            max-width: 100%; 
+            max-width: 100%;
             box-sizing: border-box;
             margin: 0;
             border: 1px solid #aaa;
@@ -415,13 +415,13 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             border-color: #aaa;
             box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
             box-shadow: 0 0 0 3px -moz-mac-focusring;
-            color: #222; 
+            color: #222;
             outline: none;
         }
         .select-css option {
             font-weight:normal;
         }
-        
+
         </style>
 
 
@@ -470,8 +470,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <!---->
                     <div ng-show="products.length > 0" class="">
-                        <div class="col-sm-12 add-top-margin-25"><input type="text" value="{{$pricing->name}}" name="name" maxlength="100" placeholder="Nom de l'offre"
+                        <div class="col-sm-12 add-top-margin-25">
+                            <input type="text" value="{{$pricing->name}}" name="name" maxlength="100" placeholder="Nom de l'offre"
                               class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
+
+                              <input type="text" value="{{$pricing->password}}" name="password" maxlength="100" placeholder="Mot de passe (optionnel)"
+                                class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength">
 
                                 <br>
                               <input type="hidden" name="description">

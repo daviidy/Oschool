@@ -178,6 +178,7 @@ Route::post('/updateProjectTitle', 'ProjectController@updateTitle');
 Route::post('/addTask', 'ProjectController@addTask');
 Route::post('/editTask', 'ProjectController@editTask');
 Route::post('/applyCoupon', 'CouponController@applyCoupon');
+Route::post('/applyPassword', 'CouponController@applyPassword');
 
 
 

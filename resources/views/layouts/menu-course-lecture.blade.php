@@ -310,7 +310,6 @@ a {
     </a>
     @endif
   </div>
-  @endif
 
 </header>
 

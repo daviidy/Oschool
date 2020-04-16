@@ -18,7 +18,8 @@ class Pricing extends Model
                            'times',
                            'course_id',
                            'description',
-                           'status'
+                           'status',
+                           'password',
                          ];
 
 

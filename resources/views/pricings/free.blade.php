@@ -57,6 +57,53 @@
                                         <div class="spc__summary-item text-right mono" data-checkout-price="coupon">- $0.00</div>
                                     </div>
 
+                                    <div data-checkout-inline-form-coupon="">
+                                        <div class="binary-toggle" data-binary-toggle="">
+                                            <button class="binary-toggle__label" data-binary-toggle-label="" id="add_coupon">
+                                                Rentrer le mot de passe pour accéder à la formation
+                                            </button>
+
+                                            @if($pricing->password !== null)
+
+                                            <div id="input_coupon" class="binary-toggle__label {{session('status') ? '' : 'hidden'}}" data-binary-toggle-content="">
+                                                <form class="form-inline spc__inline-form" data-checkout-inline-form="coupon" action="/applyPassword" accept-charset="UTF-8" method="post">
+                                                    @csrf
+                                                    <div class="spc__inline-form-inner">
+                                                        <input type="text" name="password" id="coupon_code" autocomplete="off" class="spc__inline-form-input" placeholder="Mot de passe" data-checkout-inline-input="">
+                                                        <input hidden type="text" name="purchase_id" value="{{$purchase->id}}">
+                                                        <input style="display: none;" type="text" name="course_id" value="{{$pricing->course->id}}" class="spc__inline-form-input">
+                                                        <input style="display: none;" type="text" name="pricing_id" value="{{$pricing->id}}" class="spc__inline-form-input">
+                                                        <input style="display: none;" type="text" name="school_id" value="{{$pricing->course->school_id}}" class="spc__inline-form-input">
+
+                                                        <div class="spc__inline-form-success" data-checkout-inline-success=""></div>
+
+                                                        <div id="button_apply_coupon" data-checkout-inline-button="" class="spc__inline-form-button {{session('status') ? '' : 'is-hidden'}}">
+                                                            <button id="verify-coupon-code" class="is-hidden btn btn-primary">
+                                                                <div class="loader">
+                                                                    <div class="loader-line"></div>
+                                                                    <div class="loader-line"></div>
+                                                                    <div class="loader-line"></div>
+                                                                    <div class="loader-line"></div>
+                                                                </div>
+
+                                                                <div class="spc__inline-form-button-text">
+                                                                    Envoyer
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    @if(session('status'))
+                                                    <div class="spc__inline-form-error" data-checkout-inline-error="">
+                                                        {{session('status')}}
+                                                    </div>
+                                                    @endif
+                                                </form>
+                                            </div>
+
+                                            @endif
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -339,6 +386,7 @@
 
 
             @auth
+            @if($pricing->password == null)
             <div class="spc__primary-submit" data-checkout-enroll="">
                 <form method="post" enctype="multipart/form-data" action="/subscribeForFree">
                     {{ csrf_field() }}
@@ -353,6 +401,7 @@
                 </form>
 
             </div>
+            @endif
             @endauth
 
             <div class="spc__description hidden" data-checkout-price="description" data-checkout-price-string="for the first month then">
