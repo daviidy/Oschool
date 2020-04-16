@@ -85,10 +85,16 @@
 
                                     <div data-checkout-inline-form-coupon="">
                                         <div class="binary-toggle" data-binary-toggle="">
-                                            <button class="binary-toggle__label" data-binary-toggle-label="" id="add_coupon">
-                                                Ajouter un Code Coupon
-                                            </button>
                                             @auth
+                                            <button class="binary-toggle__label" data-binary-toggle-label="" id="add_coupon">
+                                                @if($pricing->password !== null)
+                                                Rentrer le mot de passe pour accéder à la formation
+                                                @else
+                                                Ajouter un code coupon
+                                                @endif
+
+                                            </button>
+
                                             @if($pricing->password !== null)
 
                                             <div id="input_coupon" class="binary-toggle__label {{session('status') ? '' : 'hidden'}}" data-binary-toggle-content="">
