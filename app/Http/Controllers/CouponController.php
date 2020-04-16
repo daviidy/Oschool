@@ -250,92 +250,100 @@ class CouponController extends Controller
     //accès au cours par mot de passe
     public function applyPassword(Request $request)
     {
-        $course = Course::find($request->course_id);
-        $pricing = Pricing::find($request->pricing_id);
+        if (Auth::check()) {
 
-        //on check si le mot de passe est erroné
-        if ($pricing->password !== $request->password) {
-            return redirect('/course/'.$course->slug.'/checkout/'.$pricing->id)->with('status', 'Mot de passe invalide');
-        }
-        //sinon on l'inscrit
-        else {
-            //on récupère le purchase du user
-            $purchase = Purchase::find($request->purchase_id);
+            $course = Course::find($request->course_id);
+            $pricing = Pricing::find($request->pricing_id);
 
-            //on met le status de l'achat à jour
-              $purchase->status = 'Validé';
-              $purchase->save();
-
-            //si l'étudiant n'est pas déjà
-            //inscrit a la course en question
-            //on l'inscrit
-
-              if (Auth::user()->courses->contains($course->id)) {
-
-                  //envoi mail utilisateur
-                   Mail::send('mails.users.purchases.success', ['purchase' => $purchase], function($message) use($purchase){
-                     $message->to($purchase->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre paiement a été effectué avec succès !');
-                     $message->from('eventsoschool@gmail.com', 'Oschool');
-                   });
-
-                   $admins = User::where('type1', 'admin')->orderby('id', 'asc')->paginate(1000);
-
-                   foreach ($admins as $admin) {
-                     //envoi mail admin
-                     Mail::send('mails.admins.purchases.success', ['purchase' => $purchase], function($message) use($admin){
-                       $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande a été traitée avec succès');
-                       $message->from('eventsoschool@gmail.com', 'Oschool');
-                     });
-                   }
-
-
-
-
-                  }
-
-
-
-              else {
-
-                  Auth::user()->courses()->attach($course);
-
-                  //envoi mail utilisateur
-                   Mail::send('mails.users.purchases.success', ['purchase' => $purchase], function($message) use($purchase){
-                     $message->to($purchase->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre paiement a été effectué avec succès !');
-                     $message->from('eventsoschool@gmail.com', 'Oschool');
-                   });
-
-                   $admins = User::where('type1', 'admin')->orderby('id', 'asc')->paginate(1000);
-
-                   foreach ($admins as $admin) {
-                     //envoi mail admin
-                     Mail::send('mails.admins.purchases.success', ['purchase' => $purchase], function($message) use($admin){
-                       $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande a été traitée avec succès');
-                       $message->from('eventsoschool@gmail.com', 'Oschool');
-                     });
-                   }
-
-
-
+            //on check si le mot de passe est erroné
+            if ($pricing->password !== $request->password) {
+                return redirect('/course/'.$course->slug.'/checkout/'.$pricing->id)->with('status', 'Mot de passe invalide');
             }
-
-            //si ce n'est pas encore fait
-            //on inscrit l'utilsateur dans l'école
-            $school = School::where('id', $course->school_id)->first();
-            $in_school = Auth::user()->schools->contains($course->school_id);
-            if (!$in_school) {
-                Auth::user()->schools()->attach($school);
-            }
-
-
-            if ($course->type == 'mooc') {
-                return redirect('/course/enrolled/'.$course->slug);
-            }
+            //sinon on l'inscrit
             else {
-                return redirect('/path/'.$course->slug);
-            }
+                //on récupère le purchase du user
+                $purchase = Purchase::find($request->purchase_id);
 
-        }//fin processus inscription
+                //on met le status de l'achat à jour
+                  $purchase->status = 'Validé';
+                  $purchase->save();
+
+                //si l'étudiant n'est pas déjà
+                //inscrit a la course en question
+                //on l'inscrit
+
+                  if (Auth::user()->courses->contains($course->id)) {
+
+                      //envoi mail utilisateur
+                       Mail::send('mails.users.purchases.success', ['purchase' => $purchase], function($message) use($purchase){
+                         $message->to($purchase->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre paiement a été effectué avec succès !');
+                         $message->from('eventsoschool@gmail.com', 'Oschool');
+                       });
+
+                       $admins = User::where('type1', 'admin')->orderby('id', 'asc')->paginate(1000);
+
+                       foreach ($admins as $admin) {
+                         //envoi mail admin
+                         Mail::send('mails.admins.purchases.success', ['purchase' => $purchase], function($message) use($admin){
+                           $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande a été traitée avec succès');
+                           $message->from('eventsoschool@gmail.com', 'Oschool');
+                         });
+                       }
+
+
+
+
+                      }
+
+
+
+                  else {
+
+                      Auth::user()->courses()->attach($course);
+
+                      //envoi mail utilisateur
+                       Mail::send('mails.users.purchases.success', ['purchase' => $purchase], function($message) use($purchase){
+                         $message->to($purchase->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre paiement a été effectué avec succès !');
+                         $message->from('eventsoschool@gmail.com', 'Oschool');
+                       });
+
+                       $admins = User::where('type1', 'admin')->orderby('id', 'asc')->paginate(1000);
+
+                       foreach ($admins as $admin) {
+                         //envoi mail admin
+                         Mail::send('mails.admins.purchases.success', ['purchase' => $purchase], function($message) use($admin){
+                           $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande a été traitée avec succès');
+                           $message->from('eventsoschool@gmail.com', 'Oschool');
+                         });
+                       }
+
+
+
+                }
+
+                //si ce n'est pas encore fait
+                //on inscrit l'utilsateur dans l'école
+                $school = School::where('id', $course->school_id)->first();
+                $in_school = Auth::user()->schools->contains($course->school_id);
+                if (!$in_school) {
+                    Auth::user()->schools()->attach($school);
+                }
+
+
+                if ($course->type == 'mooc') {
+                    return redirect('/course/enrolled/'.$course->slug);
+                }
+                else {
+                    return redirect('/path/'.$course->slug);
+                }
+
+            }//fin processus inscription
+
+        }
+        else {
+            return redirect('/course/'.$course->slug.'/checkout/'.$pricing->id)->with('status', 'Connectez-vous d\'abord ci-dessous, pour rentrer le mot de passe');
+        }
+
 
     }
 
