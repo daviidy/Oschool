@@ -55,6 +55,8 @@
     </style>
 
     <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
@@ -645,7 +647,7 @@ img{display:block;}
     @media all and (max-width: 768px){
 
         .course-box-image-container{
-            width: 111%;
+            width: 100%;
         }
         .course-listing{
             width: 88%;
