@@ -1,5 +1,5 @@
 @extends('layouts.menu-school')
-@section('title', 'test')
+@section('title', $author->full_name)
 @section('content')
 
 
