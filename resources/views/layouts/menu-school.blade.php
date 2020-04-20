@@ -657,6 +657,51 @@ img{display:block;}
         }
 
     }
+    /*IOS MEDI QUERY*/
+    @media only screen and (min-device-width : 414px) { 
+      .course-box-image-container{
+            width: 100%;
+        }
+        .course-listing{
+            width: 88%;
+        }
+        .section__button-group{
+            width: 50%;
+        }
+
+        .centre {
+          display: block!important;
+        }
+        .pricing .card {
+          margin-bottom: 15px;
+      }
+      .pricing .card{
+    margin-bottom: 15px;
+  }
+    }
+
+      @media only screen and (max-device-width : 736px) { 
+        .course-box-image-container{
+            width: 100%;
+        }
+        .course-listing{
+            width: 88%;
+        }
+        .section__button-group{
+            width: 50%;
+        }
+
+        .centre {
+          display: block!important;
+        }
+
+        .pricing .card {
+            margin-bottom: 15px;
+        }
+        .pricing .card{
+          margin-bottom: 15px;
+        }
+      }
     </style>
 
 
