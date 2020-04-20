@@ -546,6 +546,10 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
   .pricing .card{
     margin-bottom: 15px;
   }
+
+  .bDBfQP{
+          flex-direction: initial!important;
+        }
 }
 
 .fa-ul li{
