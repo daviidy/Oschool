@@ -1030,7 +1030,7 @@ img{display:block;}
 
                         <li>
                             <span class="powered-by-text">Créez votre plateforme de formation avec</span>
-                            <a class="powered-by" href="https://oschoolelearning.com">
+                            <a class="powered-by" href="https://oschoolelearning.com/corporate">
                                 <img src="/images/schools/logos/logo_oschool_blanc.png" />
                             </a>
 

@@ -119,7 +119,7 @@ h3{font-size:1.6rem;}
 
     <main class="contentContainer__2hNipbbqs3wX_aJ0xS9qxf contentContainer__1jAAu1zndUT3xNQdVbprTL">
         <div class="container__3TWtjj2MEnV9meZq0ZjTTC">
-            <h1 class="handle__sEzDhz5n_Lipz8sfgqzma"><img src="/images/users/default/{{Auth::user()->image}}" class="avatar__2tJZ_OU8usiTvOekfHdMza" alt="David's avatar">{{ucfirst(Auth::user()->name)}}</h1>
+            <h1 class="handle__sEzDhz5n_Lipz8sfgqzma"><img src="/images/users/default/{{Auth::user()->image}}" class="avatar__2tJZ_OU8usiTvOekfHdMza" alt="{{ucfirst(Auth::user()->name)}}">{{ucfirst(Auth::user()->name)}}</h1>
             <!--
             <p class="label__2YO_cDf1Lu9PDDsn62kz6L">/
                 betaNinja94590</p>
