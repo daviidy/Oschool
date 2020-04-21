@@ -1515,9 +1515,9 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                             <div ng-if="product.is_published" class="pull-right">
 
-                                <form action="http://localhost:8000/pricings/3" method="post">
-                                    <input type="hidden" name="_token" value="8mWFYoWez7Nk7t5NGawvDBY5P0J7UeNK368ybAVm">
-                                    <input type="hidden" name="_method" value="delete">
+                                <form action="{{ route('medias.destroy', $media->id) }}" method="post">
+                                    @csrf
+                                    {{ method_field('delete') }}
                                     <button id="test-id-unpublish-btn" class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i></button>
                                 </form>
                             </div>
