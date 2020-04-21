@@ -548,8 +548,8 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
   }
 
   .bDBfQP{
-          flex-direction: initial!important;
-        }
+    flex-direction: initial!important;
+  }
 }
 
 .fa-ul li{
@@ -567,6 +567,19 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
     margin: 0 auto;
 
 }
+
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+
+    .bDBfQP{
+    flex-direction: initial!important;
+    }
+    .centre{
+    display: block!important;
+    }
+    .pricing .card{
+      margin-bottom: 15px;
+    }
+  }
 </style>
 
 <style media="screen">
