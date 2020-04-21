@@ -650,7 +650,7 @@ img{display:block;}
             width: 100%;
         }
         .course-listing{
-            width: 88%;
+            width: 100%;
         }
         .section__button-group{
             width: 50%;
@@ -665,7 +665,7 @@ img{display:block;}
             width: 100%;
         }
         .course-listing{
-            width: 88%;
+            width: 100%;
         }
         .section__button-group{
             width: 50%;
@@ -683,6 +683,19 @@ img{display:block;}
         }
         .bDBfQP{
           flex-direction: initial!important;
+        }
+      }
+
+      @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+
+        .bDBfQP{
+        flex-direction: initial!important;
+        }
+        .centre{
+        display: block!important;
+        }
+        .pricing .card{
+          margin-bottom: 15px;
         }
       }
     </style>
