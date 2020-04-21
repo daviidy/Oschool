@@ -214,17 +214,20 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 
     <div style="width: 100%;">
         <div id="featured" class="DashboardGrid-sc-72u9wt-0 hztfNk">
+            @if(count($school->courses->where('type', 'path')) > 0)
             <div class="DashboardGrid__BlockType-sc-72u9wt-3 eElMjg"><svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24" fill="none" stroke="#5B5B6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                     <polyline points="2 17 12 22 22 17"></polyline>
                     <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>Spécialisations<a class="DashboardGrid__BlockType_TrackLink-sc-72u9wt-5 hvLLOk" href="/schools/{{$school->id}}/courses/filter/path">Voir toutes nos spécialisations</a></div>
+                </svg>Spécialisations<a class="DashboardGrid__BlockType_TrackLink-sc-72u9wt-5 hvLLOk" href="/schools/{{$school->id}}/courses/filter/path">Voir toutes nos spécialisations</a>
+            </div>
             <div class="styles__ScrollableBlock-uv2z0y-0 jYTzSj">
                 <div class="styles__gradient-uv2z0y-1 dvWMkL"></div>
                 <div class="styles__chev0-uv2z0y-7 kTgzct"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-left" class="svg-inline--fa fa-caret-left fa-w-6 styles__NavLeftIcon-uv2z0y-3 yEqKS" role="img"
                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
                         <path fill="currentColor" d="M192 127.338v257.324c0 17.818-21.543 26.741-34.142 14.142L29.196 270.142c-7.81-7.81-7.81-20.474 0-28.284l128.662-128.662c12.599-12.6 34.142-3.676 34.142 14.142z"></path>
-                    </svg></div>
+                    </svg>
+                </div>
                 <div class="styles__scroll-uv2z0y-2 fWefjR">
                     @foreach($school->courses->where('type', 'path')->take(3) as $course)
                     <a class="TrackTile-gicmw3-0 eeoPuI" href="/path/{{$course->slug}}">
@@ -262,6 +265,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                         <path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path>
                     </svg></div>
             </div>
+            @endif
             <div class="DashboardGrid__BlockType-sc-72u9wt-3 eElMjg"><svg width="40px" height="40px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g transform="translate(-194.000000, -781.000000)" stroke="#5B5B6A">
