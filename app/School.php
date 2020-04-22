@@ -92,10 +92,6 @@ class School extends Model
       {
           return $this->hasMany('App\Faq');
       }
-      public function category()
-      {
-          return $this->hasMany('App\Category');
-      }
 
       /**
        * [users description]
