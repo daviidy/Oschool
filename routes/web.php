@@ -91,6 +91,8 @@ Route::resource('sections', 'SectionController');
 
 Route::resource('lessons', 'LessonController');
 
+Route::resource('medias', 'MediaController');
+
 Route::resource('quizzes', 'QuizController');
 
 Route::resource('questions', 'QuestionController');
@@ -178,6 +180,7 @@ Route::post('/updateProjectTitle', 'ProjectController@updateTitle');
 Route::post('/addTask', 'ProjectController@addTask');
 Route::post('/editTask', 'ProjectController@editTask');
 Route::post('/applyCoupon', 'CouponController@applyCoupon');
+Route::post('/applyPassword', 'CouponController@applyPassword');
 
 
 

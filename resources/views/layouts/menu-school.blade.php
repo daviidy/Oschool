@@ -55,6 +55,8 @@
     </style>
 
     <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
@@ -645,16 +647,78 @@ img{display:block;}
     @media all and (max-width: 768px){
 
         .course-box-image-container{
-            width: 111%;
+            width: 100%;
         }
         .course-listing{
-            width: 88%;
+            width: 100%;
+        }
+        .section__button-group{
+            width: 50%;
+        }
+        .nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
+          display: flex!important;
+        }
+        .nav.navbar-nav>li .fedora-navbar-link{
+          display: flex!important;
+
+        }
+
+    }
+    /*IOS MEDI QUERY*/
+    
+
+    @media only screen and (min-device-width : 414px) and (max-device-width : 736px){ 
+        .course-box-image-container{
+            width: 100%;
+        }
+        .course-listing{
+            width: 100%;
         }
         .section__button-group{
             width: 50%;
         }
 
-    }
+        .centre {
+          display: block!important;
+        }
+
+        .pricing .card {
+            margin-bottom: 15px;
+        }
+        .pricing .card{
+          margin-bottom: 15px;
+        }
+        .bDBfQP{
+          flex-direction: initial!important;
+        }
+        .nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
+          display: flex!important;
+        }
+        .nav.navbar-nav>li .fedora-navbar-link{
+          display: flex!important;
+
+        }
+      }
+
+      @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+
+        .bDBfQP{
+        flex-direction: initial!important;
+        }
+        .centre{
+        display: block!important;
+        }
+        .pricing .card{
+          margin-bottom: 15px;
+        }
+        .nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
+          display: flex!important;
+        }
+        .nav.navbar-nav>li .fedora-navbar-link{
+          display: flex!important;
+
+        }
+      }
     </style>
 
 
@@ -983,7 +1047,7 @@ img{display:block;}
 
                         <li>
                             <span class="powered-by-text">Créez votre plateforme de formation avec</span>
-                            <a class="powered-by" href="https://oschoolelearning.com">
+                            <a class="powered-by" href="https://oschoolelearning.com/corporate">
                                 <img src="/images/schools/logos/logo_oschool_blanc.png" />
                             </a>
 

@@ -438,7 +438,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 .kQyDxi .nav-tabs > li.active > a{margin-bottom:15px;}
 }
 .kQyDxi .nav-tabs > li.active > a:hover,.kQyDxi .nav-tabs > li.active > a:focus{border-top:none;border-right:none;border-left:none;border-image:initial;border-bottom:3px solid #{{$school->color->buttons_links}};background-color:rgb(250, 250, 250);}
-.kQyDxi .nav-tabs > li > a{font-size:16px;font-weight:700;text-align:center;transition:all 0.2s ease 0s;padding:8px 23px;outline:none;color:rgb(0, 0, 0);background-color:rgb(255, 255, 255);border-top:none;border-right:none;border-left:none;border-image:initial;border-bottom:3px solid rgb(255, 255, 255);}
+.kQyDxi .nav-tabs > li > a{font-size:16px;font-weight:700;text-align:center;transition:all 0.2s ease 0s;padding:8px 23px;outline:none;color:rgb(0, 0, 0)!important;background-color:rgb(255, 255, 255);border-top:none;border-right:none;border-left:none;border-image:initial;border-bottom:3px solid rgb(255, 255, 255);}
 @media (max-width: 660px){
 .kQyDxi .nav-tabs > li > a{margin-bottom:15px;}
 }
@@ -546,6 +546,10 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
   .pricing .card{
     margin-bottom: 15px;
   }
+
+  .bDBfQP{
+    flex-direction: initial!important;
+  }
 }
 
 .fa-ul li{
@@ -563,6 +567,19 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
     margin: 0 auto;
 
 }
+
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+
+    .bDBfQP{
+    flex-direction: initial!important;
+    }
+    .centre{
+    display: block!important;
+    }
+    .pricing .card{
+      margin-bottom: 15px;
+    }
+  }
 </style>
 
 <style media="screen">
