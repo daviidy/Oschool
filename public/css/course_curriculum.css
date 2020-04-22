@@ -197,7 +197,7 @@ h2{color:#000;}
 .course-sidebar ul.sidebar-nav li.selected a{background:#ffffff;border-right:1px solid #fff;}
 @media screen and (max-width: 767px){
 .course-mainbar{margin-left:0;padding-left:25px;padding-right:25px;padding-top:85px;}
-.course-mainbar h2.section-title{margin-top:0px;}
+/*.course-mainbar h2.section-title{margin-top:0px;}*/
 .course-mainbar .next-lecture-name{display:none;}
 .course-sidebar{display:none;width:100%;}
 .sidebar-nav-link{font-size:15px;padding:10px 15px;color:#4d4d4d;display:block;line-height:30px;font-weight:200;}
@@ -205,7 +205,21 @@ h2{color:#000;}
 @media screen and (min-width: 767px) and (max-width: 991px){
 .course-mainbar{margin-left:300px!important;}
 .course-sidebar{width:300px!important;}
+.course-mainbar .next-lecture-wrapper .start-next-lecture{font-size:17px!important;}
+
 }
+/*iphone querie*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    .full-width .navbar-fedora .navbar-collapse.in, .full-width .navbar-fedora .navbar-collapse.collapsing {
+        top: 0px!important;
+        position: relative!important;
+    }
+    header.half-height .lecture-left{
+        width: 50px!important;
+    }
+    .course-mainbar .next-lecture-wrapper .start-next-lecture{font-size:17px!important;}
+}
+/*end*/
 .lecture-icon{font-size:16px;}
 header.half-height{height:46px!important;z-index:101;}
 header.half-height .navbar-nav{margin-right:30px!important;float:right;margin-top:0px;}
