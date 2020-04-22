@@ -290,10 +290,11 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
+        $school = School::find($course->school_id);
         $course->delete();
         //return redirect('/schoolAdmin/'.$course->school_id.'/courses')->with('status', 'Cours supprimé');
-        return redirect()->back()->with('status', 'Cours supprimé');
-        return redirect('home')->with('status', 'Cours supprimé');
+        //return redirect()->back()->with('status', 'Cours supprimé');
+        return redirect('/schoolAdmin/'.$school->id)->with('status', 'Cours supprimé');
     }
 
 

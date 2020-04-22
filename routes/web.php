@@ -91,6 +91,8 @@ Route::resource('sections', 'SectionController');
 
 Route::resource('lessons', 'LessonController');
 
+Route::resource('medias', 'MediaController');
+
 Route::resource('quizzes', 'QuizController');
 
 Route::resource('questions', 'QuestionController');
