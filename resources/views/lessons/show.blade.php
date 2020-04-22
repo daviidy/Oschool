@@ -196,7 +196,16 @@ h1{font-size:36px;}
 /*! CSS Used from: Embedded */
 .RLTEg{flex:0 1 700px;display:flex;flex-direction:column;justify-content:space-evenly;height:auto;z-index:1;}
 @media screen and (max-width: 480px){
-.RLTEg{margin:0px -118px 0px -21px;}
+.RLTEg{margin:0px 0px 0px 0px;}
+.ieGesu img{width: 100%!important}
+}
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px){
+  .RLTEg{margin:0px;}
+  .ieGesu img{width: 100%!important}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    .RLTEg{margin:0px;}
+    .ieGesu img{width: 100%!important}
 }
 @media only screen and (min-width: 1024px){
 .RLTEg{flex:1 1 0%;flex-direction:row;-webkit-box-pack:justify;justify-content:space-between;max-width:850px;text-align:left;margin-bottom:70px;}

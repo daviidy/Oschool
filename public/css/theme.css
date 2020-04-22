@@ -1429,15 +1429,28 @@ h3 {
     color: #789b71
 }
 /*iphone querie*/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px){
     .full-width .navbar-fedora .navbar-collapse.in, .full-width .navbar-fedora .navbar-collapse.collapsing {
         top: 0px!important;
         position: relative!important;
     }
     header.half-height .lecture-left{
-        width: 50px!important;
+        width: 150px!important;
     }
     .course-mainbar .next-lecture-wrapper .start-next-lecture{font-size:17px!important;}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+
+    .full-width .navbar-fedora .navbar-collapse.in, .full-width .navbar-fedora .navbar-collapse.collapsing {
+        top: 0px!important;
+        position: relative!important;
+    }
+    header.half-height .lecture-left{
+        width: 150px!important;
+    }
+    .course-mainbar .next-lecture-wrapper .start-next-lecture{font-size:17px!important;}
+
 }
 /*end*/
 @media screen and (max-width: 480px) {
@@ -1446,7 +1459,7 @@ h3 {
         position: relative!important;
     }
     header.half-height .lecture-left{
-        width: 50px!important;
+        width: 150px!important;
     }
     .navbar-fedora {
         min-height: 60px
