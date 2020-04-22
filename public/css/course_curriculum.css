@@ -205,7 +205,7 @@ h2{color:#000;}
 @media screen and (min-width: 767px) and (max-width: 991px){
 .course-mainbar{margin-left:300px!important;}
 .course-sidebar{width:300px!important;}
-.course-mainbar .next-lecture-wrapper .start-next-lecture{font-size:17px!important;}
+.course-mainbar .next-lecture-wrapper .start-next-lecture{font-size:17px !important;}
 
 }
 /*iphone querie*/
@@ -217,7 +217,7 @@ h2{color:#000;}
     header.half-height .lecture-left{
         width: 50px!important;
     }
-    .course-mainbar .next-lecture-wrapper .start-next-lecture{font-size:17px!important;}
+    .course-mainbar .next-lecture-wrapper .start-next-lecture{font-size:17px !important;}
 }
 /*end*/
 .lecture-icon{font-size:16px;}
