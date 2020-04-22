@@ -50,7 +50,7 @@ class CourseController extends Controller
     public function createAdmin(School $school)
     {
         if (Auth::check() && Auth::user()->isAdmin() || Auth::user()->isOwner()) {
-        $categories = Category::orderby('id', 'asc')->paginate(100);
+        $categories = Category::where('school_id',$school->id)->orderby('id', 'asc')->paginate(100);
         return view('admin_views.courses.create', ['school' => $school, 'categories' => $categories]);
         }
         else {
