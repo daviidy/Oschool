@@ -33,6 +33,11 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/94491a0993.js" crossorigin="anonymous"></script>
+
+
       <link rel="stylesheet" href="/nProgress/nprogress.css">
       <link rel="stylesheet" type="text/css" href="/notifs/amaran/amaran.min.css" />
 
@@ -368,22 +373,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         </li>
                         <!---->
                         <!---->
-                        <li what="nav item" ui-sref-active="active" style="display:none"
-                          ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
-                          ng-if="::permissions.can('email_students') || permissions.can('view_gated_email')" text="Emails" icon="icon icon-envelope" sref="admin.emails">
-                            <!----><a what="link" ui-sref="admin.emails" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/admin/email">
-                                <!----><i ng-if="::icon" ng-class="::icon" tooltip="Emails" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="icon icon-envelope"></i>
-                                <!---->
-                                <!---->
-                                <!---->
-                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Emails</span></a>
-                            <!---->
-                            <!---->
-                            <!---->
-                        </li>
-                        <!---->
-                        <!---->
-                        <!---->
                         <li what="nav item" ui-sref-active="active"style="display:none"
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-2': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_support')" text="Help" icon="icon icon-question-circle" sref="admin.help" pin-to-bottom="2" top-border="!(school.school_plan.name == 'free' &amp;&amp; permissions.can('view_plan'))"
@@ -447,6 +436,54 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                             <!---->
                         </li>
+                        <!---->
+                        <!---->
+                        <li what="nav item" ui-sref-active="active" style=""
+                          ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
+                          ng-if="::permissions.can('view_migrated_notifications')" text="Notifications" icon="icon icon-envelope" sref="admin.settings.notifications">
+                            <!----><a what="link" ui-sref="admin.settings.notifications" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/informations">
+                                <!----><i ng-if="::icon" ng-class="::icon" tooltip="Emails" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="far fa-bell"></i>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Notifications</span></a>
+                            <!---->
+                            <!---->
+                            <!---->
+                        </li>
+                        <!---->
+                        <!---->
+                        <li what="nav item" ui-sref-active="active" style=""
+                          ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
+                          ng-if="::permissions.can('view_migrated_notifications')" text="Notifications" icon="icon icon-envelope" sref="admin.settings.notifications">
+                            <!----><a what="link" ui-sref="admin.settings.notifications" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/classrooms">
+                                <!----><i ng-if="::icon" ng-class="::icon" tooltip="Emails" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="far fa-calendar-alt"></i>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Evénements</span></a>
+                            <!---->
+                            <!---->
+                            <!---->
+                        </li>
+
+                        <!---->
+                        <!---->
+                        <li what="nav item" ui-sref-active="active" style=""
+                          ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
+                          ng-if="::permissions.can('view_migrated_notifications')" text="Notifications" icon="icon icon-envelope" sref="admin.settings.notifications">
+                            <!----><a what="link" ui-sref="admin.settings.notifications" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/integrations">
+                                <!----><i ng-if="::icon" ng-class="::icon" tooltip="Emails" tooltip-placement="right" tooltip-trigger="mouseenter" tooltip-append-to-body="true" tooltip-class="primary-nav-tooltip" class="fas fa-laptop-code"></i>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Intégrations</span></a>
+                            <!---->
+                            <!---->
+                            <!---->
+                        </li>
+
+                        <!---->
                         <!---->
                         <!---->
                         <hr ng-if="::permissions.can('view_courses')">
