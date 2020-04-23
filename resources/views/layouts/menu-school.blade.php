@@ -655,6 +655,13 @@ img{display:block;}
         .section__button-group{
             width: 50%;
         }
+        .nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
+          display: flex!important;
+        }
+        .nav.navbar-nav>li .fedora-navbar-link{
+          display: flex!important;
+
+        }
 
     }
     /*IOS MEDI QUERY*/
@@ -684,6 +691,13 @@ img{display:block;}
         .bDBfQP{
           flex-direction: initial!important;
         }
+        .nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
+          display: flex!important;
+        }
+        .nav.navbar-nav>li .fedora-navbar-link{
+          display: flex!important;
+
+        }
       }
 
       @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
@@ -696,6 +710,13 @@ img{display:block;}
         }
         .pricing .card{
           margin-bottom: 15px;
+        }
+        .nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
+          display: flex!important;
+        }
+        .nav.navbar-nav>li .fedora-navbar-link{
+          display: flex!important;
+
         }
       }
     </style>
