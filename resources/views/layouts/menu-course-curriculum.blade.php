@@ -168,7 +168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
               <li class="">
-                <a href="/courses/532534/author_bio" class="sidebar-nav-link">
+                <a href="/authors/{{$course->author->id}}/show" class="sidebar-nav-link">
                   <span class="lecture-sidebar-icon">
                     <i class="fa fa-user"></i>
                   </span>

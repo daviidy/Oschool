@@ -536,7 +536,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
   .pricing .card:hover .btn {
     opacity: 1;
   }
-  
+
 }
 
 @media (max-width: 660px){
@@ -568,7 +568,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 
 }
 
-  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
 
     .bDBfQP{
     flex-direction: initial!important;
@@ -735,7 +735,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                                         @endif
                                         @endauth
                                         @guest
-                                        <a class="CollectionSidebarCategory__LessonTitle-ae4dxd-1 CollectionSidebarLessonTitle hAmEuV" href="/courses/introduction-microservice-principles-concepts/RMGPJE4W3jR">
+                                        <a class="CollectionSidebarCategory__LessonTitle-ae4dxd-1 CollectionSidebarLessonTitle hAmEuV">
                                             {{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}
                                         </a>
                                         @if($lesson->free_lesson == 'yes')
