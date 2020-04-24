@@ -1111,7 +1111,7 @@
                             <!---->
                             <!---->
                         </li>
-                        <li what="nav item" ui-sref-active="active"
+                        <li what="nav item" ui-sref-active="active" style="display: none;" 
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_settings') &amp;&amp; !permissions.can('view_settings_notifications')" text="Settings" icon="icon icon-cog2" sref="admin.settings">
                             <!----><a what="link" ui-sref="admin.settings" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/informations">
@@ -1124,7 +1124,7 @@
                             <!---->
                             <!---->
                         </li>
-                        <li what="nav item" ui-sref-active="active"
+                        <li what="nav item" ui-sref-active="active" style="display: none;" 
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_settings') &amp;&amp; !permissions.can('view_settings_notifications')" text="Settings" icon="icon icon-cog2" sref="admin.settings">
                             <!----><a what="link" ui-sref="admin.settings" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/classrooms">
