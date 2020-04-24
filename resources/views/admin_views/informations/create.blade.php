@@ -1,4 +1,4 @@
-@extends('layouts.admin_views.menu-school')
+@extends('layouts.admin_views.menu-school-icon')
 @section('title', 'Ajouter une nouvelle information')
 @section('content')
 
@@ -388,7 +388,7 @@
                             <!---->
                             <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                             <!---->
-                            <!---->Ajouter un nouveau coupon
+                            <!---->Ajouter une nouvelle information
                         </div>
                         <!---->
                         <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -396,6 +396,8 @@
                     <!---->
                 </div>
             </div>
+        @include('includes.status')
+
             <div class="tch-inline-form">
 
                 <div class="slide-show" style="">

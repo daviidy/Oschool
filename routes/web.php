@@ -235,11 +235,11 @@ Route::get('/schoolAdmin/{school}/sales/statements', 'SchoolController@schoolSta
 
 //routes for events tab
 //school events
-Route::get('/schoolAdmin/{school}/classrooms', 'ClassroomController@index')->name('admin');
+Route::get('/schoolAdmin/{school}/classrooms', 'ClassroomController@index')->name('schoolSettings');
 
-Route::get('/schoolAdmin/{school}/classrooms/create', 'ClassroomController@create')->name('admin');
+Route::get('/schoolAdmin/{school}/classrooms/create', 'ClassroomController@create')->name('schoolSettings');
 
-Route::get('/schoolAdmin/{school}/classrooms/{classroom}/edit', 'ClassroomController@edit')->name('admin');
+Route::get('/schoolAdmin/{school}/classrooms/{classroom}/edit', 'ClassroomController@edit')->name('schoolSettings');
 
 //routes for school categorie tab
 //school ctaegorie
@@ -299,9 +299,9 @@ Route::get('/schoolAdmin/{school}/course/{course}/project/{project}/deliverables
 Route::get('/schoolAdmin/{school}/courses/{course}/students', 'CourseController@students')->name('userSettings');
 
 //course Notification
-Route::get('/schoolAdmin/{school}/informations', 'InformationController@index');
-Route::get('/schoolAdmin/{school}/informations/create', 'InformationController@create');
-Route::get('/schoolAdmin/{school}/informations/{information}/edit', 'InformationController@edit');
+Route::get('/schoolAdmin/{school}/informations', 'InformationController@index')->name('schoolSettings');
+Route::get('/schoolAdmin/{school}/informations/create', 'InformationController@create')->name('schoolSettings');
+Route::get('/schoolAdmin/{school}/informations/{information}/edit', 'InformationController@edit')->name('schoolSettings');
 
 
 //course curriculum
