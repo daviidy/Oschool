@@ -241,6 +241,15 @@ Route::get('/schoolAdmin/{school}/classrooms/create', 'ClassroomController@creat
 
 Route::get('/schoolAdmin/{school}/classrooms/{classroom}/edit', 'ClassroomController@edit')->name('admin');
 
+//routes for school categorie tab
+//school ctaegorie
+Route::get('/schoolAdmin/{school}/categorie', 'CategoryController@indexSchoolCategorie')->name('school_category.index');
+Route::get('/schoolAdmin/{school}/school_categorie/create', 'CategoryController@createSchoolCategorie');
+Route::post('/schoolAdmin/{school}/school_categorie/create', 'CategoryController@store')->name('school_category.store');
+Route::get('/schoolAdmin/{school}/school_categorie/{category}/edit','CategoryController@editSchoolCategorie');
+Route::get('/schoolAdmin/{school}/school_categorie/{category}/update','CategoryController@editSchoolCategorie');
+Route::patch('/schoolAdmin/{school}/school_categorie/{category}/update','CategoryController@updateSchoolCategorie')->name('school_category.update');
+
 
 //routes for faq tab
 //school faq
