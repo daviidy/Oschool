@@ -103,6 +103,10 @@ class School extends Model
            return $this->hasMany('App\Coupon');
        }
 
+       public function category()
+       {
+           return $this->hasMany('App\Category');
+       }
 
      public static function boot() {
      parent::boot();
