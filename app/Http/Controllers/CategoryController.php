@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Auth;
+use App\School;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -24,6 +25,39 @@ class CategoryController extends Controller
         }
 
     }
+
+        //index pour la vue des categories specifiques a chaque ecole
+        public function indexSchoolCategorie(School $school)
+        {
+
+            $school_categorie = Category::where('school_id',$school->id)->get();
+
+            return view('admin_views.school_category.index',compact('school','school_categorie'));
+        }
+
+        // //Pour la vue de creation des categories specifique a chaque ecole
+        public function createSchoolCategorie(School $school)
+        {
+
+            return view('admin_views.school_category.create', ['school' => $school]);
+        }
+
+        // //Pour la vue de modification des categories specifique a chaque ecole
+        public function editSchoolCategorie(School $school,Category $category)
+        {
+            $school_category = Category::where('id',$category->id)->first();
+            // dd($school_categorie);
+            return view('admin_views.school_category.edit', ['school' => $school, 'school_category'=>$school_category]);
+
+        }
+
+        // //Pour la mise a jour des categories specifique a chaque ecole
+        public function updateSchoolCategorie(Request $request,School $school,Category $category)
+        {
+            $category->update($request->all());
+            return redirect()->route('school_category.index',$request->school_id)->with('status', 'Catégorie mis à jour');
+
+        }
 
     /**
      * Show the form for creating a new resource.
@@ -49,6 +83,13 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $category = Category::create($request->all());
+        if($request->school_id)
+        {
+            return redirect()->route('school_category.index',$request->school_id)->with('status', 'Catégorie ajoutée');
+        }else{
+            return redirect('categories')->with('status', 'Catégorie ajoutée');
+        }
+
         return redirect('categories')->with('status', 'Catégorie ajoutée');
     }
 
