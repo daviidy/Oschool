@@ -385,7 +385,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
   <meta id="lecture-completion-data" data-last-lecture-id="10371330" data-last-lecture-url="/courses/532534/lectures/10371330" data-is-completed="true" data-can-access-lecture="true" data-compliance-enabled="false" data-valid-for-completion="true">
   <h2 id="lecture_heading" class="section-title" data-lecture-id="10371838" data-next-lecture-id="10385724" data-lecture-url="/courses/532534/lectures/10371838" data-next-lecture-url="/courses/532534/lectures/10385724" ,=""
     data-previous-lecture-url="" data-previous-lecture-id="">
-    <img width="50" src="https://ophi.org.uk/wp-content/uploads/Play-icon-transparent.png" alt="">
+    <img width="50" src="/images/lessons/{{$lesson->image}}" alt="">
     &nbsp;
     {{$lesson->title}}
   </h2>
