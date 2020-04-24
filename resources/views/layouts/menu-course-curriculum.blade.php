@@ -158,11 +158,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <!-- Sidebar Nav -->
 
               <li class="selected">
-                <a href="/courses/532534" class="sidebar-nav-link">
+                <a href="/course/enrolled/{{$course->slug}}" class="sidebar-nav-link">
                   <span class="lecture-sidebar-icon">
                     <i class="fa fa-list-alt"></i>
                   </span>
-                  Course Curriculum
+                  Programme du cours
                 </a>
               </li>
 
