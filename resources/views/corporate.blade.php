@@ -1697,6 +1697,8 @@ hr{border-color:#ececec;}
             }
         }
     </style>
+    @include('includes.price_offer')
+
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
