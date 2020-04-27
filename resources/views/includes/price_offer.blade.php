@@ -27,10 +27,10 @@ h1 a {
   box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.36);
 }
 .price-table-wrapper .pricing-table {
-  display: inline-block;
+  display: inline-table;
   border: 1px solid #c8c8c8;
   border-radius: 10px;
-  background: white;
+  background: #fff;
   margin: 10px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -38,11 +38,8 @@ h1 a {
 .price-table-wrapper .pricing-table__header {
   padding: 20px;
   font-size: 20px;
-  /*color: #909090;
-  background: #e0e0e0;*/
-      color: #fff;
-    background: #4d90cc;
-    text-transform: uppercase;
+  color: #fff;
+  background: #4d90cc;
     
 }
 .price-table-wrapper .pricing-table__price {
@@ -124,15 +121,20 @@ h1 a {
   padding-right: 15px;
 }
 
+.recomandate{
+  background-color: #d08859!important;
+  padding: 20px 20px 0px!important;
+}
+
 </style>
-<h1>Nos offres de prix</h1>
+<h1>NOS OFFRES DE PRIX</h1>
 
 <div class="price-table-wrapper">
   <div class="pricing-table">
-    <h2 class="pricing-table__header">- Free -</h2>
-    <h3 class="pricing-table__price">0 Fcfa</h3>
+    <h2 class="pricing-table__header">- FREE  -</h2>
+    <h3 class="pricing-table__price">0 Fcfa <br></h3>
     <a target="_blank" class="pricing-table__button" href="#">
-      Join Now!
+      Adhérer maintenant!
     </a>
     <ul class="pricing-table__list">
       <li> Site en marque blanche : Oui</li>
@@ -154,10 +156,10 @@ h1 a {
     </ul>
   </div>
   <div class="pricing-table">
-    <h2 class="pricing-table__header">- Basique -</h2>
+    <h2 class="pricing-table__header">- BASIQUE -</h2>
     <h3 class="pricing-table__price">35k F/Mois <br> ou 420k F/An</h3>
     <a target="_blank" class="pricing-table__button" href="#">
-      Join Now!
+      Adhérer maintenant!
     </a>
     <ul class="pricing-table__list">
       <li> Site en marque blanche : Oui</li>
@@ -179,10 +181,10 @@ h1 a {
     </ul>
   </div>
   <div class="pricing-table featured-table">
-    <h2 class="pricing-table__header">- Premium -</h2>
+    <h2 class="pricing-table__header recomandate">- PREMIUM - <br><span style="font-size: 13px;"> Recommandé</span></h2>
     <h3 class="pricing-table__price">55k F HT/Mois<br> ou 660k F/An</h3>
     <a target="_blank" class="pricing-table__button" href="#">
-      Join Now!
+      Adhérer maintenant!
     </a>
     <ul class="pricing-table__list">
       <li> Site en marque blanche : Oui</li>
@@ -205,11 +207,11 @@ h1 a {
   </div>
   
   <div class="pricing-table">
-    <h2 class="pricing-table__header">- Vip -</h2>
+    <h2 class="pricing-table__header">- VIP -</h2>
     <h3 class="pricing-table__price">100k F/Mois ou<br> 1.2M F/An
 </h3>
-    <a target="_blank" class="pricing-table__button" href="http://www.digimadmedia.com">
-      Join Now!
+    <a target="_blank" class="pricing-table__button" href="#">
+      Adhérer maintenant!
     </a>
     <ul class="pricing-table__list">
       <li> Site en marque blanche : Oui</li>
