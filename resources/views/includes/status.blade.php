@@ -8,3 +8,13 @@
 
 </div>
 @endif
+@if(session('status_error'))
+<div class="card-body">
+
+  <div class="status alert alert-danger" role="alert">
+      {{session('status_error')}}
+  </div>
+
+
+</div>
+@endif

@@ -119,6 +119,8 @@ Route::resource('drips', 'DripController');
 
 Route::resource('colors', 'ColorController');
 
+Route::resource('payments', 'PaymentsController');
+
 
 //for create school with subdoamin or attached domains
 Route::post('/storeSchoolBusiness', 'SchoolController@storeSchoolBusiness')->name('schools.storeBusiness');
@@ -260,8 +262,13 @@ Route::get('/schoolAdmin/{school}/faqs/create', 'FaqController@create')->name('s
 
 Route::get('/schoolAdmin/{school}/faqs/{faq}/edit', 'FaqController@edit')->name('schoolSettings');
 
-
-
+//route for payment
+//School Mobile money payments
+Route::get('/schoolAdmin/{school}/moyens_paiments', 'PaymentsController@payments')->name('schoolSettings');
+Route::get('/schoolAdmin/{school}/moyens_paiments/mobile_money', 'PaymentsController@index')->name('schoolSettings');
+Route::get('/schoolAdmin/{school}/moyens_paiments/mobile_money/create', 'PaymentsController@create')->name('schoolSettings');
+Route::get('/schoolAdmin/{school}/moyens_paiments/mobile_money/{payment}/edit', 'PaymentsController@edit')->name('schoolSettings');
+Route::patch('/schoolAdmin/{school}/moyens_paiments/mobile_money/{payment}/update','PaymentsController@update')->name('payments.update');
 
 //routes for users tab
 //school users

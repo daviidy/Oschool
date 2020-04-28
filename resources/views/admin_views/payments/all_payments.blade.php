@@ -1,5 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
-@section('title', 'Liste des FAQS')
+@section('title', 'Moyen de Paiements')
 @section('content')
 
 <style media="screen">
@@ -23,7 +23,7 @@ td,th{padding:0;}
 .pull-right{float:right;}
 .fa-trash-o:before{content:"\F014";}
 .fa-edit:before{content:"\F044";}
-.fa-question-circle:before{content:"\F059";}
+.fa-question-circle:before{content:"\F059"; display: none;}
 .fa-bars:before{content:"\F0C9";}
 .fa-angle-left:before{content:"\F104";}
 .fa-angle-right:before{content:"\F105";}
@@ -119,10 +119,10 @@ tr.border-bottom td{border-bottom:1pt solid #4D90DC;}
 .tch-btn-content-danger:focus{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-content-danger:hover{color:white;background-color:#4D90CC;border-color:#4D90CC;}
 .tch-btn-content-danger:active{color:white;background-color:#4D90CC;border-color:#4D90CC;}
-.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:#dedede;border-color:#aa3c29;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus{color:white;background-color:#dedede;border-color:#6aace6;}
 .tch-btn-content-danger:active{background-image:none;}
-.tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
-.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus,.tch-btn-content-danger:hover:hover,.tch-btn-content-danger:hover:focus,.tch-btn-content-danger:focus:hover,.tch-btn-content-danger:focus:focus{background:#fff;border-color:#d4604b;color:#d4604b;}
+.tch-btn-content-danger:active,.tch-btn-content-danger:hover,.tch-btn-content-danger:focus{background:#fff;border-color:#6aace6;color:#d4604b;}
+.tch-btn-content-danger:active:hover,.tch-btn-content-danger:active:focus,.tch-btn-content-danger:hover:hover,.tch-btn-content-danger:hover:focus,.tch-btn-content-danger:focus:hover,.tch-btn-content-danger:focus:focus{background:#fff;border-color:#4d90cc;color:#4d90cc;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-content-danger:focus{outline:0!important;}
 .tch-btn-icon{padding:6px 9px!important;font-size:11px;line-height:1.083;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;height:37px;width:37px;padding-top:8px!important;}
@@ -201,8 +201,8 @@ tr.border-bottom td{border-bottom:1pt solid #4D90DC;}
 .tch-inline-form-select .inline-form-option{width:100%;text-align:center;margin-top:20px;margin-bottom:40px;}
 }
 .draggable-products td:hover{cursor:move;}
-a{color:#4d90cc;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
-a:hover,a:focus{color:#6aace6;text-decoration:none;}
+a{color:#1ea69a;text-decoration:none;-webkit-transition:0.25s;transition:0.25s;font-weight:500;}
+a:hover,a:focus{color:#167b72;text-decoration:none;}
 .tch-section-content{padding-top:0;background:#fff;display:block;margin-top:-1px;margin-bottom:20px;padding:30px 35px;border-radius:5px;border:1px solid #e7eaed;-webkit-box-shadow:1px 1px 1px 0px rgba(0, 0, 0, .04);box-shadow:1px 1px 1px 0px rgba(0, 0, 0, .04);-webkit-transition:0.2s all ease-in;transition:0.2s all ease-in;}
 .tch-section-nav .tch-section-nav-wrapper .tch-section-nav-box{display:none;padding-top:0;background:#fff;position:relative;z-index:5;border-radius:2px;-webkit-box-shadow:1px 2px 3px 0px #e6e9ec;box-shadow:1px 2px 3px 0px #e6e9ec;margin-bottom:20px;}
 .tch-section-nav .tch-section-nav-wrapper .tch-section-nav-box .tch-section-nav-title{color:#20272d;font-size:16px;letter-spacing:0.57px;font-weight:600;line-height:20px;overflow:hidden;opacity:0;-webkit-transition-duration:0.1s;transition-duration:0.1s;-webkit-transition-timing-function:cubic-bezier(0, 1, 0.5, 1);transition-timing-function:cubic-bezier(0, 1, 0.5, 1);-webkit-transform:translateY(-10px);transform:translateY(-10px);line-height:24px;max-height:0px;float:left;margin:20px 15px 14px 25px;position:absolute;}
@@ -256,7 +256,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Liste des FAQS
+                    <!---->Moyens de paiements
                     <div class="tch-btn-header-icon-2">
                       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="20" height="40"viewBox="0 0 172 172"style=" fill:#000000;position: relative;bottom: 8px;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g fill="#3498db"><path d="M129.07556,30.25717l12.67131,12.67175l-98.8199,98.81645l-12.67131,-12.67175z"></path><path d="M141.73757,129.08237l-12.67077,12.66723l-98.80691,-98.8345l12.67077,-12.66723z"></path></g><path d="" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path></g></g></svg>
                     </div>
@@ -267,135 +267,34 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             <!---->
         </div>
     </div>
-    @include('includes.status')
+        @include('includes.status')
+
     <div class="tch-inline-form">
-    <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/faqs/create">Nouveau faq</a></div>
+        <div id="test-id-add-product-btn" ng-click="form.toggle()" class="btn btn-block btn-attached fastclickable">Liste des moyens de paiements<i class="fa fa-angle-down icon-arrow-down"></i></div>
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
             <!---->
-            {{-- <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
+            <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
                 <form what="product form" name="inlinePricingForm" ng-submit="addPricingPlan()" class="inline-form-wrapper ng-pristine ng-valid">
                     <!---->
                     <div ng-if="!planType" class="row">
                         <div class="col-sm-10 col-sm-offset-1 tch-inline-form-select">
-                            <a href="" id="test-id-add-free-plan" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img
-                                  src="/images/divers/icon-pricing-free.svg" class="tch-table-thumb"><br>
-                                <div ng-bind="'PRODUCT.free.name' | translate" class="inline-form-option-name">Gratuit</div>
-                                <div ng-bind="'PRODUCT.free.description' | translate" class="inline-form-option-subtitle">Aucun paiement</div>
-                            </a><a href="" id="test-id-add-subscription" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/images/divers/icon-pricing-subscription.svg"
-                                  class="tch-table-thumb"><br>
-                                <div ng-bind="'PRODUCT.subscription.name' | translate" class="inline-form-option-name">Abonnement</div>
-                                <div ng-bind="'PRODUCT.subscription.description' | translate" class="inline-form-option-subtitle">Paiement mensuel ou annuel</div>
-                            </a><a href="" id="test-id-add-one-off" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/images/divers/icon-pricing-purchase.svg" class="tch-table-thumb"><br>
-                                <div ng-bind="'PRODUCT.purchase.name' | translate" class="inline-form-option-name">Paiment en une fois</div>
-                                <div ng-bind="'PRODUCT.purchase.description' | translate" class="inline-form-option-subtitle">Un seul paiement</div>
-                            </a><a href="" id="test-id-add-pricing-plan" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img src="/images/divers/icon-pricing-plan.svg" class="tch-table-thumb"><br>
-                                <div ng-bind="'PRODUCT.plan.name' | translate" class="inline-form-option-name">Plan de paiement</div>
-                                <div ng-bind="'PRODUCT.plan.description' | translate" class="inline-form-option-subtitle">Un nombre fixé de paiement</div>
-                            </a></div>
+                            <a href="/schoolAdmin/{{$school->id}}/moyens_paiments/mobile_money" id="test-id-add-free-plan" class="col-sm-3 inline-form-option col-xs-12 fastclickable"><img
+                                  src="/images/divers/logo_cinetpay.png" class="tch-table-thumb"><br>
+                                <div ng-bind="'PRODUCT.free.name' | translate" class="inline-form-option-name">CinetPay </div>
+                                <div ng-bind="'PRODUCT.free.description' | translate" class="inline-form-option-subtitle">Paiements par Mobile money</div>
+                            </a>
+                      </div>
                     </div>
                     <!---->
                     <!---->
                 </form>
-            </ng-include> --}}
+            </ng-include>
         </div>
     </div><br>
-    <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
-        <div class="tch-table-wrapper">
-            <!---->
-            <table ng-if="products.length > 0" class="tch-table draggable-products">
-                <thead>
-                    <tr>
-                        <th>Questions</th>
-                        <th>Reponses</th>
-                    </tr>
-                </thead>
-                <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
-                    <!---->
 
-
-                    @foreach ($school->faqs as $faq)
-                    <!--si la session est annulée qu'elle soit en rouge-->
-                        <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
-                        {{--<td><span>{{$course->name}}</span><span class="space"></span><span class="space"></span>
-                            <!---->
-                        </td>--}}
-                        {{-- <td what="type"><img ng-src="/images/divers/icon-pricing-subscription.svg" class="tch-table-thumb" src="/images/divers/icon-pricing-subscription.svg">
-                            <!---->
-                            <!---->
-                            <!---->
-                            <!----><span ng-bind="'PRODUCT.free.name' | translate" ng-if="getPlanType(product) == 'free'">Gratuit</span>
-                            <!---->
-                        </td> --}}
-                        <td what="comment">
-                            <div>
-                               {{$faq->questions}}
-                            </div>
-                        </td>
-                        <td what="comment">
-                            <div>
-                               {!!$faq->reponses!!}
-                            </div>
-                        </td>
-
-                        {{-- <td what="price" ng-bind="formatProductPrice(product)">
-                        </td> --}}
-                        <td>
-                            <!---->
-                            <!---->
-                            <div ng-if="product.is_published" class="pull-right">
-                            <a href="/schoolAdmin/{{$school->id}}/faqs/{{$faq->id}}/edit">
-                                    <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
-                                </a>
-
-
-
-
-                                <form action="{{ route('faqs.destroy', $faq->id) }}" method="post">
-                                    @csrf
-                                    {{ method_field('delete') }}
-                                    <button
-                                        id="test-id-unpublish-btn"
-                                        class="tch-btn-content-danger tch-btn-icon fastclickable"><i class="fa fa-trash-o"></i>
-                                    </button>
-                                </form>
-
-
-
-                            </div>
-                            <!---->
-                        </td>
-
-
-                    </tr>
-
-
-                    @endforeach
-                    <!---->
-                </tbody>
-            </table>
-            <!---->
-        </div>
-        <div ng-show="ctrl.meta.number_of_pages > 1" class="tch-page-nav ng-hide" meta="meta">
-            <!---->
-            <div class="pull-right"><span class="tch-page-nav-page-number">Page 1 of 1</span><span class="space"></span><button ng-click="ctrl.previousPage()" ng-disabled="ctrl.meta.page == 1" class="tch-page-nav-btn tch-back-button fastclickable"
-                  disabled="disabled"><i class="fa fa-angle-left"></i></button><button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page" class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"><i
-                      class="fa fa-angle-right"></i></button></div>
-        </div>
-        <!---->
-        <!----><br ng-if="products.length > 0">
-        <!---->
-    </div><br>
     @include('includes.information')
 </div>
 <script type="text/javascript" src="/js/admin_views/curriculum.js"></script>
-<script>
-        $(".js-select3").each(function(){
-            $(this).select2({
-                minimumResultsForSearch: 20,
-                dropdownParent: $(this).next('.dropDownSelect3')
-            });
-        })
-        </script>
 
 
 @endsection
