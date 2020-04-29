@@ -35,13 +35,13 @@ background-color: black !important;
         <span class="lecture-sidebar-icon">
           <i class="fa fa-list-alt"></i>
         </span>
-        Programme de cours
+        Programme du cours
       </a>
     </li>
 
 
     <li class="">
-      <a href="/course/enrolled/{slug}" class="sidebar-nav-link">
+      <a href="/authors/{{$course->author->id}}/show" class="sidebar-nav-link">
         <span class="lecture-sidebar-icon">
           <i class="fa fa-user"></i>
         </span>
