@@ -395,6 +395,8 @@ Route::get('/listMeetings/{lesson}/{user}', 'SchoolController@listMeetings')->na
 Route::post('/associateMeeting', 'SchoolController@associateMeeting')->name('course');
 Route::post('/dissociateMeeting', 'SchoolController@dissociateMeeting')->name('course');
 
+//api vimeo
+Route::get('/vimeocallback', 'SchoolController@vimeoCallback');
 
 
 //make user subscribe for free
