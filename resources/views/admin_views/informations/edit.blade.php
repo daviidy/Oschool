@@ -1,4 +1,4 @@
-@extends('layouts.admin_views.menu-school')
+@extends('layouts.admin_views.menu-school-icon')
 @section('title', 'Modifier la notification')
 @section('content')
 
@@ -397,6 +397,8 @@
                     <!---->
                 </div>
             </div>
+        @include('includes.status')
+
             <div class="tch-inline-form">
 
                 <div class="slide-show" style="">

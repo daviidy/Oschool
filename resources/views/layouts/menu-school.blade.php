@@ -663,6 +663,11 @@ img{display:block;}
 
         }
 
+        .powered-by{
+          flex-direction: initial !important;
+          justify-content: center!important;
+        }
+
     }
     /*IOS MEDI QUERY*/
     
@@ -698,6 +703,11 @@ img{display:block;}
           display: flex!important;
 
         }
+
+        .powered-by{
+          flex-direction: initial !important;
+          justify-content: center!important;
+        }
       }
 
       @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
@@ -717,6 +727,10 @@ img{display:block;}
         .nav.navbar-nav>li .fedora-navbar-link{
           display: flex!important;
 
+        }
+        .powered-by{
+          flex-direction: initial !important;
+          justify-content: center!important;
         }
       }
     </style>

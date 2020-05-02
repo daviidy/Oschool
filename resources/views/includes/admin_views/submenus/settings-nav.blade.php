@@ -40,4 +40,34 @@
         <!---->
     </li>
 
+    <!---->
+    <!---->
+    <li what="nav item" ui-sref-active="active"
+      ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
+      ng-if="::permissions.can('view_payments')" text="Payments" sref="admin.settings.payments">
+        <!----><a what="link" ui-sref="admin.settings.payments" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/informations">
+            <!---->
+            <!---->
+            <!---->
+            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Notifications</span></a>
+        <!---->
+        <!---->
+        <!---->
+    </li>
+
+    <!---->
+    <!---->
+    <li what="nav item" ui-sref-active="active"
+      ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
+      ng-if="::permissions.can('view_payments')" text="Payments" sref="admin.settings.payments">
+        <!----><a what="link" ui-sref="admin.settings.payments" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/classrooms">
+            <!---->
+            <!---->
+            <!---->
+            <!----><span ng-bind="::text" ng-class="textClass" class="menu-item-label">Evénements</span></a>
+        <!---->
+        <!---->
+        <!---->
+    </li>
+
 </ul>

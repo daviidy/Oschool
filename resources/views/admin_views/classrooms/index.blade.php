@@ -1,4 +1,4 @@
-@extends('layouts.admin_views.menu-school')
+@extends('layouts.admin_views.menu-school-icon')
 @section('title', 'Liste des événements')
 @section('content')
 
