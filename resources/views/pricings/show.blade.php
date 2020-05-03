@@ -479,7 +479,7 @@
                     </div>
                     <div style="display: none;" class="">
                       <select class="" name="cpm_site_id">
-                        <option value="{{$param_mobile_money->side_id}}">Id site</option>
+                        <option value="{{$param_mobile_money->site_id}}">Id site</option>
                       </select>
                     </div>
                     <div style="display: none;" class="">

@@ -334,7 +334,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                         </td> --}}
                         <td what="comment">
                             <div>
-                               {{$payment->side_id}}
+                               {{$payment->site_id}}
                             </div>
                         </td>
                         <td what="comment">
