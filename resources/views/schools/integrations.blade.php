@@ -415,6 +415,42 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <!---->
 
     </div><br>
+    <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
+        <div class="course-list__header">
+            <span class="course-list__header-item"></span>
+            <span class="course-list__header-item _22oLp">Applications</span>
+            <span class="course-list__header-item _22oLp"></span>
+            <span
+              class="course-list__header-item _22oLp"></span>
+        </div>
+        <!---->
+        <!---->
+        <div ng-if="!enableReordering" ng-show="list.length > 0" class="row tch-course-list">
+            <!---->
+            <div what="course" which="Techniques de vente" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }" class="tch-course-listing">
+
+                    <div class="tch-course-listing-wrapper" what="course-card" course="course" course-stats="courseStats">
+                        <div style="background-image: url(https://png.pngitem.com/pimgs/s/77-771122_vimeo-icon-hd-png-download.png)" class="tch-course-listing-image"></div>
+                        <div what="course name" ng-bind="::course.name" class="tch-course-listing-title _2kIOe">
+                            Intégration VIMEO <br>
+                            {{--
+                            <p class="choices" style="color: black; cursor: default;"><span style="cursor: pointer;"> <strong>ZOOM est autorisé dans votre école</strong> </span></p>
+                            --}}
+                            <a target="_blank" href="https://api.vimeo.com/oauth/authorize?response_type=code&client_id=348e328e2d3e36da3c8940ec81267f27e04f378c&redirect_uri=https://{{$school->slug}}.oschoolelearning.com/vimeocallback?state={{$school->id}}">
+                            <p class="choices" style="color: black; cursor: default;"><span style="cursor: pointer;"> <strong>Cliquez ici pour autoriser l'application</strong> </span></p>
+                            </a>
+                        </div>
+                        <div class="date-days tch-course-listing-title _2kIOe">
+
+                        </div>
+
+                    </div>
+                </div>
+            <!---->
+        </div>
+        <!---->
+
+    </div><br>
     {{--
     <div ng-show="ctrl.meta.number_of_pages > 1" class="col-sm-12 tch-page-nav ng-hide" meta="meta">
         <!---->
