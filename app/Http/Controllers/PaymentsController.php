@@ -44,17 +44,17 @@ class PaymentsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,School $school)
     {
         $statut_payments = Payments::where('type',$request['type'])->exists();
-        // dd($statut_payments);
+
         if($statut_payments)
         {
             return back()->with('status_error', 'Paramètre mobile money dejà ajouté');
         }
         else{
             $payments = Payments::create($request->all());
-            return back()->with('status', 'Nouveau paramètre enregistré');
+            return redirect('/schoolAdmin/'.$payments->school_id.'/moyens_paiments/mobile_money')->with('status', 'Nouveau paramètre enregistré');
         }
 
     }

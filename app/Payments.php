@@ -11,7 +11,7 @@ class Payments extends Model
      * @var [array]
      */
 
-    protected $fillable = ['side_id',
+    protected $fillable = ['site_id',
                            'api_key',
                            'school_id',
                            'type'
