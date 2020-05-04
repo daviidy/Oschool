@@ -24,7 +24,7 @@ class PaymentsController extends Controller
     public function index(School $school)
     {
 
-        $cinet_pay = Payments::where('type','mobile_money')->exists();
+        $cinet_pay = Payments::where('type','mobile_money')->where('school_id',$school->id)->exists();
         return view('admin_views.payments.index', ['school' => $school,'cinet_pay'=>$cinet_pay]);
     }
 
@@ -46,7 +46,7 @@ class PaymentsController extends Controller
      */
     public function store(Request $request,School $school)
     {
-        $statut_payments = Payments::where('type',$request['type'])->exists();
+        $statut_payments = Payments::where('type',$request['type'])->where('school_id',$request['school_id'])->exists();
 
         if($statut_payments)
         {
