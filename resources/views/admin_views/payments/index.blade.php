@@ -311,7 +311,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             <table ng-if="products.length > 0" class="tch-table draggable-products">
                 <thead>
                     <tr>
-                        <th>SIDE ID</th>
+                        <th>SITE ID</th>
                         <th>API KEY</th>
                     </tr>
                 </thead>

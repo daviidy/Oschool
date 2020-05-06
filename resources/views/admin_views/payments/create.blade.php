@@ -526,7 +526,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 
                         <bootstrap-decorator form="schemaForm.form[5]">
                             <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">SIDE_ID</label>
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">SITE_ID</label>
                               <input type="text" name="site_id">
 
 
