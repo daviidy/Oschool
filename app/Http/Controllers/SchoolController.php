@@ -704,6 +704,73 @@ class SchoolController extends Controller
 
         }//fin function callback
 
+        //callback vimeo
+        public function vimeoCallback(Request $request)
+        {
+
+            $state = $request->input('state');
+            $code = $request->input('code');
+
+			$school = School::find($state);
+
+			function postData($params, $url)
+                        {
+                         try {
+                         $curl = curl_init();
+                         $postfield = '';
+                         foreach ($params as $index => $value) {
+                         $postfield .= $index . '=' . $value . "&";
+                         }
+                         $postfield = substr($postfield, 0, -1);
+                         curl_setopt_array($curl, array(
+                         CURLOPT_URL => $url,
+                         CURLOPT_RETURNTRANSFER => true,
+                         CURLOPT_ENCODING => "",
+                         CURLOPT_MAXREDIRS => 10,
+                         CURLOPT_TIMEOUT => 45,
+                         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                         CURLOPT_CUSTOMREQUEST => "POST",
+                         CURLOPT_POSTFIELDS => $postfield,
+                         CURLOPT_SSL_VERIFYPEER => true,
+                         CURLOPT_HTTPHEADER => array(
+                         "Authorization: Basic ". base64_encode("348e328e2d3e36da3c8940ec81267f27e04f378c:+b7SiwEdQ4lNip4zhR0/aPF5TgMEFwgdQJ9BymvpLENV6cn8o+PlTbNvgG6HLN/YTNaoZyVlo6sJ7nxzM402MK6PANgNRG3pDDZ1EdlvsryXQ53Y/ShZdKxrSc4BxgHv"),
+                         "Content-Type : application/json",
+                         "Accept : application/vnd.vimeo.*+json;version=3.4",
+                         ),
+                         ));
+                         $response = curl_exec($curl);
+                         $err = curl_error($curl);
+                         curl_close($curl);
+                         if ($err) {
+                         throw new Exception("cURL Error #:" . $err);
+                         return $err;
+                         } else {
+                         return $response;
+                         }
+                         } catch (Exception $e) {
+                         throw new Exception($e);
+                         }
+                        }
+                      $params = array('grant_type' => 'authorization_code',
+                                      'code' => $code,
+                                      'redirect_uri' => "https://oschoolelearning.com/vimeocallback?state=".$school->id,
+                                      );
+                      $url = "https://api.vimeo.com/oauth/access_token";
+                      //Appel de fonction postData()
+                      $resultat = postData($params, $url);
+                      $json = json_decode($resultat, true);
+
+
+                     $school->token = $json['access_token'];
+                     $school->save();
+
+					return redirect('/schoolAdmin/'.$school->id.'/integrations')->with('status', 'VIMEO est autorisé dans votre école');
+
+
+
+
+        }//fin function callback
+
 
         public function listMeetings(Lesson $lesson, User $user)
         {

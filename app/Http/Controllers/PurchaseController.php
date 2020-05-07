@@ -6,6 +6,7 @@ use App\Purchase;
 use App\School;
 use App\User;
 use App\Course;
+use App\Payments;
 use App\Pricing;
 use Illuminate\Http\Request;
 use Mail;
@@ -65,6 +66,11 @@ class PurchaseController extends Controller
         //si user est connecté on fait l'api call
         //vers cinetpay pour récuperer la signature
         //et le transid
+
+        //Recuperation des paramètres mobile money de l'ecole
+        $param_mobile_money = Payments::where('school_id',$pricing->course->school_id)->first();
+        // dd($param_mobile_money);
+
         if (Auth::check()) {
 
             if ($pricing->course->type == 'mooc') {
@@ -142,7 +148,7 @@ class PurchaseController extends Controller
                 $temps = date("YmdHis");
               $params = array('cpm_amount' => $price,
                               'cpm_currency' => 'CFA',
-                              'cpm_site_id' => '113043',
+                              'cpm_site_id' => $param_mobile_money->site_id,
                               'cpm_trans_id' => $temps,
                               'cpm_trans_date' => $time,
                               'cpm_payment_config' => 'SINGLE',
@@ -150,7 +156,7 @@ class PurchaseController extends Controller
                               'cpm_version' => 'V1',
                               'cpm_language' => 'fr',
                               'cpm_designation' => 'Abonnement à la formation '.$pricing->course->name,
-                              'apikey' => '134714631658c289ed716950.86091611',
+                              'apikey' => $param_mobile_money->api_key,
                               );
               $url = "https://api.cinetpay.com/v1/?method=getSignatureByPost";
               //Appel de fonction postData()
@@ -180,6 +186,7 @@ class PurchaseController extends Controller
                                            'time' => $time,
                                            'purchase' => $purchase,
                                            'pricing' => $pricing,
+                                           'param_mobile_money'=>$param_mobile_money
                                          ]);
         }
 
@@ -187,7 +194,7 @@ class PurchaseController extends Controller
         //vers la page de pricings show
 
         else {
-            return view('pricings.show',['pricing' => $pricing,]);
+            return view('pricings.show',['pricing' => $pricing,'param_mobile_money'=>$param_mobile_money]);
         }
 
 
@@ -261,7 +268,7 @@ class PurchaseController extends Controller
         $params = array(
                         'cpm_site_id' => $request['cpm_site_id'],
                         'cpm_trans_id' => $request['cpm_trans_id'],
-                        'apikey' => '134714631658c289ed716950.86091611',
+                        'apikey' => $request['apikey'],
                         );
         $url = "https://api.cinetpay.com/v1/?method=checkPayStatus";
         //Appel de fonction postData()

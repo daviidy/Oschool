@@ -1,5 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
-@section('title', 'Liste des FAQS')
+@section('title', 'Mobile money CinetPy')
 @section('content')
 
 <style media="screen">
@@ -256,7 +256,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Liste des FAQS
+                    <!---->Liste des Paramètres de paiement CinetPay
                     <div class="tch-btn-header-icon-2">
                       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="20" height="40"viewBox="0 0 172 172"style=" fill:#000000;position: relative;bottom: 8px;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g fill="#3498db"><path d="M129.07556,30.25717l12.67131,12.67175l-98.8199,98.81645l-12.67131,-12.67175z"></path><path d="M141.73757,129.08237l-12.67077,12.66723l-98.80691,-98.8345l12.67077,-12.66723z"></path></g><path d="" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path></g></g></svg>
                     </div>
@@ -269,7 +269,13 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
     </div>
     @include('includes.status')
     <div class="tch-inline-form">
-    <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/faqs/create">Nouveau faq</a></div>
+        @if ($cinet_pay == true)
+            <div id="test-id-add-product-btn" style="display:none" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/moyens_paiments/mobile_money/create">Nouveau Mobile Money</a></div>
+
+        @else
+            <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/moyens_paiments/mobile_money/create">Nouveau Mobile Money</a></div>
+
+        @endif
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
             <!---->
             {{-- <ng-include src="'courses/course/pricing/new-pricing-inline-form.html'">
@@ -305,15 +311,15 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             <table ng-if="products.length > 0" class="tch-table draggable-products">
                 <thead>
                     <tr>
-                        <th>Questions</th>
-                        <th>Reponses</th>
+                        <th>SITE ID</th>
+                        <th>API KEY</th>
                     </tr>
                 </thead>
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
                     <!---->
 
 
-                    @foreach ($school->faqs as $faq)
+                    @foreach ($school->payments as $payment)
                     <!--si la session est annulée qu'elle soit en rouge-->
                         <tr what="product" which="Free Course" ng-repeat="product in products" class="border-bottom ui-sortable-handle">
                         {{--<td><span>{{$course->name}}</span><span class="space"></span><span class="space"></span>
@@ -328,12 +334,12 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                         </td> --}}
                         <td what="comment">
                             <div>
-                               {{$faq->questions}}
+                               {{$payment->site_id}}
                             </div>
                         </td>
                         <td what="comment">
                             <div>
-                               {!!$faq->reponses!!}
+                               {!!$payment->api_key!!}
                             </div>
                         </td>
 
@@ -343,14 +349,14 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                             <!---->
                             <!---->
                             <div ng-if="product.is_published" class="pull-right">
-                            <a href="/schoolAdmin/{{$school->id}}/faqs/{{$faq->id}}/edit">
+                            <a href="/schoolAdmin/{{$school->id}}/moyens_paiments/mobile_money/{{$payment->id}}/edit">
                                     <button what="edit button" ng-click="showEditProductModal(product)" class="tch-btn-content-primary tch-btn-icon fastclickable"><i class="fa fa-edit"></i></button>
                                 </a>
 
 
 
 
-                                <form action="{{ route('faqs.destroy', $faq->id) }}" method="post">
+                                <form action="{{ route('payments.destroy', $payment->id) }}" method="post">
                                     @csrf
                                     {{ method_field('delete') }}
                                     <button

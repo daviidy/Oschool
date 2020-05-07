@@ -108,6 +108,15 @@ class School extends Model
            return $this->hasMany('App\Category');
        }
 
+            /**
+      * [School description]
+      * relationship one to many with Payments model
+      * @return [array] [description]
+      */
+      public function payments()
+      {
+          return $this->hasMany('App\Payments');
+      }
      public static function boot() {
      parent::boot();
 

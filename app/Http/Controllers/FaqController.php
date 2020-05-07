@@ -65,6 +65,7 @@ class FaqController extends Controller
     public function edit(School $school, Faq $faq)
     {
         //
+
         return view('admin_views.faqs.edit', ['school' => $school, 'faq'=>$faq]);
 
     }
@@ -78,7 +79,7 @@ class FaqController extends Controller
      */
     public function update(Request $request, Faq $faq)
     {
-        $faq->update($request->all());      
+        $faq->update($request->all());
         return redirect('/schoolAdmin/'.$faq->school->id.'/faqs')->with('status', 'Faq modifié avec seccès');
     }
 
@@ -91,9 +92,9 @@ class FaqController extends Controller
      */
     public function courseFaqs(School $school, Course $course)
     {
-        
+
         return view('admin_views.school.faq', ['course' => $course]);
-        
+
     }
 
     /**
