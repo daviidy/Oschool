@@ -53,12 +53,12 @@ class LiveSearchController extends Controller
                                </div>
                            </div>
                            <div class="row">
-                               <div class="tch-course-listing-sales tch-course-listing-footer-section">0 <div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
+                               <div class="tch-course-listing-sales tch-course-listing-footer-section">'.count($row->purchases->where('status', 'Validé')->price).' <div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
                                      class="tch-course-listing-sales-total">FCFA</div>
                                    <div class="tch-course-listing-sales-label">Ventes</div>
                                </div>
                                <div class="tch-course-listing-enrollment tch-course-listing-footer-section">
-                                   <div ng-bind="::courseStats[course.id].enrolled" what="course-total-enrolled" class="tch-course-listing-enrollment-total">0</div>
+                                   <div ng-bind="::courseStats[course.id].enrolled" what="course-total-enrolled" class="tch-course-listing-enrollment-total">'.count($row->users).'</div>
                                    <div class="tch-course-listing-enrollment-label">Inscrit(e)(s)</div>
                                </div>
                            </div>

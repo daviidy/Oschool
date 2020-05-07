@@ -1477,7 +1477,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 Mettez des ressources que les étudiants
                 pourront télécharger pour cette leçon (facultatif) <br> <span class="space"></span><span class="space"></span></div><br>
             <div style="margin-left: -18%;" data-ng-transclude="" data-filepicker-btn="" data-multiple="true" data-preview-on-upload="false" data-prevent-default="true" target-type="attachment upload" id="test-id-upload-button" ng-click="safariResize()"
-              class="drop-button tch-btn-header-secondary pull-right fastclickable"> <input id="downloadable_files" type="file" name="downloadable_files[]" multiple> <span> Choisir fichiers</span></div>
+              class="drop-button tch-btn-header-secondary pull-right fastclickable">
+              <input id="downloadable_files" type="file" name="downloadable_files[]" multiple> <span> Choisir fichiers</span></div>
         </div>
 
         <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
