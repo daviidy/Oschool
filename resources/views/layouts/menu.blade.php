@@ -112,7 +112,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             @include('includes.timer');
             timer --}}
 
-
     <section class="_1568 clearfix transparent nav-menu">
       <style>
         ._1568 {
