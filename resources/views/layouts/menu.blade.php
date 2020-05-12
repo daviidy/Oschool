@@ -109,8 +109,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     {{--timer
-            @include('includes.timer');
-            timer --}}
+        @include('includes.timer');
+    timer --}}
 
     <section class="_1568 clearfix transparent nav-menu">
       <style>
