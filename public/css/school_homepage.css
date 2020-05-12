@@ -279,7 +279,7 @@
   .hero-partial .input-container.center .orange-button{position:absolute!important;width:210px;right:0px;}
   }
   hr{border-color:#ececec;}
-  .nav-menu{box-sizing:content-box;color:white;font-family:'TeachableSans-Regular';font-size:14px;-webkit-font-smoothing:antialiased;letter-spacing:0.7px;height:92px;/*padding-top:25px for timer*/;z-index:10;background:#1ea69a;background:-moz-linear-gradient(left, #1ea69a 24%, #e9723d 100%);background:-webkit-linear-gradient(left, #1ea69a 24%, #e9723d 100%);background:linear-gradient(to right, #1ea69a 24%, #e9723d 100%);}
+  .nav-menu{box-sizing:content-box;color:white;font-family:'TeachableSans-Regular';font-size:14px;-webkit-font-smoothing:antialiased;letter-spacing:0.7px;height:92px;/*padding-top:25px*//* for timer*/;z-index:10;background:#1ea69a;background:-moz-linear-gradient(left, #1ea69a 24%, #e9723d 100%);background:-webkit-linear-gradient(left, #1ea69a 24%, #e9723d 100%);background:linear-gradient(to right, #1ea69a 24%, #e9723d 100%);}
   .nav-menu .container{position:relative;padding-left:30px;padding-right:30px;}
   .nav-menu .teachable-logo{margin-top:17px;float:left;width:142px;height:27px;background-image:url(https://teachable.com/assets/teachable-logo-white-efd32576079839534d5b6e87bf4424e99b12624f854b2c500a4d3f0b6e2af46b.svg);background-repeat:no-repeat;}
   @media (max-width: 767px){
