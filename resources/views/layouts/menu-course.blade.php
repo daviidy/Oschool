@@ -536,9 +536,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     data-course-data="{&quot;is_lecture_order_enforced&quot;:null,&quot;is_minimum_quiz_score_enforced&quot;:null,&quot;is_video_completion_enforced&quot;:null,&quot;minimum_quiz_score&quot;:null,&quot;maximum_quiz_retakes&quot;:null}"
     data-course-url="https://courses.52kards.com/courses/7169" data-course-id="7169" data-vat-country="null" data-hellosign-id="null">
 
-    {{--timer--}}
+    {{--timer
     @include('includes.timer');
-    {{--timer--}}
+    timer--}}
 
   <header class="">
 
