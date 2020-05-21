@@ -637,7 +637,8 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                     <p class="MuiTypography-root Typography-ngwq8z-0 dVSKBO MuiTypography-body1" style="margin-top: 13px; margin-right: 8px;">Par:</p>
                     <div class="PageSummary__Authors-sc-19qsvz4-1 iHyzSJ">
                         <div class="PageSummary__AuthorList-sc-19qsvz4-7 imbVAc">
-                            <div id="author-pic" class="PageSummary__Author-sc-19qsvz4-20 eyJePy"><a class="UserPic-oj7r19-0 auHjp" href="/profile/view/4728896371032064">
+                            <div id="author-pic" class="PageSummary__Author-sc-19qsvz4-20 eyJePy">
+                                <a class="UserPic-oj7r19-0 auHjp" href="/authors/{{$course->author->id}}/show">
                                     <div size="28" class="UserPic-iyi4aa-0 gdutop" overflow="hidden">
                                         <div class=" sb-avatar sb-avatar--src" style="display: inline-block; vertical-align: middle; width: 28px; height: 28px; border-radius: 100%; font-family: Helvetica, Arial, sans-serif;">
                                             <img
