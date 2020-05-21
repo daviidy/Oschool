@@ -463,7 +463,7 @@
                                       <select class="js-example-basic-multiple" name="courses_id[]" multiple="multiple" style="width:250px;">
                                             @foreach ($school->courses as $course_db)
                                                         <option value="{{$course_db->id}}">{{$course_db->name}}</option>
-                                                    @endforeach
+                                            @endforeach
                                           </select>
 
                                   </div>

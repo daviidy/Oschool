@@ -24,6 +24,7 @@ class CouponController extends Controller
      */
     public function index(School $school, Course $course)
     {
+
         return view('admin_views.coupons.index', ['course' => $course, 'school' => $school]);
     }
 
