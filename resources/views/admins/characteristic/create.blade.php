@@ -43,7 +43,7 @@
 
                     <div class="col-sm-12 add-top-margin-25">
 
-                        <label for="status">Selectionnez les offres </label>
+                        <label for="status">Selectionnez les caracteristiques</label>
                         <br>
 
 
