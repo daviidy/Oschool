@@ -17,7 +17,8 @@ class Purchase extends Model
                            'status',
                            'user_id',
                            'pricing_id',
-                           'course_id'
+                           'course_id',
+                           'offer_id'
                          ];
 
 
