@@ -439,6 +439,143 @@ class LiveSearchController extends Controller
     }
 
 
+    function searchOffersAdmin(Request $request)
+    {
+     if($request->ajax())
+     {
+      $output = '';
+      $query = $request->get('query');
+      if($query != '')
+      {
+       $data = DB::table('offers')
+         ->where('name', 'like', '%'.$query.'%')
+         ->orderBy('name', 'asc')
+         ->get();
+
+      }
+      else
+      {
+       $data = DB::table('offers')
+         ->orderBy('name', 'asc')
+         ->get();
+      }
+      $total_row = $data->count();
+      if($total_row > 0)
+      {
+       foreach($data as $row)
+       {
+        $token = csrf_token();
+
+            $output .= '
+            <tr>
+             <td>'.$row->name.'</td>
+             <td>'.$row->price.'</td>
+             <td>
+                 <form action="/offers/'.$row->id.'" method="post">
+                     <input type="hidden" name="_token" value="'.$token.'">
+                     <input type="hidden" name="_method" value="delete">
+                     <button style="background:#dc4f2f;"
+                         class="btn btn-xs btn-rounded btn-danger"><i class="fa fa-trash"></i>
+                     </button>
+                 </form>
+                 <a href="/offers/'.$row->id.'/edit">Modifier</a>
+             </td>
+            </tr>
+            ';
+
+
+       }
+      }
+      else
+      {
+       $output = '
+       <tr>
+        <td align="center" colspan="5">Aucun résultat pour cette recherche</td>
+       </tr>
+       ';
+      }
+      $data = array(
+       'table_data'  => $output,
+       'total_data'  => $total_row
+      );
+
+      echo json_encode($data);
+
+     }
+    }
+    function getOffers($loop)
+    {
+        foreach($loop as $value)
+        {
+            return $value->name;
+        }
+    }
+    function searchCharacteristicAdmin(Request $request)
+    {
+     if($request->ajax())
+     {
+      $output = '';
+      $query = $request->get('query');
+      if($query != '')
+      {
+       $data = DB::table('characteristics')
+         ->where('description', 'like', '%'.$query.'%')
+         ->orderBy('description', 'asc')
+         ->get();
+
+      }
+      else
+      {
+       $data = DB::table('characteristics')
+         ->orderBy('description', 'asc')
+         ->get();
+      }
+      $total_row = $data->count();
+      if($total_row > 0)
+      {
+       foreach($data as $row)
+       {
+
+        $token = csrf_token();
+
+            $output .= '
+            <tr>
+             <td>'.$row->description.'</td>
+             <td>
+                 <form action="/characteristics/'.$row->id.'" method="post">
+                     <input type="hidden" name="_token" value="'.$token.'">
+                     <input type="hidden" name="_method" value="delete">
+                     <button style="background:#dc4f2f;"
+                         class="btn btn-xs btn-rounded btn-danger"><i class="fa fa-trash"></i>
+                     </button>
+                 </form>
+                 <a href="/characteristics/'.$row->id.'/edit">Modifier</a>
+             </td>
+            </tr>
+            ';
+
+
+       }
+      }
+      else
+      {
+       $output = '
+       <tr>
+        <td align="center" colspan="5">Aucun résultat pour cette recherche</td>
+       </tr>
+       ';
+      }
+      $data = array(
+       'table_data'  => $output,
+       'total_data'  => $total_row
+      );
+
+      echo json_encode($data);
+
+     }
+    }
+
+
 
 
 

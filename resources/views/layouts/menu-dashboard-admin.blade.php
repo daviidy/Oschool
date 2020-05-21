@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="/admin/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="/admin/assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="/admin/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
     <title>@yield('title') - Admin | Oschool</title>
 
     <style media="screen">
@@ -67,6 +68,7 @@
     .adjust-search[_ngcontent-c18]   input[type=text][_ngcontent-c18]{margin-bottom:2rem!important;margin-top:3rem!important;padding:1.75em 1.75em;width:100%;border:1px solid #dbe2e8;color:#2e3d49;background:url(https://www.udacity.com/assets/iridium/images/course-catalog/search.svg) calc(100% - 1.4em) center/1.6rem no-repeat #fff;max-width:70rem;outline:0;margin:0 auto;height:3.5rem;font-size:1.5rem;border-radius:8px;display:block;box-shadow:5px 5px 25px 0 rgba(46,61,73,.2);}
     }
     </style>
+
     <script> "use strict"; !function() { var t = window.driftt = window.drift = window.driftt || []; if (!t.init) { if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")); t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], t.factory = function(e) { return function() { var n = Array.prototype.slice.call(arguments); return n.unshift(e), t.push(n), t; }; }, t.methods.forEach(function(e) { t[e] = t.factory(e); }), t.load = function(t) { var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i); }; } }(); drift.SNIPPET_VERSION = '0.3.1'; drift.load('2uy6g3spxi59');
     </script>
 </head>
@@ -277,6 +279,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </li>
 
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-5"><i class="fab fa-fw fa-wpforms"></i>Offres</a>
+                                <div id="submenu-6" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('offers.index')}}">Liste des offre</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('offers.create')}}">Ajouter une offre</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-5"><i class="fab fa-fw fa-wpforms"></i>Caractéristiques</a>
+                                <div id="submenu-7" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('characteristics.index')}}">Liste des caracteristiques</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('characteristics.create')}}">Ajouter une caracteristiques</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </li>
+
 
                         </ul>
                     </div>
@@ -370,6 +404,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/admin/assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="/admin/assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="/admin/assets/libs/js/dashboard-ecommerce.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script> --}}
+<!--pour le multiple select-->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.js-example-basic-multiple').select2();
+    });
+
+    </script>
 
     <script type="text/javascript">
     $(document).ready(function(){

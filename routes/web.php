@@ -121,6 +121,10 @@ Route::resource('colors', 'ColorController');
 
 Route::resource('payments', 'PaymentsController');
 
+Route::resource('offers', 'OfferController');
+
+Route::resource('characteristics', 'CharacteristicController');
+
 
 //for create school with subdoamin or attached domains
 Route::post('/storeSchoolBusiness', 'SchoolController@storeSchoolBusiness')->name('schools.storeBusiness');
@@ -458,6 +462,8 @@ Route::get('/ajax_user_search_admin', 'LiveSearchController@searchUsersAdmin');
 Route::get('/ajax_course_search_admin', 'LiveSearchController@searchCoursesAdmin');
 Route::get('/ajax_school_search_admin', 'LiveSearchController@searchSchoolsAdmin');
 Route::get('/ajax_categorie_search_admin', 'LiveSearchController@searchCategoriesAdmin');
+Route::get('/ajax_offer_search_admin', 'LiveSearchController@searchOffersAdmin');
+Route::get('/ajax_characteristic_search_admin', 'LiveSearchController@searchCharacteristicAdmin');
 
 
 //
