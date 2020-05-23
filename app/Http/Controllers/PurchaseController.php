@@ -397,7 +397,7 @@ class PurchaseController extends Controller
         //inscrit a la course en question
         //on l'inscrit
 
-          $course = Course::where('name', $purchase->pricing->course->name)->first();
+          $course = Course::where('id', $purchase->pricing->course->id)->first();
 
           if (Auth::user()->courses->contains($course->id)) {
 
