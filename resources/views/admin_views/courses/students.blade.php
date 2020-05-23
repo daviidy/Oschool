@@ -710,8 +710,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             class="tch-page-nav-btn tch-back-button fastclickable" disabled="disabled"><i class="fa fa-angle-left"></i></button><button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page"
                             class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"><i class="fa fa-angle-right"></i></button></div>
                   </div>
-                  <div class="tch-page-nav-count _2JQIJ">Affichage de<span ng-bind="' ' + (meta.from) + '  -  ' + meta.to + ' '" what="student count"> 1 - 2 </span> of<span what="student count" ng-bind="' ' + (meta.total >= 10000 ? '10,000+' : meta.total)">
-                          2</span><span class="student-count"> Etudiants</span><span class="space"></span><span class="space"></span>
+                  <div class="tch-page-nav-count _2JQIJ">Affichage de<span ng-bind="' ' + (meta.from) + '  -  ' + meta.to + ' '" what="student count"> {{count($course->users)}} </span><span what="student count" ng-bind="' ' + (meta.total >= 10000 ? '10,000+' : meta.total)">
+                          </span><span class="student-count"> Etudiants</span><span class="space"></span><span class="space"></span>
                       <!---->
                       <!---->
                   </div>
