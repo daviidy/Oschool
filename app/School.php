@@ -126,6 +126,9 @@ class School extends Model
              File::delete(public_path('/images/schools/logos/' . $school->logo));
          }
          foreach ($school->courses as $course) {
+             foreach ($course->lessons as $lesson) {
+                 $lesson->medias()->delete();
+             }
              $course->lessons()->delete();
              $course->sections()->delete();
              $course->deliverables()->delete();
