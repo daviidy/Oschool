@@ -128,6 +128,17 @@ class School extends Model
          foreach ($school->courses as $course) {
              foreach ($course->lessons as $lesson) {
                  $lesson->medias()->delete();
+                 foreach ($lesson->quizzes as $quiz) {
+                     foreach ($quiz->results as $result) {
+                         $result->answers()->delete();
+                         $result->delete();
+                     }
+
+                     foreach ($quiz->questions as $question) {
+                         $question->options()->delete();
+                         $question->delete();
+                     }
+                 }
                  $lesson->quizzes()->delete();
              }
              $course->lessons()->delete();
