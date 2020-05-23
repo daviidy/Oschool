@@ -80,12 +80,13 @@ class Lesson extends Model
                 if (File::exists(public_path('/images/lessons/resources/' . $media->name))) {
                     File::delete(public_path('/images/lessons/resources/' . $media->name));
                 }
+                $media()->delete();
             }
             //we delete lesson image
             if (File::exists(public_path('/images/lessons/images/' . $lesson->image))) {
                 File::delete(public_path('/images/lessons/images/' . $lesson->image));
             }
-             $lesson->medias()->delete();
+
              foreach ($lesson->quizzes as $quiz) {
 
                  foreach ($quiz->results as $result) {

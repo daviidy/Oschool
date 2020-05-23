@@ -128,6 +128,7 @@ class School extends Model
          foreach ($school->courses as $course) {
              $course->lessons()->delete();
              $course->sections()->delete();
+             $course->deliverables()->delete();
              $course->projects()->delete();
              $course->delete();
          }

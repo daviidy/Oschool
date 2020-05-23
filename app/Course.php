@@ -192,6 +192,8 @@ class Course extends Model
                    File::delete(public_path('/images/courses/logos/' . $course->logo));
                }
 
+               $course->deliverables()->delete();
+
                 foreach ($course->projects as $project) {
                     $project->tasks()->delete();
                     $project->resources()->delete();
