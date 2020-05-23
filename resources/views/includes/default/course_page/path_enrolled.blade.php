@@ -891,8 +891,8 @@ img{max-width:100%;}
         <div id="program" class="myg-accordion__item js-accordion-item " id="module-section-1">
             <div class="myg-accordion__header js-accordion-title" tabindex="0">
                 <h4 class="myg-accordion__title heading--h3">
-                        Module {{$loop->index + 1}}&nbsp;
-                        <strong>({{count($project->resources)}} cours à suivre)</strong>
+                        Module {{$loop->index + 1}} :&nbsp;
+                        <strong>{{count($project->resources)}} cours à suivre</strong>
                 </h4>
                 <i class="myg-accordion__icon myg-accordion__screenreader-box" role="presentation" aria-label="Libellé aria pour le panneau en accordéon fermé">Libellé aria pour le panneau en accordéon fermé</i>
                 <i class="myg-accordion__icon material-icons icon--expand_more faq__accordion__icon" role="presentation" aria-hidden="true"></i>

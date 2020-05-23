@@ -720,6 +720,618 @@ button,html [type=button]{-webkit-appearance:button;}
 }
 
 </style>
+
+<!--sryle educative-->
+<style media="screen">
+/*! CSS Used from: Embedded */
+.MuiButtonBase-root{color:inherit;border:0;cursor:pointer;margin:0;display:inline-flex;outline:0;padding:0;position:relative;align-items:center;user-select:none;border-radius:0;vertical-align:middle;-moz-appearance:none;justify-content:center;text-decoration:none;background-color:transparent;-webkit-appearance:none;-webkit-tap-highlight-color:transparent;}
+.MuiButtonBase-root::-moz-focus-inner{border-style:none;}
+@media print{
+.MuiButtonBase-root{-webkit-print-color-adjust:exact;}
+}
+/*! CSS Used from: Embedded */
+.MuiButton-root{color:rgba(0, 0, 0, 0.87);padding:6px 16px;font-size:0.875rem;min-width:64px;box-sizing:border-box;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-family:"Nunito Sans", Verdana, Helvetica, sans-serif;font-weight:500;line-height:1.75;border-radius:4px;text-transform:uppercase;}
+.MuiButton-root:hover{text-decoration:none;background-color:rgba(0, 0, 0, 0.04);}
+@media (hover: none){
+.MuiButton-root:hover{background-color:transparent;}
+}
+.MuiButton-label{width:100%;display:inherit;align-items:inherit;justify-content:inherit;}
+.MuiButton-text{padding:6px 8px;}
+.MuiButton-outlined{border:1px solid rgba(0, 0, 0, 0.23);padding:5px 15px;}
+.MuiButton-outlinedPrimary{color:#5553FF;border:1px solid rgba(85, 83, 255, 0.5);}
+.MuiButton-outlinedPrimary:hover{border:1px solid #5553FF;background-color:rgba(85, 83, 255, 0.04);}
+@media (hover: none){
+.MuiButton-outlinedPrimary:hover{background-color:transparent;}
+}
+.MuiButton-contained{color:rgba(0, 0, 0, 0.87);box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);background-color:#D2D2D6;}
+.MuiButton-contained:hover{box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);background-color:#5B5B6A;}
+.MuiButton-contained:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}
+@media (hover: none){
+.MuiButton-contained:hover{box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);background-color:#D2D2D6;}
+}
+.MuiButton-containedPrimary{color:#ffffff;background-color:#5553FF;}
+.MuiButton-containedPrimary:hover{background-color:#2320CC;}
+@media (hover: none){
+.MuiButton-containedPrimary:hover{background-color:#5553FF;}
+}
+.MuiButton-disableElevation{box-shadow:none;}
+.MuiButton-disableElevation:hover{box-shadow:none;}
+.MuiButton-disableElevation:active{box-shadow:none;}
+.MuiButton-fullWidth{width:100%;}
+.MuiButton-endIcon{display:inherit;margin-left:8px;margin-right:-4px;}
+.MuiButton-iconSizeMedium > *:first-child{font-size:20px;}
+/*! CSS Used from: Embedded */
+.jss351{margin:8px;display:flex;padding:10px 12px;font-size:1.5rem;font-weight:700;line-height:24px;white-space:nowrap;border-radius:4px;letter-spacing:0.35px;text-transform:inherit;}
+.jss351:focus{outline:none;}
+.jss355{margin:8px;display:flex;padding:10px 12px;font-size:1.5rem;font-weight:700;line-height:24px;white-space:nowrap;border-radius:4px;letter-spacing:0.35px;text-transform:inherit;background-color:white;}
+.jss355:focus{outline:none;}
+.jss355:hover{background-color:#E5E5E5;}
+.jss355:hover.MuiButton-outlinedPrimary{border-color:#6B6A78;}
+.jss357{margin:8px;display:flex;padding:10px 12px;font-size:1.5rem;font-weight:700;line-height:24px;white-space:nowrap;border-radius:4px;letter-spacing:0.35px;text-transform:inherit;}
+.jss357:focus{outline:none;}
+.jss357:hover{background-color:#E5E5E5;}
+/*! CSS Used from: Embedded */
+.MuiTypography-root{margin:0;}
+.MuiTypography-body1{font-size:1rem;font-family:"Nunito Sans", Verdana, Helvetica, sans-serif;font-weight:400;line-height:1.5;}
+.MuiTypography-button{font-size:0.875rem;font-family:"Nunito Sans", Verdana, Helvetica, sans-serif;font-weight:500;line-height:1.75;text-transform:uppercase;}
+.MuiTypography-h3{font-size:3rem;font-family:"Nunito Sans", Verdana, Helvetica, sans-serif;font-weight:400;line-height:1.167;}
+.MuiTypography-h4{font-size:2.125rem;font-family:"Nunito Sans", Verdana, Helvetica, sans-serif;font-weight:400;line-height:1.235;}
+.MuiTypography-h6{font-size:1.25rem;font-family:"Nunito Sans", Verdana, Helvetica, sans-serif;font-weight:500;line-height:1.6;}
+/*! CSS Used from: Embedded */
+.jss4{font-size:3.2rem;font-weight:600;line-height:1.5;letter-spacing:0.25px;}
+@media (max-width: 768px){
+.jss4{font-size:2.8rem;}
+}
+.jss5{font-size:2.4rem;font-weight:600;line-height:1.5;letter-spacing:0.25px;}
+@media (max-width: 768px){
+.jss5{font-size:2.2rem;}
+}
+.jss7{font-size:1.6rem;font-weight:700;line-height:1.5;letter-spacing:0.5px;}
+.jss8{font-size:1.4rem;font-weight:400;line-height:1.5;letter-spacing:0.15px;}
+.jss9{font-size:1.6rem;font-weight:400;line-height:1.5;letter-spacing:0.15px;}
+.jss10{font-size:2rem;font-weight:400;line-height:1.5;letter-spacing:0.15px;}
+.jss11{font-size:1.5rem;font-weight:700;line-height:24px;letter-spacing:0.35px;}
+/*! CSS Used from: Embedded */
+.jss444{text-decoration:line-through;text-decoration-color:#D42154;}
+/*! CSS Used from: Embedded */
+.MuiPaper-root{color:rgba(0, 0, 0, 0.87);transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;background-color:#fff;}
+.MuiPaper-rounded{border-radius:4px;}
+.MuiPaper-elevation1{box-shadow:0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);}
+/*! CSS Used from: Embedded */
+.MuiCard-root{overflow:hidden;}
+/*! CSS Used from: Embedded */
+.jss402{width:310px;max-width:310px;min-width:310px;box-shadow:0px 0px 8px rgba(0, 0, 0, 0.2);transition:0.4s;}
+@media (maWidth: 480px){
+.jss402{width:280px;max-width:280px;min-width:280px;}
+}
+.jss402:hover{transform:translateY(-5px);box-shadow:0px 16px 40px rgba(0, 0, 0, 0.2);}
+/*! CSS Used from: Embedded */
+.MuiCardActionArea-root{width:100%;height:100%;display:block;box-shadow:0 0 10px rgba(0, 0, 0, .03);text-align:inherit;}
+.MuiCardActionArea-root:hover .MuiCardActionArea-focusHighlight{opacity:0.04;}
+.MuiCardActionArea-focusHighlight{top:0;left:0;right:0;bottom:0;opacity:0!important;overflow:hidden;position:absolute;transition:opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:inherit;pointer-events:none;background-color:currentcolor;}
+/*! CSS Used from: Embedded */
+.MuiCardContent-root{padding:8px;}
+/*! CSS Used from: Embedded */
+.MuiCardMedia-root{display:block;background-size:cover;background-repeat:no-repeat;background-position:center;}
+.MuiCardMedia-media{width:100%;}
+.MuiCardMedia-img{object-fit:cover;}
+/*! CSS Used from: Embedded */
+.jss398{height:227px;display:flex;flex-direction:column;}
+.jss399{font-weight:bold;}
+.jss400{text-transform:capitalize;}
+/*! CSS Used from: Embedded */
+.jss301{align:left;margin:0;padding:20px 10px;}
+@media (max-width:659.95px){
+.jss301{text-align:center;margin-right:0;}
+}
+
+.progress{height:20px;margin-bottom:20px;overflow:hidden;background-color:#f5f5f5;border-radius:4px;box-shadow:inset 0 1px 2px rgba(0,0,0,.1);}
+.progress-bar{float:left;width:0;height:100%;font-size:12px;line-height:20px;color:#fff;text-align:center;background-color:#337ab7;box-shadow:inset 0 -1px 0 rgba(0,0,0,.15);transition:width .6s ease;}
+.progress-bar-success{background-color:#5cb85c;}
+/*! CSS Used from: Embedded */
+img{max-width:100%;}
+a{color:inherit;transition:color 0.2s ease 0s;}
+a:hover{color:inherit;border-bottom:none;text-decoration:none;}
+.kylqly{width:100%;max-width:1024px;padding:0px 40px;margin-bottom:90px;}
+@media (max-width: 480px){
+.kylqly{padding:0px 20px;}
+}
+.hkvaNG{overflow:hidden;display:inline-block;border-radius:100%;transition:all 0.2s ease 0s;width:30px;height:30px;}
+.hkvaNG img{object-fit:cover;vertical-align:inherit;}
+.hkvaNG img{width:30px;height:30px;}
+.cSTVFu{display:flex;-webkit-box-align:center;margin:15px 0px 0px 12px;-webkit-box-pack:start;justify-content:flex-start;align-items:flex-start;color:rgb(85, 83, 255);text-transform:uppercase;width:max-content;align-self:flex-start;padding:0px;}
+.cSTVFu svg{margin-right:5px;}
+@media (max-width: 480px){
+.cSTVFu{-webkit-box-pack:center;justify-content:center;margin:0px auto;}
+}
+.dxjKSf{display:flex;flex-direction:column;-webkit-box-pack:start;justify-content:flex-start;-webkit-box-align:center;align-items:center;min-width:230px;margin-top:8px;}
+@media (max-width: 660px){
+.dxjKSf{margin-top:15px;}
+}
+.jmaDHk{display:flex;flex-direction:column;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;border-radius:4px;width:232px;box-shadow:rgb(229, 229, 229) 0px 0px 0.9em;padding:16px;transition:all 0.2s ease 0s;position:relative;background:rgb(250, 250, 250);}
+.bDRWQO{display:flex;flex-direction:column;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;border-radius:4px;width:232px;box-shadow:rgb(229, 229, 229) 0px 0px 0.9em;padding:16px;margin-bottom:16px;transition:all 0.2s ease 0s;position:relative;background:rgb(250, 250, 250);}
+.gxVDCq{text-align:center;display:flex;-webkit-box-align:center;align-items:center;line-height:24px;margin:0px 8px;}
+.iAnLUL{margin:8px 0px;border-bottom:2px solid rgb(210, 210, 214);width:232px;}
+.cBMqa{display:flex;-webkit-box-align:center;align-items:center;}
+.hcsnMw{text-decoration-color:rgb(212, 33, 84);text-decoration-line:line-through;margin-right:8px;}
+.fwCoeW{margin:16px 0px;color:rgb(210, 210, 214);user-select:none;}
+.hopCqx{color:rgb(0, 0, 0);}
+.izRLMN{align-self:center;width:100%;max-width:1100px;margin:20px auto;}
+.ixzirH{display:flex;flex-direction:row;}
+.Cmwkb{color:rgb(0, 0, 0);}
+.hHCxqs{color:rgb(0, 0, 0);align-self:flex-end;margin-bottom:7px;}
+.fOGIap{display:flex;-webkit-box-pack:start;justify-content:flex-start;align-items:flex-start;padding:30px 0px;border-bottom:1px solid rgb(210, 210, 214);font-style:normal;}
+@media (max-width: 480px){
+.fOGIap{flex-wrap:wrap;-webkit-box-pack:center;justify-content:center;}
+}
+.jxKmlS{display:flex;flex-direction:column;padding-right:20px;flex:1 1 auto;}
+@media (max-width: 480px){
+.jxKmlS{padding:0px;}
+}
+.eFqBAy{display:flex;flex-direction:column;padding-left:20px;}
+@media (max-width: 480px){
+.eFqBAy{padding:0px;}
+}
+.jQMDNm{display:flex;flex:1 0 auto;height:200px;min-width:280px;overflow:hidden;-webkit-box-align:center;align-items:center;border-radius:4px;}
+.iHMnCn{width:100%;height:100%;object-fit:cover;}
+.bhycqc{padding:20px 10px;margin:0px;white-space:pre-line;}
+.hubMWz{width:100%;height:auto;display:flex;margin-left:auto;margin-right:auto;}
+.jgUtOi{display:flex;flex:1 1 0%;order:1;}
+@media (min-width: 1136px){
+.jgUtOi{margin-left:80px;margin-right:0px;}
+}
+@media (max-width: 1136px){
+.jgUtOi{order:1;-webkit-box-pack:center;justify-content:center;margin-top:0px;margin-right:0px;}
+}
+.cVZYwA{display:flex;flex:1 1 0%;order:2;}
+@media (min-width: 1136px){
+.cVZYwA{margin-left:80px;margin-right:0px;}
+}
+@media (max-width: 1136px){
+.cVZYwA{order:1;-webkit-box-pack:center;justify-content:center;margin-top:0px;margin-right:0px;display:none;}
+}
+.dqZNer{display:flex;flex:1 1 0%;order:2;}
+@media (min-width: 1136px){
+.dqZNer{margin-top:-212px;margin-right:80px;margin-left:0px;}
+}
+@media (max-width: 1136px){
+.dqZNer{order:1;-webkit-box-pack:center;justify-content:center;margin-top:0px;margin-right:0px;}
+}
+.cHnbOk{display:flex;flex:1 1 0%;order:1;}
+@media (min-width: 1136px){
+.cHnbOk{margin-left:80px;margin-right:0px;}
+}
+@media (max-width: 1136px){
+.cHnbOk{order:1;-webkit-box-pack:center;justify-content:center;margin-top:0px;margin-right:0px;display:none;}
+}
+.WqZv{display:flex;flex:1 1 0%;order:1;}
+@media (min-width: 1136px){
+.WqZv{margin-left:80px;margin-right:0px;margin-top:-212px;}
+}
+@media (max-width: 1136px){
+.WqZv{order:1;-webkit-box-pack:center;justify-content:center;margin-top:0px;margin-right:0px;}
+}
+.cUFtvd{display:flex;flex:1 1 0%;order:2;margin-bottom:20px;}
+@media (min-width: 1136px){
+.cUFtvd{margin-top:-212px;margin-right:80px;margin-left:0px;}
+}
+@media (max-width: 1136px){
+.cUFtvd{order:1;-webkit-box-pack:center;justify-content:center;margin-top:0px;margin-right:0px;}
+}
+.fkWzCJ{z-index:2;}
+@media (max-width: 1136px){
+.fkWzCJ{order:1;margin-right:80px;margin-left:-16px;}
+}
+.bWjkrA{z-index:2;order:3;margin-left:-16px;}
+@media (max-width: 1136px){
+.bWjkrA{order:1;margin-right:80px;margin-left:-16px;}
+}
+.fnvijc{margin-top:88px;}
+@media (max-width: 1136px){
+.fnvijc{order:3;width:25px;margin-left:0px;}
+}
+.cSaNPE{margin-top:88px;order:1;margin-left:-16px;}
+@media (max-width: 1136px){
+.cSaNPE{order:3;width:25px;margin-left:0px;}
+}
+.kWwmLH{transform:rotate(90deg);width:250px;margin-left:-113px;margin-top:115px;display:block;}
+.wZAyp{height:10px;background:rgb(255, 255, 255);border:1px solid rgb(193, 193, 198);box-shadow:none;}
+.wZAyp .progress-bar{box-shadow:none;}
+.wZAyp .progress-bar-success{background-color:rgb(80, 204, 47);}
+@media (max-width: 1136px){
+.wZAyp{width:430px;}
+}
+@media (min-width: 1136px){
+.wZAyp{width:204px;}
+}
+.jYHOa{height:10px;background:rgb(255, 255, 255);border:1px solid rgb(193, 193, 198);box-shadow:none;}
+.jYHOa .progress-bar{box-shadow:none;}
+.jYHOa .progress-bar-success{background-color:rgb(80, 204, 47);}
+@media (max-width: 1136px){
+.jYHOa{width:254px;}
+}
+@media (min-width: 1136px){
+.jYHOa{width:204px;}
+}
+.ipUbtY{display:inline-block;vertical-align:middle;width:24px;height:24px;border-radius:100%;background:rgb(255, 255, 255);z-index:1;position:relative;border:1px solid rgb(193, 193, 198);}
+.krZRxx{width:50px;height:3px;border-top:3px dashed rgb(80, 204, 47);margin-top:100px;margin-left:-16px;}
+@media (max-width: 1136px){
+.krZRxx{order:2;margin-left:-110px;}
+}
+@media (max-width: 400px){
+.krZRxx{order:2;margin-left:-110px;}
+}
+@media (max-width: 375px){
+.krZRxx{order:2;margin-left:-130px;}
+}
+.VfpKZ{width:50px;height:3px;border-top:3px dashed rgb(80, 204, 47);margin-top:100px;order:2;margin-left:-110px;}
+@media (max-width: 1136px){
+.VfpKZ{order:2;margin-left:-110px;}
+}
+@media (max-width: 400px){
+.VfpKZ{order:2;margin-left:-110px;}
+}
+@media (max-width: 375px){
+.VfpKZ{order:2;margin-left:-130px;}
+}
+
+</style>
+
+
+
+<!--style timeline bbotstrap-->
+<style media="screen">
+ul.timeline {
+list-style-type: none;
+position: relative;
+}
+ul.timeline:before {
+content: ' ';
+background: #d4d9df;
+display: inline-block;
+position: absolute;
+left: 29px;
+width: 2px;
+height: 100%;
+z-index: 400;
+}
+ul.timeline > li {
+margin: 20px 0;
+padding-left: 5rem;
+}
+ul.timeline > li:before {
+content: ' ';
+background: white;
+display: inline-block;
+position: absolute;
+border-radius: 50%;
+border: 3px solid #22c0e8;
+left: 20px;
+width: 20px;
+height: 20px;
+z-index: 400;
+}
+</style>
+
+
+<!--style fichiers telechargeables-->
+<style media="screen">
+/*! CSS Used from: https://oschoolelearning.com/css/course_single.css */
+@media screen{
+a{background:0 0;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+@media print{
+*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*{box-sizing:border-box;}
+:before,:after{box-sizing:border-box;}
+a{color:#428bca;text-decoration:none;}
+a:hover,a:focus{color:#2a6496;text-decoration:underline;}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+}
+a{color:#4D90CC;}
+a:hover,a:active{color:#1d3a50;}
+a,a:active,a:hover,a:focus{text-decoration:none;}
+/*! CSS Used from: https://oschoolelearning.com/css/fedora-course.css ; media=screen */
+@media screen{
+section{display:block;}
+a{background:0 0;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+@media print{
+*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" ("attr(href) ")";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*{box-sizing:border-box;}
+:before,:after{box-sizing:border-box;}
+a{color:#428bca;text-decoration:none;}
+a:hover,a:focus{color:#2a6496;text-decoration:underline;}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h4{margin-top:10px;margin-bottom:10px;}
+h4{font-size:18px;}
+}
+/*! CSS Used from: https://oschoolelearning.com/css/theme-course.css */
+a{color:#39719a;}
+a:hover,a:active{color:#1d3a50;}
+a,a:active,a:hover,a:focus{text-decoration:none;}
+h4{color:#2b3636;}
+/*! CSS Used from: Embedded */
+@media all{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h4{margin-top:10px;margin-bottom:10px;}
+h4{font-size:18px;}
+*:focus{outline:none;}
+a,a:hover{color:inherit;text-decoration:inherit;}
+a:focus{color:inherit;text-decoration:none;}
+h4{margin:0;font-weight:normal;}
+img{-webkit-user-drag:none;}
+}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+img{border-style:none;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+@media print{
+*,:after,:before{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;}
+}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:focus{outline:none;}
+*,::after,::before{box-sizing:inherit;}
+img{border-style:none;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+img{border-style:none;}
+*,::after,::before{box-sizing:inherit;}
+img{border-style:none;}
+*,::after,::before{box-sizing:inherit;}
+img{border:0;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*,:after,:before{box-sizing:border-box;}
+img{vertical-align:middle;}
+@media screen{
+div{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+body *{box-sizing:border-box;}
+}
+@media screen{
+div{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+body *{box-sizing:border-box;}
+}
+@media all{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit;}
+h4{margin-top:10px;margin-bottom:10px;}
+h4{font-size:18px;}
+*:focus{outline:none;}
+a,a:hover{color:inherit;text-decoration:inherit;}
+a:focus{color:inherit;text-decoration:none;}
+h4{margin:0;font-weight:normal;}
+img{-webkit-user-drag:none;}
+}
+/*! CSS Used from: Embedded */
+@media all{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+*:focus{outline:none;}
+a,a:hover{color:inherit;text-decoration:inherit;}
+a:focus{color:inherit;text-decoration:none;}
+}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+*,*::after,*::before{box-sizing:inherit;}
+@media print{
+*,:after,:before{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;}
+}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+:focus{outline:none;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+*,::after,::before{box-sizing:inherit;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
+}
+*,:after,:before{box-sizing:border-box;}
+@media screen{
+body *{box-sizing:border-box;}
+}
+@media screen{
+body *{box-sizing:border-box;}
+}
+@media all{
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+@media print{
+*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
+a,a:visited{text-decoration:underline;}
+a[href]:after{content:" (" attr(href) ")";}
+}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+*:focus{outline:none;}
+a,a:hover{color:inherit;text-decoration:inherit;}
+a:focus{color:inherit;text-decoration:none;}
+}
+/*! CSS Used from: Embedded ; media=screen */
+@media screen{
+@media screen{
+section{display:block;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+img{border:0;}
+*{box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+h4{font-family:'TeachableSans-Regular';font-weight:300;}
+h4{text-rendering:optimizeLegibility;margin:0;}
+a{text-decoration:none;}
+.material-icons{position:relative;width:1em;height:1em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;font-feature-settings:"liga";}
+.material-icons:before{position:absolute;top:0;left:0;}
+.module-progress-card{transition:transform .25s ease,box-shadow .25s ease;display:block;border-radius:6px;box-shadow:0 0 12px 0 #f1f3f4;background:#fff;border:1px solid #e8eaed;padding:20px 24px;margin:0 0 8px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;}
+@media (max-width:1440px){
+.module-progress-card{padding:20px;margin:0 0 16px;}
+}
+@media (max-width:599px){
+.module-progress-card{position:relative;padding:24px;flex-direction:column;justify-content:flex-start;align-items:left;}
+}
+@media (min-width:600px){
+.module-progress-card:hover{transform:scale(1.03);box-shadow:0 1px 25px 0 rgba(0,0,0,.05);z-index:2;}
+}
+@media (min-width:600px){
+.module-progress-card>*{margin:0 12px;}
+.module-progress-card>:first-child{margin-left:0;margin-right:12px;}
+.module-progress-card>:last-child{margin-left:12px;margin-right:0;}
+}
+@media (max-width:599px){
+.module-progress-card>*{margin:0;}
+}
+.module-progress-card__icon{width:60px;height:60px;background:#f1f3f4;padding:5px;border-radius:50%;flex:0 0 60px;}
+@media (max-width:599px){
+.module-progress-card__icon{margin-bottom:12px;}
+}
+.module-progress-card__icon img{display:block;width:100%;height:100%;}
+.module-progress-card h4.module-progress-card__title{margin:0;color:#3c4043;font-weight:500;flex:1 1 50%;}
+@media (max-width:599px){
+.module-progress-card h4.module-progress-card__title{flex:0;width:100%;margin-bottom:16px;}
+}
+.module-progress-card__cta{flex:1 0 24px;display:flex;justify-content:flex-end;align-items:center;text-align:right;}
+@media (max-width:599px){
+.module-progress-card__cta{position:absolute;bottom:24px;right:24px;left:auto;}
+}
+.module-progress-card__cta i{color:#1a73e8;}
+h4{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';}
+h4{font-size:1.8rem;font-weight:400;line-height:2.8rem;letter-spacing:0;}
+}
+@media screen{
+.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;}
+}
+@media screen{
+.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;}
+}
+}
+/*! CSS Used from: Embedded ; media=screen */
+@media screen{
+section{display:block;}
+a{background-color:transparent;-webkit-text-decoration-skip:objects;}
+*,:after,:before{box-sizing:inherit;}
+*,:after,:before{border:0 solid #95989d;}
+.button{display:inline-block;background-color:#3c434e;border-radius:9999px;text-decoration:none;text-align:center;color:#c1c1c1;padding:1rem 2rem;font-size:1rem;font-weight:600;line-height:1;}
+.button:hover{cursor:pointer;background-color:#62686e;}
+.button--primary{background-color:#4D90CC;border-width:1px;border-color:#4D90CC;color:#fff;}
+.button--primary:hover{background-color:#6cb2eb;}
+.coverWrapper{position:relative;padding-top:56.25%;}
+.cover{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;background-size:cover;background-color:#62686e;background-position:50%;}
+.bg-grey-darker{background-color:#2c313b;}
+.rounded{border-radius:.25rem;}
+.rounded-lg{border-radius:.5rem;}
+.flex{display:-ms-flexbox;display:flex;}
+.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap;}
+.items-center{-ms-flex-align:center;align-items:center;}
+.flex-initial{-ms-flex:initial;flex:initial;}
+.flex-grow{-ms-flex-positive:1;flex-grow:1;}
+.font-bold{font-weight:700;}
+.my-2{margin-top:.5rem;margin-bottom:.5rem;}
+.mt-0{margin-top:0;}
+.mb-6{margin-bottom:1.5rem;}
+.p-2{padding:.5rem;}
+.p-3{padding:.75rem;}
+.text-white{color:#fff;}
+.text-base{font-size:1rem;}
+.w-32{width:8rem;}
+.w-full{width:100%;}
+@media (min-width:768px){
+.md\:rounded-lg{border-radius:.5rem;}
+.md\:flex-no-wrap{-ms-flex-wrap:nowrap;flex-wrap:nowrap;}
+.md\:my-6{margin-top:1.5rem;margin-bottom:1.5rem;}
+.md\:p-3{padding:.75rem;}
+.md\:text-2xl{font-size:1.5rem;}
+.md\:w-48{width:12rem;}
+.md\:w-auto{width:auto;}
+}
+}
+/*! CSS Used from: Embedded ; media=screen */
+@media screen{
+img{border:0;}
+@media print{
+*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
+img{page-break-inside:avoid;}
+img{max-width:100%!important;}
+}
+*,:after,:before{box-sizing:border-box;}
+img{vertical-align:middle;}
+img{max-width:100%;}
+}
+
+</style>
+
+
+
 {{--timer
 @include('includes.timer');
 timer--}}
@@ -797,6 +1409,136 @@ timer--}}
                 <div style="width: 100%; border-right: unset;" class="about-this-course__info">
                     <h2 style="text-align: center;" class="about-this-course__info__title">À propos de ce parcours</h2>
 
+
+
+                    <div class="PageContent-sc-1cpsjbg-0 kylqly">
+                        {{--
+                        <div class="TrackPageSummary-iptjry-0 fOGIap">
+                            <div class="TrackPageSummary__Left-iptjry-1 jxKmlS">
+                                <div class="TrackPageSummary__Left_CoverImg_Wrapper-iptjry-3 jQMDNm"><img src="/udata/Mv02WxDbjlo/react_redux.png" alt="track-page-summary-cover" class="TrackPageSummary__Left_CoverImg-iptjry-4 iHMnCn"></div>
+                                <h1 class="jss16 jss344 jss4 jss301" variant="h3">React for Front-End Developers</h1>
+                                <div class="LessonCountWrapper-sc-17cuvu8-0 WorkTile__LessonCountWrapper-sc-7ava27-12 cSTVFu"><svg width="20px" height="20px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g transform="translate(-194.000000, -781.000000)" stroke="#5553FF">
+                                                <g transform="translate(195.000000, 782.000000)">
+                                                    <path
+                                                      d="M6.44650411,0.834509391 L19.5184532,0.834509391 C20.6230227,0.834509391 21.5184532,1.72993989 21.5184532,2.83450939 C21.5184532,3.01518473 21.493971,3.19502692 21.4456749,3.36912764 L16.6163664,20.7780879 C16.3211049,21.8424631 15.2189017,22.4659529 14.1545265,22.1706913 C14.0633879,22.1454092 13.9741575,22.1136939 13.8875071,22.0757844 L1.66779836,16.7296618 C0.722421453,16.3160594 0.246903478,15.2511175 0.570006905,14.2711131 L4.54707498,2.20827541 C4.81738074,1.38841153 5.58323012,0.834509391 6.44650411,0.834509391 Z"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M5.5,9.5 L16.5,11.5" stroke-linecap="square" fill-rule="nonzero"></path>
+                                                    <path d="M4.5,11.5 L15.5,13.5" stroke-linecap="square" fill-rule="nonzero"></path>
+                                                    <path d="M3.5,13.5 L14.5,15.5" stroke-linecap="square" fill-rule="nonzero"></path>
+                                                    <circle fill-rule="nonzero" cx="8" cy="5" r="1"></circle>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <p class="MuiTypography-root jss16 jss345 jss8  MuiTypography-body1">6 Courses</p>
+                                </div>
+                                <div class="TrackPageSummary__Left_Description-iptjry-5 bhycqc">If you want to take your front-end skills to the next level, learning React is the way to go. Backed by Facebook and used by many major tech companies, React has quickly
+                                    become the most popular front-end framework in the tech world, with its developers constantly in high demand.
+
+                                    By the time you’re done with this track, you’ll be able to build highly interactive, professional-quality apps using React. Take the leap, and become a complete front-end dev today.</div>
+                            </div>
+                            <div class="TrackPageSummary__Right-iptjry-2 eFqBAy">
+                                <div class="PageSummary__TopRightContainer-sc-19qsvz4-2 eTxPIe">
+                                    <div class="TopRight-sc-150qnhb-0 dxjKSf">
+                                        <div class="PageSummary__Pricing-sc-19qsvz4-21 jmaDHk">
+                                            <div class="PageSummary__Pricing_InfoSection-sc-19qsvz4-22 gxVDCq">Unlimited access to all 140+ courses</div>
+                                            <div class="PageSummary__Pricing_Line-sc-19qsvz4-23 iAnLUL"></div>
+                                            <div class="PageSummary__PriceTextContainer-sc-19qsvz4-24 cBMqa">
+                                                <div class="PageSummary__PriceTextContainer_OriginalPrice-sc-19qsvz4-25 hcsnMw">$39.99</div><span class="styles__MonthlyPrice-sc-78wv09-0 ixzirH"><span class="styles__Floored-sc-78wv09-1 Cmwkb">
+                                                        <h3 class="MuiTypography-root jss16 jss346 jss4  MuiTypography-h3">$20</h3>
+                                                    </span><span class="styles__Decimal-sc-78wv09-2 hHCxqs"><span class="MuiTypography-root jss16 jss347 jss11  MuiTypography-button">.79</span></span></span>
+                                                <div class="PageSummary__PriceTextContainer_OriginalPrice-sc-19qsvz4-25 hcsnMw" style="visibility: hidden;">$39.99</div>
+                                            </div>
+                                            <p class="MuiTypography-root jss16 jss348 jss9  MuiTypography-body1">(per month)</p>
+                                            <div class="MuiBox-root jss350" style="text-transform: capitalize;"><a href="/unlimited#plans"><button
+                                                      class="MuiButtonBase-root MuiButton-root MuiButton-contained jss359 jss360 jss351  MuiButton-containedPrimary MuiButton-disableElevation MuiButton-fullWidth" tabindex="0" type="button"><span
+                                                          class="MuiButton-label">get all courses</span></button></a></div>
+                                        </div>
+                                        <div class="PageSummary__AlternativeText-sc-19qsvz4-26 fwCoeW">
+                                            <h6 class="MuiTypography-root jss16 jss393 jss7  MuiTypography-h6">—————&nbsp; <span class="PageSummary__AlternativeText_Text-sc-19qsvz4-27 hopCqx">OR</span> &nbsp;—————</h6>
+                                        </div>
+                                        <div class="PageSummary__Pricing-sc-19qsvz4-21 bDRWQO">
+                                            <div class="PageSummary__Pricing_InfoSection-sc-19qsvz4-22 gxVDCq">Pay per track </div>
+                                            <div class="PageSummary__Pricing_Line-sc-19qsvz4-23 iAnLUL"></div>
+                                            <div class="PageSummary__PriceTextContainer-sc-19qsvz4-24 cBMqa"><span class="styles__MonthlyPrice-sc-78wv09-0 ixzirH"><span class="styles__Floored-sc-78wv09-1 Cmwkb">
+                                                        <h3 class="MuiTypography-root jss16 jss394 jss4  MuiTypography-h3">$194</h3>
+                                                    </span><span class="styles__Decimal-sc-78wv09-2 hHCxqs"><span class="MuiTypography-root jss16 jss395 jss11  MuiTypography-button">.00</span></span></span></div>
+                                            <div class="MuiBox-root jss396" style="text-transform: capitalize;"><button
+                                                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined jss359 jss397 jss355  MuiButton-outlinedPrimary MuiButton-disableElevation MuiButton-fullWidth" tabindex="0" type="button" name="buy-button"><span
+                                                      class="MuiButton-label">buy track</span></button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        --}}
+
+                        <div class="row">
+                    		<div class="col-md-12 offset-md-3">
+                    			<h4>Votre feuille de route vers le succès</h4>
+                    			<ul class="timeline">
+                                    @foreach($course->projects->sortBy('position') as $project)
+                    				<li>
+                                        <div class="course-detail__module-list">
+                                            @foreach($project->resources->sortBy('position') as $resource)
+                                            <a target="_blank" href="/course/bienvenue-a-oschool" class="module-progress-card" data-gtm-tag="module-card module-link">
+                                                <div class="module-progress-card__icon">
+                                                    <img src="/images/divers/resource_icon.png" alt="Bienvenue à Oschool">
+                                                </div>
+                                                <h4 class="module-progress-card__title">{{$resource->title}}</h4>
+                                            </a>
+                                            @endforeach
+
+
+
+                                        </div>
+                    				</li>
+                                    <li>
+                                        <div class="course-detail__module-list">
+                                            <section class="flex flex-wrap md:flex-no-wrap items-center bg-grey-darker text-white rounded-lg p-2 md:p-3 mt-0 mb-6 md:my-6">
+                                                <div class="flex-initial w-32 md:w-48 p-3 rounded md:rounded-lg">
+                                                    <div class="coverWrapper rounded md:rounded-lg">
+                                                        <div class="cover rounded md:rounded-lg" style="background-image: url(&quot;https://i.pinimg.com/originals/fd/cf/00/fdcf00ceb5aca780e9521ea64e863f6d.jpg&quot;);"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow p-3">
+
+                                                    <div class="text-base md:text-2xl font-bold my-2">
+                                                        Projet {{$loop->index + 1}}: {{$project->title}}
+                                                    </div>
+                                                </div>
+
+
+                                            </section>
+
+                                        </div>
+                    				</li>
+                    				@endforeach
+                    			</ul>
+                    		</div>
+                    	</div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <p class="about-this-course__info__description">{!!$course->description!!}</p>
 
                 </div>
@@ -837,7 +1579,7 @@ timer--}}
         </div>
     </section>
 
-    <section class="course-detail__section course-detail__why-get-cert content__container--full-width">
+    <section style="margin-bottom: 5rem;" class="course-detail__section course-detail__why-get-cert content__container--full-width">
         <div class="why-get-cert">
             <div class="content__wrapper">
                 <h2 class="why-get-cert__title">Pourquoi obtenir cette certification&nbsp;?</h2>
@@ -888,7 +1630,7 @@ timer--}}
         </div>
     </section>
 
-
+    {{--
     <section class="course-detail__section course-detail__how-it-works content__container--full-width">
         <div class="content__wrapper">
             <div class="how-it-works">
@@ -927,28 +1669,29 @@ timer--}}
 
     <div style="margin-bottom: 6rem;" class="container__2pOQhMH63ZlM4TpcZhwliA">
 
-    <div class="contentContainer__3rYV5hCbkX8Z5A1gQ1uzq4">
-        <div class="content__19X6PISinqrnIPYq7yW9O-">
-            <div class="tracksContainer__2x7KTuW_T4k8mqZ7AXwnzk">
-                <div>
-                    <div class="tracksText__2QnyXKYcWDRi820kHQ5QaE">
-                        <h2 class="tracksTitle__1YnzuBiOIL9TSmJwT5LmE_">Ce que vous allez réaliser</h2>
-                    </div>
-                    <div class="tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ">
-                        @foreach($course->projects->sortBy('position') as $project)
-                        <div class="trackDetailContainer__2N5WdI63tXUqfACKnAAqiH" data-testid="path-marketing-syllabus-track-1">
-                            <div class="trackDetailNumber__1aYtKDcpYbCP8ZLTf_Pio8">{{$loop->index + 1}}</div>
-                            <div class="trackDetailText__2m-7z-7ZEv69iZ8XMALzuT">
-                                <h3 class="trackDetailTitle__1Xy--Ry5e4p_P_HBMN2E5o">{{$project->title}}</h3>
-                            </div>
+        <div class="contentContainer__3rYV5hCbkX8Z5A1gQ1uzq4">
+            <div class="content__19X6PISinqrnIPYq7yW9O-">
+                <div class="tracksContainer__2x7KTuW_T4k8mqZ7AXwnzk">
+                    <div>
+                        <div class="tracksText__2QnyXKYcWDRi820kHQ5QaE">
+                            <h2 class="tracksTitle__1YnzuBiOIL9TSmJwT5LmE_">Ce que vous allez réaliser</h2>
                         </div>
-                        @endforeach
+                        <div class="tracksDetailLayout__2PPeOxNGs4zY73WHtHFSpQ">
+                            @foreach($course->projects->sortBy('position') as $project)
+                            <div class="trackDetailContainer__2N5WdI63tXUqfACKnAAqiH" data-testid="path-marketing-syllabus-track-1">
+                                <div class="trackDetailNumber__1aYtKDcpYbCP8ZLTf_Pio8">{{$loop->index + 1}}</div>
+                                <div class="trackDetailText__2m-7z-7ZEv69iZ8XMALzuT">
+                                    <h3 class="trackDetailTitle__1Xy--Ry5e4p_P_HBMN2E5o">{{$project->title}}</h3>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    --}}
 
     <!--section class="course-detail__section course-detail__skills content__container--full-width">
         <div class="content__wrapper">
@@ -1196,7 +1939,7 @@ timer--}}
         </div>
     </section>
 
-
+    {{--
     <div class="course-block block faq odd-stripe" id="block-183309" style="background-color:#fff">
       <div class="container">
         <div class="row">
@@ -1337,7 +2080,7 @@ timer--}}
         </div>
       </div>
     </div>
-
+    --}}
     <section class="course-detail__section course-detail__cta-box content__container--full-width">
         <div class="content__wrapper">
             <div class="cta-box">
@@ -1346,5 +2089,6 @@ timer--}}
             </div>
         </div>
     </section>
+
 
 </main>
