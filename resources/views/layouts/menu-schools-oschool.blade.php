@@ -67,7 +67,7 @@
     <link
       href="https://themes2.teachablecdn.com/themecss/production/base.css?_=d5b075d37bf7&amp;brand_course_heading=%23ffffff&amp;brand_heading=%23134361&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%23134361&amp;brand_secondary=%23ff3f20&amp;brand_text=%234d4d4d&amp;logged_out_homepage_background_image_overlay=0.5&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F5mHijVFBS4qf8vcfzak0"
       rel="stylesheet" data-turbolinks-track="true">
-    <title>@yield('title') | {{$school->user->isAdmin() ? 'Oschool' : $school->name}}</title>
+    <title>@yield('title') | Oschool</title>
     <meta property="og:title" content="@yield('title') | Oschool">
     <meta property="og:image" content="/images/schools/logos/logo_oschool_blanc.png">
     <meta name="brand_video_player_color" content="#4D90CC">
