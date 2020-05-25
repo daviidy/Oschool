@@ -536,8 +536,9 @@ footer .container .row ul li a:hover{text-decoration:underline;}
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   {{--timer
-  @include('includes.timer');
+  
   timer--}}
+  @include('includes.timer');
     <!-- HEADER -->
     <header class="">
         @if(\Route::current()->getName() == 'website.subdomain.home_users')

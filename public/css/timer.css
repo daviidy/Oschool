@@ -41,7 +41,7 @@
     #sticky-banner .content-container{max-width:100%;}
     }
     @media (min-width: 992px){
-    #sticky-banner .content-container{max-width:950px;}
+    #sticky-banner .content-container{/*max-width:950px;*/ /*for timer*/}
     }
     #sticky-banner .content-container>*{margin:0 15px 0 15px;}
     #sticky-banner h3.header{font-size:1.17em;font-weight:400;font-family:"TeachableSans-Regular";}

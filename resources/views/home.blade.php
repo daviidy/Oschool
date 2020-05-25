@@ -265,16 +265,26 @@ header,svg{display:none;}
                     <div class="col col-50-lg">
                         <div class="hero-title">
                             <h1 class="text-color-white text-1-lg m-t-0-xs">
-                                Oschool s'engage contre le COVID-19
+                                Tous nos parcours développeur web junior et développeur PHP/Laravel sont gratuits pour le mois de juin !
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                Toutes nos spécialisations sont à 3500 F CFA pour les mois de mars et avril 2020. Utilisez le coupon OSCHOOLESPOIR.
+                                Utilisez le coupon OSCHOOLFORCE pour accéder à ces spécialisations.
                             </h2>
+                        </div>
+                        <div class="form-footer">
+                            <a href="/schools">
+                            <button name="button" type="submit" class="button button primary button--primary-blue m-t-2-xs w-full-xs">
+                                <span>Commencez MAINTENANT !
+                                <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 11 12" class="play-icon">
+                                    <use xlink:href="/assets/icons-9bdb8530f3f097b4a47774ce4686c3b94b482eb486b20b5cbf252e7b0cb5860b.svg#play-icon"></use>
+                                </svg>
+                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="col col-50-lg m-t-2-xs m-t-0-lg">
 
-
+                        {{--
                         <div style="text-align: center;" class="form-card m-b-0-xs homepage2018">
                             <p class="trial-banner bg-gray-light text-color-dark">
                                 Commencez dès maintenant <span class="regular">et sans engagement</span>
@@ -337,11 +347,14 @@ header,svg{display:none;}
                             </button>
                             </a>
                         </div>
+                    --}}
                         </div>
 
                     </div>
                 </div>
+                
                 <div class="col-container col-max flex-block-xs flex-justify-center-xs flex-wrap-xs m-t-5-xs">
+                    {{--
                     <div class="m-lr-2-xs m-b-1-xs m-b-0-md text-center-xs">
                         <span class="text-1-xs">50+</span> <span class="text-4-xs">cours</span>
                     </div>
@@ -354,7 +367,9 @@ header,svg{display:none;}
                     <div class="m-lr-2-xs m-b-1-xs m-b-0-md text-center-xs">
                         <span class="text-1-xs">100+</span> <span class="text-4-xs">étudiants actifs</span>
                     </div>
+                    --}}
                 </div>
+                
             </section>
         </header>
 
