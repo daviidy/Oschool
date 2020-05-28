@@ -57,11 +57,13 @@
                         </a>
                 </div>
                 </div -->
+                <!--
                 <div class="_86bb084a">
                     <div class="_4dfd0c8c"></div>
                     <div class="_409742f4">ou connectez-vous par e-mail</div>
                     <div class="_4dfd0c8c"></div>
                 </div>
+            -->
                 <form style="width: 100%;" method="POST" action="{{ route('login') }}" class="new_teachable_account" id="new_teachable_account" accept-charset="UTF-8">
                     @csrf
                 <div class="_d70702c3">
