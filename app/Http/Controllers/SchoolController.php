@@ -753,7 +753,7 @@ class SchoolController extends Controller
                         }
                       $params = array('grant_type' => 'authorization_code',
                                       'code' => $code,
-                                      'redirect_uri' => "https://".$school->slug."oschoolelearning.com/vimeocallback?state=".$school->id,
+                                      'redirect_uri' => "https://".$school->slug."oschoolelearning.com/vimeocallback",
                                       );
                       $url = "https://api.vimeo.com/oauth/access_token";
                       //Appel de fonction postData()
