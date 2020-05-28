@@ -640,6 +640,14 @@ img{vertical-align:middle;}
 .fZkWMM{border-right:2px solid rgb(75, 73, 255);height:45px;padding:8px 20px;}
 .gSIeam{height:45px;padding:10px;}
 img{max-width:100%;}
+.video_box{text-align: center;padding: 25px;height: 90%}
+.video_content{padding: 25px;height: 100%}
+.video_content iframe{width: 65%; height: 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.48), 0 6px 20px 0 rgba(0, 0, 0, 0.48);}
+@media (max-width: 768px){
+.video_box{text-align: center;padding: 0px;height: 50%; width: 100%;}
+.video_content{padding: 0px;height: 100%;width: 100%;}
+.video_content iframe{width: 100%; height: 100%;}
+}
 </style>
 
 <main class="content">
@@ -818,8 +826,13 @@ img{max-width:100%;}
             </div>
         </div>
     </section>
-
-
+    <div class="video_box">
+    	<h2>Comment se déroule cette spécialisation?</h2>
+    	<div class="video_content">
+    		<iframe width="560" height="315" src="https://www.youtube.com/embed/HTZJKZxWvhk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    	</div>
+    </div>
+    <div style="margin-bottom: 25px;height: 15%"></div>
     <div style="margin: 70px -92px;" class="PlatformFeatures-jd5lu4-0 kuwfjR">
         <div class="PlatformFeatures__CurvedSection-jd5lu4-1 kGjzhd"><svg viewBox="0 0 1000 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
