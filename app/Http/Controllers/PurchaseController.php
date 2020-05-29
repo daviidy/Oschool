@@ -194,7 +194,8 @@ class PurchaseController extends Controller
         //vers la page de pricings show
 
         else {
-            return view('pricings.show',['pricing' => $pricing,'param_mobile_money'=>$param_mobile_money]);
+            //return view('pricings.show',['pricing' => $pricing,'param_mobile_money'=>$param_mobile_money]);
+            return redirect('login');
         }
 
 

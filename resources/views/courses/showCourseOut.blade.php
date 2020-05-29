@@ -975,7 +975,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 
   <br>
 
-
+  {{--
   <div class="course-block block checkout odd-stripe" id="block-183312">
     <div class="checkout-cta">
       <h2>
@@ -1058,7 +1058,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
     </div>
 
   </div>
-
+  --}}
 
   <br>
 </div>
