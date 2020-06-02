@@ -1333,9 +1333,9 @@ img{max-width:100%;}
 
 
 {{--timer
-
-timer--}}
 @include('includes.timer');
+timer--}}
+
 <main class="content">
     <section class="course-hero-unenrolled content__container--full-width ">
         <div class=" course-hero-unenrolled__columns  content__wrapper">
