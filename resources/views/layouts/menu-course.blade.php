@@ -537,9 +537,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     data-course-url="https://courses.52kards.com/courses/7169" data-course-id="7169" data-vat-country="null" data-hellosign-id="null">
 
     {{--timer
-    
+      @include('includes.timer');
     timer--}}
-    @include('includes.timer');
+    
 
   <header class="">
 
