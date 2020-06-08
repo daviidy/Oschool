@@ -414,7 +414,7 @@ button{line-height:inherit;}
     </div>
   </div>
 
-
+{{--
   <div class="course-block block faq odd-stripe" id="block-183309">
     <div class="container">
       <div class="row">
@@ -554,7 +554,7 @@ button{line-height:inherit;}
       </div>
     </div>
   </div>
-
+--}}
 
 
 
@@ -707,7 +707,7 @@ button{line-height:inherit;}
 
   <br>
 
-
+{{--
   <div class="course-block block checkout odd-stripe" id="block-183312">
     <div class="checkout-cta">
       <h2>
@@ -790,6 +790,7 @@ button{line-height:inherit;}
     </div>
 
   </div>
+  --}}
   @auth
   @if(!Auth::user()->courses->contains($course->id))
   @include('includes.pricing')
