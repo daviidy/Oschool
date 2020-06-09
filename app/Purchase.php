@@ -18,7 +18,7 @@ class Purchase extends Model
                            'user_id',
                            'pricing_id',
                            'course_id',
-                           'offer_id'
+                           'offer_id',
                          ];
 
 
@@ -51,5 +51,10 @@ class Purchase extends Model
         public function course()
         {
             return $this->belongsTo('App\Course');
+        }
+
+        public function offer()
+        {
+            return $this->belongsTo('App\Offer');
         }
 }

@@ -50,9 +50,7 @@ Route::get('/wecash', function () {
     return view('pricings.wecash');
 });
 
-Route::get('/corporate', function () {
-    return view('corporate');
-});
+Route::get('/corporate', 'OfferController@corporate');
 
 
 Route::get('/email', function () {
@@ -383,6 +381,8 @@ Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('
 Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');
 Route::get('/course/{slugCourse}/checkout/{pricing}', 'PurchaseController@checkout');
 Route::get('/path/{slugCourse}/projects/{slug}', 'CourseController@showPath');
+
+Route::get('/checkoutPartners/{offer}', 'OfferController@checkoutPartners');
 
 
 //pour les achats

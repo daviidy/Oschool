@@ -8,6 +8,7 @@ use App\User;
 use App\Course;
 use App\Payments;
 use App\Pricing;
+use App\Offer;
 use Illuminate\Http\Request;
 use Mail;
 use Carbon\Carbon;
@@ -195,11 +196,11 @@ class PurchaseController extends Controller
 
         else {
             //return view('pricings.show',['pricing' => $pricing,'param_mobile_money'=>$param_mobile_money]);
-            return redirect('login');
+            return redirect('home');
         }
 
 
-    }
+    }//fin checkout
 
 
 
@@ -287,6 +288,33 @@ class PurchaseController extends Controller
                   //on met le status de l'achat à jour
                     $purchase->status = 'Validé';
                     $purchase->save();
+
+                    //si il s'agit d'un paiement B2B
+                    if ($purchase->offer_id !== null) {
+                        $offer = Offer::find($purchase->offer_id);
+                        $user = User::find($purchase->user_id);
+                        $user->offer_id = $offer->id;
+                        $user->type3 = 'owner';
+                        $user->save();
+
+                        $admins = User::where('type1', 'admin')->orderby('id', 'asc')->paginate(1000);
+
+                        //envoi mail utilisateur
+                         Mail::send('mails.users.purchases.successPartner', ['purchase' => $purchase], function($message) use($purchase){
+                           $message->to($purchase->user->email, 'Cher(ère) Partenaire')->subject('Votre adhésion a été effectuée avec succès !');
+                           $message->from('eventsoschool@gmail.com', 'Oschool');
+                         });
+
+                        foreach ($admins as $admin) {
+
+                          //envoi mail admin
+                          Mail::send('mails.admins.purchases.successPartner', ['purchase' => $purchase], function($message) use($admin){
+                            $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande partenaire a été traitée avec succès');
+                            $message->from('eventsoschool@gmail.com', 'Oschool');
+                          });
+                        }
+
+                    }
 
                   //si l'étudiant n'est pas déjà
                   //inscrit a la course en question
@@ -393,6 +421,35 @@ class PurchaseController extends Controller
         //on met le status de l'achat à jour
           $purchase->status = 'Validé';
           $purchase->save();
+
+          //si il s'agit d'un paiement B2B
+          if ($purchase->offer_id !== null) {
+              $offer = Offer::find($purchase->offer_id);
+              $user = User::find($purchase->user_id);
+              $user->offer_id = $offer->id;
+              $user->type3 = 'owner';
+              $user->save();
+
+              $admins = User::where('type1', 'admin')->orderby('id', 'asc')->paginate(1000);
+
+              //envoi mail utilisateur
+               Mail::send('mails.users.purchases.successPartner', ['purchase' => $purchase], function($message) use($purchase){
+                 $message->to($purchase->user->email, 'Cher(ère) Partenaire')->subject('Votre adhésion a été effectuée avec succès !');
+                 $message->from('eventsoschool@gmail.com', 'Oschool');
+               });
+
+              foreach ($admins as $admin) {
+
+                //envoi mail admin
+                Mail::send('mails.admins.purchases.successPartner', ['purchase' => $purchase], function($message) use($admin){
+                  $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande partenaire a été traitée avec succès');
+                  $message->from('eventsoschool@gmail.com', 'Oschool');
+                });
+              }
+
+              return redirect('schools/create')->with('status', 'Parfait ! Créez votre école en commençant par lui donner un nom');
+
+          }
 
         //si l'étudiant n'est pas déjà
         //inscrit a la course en question

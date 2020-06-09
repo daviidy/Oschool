@@ -33,6 +33,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'type2',
         'type3',
         'telephone',
+        'offer_id'
     ];
 
     /**
@@ -166,6 +167,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function csv_file()
           {
               return $this->hasMany('App\CsvFile');
+          }
+
+          public function offer()
+          {
+              return $this->belongsTo('App\Offer');
           }
 
     public static function boot() {

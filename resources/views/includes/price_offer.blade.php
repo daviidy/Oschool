@@ -40,7 +40,7 @@ h1 a {
   font-size: 20px;
   color: #fff;
   background: #4d90cc;
-    
+
 }
 .price-table-wrapper .pricing-table__price {
   color: #4d90cc;
@@ -130,106 +130,21 @@ h1 a {
 <h1>NOS OFFRES DE PRIX</h1>
 
 <div class="price-table-wrapper">
-  <div class="pricing-table">
-    <h2 class="pricing-table__header">- FREE  -</h2>
-    <h3 class="pricing-table__price">0 Fcfa <br></h3>
-    <a target="_blank" class="pricing-table__button" href="#">
+    @foreach($offers as $offer)
+  <div class="pricing-table {{strpos($offer->name, 'Premium') !== false ? 'featured-table' : ''}}">
+    <h2 class="pricing-table__header {{strpos($offer->name, 'Premium') !== false ? 'recomandate' : ''}}">- {{$offer->name}}  -</h2>
+    <h3 class="pricing-table__price">{{$offer->price}} FCFA <br></h3>
+    <a target="_blank" class="pricing-table__button" href="/checkoutPartners/{{$offer->id}}">
       Adhérer maintenant!
     </a>
     <ul class="pricing-table__list">
-      <li> Site en marque blanche : Oui</li>
-      <li> Administration du LMS : 1</li>
-      <li>Nombre de formateurs : 1</li>
-      <li>Nombre d'apprenants : 10</li>
-      <li>URL personnalisée : Non</li>
-      <li>Système de paiement: Mobile money</li>
-      <li>Création de quiz et contrôles: Oui</li>
-      <li>Téléprésentiel : Non</li>
-      <li>Ingénierie pédagogique : Non</li>
-      <li>Statistiques avancées : Non</li>
-      <li>Contenus à débloquage progressif : Non</li>
-      <li>Envoi de messages aux apprenants : Non</li>
-      <li>Certificat de reussite : Non</li>
-      <li>Coupons/Codes promotionnels : Non</li>
-      <li>Création d'événements  : Non</li>
+        @foreach($offer->characteristics as $characteristic)
+      <li> {{$characteristic->description}}</li>
+        @endforeach
+
 
     </ul>
   </div>
-  <div class="pricing-table">
-    <h2 class="pricing-table__header">- BASIQUE -</h2>
-    <h3 class="pricing-table__price">35k F/Mois <br> ou 420k F/An</h3>
-    <a target="_blank" class="pricing-table__button" href="#">
-      Adhérer maintenant!
-    </a>
-    <ul class="pricing-table__list">
-      <li> Site en marque blanche : Oui</li>
-      <li> Administration du LMS : 3</li>
-      <li>Nombre de formateurs : 5</li>
-      <li>Nombre d'apprenants : 50</li>
-      <li>URL personnalisée : Non</li>
-      <li>Système de paiement:<br> Mobile money, visa etc...</li>
-      <li>Création de quiz et contrôles: Oui</li>
-      <li>Téléprésentiel : Non</li>
-      <li>Ingénierie pédagogique : 3 heures/Mois</li>
-      <li>Statistiques avancées : Non</li>
-      <li>Contenus à débloquage progressif : Non</li>
-      <li>Envoi de messages aux apprenants : Oui</li>
-      <li>Certificat de reussite : Oui</li>
-      <li>Coupons/Codes promotionnels : Oui</li>
-      <li>Création d'événements  : Oui</li>
-      
-    </ul>
-  </div>
-  <div class="pricing-table featured-table">
-    <h2 class="pricing-table__header recomandate">- PREMIUM - <br><span style="font-size: 13px;"> Recommandé</span></h2>
-    <h3 class="pricing-table__price">55k F HT/Mois<br> ou 660k F/An</h3>
-    <a target="_blank" class="pricing-table__button" href="#">
-      Adhérer maintenant!
-    </a>
-    <ul class="pricing-table__list">
-      <li> Site en marque blanche : Oui</li>
-      <li> Administration du LMS : 5</li>
-      <li>Nombre de formateurs : 10</li>
-      <li>Nombre d'apprenants : 100</li>
-      <li>URL personnalisée : Oui</li>
-      <li>Système de paiement: <br> Mobile money, visa etc...</li>
-      <li>Création de quiz et contrôles: Oui</li>
-      <li>Téléprésentiel : Oui</li>
-      <li>Ingénierie pédagogique : 10 heures/Mois</li>
-      <li>Statistiques avancées : Oui</li>
-      <li>Contenus à débloquage progressif : Oui</li>
-      <li>Envoi de messages aux apprenants : Oui</li>
-      <li>Certificat de reussite :<br> Oui(Personnalisable)</li>
-      <li>Coupons/Codes promotionnels : Oui</li>
-      <li>Création d'événements  : Oui</li>
-      
-    </ul>
-  </div>
-  
-  <div class="pricing-table">
-    <h2 class="pricing-table__header">- VIP -</h2>
-    <h3 class="pricing-table__price">100k F/Mois ou<br> 1.2M F/An
-</h3>
-    <a target="_blank" class="pricing-table__button" href="#">
-      Adhérer maintenant!
-    </a>
-    <ul class="pricing-table__list">
-      <li> Site en marque blanche : Oui</li>
-      <li> Administration du LMS : 10</li>
-      <li>Nombre de formateurs: Illimités</li>
-      <li>Nombre d'apprenants : Illimités</li>
-      <li>URL personnalisée : Oui</li>
-      <li>Système de paiement: <br> Mobile money, visa etc...</li>
-      <li>Création de quiz et contrôles: Oui</li>
-      <li>Téléprésentiel : Oui</li>
-      <li>Ingénierie pédagogique : 25 heures/Mois</li>
-      <li>Statistiques avancées : Oui</li>
-      <li>Contenus à débloquage progressif : Oui</li>
-      <li>Envoi de messages aux apprenants : Oui</li>
-      <li>Certificat de reussite : Oui(Personnalisable)</li>
-      <li>Coupons/Codes promotionnels : Oui</li>
-      <li>Création d'événements  : Oui</li>
-      
-    </ul>
-  </div>
+  @endforeach
+
 </div>
