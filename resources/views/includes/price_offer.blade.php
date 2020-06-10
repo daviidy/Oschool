@@ -132,7 +132,7 @@ h1 a {
 <div class="price-table-wrapper">
     @foreach($offers as $offer)
   <div class="pricing-table {{strpos($offer->name, 'Premium') !== false ? 'featured-table' : ''}}">
-    <h2 class="pricing-table__header {{strpos($offer->name, 'Premium') !== false ? 'recomandate' : ''}}">- {{$offer->name}}  -</h2>
+    <h2 class="pricing-table__header {{strpos($offer->name, 'Premium') !== false || strpos($offer->name, 'PREMIUM') !== false || strpos($offer->name, 'premium') !== false ? 'recomandate' : ''}}">- {{$offer->name}}  -</h2>
     <h3 class="pricing-table__price">{{$offer->price}} FCFA <br></h3>
     <a target="_blank" class="pricing-table__button" href="/checkoutPartners/{{$offer->id}}">
       Adhérer maintenant!

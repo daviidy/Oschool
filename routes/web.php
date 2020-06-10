@@ -123,6 +123,8 @@ Route::resource('offers', 'OfferController');
 
 Route::resource('characteristics', 'CharacteristicController');
 
+Route::resource('communities', 'CommunityController');
+
 
 //for create school with subdoamin or attached domains
 Route::post('/storeSchoolBusiness', 'SchoolController@storeSchoolBusiness')->name('schools.storeBusiness');
@@ -244,6 +246,11 @@ Route::get('/schoolAdmin/{school}/classrooms', 'ClassroomController@index')->nam
 Route::get('/schoolAdmin/{school}/classrooms/create', 'ClassroomController@create')->name('schoolSettings');
 
 Route::get('/schoolAdmin/{school}/classrooms/{classroom}/edit', 'ClassroomController@edit')->name('schoolSettings');
+
+//school communities
+Route::get('/schoolAdmin/{school}/communities', 'CommunityController@index');
+Route::get('/schoolAdmin/{school}/communities/create', 'CommunityController@create');
+Route::get('/schoolAdmin/{school}/communities/{community}/edit', 'CommunityController@edit');
 
 //routes for school categorie tab
 //school ctaegorie
