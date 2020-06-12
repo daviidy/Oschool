@@ -59,7 +59,7 @@ class CommunityController extends Controller
      */
     public function edit(School $school, Community $community)
     {
-        return view('admin_views.communities.edit', ['school' => $school]);
+        return view('admin_views.communities.edit', ['school' => $school,'community' => $community ]);
     }
 
     /**
