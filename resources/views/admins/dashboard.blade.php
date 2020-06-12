@@ -116,6 +116,7 @@
                                         </thead>
                                         <tbody>
                                             @foreach($purchases as $purchase)
+                                            @if($purchase->course_id !== null)
                                             @if($purchase->status = 'Validé')
                                             <tr>
                                                 <td>{{$purchase->id}}</td>
@@ -130,6 +131,7 @@
                                                 <td>{{$purchase->user->name}}</td>
                                                 <td><span class="badge-dot {{$purchase->status == null ? 'badge-danger' : 'badge-success'}} mr-1"></span>{{$purchase->status == null ? 'Non validé' : 'Validé'}} </td>
                                             </tr>
+                                            @endif
                                             @endif
                                             @endforeach
 

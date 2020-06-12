@@ -50,9 +50,7 @@ Route::get('/wecash', function () {
     return view('pricings.wecash');
 });
 
-Route::get('/corporate', function () {
-    return view('corporate');
-});
+Route::get('/corporate', 'OfferController@corporate');
 
 
 Route::get('/email', function () {
@@ -124,6 +122,8 @@ Route::resource('payments', 'PaymentsController');
 Route::resource('offers', 'OfferController');
 
 Route::resource('characteristics', 'CharacteristicController');
+
+Route::resource('communities', 'CommunityController');
 
 
 //for create school with subdoamin or attached domains
@@ -246,6 +246,11 @@ Route::get('/schoolAdmin/{school}/classrooms', 'ClassroomController@index')->nam
 Route::get('/schoolAdmin/{school}/classrooms/create', 'ClassroomController@create')->name('schoolSettings');
 
 Route::get('/schoolAdmin/{school}/classrooms/{classroom}/edit', 'ClassroomController@edit')->name('schoolSettings');
+
+//school communities
+Route::get('/schoolAdmin/{school}/communities', 'CommunityController@index');
+Route::get('/schoolAdmin/{school}/communities/create', 'CommunityController@create');
+Route::get('/schoolAdmin/{school}/communities/{community}/edit', 'CommunityController@edit');
 
 //routes for school categorie tab
 //school ctaegorie
@@ -383,6 +388,8 @@ Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('
 Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');
 Route::get('/course/{slugCourse}/checkout/{pricing}', 'PurchaseController@checkout');
 Route::get('/path/{slugCourse}/projects/{slug}', 'CourseController@showPath');
+
+Route::get('/checkoutPartners/{offer}', 'OfferController@checkoutPartners');
 
 
 //pour les achats
