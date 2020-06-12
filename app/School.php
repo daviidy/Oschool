@@ -82,6 +82,11 @@ class School extends Model
       {
           return $this->hasMany('App\Classroom');
       }
+      
+      public function communities()
+      {
+          return $this->hasMany('App\Community');
+      }
 
     public function csv_file()
           {
