@@ -10,7 +10,7 @@ class Characteristic extends Model
 
     public function offers()
     {
-        return $this->belongsToMany('App\Offer','characteristic_offer','offer_id','characteristic_id');
+        return $this->belongsToMany('App\Offer','characteristic_offer',);
     }
 
 }
