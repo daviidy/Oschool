@@ -55,7 +55,7 @@ background-color: black !important;
     <li class="">
       <a href="{{$course->school->communities->first()->link}}" class="sidebar-nav-link">
         <span class="lecture-sidebar-icon">
-          <i class="fa fa-user"></i>
+          <i class="fa fa-group"></i>
         </span>
         Accéder à la communauté
       </a>
