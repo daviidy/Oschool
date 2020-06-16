@@ -296,11 +296,13 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
       TERMINÉ
     </div>
     <div class="small1">
+        @if(count($lesson->section->course->school->communities) > 0)
       <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">
-          <a href="https://discordapp.com/invite/hhbzcHE" target="_blank">
+          <a href="{{$lesson->section->course->school->communities->first()->link}}" target="_blank">
           <strong>Avez-vous des questions ? Posez-les dans la communauté</strong>
           </a>
       </p>
+      @endif
 
       <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">
           <a href="/certificate/{{$lesson->course_id}}">

@@ -253,7 +253,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                     <!---->
                     <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                     <!---->
-                    <!---->Liste des communautés
+                    <!---->Votre communauté
                     <div class="tch-btn-header-icon-2">
                       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="20" height="40"viewBox="0 0 172 172"style=" fill:#000000;position: relative;bottom: 8px;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g fill="#3498db"><path d="M129.07556,30.25717l12.67131,12.67175l-98.8199,98.81645l-12.67131,-12.67175z"></path><path d="M141.73757,129.08237l-12.67077,12.66723l-98.80691,-98.8345l12.67077,-12.66723z"></path></g><path d="" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path></g></g></svg>
                     </div>
@@ -266,10 +266,13 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
         @include('includes.status')
     </div>
     <div class="tch-inline-form">
-    <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/communities/create">Nouvelle communauté</a></div>
+    @if(count($school->communities) == 0)
+    <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/communities/create">Nouvelle communauté</a>
+    </div>
+    @endif
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
             <!---->
-            
+
         </div>
     </div><br>
     <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
@@ -278,7 +281,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             <table ng-if="products.length > 0" class="tch-table draggable-products">
                 <thead>
                     <tr>
-                        <th>Lien des communautés</th>
+                        <th>Lien</th>
                     </tr>
                 </thead>
                 <tbody ui-sortable="sortableOptions" ng-model="products" class="ng-pristine ng-untouched ng-valid ui-sortable ng-not-empty">
@@ -290,7 +293,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                         <td><span>{{$community->link}}</span><span class="space"></span><span class="space"></span>
                             <!---->
                         </td>
-                        
+
 
                         <td>
                             <!---->

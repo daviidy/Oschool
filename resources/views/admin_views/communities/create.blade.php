@@ -509,8 +509,8 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                 <div class="survey-container col-sm-6 col-sm-offset-3 col-xs-12 m-v-6-m">
                     <h2 class="survey-container__header p-t-3-xs m-b-0-xs text-center-xs w-6">
                         <!---->
-                        <!----><span ng-if="!onboardingPricingPageCheckoutSuccess">Créer </span>
-                        <!---->une nouvelle communauté
+                        <!----><span ng-if="!onboardingPricingPageCheckoutSuccess">Ajouter </span>
+                        <!---->une communauté à votre école
                     </h2>
                     <!---->
                     <p class="survey-container__customize m-t-4-xs p-h-3-xs">.</p>
@@ -524,7 +524,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 
                         <bootstrap-decorator form="schemaForm.form[5]">
                             <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Ajouter une communauté</label>
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Quel est le lien de votre communauté ?</label>
                               <input type="url" name="link">
 
 
@@ -532,7 +532,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                         </bootstrap-decorator>
                         <bootstrap-decorator form="schemaForm.form[5]">
                             <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Ajouter un mot de pass</label>
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Ajouter un mot de passe (facultatif)</label>
                               <input type="password" name="password">
 
 

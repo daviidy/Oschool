@@ -25,7 +25,12 @@ class CommunityController extends Controller
      */
     public function create(School $school)
     {
-        return view('admin_views.communities.create', ['school' => $school]);
+        if (count($school->communities) > 0) {
+            return redirect('/schoolAdmin/'.$school->id.'/communities')->with('status', 'Vous avez déjà une communauté associée à votre école');
+        }
+        else {
+            return view('admin_views.communities.create', ['school' => $school]);
+        }
     }
 
     /**

@@ -31,7 +31,7 @@ img{vertical-align:middle;}
 .col-sm-9{float:left;}
 .col-sm-9{
     width:100%;
-    
+
 }
 }
 table{background-color:transparent;}
@@ -349,6 +349,7 @@ h3{font-size:1.6rem;}
                         @foreach(Auth::user()->courses->where('school_id', $school->id) as $course)
                         @if(count($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')) > 0)
                         @foreach($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé') as $purchase)
+                        @if($purchase->pricing)
                         <tr data-v-3e7bb260="">
                             <td data-v-3e7bb260="" class="order"><a data-v-3e7bb260="">
                                     {{$purchase->trans_id}}
@@ -366,6 +367,7 @@ h3{font-size:1.6rem;}
                                 </div>
                             </td>
                         </tr>
+                        @endif
                         @endforeach
                         @endif
                         @endforeach
@@ -378,7 +380,7 @@ h3{font-size:1.6rem;}
     <!---->
     <!---->
 </div>
-            
+
         </div>
     </main>
 

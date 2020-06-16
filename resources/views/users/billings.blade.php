@@ -195,6 +195,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:'TeachableSans-Regular';font-size:2
                         @foreach(Auth::user()->courses as $course)
                         @if(count($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')) > 0)
                         @foreach($course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé') as $purchase)
+                        @if($purchase->pricing)
                         <tr data-v-3e7bb260="">
                             <td data-v-3e7bb260="" class="order"><a data-v-3e7bb260="">
                                     {{$purchase->trans_id}}
@@ -212,6 +213,7 @@ h4[data-v-bd11ec86]{margin-top:0;font-family:'TeachableSans-Regular';font-size:2
                                 </div>
                             </td>
                         </tr>
+                        @endif
                         @endforeach
                         @endif
                         @endforeach
