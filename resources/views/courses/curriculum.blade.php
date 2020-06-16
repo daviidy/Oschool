@@ -53,7 +53,7 @@ background-color: black !important;
     </li>
     @if(count($course->school->communities) > 0)
     <li class="">
-      <a href="{{$course->school->communities->first()->link}}" class="sidebar-nav-link">
+      <a target="_blank" href="{{$course->school->communities->first()->link}}" class="sidebar-nav-link">
         <span class="lecture-sidebar-icon">
           <i class="fa fa-group"></i>
         </span>
