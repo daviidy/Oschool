@@ -769,7 +769,7 @@ class SchoolController extends Controller
                       $resultat = postData($params, $url);
                       $json = json_decode($resultat, true);
 
-                      if ($json['access_token']) {
+                      if (array_key_exists('access_token', $json)) {
                           $school->token = $json['access_token'];
                           $school->save();
                       }
