@@ -751,10 +751,19 @@ class SchoolController extends Controller
                          throw new Exception($e);
                          }
                         }
-                      $params = array('grant_type' => 'authorization_code',
-                                      'code' => $code,
-                                      'redirect_uri' => "https://".$school->slug.".oschoolelearning.com/vimeocallback",
-                                      );
+                        if ($school->slug) {
+                            $params = array('grant_type' => 'authorization_code',
+                                            'code' => $code,
+                                            'redirect_uri' => "https://".$school->slug.".oschoolelearning.com/vimeocallback",
+                                            );
+                        }
+                        else {
+                            $params = array('grant_type' => 'authorization_code',
+                                            'code' => $code,
+                                            'redirect_uri' => "https://oschoolelearning.com/vimeocallback",
+                                            );
+                        }
+
                       $url = "https://api.vimeo.com/oauth/access_token";
                       //Appel de fonction postData()
                       $resultat = postData($params, $url);
