@@ -774,11 +774,11 @@ class SchoolController extends Controller
                           $school->save();
                       }
                       else {
-                          return redirect('/schoolAdmin/'.$school->id.'/integrations')->with('status', $json['error_description']);
+                          return redirect('/schoolAdmin/'.$school->id.'/integrations')->with('status', 'Une erreur s\'est produite');
                       }
 
 
-					return redirect('/schoolAdmin/'.$school->id.'/integrations')->with('status', 'VIMEO est autorisé dans votre école');
+					return redirect('/schoolAdmin/'.$school->id.'/integrations')->with('status', $json['access_token']);
 
 
 
