@@ -734,8 +734,7 @@ class SchoolController extends Controller
                          CURLOPT_SSL_VERIFYPEER => true,
                          CURLOPT_HTTPHEADER => array(
                          "Authorization: Basic ". base64_encode("348e328e2d3e36da3c8940ec81267f27e04f378c:+b7SiwEdQ4lNip4zhR0/aPF5TgMEFwgdQJ9BymvpLENV6cn8o+PlTbNvgG6HLN/YTNaoZyVlo6sJ7nxzM402MK6PANgNRG3pDDZ1EdlvsryXQ53Y/ShZdKxrSc4BxgHv"),
-                         "Content-Type : application/json",
-                         "Accept : application/vnd.vimeo.*+json;version=3.4",
+
                          ),
                          ));
                          $response = curl_exec($curl);
