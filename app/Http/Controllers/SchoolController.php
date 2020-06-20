@@ -769,9 +769,14 @@ class SchoolController extends Controller
                       $resultat = postData($params, $url);
                       $json = json_decode($resultat, true);
 
+                      if ($json['access_token']) {
+                          $school->token = $json['access_token'];
+                          $school->save();
+                      }
+                      else {
+                          return redirect('/schoolAdmin/'.$school->id.'/integrations')->with('status', $json['error_description']);
+                      }
 
-                     $school->token = $json['access_token'];
-                     $school->save();
 
 					return redirect('/schoolAdmin/'.$school->id.'/integrations')->with('status', 'VIMEO est autorisé dans votre école');
 
