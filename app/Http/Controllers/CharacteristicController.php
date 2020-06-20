@@ -85,8 +85,9 @@ class CharacteristicController extends Controller
      */
     public function edit(Characteristic $characteristic, Offer $offer)
     {
+        $offers = Offer::all();
 
-        return view('admins.characteristic.edit', ['characteristic' => $characteristic,'offer' => $offer]);
+        return view('admins.characteristic.edit', ['characteristic' => $characteristic, 'offers' => $offers]);
     }
 
     /**

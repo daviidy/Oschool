@@ -46,8 +46,8 @@
                     <br>
 
                     <select class="js-example-basic-multiple" name="offer_id[]" multiple="multiple" style="width:500px;">
-                        @foreach ($characteristic->offers as $offer_db)
-                            <option value="{{$offer_db->id}}">{{$offer_db->name}}</option>
+                        @foreach($offers as $offer_db)
+                            <option {{$characteristic->offers->contains($offer_db->id) ? 'selected' : ''}} value="{{$offer_db->id}}">{{$offer_db->name}}</option>
                         @endforeach
                     </select>
 

@@ -22,10 +22,12 @@
                                         $revenue = 0;
                                         @endphp
                                         @foreach($purchases->where('status', 'Validé') as $purchase)
+                                        @if($purchase->pricing)
                                         @if($purchase->pricing->type !== "Free")
                                         @php
                                         $revenue += $purchase->pricing->price;
                                         @endphp
+                                        @endif
                                         @endif
                                         @endforeach
                                         {{$revenue}} FCFA
