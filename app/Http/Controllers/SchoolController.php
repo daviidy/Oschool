@@ -16,6 +16,7 @@ use App\Faq;
 use Image;
 use Input;
 use Mail;
+use Validator;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -782,7 +783,7 @@ class SchoolController extends Controller
 
 
 
-        }//fin function callback
+        }//fin function vimeoCallback
 
 
         public function listMeetings(Lesson $lesson, User $user)
@@ -968,6 +969,103 @@ class SchoolController extends Controller
 
 
         }//fin function listMeetings
+
+
+
+        public function postVideoToVimeo(Request $request)
+        {
+            $lesson = Lesson::find($request->lesson_id);
+            $school = School::find($request->school_id);
+
+            if ($lesson->course->school->token !== null) {
+                Session::put('token', $lesson->course->school->token);
+            }
+
+            /*
+            $validation = Validator::make($request->all(), [
+                  'videoVimeo.*' => 'required|file|mimes:mp4|max:1000000'
+              ],[
+                  'videoVimeo.*.required' => 'Please upload a file',
+                    'videoVimeo.*.mimes' => 'Only mp4 files are allowed',
+                    'videoVimeo.*.max' => 'Sorry! Maximum allowed size for an image is 1000MB',
+              ]);
+
+            if ($validation->passes()) {
+                dd($request->videoVimeo);
+            }
+            */
+
+			function postData($params, $url)
+                        {
+                         try {
+                         $curl = curl_init();
+                         $postfield = '';
+                         foreach ($params as $index => $value) {
+                         $postfield .= $index . '=' . $value . "&";
+                         }
+                         $postfield = substr($postfield, 0, -1);
+                         curl_setopt_array($curl, array(
+                         CURLOPT_URL => $url,
+                         CURLOPT_RETURNTRANSFER => true,
+                         CURLOPT_ENCODING => "",
+                         CURLOPT_MAXREDIRS => 10,
+                         CURLOPT_TIMEOUT => 45,
+                         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                         CURLOPT_CUSTOMREQUEST => "POST",
+                         CURLOPT_POSTFIELDS => $postfield,
+                         CURLOPT_SSL_VERIFYPEER => true,
+                         CURLOPT_HTTPHEADER => array(
+                         "Authorization: Bearer ". Session::get('token'),
+                         ),
+                         ));
+                         $response = curl_exec($curl);
+                         $err = curl_error($curl);
+                         curl_close($curl);
+                         if ($err) {
+                         throw new Exception("cURL Error #:" . $err);
+                         return $err;
+                         } else {
+                         return $response;
+                         }
+                         } catch (Exception $e) {
+                         throw new Exception($e);
+                         }
+                        }
+                        if ($school->slug) {
+                            $params = array(
+                                        "upload" => array(
+                                          "approach" => "post",
+                                          "size" => $request->videoVimeoSize,
+                                          "redirect_url" => "https://".$school->slug.".oschoolelearning.com/uploadvideocallback"
+                                      )
+                                    );
+                        }
+                        else {
+                            $params = array(
+                                        "upload" => array(
+                                          "approach" => "post",
+                                          "size" => $request->videoVimeoSize,
+                                          "redirect_url" => "https://oschoolelearning.com/uploadvideocallback"
+                                      )
+                                    );
+                        }
+
+                      $url = "https://api.vimeo.com/me/videos";
+                      //Appel de fonction postData()
+                      $resultat = postData($params, $url) ;
+                      $json = json_decode($resultat, true);
+                      dd($json);
+
+
+
+
+                       //Session::put('error', $json['reason']);
+                      return view('admin_views.uploadVimeo');
+
+
+
+
+        }//fin function postVideoToVimeo
 
 
         public function associateMeeting(Request $request)

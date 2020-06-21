@@ -408,6 +408,8 @@ Route::post('/dissociateMeeting', 'SchoolController@dissociateMeeting')->name('c
 
 //api vimeo
 Route::get('/vimeocallback', 'SchoolController@vimeoCallback');
+Route::get('/uploadvideocallback', 'SchoolController@uploadVideoCallback');
+Route::post('/postVideoToVimeo', 'SchoolController@postVideoToVimeo');
 
 
 //make user subscribe for free

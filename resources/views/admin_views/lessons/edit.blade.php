@@ -1357,7 +1357,55 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 </style>
 
 
+
 @endif
+
+
+<style media="screen">
+/*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css */
+*,::after,::before{box-sizing:border-box;}
+h4{margin-top:0;margin-bottom:.5rem;}
+button{border-radius:0;}
+button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color;}
+button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
+button{overflow:visible;}
+button{text-transform:none;}
+[type=button],button{-webkit-appearance:button;}
+[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none;}
+h4{margin-bottom:.5rem;font-weight:500;line-height:1.2;}
+h4{font-size:1.5rem;}
+.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+@media (prefers-reduced-motion:reduce){
+.btn{transition:none;}
+}
+.btn:hover{color:#212529;text-decoration:none;}
+.btn:focus{outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25);}
+.btn:disabled{opacity:.65;}
+.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545;}
+.btn-danger:hover{color:#fff;background-color:#c82333;border-color:#bd2130;}
+.btn-danger:focus{color:#fff;background-color:#c82333;border-color:#bd2130;box-shadow:0 0 0 .2rem rgba(225,83,97,.5);}
+.btn-danger:disabled{color:#fff;background-color:#dc3545;border-color:#dc3545;}
+.close{float:right;font-size:1.5rem;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.5;}
+.close:hover{color:#000;text-decoration:none;}
+button.close{padding:0;background-color:transparent;border:0;}
+.modal-open .modal{overflow-x:hidden;overflow-y:auto;}
+.modal{position:fixed;top:0;left:0;z-index:1050;display:none;width:100%;height:100%;overflow:hidden;outline:0;}
+.modal-dialog{position:relative;width:auto;margin:.5rem;pointer-events:none;}
+.modal.show .modal-dialog{-webkit-transform:none;transform:none;}
+.modal-content{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0;}
+.modal-header{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start;-ms-flex-pack:justify;justify-content:space-between;padding:1rem 1rem;border-bottom:1px solid #dee2e6;border-top-left-radius:calc(.3rem - 1px);border-top-right-radius:calc(.3rem - 1px);}
+.modal-header .close{padding:1rem 1rem;margin:-1rem -1rem -1rem auto;}
+.modal-title{margin-bottom:0;line-height:1.5;}
+.modal-body{position:relative;-ms-flex:1 1 auto;flex:1 1 auto;padding:1rem;}
+.modal-footer{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:end;justify-content:flex-end;padding:.75rem;border-top:1px solid #dee2e6;border-bottom-right-radius:calc(.3rem - 1px);border-bottom-left-radius:calc(.3rem - 1px);}
+.modal-footer>*{margin:.25rem;}
+@media (min-width:576px){
+.modal-dialog{max-width:500px;margin:1.75rem auto;}
+}
+@media print{
+*,::after,::before{text-shadow:none!important;box-shadow:none!important;}
+}
+</style>
 
 
 <div ui-view="content" ng-class="sidebarCollapsed" class="admin-content">
@@ -1586,6 +1634,19 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             -->
             </div>
         </form>
+
+        <a class="styles__CategoryButton-vgii8s-4 fUQatb" id="vimeoTrigger">
+            <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="161" height="147" viewBox="0 0 161 147" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M135.204 119.528H25.7964C23.7044 119.518 22.011 117.804 22 115.686V28.842C22.011 26.724 23.7044 25.01 25.7964 25H135.168C137.26 25.01 138.953 26.724 138.964 28.842V115.686C138.954 117.789 137.283 119.497 135.206 119.528H135.204ZM29.301 35.087H68.3656Z" fill="#DAE1F2"></path>
+                    <path d="M22 44.559H139M29.301 35.087H68.3656M135.204 119.528H25.7964C23.7044 119.518 22.011 117.804 22 115.686V28.842C22.011 26.724 23.7044 25.01 25.7964 25H135.168C137.26 25.01 138.953 26.724 138.964 28.842V115.686C138.954 117.789 137.283 119.497 135.206 119.528H135.204Z" stroke="#455A7F" stroke-width="2.93" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <rect x="23" y="46" width="115" height="73" fill="#455A7F"></rect>
+                    <path d="M105.174 37.438C106.419 37.438 107.429 36.4172 107.429 35.158C107.429 33.8988 106.419 32.878 105.174 32.878C103.929 32.878 102.919 33.8988 102.919 35.158C102.919 36.4172 103.929 37.438 105.174 37.438Z" fill="#455A7F"></path>
+                    <path d="M116.786 37.438C118.031 37.438 119.041 36.4172 119.041 35.158C119.041 33.8988 118.031 32.878 116.786 32.878C115.541 32.878 114.531 33.8988 114.531 35.158C114.531 36.4172 115.541 37.438 116.786 37.438Z" fill="#455A7F"></path>
+                    <path d="M128.389 37.438C129.634 37.438 130.644 36.4172 130.644 35.158C130.644 33.8988 129.634 32.878 128.389 32.878C127.144 32.878 126.134 33.8988 126.134 35.158C126.134 36.4172 127.144 37.438 128.389 37.438Z" fill="#455A7F"></path>
+                    <path d="M88.668 61.766L72.172 98.952M63.405 63.8L46.421 80.312L63.405 63.8ZM46.366 80.33L62.694 97.495L46.366 80.33ZM97.436 98.28L114.409 81.76L97.436 98.28ZM114.475 81.74L98.138 64.577L114.475 81.74Z" stroke="white" stroke-width="2.93" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></div>
+            <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Ou envoyez une vidéo directement sur Vimeo</h4>
+        </a>
 
     </div>
     <!---->
@@ -1929,7 +1990,65 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
 </div>
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
 <script type="text/javascript" src="/js/admin_views/lesson.js"></script>
 <script type="text/javascript" src="/js/admin_views/curriculum.js"></script>
+
+
+
+<!-- The Modal -->
+  <div class="modal fade" id="vimeoModal">
+    <div style="width: 100%" class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Choisissez la vidéo à mettre en ligne</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form id="vimeoForm" class="" action="/postVideoToVimeo" method="post" enctype="multipart/form-data">
+                @csrf
+                <input type="file" name="videoVimeo" what="question text" id="videoVimeoInput"
+                  class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
+                  <input hidden type="text" name="videoVimeoSize" value="" id="videoVimeoSize">
+                 <input hidden type="text" name="lesson_id" value="{{$lesson->id}}">
+                 <input hidden type="text" name="school_id" value="{{$lesson->course->school->id}}">
+                 <input hidden type="text" name="user_id" value="{{Auth::user()->id}}">
+                <button style="display: flex;justify-content: center; margin: 2rem auto;" type="submit" class="tch-btn-header-primary disable-animations fastclickable">Valider</button>
+
+            </form>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+
+  $('#vimeoTrigger').click(function() {
+      $('#vimeoModal').modal('toggle');
+  });
+
+
+  $('#videoVimeoInput').on('change', function() {
+            $('#videoVimeoSize').val(this.files[0].size + "bytes");
+        });
+
+    $('#vimeoForm').submit(function(){
+      $('#videoVimeoInput').remove();
+    });
+
+  </script>
 
 @endsection
