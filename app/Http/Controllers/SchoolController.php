@@ -999,11 +999,14 @@ class SchoolController extends Controller
                         {
                          try {
                          $curl = curl_init();
+                         $postfield = http_build_query($params);
+                         /*
                          $postfield = '';
                          foreach ($params as $index => $value) {
                          $postfield .= $index . '=' . $value . "&";
                          }
                          $postfield = substr($postfield, 0, -1);
+                         */
                          curl_setopt_array($curl, array(
                          CURLOPT_URL => $url,
                          CURLOPT_RETURNTRANSFER => true,
@@ -1033,7 +1036,7 @@ class SchoolController extends Controller
                         }
                         if ($school->slug) {
                             $params = array(
-                                        "upload" => array(
+                                          "upload" => array(
                                           "approach" => "post",
                                           "size" => $request->videoVimeoSize,
                                           "redirect_url" => "https://".$school->slug.".oschoolelearning.com/uploadvideocallback"
@@ -1042,9 +1045,11 @@ class SchoolController extends Controller
                         }
                         else {
                             $params = array(
+                                        "upload" => array(
                                           "approach" => "post",
                                           "size" => $request->videoVimeoSize,
                                           "redirect_url" => "https://oschoolelearning.com/uploadvideocallback"
+                                      )
                                     );
                         }
 
@@ -1052,13 +1057,13 @@ class SchoolController extends Controller
                       //Appel de fonction postData()
                       $resultat = postData($params, $url) ;
                       $json = json_decode($resultat, true);
-                      dd($json);
+                      $link = $json['upload']['upload_link'];
 
 
 
 
                        //Session::put('error', $json['reason']);
-                      return view('admin_views.uploadVimeo');
+                      return view('admin_views.uploadVimeo', ['link' => $link]);
 
 
 
