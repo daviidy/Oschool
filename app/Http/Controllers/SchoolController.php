@@ -1042,11 +1042,9 @@ class SchoolController extends Controller
                         }
                         else {
                             $params = array(
-                                        "upload" => array(
                                           "approach" => "post",
                                           "size" => $request->videoVimeoSize,
                                           "redirect_url" => "https://oschoolelearning.com/uploadvideocallback"
-                                      )
                                     );
                         }
 
