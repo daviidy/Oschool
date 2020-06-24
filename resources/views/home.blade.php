@@ -151,7 +151,7 @@ svg{overflow:visible;display:inline-block;width:100%;height:100%;transform-origi
 .hero-title{font-size:26px;}
 }
 .button{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;transition:color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, width 0.3s ease, opacity 0.3s ease;border-radius:4px;cursor:pointer;display:inline-block;font-family:TeachableSans-Regular;font-weight:500;position:relative;margin:0;outline:none;text-align:center;text-decoration:none;vertical-align:baseline;white-space:nowrap;background-color:transparent;border:solid 2px 5fcf80;}
-.button{font-size:16px;height:52px;line-height:48px;padding:0 32px;}
+.button{font-size:25px;height:60px;line-height:48px;padding:0 32px;}
 .button:not(.has-topic-color){color:#5fcf80;}
 .button svg:not(.has-topic-fill){fill:#5fcf80;}
 .button:hover:not(.disabled),.button:focus{border-color:#34ad58;}
