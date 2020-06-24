@@ -437,7 +437,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <p class="choices" style="color: black; cursor: default;"><span style="cursor: pointer;"> <strong>ZOOM est autorisé dans votre école</strong> </span></p>
                             --}}
                             @if($school->slug)
-                            <a target="_blank" href="https://api.vimeo.com/oauth/authorize?response_type=code&client_id=348e328e2d3e36da3c8940ec81267f27e04f378c&redirect_uri=https://{{$school->slug}}.oschoolelearning.com/vimeocallback&state={{$school->id}}">
+                            <a target="_blank" href="https://api.vimeo.com/oauth/authorize?response_type=code&client_id=348e328e2d3e36da3c8940ec81267f27e04f378c&redirect_uri=https://{{$school->slug}}.oschoolelearning.com/vimeocallback&scope=public%20edit%20upload&state={{$school->id}}">
                             @else
                             <a target="_blank" href="https://api.vimeo.com/oauth/authorize?response_type=code&client_id=348e328e2d3e36da3c8940ec81267f27e04f378c&redirect_uri=https://oschoolelearning.com/vimeocallback&scope=public%20edit%20upload&state={{$school->id}}">
                             @endif

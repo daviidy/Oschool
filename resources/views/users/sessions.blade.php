@@ -638,20 +638,20 @@ div.mce-edit-area{background:#fff;filter:none;}
     </style>
 
 
-    
+
 
 
 <!--on vérifie si l'utilisateur est inscrit à au moins une école-->
     @if(count(Auth::user()->schools) > 0)
-       
-                
+
+
 
 
 <section id="userCourses" class="mentorshipStudent">
   <h1>Mes Sessions</h1>
 
 
-        
+
             <div class="grid-wrapper">
                 <div class="grid-inner">
 
@@ -677,7 +677,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                                 <th class="text-center">
                                 	Statut
                                 </th>
-                                
+
                             </tr>
                         </thead>
                         <tbody>
@@ -689,7 +689,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                           <!--On affiche la session programé-->
 
                           <!--met ici le code HTML pour les infos-->
-                          
+
                             <tr class="dashboardTable__projectWorkInProgress">
                                 <td class="">
                                     {{$loop->index + 1}}
@@ -700,7 +700,7 @@ div.mce-edit-area{background:#fff;filter:none;}
 
                                 <td class="link_">
                                   <a href="{{$classroom->link}}">Clique et suit la session</a>
-                                    
+
                                 </td>
 
                                 <td class="">
@@ -713,7 +713,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                                             Voir le commentaire du professeur
                                     </a>
                                     @endif
-                                    
+
                                 </td>
                                 @if($classroom->statut =="Annulée")
                                 <td style="color: #ff00003b; font-weight: bold;">
@@ -729,20 +729,20 @@ div.mce-edit-area{background:#fff;filter:none;}
                                 </td>
                                 @endif
                             </tr>
-                            
-                            
+
+
                             @endforeach
                             @endif
                     		@endforeach
 
                         </tbody>
                     </table>
-                    
-                    
+
+
                 </div>
             </div>
 
-            
+
               <!-- Modal HTML embedded directly into document -->
                @foreach($school->classrooms as $classroom)
               <div id="ex{{$classroom->id}}" class="modal">
@@ -753,9 +753,15 @@ div.mce-edit-area{background:#fff;filter:none;}
               </div>
               @endforeach
 
-            
+
+
+              <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/yaodavidarmel/rendez-vous-oschool-university" style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<!-- Calendly inline widget end -->
+
+
 </section>
 @endif
 
 @endsection
-
