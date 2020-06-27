@@ -24,20 +24,19 @@
     </tr>
 
     <tr>
-      <td style="padding: 20px 7.5% 0;">Votre participation à une séance de formation a été enregistrée avec succès</td>
+      <td style="padding: 20px 7.5% 0;">Une nouvel appel a été prévu pour le cours {{$classroom->courses->first()->name}}</td>
     </tr>
 
     <tr>
       <td style="padding: 20px 7.5% 0;"> Voici les infos sur la session :<br>
         Date et heure (Temps Universel): <strong>{{ Carbon\Carbon::parse($classroom->date)->format('d-m-Y H:i') }}</strong> <br>
         Nom de l'animateur: <strong>{{$classroom->teacher->name}}</strong> <br>
-        Lien de la session: <strong>{{$classroom->link}}</strong> <br>
       </td>
     </tr>
 
     <tr>
       <td style="padding: 20px 7.5% 0;">
-        Nous comptons sur ta présence pour avancer sur ta formation. N'oublie pas, la ponctualité est le fer de lance des gens qui résussissent<br>
+        Pour confirmer votre participation, rendez-vous dans la liste de vos sessions<br>
         <a href="https://oschoolelearning.com/users/sessions">Voir mes sessions</a><br>
       </td>
     </tr>

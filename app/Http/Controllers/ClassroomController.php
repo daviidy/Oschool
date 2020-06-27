@@ -7,6 +7,7 @@ use App\School;
 use App\User;
 use App\Course;
 use Mail;
+use Auth;
 use Illuminate\Http\Request;
 
 class ClassroomController extends Controller
@@ -43,40 +44,52 @@ class ClassroomController extends Controller
      {
          //
          $classroom = Classroom::create($request->all());
-         if(is_array($request->users))
-         {
-             foreach($request->users as $user_id)
-             {
+
                  //on vérifie s'il s'agit d'un cours
-                 $course = Course::where('name', $user_id)->first();
+                 $course = Course::where('name', $request->courses)->first();
                  //si c'est pas un cours, c'est un user
                  //on retrouve le user et on
                  //l'associe a la classroom
                  if ($course === null) {
-                     $user = User::where('name', $user_id)->first();
-                     $classroom->users()->attach($user);
-                     Mail::send('mails.users.sessions.planning', ['classroom' => $classroom, 'user' => $user], function($message) use($user){
-                       $message->to($user->email, 'Planification d\'une session de formation')->subject('Planification d\'une session de formation');
-                       $message->from('eventsoschool@gmail.com', 'Oschool');
-                     });
+                     return redirect()->back()->with('status', 'Aucun cours trouvé pour cette session');
                  }
                  //si c'est un cours, on recupere tous les users
                  //de ce cours et on les associe a la classroom
                  else {
+                     $classroom->courses()->attach($course);
                      foreach ($course->users as $user) {
-                         $classroom->users()->attach($user);
-                         Mail::send('mails.users.sessions.planning', ['classroom' => $classroom, 'user' => $user], function($message) use($user){
+                         Mail::send('mails.users.sessions.invite', ['classroom' => $classroom, 'user' => $user], function($message) use($user){
                            $message->to($user->email, 'Planification d\'une session de formation')->subject('Planification d\'une session de formation');
                            $message->from('eventsoschool@gmail.com', 'Oschool');
                          });
                      }
                  }
 
-             }
-         }
 
          return back()->with('status', 'Nouvelle session programmée');
      }
+
+
+     public function subscribeToClassroom(Classroom $classroom)
+     {
+         if (Auth::check() && count(Auth::user()->classrooms) < 6) {
+             $user = Auth::user();
+             $classroom->users()->attach($user);
+             Mail::send('mails.users.sessions.planning', ['classroom' => $classroom, 'user' => $user], function($message) use($user){
+               $message->to($user->email, 'Confirmation de votre participation à une session de formation')->subject('Confirmation de votre participation à une session de formation');
+               $message->from('eventsoschool@gmail.com', 'Oschool');
+             });
+             return back()->with('status', 'Votre participation a bien été enregistrée');
+         }
+         elseif (count(Auth::user()->classrooms) >= 6) {
+             return redirect()->back()->with('status', 'Vous avez atteint votre limite d\'appels');
+         }
+         else {
+             return redirect('home');
+         }
+
+     }
+
 
     /**
      * Display the specified resource.
