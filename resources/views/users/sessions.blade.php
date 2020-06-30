@@ -876,10 +876,12 @@ h4{font-family:"Montserrat", sans-serif;-webkit-hyphens:none;-ms-hyphens:none;hy
                           </p>
                           @if(count(Auth::user()->classrooms) < 6)
                           @foreach(Auth::user()->schools as $school)
+                          @if(count($school->classrooms) > 0)
                           @if($school->classrooms->where('statut', null) && !$school->classrooms->where('statut', null)->last()->users->contains(Auth::user()->id))
                           <a style="font-size: 1.5rem;text-decoration: none;" class="btn btn-primary-inverted" href="/classrooms/{{$school->classrooms->where('statut', null)->last()->id}}/subscribeToClassroom">Participer au prochain appel hebdomadaire pour le cours {{$school->classrooms->where('statut', null)->last()->courses->first()->name}} ({{ Carbon\Carbon::parse($school->classrooms->where('statut', null)->last()->date)->format('d-m-Y H:i') }})</a>
                           @else
                           <a style="font-size: 1.5rem;text-decoration: none;" class="btn btn-primary-inverted">Votre prochain appel hebdomadaire a lieu ce {{ Carbon\Carbon::parse($school->classrooms->where('statut', null)->last()->date)->format('d-m-Y H:i') }}</a>
+                          @endif
                           @endif
                           @endforeach
                           @endif
@@ -887,6 +889,29 @@ h4{font-family:"Montserrat", sans-serif;-webkit-hyphens:none;-ms-hyphens:none;hy
                   </div>
               </div>
           </div>
+
+
+          <div class="col-12">
+            <div style="margin: 4rem auto;width: 80%;" class="card shadow border-0 mb-3">
+                <div class="card-header bg-light border-0">
+                    <h4 style="font-size: 2rem;" class="mb-0">Appels hebdomadaires</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <p style="font-size: 1.5rem;">
+                                Les appels hebdomadaires sont organisés dans le but de <strong>à réaliser les parcours de votre projet</strong>.<br>
+                                <br>
+                                Il s'agit d'un échange de <strong>questions / réponses</strong> avec vos mentors.<br>
+                                <br>
+                                Vous pouvez participer en posant vos questions ou simplement en écoutant passivement les conversations.<br><br>
+                                Vous avez <strong>6 appels</strong> pour chacun des parcours dans lesquels vous êtes inscrits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
             @foreach(Auth::user()->schools as $school)
                 <!--on parcourt chaque session de cette école-->
