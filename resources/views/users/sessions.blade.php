@@ -638,20 +638,139 @@ div.mce-edit-area{background:#fff;filter:none;}
     </style>
 
 
-    
+<!--new appel design-->
+<style media="screen">
+/*! CSS Used from: https://joincodingnow.com/assets/application-5b430a7741d2abe8e61fd8bc38a0fb79f930d21794567d8ede896891363d6b70.css ; media=all */
+@media all{
+.fas,.far{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1;}
+.fa-circle:before{content:"\f111";}
+.fa-long-arrow-right:before{content:"\f178";}
+.far{font-family:'Font Awesome 5 Pro';font-weight:400;}
+.fas{font-family:'Font Awesome 5 Pro';font-weight:900;}
+*,*::before,*::after{box-sizing:border-box;}
+h5{margin-top:0;margin-bottom:0.5rem;}
+a{color:#BF9000;text-decoration:none;background-color:transparent;}
+a:hover{color:#735600;text-decoration:underline;}
+h5{margin-bottom:0.5rem;font-weight:500;line-height:1.2;}
+h5{font-size:1.25rem;}
+.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:0.375rem 0.75rem;font-size:1rem;line-height:1.5;border-radius:0.25rem;-webkit-transition:color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;transition:color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}
+@media (prefers-reduced-motion: reduce){
+.btn{-webkit-transition:none;transition:none;}
+}
+.btn:hover{color:#212529;text-decoration:none;}
+.btn:focus{outline:0;box-shadow:0 0 0 0.2rem rgba(191,144,0,0.25);}
+.btn:disabled{opacity:0.65;}
+.card{position:relative;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,0.125);border-radius:0.4rem;}
+.card-body{-webkit-box-flex:1;flex:1 1 auto;padding:1.25rem;}
+.border-0{border:0!important;}
+@media (min-width: 992px){
+.d-lg-flex{display:-webkit-box!important;display:flex!important;}
+}
+.flex-row{-webkit-box-orient:horizontal!important;-webkit-box-direction:normal!important;flex-direction:row!important;}
+.align-items-center{-webkit-box-align:center!important;align-items:center!important;}
+.shadow{box-shadow:0 0.5rem 1rem rgba(0,0,0,0.15)!important;}
+.stretched-link::after{position:absolute;top:0;right:0;bottom:0;left:0;z-index:1;pointer-events:auto;content:"";background-color:rgba(0,0,0,0);}
+.mr-0{margin-right:0!important;}
+.mb-0{margin-bottom:0!important;}
+.mt-2{margin-top:0.5rem!important;}
+.my-3{margin-top:1rem!important;}
+.my-3{margin-bottom:1rem!important;}
+.ml-auto{margin-left:auto!important;}
+@media (min-width: 992px){
+.mt-lg-0{margin-top:0!important;}
+.mr-lg-2{margin-right:0.5rem!important;}
+}
+.text-center{text-align:center!important;}
+.text-success{color:#28a745!important;}
+@media print{
+*,*::before,*::after{text-shadow:none!important;box-shadow:none!important;}
+}
+.btn-primary-inverted{color:#BF9000;background-color:#f2e9cc;border-color:transparent;}
+.btn-primary-inverted:hover{color:#BF9000;background-color:#eadcae;border-color:transparent;}
+.btn-primary-inverted:focus{box-shadow:0 0 0 0.2rem rgba(167,128,6,0.5);}
+.btn-primary-inverted:disabled{color:#BF9000;background-color:#f2e9cc;border-color:transparent;}
+*{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+a{-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
+@media (prefers-reduced-motion: reduce){
+a{-webkit-transition:none;transition:none;}
+}
+h5{font-family:"Montserrat", sans-serif;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;font-weight:600;}
+.btn{font-family:"Montserrat", sans-serif;font-weight:600;}
+::-moz-selection{background:#BF9000;color:#fff;}
+::selection{background:#BF9000;color:#fff;}
+}
+
+</style>
+
+
+<!--style header appel-->
+<style media="screen">
+/*! CSS Used from: https://joincodingnow.com/assets/application-5b430a7741d2abe8e61fd8bc38a0fb79f930d21794567d8ede896891363d6b70.css ; media=all */
+@media all{
+*,*::before,*::after{box-sizing:border-box;}
+h4{margin-top:0;margin-bottom:0.5rem;}
+p{margin-top:0;margin-bottom:1rem;}
+a{color:#BF9000;text-decoration:none;background-color:transparent;}
+a:hover{color:#735600;text-decoration:underline;}
+h4{margin-bottom:0.5rem;font-weight:500;line-height:1.2;}
+h4{font-size:1.5rem;}
+@media (max-width: 1200px){
+h4{font-size:calc(1.275rem + 0.3vw);}
+}
+.row{display:-webkit-box;display:flex;flex-wrap:wrap;margin-right:-15px;margin-left:-15px;}
+.col-12{position:relative;width:100%;padding-right:15px;padding-left:15px;}
+.col-12{-webkit-box-flex:0;flex:0 0 100%;max-width:100%;}
+.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:0.375rem 0.75rem;font-size:1rem;line-height:1.5;border-radius:0.25rem;-webkit-transition:color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;transition:color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}
+@media (prefers-reduced-motion: reduce){
+.btn{-webkit-transition:none;transition:none;}
+}
+.btn:hover{color:#212529;text-decoration:none;}
+.btn:focus{outline:0;box-shadow:0 0 0 0.2rem rgba(191,144,0,0.25);}
+.btn:disabled{opacity:0.65;}
+.card{position:relative;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,0.125);border-radius:0.4rem;}
+.card-body{-webkit-box-flex:1;flex:1 1 auto;padding:1.25rem;}
+.card-header{padding:0.75rem 1.25rem;margin-bottom:0;background-color:rgba(0,0,0,0.03);border-bottom:1px solid rgba(0,0,0,0.125);}
+.card-header:first-child{border-radius:calc(0.4rem - 1px) calc(0.4rem - 1px) 0 0;}
+.bg-light{background-color:#f8f9fa!important;}
+.border-0{border:0!important;}
+.shadow{box-shadow:0 0.5rem 1rem rgba(0,0,0,0.15)!important;}
+.mb-0{margin-bottom:0!important;}
+@media print{
+*,*::before,*::after{text-shadow:none!important;box-shadow:none!important;}
+p{orphans:3;widows:3;}
+}
+.btn-primary-inverted{color:#BF9000;background-color:#f2e9cc;border-color:transparent;}
+.btn-primary-inverted:hover{color:#BF9000;background-color:#eadcae;border-color:transparent;}
+.btn-primary-inverted:focus{box-shadow:0 0 0 0.2rem rgba(167,128,6,0.5);}
+.btn-primary-inverted:disabled{color:#BF9000;background-color:#f2e9cc;border-color:transparent;}
+*{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+a{-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
+@media (prefers-reduced-motion: reduce){
+a{-webkit-transition:none;transition:none;}
+}
+h4{font-family:"Montserrat", sans-serif;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;font-weight:600;}
+.btn{font-family:"Montserrat", sans-serif;font-weight:600;}
+::-moz-selection{background:#BF9000;color:#fff;}
+::selection{background:#BF9000;color:#fff;}
+}
+
+</style>
+
 
 
 <!--on vérifie si l'utilisateur est inscrit à au moins une école-->
     @if(count(Auth::user()->schools) > 0)
-       
-                
+
+
 
 
 <section id="userCourses" class="mentorshipStudent">
-  <h1>Mes Sessions</h1>
 
 
-        
+
+  {{--
+
+      <h1>Mes Sessions</h1>
             <div class="grid-wrapper">
                 <div class="grid-inner">
 
@@ -677,7 +796,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                                 <th class="text-center">
                                 	Statut
                                 </th>
-                                
+
                             </tr>
                         </thead>
                         <tbody>
@@ -689,7 +808,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                           <!--On affiche la session programé-->
 
                           <!--met ici le code HTML pour les infos-->
-                          
+
                             <tr class="dashboardTable__projectWorkInProgress">
                                 <td class="">
                                     {{$loop->index + 1}}
@@ -700,7 +819,7 @@ div.mce-edit-area{background:#fff;filter:none;}
 
                                 <td class="link_">
                                   <a href="{{$classroom->link}}">Clique et suit la session</a>
-                                    
+
                                 </td>
 
                                 <td class="">
@@ -713,7 +832,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                                             Voir le commentaire du professeur
                                     </a>
                                     @endif
-                                    
+
                                 </td>
                                 @if($classroom->statut =="Annulée")
                                 <td style="color: #ff00003b; font-weight: bold;">
@@ -729,20 +848,107 @@ div.mce-edit-area{background:#fff;filter:none;}
                                 </td>
                                 @endif
                             </tr>
-                            
-                            
+
+
                             @endforeach
                             @endif
                     		@endforeach
 
                         </tbody>
                     </table>
-                    
-                    
+
+
                 </div>
             </div>
 
-            
+            --}}
+
+
+            <div style="width: 80%;margin: auto;margin-top: 2rem;" class="card shadow border-0">
+              <div class="card-header bg-light border-0">
+                  <h4 style="font-size: 3rem" class="mb-0">Mes appels hebdomadaires</h4>
+              </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-12">
+                          <p style="font-size: 1.5rem;">
+                              Retrouvez ci-dessous la liste des anciens appels hebdomadaires.
+                          </p>
+                          @if(count(Auth::user()->classrooms) < 6)
+                          @foreach(Auth::user()->schools as $school)
+                          @if(count($school->classrooms) > 0)
+                          @if($school->classrooms->where('statut', null) && !$school->classrooms->where('statut', null)->last()->users->contains(Auth::user()->id))
+                          <a style="font-size: 1.5rem;text-decoration: none;" class="btn btn-primary-inverted" href="/classrooms/{{$school->classrooms->where('statut', null)->last()->id}}/subscribeToClassroom">Participer au prochain appel hebdomadaire pour le cours {{$school->classrooms->where('statut', null)->last()->courses->first()->name}} ({{ Carbon\Carbon::parse($school->classrooms->where('statut', null)->last()->date)->format('d-m-Y H:i') }})</a>
+                          @else
+                          <a style="font-size: 1.5rem;text-decoration: none;" class="btn btn-primary-inverted">Votre prochain appel hebdomadaire a lieu ce {{ Carbon\Carbon::parse($school->classrooms->where('statut', null)->last()->date)->format('d-m-Y H:i') }}</a>
+                          @endif
+                          @endif
+                          @endforeach
+                          @endif
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="col-12">
+            <div style="margin: 4rem auto;width: 80%;" class="card shadow border-0 mb-3">
+                <div class="card-header bg-light border-0">
+                    <h4 style="font-size: 2rem;" class="mb-0">Appels hebdomadaires</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <p style="font-size: 1.5rem;">
+                                Les appels hebdomadaires sont organisés dans le but de <strong>à réaliser les parcours de votre projet</strong>.<br>
+                                <br>
+                                Il s'agit d'un échange de <strong>questions / réponses</strong> avec vos mentors.<br>
+                                <br>
+                                Vous pouvez participer en posant vos questions ou simplement en écoutant passivement les conversations.<br><br>
+                                Vous avez <strong>6 appels</strong> pour chacun des parcours dans lesquels vous êtes inscrits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            @foreach(Auth::user()->schools as $school)
+                <!--on parcourt chaque session de cette école-->
+                @if(count($school->classrooms) > 0)
+                          @foreach($school->classrooms as $classroom)
+
+            <div style="width: 80%;margin: auto;" class="card shadow border-0 my-3">
+              <div class="card-body d-lg-flex flex-row align-items-center">
+                  <h5 class="mb-0 mr-0 mr-lg-2 text-center text-success">
+                      <i class="fa fa-circle"></i>
+                  </h5>
+                  <h5 style="font-size: 2.25rem;" class="mb-0">
+                      {{ Carbon\Carbon::parse($classroom->date)->format('d-m-Y H:i') }}
+                  </h5>
+                  @if(Carbon\Carbon::parse($classroom->date) < Carbon\Carbon::now() && $classroom->users->contains(Auth::user()->id))
+                  <a style="font-size: 2rem;text-decoration: none;" href="#ex{{$classroom->id}}" rel="modal:open" class="btn btn-primary-inverted stretched-link mt-2 mt-lg-0 ml-auto">
+                      Voir le compte rendu <i class="fa fa-arrow-right"></i>
+                  </a>
+                  @elseif($classroom->users->contains(Auth::user()->id))
+                  <a style="font-size: 2rem;text-decoration: none;" class="btn btn-primary-inverted stretched-link mt-2 mt-lg-0 ml-auto">
+                      A venir <i class="fa fa-arrow-right"></i>
+                  </a>
+                  @else
+                  <a href="/classrooms/{{$classroom->id}}/subscribeToClassroom" style="font-size: 2rem;text-decoration: none;" class="btn btn-primary-inverted stretched-link mt-2 mt-lg-0 ml-auto">
+                      Participer <i class="fa fa-chalkboard-teacher"></i>
+                  </a>
+                  @endif
+              </div>
+          </div>
+
+          @endforeach
+          @endif
+          @endforeach
+
+
+
+
               <!-- Modal HTML embedded directly into document -->
                @foreach($school->classrooms as $classroom)
               <div id="ex{{$classroom->id}}" class="modal">
@@ -753,9 +959,20 @@ div.mce-edit-area{background:#fff;filter:none;}
               </div>
               @endforeach
 
-            
+
+
+
+
+
+{{--
+              <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/yaodavidarmel/rendez-vous-oschool-university" style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<!-- Calendly inline widget end -->
+--}}
+
+
 </section>
 @endif
 
 @endsection
-

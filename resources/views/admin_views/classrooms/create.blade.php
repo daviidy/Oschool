@@ -1,5 +1,5 @@
 @extends('layouts.admin_views.menu-school-icon')
-@section('title', 'Ajouter une nouvelle information')
+@section('title', 'Ajouter un nouvel événement')
 @section('content')
 
 <style media="screen">
@@ -565,9 +565,10 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 
                         <bootstrap-decorator form="schemaForm.form[8]">
                             <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Etudiant(es) concerné(es)</label>
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Cours concerné</label>
 
-                              <select class="js-example-basic-multiple" name="users[]" multiple="multiple" style="width:250px;">
+
+                              {{--<select class="js-example-basic-multiple" name="courses[]" multiple="multiple" style="width:250px;">
                                 @foreach($school->courses->where('type', 'path') as $course_path)
                                 @if(count($course_path->users) > 0)
                                     <option value="{{$course_path->name}}">{{$course_path->name}}</option>
@@ -578,11 +579,24 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                                     <option value="{{$course_bootcamp->name}}">{{$course_bootcamp->name}}</option>
                                 @endif
                                 @endforeach
-                                @foreach($school->users as $user)
-                                    <option value="{{$user->name}}">{{$user->name}}</option>
-                                @endforeach
 
-                              </select>
+
+                            </select>--}}
+
+                            <select name="courses" style="width:250px;">
+                              @foreach($school->courses->where('type', 'path') as $course_path)
+                              @if(count($course_path->users) > 0)
+                                  <option value="{{$course_path->name}}">{{$course_path->name}}</option>
+                              @endif
+                              @endforeach
+                              @foreach($school->courses->where('type', 'bootcamp') as $course_bootcamp)
+                              @if(count($course_bootcamp->users) > 0)
+                                  <option value="{{$course_bootcamp->name}}">{{$course_bootcamp->name}}</option>
+                              @endif
+                              @endforeach
+
+
+                            </select>
 
 
                               </div>

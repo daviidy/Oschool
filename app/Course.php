@@ -37,6 +37,11 @@ class Course extends Model
           return $this->belongsToMany('App\User');
       }
 
+      public function classrooms()
+    {
+        return $this->belongsToMany('App\Classroom');
+    }
+
 
       /**
        * [users description]

@@ -24,7 +24,7 @@
     </tr>
 
     <tr>
-      <td style="padding: 20px 7.5% 0;">Votre participation à une séance de formation a été enregistrée avec succès</td>
+      <td style="padding: 20px 7.5% 0;">Juste un rappel pour votre appel hebdomadaire</td>
     </tr>
 
     <tr>

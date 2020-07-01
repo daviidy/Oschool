@@ -247,6 +247,8 @@ Route::get('/schoolAdmin/{school}/classrooms/create', 'ClassroomController@creat
 
 Route::get('/schoolAdmin/{school}/classrooms/{classroom}/edit', 'ClassroomController@edit')->name('schoolSettings');
 
+Route::get('/classrooms/{classroom}/subscribeToClassroom', 'ClassroomController@subscribeToClassroom');
+
 //school communities
 Route::get('/schoolAdmin/{school}/communities', 'CommunityController@index');
 Route::get('/schoolAdmin/{school}/communities/create', 'CommunityController@create');

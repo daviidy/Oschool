@@ -44,7 +44,7 @@ class SendSectionDrip extends Command
     {
 
         Mail::send('mails.test', ['test' => 'test'], function($message){
-          $message->to('yaodavidarmel@gmail.com', 'A David')->subject('Drip OK!');
+          $message->to('yaodavidarmel@gmail.com', 'A David')->subject('Section Drip OK!');
           $message->from('eventsoschool@gmail.com', 'Oschool');
         });
 

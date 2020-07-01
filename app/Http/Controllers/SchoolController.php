@@ -685,10 +685,20 @@ class SchoolController extends Controller
                          throw new Exception($e);
                          }
                         }
-                      $params = array('grant_type' => 'authorization_code',
-                                      'code' => $code,
-                                      'redirect_uri' => "https://".$school->slug.".oschoolelearning.com/callback?state=".$school->id,
-                                      );
+
+                        if ($school->slug) {
+                            $params = array('grant_type' => 'authorization_code',
+                                            'code' => $code,
+                                            'redirect_uri' => "https://".$school->slug.".oschoolelearning.com/callback?state=".$school->id,
+                                            );
+                        }
+                        else {
+                            $params = array('grant_type' => 'authorization_code',
+                                            'code' => $code,
+                                            'redirect_uri' => "https://oschoolelearning.com/callback?state=".$school->id,
+                                            );
+                        }
+
                       $url = "https://zoom.us/oauth/token";
                       //Appel de fonction postData()
                       $resultat = postData($params, $url) ;
