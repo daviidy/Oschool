@@ -389,7 +389,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 <script>
 $(document).ready(function(){
 
- fetch_customer_data();
 
  function fetch_customer_data(query = '')
  {
