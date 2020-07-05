@@ -30,7 +30,7 @@ class Kernel extends ConsoleKernel
         //          ->hourly();
         $schedule->command('subscription:email')->dailyAt('13:00');
         $schedule->command('section:drip')->dailyAt('00:00');
-        $schedule->command('classroom:reminder')->dailyAt('00:00');
+        $schedule->command('classroom:reminder')->dailyAt('07:00');
         //$schedule->command('subscription:email')->everyMinute();
     }
 

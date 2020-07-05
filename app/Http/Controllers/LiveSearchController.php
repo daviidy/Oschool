@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\School;
 use App\User;
+use App\Course;
 use App\Author;
 use App\Category;
 
@@ -21,8 +22,7 @@ class LiveSearchController extends Controller
       $query = $request->get('query');
       if($query != '')
       {
-       $data = DB::table('courses')
-         ->where('name', 'like', '%'.$query.'%')
+       $data = Course::where('name', 'like', '%'.$query.'%')
          ->orWhere('slug', 'like', '%'.$query.'%')
          ->orderBy('name', 'asc')
          ->get();
@@ -30,8 +30,7 @@ class LiveSearchController extends Controller
       }
       else
       {
-       $data = DB::table('courses')
-         ->orderBy('name', 'asc')
+       $data = Course::orderBy('name', 'asc')
          ->where('school_id', 'like', '%'.$school->id.'%')
          ->get();
       }
@@ -42,30 +41,63 @@ class LiveSearchController extends Controller
        {
            if ($row->school_id == $school->id) {
                $school = School::find($row->school_id);
-               $output .= '
-               <div class="tch-course-listing col-lg-4 col-md-6 col-xs-6 ui-sortable-handle clearfix">
-                   <a href="/schoolAdmin/'.$school->id.'/courses/'.$row->id.'/information">
-                       <div class="tch-course-listing-wrapper">
-                           <div class="row">
-                               <div class="col-lg-12">
-                                   <div style="background-image: url(/images/courses/logos/'.$row->logo.');background-size: 100%;" class="tch-course-listing-image"></div>
-                                   <div what="course name" ng-bind="::course.name" class="tch-course-listing-title">'.$row->name.'</div>
+               if (count($row->purchases) > 0 && count($row->purchases->where('status', 'Validé')) > 0) {
+                   $price = 0;
+                   foreach ($row->purchases->where('status', 'Validé') as $purchase) {
+                       $price += $purchase->price;
+                   }
+                   $output .= '
+                   <div class="tch-course-listing col-lg-4 col-md-6 col-xs-6 ui-sortable-handle clearfix">
+                       <a href="/schoolAdmin/'.$school->id.'/courses/'.$row->id.'/information">
+                           <div class="tch-course-listing-wrapper">
+                               <div class="row">
+                                   <div class="col-lg-12">
+                                       <div style="background-image: url(/images/courses/logos/'.$row->logo.');background-size: 100%;" class="tch-course-listing-image"></div>
+                                       <div what="course name" ng-bind="::course.name" class="tch-course-listing-title">'.$row->name.'</div>
+                                   </div>
+                               </div>
+                               <div class="row">
+                                   <div class="tch-course-listing-sales tch-course-listing-footer-section">'.$price.' <div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
+                                         class="tch-course-listing-sales-total">FCFA</div>
+                                       <div class="tch-course-listing-sales-label">Ventes</div>
+                                   </div>
+                                   <div class="tch-course-listing-enrollment tch-course-listing-footer-section">
+                                       <div ng-bind="::courseStats[course.id].enrolled" what="course-total-enrolled" class="tch-course-listing-enrollment-total">'.count($row->users).'</div>
+                                       <div class="tch-course-listing-enrollment-label">Inscrit(e)(s)</div>
+                                   </div>
                                </div>
                            </div>
-                           <div class="row">
-                               <div class="tch-course-listing-sales tch-course-listing-footer-section">'.count($row->purchases->where('status', 'Validé')->price).' <div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
-                                     class="tch-course-listing-sales-total">FCFA</div>
-                                   <div class="tch-course-listing-sales-label">Ventes</div>
+                       </a>
+                   </div>
+                   ';
+               }
+               else {
+                   $output .= '
+                   <div class="tch-course-listing col-lg-4 col-md-6 col-xs-6 ui-sortable-handle clearfix">
+                       <a href="/schoolAdmin/'.$school->id.'/courses/'.$row->id.'/information">
+                           <div class="tch-course-listing-wrapper">
+                               <div class="row">
+                                   <div class="col-lg-12">
+                                       <div style="background-image: url(/images/courses/logos/'.$row->logo.');background-size: 100%;" class="tch-course-listing-image"></div>
+                                       <div what="course name" ng-bind="::course.name" class="tch-course-listing-title">'.$row->name.'</div>
+                                   </div>
                                </div>
-                               <div class="tch-course-listing-enrollment tch-course-listing-footer-section">
-                                   <div ng-bind="::courseStats[course.id].enrolled" what="course-total-enrolled" class="tch-course-listing-enrollment-total">'.count($row->users).'</div>
-                                   <div class="tch-course-listing-enrollment-label">Inscrit(e)(s)</div>
+                               <div class="row">
+                                   <div class="tch-course-listing-sales tch-course-listing-footer-section">0 <div ng-bind="(courseStats[course.id].total_sales > 0 ? (courseStats[course.id].total_sales/ 100) : 0)" what="course-total-sales"
+                                         class="tch-course-listing-sales-total">FCFA</div>
+                                       <div class="tch-course-listing-sales-label">Ventes</div>
+                                   </div>
+                                   <div class="tch-course-listing-enrollment tch-course-listing-footer-section">
+                                       <div ng-bind="::courseStats[course.id].enrolled" what="course-total-enrolled" class="tch-course-listing-enrollment-total">0 </div>
+                                       <div class="tch-course-listing-enrollment-label">Inscrit(e)(s)</div>
+                                   </div>
                                </div>
                            </div>
-                       </div>
-                   </a>
-               </div>
-               ';
+                       </a>
+                   </div>
+                   ';
+               }
+
            }
 
            else
