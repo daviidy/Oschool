@@ -30,8 +30,8 @@ class LiveSearchController extends Controller
       }
       else
       {
-       $data = Course::orderBy('name', 'asc')
-         ->where('school_id', 'like', '%'.$school->id.'%')
+       $data = Course::where('school_id', 'like', '%'.$school->id.'%')
+         ->orderBy('name', 'asc')
          ->get();
       }
       $total_row = $data->count();
