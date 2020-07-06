@@ -108,8 +108,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="my-close-button"><img src="https://teachable.com/assets/modal-x-c7f43ce3b8f64f3d597ce12e57caa7ddbf0778d3f163dc92b4a768067ddd2c3f.svg"></button>
     </div>
 
-    {{--timer
+    
         @include('includes.timer');
+        {{--timer
     timer --}}
     
 
