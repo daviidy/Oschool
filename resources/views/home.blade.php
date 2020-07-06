@@ -265,10 +265,10 @@ header,svg{display:none;}
                     <div class="col col-50-lg">
                         <div class="hero-title">
                             <h1 class="text-color-white text-1-lg m-t-0-xs">
-                                Apprenez la comptabilité depuis chez vous !
+                                Deviens COMPTABLE PROFESSIONNEL
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                Découvrez les comptes créditeurs, les débits et les crédits, les états des flux de trésorerie, la reconnaissance des revenus, le cycle comptable, le rapprochement bancaire, les comptes débiteurs, les concepts comptables et bien plus encore grâce aux cours en ligne.
+                                2 semaines pour passer de zéro à héros avec le logiciel SAGE COMPTABILITÉ 17.Début de la formation: Lundi 3 août 2020.
                             </h2>
                         </div>
                         <div class="form-footer">

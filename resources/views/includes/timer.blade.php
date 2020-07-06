@@ -6,7 +6,8 @@
 
 <section id="sticky-banner" class="permanent-stick sticky green-countdown timer"  >
     <div class="content-container">
-      <h3 class="header">Ces cours de comptabilité en ligne sont spécialement conçus pour t'aider à apprendre à un prix réduit : 12.500F.
+      <h3 class="header">
+        2 semaines pour devenir comptable professionnel. Rejoins nous vite.
       </h3>
         <div  id="sticky-banner-countdown" class="countdown-timer-component" data-on-end="">
     <div class="data-payload" data-end="2020-08-03T23:59:00-05:00"></div>
