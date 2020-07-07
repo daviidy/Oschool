@@ -89,6 +89,9 @@
 @media screen{
 .w-full-xs{width:100%!important;}
 }
+@media screen and (max-width: 720px){
+.w-full-xs{font-size: 15px!important;}
+}
 .form-label{display:block;}
 .form-label{color:#40484a;font-weight:500;margin-bottom:.5rem;line-height:1.3;}
 .form-text-input{background-color:#f9fafa;border-color:#d4d9dd;transition:.2s;margin:0;font-size:1rem;padding:.75rem 1rem;outline:none;border:2px solid #d4d9dd;border-radius:4px;box-shadow:0;box-sizing:border-box;color:#40484a;}
