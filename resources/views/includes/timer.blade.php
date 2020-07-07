@@ -6,9 +6,11 @@
 
 <section id="sticky-banner" class="permanent-stick sticky green-countdown timer"  >
     <div class="content-container">
-      <h3 class="header">Nos parcours développeurs web sont gratuits pour ce mois de juin! Utilisez le coupon : OSCHOOLFORCE</h3>
+      <h3 class="header">
+        2 semaines pour devenir comptable professionnel. Rejoins nous vite.
+      </h3>
         <div  id="sticky-banner-countdown" class="countdown-timer-component" data-on-end="">
-    <div class="data-payload" data-end="2020-05-31T23:59:00-05:00"></div>
+    <div class="data-payload" data-end="2020-08-03T23:59:00-05:00"></div>
     <div class="days-container">
       <p class="countdown-number days" id="days"></p>
       <p class="countdown-label days-label">JOURS</p>
@@ -27,7 +29,7 @@
     </div>
   </div>
 
-      <a class="desktop btn  register-button sticky-banner-button" href="https://oschoolelearning.com/schools">
+      <a class="desktop btn  register-button sticky-banner-button" href="https://oschoolelearning.com/course/formation-pratique-au-metier-de-comptable-professionnel">
         Profitez de l'offre
       </a>
       <a class="mobile btn  register-button sticky-banner-button" href="https://oschoolelearning.com/schools">
@@ -41,7 +43,7 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("May 31, 2020 23:59:59").getTime();
+var countDownDate = new Date("August 03, 2020 23:59:59").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
