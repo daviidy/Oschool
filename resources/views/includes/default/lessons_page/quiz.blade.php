@@ -26,7 +26,7 @@
                     </div>
                    @endif
                     @foreach($quiz->questions->sortBy('position') as $question)
-                    <div style="margin-top: 6rem;" id="{{$quiz->id}}" class="quiz Quiz single">
+                    <div style="margin-top: 6rem; {{$loop->last ? 'margin-bottom: 10rem;' : ''}}" id="{{$quiz->id}}" class="quiz Quiz single">
                         <div class="quiz-progress">{{$question->position}} / {{count($quiz->questions)}}</div>
                         <div class="quiz-question-outer" style="height: 168px;">
                             <div>
