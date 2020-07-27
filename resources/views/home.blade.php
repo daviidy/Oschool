@@ -89,6 +89,9 @@
 @media screen{
 .w-full-xs{width:100%!important;}
 }
+@media screen and (max-width: 720px){
+.w-full-xs{font-size: 15px!important;}
+}
 .form-label{display:block;}
 .form-label{color:#40484a;font-weight:500;margin-bottom:.5rem;line-height:1.3;}
 .form-text-input{background-color:#f9fafa;border-color:#d4d9dd;transition:.2s;margin:0;font-size:1rem;padding:.75rem 1rem;outline:none;border:2px solid #d4d9dd;border-radius:4px;box-shadow:0;box-sizing:border-box;color:#40484a;}
@@ -265,14 +268,14 @@ header,svg{display:none;}
                     <div class="col col-50-lg">
                         <div class="hero-title">
                             <h1 class="text-color-white text-1-lg m-t-0-xs">
-                                Tous nos parcours développeur web junior et développeur PHP/Laravel sont gratuits pour le mois de juin !
+                                Deviens COMPTABLE PROFESSIONNEL
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                Utilisez le coupon OSCHOOLFORCE pour accéder à ces spécialisations.
+                                2 semaines pour passer de zéro à héros avec le logiciel SAGE COMPTABILITÉ 17.Début de la formation: Lundi 3 août 2020.
                             </h2>
                         </div>
                         <div class="form-footer">
-                            <a href="/schools">
+                            <a href="https://oschoolelearning.com/course/formation-pratique-au-metier-de-comptable-professionnel">
                             <button name="button" type="submit" class="button button primary button--primary-blue m-t-2-xs w-full-xs">
                                 <span>Commencez MAINTENANT !
                                 <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 11 12" class="play-icon">
@@ -284,13 +287,13 @@ header,svg{display:none;}
                     </div>
                     <div class="col col-50-lg m-t-2-xs m-t-0-lg">
 
-                        {{--
+                        
                         <div style="text-align: center;" class="form-card m-b-0-xs homepage2018">
                             <p class="trial-banner bg-gray-light text-color-dark">
                                 Commencez dès maintenant <span class="regular">et sans engagement</span>
                             </p>
-                            <img style="border-radius: 8px;/*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/width:63%;" src="/images/divers/python.png" alt="">
-                            <!--
+                            <img style="border-radius: 8px;/*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/width:100%;" src="https://oschoolelearning.com/images/courses/logos/1587496536.jpg" alt="">
+                           {{-- <!--
                             <form class="new_account_signup" id="signupForm" data-featurette="Treehouse.SimpleSignupForm" action="/subscribe/register_free_trial" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"
                                   class="placeholder-processed"><input type="hidden" name="authenticity_token" value="6/X13Mh0nk1E+2Xscuq2IhcwJKqhoKgnQS7cfvJrrUwWyNHIzUawYe432n3ljIQzP6hWDrQK9+RAYVO1EvC3Ww==" class="placeholder-processed">
                                 <fieldset>
