@@ -393,6 +393,9 @@ Route::get('/path/{slugCourse}/projects/{slug}', 'CourseController@showPath');
 
 Route::get('/checkoutPartners/{offer}', 'OfferController@checkoutPartners');
 
+//restart quiz
+Route::get('/restartQuiz/{quiz}/{result}/{user}', 'QuizController@restartQuiz');
+
 
 //pour les achats
 Route::post('/notify', 'PurchaseController@notify')->name('notify');

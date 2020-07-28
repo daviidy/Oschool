@@ -11,6 +11,7 @@ use App\Question;
 use App\Option;
 use App\Answer;
 use App\Result;
+use App\User;
 use Image;
 use Auth;
 use Illuminate\Http\Request;
@@ -113,11 +114,18 @@ class QuizController extends Controller
         $options = [];
         $quiz = Quiz::where('id', $request->quiz)->first();
 
-        //on crée un résultat
-        $result = Result::create([
-                              'quiz_id' => $request->quiz,
-                              'user_id' => Auth::user()->id,
-          ]);
+        //on crée un résultat si le user n'en a pas déjà un par rapport à ce quiz
+        if (count(Auth::user()->results->where('quiz_id', $quiz->id)) > 0) {
+            $result = Auth::user()->results->where('quiz_id', $quiz->id)->first();
+        }
+        else {
+
+            $result = Result::create([
+                                  'quiz_id' => $request->quiz,
+                                  'user_id' => Auth::user()->id,
+              ]);
+        }
+
 
       //pour chaque option, on crée une réponse du
       //user
@@ -138,13 +146,48 @@ class QuizController extends Controller
                 array_push($options, $option);
             }
         }
-        $percentage = Answer::where('result_id', $result->id)->where('correct', 1)->count() / Option::where('quiz_id', $quiz->id)->where('correct', 1)->count();
+        //resultat est nombre de vrai trouvés sur total de vrais, le tout * 100
+        $percentage = Answer::where('result_id', $result->id)->where('user_id', Auth::user()->id)->where('correct', 1)->count() / Option::where('quiz_id', $quiz->id)->where('correct', 1)->count();
         $result->quiz_result = $percentage * 100;
+
         $result->save();
 
         return response()->json(['options' => $options, 'result' => $result]);
         /*
         return redirect('/schoolAdmin/'.$request->school_id.'/courses/'.$request->course_id.'/curriculum');
         */
+    }//fin check
+
+
+    //reprendre les quiz
+    public function restartQuiz(Quiz $quiz, Result $result, User $user)
+    {
+        //on supprime toutes les reponses de l'utilisateur
+        if (Auth::check()) {
+            //si user a moins de 3 tentatives
+            if ($user->results->where('quiz_id', $quiz->id)->first()->restart < 3) {
+                foreach ($result->answers->where('user_id', $user->id) as $answer) {
+                    $answer->delete();
+                }
+                $result->restart += 1;
+                return redirect()->back()->with('status', 'Vous pouvez reprendre le quiz. Ii vous reste 2 tentatives');
+            }
+            //si user est un des propriétaires de l'école
+            elseif (Auth::user()->isOwner() && Auth::user()->createSchools->contains($quiz->course->school->id)) {
+                foreach ($result->answers->where('user_id', $user->id) as $answer) {
+                    $answer->delete();
+                }
+                $result->restart += 1;
+                return redirect()->back()->with('status', 'L\'étudiant pourra reprendre son quiz');
+            }
+
+        }
+        else {
+            return redirect('home');
+        }
+
     }
+
+
+
 }

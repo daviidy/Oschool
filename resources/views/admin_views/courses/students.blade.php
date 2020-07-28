@@ -789,9 +789,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                               @endphp
                               @if(count($user->purchases) > 0)
                               @foreach($user->purchases->where('status', 'Validé') as $purchase)
+                              @if($purchase->pricing)
                               @php
                               $total += $purchase->pricing->price;
                               @endphp
+                              @endif
                               @endforeach
                               @endif
                               <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'unsubscribe')" class="_2kIOe" href="/admin/users/32429890/information"><span ng-bind="getUnsubscribeFromMarketingEmails(user)">{{$total}}</span>
