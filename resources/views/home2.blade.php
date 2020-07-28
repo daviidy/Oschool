@@ -5699,7 +5699,8 @@
       max-width: 1280px;
       max-width: var(--desktop-m);
       margin-right: auto;
-      margin-left: auto
+      margin-left: auto;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     [data-v-9a33e7bc]:root {
@@ -17815,8 +17816,8 @@
                       viewBox="0 0 448 512" class="svg-inline--fa fa-play fa-w-14" data-v-9a33e7bc="">
                       <path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" data-v-9a33e7bc="" class=""></path>
                     </svg></span-->
-                  <div class="video-inline__image" data-v-9a33e7bc="">
-                    <picture class="image aspect-ratio--16:9 border-radius--rounded" data-v-958d1b38="" data-v-9a33e7bc="">
+                  <div class="video-inline__image" data-v-9a33e7bc="" >
+                    <picture class="image aspect-ratio--16:9 border-radius--rounded" data-v-958d1b38="" data-v-9a33e7bc="" >
                       <!--img src="https://www.hotmart.com/images/placeholders/home__about.jpg" data-src="/images/placeholders/home__about.jpg" class=" lazyloaded"
                         data-v-958d1b38=""-->
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/pIc2vQFDU3I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class=" lazyloaded"

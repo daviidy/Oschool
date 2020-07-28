@@ -824,6 +824,48 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             </div>
                             <!---->
                         </div>
+                        {{--
+                        <div label="Note de passage" for="subtitle" tooltip-text="Appears below your course name on your sales page header.">
+                            <!---->
+                            <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group">
+                                <label-block required-label="requiredLabel">
+                                    <!---->
+                                    <!----><label for="subtitle" ng-if="label" class="control-label">
+                                        <!----><span ng-bind="label">Note de passage</span>
+                                        <!----></label>
+                                    <!---->
+                                    <!----><a href="javascript:void(0)" ng-if="tooltipText" tooltip="Appears below your course name on your sales page header." tooltip-placement="bottom" tooltip-trigger="mouseenter" tooltip-append-to-body="true"
+                                      class="btn tch-btn-tooltip"><i class="fa fa-question-circle"></i></a>
+                                    <!---->
+                                    <!---->
+                                </label-block>
+                                <!--div ng-transclude="">
+                                  <input type="number" name="pass" value="{{$course->subtitle}}" placeholder="Note de passage" api-validate=""
+                                      class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength ng-valid-api-validate" min="0" max="100"></div-->
+                                <help-block>
+                                    <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </ng-messages>
+                                    <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="subtitle" class="help-block ng-hide"></div>
+                                </help-block>
+                            </div>
+                            <!---->
+                            <!---->
+                        </div>--}}
+                        <!---->
+
                     </div>
                     <div ng-show="showButtonsBar" class="tab-bottom">
                         <!---->
