@@ -77,6 +77,8 @@ class SchoolController extends Controller
                           'slug' => Str::slug($request->input('name'), '-') . '-' . uniqid(),
                           'user_id' => $request['user_id'],
                           'domain' => $request->input('domain'),
+                          'section1' => 'Les catégories de '.$request['name'],
+                          'section1' => 'Les cours de '.$request['name'],
 
                         ]);
 

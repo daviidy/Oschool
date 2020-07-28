@@ -3,7 +3,7 @@
 
 
 
-<div class="lecture-attachment lecture-attachment-type-quiz" id="lecture-attachment-24323873">
+<div class="lecture-attachment lecture-attachment-type-quiz" id="{{$quiz->id}}">
     <div class="attachment-data" data-data="{&quot;answerKey&quot;:{&quot;answer-1&quot;:[&quot;oschool&quot;]}}"
       data-schema="{&quot;type&quot;:&quot;object&quot;,&quot;required&quot;:[&quot;answer-1&quot;],&quot;properties&quot;:{&quot;answer-1&quot;:{&quot;enum&quot;:[&quot;oschool&quot;,&quot;elavoo&quot;],&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;david&quot;,&quot;description&quot;:&quot;single&quot;}}}"
       data-content-type="null" data-id="24323873" data-is-published="true" data-graded="null">
@@ -25,8 +25,16 @@
                       </div>
                     </div>
                    @endif
+
+                   @if(session('status'))
+                   <div class="alert alert-success">
+                     {{session('status')}}
+                    </div>
+                   @endif
+
+
                     @foreach($quiz->questions->sortBy('position') as $question)
-                    <div style="margin-top: 6rem; {{$loop->last ? 'margin-bottom: 10rem;' : ''}}" id="{{$quiz->id}}" class="quiz Quiz single">
+                    <div style="margin-top: 6rem; {{$loop->last ? 'margin-bottom: 10rem;' : ''}}" class="quiz Quiz single">
                         <div class="quiz-progress">{{$question->position}} / {{count($quiz->questions)}}</div>
                         <div class="quiz-question-outer" style="height: 168px;">
                             <div>
@@ -36,7 +44,7 @@
                                         @foreach($question->options as $option)
                                           @if(Auth::user()->answers->where('option_id', $option->id)->first())
                                         <div class="quiz-answer-container">
-                                            <div style="border: {{$option->correct == 1 ? '1px solid #2ecc71' : '1px solid #e74c3c !important'}}" role="button" class="quiz-answer">
+                                            <div style="border: {{$option->correct == 1 ? '1px solid #2ecc71 !important' : '1px solid #e74c3c !important'}}" role="button" class="quiz-answer">
                                                 <span id="option{{$option->id}}" class="quiz-answer-text">{{$option->text}}</span>
                                             </div>
                                             <div class="quiz-answer-icon">
@@ -71,7 +79,7 @@
                         <button class="btn btn-primary pull-left">
                         ‹ Retour
                         </button>
-                        @if(!Auth::user()->results->where('quiz_id', $quiz->id)->first())
+                        @if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result !== '0')
                         <button id="check" class="btn btn-primary pull-right check-answer-button is-visible">
                             Soumettre
                         </button>
@@ -79,6 +87,14 @@
                         <button id="continue-button" class="btn btn-primary pull-right">
                             Continuer ›
                         </button>
+                        @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < 3)
+                        <a href="/restartQuiz/{{$quiz->id}}/{{Auth::user()->results->where('quiz_id', $quiz->id)->first()->id}}/{{Auth::user()->id}}">
+                        <button class="btn btn-primary pull-left check-answer-button is-visible">
+                            Reprendre
+                        </button>
+                        </a>
+                        @endif
+
                     </div>
                 </div>
             </div>
@@ -92,7 +108,7 @@
 </div>
 
 
-@if(!Auth::user()->results->where('quiz_id', $quiz->id)->first())
+@if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result !== '0')
 <script type="text/javascript">
 
 $('.quiz-answer').on('click', function(){
@@ -109,13 +125,14 @@ $('#continue-button').click(function() {
 $("#check").on('click', function(event) {
     event.preventDefault();
     var tab = [];
-    var quiz = $('.quiz').attr('id');
+    var quiz = $('.lecture-attachment-type-quiz').attr('id');
+    console.log(quiz);
     var selected_options = $(".selected .quiz-answer-text");
     $.each(selected_options, function(index, value){
     tab.push(value.textContent);
     });
     console.log(JSON.stringify(tab));
-    console.log(quiz);
+
 
     // ajax post
     $.ajax({
