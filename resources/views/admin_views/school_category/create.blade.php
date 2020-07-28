@@ -510,7 +510,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                     <h2 class="survey-container__header p-t-3-xs m-b-0-xs text-center-xs w-6">
                         <!---->
                         <!----><span ng-if="!onboardingPricingPageCheckoutSuccess">Créer </span>
-                        <!---->une nouvelle catégorie d'école
+                        <!---->une nouvelle catégorie d'activités ou de cours
                     </h2>
                     <!---->
                     <p class="survey-container__customize m-t-4-xs p-h-3-xs">.</p>

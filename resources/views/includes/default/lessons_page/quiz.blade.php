@@ -79,7 +79,7 @@
                         <button class="btn btn-primary pull-left">
                         ‹ Retour
                         </button>
-                        @if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result !== '0')
+                        @if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
                         <button id="check" class="btn btn-primary pull-right check-answer-button is-visible">
                             Soumettre
                         </button>
@@ -87,7 +87,7 @@
                         <button id="continue-button" class="btn btn-primary pull-right">
                             Continuer ›
                         </button>
-                        @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < 3)
+                        @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < 3 && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
                         <a href="/restartQuiz/{{$quiz->id}}/{{Auth::user()->results->where('quiz_id', $quiz->id)->first()->id}}/{{Auth::user()->id}}">
                         <button class="btn btn-primary pull-left check-answer-button is-visible">
                             Reprendre
@@ -108,7 +108,7 @@
 </div>
 
 
-@if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result !== '0')
+@if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
 <script type="text/javascript">
 
 $('.quiz-answer').on('click', function(){
