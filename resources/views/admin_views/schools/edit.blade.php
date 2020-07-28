@@ -408,7 +408,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     <!---->
                                 </label-block>
                                 <div ng-transclude="">
-                                    <input value="{{$school->section_1}}" id="site-heading" name="section_1" placeholder="Titre de la section 2" maxlength="100"
+                                    <input value="{{$school->section1}}" id="site-heading" name="section1" placeholder="Titre de la section 2" maxlength="100"
                                       class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
                                 <help-block>
                                     <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
@@ -434,7 +434,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     <!---->
                                 </label-block>
                                 <div ng-transclude="">
-                                    <input value="{{$school->section_2}}" id="site-heading" name="section_2" placeholder="Titre de la section 2" maxlength="100"
+                                    <input value="{{$school->section2}}" id="site-heading" name="section2" placeholder="Titre de la section 2" maxlength="100"
                                       class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
                                 <help-block>
                                     <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
