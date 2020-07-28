@@ -394,8 +394,58 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                         </div>
 
+                        <!--Titre des sections 1 et 2-->
+                        <div ng-class="{ 'has-error': state.errors.heading }" form="settingsSchoolForm" label="Homepage Heading" for="homepage_heading">
+                            <!---->
+                            <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group">
+                                <label-block required-label="requiredLabel">
+                                    <!---->
+                                    <!----><label for="homepage_heading" ng-if="label" class="control-label">
+                                        <!----><span ng-bind="label">Titre de la section 1</span>
+                                        <!----></label>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </label-block>
+                                <div ng-transclude="">
+                                    <input value="{{$school->section1}}" id="site-heading" name="section1" placeholder="Titre de la section 2" maxlength="100"
+                                      class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
+                                <help-block>
+                                    <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
 
+                                    </ng-messages>
+                                    <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="homepage_heading" class="help-block ng-hide"></div>
+                                </help-block>
+                            </div>
+                            <!---->
+                            <!---->
+                        </div>
 
+                        <div ng-class="{ 'has-error': state.errors.heading }" form="settingsSchoolForm" label="Homepage Heading" for="homepage_heading">
+                            <!---->
+                            <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group">
+                                <label-block required-label="requiredLabel">
+                                    <!---->
+                                    <!----><label for="homepage_heading" ng-if="label" class="control-label">
+                                        <!----><span ng-bind="label">Titre de la section 2</span>
+                                        <!----></label>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </label-block>
+                                <div ng-transclude="">
+                                    <input value="{{$school->section2}}" id="site-heading" name="section2" placeholder="Titre de la section 2" maxlength="100"
+                                      class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"></div>
+                                <help-block>
+                                    <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+
+                                    </ng-messages>
+                                    <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="homepage_heading" class="help-block ng-hide"></div>
+                                </help-block>
+                            </div>
+                            <!---->
+                            <!---->
+                        </div>
 
 
                     </div>

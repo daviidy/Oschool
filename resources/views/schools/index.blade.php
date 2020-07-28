@@ -126,7 +126,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 .lgEkUi:hover,.lgEkUi:focus{border-color:rgb(35, 32, 204);background:rgb(35, 32, 204);}
 .lgEkUi:hover,.lgEkUi:focus{transform:scale(1.05);}
 .eElMjg{display:flex;flex-flow:row wrap;flex:1 0 auto;-webkit-box-pack:start;justify-content:flex-start;padding:30px 75px;font-size:30px;color:rgb(91, 91, 106);}
-.eElMjg svg{stroke-width:1.5px;margin-right:20px;}
+.eElMjg svg{stroke-width:1.5px;margin-right:20px;width: 40px}
 @media (max-width: 480px){
 .eElMjg{-webkit-box-pack:center;justify-content:center;padding:20px 0px;}
 }
@@ -299,7 +299,7 @@ p{margin:0;}
 
 </style>
 
-
+@include('includes.schoolcontent')
 <div role="main" class="view-school">
 
 
@@ -372,6 +372,6 @@ p{margin:0;}
 
 
 </div>
-
+@include('includes.schoolcontentFooter')
 
 @endsection

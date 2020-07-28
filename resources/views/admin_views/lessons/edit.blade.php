@@ -1665,6 +1665,10 @@ button.close{padding:0;background-color:transparent;border:0;}
 
                 <!---->
                 <div what="new question" class="quiz-question">
+                	<div data-nodrag="" class="quiz-question-prompt" style="margin-bottom: 15px;">
+                      <input type="number" name="chance" id="" ng-model="newQuestion.question" placeholder="Nombre de tentatives"
+                          class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
+                    </div>
                     <div data-nodrag="" class="quiz-question-prompt">
                       <input id="question-text" ng-model="newQuestion.question" placeholder="Ecrivez votre question ici"
                           class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style=""></div>
@@ -1701,6 +1705,7 @@ button.close{padding:0;background-color:transparent;border:0;}
                         <!---->
 
                     </div>
+
                     <input id="add-question" value="Ajouter question" ng-disabled="!readyToAddQuestion(newQuestion)" class="tch-btn-header-primary-block">
                 </div>
             </form>

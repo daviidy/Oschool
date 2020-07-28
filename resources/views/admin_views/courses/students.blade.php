@@ -755,6 +755,9 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                               <th what="purchases gross column header" ng-click="toggleSort('transactions_gross')" ng-show="showColumn(title, 'purchases')" class="users-table-header _22oLp">Progression de l'étudiant<span class="space"></span><i
                                     ng-show="stateParams.sort_key === 'transactions_gross' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
                                     ng-show="(stateParams.sort_key === 'transactions_gross' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
+                              <th what="purchases gross column header" ng-click="toggleSort('transactions_gross')" ng-show="showColumn(title, 'purchases')" class="users-table-header _22oLp">Notes<span class="space"></span><i
+                                    ng-show="stateParams.sort_key === 'transactions_gross' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
+                                    ng-show="(stateParams.sort_key === 'transactions_gross' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
                               <th what="revenue share gross column header" ng-click="toggleSort('revenue_share')" ng-show="showColumn(title, 'revenue share')" class="users-table-header _22oLp ng-hide">Commission<span class="space"></span><i
                                     ng-show="stateParams.sort_key === 'revenue_share' &amp;&amp; stateParams.sort_direction === 'ASC'" class="fa fa-angle-up ng-hide"></i><i
                                     ng-show="(stateParams.sort_key === 'revenue_share' &amp;&amp; stateParams.sort_direction === 'DESC') || stateParams.sort_direction === null" class="fa fa-angle-down ng-hide"></i></th>
@@ -847,6 +850,9 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                      {{number_format((count($user->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}
                                      @endif
                                     </span></td>
+                                <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'unsubscribe')" class="_2kIOe" href="/admin/users/32429890/information"><span ng-bind="getUnsubscribeFromMarketingEmails(user)">10%</span>
+                                	<button class="btn" style="background-color: #1bcc1b">Reprendre</button>
+                              	</td>
                               <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span am-time-ago="user.created_at">
                                 <div ng-if="product.is_published" class="pull-right">
                                     <a target="_blank" href="/users/show/{{$user->id}}/{{$school->id}}">
