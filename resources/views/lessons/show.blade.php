@@ -414,7 +414,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 
 
 
-  @elseif($lesson->free_lesson == 'no' && !Auth::user()->courses->contains($lesson->section->course->id) && !$lesson->section->course->school->user->isOwner())
+  @elseif($lesson->free_lesson == 'no' && !Auth::user()->courses->contains($lesson->section->course->id) && !$lesson->section->course->school->user->isOwner() && !Auth::user()->isAdmin() && !Auth::user()->createSchools->contains($lesson->section->course->school->id))
   <div class="Title-m6u0oe-0 RLTEg">
     <div class="LandingPageFeature__TitleText-sc-19d35qp-3 dwPCQe">
         <h1 class="MuiTypography-root Typography-ngwq8z-0 Heading-sc-1jljnqo-0 ghvulQ MuiTypography-h1 MuiTypography-alignLeft" ml="0">

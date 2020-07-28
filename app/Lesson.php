@@ -80,7 +80,7 @@ class Lesson extends Model
                 if (File::exists(public_path('/images/lessons/resources/' . $media->name))) {
                     File::delete(public_path('/images/lessons/resources/' . $media->name));
                 }
-                $media()->delete();
+                $media->delete();
             }
             //we delete lesson image
             if (File::exists(public_path('/images/lessons/images/' . $lesson->image))) {
