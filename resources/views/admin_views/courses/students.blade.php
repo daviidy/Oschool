@@ -851,7 +851,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                      @endif
                                     </span></td>
                                 <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'unsubscribe')" class="_2kIOe" href="/admin/users/32429890/information"><span ng-bind="getUnsubscribeFromMarketingEmails(user)"><a href="#myNoteStudent" rel="modal:open"><button  type="button" class="btn" style="background-color: #1bcc1b">Voir les notes</button></a></span>
-                                	
                               	</td>
                               <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span am-time-ago="user.created_at">
                                 <div ng-if="product.is_published" class="pull-right">

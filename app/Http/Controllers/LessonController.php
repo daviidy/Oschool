@@ -795,6 +795,9 @@ class LessonController extends Controller
           ]);
         }
 
+        $quiz->attempts = $request->attempts;
+        $quiz->save();
+
 
       $question = Question::create([
                             'quiz_id' => $quiz->id,
@@ -835,6 +838,9 @@ class LessonController extends Controller
                               'lesson_id' => $request->lesson_id,
           ]);
       }
+
+      $quiz->attempts = $request->attempts;
+      $quiz->save();
 
         $question = Question::find($request->question_id);
         $question->text = $request->question;

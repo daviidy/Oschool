@@ -43,14 +43,14 @@ Route::post('/submit_contact_business', 'SchoolController@contactSubDomain')->na
 
 Route::get('/', function () {
     return view('home2');
-});
+})->name('home2');
 
 
 Route::get('/wecash', function () {
     return view('pricings.wecash');
 });
 
-Route::get('/corporate', 'OfferController@corporate');
+Route::get('/corporate', 'OfferController@corporate')->name('corporate');
 
 
 Route::get('/email', function () {

@@ -17665,7 +17665,7 @@
                           Enter
                         </span>
                         <!----></a></li>
-                    <li data-v-88c7c2ee=""><a href="https://app-vlc.hotmart.com/signup" target="_blank" class="button button--primary" data-v-ff41ee4e="" data-v-88c7c2ee="">
+                    <li data-v-88c7c2ee=""><a href="/corporate/#price_offer" target="_blank" class="button button--primary" data-v-ff41ee4e="" data-v-88c7c2ee="">
                         <!----><span data-v-ff41ee4e="">
                           S'inscrire
                         </span>
@@ -17763,7 +17763,7 @@
                             d="M218.101 38.101L198.302 57.9c-4.686 4.686-4.686 12.284 0 16.971L353.432 230H12c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h341.432l-155.13 155.13c-4.686 4.686-4.686 12.284 0 16.971l19.799 19.799c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L235.071 38.101c-4.686-4.687-12.284-4.687-16.97 0z"
                             data-v-ff41ee4e="" class=""></path>
                         </svg></a></li>
-                    <li data-v-2c40c833=""><a href="https://app-vlc.hotmart.com/signup" target="_blank" class="button button--secondary" data-v-ff41ee4e="" data-v-2c40c833="">
+                    <li data-v-2c40c833=""><a href="/corporate/#price_offer" target="_blank" class="button button--secondary" data-v-ff41ee4e="" data-v-2c40c833="">
                         <!----><span data-v-ff41ee4e="">
                           S'inscrire
                         </span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
@@ -17778,17 +17778,17 @@
             </div>
           </div>
           <div class="sidebar__overlay" style="display: none;" data-v-2c40c833=""></div>
-        </div>--}}
+        </div>
         <div class="hero hero--placeholder-image" data-v-579e12f4="" data-v-ac7fe1d6="">
           <div class="hero__container" data-v-579e12f4="">
             <div class="hero__content" data-v-579e12f4="">
               <!---->
               <div class="hero__title" data-v-579e12f4="">
-                <h2 class="title" data-v-16261ef6="" data-v-579e12f4="">Votre propre plateforme de formation.</h2>
+                <h2 class="title" data-v-16261ef6="" data-v-579e12f4="">Créez votre propre plateforme de formation.</h2>
               </div>
-              <div class="hero__body" data-v-579e12f4="">Dans l'univers Oschool, les possibilités sont infinies.</div>
-              <div slot="buttons" class="hero__buttons" data-v-579e12f4=""><a href="https://app-vlc.hotmart.com/signup" target="_blank" class="button button--primary" data-v-ff41ee4e="" data-v-579e12f4="">
-                  <!----><span data-v-ff41ee4e="">Créer votre école</span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+              <div class="hero__body" data-v-579e12f4="">En quelques minutes.</div>
+              <div slot="buttons" class="hero__buttons" data-v-579e12f4=""><a href="/corporate/#price_offer" target="_blank" class="button button--primary" data-v-ff41ee4e="" data-v-579e12f4="">
+                  <!----><span data-v-ff41ee4e="">Créer votre école gratuitement</span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                     class="button__icon--right svg-inline--fa fa-arrow-right fa-w-14 fa-fw" data-v-ff41ee4e="">
                     <path fill="currentColor"
                       d="M218.101 38.101L198.302 57.9c-4.686 4.686-4.686 12.284 0 16.971L353.432 230H12c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h341.432l-155.13 155.13c-4.686 4.686-4.686 12.284 0 16.971l19.799 19.799c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L235.071 38.101c-4.686-4.687-12.284-4.687-16.97 0z"
@@ -17877,7 +17877,7 @@
                 </div>
               </div-->
               <div class="content-block__image" data-v-2c530488="" data-v-78f49ef0="">
-                <picture class="aspect-ratio--1:1 border-radius--rounded image image--transparent" data-v-958d1b38="" data-v-78f49ef0="" data-v-2c530488=""><img src="https://www.hotmart.com/images/placeholders/home__producers.png"
+                <picture class="aspect-ratio--1:1 border-radius--rounded image image--transparent" data-v-958d1b38="" data-v-78f49ef0="" data-v-2c530488=""><img src="https://oschoolelearning.com/images/courses/logos/1580161319.png"
                     data-src="/images/placeholders/home__producers.png" alt="créez" class=" lazyloaded" data-v-958d1b38=""></picture>
               </div>
             </div>
@@ -17922,7 +17922,7 @@
                 </div>
               </div-->
               <div class="content-block__image" data-v-2c530488="" data-v-78f49ef0="">
-                <picture class="aspect-ratio--1:1 border-radius--rounded image image--transparent" data-v-958d1b38="" data-v-78f49ef0="" data-v-2c530488=""><img src="https://www.hotmart.com/images/placeholders/home__affiliates.png"
+                <picture class="aspect-ratio--1:1 border-radius--rounded image image--transparent" data-v-958d1b38="" data-v-78f49ef0="" data-v-2c530488=""><img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/0tTy4z3lTbCkw18ehjQ8"
                     data-src="/images/placeholders/home__affiliates.png" alt="Vente" class=" lazyloaded" data-v-958d1b38=""></picture>
               </div>
             </div>
@@ -17950,10 +17950,10 @@
                         </svg>
                         <div class="carousel__slide-content" data-v-7717109f="">
                           <p class="slide-content__title" data-v-7717109f="">
-                            Blog
+                            Oschool pour votre entreprise
                           </p>
                           <p class="slide-content__body" data-v-7717109f="">
-                            Doses quotidiennes de connaissance
+                            Gérez la formation de vos employés, membres ou partenaires grâce à votre plateforme privée.
                           </p>
                         </div>
                       </div>
@@ -17971,18 +17971,19 @@
                             <path fill="currentColor" d="M336 0H48C21.49 0 0 21.49 0 48v464l192-112 192 112V48c0-26.51-21.49-48-48-48zm16 456.287l-160-93.333-160 93.333V48c0-8.822 7.178-16 16-16h288c8.822 0 16 7.178 16 16v408.287z" data-v-7717109f=""
                               class=""></path>
                           </svg>
-                          <p data-v-7717109f="">Blog</p>
+                          <p data-v-7717109f="">Oschool pour votre entreprise</p>
                         </div>
                         <div class="carousel__slide-content" data-v-7717109f="">
-                          <picture class="aspect-ratio--16:9 border-radius--rounded image" data-v-958d1b38="" data-v-7717109f=""><img src="https://www.hotmart.com/images/knowledge-hub__blog.jpg" data-src="/images/knowledge-hub__blog.jpg" alt="Blog" class=" lazyloaded"
+                          <picture class="aspect-ratio--16:9 border-radius--rounded image" data-v-958d1b38="" data-v-7717109f="">
+                              <img src="/images/divers/corporate-1.jpg" data-src="/images/knowledge-hub__blog.jpg" alt="Blog" class=" lazyloaded"
                               data-v-958d1b38=""></picture>
                         </div>
                         <div class="carousel__slide-body" data-v-7717109f="">
-                          <p data-v-7717109f="">Doses quotidiennes de connaissance</p>
+                          <p data-v-7717109f="">Gérez la formation de vos employés, membres ou partenaires grâce à votre plateforme privée.</p>
                         </div>
-                        <div class="carousel__slide-link" data-v-7717109f=""><a href="https://blog.hotmart.com/fr/" target="_blank" class="link link--secondary" data-v-6535949a="" data-v-7717109f="">
+                        <div class="carousel__slide-link" data-v-7717109f=""><a href="/corporate" target="_blank" class="link link--secondary" data-v-6535949a="" data-v-7717109f="">
                             <!----><span data-v-6535949a="">
-                              Accédez à notre contenu
+                              En savoir plus
                             </span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                               class="link__icon--right svg-inline--fa fa-arrow-right fa-w-14 fa-fw" data-v-6535949a="">
                               <path fill="currentColor"
@@ -18048,7 +18049,7 @@
                 </div>
               </div-->
               <div class="content-block__image" data-v-2c530488="" data-v-78f49ef0="">
-                <picture class="aspect-ratio--1:1 border-radius--rounded image image--transparent" data-v-958d1b38="" data-v-78f49ef0="" data-v-2c530488=""><img src="https://www.hotmart.com/images/placeholders/home__solutions.png"
+                <picture class="aspect-ratio--1:1 border-radius--rounded image image--transparent" data-v-958d1b38="" data-v-78f49ef0="" data-v-2c530488=""><img src="https://oschoolelearning.com/images/divers/courses.png"
                     data-src="/images/placeholders/home__solutions.png" alt="Solutions" class=" lazyloaded" data-v-958d1b38=""></picture>
               </div>
             </div>
@@ -18060,7 +18061,7 @@
             <div class="banner__title" data-v-a7a15686="">
               <h3 class="title" data-v-16261ef6="" data-v-a7a15686="">Faites le premier pas vers votre nouvel avenir !</h3>
             </div>
-            <div class="banner__buttons" data-v-a7a15686=""><a href="https://app-vlc.hotmart.com/signup" target="_blank" class="button button--primary" data-v-ff41ee4e="" data-v-a7a15686="">
+            <div class="banner__buttons" data-v-a7a15686=""><a href="/corporate/#price_offer" target="_blank" class="button button--primary" data-v-ff41ee4e="" data-v-a7a15686="">
                 <!----><span data-v-ff41ee4e="">Créer votre école</span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                   class="button__icon--right svg-inline--fa fa-arrow-right fa-w-14 fa-fw" data-v-ff41ee4e="">
                   <path fill="currentColor"
@@ -18069,5 +18070,5 @@
                 </svg></a></div>
           </div>
         </div>
-        
+
 @endsection
