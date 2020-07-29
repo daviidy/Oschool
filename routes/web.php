@@ -43,7 +43,7 @@ Route::post('/submit_contact_business', 'SchoolController@contactSubDomain')->na
 
 Route::get('/', function () {
     return view('home2');
-});
+})->name('home2');
 
 
 Route::get('/wecash', function () {

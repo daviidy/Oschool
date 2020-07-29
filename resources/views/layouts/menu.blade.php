@@ -64,6 +64,23 @@
 .page-item.active .page-link{z-index:1;color:#fff;background-color:#4D90CC;border-color:#4D90CC;}
 
     </style>
+
+    @if(\Route::current()->getName() == 'home2')
+    <style media="screen">
+        .menu_link{
+            color: #000 !important;
+        }
+
+        @media (min-width: 992px){
+.nav-menu li>a:hover, .nav-menu li>a:active, .nav-menu .log-in:hover, .nav-menu .log-in:active {
+    border-bottom: 2px solid #000;
+}
+}
+    </style>
+    @endif
+
+
+
   </head>
 
   <body class="body-public  " cz-shortcut-listen="true">
@@ -108,11 +125,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="my-close-button"><img src="https://teachable.com/assets/modal-x-c7f43ce3b8f64f3d597ce12e57caa7ddbf0778d3f163dc92b4a768067ddd2c3f.svg"></button>
     </div>
 
-    
+        @if(\Route::current()->getName() !== 'home2')
         @include('includes.timer');
+        @endif
         {{--timer
     timer --}}
-    
+
 
     <section class="_1568 clearfix transparent nav-menu">
       <style>
@@ -135,12 +153,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="container">
         <div class="row">
           @guest
-          <a class="create-course" href="{{route('login')}}">Connectez-vous</a>
+          <a class="create-course menu_link" href="{{route('login')}}">Connectez-vous</a>
           @endguest
           @auth
-          <a class="create-course" href="{{route('login')}}">Ma salle de classe</a>
+          <a class="create-course menu_link" href="{{route('login')}}">Tableau de bord</a>
           @endauth
-          <a class="teachable-logo" href="/" title="Teachable - Create a Course"><img src="/images/schools/logos/logo_oschool_blanc.png" alt="" style="width: 130px;"></a>
+          <a class="teachable-logo" href="/" title="Teachable - Create a Course">
+              @if(\Route::current()->getName() == 'home2')
+              <img src="/images/schools/logos/logo_oschool_noir.png" alt="" style="width: 130px;">
+              @else
+              <img src="/images/schools/logos/logo_oschool_blanc.png" alt="" style="width: 130px;">
+              @endif
+          </a>
           <!--a class="log-in" href="/login?src=nav">Entreprises</a-->
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -150,15 +174,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="navbar-collapse collapse">
             <ul>
               @guest
-              <li class="dropdown-only"><a href="{{route('login')}}">Tableau de bord</a></li>
+              <li class="dropdown-only"><a class="menu_link" href="{{route('login')}}">Tableau de bord</a></li>
               @endguest
               @auth
-              <li class="dropdown-only"><a href="{{route('login')}}">Ma salle de classe</a></li>
+              <li class="dropdown-only"><a class="menu_link" href="{{route('login')}}">Ma salle de classe</a></li>
               @endauth
               <!--li class="dropdown-only"><a href="/login?src=nav">Entreprises</a></li-->
-              <li><a href="{{url('schools')}}">Nos écoles</a></li>
+              <li><a class="menu_link" href="{{url('schools')}}">Nos écoles</a></li>
               <!--li><a href="https://events.oschoolelearning.com">Evénements</a></li-->
-              <li><a href="/corporate">Business</a></li>
+              <li><a class="menu_link" href="/corporate">Business</a></li>
               <!--li><a href="/blog/resources">Blog</a></li-->
             </ul>
           </div>

@@ -87,7 +87,7 @@
                         <button id="continue-button" class="btn btn-primary pull-right">
                             Continuer ›
                         </button>
-                        @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < 3 && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
+                        @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
                         <a href="/restartQuiz/{{$quiz->id}}/{{Auth::user()->results->where('quiz_id', $quiz->id)->first()->id}}/{{Auth::user()->id}}">
                         <button class="btn btn-primary pull-left check-answer-button is-visible">
                             Reprendre

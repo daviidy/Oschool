@@ -127,7 +127,7 @@ h1 a {
 }
 
 </style>
-<h1>NOS OFFRES DE PRIX</h1>
+<h1 id="price_offer">NOS OFFRES DE PRIX</h1>
 
 <div class="price-table-wrapper">
     @foreach($offers as $offer)

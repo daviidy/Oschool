@@ -1358,6 +1358,7 @@ console.log(JSON.stringify(positions));
       var dataImage = new FormData();
       var tab = [];
       var question = $('#question-text').val();
+      var attempts = $('#attempts').val();
       var options = $('.text_question_quiz');
       console.log(options);
       $.each(options, function(){
@@ -1381,6 +1382,7 @@ console.log(JSON.stringify(positions));
       dataImage.append('lesson_id', $('input[name=lesson_id]').val());
       dataImage.append('question', question);
       dataImage.append('option', JSON.stringify(tab));
+      dataImage.append('attempts', attempts);
       $.ajax({
           type: 'post',
           url: '/addQuiz',
@@ -1412,6 +1414,7 @@ console.log(JSON.stringify(positions));
 
       var dataImage = new FormData();
       var tab = [];
+      var attempts = $('#attempts').val();
 
       var question = $(this).parents(2).siblings('.quiz-question').find('#question-text-edit').val();
       var question_id = $(this).parents(2).siblings('.quiz-question').find('#question-id').val();
@@ -1447,6 +1450,7 @@ console.log(JSON.stringify(positions));
       dataImage.append('question', question);
       dataImage.append('question_id', question_id);
       dataImage.append('option', JSON.stringify(tab));
+      dataImage.append('attempts', attempts);
 
       $.ajax({
           type: 'post',

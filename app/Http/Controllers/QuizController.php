@@ -165,14 +165,14 @@ class QuizController extends Controller
         //on supprime toutes les reponses de l'utilisateur
         if (Auth::check()) {
             //si user a moins de 3 tentatives
-            if ($user->results->where('quiz_id', $quiz->id)->first()->restart < 3) {
+            if ($user->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts) {
                 foreach ($result->answers->where('user_id', $user->id) as $answer) {
                     $answer->delete();
                 }
                 $result->restart += 1;
                 return redirect()->back()->with('status', 'Vous pouvez reprendre le quiz. Ii vous reste 2 tentatives');
             }
-            //si user est un des propriétaires de l'école
+            //sinon si user est un des propriétaires de l'école
             elseif (Auth::user()->isOwner() && Auth::user()->createSchools->contains($quiz->course->school->id)) {
                 foreach ($result->answers->where('user_id', $user->id) as $answer) {
                     $answer->delete();
