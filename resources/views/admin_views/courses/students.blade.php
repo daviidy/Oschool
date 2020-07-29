@@ -553,6 +553,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
     </div>
 
+    @include('includes.status')
+
     <!--formulaire de recherche-->
     <div name="searchForm" ng-show="showUsers()" class="ng-form ng-pristine ng-valid ng-valid-minlength">
         <div ng-class="{'custom-filters' : permissions.can('manage_user_search_filters')}" class="filters-wrapper">
@@ -850,7 +852,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                      {{number_format((count($user->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}
                                      @endif
                                     </span></td>
-                                <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'unsubscribe')" class="_2kIOe" href="/admin/users/32429890/information"><span ng-bind="getUnsubscribeFromMarketingEmails(user)"><a href="#myNoteStudent" rel="modal:open"><button  type="button" class="btn" style="background-color: #1bcc1b; color:#fff">Voir les notes</button></a></span>
+                                <td ui-sref="admin.users.user.information({ id: user.id })" ng-show="showColumn(title, 'unsubscribe')" class="_2kIOe" href="/admin/users/32429890/information"><span ng-bind="getUnsubscribeFromMarketingEmails(user)"><a href="#myNoteStudent{{$user->id}}" rel="modal:open"><button  type="button" class="btn" style="background-color: #1bcc1b; color:#fff">Voir les notes</button></a></span>
                               	</td>
                               <td ui-sref="admin.users.user.information({ id: user.id })" class="_2kIOe" href="/admin/users/32429890/information"><span am-time-ago="user.created_at">
                                 <div ng-if="product.is_published" class="pull-right">

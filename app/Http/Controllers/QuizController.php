@@ -169,15 +169,19 @@ class QuizController extends Controller
                 foreach ($result->answers->where('user_id', $user->id) as $answer) {
                     $answer->delete();
                 }
-                $result->restart += 1;
-                return redirect()->back()->with('status', 'Vous pouvez reprendre le quiz. Ii vous reste 2 tentatives');
+                $result->restart = 1;
+                $result->save();
+                //dd($quiz->attempts.'-'.$result->restart);
+                $rest = $quiz->attempts - $result->restart;
+                return redirect()->back()->with('status', 'Vous pouvez reprendre le quiz. Ii vous reste '.$rest.' tentatives');
             }
             //sinon si user est un des propriétaires de l'école
-            elseif (Auth::user()->isOwner() && Auth::user()->createSchools->contains($quiz->course->school->id)) {
+            elseif (Auth::user()->isOwner() || Auth::user()->isAdmin() && Auth::user()->createSchools->contains($quiz->course->school->id)) {
                 foreach ($result->answers->where('user_id', $user->id) as $answer) {
                     $answer->delete();
                 }
-                $result->restart += 1;
+                $result->restart = 1;
+                $result->save();
                 return redirect()->back()->with('status', 'L\'étudiant pourra reprendre son quiz');
             }
 

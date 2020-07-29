@@ -79,7 +79,7 @@
                         <button class="btn btn-primary pull-left">
                         ‹ Retour
                         </button>
-                        @if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
+                        @if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts)
                         <button id="check" class="btn btn-primary pull-right check-answer-button is-visible">
                             Soumettre
                         </button>
@@ -109,6 +109,7 @@
 
 
 @if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
+@if(Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts)
 <script type="text/javascript">
 
 $('.quiz-answer').on('click', function(){
@@ -199,6 +200,7 @@ $("#check").on('click', function(event) {
 
 
 </script>
+@endif
 @endif
 
 
