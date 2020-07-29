@@ -162,35 +162,35 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                 </div>
             </section>
             <style type="text/css">
-                
 
-                
+
+
                 .card{
                   transition:0.5s;
                   cursor:pointer;
                 }
-                .card-title{  
+                .card-title{
                   font-size:15px;
                   transition:1s;
                   cursor:pointer;
                 }
-                .card-title i{  
+                .card-title i{
                   font-size:15px;
                   transition:1s;
                   cursor:pointer;
                   color:#ffa710
                 }
                 .card-title i:hover{
-                  transform: scale(1.25) rotate(100deg); 
+                  transform: scale(1.25) rotate(100deg);
                   color:#18d4ca;
-                  
+
                 }
                 .card:hover{
                   transform: scale(1.05);
                   box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
                 }
                 .card-text{
-                  height:80px;  
+                  height:80px;
                 }
 
                 .card::before, .card::after {
@@ -216,26 +216,38 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                 }
             </style>
 
+                @if(count($school->categories) > 0)
                 <div class="container mt-2">
-                    <h2 style="padding-top: 2rem; text-align: center;">Les projets de {{$school->name}}</h2>
+                    <h2 style="padding-top: 2rem; text-align: center;">
+                        @if($school->section1)
+                        {{$school->section1}}
+                        @else
+                        Nos catégories de cours
+                        @endif
+                    </h2>
                     <!--   <div class="card card-block mb-2">
                         <h4 class="card-title">Card 1</h4>
                         <p class="card-text">Welcom to bootstrap card styles</p>
                         <a href="#" class="btn btn-primary">Submit</a>
                       </div>   -->
                   <div class="row">
+                      @foreach($school->categories as $category)
                     <div class="col-md-3 col-sm-6">
                       <div class="card card-block" style="padding: 15px;">
-                          
+
                         <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset" style="height:150px;width:100%;">
-                            <h5 class="card-title mt-3 mb-3">Sierra Web Development • Owner</h5>
-                            <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p> 
+                            <h5 class="card-title mt-3 mb-3">{{$category->name}}</h5>
+                            <!--
+                            <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
+                        -->
                       </div>
                     </div>
-   
+                    @endforeach
+
                   </div>
-                  
+
                 </div>
+                @endif
 
             <div class="container">
                 <!--
@@ -255,7 +267,13 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                 </div>
             -->
 
-                <h2 style="padding-top: 2rem; text-align: center;">Les cours de {{$school->name}}</h2>
+                <h2 style="padding-top: 2rem; text-align: center;">
+                    @if($school->section2)
+                    {{$school->section2}}
+                    @else
+                    Nos cours
+                    @endif
+                </h2>
                 <div class="row course-list list">
 
                     <!-- Course Listing -->
@@ -263,7 +281,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                     @if($course->state == 'active')
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
-                            <div style="width: 100%;" class="row">
+                            <div style="/*width: 100%;*/" class="row">
                                 <a href="{{ route('course.slug', $course->slug) }}" data-role="course-box-link">
                                     <div class="col-lg-12">
                                         <!-- Course Image, Name & Subtitle (everyone) -->

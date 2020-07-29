@@ -26,7 +26,9 @@ class School extends Model
                            'overlay',
                            'user_id',
                            'domain',
-                           'token'
+                           'token',
+                           'section1',
+                           'section2',
                          ];
 
      /**
@@ -82,7 +84,7 @@ class School extends Model
       {
           return $this->hasMany('App\Classroom');
       }
-      
+
       public function communities()
       {
           return $this->hasMany('App\Community');
@@ -108,7 +110,7 @@ class School extends Model
            return $this->hasMany('App\Coupon');
        }
 
-       public function category()
+       public function categories()
        {
            return $this->hasMany('App\Category');
        }
