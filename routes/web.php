@@ -50,7 +50,7 @@ Route::get('/wecash', function () {
     return view('pricings.wecash');
 });
 
-Route::get('/corporate', 'OfferController@corporate');
+Route::get('/corporate', 'OfferController@corporate')->name('corporate');
 
 
 Route::get('/email', function () {
