@@ -552,7 +552,7 @@
         <p class="_colwrap light txt-white">
           <img src="/images/schools/logos/oschool_2.png" alt="">
           <span class="terms">
-            <span class="date">© 2019 OSCHOOL. TOUS DROITS RÉSERVÉS.</span> <span>|</span>
+            <span class="date">© <span id="year-2">2019</span> OSCHOOL. TOUS DROITS RÉSERVÉS.</span> <span>|</span>
             <a href="https://blog.oschoolelearning.com/condition/" class="_blank _legal" target="_blank">Conditions d'utilisation</a> <span>|</span>
             <a href="https://blog.oschoolelearning.com/confidentialite/" class="_blank _legal" target="_blank">Politique de confidentialité</a>
           </span>
@@ -560,7 +560,12 @@
       </div>
     </footer>
   </div>
-
+!--COPYRIGTH SCRIPT-->
+    <script type="text/javascript">
+        var date = new Date();
+        var annee = date.getFullYear();
+        document.getElementById('year-2').innerHTML = annee;
+    </script>
 </body>
 
 </html>

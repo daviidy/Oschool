@@ -1948,8 +1948,8 @@ hr{border-color:#ececec;}
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3">
-                    <div class="image" data-background-image="/images/divers/final.png" data-loaded="true"
-                      style="background-image: url(/images/divers/final.png);"></div>
+                    <div class="image" data-background-image="/images/divers/forscot.png" data-loaded="true"
+                      style="background-image: url(/images/divers/forscot.png);"></div>
                     <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;"></div>
                     <div class="default-paragraph markdown-area">
                         <p></p>
@@ -1967,8 +1967,8 @@ hr{border-color:#ececec;}
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3">
-                    <div class="image" data-background-image="/images/divers/Logo-1.png" data-loaded="true"
-                      style="background-image: url(/images/divers/Logo-1.png);"></div>
+                    <div class="image" data-background-image="/images/divers/commanya.jpg" data-loaded="true"
+                      style="background-image: url(/images/divers/commanya.jpg);"></div>
                     <div class="icon-header default-green-header match-height-green-headers-row-1" style="height: 28px;"></div>
                     <div class="default-paragraph markdown-area">
                         <p></p>
