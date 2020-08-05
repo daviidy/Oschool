@@ -13,7 +13,12 @@
                     <div class="attachment-block-label">Quiz</div>
                     @if(Auth::user()->results->where('quiz_id', $quiz->id)->first())
                     <div class="quiz Quiz answered finished single">
-                      <div class="quiz-finished Quiz-complete"><i class="fa fa-check success"></i>
+                      <div class="quiz-finished Quiz-complete">
+                          @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
+                          <i class="fa fa-times" style="color: red;"></i>
+                          @else
+                          <i class="fa fa-check success"></i>
+                          @endif
                           <div class="quiz-finished-text">
                               Votre note est {{ number_format(Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result, 2, ",",".") }} %
                           </div>
@@ -108,8 +113,7 @@
 </div>
 
 
-@if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
-@if(Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts)
+@if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts)
 <script type="text/javascript">
 
 $('.quiz-answer').on('click', function(){
@@ -200,7 +204,7 @@ $("#check").on('click', function(event) {
 
 
 </script>
-@endif
+
 @endif
 
 

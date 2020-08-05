@@ -169,7 +169,7 @@ class QuizController extends Controller
                 foreach ($result->answers->where('user_id', $user->id) as $answer) {
                     $answer->delete();
                 }
-                $result->restart = 1;
+                $result->restart += 1;
                 $result->save();
                 //dd($quiz->attempts.'-'.$result->restart);
                 $rest = $quiz->attempts - $result->restart;
@@ -180,7 +180,7 @@ class QuizController extends Controller
                 foreach ($result->answers->where('user_id', $user->id) as $answer) {
                     $answer->delete();
                 }
-                $result->restart = 1;
+                $result->restart = 2;
                 $result->save();
                 return redirect()->back()->with('status', 'L\'étudiant pourra reprendre son quiz');
             }
