@@ -1666,7 +1666,7 @@ button.close{padding:0;background-color:transparent;border:0;}
                 <!---->
                 <div what="new question" class="quiz-question">
                 	<div data-nodrag="" class="quiz-question-prompt" style="margin-bottom: 15px;">
-                      <input type="number" name="chance" id="attempts" value="{{$lesson->quizzes->first()->attempts}}" ng-model="newQuestion.question" placeholder="Nombre de tentatives"
+                      <input type="number" name="chance" id="attempts" value="{{$lesson->quizzes->first() ? $lesson->quizzes->first()->attempts: ''}}" ng-model="newQuestion.question" placeholder="Nombre de tentatives"
                           class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
                     </div>
                     <div data-nodrag="" class="quiz-question-prompt">
