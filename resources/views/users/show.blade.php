@@ -702,7 +702,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                 <tbody>
                     @foreach($user->courses as $course)
                         @if($course->type == "mooc")
-                        @if(count($user->purchases->where('user_id', $user->id)->where('status', 'Validé'))> 0)
+                        @if(count($user->purchases->where('user_id', $user->id)->where('status', 'Validé')->where('course_id', $course->id))> 0)
                     <tr>
                         <td class="text-left">
                             <a class="dashboardTable__link">
