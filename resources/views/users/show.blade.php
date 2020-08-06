@@ -543,7 +543,7 @@ div.mce-edit-area{background:#fff;filter:none;}
             <div class="mentorshipStudent__headWrapper">
                 <div class="mentorshipStudent__studentContainer">
                     <h2>
-                        Détails de l'étudiant
+                        Détails de l'utilisateur
                     </h2>
                     <div class="mentorshipStudent__name mentorshipStudent__name--student">
                         <a href="/fr/membres/adib-legastelois" class="mentorshipStudent__avatarLink">
@@ -572,7 +572,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                     </div>
                     @endif
 
-                    @if(Auth::user()->isOwner() || Auth::user()->isAdmin() && Auth::user()->createSchools->contains($school->id) && !$user->isOwner())
+                    @if(Auth::user()->isAdmin() || Auth::user()->isOwner() && Auth::user()->createSchools->contains($school->id) && !$user->isOwner())
                     <div class="mentorshipStudent__details oc-typography-body1">
                         <form action="/nameSchoolAdmin" method="post">
                             {{ csrf_field() }}
@@ -587,7 +587,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                     </div>
                     @endif
 
-                    @if(Auth::user()->isOwner() || Auth::user()->isAdmin() && Auth::user()->createSchools->contains($school->id) && $user->adminSchools->contains($school->id))
+                    @if(Auth::user()->isAdmin() || Auth::user()->isOwner() && Auth::user()->createSchools->contains($school->id) && $user->adminSchools->contains($school->id))
                     <div class="mentorshipStudent__details oc-typography-body1">
                         <form action="/revokeSchoolAdmin" method="post">
                             {{ csrf_field() }}
