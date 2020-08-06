@@ -150,7 +150,7 @@ a:active,a:focus,a:hover{color:#24292d;}
                         Allez, encore un effort et vous aurez votre certification !
                     </div>
                     <p _ngcontent-sc24="" class="promo-banner__subtitle">
-                        Vous pourrez ainsi télécharger le certificat au format PDF ou l'ajouter-le à votre profil LinkedIn
+                        Vous pourrez ainsi télécharger le certificat au format PDF ou l'ajouter à votre profil LinkedIn
                     </p>
                 </div>
                 @endif
