@@ -57,8 +57,15 @@ class Quiz extends Model
 
         static::deleting(function($quiz) { // before delete() method call this
 
-
-             $quiz->questions()->delete();
+            foreach ($quiz->questions as $question) {
+                foreach ($question->options as $option) {
+                    foreach ($option->answers as $answer) {
+                        $answer->delete();
+                    }
+                    $option->delete();
+                }
+                $question->delete();
+            }
              // do the rest of the cleanup...
         });
     }

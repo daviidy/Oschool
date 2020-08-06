@@ -14,13 +14,13 @@
                     @if(Auth::user()->results->where('quiz_id', $quiz->id)->first())
                     <div class="quiz Quiz answered finished single">
                       <div class="quiz-finished Quiz-complete">
-                          @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
+                          @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
                           <i class="fa fa-times" style="color: red;"></i>
                           @else
                           <i class="fa fa-check success"></i>
                           @endif
                           <div class="quiz-finished-text">
-                              Votre note est {{ number_format(Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result, 2, ",",".") }} %
+                              Votre note: {{ number_format(Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result, 2, ",",".") }} %
                           </div>
                           <!--
                           <button class="btn btn-primary ng-scope">
@@ -84,7 +84,7 @@
                         <button class="btn btn-primary pull-left">
                         ‹ Retour
                         </button>
-                        @if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts)
+                        @if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart <= $quiz->attempts)
                         <button id="check" class="btn btn-primary pull-right check-answer-button is-visible">
                             Soumettre
                         </button>
@@ -92,12 +92,14 @@
                         <button id="continue-button" class="btn btn-primary pull-right">
                             Continuer ›
                         </button>
-                        @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
+                        @if(!session('status'))
+                        @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart <= $quiz->attempts && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
                         <a href="/restartQuiz/{{$quiz->id}}/{{Auth::user()->results->where('quiz_id', $quiz->id)->first()->id}}/{{Auth::user()->id}}">
                         <button class="btn btn-primary pull-left check-answer-button is-visible">
                             Reprendre
                         </button>
                         </a>
+                        @endif
                         @endif
 
                     </div>
@@ -113,7 +115,7 @@
 </div>
 
 
-@if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts)
+@if(!Auth::user()->results->where('quiz_id', $quiz->id)->first() || Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result && Auth::user()->results->where('quiz_id', $quiz->id)->first()->restart <= $quiz->attempts)
 <script type="text/javascript">
 
 $('.quiz-answer').on('click', function(){

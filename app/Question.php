@@ -36,8 +36,12 @@ class Question extends Model
 
         static::deleting(function($question) { // before delete() method call this
 
-           $question->options()->delete();
-           // do the rest of the cleanup...
+            foreach ($question->options as $option) {
+                foreach ($option->answers as $answer) {
+                    $answer->delete();
+                }
+                $option->delete();
+            }
         });
         }
 

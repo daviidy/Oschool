@@ -98,7 +98,7 @@ class QuizController extends Controller
     public function destroy(Quiz $quiz)
     {
         $quiz->delete();
-        return redirect('/schoolAdmin/'.$quiz->course->school_id.'/courses/'.$quiz->course->id.'/curriculum/'.$quiz->lesson->section_id.'/lessons/'.$quiz->lesson->id.'/edit')->with('status', 'Quiz bien supprimé');
+        return redirect('/schoolAdmin/'.$quiz->course->school_id.'/courses/'.$quiz->course->id.'/curriculum/'.$quiz->lesson->section_id.'/lessons/'.$quiz->lesson->id.'/edit')->with('status', 'Le Quiz a bien été supprimé');
     }
 
 
@@ -165,7 +165,7 @@ class QuizController extends Controller
         //on supprime toutes les reponses de l'utilisateur
         if (Auth::check()) {
             //si user a moins de 3 tentatives
-            if ($user->results->where('quiz_id', $quiz->id)->first()->restart < $quiz->attempts) {
+            if ($user->results->where('quiz_id', $quiz->id)->first()->restart <= $quiz->attempts) {
                 foreach ($result->answers->where('user_id', $user->id) as $answer) {
                     $answer->delete();
                 }
@@ -173,14 +173,21 @@ class QuizController extends Controller
                 $result->save();
                 //dd($quiz->attempts.'-'.$result->restart);
                 $rest = $quiz->attempts - $result->restart;
-                return redirect()->back()->with('status', 'Vous pouvez reprendre le quiz. Ii vous reste '.$rest.' tentatives');
+
+                if ($rest < 0) {
+                    return redirect()->back()->with('status', 'Désolé, vous ne pouvez plus reprendre le quiz');
+                }
+                else {
+                    return redirect()->back()->with('status', 'Vous pouvez reprendre le quiz. Il vous reste '.$rest.' tentatives');
+                }
+
             }
             //sinon si user est un des propriétaires de l'école
             elseif (Auth::user()->isOwner() || Auth::user()->isAdmin() && Auth::user()->createSchools->contains($quiz->course->school->id)) {
                 foreach ($result->answers->where('user_id', $user->id) as $answer) {
                     $answer->delete();
                 }
-                $result->restart = 2;
+                $result->restart = 1;
                 $result->save();
                 return redirect()->back()->with('status', 'L\'étudiant pourra reprendre son quiz');
             }

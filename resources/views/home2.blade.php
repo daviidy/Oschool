@@ -17943,7 +17943,7 @@
                 <div class="swiper-container" data-v-7717109f="">
                   <div class="swiper-container a swiper-container-initialized swiper-container-vertical swiper-container-thumbs" data-v-7717109f="">
                     <div class="swiper-wrapper" style="transition-duration: 0ms;">
-                      <div class="carousel__slide swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" data-v-7717109f="" style="height: 121px;"><svg aria-hidden="true" focusable="false" data-prefix="fal"
+                      <div class="carousel__slide swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" data-v-7717109f="" style="/*height: 121px;*/"><svg aria-hidden="true" focusable="false" data-prefix="fal"
                           data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="carousel__slide-icon svg-inline--fa fa-bookmark fa-w-12" data-v-7717109f="">
                           <path fill="currentColor" d="M336 0H48C21.49 0 0 21.49 0 48v464l192-112 192 112V48c0-26.51-21.49-48-48-48zm16 456.287l-160-93.333-160 93.333V48c0-8.822 7.178-16 16-16h288c8.822 0 16 7.178 16 16v408.287z" data-v-7717109f=""
                             class=""></path>
@@ -17975,13 +17975,14 @@
                         </div>
                         <div class="carousel__slide-content" data-v-7717109f="">
                           <picture class="aspect-ratio--16:9 border-radius--rounded image" data-v-958d1b38="" data-v-7717109f="">
-                              <img src="/images/divers/corporate-1.jpg" data-src="/images/knowledge-hub__blog.jpg" alt="Blog" class=" lazyloaded"
+                              <img src="https://images.unsplash.com/photo-1573164574230-db1d5e960238?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" data-src="/images/knowledge-hub__blog.jpg" alt="Blog" class=" lazyloaded"
                               data-v-958d1b38=""></picture>
                         </div>
                         <div class="carousel__slide-body" data-v-7717109f="">
                           <p data-v-7717109f="">Gérez la formation de vos employés, membres ou partenaires grâce à votre plateforme privée.</p>
                         </div>
-                        <div class="carousel__slide-link" data-v-7717109f=""><a href="/corporate" target="_blank" class="link link--secondary" data-v-6535949a="" data-v-7717109f="">
+                        <div class="carousel__slide-link" data-v-7717109f="">
+                            <a href="/corporate" target="_blank" class="link link--secondary" data-v-6535949a="" data-v-7717109f="">
                             <!----><span data-v-6535949a="">
                               En savoir plus
                             </span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
@@ -18062,7 +18063,7 @@
               <h3 class="title" data-v-16261ef6="" data-v-a7a15686="">Faites le premier pas vers votre nouvel avenir !</h3>
             </div>
             <div class="banner__buttons" data-v-a7a15686=""><a href="/corporate/#price_offer" target="_blank" class="button button--primary" data-v-ff41ee4e="" data-v-a7a15686="">
-                <!----><span data-v-ff41ee4e="">Créer votre école</span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                <!----><span data-v-ff41ee4e="">Créer votre école gratuitement</span><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                   class="button__icon--right svg-inline--fa fa-arrow-right fa-w-14 fa-fw" data-v-ff41ee4e="">
                   <path fill="currentColor"
                     d="M218.101 38.101L198.302 57.9c-4.686 4.686-4.686 12.284 0 16.971L353.432 230H12c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h341.432l-155.13 155.13c-4.686 4.686-4.686 12.284 0 16.971l19.799 19.799c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L235.071 38.101c-4.686-4.687-12.284-4.687-16.97 0z"
