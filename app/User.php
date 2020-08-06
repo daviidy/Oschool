@@ -102,6 +102,12 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany('App\School');
     }
 
+    //function to be invited as admin in a school
+    public function adminSchools()
+      {
+        return $this->belongsToMany('App\School', 'admin_school', 'school_id', 'user_id');
+      }
+
 
     //function for relmationship between
     //user and purchases (one to many)

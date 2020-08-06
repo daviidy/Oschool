@@ -670,9 +670,9 @@ img{display:block;}
 
     }
     /*IOS MEDI QUERY*/
-    
 
-    @media only screen and (min-device-width : 414px) and (max-device-width : 736px){ 
+
+    @media only screen and (min-device-width : 414px) and (max-device-width : 736px){
         .course-box-image-container{
             width: 100%;
         }
@@ -710,7 +710,7 @@ img{display:block;}
         }
       }
 
-      @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+      @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
 
         .bDBfQP{
         flex-direction: initial!important;
@@ -787,7 +787,7 @@ img{display:block;}
                     <div class="collapse navbar-collapse navbar-header-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             @auth
-                            @if(Auth::user()->createSchools->contains($school->id))
+                            @if(Auth::user()->createSchools->contains($school->id) || Auth::user()->adminSchools->contains($school->id))
                             <li>
 
                                 <a class="fedora-navbar-link navbar-link" href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}" target="">

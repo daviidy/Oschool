@@ -590,9 +590,10 @@ class SchoolController extends Controller
 
         if (Auth::check()) {
             //si le user est le proprio de l'ecole
+            //ou un des admins
             //on l'envoie au tableau de bord d'admin
             //de l'école
-            if ($school->user_id == Auth::user()->id) {
+            if ($school->user_id == Auth::user()->id || Auth::user()->adminSchools->contains($school->id)) {
                 return view('admin_views.schools.show', ['school' => $school]);
             }
             else {
@@ -1113,6 +1114,9 @@ class SchoolController extends Controller
             $user->type3 = 'owner';
             $user->save();
 
+            $user->adminSchools()->attach($school);
+
+
             Mail::send('mails.users.contact.nameAdmin', ['school' => $school, 'user' => $user], function($message) use($user, $school){
 
               $message->to($user->email, 'Vos droits administrateurs')->subject('Vos droits administrateurs');
@@ -1129,6 +1133,8 @@ class SchoolController extends Controller
 
             $user->type3 = '';
             $user->save();
+
+            $user->adminSchools()->detach($school);
 
             Mail::send('mails.users.contact.revokeSchoolAdmin', ['school' => $school, 'user' => $user], function($message) use($user, $school){
 
