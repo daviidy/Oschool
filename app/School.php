@@ -51,6 +51,12 @@ class School extends Model
          return $this->belongsToMany('App\User');
      }
 
+     //function to be invited as admin in a school
+     public function adminUsers()
+       {
+         return $this->belongsToMany('App\User', 'admin_school', 'school_id', 'user_id');
+       }
+
      /**
       * [courses description]
       * relationship many to many with Course model

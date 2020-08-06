@@ -587,7 +587,7 @@ div.mce-edit-area{background:#fff;filter:none;}
                     </div>
                     @endif
 
-                    @if(Auth::user()->isOwner() || Auth::user()->isAdmin() && Auth::user()->createSchools->contains($school->id) && $user->isOwner())
+                    @if(Auth::user()->isOwner() || Auth::user()->isAdmin() && Auth::user()->createSchools->contains($school->id) && $user->adminSchools->contains($school->id))
                     <div class="mentorshipStudent__details oc-typography-body1">
                         <form action="/revokeSchoolAdmin" method="post">
                             {{ csrf_field() }}
