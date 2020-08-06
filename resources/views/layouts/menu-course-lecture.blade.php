@@ -60,7 +60,7 @@
       position: absolute;
     }
   </style>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" media="screen" href="/css/fedora.css" data-turbolinks-track="true">
 
@@ -192,6 +192,16 @@ header.half-height .lecture-nav a.nav-btn.complete, header.half-height .lecture-
 
 a {
     color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .quiz-wrapper .quiz {
+    margin-bottom: 40rem!important;
+  }
+
+  .lecture-content .lecture-attachment .attachment-block-wrapper.quiz-wrapper {
+    padding: 35px 15px 80px 15px!important;
+}
 }
 
   </style>
