@@ -419,7 +419,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <!---->
 
     </div><br>
-    <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
+    {{--
+    <!--div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
         <div class="course-list__header">
             <span class="course-list__header-item"></span>
             <span class="course-list__header-item _22oLp">Applications</span>
@@ -437,9 +438,9 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <div style="background-image: url(https://png.pngitem.com/pimgs/s/77-771122_vimeo-icon-hd-png-download.png)" class="tch-course-listing-image"></div>
                         <div what="course name" ng-bind="::course.name" class="tch-course-listing-title _2kIOe">
                             Intégration VIMEO <br>
-                            {{--
+                            
                             <p class="choices" style="color: black; cursor: default;"><span style="cursor: pointer;"> <strong>ZOOM est autorisé dans votre école</strong> </span></p>
-                            --}}
+                          
                             @if($school->slug)
                             <a target="_blank" href="https://api.vimeo.com/oauth/authorize?response_type=code&client_id=348e328e2d3e36da3c8940ec81267f27e04f378c&redirect_uri=https://{{$school->slug}}.oschoolelearning.com/vimeocallback&scope=public%20edit%20upload&state={{$school->id}}">
                             @else
@@ -458,7 +459,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
         <!---->
 
-    </div><br>
+    </div-->--}}<br>
     {{--
     <div ng-show="ctrl.meta.number_of_pages > 1" class="col-sm-12 tch-page-nav ng-hide" meta="meta">
         <!---->
