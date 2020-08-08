@@ -1635,7 +1635,7 @@ button.close{padding:0;background-color:transparent;border:0;}
             </div>
         </form>
 
-        <a class="styles__CategoryButton-vgii8s-4 fUQatb" id="vimeoTrigger">
+        <!--a class="styles__CategoryButton-vgii8s-4 fUQatb" id="vimeoTrigger">
             <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="161" height="147" viewBox="0 0 161 147" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M135.204 119.528H25.7964C23.7044 119.518 22.011 117.804 22 115.686V28.842C22.011 26.724 23.7044 25.01 25.7964 25H135.168C137.26 25.01 138.953 26.724 138.964 28.842V115.686C138.954 117.789 137.283 119.497 135.206 119.528H135.204ZM29.301 35.087H68.3656Z" fill="#DAE1F2"></path>
                     <path d="M22 44.559H139M29.301 35.087H68.3656M135.204 119.528H25.7964C23.7044 119.518 22.011 117.804 22 115.686V28.842C22.011 26.724 23.7044 25.01 25.7964 25H135.168C137.26 25.01 138.953 26.724 138.964 28.842V115.686C138.954 117.789 137.283 119.497 135.206 119.528H135.204Z" stroke="#455A7F" stroke-width="2.93" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -1645,8 +1645,8 @@ button.close{padding:0;background-color:transparent;border:0;}
                     <path d="M128.389 37.438C129.634 37.438 130.644 36.4172 130.644 35.158C130.644 33.8988 129.634 32.878 128.389 32.878C127.144 32.878 126.134 33.8988 126.134 35.158C126.134 36.4172 127.144 37.438 128.389 37.438Z" fill="#455A7F"></path>
                     <path d="M88.668 61.766L72.172 98.952M63.405 63.8L46.421 80.312L63.405 63.8ZM46.366 80.33L62.694 97.495L46.366 80.33ZM97.436 98.28L114.409 81.76L97.436 98.28ZM114.475 81.74L98.138 64.577L114.475 81.74Z" stroke="white" stroke-width="2.93" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg></div>
-            <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Ou envoyez une vidéo directement sur Vimeo</h4>
-        </a>
+            <!--h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Ou envoyez une vidéo directement sur Vimeo</h4-->
+        </a-->
 
     </div>
     <!---->
@@ -1665,6 +1665,9 @@ button.close{padding:0;background-color:transparent;border:0;}
 
                 <!---->
                 <div what="new question" class="quiz-question">
+                	<div data-nodrag="" class="quiz-question-prompt" style="margin-bottom: 15px;">
+                      <button class="tch-btn-header-primary disable-animations fastclickable" style="background-color: red;border-color: red;">Supprimer le quiz</button>
+                    </div>
                 	<div data-nodrag="" class="quiz-question-prompt" style="margin-bottom: 15px;">
                       <input type="number" name="chance" id="attempts" value="{{$lesson->quizzes->first() ? $lesson->quizzes->first()->attempts: ''}}" ng-model="newQuestion.question" placeholder="Nombre de tentatives"
                           class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" style="">
