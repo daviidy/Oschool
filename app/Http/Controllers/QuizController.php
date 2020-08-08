@@ -98,7 +98,7 @@ class QuizController extends Controller
     public function destroy(Quiz $quiz)
     {
         $quiz->delete();
-        return redirect('/schoolAdmin/'.$quiz->course->school_id.'/courses/'.$quiz->course->id.'/curriculum/'.$quiz->lesson->section_id.'/lessons/'.$quiz->lesson->id.'/edit')->with('status', 'Le Quiz a bien été supprimé');
+        return redirect()->back()->with('status', 'Le Quiz a bien été supprimé');
     }
 
 

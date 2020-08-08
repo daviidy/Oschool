@@ -1666,7 +1666,7 @@ button.close{padding:0;background-color:transparent;border:0;}
                 <!---->
                 <div what="new question" class="quiz-question">
                 	<div data-nodrag="" class="quiz-question-prompt" style="margin-bottom: 15px;">
-                      <button class="tch-btn-header-primary disable-animations fastclickable" style="background-color: red;border-color: red;">Supprimer le quiz</button>
+
                     </div>
                 	<div data-nodrag="" class="quiz-question-prompt" style="margin-bottom: 15px;">
                       <input type="number" name="chance" id="attempts" value="{{$lesson->quizzes->first() ? $lesson->quizzes->first()->attempts: ''}}" ng-model="newQuestion.question" placeholder="Nombre de tentatives"
@@ -1718,6 +1718,15 @@ button.close{padding:0;background-color:transparent;border:0;}
                       @if($lesson->quizzes)
                       @foreach($lesson->quizzes as $quiz)
                       <input type="hidden" name="quiz_id" value="{{$quiz->id}}">
+
+                      <form action="{{ route('quizzes.destroy', $quiz) }}" method="post">
+                          {{ csrf_field() }}
+                          {{ method_field('delete') }}
+                            <button type="submit" class="tch-btn-header-primary disable-animations fastclickable" style="background-color: red;border-color: red;">
+                                Supprimer le quiz
+                            </button>
+                       </form>
+
                       @foreach($quiz->questions->sortBy('position') as $question)
 
                       <li data-index="{{$question->id}}" data-position="{{$question->position}}" class="well ui-sortable-handle">

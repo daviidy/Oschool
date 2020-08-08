@@ -1510,10 +1510,7 @@ timer--}}
                                                         Projet {{$loop->index + 1}}: {{$project->title}}
                                                     </div>
                                                 </div>
-
-
                                             </section>
-
                                         </div>
                     				</li>
 
