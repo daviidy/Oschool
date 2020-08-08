@@ -127,8 +127,8 @@ class QuizController extends Controller
         }
 
 
-      //pour chaque option, on crée une réponse du
-      //user
+      //pour chaque option choisie,
+      //on crée une réponse du user
       $options_tab = json_decode($request->options);
         foreach ($options_tab as $selected_option) {
                 $option = Option::where('text', $selected_option)->first();

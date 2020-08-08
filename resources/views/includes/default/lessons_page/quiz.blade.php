@@ -131,6 +131,10 @@ $('#continue-button').click(function() {
 
 $("#check").on('click', function(event) {
     event.preventDefault();
+    $(this).removeClass('is-visible');
+    $('.quiz-controls').append('<p id="loading">\
+    <strong>Chargement du résultat...</strong>\
+    </p>');
     var tab = [];
     var quiz = $('.lecture-attachment-type-quiz').attr('id');
     console.log(quiz);
@@ -157,6 +161,7 @@ $("#check").on('click', function(event) {
             console.log(data.result);
 
             $("#check").remove();
+            $('#loading').remove();
             $("#continue-button").addClass('is-visible');
             //pour chaque options du quiz
             $.each(data.options, function(index, value){
