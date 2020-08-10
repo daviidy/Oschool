@@ -1727,10 +1727,10 @@ button.close{padding:0;background-color:transparent;border:0;}
                             </button>
                        </form>
 
-                       <form action="/deleteAnswers" method="post">
+                       <form action="/deleteAnswers/{{$quiz->id}}" method="post">
                            {{ csrf_field() }}
                              <button type="submit" class="tch-btn-header-primary disable-animations fastclickable" style="background-color: red;border-color: red;">
-                                 Supprimer le quiz
+                                 Supprimer les réponses
                              </button>
                         </form>
 
