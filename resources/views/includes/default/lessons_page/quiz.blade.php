@@ -13,11 +13,11 @@
                     <div class="attachment-block-label">Quiz</div>
                     @if(Auth::user()->results->where('quiz_id', $quiz->id)->first())
                     <div class="quiz Quiz answered finished single">
-                        <p>{{session('answers')}}</p>
+                        {{--<p>{{session('answers')}}</p>
 						  <p>{{session('options')}}</p>
 						  @foreach(session('eachOptions') as $eachOption)
 						  <p>{{$eachOption->text}}</p>
-						  @endforeach
+						  @endforeach--}}
                       <div class="quiz-finished Quiz-complete">
                           @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
                           <i class="fa fa-times" style="color: red;"></i>

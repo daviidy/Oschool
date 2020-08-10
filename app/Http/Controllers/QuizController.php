@@ -166,9 +166,7 @@ class QuizController extends Controller
 		$answersStudent = Answer::where('result_id', $result->id)->where('user_id', Auth::user()->id)->where('correct', 1)->count();
 		$totalOptions = Option::where('quiz_id', $quiz->id)->where('correct', 1)->count();
 		$eachOptions = Option::where('quiz_id', $quiz->id)->where('correct', 1)->get();
-		Session::put('answers', $answersStudent);
-		Session::put('options', $totalOptions);
-		Session::put('eachOptions', $eachOptions);
+
 
         $percentage = Answer::where('result_id', $result->id)->where('user_id', Auth::user()->id)->where('correct', 1)->count() / Option::where('quiz_id', $quiz->id)->where('correct', 1)->count();
         $result->quiz_result = $percentage * 100;
