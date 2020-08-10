@@ -16,6 +16,7 @@ use Image;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class QuizController extends Controller
 {
@@ -162,6 +163,13 @@ class QuizController extends Controller
             }
         }
         //resultat est nombre de vrai trouvés sur total de vrais, le tout * 100
+		$answersStudent = Answer::where('result_id', $result->id)->where('user_id', Auth::user()->id)->where('correct', 1)->count();
+		$totalOptions = Option::where('quiz_id', $quiz->id)->where('correct', 1)->count();
+		$eachOptions = Option::where('quiz_id', $quiz->id)->where('correct', 1)->get();
+		Session::put('answers', $answersStudent);
+		Session::put('options', $totalOptions);
+		Session::put('eachOptions', $eachOptions);
+
         $percentage = Answer::where('result_id', $result->id)->where('user_id', Auth::user()->id)->where('correct', 1)->count() / Option::where('quiz_id', $quiz->id)->where('correct', 1)->count();
         $result->quiz_result = $percentage * 100;
 
