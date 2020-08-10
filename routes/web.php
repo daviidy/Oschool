@@ -188,6 +188,8 @@ Route::post('/editTask', 'ProjectController@editTask');
 Route::post('/applyCoupon', 'CouponController@applyCoupon');
 Route::post('/applyPassword', 'CouponController@applyPassword');
 
+Route::post('/deleteAnswers', 'QuizController@deleteAnswers');
+
 
 
 //school all courses

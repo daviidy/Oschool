@@ -1727,6 +1727,13 @@ button.close{padding:0;background-color:transparent;border:0;}
                             </button>
                        </form>
 
+                       <form action="/deleteAnswers" method="post">
+                           {{ csrf_field() }}
+                             <button type="submit" class="tch-btn-header-primary disable-animations fastclickable" style="background-color: red;border-color: red;">
+                                 Supprimer le quiz
+                             </button>
+                        </form>
+
                       @foreach($quiz->questions->sortBy('position') as $question)
 
                       <li data-index="{{$question->id}}" data-position="{{$question->position}}" class="well ui-sortable-handle">

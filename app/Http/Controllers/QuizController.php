@@ -101,6 +101,21 @@ class QuizController extends Controller
         return redirect()->back()->with('status', 'Le Quiz a bien été supprimé');
     }
 
+    public function deleteAnswers(Quiz $quiz)
+    {
+        foreach ($quiz->questions as $question) {
+            foreach ($question->options as $option) {
+                foreach ($option->answers as $answer) {
+                    $answer->delete();
+                }
+            }
+        }
+        foreach ($quiz->results as $result) {
+            $result->delete();
+        }
+        return redirect()->back()->with('status', 'Toutes les réponses ont bien été supprimées');
+    }
+
 
 
     /**
