@@ -3744,9 +3744,9 @@ footer .powered-by .powered-by-logo {
 }
 
 .quiz-wrapper .quiz .quiz-answer-container.selected .quiz-answer {
-    border: 1px solid #d7dada;
+    border: 1px solid #009640;
     color: #000;
-    background: #f7f7f7
+    background: #009640;
 }
 
 .quiz-wrapper .quiz .quiz-answer-container .quiz-answer {

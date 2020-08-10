@@ -16,8 +16,10 @@
                       <div class="quiz-finished Quiz-complete">
                           @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
                           <i class="fa fa-times" style="color: red;"></i>
+                          <h3 style="color: red;">Désolé !</h3>
                           @else
                           <i class="fa fa-check success"></i>
+                          <h2 style="color: #2ecc71; font-weight: bold;">Félicitation !</h2>
                           @endif
                           <div class="quiz-finished-text">
                               Votre note: {{ number_format(Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result, 2, ",",".") }} %
@@ -103,6 +105,27 @@
                         @endif
 
                     </div>
+                    @if(Auth::user()->results->where('quiz_id', $quiz->id)->first())
+                    <div class="quiz Quiz answered finished single">
+                      <div class="quiz-finished Quiz-complete">
+                          @if(Auth::user()->results->where('quiz_id', $quiz->id)->first() && Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result < $quiz->course->result)
+                          <i class="fa fa-times" style="color: red;"></i>
+                          <h2 style="color: red; font-weight: bold;">Désolé !</h2>
+                          @else
+                          <i class="fa fa-check success"></i>
+                          <h2 style="color: #2ecc71; font-weight: bold;">Félicitation !</h2>
+                          @endif
+                          <div class="quiz-finished-text">
+                              Votre note: {{ number_format(Auth::user()->results->where('quiz_id', $quiz->id)->first()->quiz_result, 2, ",",".") }} %
+                          </div>
+                          <!--
+                          <button class="btn btn-primary ng-scope">
+                              Retake Quiz
+                          </button>
+                      -->
+                      </div>
+                    </div>
+                   @endif
                 </div>
             </div>
         </div>
