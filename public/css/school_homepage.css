@@ -287,7 +287,7 @@
     letter-spacing:0.7px;
     /*height:92px;*/
     height:65px;
-    padding-top:25px/* for timer*/;
+    /* padding-top:25px for timer*/;
     z-index:10;background:#1ea69a;
     background:-moz-linear-gradient(left, #1ea69a 24%, #e9723d 100%);
     background:-webkit-linear-gradient(left, #1ea69a 24%, #e9723d 100%);
@@ -1334,7 +1334,7 @@
     -webkit-font-smoothing:antialiased;
     letter-spacing:0.7px;
     height:92px;
-    padding-top:25px /*for timer*/;
+    /*padding-top:25px for timer*/;
     z-index:10;background:#1ea69a;
     background:-moz-linear-gradient(left, #1ea69a 24%, #e9723d 100%);
     background:-webkit-linear-gradient(left, #1ea69a 24%, #e9723d 100%);

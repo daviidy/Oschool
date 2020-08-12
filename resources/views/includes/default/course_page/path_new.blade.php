@@ -362,7 +362,7 @@ h3{font-size:2.4rem;line-height:2.6rem;}
 .btn--secondary:after{background:rgba(0,0,0,.1);}
 [class^=btn]{transition:background-color .2s,color .2s;}
 [class^=btn]{font-family:'TeachableSans-Regular';}
-[class^=btn]{border-radius:25px;cursor:pointer;font-size:16px;font-weight:500;letter-spacing:.5px;line-height:26px;padding:10px 24px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;outline:0;border:0;box-sizing:border-box;position:relative;overflow:hidden;text-align:center;}
+[class^=btn]{border-radius:25px!important;cursor:pointer;font-size:16px;font-weight:500;letter-spacing:.5px;line-height:26px;padding:10px 24px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;outline:0;border:0;box-sizing:border-box;position:relative;overflow:hidden;text-align:center;}
 @media (max-width:1023px){
 [class^=btn]{border-radius:25px;font-size:14px;font-weight:500;letter-spacing:.75px;line-height:20px;padding:13px 24px;}
 }
@@ -1333,9 +1333,9 @@ img{max-width:100%;}
 
 
 {{--timer
-
-timer--}}
 @include('includes.timer');
+timer--}}
+
 
 <main class="content">
     <section class="course-hero-unenrolled content__container--full-width ">
@@ -1382,7 +1382,7 @@ timer--}}
 
 
                 <div class="course-hero-unenrolled__cta">
-                    <a href="#price" class="btn btn--primary" enroll-link="">Inscrivez-vous à ce parcours</a>
+                    <a href="#price" class="btn btn--primary" style="padding: 10px 24px!important;" enroll-link="">Inscrivez-vous à ce parcours</a>
                 </div>
 
 
@@ -1886,7 +1886,7 @@ timer--}}
 
 
     <section class="course-detail__section course-detail__success-stories content__container--full-width">
-        <div class="content__wrapper">
+        <div class="content__wrapper" style="display:none">
             <h2 class="course-detail__section__title">Témoignages</h2>
             <p class="course-detail__section__description">Plus de {{number_format(rand(2000,5000), 0, '.', ' ')}} personnes ont déjà obtenu cette qualification, qui leur permet de développer et d'améliorer leur situation professionnelle.</p>
 
@@ -2084,7 +2084,7 @@ timer--}}
         <div class="content__wrapper">
             <div class="cta-box">
                 <span class="cta-box__title">Commencez dès aujourd'hui et obtenez votre certification "{{$course->name}}".</span>
-                <a href="#price" class="btn btn--primary" enroll-link="" btn-ripple="" data-gtm-tag="start-course sign-in">Inscrivez-vous à ce parcours</a>
+                <a href="#price" class="btn btn--primary" enroll-link="" btn-ripple="" data-gtm-tag="start-course sign-in" style="padding: 10px 24px!important;">Inscrivez-vous à ce parcours</a>
             </div>
         </div>
     </section>
