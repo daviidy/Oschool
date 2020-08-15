@@ -230,6 +230,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                 </div>
                 <div class="styles__scroll-uv2z0y-2 fWefjR">
                     @foreach($school->courses->where('type', 'path')->take(3) as $course)
+                    @if($course->state == 'active')
                     <a class="TrackTile-gicmw3-0 eeoPuI" href="/path/{{$course->slug}}">
                         <div style="background:url(/images/courses/logos/{{$course->logo}}) center center / cover no-repeat" class="TrackTile__CoverImg-gicmw3-1 hUQwWQ"></div>
                         <div class="TrackTile__Body-gicmw3-2 dxdJun">
@@ -257,6 +258,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                             </div>
                         </div>
                     </a>
+                    @endif
                     @endforeach
 
                 </div>
@@ -290,6 +292,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
             </div>
             <div class="row course-list list">
                 @foreach($school->courses->where('type', 'mooc')->where('state', 'active')->take(6) as $course)
+                @if($course->state == 'active')
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div style="" data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
                         <div class="row">
@@ -361,6 +364,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                         </div>
                     </div>
                 </div>
+                @endif
                 @endforeach
             </div>
             <!--

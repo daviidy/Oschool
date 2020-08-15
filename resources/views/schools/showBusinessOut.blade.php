@@ -232,6 +232,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                       </div>   -->
                   <div class="row">
                       @foreach($school->categories as $category)
+                      @if(count($category->courses) > 0)
                     <div class="col-md-3 col-sm-6">
                       <div class="card card-block" style="padding: 15px;">
 
@@ -242,6 +243,7 @@ h1[class*="__heading"]{font-size:3rem;text-align:left;}
                         -->
                       </div>
                     </div>
+                    @endif
                     @endforeach
 
                   </div>

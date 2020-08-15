@@ -82,6 +82,7 @@
                 <div class="row course-list list">
                     <!-- Course Listing -->
                     @foreach($courses as $course)
+                    @if($course->state == 'active')
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
                             <div style="" class="row">
@@ -157,6 +158,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                     @endforeach
 
                 </div>
