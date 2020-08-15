@@ -947,7 +947,8 @@ $('#updateLecture').on('click', function() {
         data: dataImage,
         success: function(data) {
             $.amaran({'message':"La leçon a bien été mise à jour !"});
-            window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+data.course_id+'/curriculum';
+            //window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+data.course_id+'/curriculum';
+            location.reload();
 
 
 
@@ -1565,7 +1566,8 @@ console.log(JSON.stringify(positions));
           data: dataImage,
           success: function(data) {
               $.amaran({'message':"Le projet a bien été mis à jour !"});
-              window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+data.course_id+'/curriculum';
+              //window.location = '/schoolAdmin/'+$("input[name=school_id]").val()+'/courses/'+data.course_id+'/curriculum';
+              location.reload();
 
           },
           error: function (xhr, msg) {
