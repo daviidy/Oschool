@@ -569,7 +569,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                       option="ctrl.filterForKey(filterType)" filter-options="ctrl.filterOptions" add-field="ctrl.addField" reset-search="ctrl.resetSearch" role="ctrl.role">
                                         <!---->
                                         <!---->
-                                        <div ng-if="ctrl.option.attribute == 'name_or_email_cont'" class="filter-add">
+                                      {{--  <div ng-if="ctrl.option.attribute == 'name_or_email_cont'" class="filter-add">
                                             <div dropdown="" class="btn-group tch-dropdown-group dropdown"><a dropdown-toggle="" type="button" what="select filter dropdown" ng-click="ctrl.toggleDropDown()" class="dropdown-link _2kIOe"
                                                   aria-haspopup="true" aria-expanded="false"><span>Add Filter</span><span class="space"></span><i class="fa fa-chevron-down"></i></a>
                                                 <div class="dropdown-menu-arrow"></div>
@@ -665,10 +665,11 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                                 </ul>
                                             </div>
                                         </div>
-                                        <!---->
+                                        <!---->--}}
                                         <div class="filter-ui-select">
                                             <!---->
-                                            <div ng-if="ctrl.option.type == 'text'"><input what="input" name="value" type="text" ng-minlength="2" ng-model="filters[option.attribute]" placeholder="Search for a user by name or email"
+                                            <div ng-if="ctrl.option.type == 'text'">
+                                              <input id="myInput" what="input" name="value" type="text" ng-minlength="2" ng-model="filters[option.attribute]" placeholder="Search for a user by name or email"
                                                   ui-event="ctrl.uiEvent" ng-keypress="ctrl.keypressEvent($event)" ng-model-options="ctrl.modelOptions" autocomplete="off" class="form-control input-search-icon _2kIOe ng-touched" style=""></div>
                                             <!---->
                                             <!---->
@@ -720,7 +721,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
               </div>
               <div class="tch-table-wrapper">
                   <table class="tch-table student-table">
-                      <tbody>
+                      <tbody id="myTable">
                           <tr>
                               <th what="name column header" class="users-table-header _22oLp"><input what="select all users checkbox" type="checkbox" ng-model="bulk.selectAllOnPage" ng-change="highlightAllUsers()" ng-checked="bulk.selectAllOnPage"
                                     class="pull-left ng-pristine ng-untouched ng-valid ng-empty">
@@ -907,7 +908,19 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
     @include('includes.information')
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="/js/admin_views/curriculum.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 
 
 @endsection
