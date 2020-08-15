@@ -320,7 +320,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                 <div class="row tch-course-list">
                     <!---->
                     @foreach($school->courses as $course)
-                    <div class="tch-course-listing col-lg-4 col-md-6 col-xs-6 ui-sortable-handle clearfix">
+                    <div class="tch-course-listing col-lg-4 col-md-6 col-xs-6 ui-sortable-handle clearfix {{$course->state !== 'active' ? 'tch-course-listing-unpublished' : ''}}">
                         <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/information">
                             <div class="tch-course-listing-wrapper">
                                 <div class="row">
@@ -344,6 +344,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     </div>
                         @endforeach
                     <!---->
+                    {{--
                     <div what="course" which="Deviens développeur web en partant de zéro" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }"
                       class="tch-course-listing col-lg-4 col-md-6 col-xs-6 ui-sortable-handle clearfix tch-course-listing-unpublished"><a ui-sref="admin.courses.course.information(::{id: course.id})" href="/admin/courses/640695/information">
                             <div class="tch-course-listing-wrapper" what="course-card" course="course" course-stats="courseStats">
@@ -365,6 +366,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                 </div>
                             </div>
                         </a></div>
+                        --}}
                     <!---->
                 </div>
                 <!---->
