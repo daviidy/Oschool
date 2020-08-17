@@ -1409,6 +1409,10 @@ timer--}}
 
             <div class="about-this-course">
                 <div style="width: 100%; border-right: unset;" class="about-this-course__info">
+
+                    <p class="about-this-course__info__description">{!!$course->description!!}</p>
+
+
                     <h2 style="text-align: center;" class="about-this-course__info__title">À propos de ce parcours</h2>
 
 
@@ -1522,23 +1526,6 @@ timer--}}
                     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <p class="about-this-course__info__description">{!!$course->description!!}</p>
 
                 </div>
                 <!--
