@@ -327,6 +327,7 @@
   }
   .nav-menu li>a:focus,.nav-menu .log-in:focus{color:white;}
   .nav-menu .create-course,.nav-menu .log-in{float:right;}
+  .nav-menu a {color: #fff!important}
   @media (max-width: 767px){
   .nav-menu .create-course,.nav-menu .log-in{display:none;}
   }
