@@ -268,10 +268,10 @@ header,svg{display:none;}
                     <div class="col col-50-lg">
                         <div class="hero-title">
                             <h1 class="text-color-white text-1-lg m-t-0-xs">
-                                Deviens COMPTABLE PROFESSIONNEL
+                                Deviens DÉVELOPPEUR WEB PROFESSIONNEL
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                2 semaines pour passer de zéro à héros avec le logiciel SAGE COMPTABILITÉ 17.Début de la formation: Lundi 3 août 2020.
+                              Réalise 7 projets pour passer de zéro à héros. Bénéficies d'un essai gratuit de 30 jours avec le coupon OSCHOOL2020
                             </h2>
                         </div>
                         <div class="form-footer">
@@ -287,7 +287,7 @@ header,svg{display:none;}
                     </div>
                     <div class="col col-50-lg m-t-2-xs m-t-0-lg">
 
-                        
+
                         <div style="text-align: center;" class="form-card m-b-0-xs homepage2018">
                             <p class="trial-banner bg-gray-light text-color-dark">
                                 Commencez dès maintenant <span class="regular">et sans engagement</span>
@@ -355,7 +355,7 @@ header,svg{display:none;}
 
                     </div>
                 </div>
-                
+
                 <div class="col-container col-max flex-block-xs flex-justify-center-xs flex-wrap-xs m-t-5-xs">
                     {{--
                     <div class="m-lr-2-xs m-b-1-xs m-b-0-md text-center-xs">
@@ -372,7 +372,7 @@ header,svg{display:none;}
                     </div>
                     --}}
                 </div>
-                
+
             </section>
         </header>
 

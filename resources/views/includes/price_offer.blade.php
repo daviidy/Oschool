@@ -134,9 +134,16 @@ h1 a {
   <div class="pricing-table {{strpos($offer->name, 'Premium') !== false ? 'featured-table' : ''}}">
     <h2 class="pricing-table__header {{strpos($offer->name, 'Premium') !== false || strpos($offer->name, 'PREMIUM') !== false || strpos($offer->name, 'premium') !== false ? 'recomandate' : ''}}">- {{$offer->name}}  -</h2>
     <h3 class="pricing-table__price">{{number_format($offer->price, 0, ",",".")}} FCFA/AN <br></h3>
+    @auth
     <a target="_blank" class="pricing-table__button" href="/checkoutPartners/{{$offer->id}}">
       Adhérer maintenant!
     </a>
+    @endauth
+    @guest
+    <a class="pricing-table__button" href="#" data-toggle="modal" data-target="#modalLogin">
+      Adhérer maintenant!
+    </a>
+    @endguest
     <ul class="pricing-table__list">
         @foreach($offer->characteristics as $characteristic)
       <li> {{$characteristic->description}}</li>
@@ -148,3 +155,4 @@ h1 a {
   @endforeach
 
 </div>
+@include('includes.popupauth');
