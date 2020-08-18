@@ -7,6 +7,7 @@ use App\User;
 use App\Course;
 use App\School;
 use Auth;
+use Illuminate\Support\Facades\Session;
 
 class CustomAuthController extends Controller
 {
@@ -67,6 +68,57 @@ class CustomAuthController extends Controller
 				'message' => 'Login Fail !'
 			);
 			return response()->json($msg);
+		}
+    }
+
+
+    public function register(Request $request)
+    {
+        /*
+        $validator = $request->validate([
+          'name'      => 'required|min:1',
+          'email'     => 'required',
+          'password'  => 'required|min:6'
+        ]);
+        */
+
+        $validator = Validator::make($request->all(), [
+              'name.*' => 'required|min:1',
+              'email.*' => 'required',
+              'password'  => 'required|min:6'
+          ]);
+
+          if ($validator->passes()) {
+              $password 	= $request->password;
+
+              $hash_password = bcrypt($password);
+
+              $user = new User();
+              $user->name    = $name;
+              $user->email    = $email;
+              $user->password = $hash_password;
+              $user->save();
+          }
+
+
+
+        //\App\User::create($validator);
+
+        return redirect()->back()->with('status', 'Votre compte a bien été créé. Veuillez vous connecter maintenant.');
+     }
+
+
+     public function authenticate(Request $request)
+    {
+        $email	       = $request->email;
+    	$password      = $request->password;
+    	$rememberToken = $request->remember;
+    	// now we use the Auth to Authenticate the users Credentials
+		// Attempt Login for members
+		if (Auth::guard('web')->attempt(['email' => $email, 'password' => $password], $rememberToken)) {
+			return redirect('/course/'.$request->slug.'/checkout/'.$request->pricing);
+		} else {
+			return redirect()->back()->with('status', 'Authenfication échouée');
 		}
     }
 
