@@ -39,7 +39,9 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/94491a0993.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
@@ -125,11 +127,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="my-close-button"><img src="https://teachable.com/assets/modal-x-c7f43ce3b8f64f3d597ce12e57caa7ddbf0778d3f163dc92b4a768067ddd2c3f.svg"></button>
     </div>
 {{--timer
-        @if(\Route::current()->getName() !== 'home2' && \Route::current()->getName() !== 'corporate')
-        @include('includes.timer');
-        @endif
-
+  @if(\Route::current()->getName() !== 'home2' && \Route::current()->getName() !== 'corporate')
+  @include('includes.timer');
+  @endif
     timer --}}
+
 
 
     <section class="_1568 clearfix transparent nav-menu">
@@ -201,13 +203,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <footer>
   <div class="container">
     <div class="row">
-      <div class="col-sm-2 first-section">
+      <div class="col-sm-3 first-section">
 
           <h4> <img src="/images/schools/logos/oschool_2.png" alt="" style="width: 130px;"> </h4>
           <p> <br> Oschool vous offre la possibilité de poursuivre des diplômes et certificats 100% en ligne, auprès des meilleures universités d’Afrique.</p>
           <p>© <span id="year">2019</span> OSCHOOL. TOUS DROITS RÉSERVÉS.</p>
       </div>
-      <div class="col-sm-2 second-section">
+      <div class="col-sm-3 second-section">
         <ul class="new-homepage-footer-links">
           <h4>Oschool</h4>
           <!--li>
@@ -228,7 +230,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         </ul>
       </div>
-      <div class="col-sm-2 third-section">
+      <div class="col-sm-3 third-section">
         <ul class="new-homepage-footer-links">
           <h4>Plus</h4>
           <li>
