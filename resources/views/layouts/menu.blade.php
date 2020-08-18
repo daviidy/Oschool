@@ -201,13 +201,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <footer>
   <div class="container">
     <div class="row">
-      <div class="col-sm-2 first-section">
+      <div class="col-sm-3 first-section">
 
           <h4> <img src="/images/schools/logos/oschool_2.png" alt="" style="width: 130px;"> </h4>
           <p> <br> Oschool vous offre la possibilité de poursuivre des diplômes et certificats 100% en ligne, auprès des meilleures universités d’Afrique.</p>
           <p>© <span id="year">2019</span> OSCHOOL. TOUS DROITS RÉSERVÉS.</p>
       </div>
-      <div class="col-sm-2 second-section">
+      <div class="col-sm-3 second-section">
         <ul class="new-homepage-footer-links">
           <h4>Oschool</h4>
           <!--li>
@@ -228,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         </ul>
       </div>
-      <div class="col-sm-2 third-section">
+      <div class="col-sm-3 third-section">
         <ul class="new-homepage-footer-links">
           <h4>Plus</h4>
           <li>
