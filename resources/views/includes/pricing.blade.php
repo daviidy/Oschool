@@ -27,7 +27,7 @@
               {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li> --}}
             </ul>
         -->
-            <a href="/course/{{$course->slug}}/checkout/{{$pricing->id}}" class="btn btn-block btn-primary text-uppercase">S'inscrire</a>
+            <a href="#" class="btn btn-block btn-primary text-uppercase" data-toggle="modal" data-target="#modalLogin">S'inscrire</a>
           </div>
         </div>
       </div>
@@ -36,3 +36,4 @@
     </div>
   </div>
 </section>
+@include('includes.popupauth')
