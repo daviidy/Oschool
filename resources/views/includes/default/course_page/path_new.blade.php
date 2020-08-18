@@ -1330,10 +1330,9 @@ img{max-width:100%;}
 
 </style>
 
-
+@include('includes.timer');
 
 {{--timer
-@include('includes.timer');
 timer--}}
 
 

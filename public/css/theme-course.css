@@ -1146,7 +1146,7 @@ h3 {
     background-color: #000;
     position: absolute;
     margin-bottom: 0px;
-    /*top: 50px;for timer*/
+    top: 50px;/*for timer*/
     transition: none
 }
 

@@ -265,14 +265,14 @@ header,svg{display:none;}
                     <div class="col col-50-lg">
                         <div class="hero-title">
                             <h1 class="text-color-white text-1-lg m-t-0-xs">
-                                Deviens COMPTABLE PROFESSIONNEL
+                                Deviens DÉVELOPPEUR WEB PROFESSIONNEL
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                2 semaines pour passer de zéro à héros avec le logiciel SAGE COMPTABILITÉ 17.Début de la formation: Lundi 3 août 2020.
+                                Réalise 7 projets pour passer de zéro à héros. Bénéficies d'un essai gratuit de 30 jours avec le coupon OSCHOOL2020
                             </h2>
                         </div>
                         <div class="form-footer">
-                            <a href="https://oschoolelearning.com/course/formation-pratique-au-metier-de-comptable-professionnel">
+                            <a href="https://oschoolelearning.com/path/parcours-developpeur-web-junion">
                             <button name="button" type="submit" class="button button primary button--primary-blue m-t-2-xs w-full-xs">
                                 <span>Commencez MAINTENANT !
                                 <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 11 12" class="play-icon">
@@ -284,12 +284,12 @@ header,svg{display:none;}
                     </div>
                     <div class="col col-50-lg m-t-2-xs m-t-0-lg">
 
-                        
+
                         <div style="text-align: center;" class="form-card m-b-0-xs homepage2018">
                             <p class="trial-banner bg-gray-light text-color-dark">
                                 Commencez dès maintenant <span class="regular">et sans engagement</span>
                             </p>
-                            <img style="border-radius: 8px;/*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/width:100%;" src="https://oschoolelearning.com/images/courses/logos/1587496536.jpg" alt="">
+                            <img style="border-radius: 8px;/*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/width:100%;" src="/images/divers/tl.jpg" alt="">
                            {{-- <!--
                             <form class="new_account_signup" id="signupForm" data-featurette="Treehouse.SimpleSignupForm" action="/subscribe/register_free_trial" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"
                                   class="placeholder-processed"><input type="hidden" name="authenticity_token" value="6/X13Mh0nk1E+2Xscuq2IhcwJKqhoKgnQS7cfvJrrUwWyNHIzUawYe432n3ljIQzP6hWDrQK9+RAYVO1EvC3Ww==" class="placeholder-processed">
@@ -352,7 +352,7 @@ header,svg{display:none;}
 
                     </div>
                 </div>
-                
+
                 <div class="col-container col-max flex-block-xs flex-justify-center-xs flex-wrap-xs m-t-5-xs">
                     {{--
                     <div class="m-lr-2-xs m-b-1-xs m-b-0-md text-center-xs">
@@ -369,7 +369,7 @@ header,svg{display:none;}
                     </div>
                     --}}
                 </div>
-                
+
             </section>
         </header>
 
