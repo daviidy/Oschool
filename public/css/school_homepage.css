@@ -296,10 +296,13 @@
    background: -o-linear-gradient(left, #1ea69a 24%, #e9723d 100%); /* Opera 11.10+ */
    background: -ms-linear-gradient(left, #1ea69a 24%, #e9723d 100%); /* IE10+ */
   }
+
+
   .nav-menu .container{position:relative;padding-left:30px;padding-right:30px;}
   .nav-menu .teachable-logo{margin-top:17px;float:left;width:142px;height:27px;background-image:url(https://teachable.com/assets/teachable-logo-white-efd32576079839534d5b6e87bf4424e99b12624f854b2c500a4d3f0b6e2af46b.svg);background-repeat:no-repeat;}
   @media (max-width: 767px){
   .nav-menu .teachable-logo{text-align:center;display:inline-block;}
+  .navbar-collapse li .menu_link{color: #2c2f33!important;}
   }
   @media (min-width: 992px){
   .nav-menu ul{float:left;margin-left:30px;}
@@ -327,7 +330,6 @@
   }
   .nav-menu li>a:focus,.nav-menu .log-in:focus{color:white;}
   .nav-menu .create-course,.nav-menu .log-in{float:right;}
-  .nav-menu a {color: #fff!important}
   @media (max-width: 767px){
   .nav-menu .create-course,.nav-menu .log-in{display:none;}
   }
@@ -855,7 +857,7 @@
   *:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
   body{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:14px;line-height:1.428571429;color:#333333;background-color:#fff;}
   input,button{font-family:inherit;font-size:inherit;line-height:inherit;}
-  a{color:#337ab7;text-decoration:none;}
+  a{color:#337ab7;text-decoration:none!important;}
   a:hover,a:focus{color:#23527c;text-decoration:underline;}
   a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
   img{vertical-align:middle;}
