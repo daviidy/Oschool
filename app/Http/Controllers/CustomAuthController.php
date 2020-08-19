@@ -8,6 +8,7 @@ use App\Course;
 use App\School;
 use Auth;
 use Illuminate\Support\Facades\Session;
+use Validator;
 
 class CustomAuthController extends Controller
 {
@@ -82,6 +83,10 @@ class CustomAuthController extends Controller
         ]);
         */
 
+        $name = $request->name;
+    	$email 		= $request->email; // request coming from ajax
+    	$password 	= $request->password; // request comming from ajax
+
         $validator = Validator::make($request->all(), [
               'name.*' => 'required|min:1',
               'email.*' => 'required',
@@ -98,13 +103,17 @@ class CustomAuthController extends Controller
               $user->email    = $email;
               $user->password = $hash_password;
               $user->save();
+
+              Auth::loginUsingId($user->id, true);
+
+              return redirect('/course/'.$request->slug.'/checkout/'.$request->pricing);
           }
-
-
+          else {
+              return redirect()->back()->with('status', 'Erreur. veuillez vous reconnecter');
+          }
 
         //\App\User::create($validator);
 
-        return redirect()->back()->with('status', 'Votre compte a bien été créé. Veuillez vous connecter maintenant.');
      }
 
 
@@ -121,6 +130,65 @@ class CustomAuthController extends Controller
 			return redirect()->back()->with('status', 'Authenfication échouée');
 		}
     }
+
+
+    public function registerBusiness(Request $request)
+    {
+        /*
+        $validator = $request->validate([
+          'name'      => 'required|min:1',
+          'email'     => 'required',
+          'password'  => 'required|min:6'
+        ]);
+        */
+
+        $name = $request->name;
+        $email 		= $request->email; // request coming from ajax
+        $password 	= $request->password; // request comming from ajax
+
+        $validator = Validator::make($request->all(), [
+              'name.*' => 'required|min:1',
+              'email.*' => 'required',
+              'password'  => 'required|min:6'
+          ]);
+
+          if ($validator->passes()) {
+              $password 	= $request->password;
+
+              $hash_password = bcrypt($password);
+
+              $user = new User();
+              $user->name    = $name;
+              $user->email    = $email;
+              $user->password = $hash_password;
+              $user->save();
+
+              Auth::loginUsingId($user->id, true);
+
+              return redirect('/checkoutPartners/'.$request->offer);
+          }
+          else {
+              return redirect()->back()->with('status', 'Erreur. veuillez vous reconnecter');
+          }
+
+        //\App\User::create($validator);
+
+     }
+
+
+    public function authenticateBusiness(Request $request)
+   {
+       $email	       = $request->email;
+       $password      = $request->password;
+       $rememberToken = $request->remember;
+       // now we use the Auth to Authenticate the users Credentials
+       // Attempt Login for members
+       if (Auth::guard('web')->attempt(['email' => $email, 'password' => $password], $rememberToken)) {
+           return redirect('/checkoutPartners/'.$request->offer);
+       } else {
+           return redirect()->back()->with('status', 'Authenfication échouée');
+       }
+   }
 
 
 

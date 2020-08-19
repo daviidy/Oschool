@@ -27,12 +27,12 @@
               {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li> --}}
             </ul>
         -->
-        @auth
+            @auth
             <a href="/course/{{$course->slug}}/checkout/{{$pricing->id}}" class="btn btn-block btn-primary text-uppercase">S'inscrire</a>
-          @endauth
-          @guest
-          <a href="#" class="btn btn-block btn-primary text-uppercase" data-toggle="modal" data-target="#modalLogin">S'inscrire</a>
-          @endguest
+            @endauth
+              @guest
+              <a href="#" class="btn btn-block btn-primary text-uppercase" data-toggle="modal" data-target="#modalLogin{{$pricing->id}}">S'inscrire</a>
+              @endguest
           </div>
         </div>
       </div>

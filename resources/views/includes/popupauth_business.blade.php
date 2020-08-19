@@ -1,8 +1,7 @@
 
 
-@foreach($course->pricings as $pricing)
-    @if($pricing->status == "1")
-    <div class="modal fade" id="modalLogin{{$pricing->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+@foreach($offers as $offer)
+    <div class="modal fade" id="modalLogin{{$offer->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -12,7 +11,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form class="" action="/customLogin" method="post">
+          <form class="" action="/customLoginBusiness" method="post">
               @csrf
 
               <div class="modal-body mx-3">
@@ -20,8 +19,7 @@
                 <div class="md-form mb-5">
                   <label data-error="wrong" data-success="right" for="orangeForm-email">Email</label>
                   <input type="email" name="email" id="orangeForm-email" class="form-control validate">
-                  <input hidden type="text" name="slug" value="{{$pricing->course->slug}}">
-                  <input hidden type="text" name="pricing" value="{{$pricing->id}}">
+                  <input hidden type="text" name="offer" value="{{$offer->id}}">
                 </div>
 
                 <div class="md-form mb-4">
@@ -49,8 +47,8 @@
               </div>
           </form>
           <div class="modal-footer d-flex justify-content-center">
-            <p>Pas de compte ?
-              <a href="#" class="log" data-toggle="modal" data-target="#modalRegisterForm{{$pricing->id}}" data-dismiss="modal" aria-label="Close">s'inscrire</a>
+            <p>Pas de compte
+              <a href="#" class="log" data-toggle="modal" data-target="#modalRegisterForm{{$offer->id}}" data-dismiss="modal" aria-label="Close">s'inscrire</a>
             </p>
           </div>
         </div>
@@ -61,7 +59,7 @@
 
                       <!--===== REGISTER FORM   =======-->
 
-    <div class="modal fade" id="modalRegisterForm{{$pricing->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    <div class="modal fade" id="modalRegisterForm{{$offer->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -71,7 +69,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form class="" action="/customRegister" method="post">
+          <form class="" action="/customRegisterBusiness" method="post">
               @csrf
               <div class="modal-body mx-3">
                 <div class="md-form mb-5">
@@ -81,8 +79,7 @@
                 <div class="md-form mb-5">
                   <label data-error="wrong" data-success="right" for="orangeForm-email">Email</label>
                   <input name="email" type="email" id="orangeForm-email" class="form-control validate">
-                  <input hidden type="text" name="slug" value="{{$pricing->course->slug}}">
-                  <input hidden type="text" name="pricing" value="{{$pricing->id}}">
+                  <input hidden type="text" name="offer" value="{{$offer->id}}">
                 </div>
 
                 <div class="md-form mb-4">
@@ -104,7 +101,6 @@
       </div>
     </div>
 
-    @endif
     @endforeach
 
                         <!--===== END REGISTER FORM   =======-->

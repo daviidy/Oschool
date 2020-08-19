@@ -63,7 +63,9 @@ Auth::routes();
 Route::post('/register/user', 'CustomAuthController@addUser');
 Route::post('/login/user', 'CustomAuthController@loginUser');
 Route::post('/customRegister', 'CustomAuthController@register');
+Route::post('/customRegisterBusiness', 'CustomAuthController@registerBusiness');
 Route::post('/customLogin', 'CustomAuthController@authenticate');
+Route::post('/customLoginBusiness', 'CustomAuthController@authenticateBusiness');
 
 Route::get('/users/billings', 'UserController@billings')->name('users.billings');
 
