@@ -29,11 +29,11 @@
 
                 <div class="md-form mb-4 text-center">
                   <label class="checkbox-label">
-                    <input {{ old('remember') ? 'checked' : '' }} id="remember" default="default" type="checkbox" name="remember" class="terms-of-service-checkbox">Se souvenir de moi</a>
+                    <input {{ old('remember') ? 'checked' : '' }} id="remember" default="default" type="checkbox" name="remember" class="terms-of-service-checkbox">Se souvenir de moi
                   </label>
 
                   @if (Route::has('password.request'))
-                                  <a style="margin-bottom: 20px;" class="btn btn-link" href="{{ route('password.request') }}">
+                                  <a style="margin-bottom: 0px;" class="btn btn-link" href="{{ route('password.request') }}">
                                       {{ __('Mot de passe oublié?') }}
                                   </a>
                   @endif
@@ -47,8 +47,8 @@
               </div>
           </form>
           <div class="modal-footer d-flex justify-content-center">
-            <p>Pas de compte
-              <a href="#" class="log" data-toggle="modal" data-target="#modalRegisterForm{{$offer->id}}" data-dismiss="modal" aria-label="Close">s'inscrire</a>
+            <p>Pas de compte?
+              <a href="#" class="log btn btn-link" data-toggle="modal" data-target="#modalRegisterForm{{$offer->id}}" data-dismiss="modal" aria-label="Close">S'INSCRIRE</a>
             </p>
           </div>
         </div>
@@ -97,6 +97,12 @@
                 <button class="btn btn-deep-orange">S'inscrire</button>
               </div>
           </form>
+
+          <div class="modal-footer d-flex justify-content-center">
+            <p>Avez-vous un compte?
+              <a href="#" class="reg" data-toggle="modal" data-target="#modalLogin{{$offer->id}}" data-dismiss="modal" aria-label="Close">CONNECTEZ-VOUS!</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
