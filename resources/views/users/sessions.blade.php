@@ -1,5 +1,5 @@
 @extends('layouts.menu-dashboard-user')
-@section('title', 'Mes écoles et cours')
+@section('title', 'Mes sessions')
 
 @section('content')
 
@@ -927,9 +927,14 @@ h4{font-family:"Montserrat", sans-serif;-webkit-hyphens:none;-ms-hyphens:none;hy
                       {{ Carbon\Carbon::parse($classroom->date)->format('d-m-Y H:i') }}
                   </h5>
                   @if(Carbon\Carbon::parse($classroom->date) < Carbon\Carbon::now() && $classroom->users->contains(Auth::user()->id))
+                  <!--
                   <a style="font-size: 2rem;text-decoration: none;" href="#ex{{$classroom->id}}" rel="modal:open" class="btn btn-primary-inverted stretched-link mt-2 mt-lg-0 ml-auto">
-                      Voir le compte rendu <i class="fa fa-arrow-right"></i>
+                      Participer <i class="fa fa-arrow-right"></i>
                   </a>
+              -->
+              <a style="font-size: 2rem;text-decoration: none;" href="{{$classroom->link}}" target="_blank" class="btn btn-primary-inverted stretched-link mt-2 mt-lg-0 ml-auto">
+                  Participer <i class="fa fa-arrow-right"></i>
+              </a>
                   @elseif($classroom->users->contains(Auth::user()->id))
                   <a style="font-size: 2rem;text-decoration: none;" class="btn btn-primary-inverted stretched-link mt-2 mt-lg-0 ml-auto">
                       A venir <i class="fa fa-arrow-right"></i>
