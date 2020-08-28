@@ -8,10 +8,13 @@
 <!--bouton call to action-->
 <style media="screen">
 /*! CSS Used from: https://www.udacity.com/styles.0412f4d3de5fb86b36a8.css */
+.nav-menu a {
+    color: #fff!important;
+}
 a{background-color:transparent;}
 a{border-bottom:none;text-decoration:none;-webkit-transition:color 0.3s ease;transition:color 0.3s ease;}
 a:active,a:focus,a:hover{color:#24292d;}
-.button,.button--blue,.button--white{display:block;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-align:center;white-space:nowrap;vertical-align:top;text-decoration:none;vertical-align:middle;height:3rem;padding:0 0.5rem;text-transform:uppercase;font-size:16px;font-weight:600;font-size:0.813rem;line-height:2.625rem;-webkit-font-smoothing:antialiased;border-radius:0.25rem;letter-spacing:0.125rem;-webkit-transition:all 0.3s ease;transition:all 0.3s ease;}
+.button,.button--blue,.button--white{display:block;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-align:center;white-space:nowrap;vertical-align:top;text-decoration:none;vertical-align:middle;height:4rem;padding:0 0.5rem;text-transform:uppercase;font-size:16px;font-weight:600;font-size:0.813rem;line-height:2.625rem;-webkit-font-smoothing:antialiased;border-radius:0.25rem;letter-spacing:0.125rem;-webkit-transition:all 0.3s ease;transition:all 0.3s ease;}
 .button--blue,.button--white{box-shadow:8px 10px 20px 0px rgba(46, 61, 73, 0.15);}
 .button--blue:hover,.button--white:hover{box-shadow:2px 4px 8px 0px rgba(46, 61, 73, 0.2);}
 .button--blue{width:13.75rem;color:#fff;background-color:#4D90CC;border:0.125rem solid transparent;}
@@ -29,7 +32,7 @@ a:active,a:focus,a:hover{color:#24292d;}
 }
 a.button--white[_ngcontent-iridium-us-c23]{background:#fff;color:#4D90CC;}
 a.button--white[_ngcontent-iridium-us-c23]:hover{color:#fff;background:#4D90CC;}
-.btn[_ngcontent-iridium-us-c23]{letter-spacing:0.125rem;display:block;width:17.5rem;margin:0.35rem auto;}
+.btn[_ngcontent-iridium-us-c23]{letter-spacing:0.125rem;display:block;width:27.5rem;margin:0.35rem auto;}
 @media screen and (min-width: 48rem){
 .btn[_ngcontent-iridium-us-c23]{display:inline-block;margin:0 0.35rem;}
 }

@@ -1,4 +1,124 @@
+<style type="text/css">
+  body{
+      font-family: TeachableSans-Regular;
 
+  }
+  .modal-footer a{
+    color: #4d90cc;
+    font-weight: 500;
+  }
+  .modal .modal-dialog .modal-header {
+    padding-top: 40px;
+    padding-bottom: 22px;
+}
+.modal .modal-dialog .modal-header, .modal .modal-dialog .modal-body {
+    border: 0;
+    padding: 40px;
+}
+.modal-header {
+    border-bottom: 0px;
+    z-index: 1300 !important;
+}
+.modal-header {
+    min-height: 16.43px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal .modal-dialog .modal-header .modal-title {
+    font-weight: 600;
+    font-size: 22px;
+    color: #2b3636;
+    padding-left: 10px;
+}
+
+.modal .modal-dialog .modal-header .close {
+    opacity: 1;
+    font-weight: 100;
+    font-size: 40px;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.modal .modal-header .close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #cadae9;
+}
+
+.modal .modal-dialog .modal-body {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left!important;
+}
+
+input.form-control {
+    padding: 5px 10px;
+    height: 40px;
+    font-weight: 200;
+    margin-bottom: 14px;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.modal .modal-dialog .modal-footer {
+    background: none;
+    border: 0;
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+
+.modal .modal-dialog .modal-footer .btn {
+    margin-right: 10px;
+    font-weight: 600;
+}
+.btn-deep-orange {
+    color: #fff;
+    background-color: #4d90cc !important;
+    padding: 10px 24px!important;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.justify-content-center {
+    text-align: center !important;
+}
+</style>
 
 @foreach($course->pricings as $pricing)
     @if($pricing->status == "1")
@@ -32,13 +152,17 @@
                 <div class="md-form mb-4 text-center">
                   <label class="checkbox-label">
                     <input {{ old('remember') ? 'checked' : '' }} id="remember" default="default" type="checkbox" name="remember" class="terms-of-service-checkbox">Se souvenir de moi</a>
-                  </label>
 
-                  @if (Route::has('password.request'))
-                                  <a style="margin-bottom: 20px;" class="btn btn-link" href="{{ route('password.request') }}">
+
+                    @if (Route::has('password.request'))
+                                  <a style="margin-bottom: 0px;" class="btn btn-link" href="{{ route('password.request') }}">
                                       {{ __('Mot de passe oublié?') }}
                                   </a>
                   @endif
+
+                  </label>
+
+                  
 
 
                 </div>
@@ -50,7 +174,7 @@
           </form>
           <div class="modal-footer d-flex justify-content-center">
             <p>Pas de compte ?
-              <a href="#" class="log" data-toggle="modal" data-target="#modalRegisterForm{{$pricing->id}}" data-dismiss="modal" aria-label="Close">s'inscrire</a>
+              <a href="#" class="log btn btn-link" data-toggle="modal" data-target="#modalRegisterForm{{$pricing->id}}" data-dismiss="modal" aria-label="Close">S'INSCRIRE</a>
             </p>
           </div>
         </div>
@@ -100,6 +224,11 @@
                 <button class="btn btn-deep-orange">S'inscrire</button>
               </div>
           </form>
+          <div class="modal-footer d-flex justify-content-center">
+            <p>Avez-vous un compte ?
+              <a href="#" class="log btn btn-link" data-toggle="modal" data-target="#modalLogin{{$pricing->id}}" data-dismiss="modal" aria-label="Close">CONNECTEZ-VOUS!</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
