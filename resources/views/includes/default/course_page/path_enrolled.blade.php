@@ -829,8 +829,8 @@ img{max-width:100%;}
     <div class="video_box">
     	<h2>Comment se déroule cette spécialisation?</h2>
     	<div class="video_content">
-    		
-    		<iframe width="853" height="480" src="https://www.youtube.com/embed/EXWeORTaxIw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PLbCvJ1xrRs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     	</div>
     </div>
     <div style="margin-bottom: 25px;height: 15%"></div>
