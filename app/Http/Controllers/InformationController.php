@@ -6,6 +6,7 @@ use App\Information;
 use App\Course;
 use App\School;
 use Auth;
+use Mail;
 use Illuminate\Http\Request;
 
 class InformationController extends Controller
@@ -42,14 +43,38 @@ class InformationController extends Controller
     {
         //
         $information = Information::create($request->all());
+        $author = Auth::user();
         if(is_array($request->courses_id))
         {
             foreach($request->courses_id as $course_id)
+            if ($course_id !== 'all')
             {
                 $course_found = Course::find($course_id);
                 $information->courses()->attach($course_found);
             }
-        }
+            //si on veut envoyer à toute l'école
+            else {
+                $school = School::find($request->school_id);
+                foreach($school->courses as $course){
+                    if (count($course->users) > 0) {
+                        $information->courses()->attach($course);
+                    }
+                }
+            }//fin else
+
+            //envoi mail aux étudiants ciblés
+            foreach ($information->courses as $course) {
+                foreach ($course->users as $user) {
+                    Mail::send('mails.users.informations.invite', ['information' => $information, 'user' => $user, 'author' => $author], function($message) use($user){
+                      $message->to($user->email, 'Nouveau message de vos formateurs')->subject('Nouveau message de vos formateurs');
+                      $message->from('eventsoschool@gmail.com', 'Oschool');
+                    });
+                }
+            }
+
+        }//fin grand if
+
+
 
         return back()->with('status', 'Nouvelle information ajoutée');
     }
