@@ -226,7 +226,42 @@ h1{font-size:36px;}
 @media only screen and (max-width: 780px){
 .dwPCQe{-webkit-box-align:center;align-items:center;}
 }
+#lecture_heading a {
+ border-radius: 6px;
+ font-size: 15px;
+ font-weight: 900;
+ line-height: 15px;
+ padding: 18px 19px 17px 19px;
+ -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .15);
+ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .15);
+ color: #fafafa;
+ white-space: nowrap;
+ -webkit-transition: background-color .5s, -webkit-box-shadow .5s, -webkit-transform .5s;
+ transition: background-color .5s, -webkit-box-shadow .5s, -webkit-transform .5s;
+ transition: background-color .5s, box-shadow .5s, transform .5s;
+ transition: background-color .5s, box-shadow .5s, transform .5s, -webkit-box-shadow .5s, -webkit-transform .5s;
+ background-color: #4d90cc;
+ border: none;
+ color: #fff;
+}
 
+#certif a {
+  border-radius: 6px;
+     font-size: 15px;
+     font-weight: 900;
+     line-height: 15px;
+     padding: 15px 19px 15px 19px;
+     -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .15);
+     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .15);
+     color: #fafafa;
+     white-space: nowrap;
+     -webkit-transition: background-color .5s, -webkit-box-shadow .5s, -webkit-transform .5s;
+     transition: background-color .5s, -webkit-box-shadow .5s, -webkit-transform .5s;
+     transition: background-color .5s, box-shadow .5s, transform .5s;
+     transition: background-color .5s, box-shadow .5s, transform .5s, -webkit-box-shadow .5s, -webkit-transform .5s;
+     background-color: #fff border: none;
+     color: #a26c08;
+}
 </style>
 
 
@@ -275,7 +310,41 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 .eBqjAL{font-weight:600;margin:0px 16px;}
 .fjEdZT{width:90px;height:90px;overflow:visible;}
 .fjEdZT > svg{height:90px;width:90px;overflow:visible;}
+#header .navbar .navbar-end {
+    max-width: calc(50vw - 110px);
+}
+#header .navbar .navbar-end, #header .navbar .navbar-start {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1;
+}
+@media screen and (min-width: 1024px){
+.navbar-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+}
 
+.mr-1 {
+    margin-right: .25rem !important;
+}
+.mr-1 {
+    margin-right: 1rem !important;
+}
+
+
+.mr-1 btn-primary {
+    background: #4d90cc!important;
+    border: 1px solid #4a90cc!important;
+    font-weight: 800!important;
+    color: #fff;
+    border-radius: 20px;
+    padding: 7px 18px!important;
+    text-transform: uppercase!important;
+}
 </style>
 
 @endif
@@ -296,6 +365,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
       TERMINÉ
     </div>
     <div class="small1">
+      {{--
         @if(count($lesson->section->course->school->communities) > 0)
       <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">
           <a href="{{$lesson->section->course->school->communities->first()->link}}" target="_blank">
@@ -303,8 +373,8 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
           </a>
       </p>
       @endif
-
-      <p style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">
+      --}}
+      <p id="certif" style="padding-bottom: 0px;text-transform: uppercase;font-size: 15px; color: #000; font: menu;">
           <a href="/certificate/{{$lesson->course_id}}">
           <strong>Certificat de réussite</strong>
           </a>
@@ -345,6 +415,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                 <span class="lecture-name">
                   {{$section_lesson->title ? $section_lesson->title : 'Nouvelle leçon'}}
                 </span>
+
               </div>
             </a>
           </li>
@@ -390,7 +461,15 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
     <img width="50" src="/images/lessons/images/{{$lesson->image ? $lesson->image : 'image.png'}}" alt="">
     &nbsp;
     {{$lesson->title}}
+@if(count($lesson->section->course->school->communities) > 0)
+    <div class="navbar-end " style="float: right!important;position: relative;left: 519px;">
+        <a class="mr-1 frk-action-button-red-inverted" href="{{$lesson->section->course->school->communities->first()->link}}" target="_blank" style="display: inline-block;">
+          Communauté
+        </a>
+    </div>
+    @endif
   </h2>
+
 
   @if($lesson->section->drip && $status == '0')
 
