@@ -60,7 +60,7 @@
         margin-top: 20px!important;
         margin-bottom: 20px!important;
     }
-    @media only screen and (min-width: 992px)
+    @media only screen and (min-width: 992px){
     .centered {
         width: 960px;
         margin: auto;
@@ -183,6 +183,7 @@
     top: 20px;
     color: #4D90CC;
 }
+}
     </style>
 
 
@@ -231,6 +232,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             @endif
                             <li class="nav-item-settings {{\Route::current()->getName() == 'users.sessions' ? 'selected' : ''}}">
                                 <a href="/users/sessions">Mes sessions</a>
+                            </li>
+                            <li class="nav-item-settings {{\Route::current()->getName() == 'users.notifications' ? 'selected' : ''}}">
+                                <a href="/users/notifications">Mes notifications</a>
                             </li>
                             <li class="nav-item-settings {{\Route::current()->getName() == 'users.settings' ? 'selected' : ''}}">
                                 <a href="/users/settings">Mes paramètres</a>
@@ -286,6 +290,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     @endif
                     <li class="nav-item-settings {{\Route::current()->getName() == 'users.sessions' ? 'selected' : ''}}">
                         <a href="/users/sessions">Mes sessions</a>
+                    </li>
+                    <li class="nav-item-settings {{\Route::current()->getName() == 'users.notifications' ? 'selected' : ''}}">
+                        <a href="/users/notifications">Mes notifications</a>
                     </li>
                     <li class="nav-item-settings {{\Route::current()->getName() == 'users.settings' ? 'selected' : ''}}">
                         <a href="/users/settings">Mes paramètres</a>
