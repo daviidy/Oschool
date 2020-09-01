@@ -1,4 +1,5 @@
-@extends('layouts.menu-school')
+@extends('layouts.menu-dashboard-user')
+
 @section('title', 'Tableau de bord')
 
 @section('content')
@@ -428,6 +429,10 @@
 
   .forum-comment {
     transition: background-color, .3s;
+    width: 70%;
+    float: right;
+    margin: 25px!important;
+    background: #fff;
   }
 
   @media (max-width:768px) {
@@ -441,6 +446,7 @@
       border-bottom: 1px;
       border-color: rgba(246, 246, 246, var(--border-opacity));
       border-style: solid;
+      width: 90%;
     }
   }
 
