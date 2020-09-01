@@ -464,7 +464,7 @@
                             </div>
                             {{-- <input style="display: none;" type="hidden" name="project_id" value="{{$project->id}}"> --}}
                             {{-- <input style="display: none;" type="hidden" name="user_id" value="{{Auth::user()->id}}"> --}}
-                            <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Créé la notification</button></div>
+                            <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block disabled">Créé la notification</button></div>
                         </div>
                     </div>
                     <!---->
@@ -475,7 +475,15 @@
             </div><br>
             @include('includes.information')
         </div>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $("form").submit(function(){
+                $(".disabled").hide();
+                $(".add-top-margin").append('<p class="tch-btn-header-primary-block" style="font-size:15px;">Envoi en cours...</p>.')
+              });
+            });
+        </script>
 
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
