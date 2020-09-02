@@ -50,6 +50,10 @@ Route::get('/wecash', function () {
     return view('pricings.wecash');
 });
 
+Route::get('/notif', function () {
+    return view('users.notifications');
+});
+
 Route::get('/corporate', 'OfferController@corporate')->name('corporate');
 
 
