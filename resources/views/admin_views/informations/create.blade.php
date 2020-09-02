@@ -468,11 +468,8 @@
                             </div>
                             {{-- <input style="display: none;" type="hidden" name="project_id" value="{{$project->id}}"> --}}
                             {{-- <input style="display: none;" type="hidden" name="user_id" value="{{Auth::user()->id}}"> --}}
-<<<<<<< HEAD
                             <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block">Envoyer la notification</button></div>
-=======
-                            <div class="col-sm-12 add-top-margin"><button id="test-id-save-btn" type="submit" ng-disabled="!inlinePricingForm.$valid" class="tch-btn-header-primary-block disabled">Créé la notification</button></div>
->>>>>>> bcd69efd4ab88abd382cf551d97f42d57dbbd875
+
                         </div>
                     </div>
                     <!---->
