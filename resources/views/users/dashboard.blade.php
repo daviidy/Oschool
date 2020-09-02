@@ -291,7 +291,7 @@ src: url(data:application/vnd.ms-fontobject;base64,/qYAAOylAAABAAIAAAAAAAAABQAAA
             @endforeach
         @endif
 
-    @if(count(Auth::user()->schools) > 0)
+  {{--  @if(count(Auth::user()->schools) > 0)
     <h1>Les écoles dans lesquelles je suis inscrit</h1>
     <div class="schools-list ">
         @foreach(Auth::user()->schools as $school)
@@ -305,7 +305,7 @@ src: url(data:application/vnd.ms-fontobject;base64,/qYAAOylAAABAAIAAAAAAAAABQAAA
         </a>
         @endforeach
     </div>
-    @endif
+    @endif--}}
 
     @if(count(Auth::user()->courses) > 0)
     <h1>Mes cours</h1>
