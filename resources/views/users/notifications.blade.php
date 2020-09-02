@@ -456,7 +456,7 @@
     }
   }
 
-  @media (min-width:768px) {
+  /*@media (min-width:768px) {
     .forum-comment:not(.is-best):not(.is-admin):hover {
       --bg-opacity: 1;
       background-color: #f6f6f6;
@@ -464,7 +464,7 @@
       border-radius: .5rem;
     }
   }
-
+*/
   .forum-comment .forum-comment-edit-links {
     top: 4px;
   }

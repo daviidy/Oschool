@@ -220,13 +220,14 @@ h1{font-size:36px;}
 }
 @media only screen and (max-width: 480px){
 .fAJiCk .main-img{width:220px;margin-top:-30px;}
+#lecture_heading_c{float: none!important}
 }
 .ieGesu{margin-top:20px;}
 .dwPCQe{display:flex;flex-direction:column;}
 @media only screen and (max-width: 780px){
 .dwPCQe{-webkit-box-align:center;align-items:center;}
 }
-#lecture_heading a {
+#lecture_heading_c a {
  border-radius: 6px;
  font-size: 15px;
  font-weight: 900;
@@ -461,15 +462,14 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
     <img width="50" src="/images/lessons/images/{{$lesson->image ? $lesson->image : 'image.png'}}" alt="">
     &nbsp;
     {{$lesson->title}}
-@if(count($lesson->section->course->school->communities) > 0)
-    <div class="navbar-end " style="float: right!important;position: relative;left: 519px;">
-        <a class="mr-1 frk-action-button-red-inverted" href="{{$lesson->section->course->school->communities->first()->link}}" target="_blank" style="display: inline-block;">
-          Communauté
-        </a>
-    </div>
-    @endif
   </h2>
-
+  @if(count($lesson->section->course->school->communities) > 0)
+      <div id="lecture_heading_c" class="navbar-end " style="float:right">
+          <a class="mr-1 frk-action-button-red-inverted" href="{{$lesson->section->course->school->communities->first()->link}}" target="_blank" style="display: inline-block;">
+            Communauté
+          </a>
+      </div>
+      @endif
 
   @if($lesson->section->drip && $status == '0')
 
