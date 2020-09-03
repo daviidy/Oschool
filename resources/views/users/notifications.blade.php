@@ -1361,18 +1361,31 @@
   <div class="forum-main lg:tw-flex">
     <div class="lg:tw-flex-1">
       <!---->
+
+
+      <!--on vérifie si l'utilisateur est inscrit à au moins une école-->
+          @if(count(Auth::user()->schools) > 0)
+             <!--si oui, pour chaque école dans laquelle il est inscrit-->
+                  @foreach(Auth::user()->schools as $school)
+                      <!--on parcourt chaque information de cette école-->
+                      @foreach($school->courses as $course)
+                          @foreach($course->informations->sortByDesc('created_at') as $information)
+                                <!--met ici le code HTML pour les infos-->
       <div class="forum-comment is-question tw-group md:tw-flex md:tw-pl-6 md:tw-px-6 md:tw--ml-4 tw-py-8 md:tw-py-4 tw--mt-4">
         <div class="mobile:tw-mb-3 md:tw-mr-6 mobile:tw-flex mobile:tw-items-center md:tw-items-start">
-          <a href="/@mu92" class="tw-block">
-            <img src="//www.gravatar.com/avatar/54ee1c636635bc93d0aecb974eb39d17?s=100&amp;d=https%3A%2F%2Fs3.amazonaws.com%2Flaracasts%2Fimages%2Fforum%2Favatars%2Favatar-18.png" alt="mu92's avatar" width="40" height="40" class="is-circle"></a>
-            <a href="/@mu92" class="tw-text-black link tw-font-bold md:tw-hidden tw-ml-4 tw-text-sm tw-flex-1 tw-leading-none">mu92</a>
+          <a target="_blank" href="{{$course->type == 'mooc' ? '/course/enrolled/'.$course->slug : '/path/'.$course->slug}}" class="tw-block">
+            <img src="/images/courses/logos/{{$course->logo}}" alt="{{$course->name}}" width="40" height="40" class="is-circle">
+        </a>
+            <a target="_blank" href="{{$course->type == 'mooc' ? '/course/enrolled/'.$course->slug : '/path/'.$course->slug}}" class="tw-text-black link tw-font-bold md:tw-hidden tw-ml-4 tw-text-sm tw-flex-1 tw-leading-none">{{$course->name}}</a>
           <!--div class="md:tw-hidden tw-flex tw-items-center"><a href="https://laracasts.com/discuss/channels/laravel" class="tw-btn tw-btn-channel is-laravel tw-py-2 tw-px-4 tw-text-2xs tw-block tw-text-center">
               Laravel
             </a></div-->
         </div>
         <div class="tw-flex-1 tw-relative">
-          <div class="mobile:tw-hidden tw-flex tw-mb-5 lg:tw-justify-between tw-items-center"><a href="/@mu92" class="tw-font-bold tw-font-lg tw-mr-2 tw-text-black">mu92</a> <span class="tw-text-grey-dark tw-pr-2">•</span>
-            <div class="tw-hidden md:tw-flex tw-items-end tw-leading-none tw-mr-4"><span class="tw-text-xs tw-text-grey-dark tw-flex-1"><strong class="tw-text-grey-dark">3 years ago</strong></span></div>
+          <div class="mobile:tw-hidden tw-flex tw-mb-5 lg:tw-justify-between tw-items-center">
+              <a href="/@mu92" class="tw-font-bold tw-font-lg tw-mr-2 tw-text-black">{{$course->name}}</a>
+              <span class="tw-text-grey-dark tw-pr-2">•</span>
+            <div class="tw-hidden md:tw-flex tw-items-end tw-leading-none tw-mr-4"><span class="tw-text-xs tw-text-grey-dark tw-flex-1"><strong class="tw-text-grey-dark">{{$information->created_at}}</strong></span></div>
             <div class="tw-hidden lg:tw-flex tw-mr-auto">
               <div class="achievement-list tw-flex tw-flex-1"></div>
             </div>
@@ -1396,27 +1409,19 @@
             </div-->
           </div>
           <h1 id="conversation-title" class="tw-bg-blue-lighter group-hover:tw-bg-grey-light tw-font-bold tw-text-black-transparent-75 tw-px-6 tw-py-4 tw-rounded tw-mb-2 md:tw-mb-6 tw-rounded-lg" style="word-break: break-word;">
-            how i undo php artisan storage:link
+            {!!$information->text!!}
           </h1>
           <div class="md:tw-hidden tw-leading-none tw-mb-4"><span class="tw-text-xs tw-text-grey-dark tw-flex-1">Posted <strong class="tw-text-grey-dark">3 years ago</strong> by <a href="/@mu92" class="tw-font-bold tw-text-blue link">mu92</a></span>
           </div>
-          <div id="conversation-body" class="content tw-text-black user-content tw-text-base md:tw-text-sm" style="">
-            <p>i run this command now i want to remove this, how i can undo this.</p>
-          </div>
-          <div class="forum-comment-edit-links tw-mt-4">
-            <div class="dropdown tw-relative">
-              <div aria-haspopup="true" class="dropdown-toggle"><button class="tw-font-bold hover:tw-text-blue">
-                  ...
-                </button></div>
-              <div class="dropdown-menu tw-absolute tw-z-10 tw-py-2 tw-rounded-lg tw-shadow tw-mt-2 tw-left-0 is-light" style="width: 200px; display: none;">
-                <li class="dropdown-menu-link"><a>
-                    Report Spam
-                  </a></li>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
+
+      @endforeach
+      @endforeach
+      @endforeach
+      @endif
+
     </div>
   </div>
 </div>

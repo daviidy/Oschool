@@ -233,7 +233,7 @@ src: url(data:application/vnd.ms-fontobject;base64,/qYAAOylAAABAAIAAAAAAAAABQAAA
 
 <div class="main my-teachable-dashboard">
 
-
+    <!--si user possede ecole-->
 
     @if(count(Auth::user()->createSchools) > 0)
     <h1>Les écoles que je possède</h1>
@@ -266,30 +266,9 @@ src: url(data:application/vnd.ms-fontobject;base64,/qYAAOylAAABAAIAAAAAAAAABQAAA
 
     </div>
     @endif
-
     @endif
-<!--on vérifie si l'utilisateur est inscrit à au moins une école-->
-    @if(count(Auth::user()->schools) > 0)
-       <!--si oui, pour chaque école dans laquelle il est inscrit-->
-            @foreach(Auth::user()->schools as $school)
-                <!--on parcourt chaque information de cette école-->
-                @foreach($school->courses as $course)
-                    @foreach($course->informations as $information)
-                          <!--met ici le code HTML pour les infos-->
-                          <div class="centered spacer">
-                              <div class="alertMessage alertMessage--info">
-                                  <span class="bullet bullet--small bullet--orange-alt alertMessage__icon"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                  <div class="alertMessage__text">
-                                    {!!$information->text!!}
-                                  </div>
-                                  <span class=" alertMessage__icon_left">Marquer comme lu</span>
-                              </div>
-                          </div>
-                          <!--n'oublie pas de mettre le style css tout en haut-->
-                    @endforeach
-                @endforeach
-            @endforeach
-        @endif
+
+
 
   {{--  @if(count(Auth::user()->schools) > 0)
     <h1>Les écoles dans lesquelles je suis inscrit</h1>
@@ -307,7 +286,64 @@ src: url(data:application/vnd.ms-fontobject;base64,/qYAAOylAAABAAIAAAAAAAAABQAAA
     </div>
     @endif--}}
 
-    @if(count(Auth::user()->courses) > 0)
+    <!--pour les specialisations-->
+    @if(count(Auth::user()->courses->where('type', 'path')) > 0)
+    <h1>Mes parcours</h1>
+    <div class="schools-list ">
+        @foreach(Auth::user()->courses as $course)
+        @if($course->type == 'path')
+        {{--
+        <a href="/course/enrolled/{{$course->slug}}" class="school-card school-has-default-thumbnail"
+          style="background-image: url('/images/courses/logos/{{$course->logo}}');" target="_blank">
+            <div class="school-info">
+                <p class="school-name">{{$course->name}}</p>
+                <p class="school-url">{{$course->subtilte}}</p>
+            </div>
+        </a>
+        --}}
+        <a style="text-decoration: none;" href="/path/{{$course->slug}}" target="_blank">
+            <div class="index__usageAndAppContainer--1qSo-">
+                <div class="index__appPanel--3Ku8J index__listPanel--28DUF index__smallerTopPadding--2bQKF">
+                  <!--span class="index__title--kFOnv">Project App</span-->
+                  <div class="index__InfoPanel--fXXMJ index__AppInfoPanel--1mhOd">
+                    <div class="index__iconLabelAndNameContainer--3pj38"><img alt="App icon" class="index__appIcon--3fNsM" src="/images/courses/logos/{{$course->logo}}">
+                      <div class="index__appNameAndLabel--Hlt-K">
+                        <div class="index__content--2vLRh">{{$course->name}}</div>
+                      </div>
+                    </div>
+                    <!--div class="index__linksContainer--gEcvB" data-testid="app-info-panel-links-container"><a href="/en/portal/projects/1297933854058176512/apps/18626638/settings">
+                        <div class="index__iconButton--u52Ds">
+                          <div class="index__iconButtonInner--hzQFP"><span class="Icon Icon--cog index__cogStyle--3uWz4" aria-expanded="false" data-feather-tooltip-target="" tabindex="0"></span></div>
+                        </div>
+                      </a><a href="/en/portal/projects/1297933854058176512/apps/18626638/keys">
+                        <div class="index__iconButton--u52Ds">
+                          <div class="index__iconButtonInner--hzQFP"><span aria-expanded="false" data-feather-tooltip-target="" tabindex="0"><img alt="keys" class="DevPortalIcon" height="25" src="https://ton.twimg.com/dataproducts/devportalvnext/dist/80e4f8c5f7469574bfa5420caa2f7c20.svg" width="25"></span></div>
+                        </div>
+                      </a></div-->
+                  </div>
+                </div>
+              </div>
+          </a>
+         {{--
+        @else
+        <a href="/path/{{$course->slug}}" class="school-card school-has-default-thumbnail"
+          style="background-image: url('/images/courses/logos/{{$course->logo}}');" target="_blank">
+            <div class="school-info">
+                <p class="school-name">{{$course->name}}</p>
+                <p class="school-url">{{$course->subtilte}}</p>
+            </div>
+        </a>
+        --}}
+        @endif
+
+        @endforeach
+    </div>
+    @endif
+
+    <!--pour les mooc-->
+
+    @if(count(Auth::user()->courses->where('type', 'mooc')) > 0)
+
     <h1>Mes cours</h1>
     <div class="schools-list ">
         @foreach(Auth::user()->courses as $course)
@@ -319,27 +355,8 @@ src: url(data:application/vnd.ms-fontobject;base64,/qYAAOylAAABAAIAAAAAAAAABQAAA
                 <p class="school-url">{{$course->subtilte}}</p>
             </div>
         </a>
-        <div class="index__usageAndAppContainer--1qSo-">
-            <div class="index__appPanel--3Ku8J index__listPanel--28DUF index__smallerTopPadding--2bQKF">
-              <!--span class="index__title--kFOnv">Project App</span-->
-              <div class="index__InfoPanel--fXXMJ index__AppInfoPanel--1mhOd">
-                <div class="index__iconLabelAndNameContainer--3pj38"><img alt="App icon" class="index__appIcon--3fNsM" src="https://pbs.twimg.com/app_img/1298187463337357313/0yn-GPYI?format=jpg&amp;name=73x73">
-                  <div class="index__appNameAndLabel--Hlt-K">
-                    <div class="index__content--2vLRh">Blog ReactJS</div>
-                  </div>
-                </div>
-                <!--div class="index__linksContainer--gEcvB" data-testid="app-info-panel-links-container"><a href="/en/portal/projects/1297933854058176512/apps/18626638/settings">
-                    <div class="index__iconButton--u52Ds">
-                      <div class="index__iconButtonInner--hzQFP"><span class="Icon Icon--cog index__cogStyle--3uWz4" aria-expanded="false" data-feather-tooltip-target="" tabindex="0"></span></div>
-                    </div>
-                  </a><a href="/en/portal/projects/1297933854058176512/apps/18626638/keys">
-                    <div class="index__iconButton--u52Ds">
-                      <div class="index__iconButtonInner--hzQFP"><span aria-expanded="false" data-feather-tooltip-target="" tabindex="0"><img alt="keys" class="DevPortalIcon" height="25" src="https://ton.twimg.com/dataproducts/devportalvnext/dist/80e4f8c5f7469574bfa5420caa2f7c20.svg" width="25"></span></div>
-                    </div>
-                  </a></div-->
-              </div>
-            </div>
-          </div>
+
+         {{--
         @else
         <a href="/path/{{$course->slug}}" class="school-card school-has-default-thumbnail"
           style="background-image: url('/images/courses/logos/{{$course->logo}}');" target="_blank">
@@ -348,11 +365,14 @@ src: url(data:application/vnd.ms-fontobject;base64,/qYAAOylAAABAAIAAAAAAAAABQAAA
                 <p class="school-url">{{$course->subtilte}}</p>
             </div>
         </a>
+        --}}
         @endif
-
         @endforeach
     </div>
-    @else
+
+    @endif
+
+    @if(count(Auth::user()->courses) == 0)
 
     <h1>Vous n'êtes inscrit à aucun cours pour le moment.</h1>
     <img style="width: 52%" src="/images/divers/no_course.png" alt="">

@@ -234,7 +234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <a href="/users/sessions">Mes sessions</a>
                             </li>
                             <li class="nav-item-settings {{\Route::current()->getName() == 'users.notifications' ? 'selected' : ''}}">
-                                <a href="notif">Mes notifications</a>
+                                <a href="/users/notifications">Mes notifications</a>
                             </li>
                             <li class="nav-item-settings {{\Route::current()->getName() == 'users.settings' ? 'selected' : ''}}">
                                 <a href="/users/settings">Mes paramètres</a>
@@ -292,7 +292,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <a href="/users/sessions">Mes sessions</a>
                     </li>
                     <li class="nav-item-settings {{\Route::current()->getName() == 'users.notifications' ? 'selected' : ''}}">
-                        <a href="/notif">Mes notifications</a>
+                        <a href="/users/notifications">Mes notifications</a>
                     </li>
                     <li class="nav-item-settings {{\Route::current()->getName() == 'users.settings' ? 'selected' : ''}}">
                         <a href="/users/settings">Mes paramètres</a>

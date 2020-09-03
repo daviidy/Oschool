@@ -75,6 +75,8 @@ Route::get('/users/billings', 'UserController@billings')->name('users.billings')
 
 Route::get('/users/sessions', 'UserController@sessions')->name('users.sessions');
 
+Route::get('/users/notifications', 'UserController@informations')->name('users.notifications');
+
 Route::get('/schools/{school}/courses', 'schoolController@showCourses');
 
 

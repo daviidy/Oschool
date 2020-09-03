@@ -181,6 +181,17 @@ class UserController extends Controller
 
     }
 
+    public function informations()
+    {
+        if (Auth::check()) {
+            return view('users.notifications');
+        }
+        else {
+            return redirect('home');
+        }
+
+    }
+
     /**
      * Remove the specified resource from storage.
      *
