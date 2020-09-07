@@ -709,7 +709,7 @@
   }
 
   .tw-text-xs {
-    font-size: .75rem;
+    font-size: 15px;
   }
 
   .tw-text-sm {
@@ -738,6 +738,7 @@
 
   .tw-mr-2 {
     margin-right: .5rem;
+    font-size: large;
   }
 
   .tw-mb-2 {
@@ -1374,7 +1375,7 @@
       <div class="forum-comment is-question tw-group md:tw-flex md:tw-pl-6 md:tw-px-6 md:tw--ml-4 tw-py-8 md:tw-py-4 tw--mt-4">
         <div class="mobile:tw-mb-3 md:tw-mr-6 mobile:tw-flex mobile:tw-items-center md:tw-items-start">
           <a target="_blank" href="{{$course->type == 'mooc' ? '/course/enrolled/'.$course->slug : '/path/'.$course->slug}}" class="tw-block">
-            <img src="/images/courses/logos/{{$course->logo}}" alt="{{$course->name}}" width="40" height="40" class="is-circle">
+            <img src="/images/courses/logos/{{$course->logo}}" alt="{{$course->name}}" style="width:100px; height:100px" width="150" height="150" class="is-circle">
         </a>
             <a target="_blank" href="{{$course->type == 'mooc' ? '/course/enrolled/'.$course->slug : '/path/'.$course->slug}}" class="tw-text-black link tw-font-bold md:tw-hidden tw-ml-4 tw-text-sm tw-flex-1 tw-leading-none">{{$course->name}}</a>
           <!--div class="md:tw-hidden tw-flex tw-items-center"><a href="https://laracasts.com/discuss/channels/laravel" class="tw-btn tw-btn-channel is-laravel tw-py-2 tw-px-4 tw-text-2xs tw-block tw-text-center">
