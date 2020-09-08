@@ -1438,7 +1438,7 @@ button.close{padding:0;background-color:transparent;border:0;}
                                 <div class="editable-error help-block ng-hide" ng-show="$error" ng-bind="$error" style=""></div>
                             </div>
                         </form>
-                        <div class="buttons pull-right">
+                        <div class="buttons pull-right pull-right_btn">
                             <a href="/schoolAdmin/{{$school->id}}/courses/{{$course->id}}/curriculum/{{$section->id}}/new-lecture">
                             <button ng-disabled="!lecture.id" ng-click="createNewLectureInSectionAndRedirect()" class="tch-btn-header-secondary fastclickable">Nouvelle leçon</button>
                         </a>
@@ -2056,7 +2056,15 @@ button.close{padding:0;background-color:transparent;border:0;}
       </div>
     </div>
   </div>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+      $(document).ready(function(){
+        $(".tch-btn-header-primary").click(function(){
+          $(this).hide();
+          $(".pull-right_btn").append('<p class="tch-btn-header-primary" style="">Mise à jour en cours...</p>')
+        });
+      });
+  </script>
 
   <script type="text/javascript">
 
