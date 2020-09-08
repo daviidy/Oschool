@@ -28,6 +28,7 @@ h1 a {
 }
 .price-table-wrapper .pricing-table {
   display: inline-table;
+  width: 20%;
   border: 1px solid #c8c8c8;
   border-radius: 10px;
   background: #fff;
@@ -123,7 +124,7 @@ h1 a {
 
 .recomandate{
   background-color: #d08859!important;
-  padding: 20px 20px 0px!important;
+  /*padding: 20px 20px 0px!important;*/
 }
 
 </style>
