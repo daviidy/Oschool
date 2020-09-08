@@ -89,8 +89,8 @@
         .tch-btn-header-icon:active{color:white;background-color:#ededed;border-color:#929292;}
         .tch-btn-header-icon:active:hover,.tch-btn-header-icon:active:focus{color:white;background-color:#dedede;border-color:#838383;}
         .tch-btn-header-icon:active{background-image:none;}
-        .tch-btn-header-icon:active,.tch-btn-header-icon:hover,.tch-btn-header-icon:focus{background:white;border-color:#ff7f45;color:#ff7f45;}
-        .tch-btn-header-icon:active:hover,.tch-btn-header-icon:active:focus,.tch-btn-header-icon:hover:hover,.tch-btn-header-icon:hover:focus,.tch-btn-header-icon:focus:hover,.tch-btn-header-icon:focus:focus{background:white;border-color:#ff7f45;color:#ff7f45;}
+        .tch-btn-header-icon:active,.tch-btn-header-icon:hover,.tch-btn-header-icon:focus{background:white;border-color:#6aace6;color:#6aace6;}
+        .tch-btn-header-icon:active:hover,.tch-btn-header-icon:active:focus,.tch-btn-header-icon:hover:hover,.tch-btn-header-icon:hover:focus,.tch-btn-header-icon:focus:hover,.tch-btn-header-icon:focus:focus{background:white;border-color:#6aace6;color:#6aace6;}
         .tch-btn-header-icon:focus{outline:0!important;}
         .tch-btn-header-icon:focus{outline:0!important;}
         .tch-btn-content-primary{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;color:white;background-color:#1ea69a;border:1px solid #1ea69a;}
@@ -139,7 +139,7 @@
         .tch-table > tbody > tr:nth-child(even){background-color:transparent;}
         .tch-table > tbody > tr:hover{background:#f5f6f7;}
         .tch-table img.tch-table-thumb{width:22px;margin-right:10px;float:left;}
-        .tch-btn-tooltip{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;padding:4px 5px!important;color:#ff7f45;}
+        .tch-btn-tooltip{padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;padding:4px 5px!important;color:#6aace6;}
         .tch-btn-tooltip:focus{outline:0!important;}
         .tch-btn-tooltip:hover,.tch-btn-tooltip:active,.tch-btn-tooltip:focus{color:#ff631c;-webkit-box-shadow:none;box-shadow:none;}
         @media screen and (max-width: 1000px){
@@ -177,11 +177,11 @@
         .tch-inline-form:before,.tch-inline-form:after{display:table;content:" ";}
         .tch-inline-form:after{clear:both;}
         .tch-inline-form div.btn-attached{padding-top:13px;font-weight:bold;-webkit-box-shadow:none!important;box-shadow:none!important;color:#0f8d82;height:49px;border-top-left-radius:4px;border-top-right-radius:4px;font-size:13px!important;-webkit-transition:0.1s all ease-in;transition:0.1s all ease-in;}
-        .tch-inline-form div.btn-attached:hover{color:#ff7f45;}
+        .tch-inline-form div.btn-attached:hover{color:#6aace6;}
         .tch-inline-form div.btn-attached:focus,.tch-inline-form div.btn-attached:active{outline:none;}
         .tch-inline-form .inline-form-wrapper{padding-left:50px;padding-right:50px;}
         .tch-inline-form-select{padding-bottom:70px;padding-top:40px;}
-        .tch-inline-form-select .inline-form-option{text-align:center;color:#ff7f45;}
+        .tch-inline-form-select .inline-form-option{text-align:center;color:#6aace6;}
         .tch-inline-form-select .inline-form-option img{width:100px;height:100px;}
         .tch-inline-form-select .inline-form-option:hover{cursor:pointer;}
         .tch-inline-form-select .inline-form-option:hover .inline-form-option-name{color:#4D90CC;}
@@ -427,10 +427,10 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .btn:hover,.btn:focus{color:white;text-decoration:none;}
 .btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);}
 [disabled]{cursor:default!important;pointer-events:none;}
-.tch-btn-header-primary-block{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
-.tch-btn-header-primary-block:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block{color:white;background-color:#6aace6;border:1px solid #6aace6;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
+.tch-btn-header-primary-block:focus{color:white;background-color:#4d90cc;border-color:#4d90cc;}
+.tch-btn-header-primary-block:hover{color:white;background-color:#4d90cc;border-color:#4d90cc;}
+.tch-btn-header-primary-block:active{color:white;background-color:#4d90cc;border-color:#4d90cc;}
 .tch-btn-header-primary-block:active:hover,.tch-btn-header-primary-block:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
 .tch-btn-header-primary-block:active{background-image:none;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
@@ -683,7 +683,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 
                         <bootstrap-decorator form="schemaForm.form[11]">
                             <div class="form-group schema-form-submit ">
-                                <!----><input type="submit" class="btn tch-btn-header-primary-block " value="Créez la session">
+                                <!----><input type="submit" class="btn tch-btn-header-primary-block " value="Modifiez la session">
                                 <!---->
                                 <!---->
                             </div>
@@ -699,7 +699,15 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
         </div>
 
 
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $("form").submit(function(){
+                $(".tch-btn-header-primary-block").hide();
+                $(".schema-form-submit").append('<input  class="btn tch-btn-header-primary-block " value="Modification en cours...">')
+              });
+            });
+        </script>
 
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
