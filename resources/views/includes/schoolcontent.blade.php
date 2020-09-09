@@ -191,7 +191,7 @@ header,svg{display:none;}
             }
             ._2 {
                 margin-bottom: 50px;
-                margin-top: 50px;
+                /*margin-top: 50px;*/
             }
 
             @media (max-width: 991px) {

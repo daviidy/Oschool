@@ -693,6 +693,8 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
     </div>
 
     <main class="contentContainer__2hNipbbqs3wX_aJ0xS9qxf contentContainer__1jAAu1zndUT3xNQdVbprTL">
+      @include('includes.menu_business_default')
+{{--
         <div class="container__3TWtjj2MEnV9meZq0ZjTTC">
             <h1 class="handle__sEzDhz5n_Lipz8sfgqzma"><img src="/images/users/default/{{Auth::user()->image}}" class="avatar__2tJZ_OU8usiTvOekfHdMza" alt="David's avatar">{{ucfirst(Auth::user()->name)}}</h1>
             <!--
@@ -731,6 +733,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 
             </div>
         </div>
+        --}}
         <div class="completionsContainer__2IYN9k4PNi5y8XGTuQdIeG">
 
                 <div data-v-27efbf01="" class="col-sm-9">

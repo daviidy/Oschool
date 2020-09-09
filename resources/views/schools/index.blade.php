@@ -153,12 +153,13 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 
 .navbar-fedora {
     background-color: black;
-  	top: 50px; /*for timer*/
+  	/*top: 50px; /*for timer*/
 }
 .navbar-fixed-top {
-    top: 30px!important;/*for timer*/
+    /*top: 30px!important;/*for timer*/
     border-width: 0 0 1px;
     position: relative!important;
+    margin-bottom: 0px!important;
 }
 </style>
 
