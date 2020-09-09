@@ -333,4 +333,28 @@ class UserController extends Controller
 
 
      }
+
+     //subdomain users billings
+      public function informationsSubDomain(Request $request)
+      {
+          $subdomain = $request->route('domain') ?? $request->route('subdomain');
+          $school = School::where('id', $subdomain)
+              ->orWhere('slug', $subdomain)
+              ->orWhere('domain', $subdomain)
+              ->firstOrFail();
+         //si on ne retrouve pas l'école
+         //on revient à la page précédente
+         if ($school === null) {
+           return redirect()->back();
+         }
+
+         if (Auth::check()) {
+             return view('users.notifications_business', ['school' => $school]);
+         }
+         else {
+             return redirect('home');
+         }
+
+
+      }
 }

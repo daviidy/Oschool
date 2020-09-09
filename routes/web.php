@@ -32,6 +32,8 @@ Route::group(
 
         Route::get('/users/settings_business', 'UserController@settingsContactSubDomain')->name('website.subdomain.settings_business');
 
+        Route::get('/users/notifications_business', 'UserController@informationsSubDomain')->name('website.subdomain.notifications_business');
+
 
         //Route::get('/course/{slug}','CourseController@showCourseOut')->name('website.subdomain.course_out');
     }
