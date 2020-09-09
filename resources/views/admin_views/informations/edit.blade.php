@@ -473,6 +473,15 @@
             @include('includes.information')
         </div>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $("form").submit(function(){
+                $(".tch-btn-header-primary-block").hide();
+                $(".add-top-margin").append('<p class="tch-btn-header-primary-block" style="font-size:15px;">Modification en cours...</p>.')
+              });
+            });
+        </script>
 
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
@@ -482,7 +491,8 @@
             modules: {
                 toolbar: [
                 ['bold', 'italic'],
-                ['link','align'],
+                ['link','align','image'],
+                [{ list: 'bullet' }],
                 ]
             },
             placeholder: 'Ajouter votre commentaire...',

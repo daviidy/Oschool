@@ -427,10 +427,10 @@ label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700;}
 .btn:hover,.btn:focus{color:white;text-decoration:none;}
 .btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);box-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);}
 [disabled]{cursor:default!important;pointer-events:none;}
-.tch-btn-header-primary-block{color:white;background-color:#ff7f45;border:1px solid #ff7f45;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
-.tch-btn-header-primary-block:focus{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:hover{color:white;background-color:#ff6621;border-color:#ff5f17;}
-.tch-btn-header-primary-block:active{color:white;background-color:#ff6621;border-color:#ff5f17;}
+.tch-btn-header-primary-block{color:white;background-color:#4d90cc;border:1px solid #4d90cc;padding:10px 16px!important;font-size:17px;line-height:1.33333;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;display:block;width:100%;padding:8px 20px 7px 20px!important;font-size:12px;line-height:1.72222;border-radius:3px;font-weight:600!important;display:inline-block;cursor:pointer;font-weight:600;border-radius:30px!important;text-align:center;max-width:100%;line-height:30px;}
+.tch-btn-header-primary-block:focus{color:white;background-color:#4d90cc;border-color:#4d90cc;}
+.tch-btn-header-primary-block:hover{color:white;background-color:#4d90cc;border-color:#4d90cc;}
+.tch-btn-header-primary-block:active{color:white;background-color:#4d90cc;border-color:#4d90cc;}
 .tch-btn-header-primary-block:active:hover,.tch-btn-header-primary-block:active:focus{color:white;background-color:#ff5103;border-color:#f84d00;}
 .tch-btn-header-primary-block:active{background-image:none;}
 .tch-btn-header-primary-block:focus{outline:0!important;}
@@ -620,7 +620,15 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
         </div>
 
 
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $("form").submit(function(){
+                $(".tch-btn-header-primary-block").hide();
+                $(".schema-form-submit").append('<input  class="btn tch-btn-header-primary-block " value="Création en cours...">')
+              });
+            });
+        </script>
 
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
