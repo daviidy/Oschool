@@ -484,7 +484,7 @@
         <script>
             $(document).ready(function(){
               $("form").submit(function(){
-                $(".disabled").hide();
+                $(".tch-btn-header-primary-block").hide();
                 $(".add-top-margin").append('<p class="tch-btn-header-primary-block" style="font-size:15px;">Envoi en cours...</p>.')
               });
             });
@@ -498,7 +498,8 @@
             modules: {
                 toolbar: [
                 ['bold', 'italic'],
-                ['link','align'],
+                ['link','align','image'],
+                [{ list: 'bullet' }],
                 ]
             },
             placeholder: 'Ajouter votre commentaire...',

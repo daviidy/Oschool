@@ -694,9 +694,9 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     toolbar: [
       [{ header: [1, 2, false] }],
       ['size', 'bold', 'italic', 'underline'],
-      ['image', 'code-block', 'video', 'blockquote', 'code', 'align', 'link'],
+      ['image', 'code-block', 'video', 'blockquote', 'code', 'align',{align:'center'}, 'link'],
       ['color'],
-      [{ list: 'ordered' }, { list: 'bullet' }]
+      [{ list: 'ordered' }, { list: 'bullet' },]
   ],
   imageResize: {
        modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
