@@ -625,7 +625,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
             $(document).ready(function(){
               $("form").submit(function(){
                 $(".tch-btn-header-primary-block").hide();
-                $(".schema-form-submit").append('<input  class="btn tch-btn-header-primary-block " value="Création en cours...">')
+                $(".schema-form-submit").append('<p class="" style="font-size:15px;color: #4d90cc">Création en cours...</p>.')
               });
             });
         </script>

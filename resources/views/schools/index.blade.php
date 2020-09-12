@@ -159,6 +159,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
     top: 30px!important;/*for timer*/
     border-width: 0 0 1px;
     position: relative!important;
+    margin-bottom: 0px!important;
 }
 </style>
 

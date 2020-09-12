@@ -191,7 +191,7 @@ header,svg{display:none;}
             }
             ._2 {
                 margin-bottom: 50px;
-                margin-top: 50px;
+                /*margin-top: 50px;*/
             }
 
             @media (max-width: 991px) {
@@ -265,14 +265,14 @@ header,svg{display:none;}
                     <div class="col col-50-lg">
                         <div class="hero-title">
                             <h1 class="text-color-white text-1-lg m-t-0-xs">
-                                Deviens DÉVELOPPEUR WEB PROFESSIONNEL
+                                Deviens COMPTABLE PROFESSIONNEL
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                Réalise 7 projets pour passer de zéro à héros. Bénéficies d'un essai gratuit de 30 jours avec le coupon OSCHOOL2020
+                                Ouverture de la formation pratique au métier de comptable professionnel. Passez de zéro à héros avec la maîtrise du logiciel Sage Comptabilité. Fin des inscriptions ce 18 septembre 2020
                             </h2>
                         </div>
                         <div class="form-footer">
-                            <a href="https://oschoolelearning.com/path/parcours-developpeur-web-junion">
+                            <a href="https://oschoolelearning.com/course/formation-pratique-au-metier-de-comptable-professionnel">
                             <button name="button" type="submit" class="button button primary button--primary-blue m-t-2-xs w-full-xs">
                                 <span>Commencez MAINTENANT !
                                 <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 11 12" class="play-icon">
@@ -289,7 +289,7 @@ header,svg{display:none;}
                             <p class="trial-banner bg-gray-light text-color-dark">
                                 Commencez dès maintenant <span class="regular">et sans engagement</span>
                             </p>
-                            <img style="border-radius: 8px;/*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/width:100%;" src="/images/divers/tl.jpg" alt="">
+                            <img style="border-radius: 8px;/*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/width:100%;" src="/images/divers/compta.jpg" alt="">
                            {{-- <!--
                             <form class="new_account_signup" id="signupForm" data-featurette="Treehouse.SimpleSignupForm" action="/subscribe/register_free_trial" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"
                                   class="placeholder-processed"><input type="hidden" name="authenticity_token" value="6/X13Mh0nk1E+2Xscuq2IhcwJKqhoKgnQS7cfvJrrUwWyNHIzUawYe432n3ljIQzP6hWDrQK9+RAYVO1EvC3Ww==" class="placeholder-processed">

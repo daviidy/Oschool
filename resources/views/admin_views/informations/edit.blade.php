@@ -478,7 +478,7 @@
             $(document).ready(function(){
               $("form").submit(function(){
                 $(".tch-btn-header-primary-block").hide();
-                $(".add-top-margin").append('<p class="tch-btn-header-primary-block" style="font-size:15px;">Modification en cours...</p>.')
+                $(".add-top-margin").append('<p class="" style="font-size:15px;color: #4d90cc">Modification en cours...</p>.')
               });
             });
         </script>
