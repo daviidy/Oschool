@@ -10,7 +10,7 @@
         2 semaines pour passer de zéro à héros avec le logiciel SAGE COMPTABILITÉ 17.
       </h3>
         <div  id="sticky-banner-countdown" class="countdown-timer-component" data-on-end="">
-    <div class="data-payload" data-end="2020-09-18T23:59:00-05:00"></div>
+    <div class="data-payload" data-end="2020-09-27T23:59:00-05:00"></div>
     <div class="days-container">
       <p class="countdown-number days" id="days"></p>
       <p class="countdown-label days-label">JOURS</p>
@@ -43,7 +43,7 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("September 18, 2020 23:59:59").getTime();
+var countDownDate = new Date("September 27, 2020 23:59:59").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

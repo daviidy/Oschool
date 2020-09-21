@@ -13,7 +13,7 @@
       </a>
     <div class="section__2v9mQhyESDhguULKoR_J7P">
         <h2 class="sectionTitle__3Cht9NEhb0XxciVgKArgPR">Menu</h2>
-        <a class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="/users/contact_business">
+        <a class="achievementsLink__jD_YGGUP5QvyO0nWE_LOb" href="/schools/{{$school->id}}/courses">
             <div class="statContainer__3vkcPCpgY9KLbdlgaArthp">
                 <p>Tous nos cours</p>
                 <!-- <p>83</p> -->
