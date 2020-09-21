@@ -310,6 +310,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 	color: #fff;
 	padding: 30px;
 	max-width: 250px;
+  display: none;
 }
 
 
@@ -333,6 +334,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 	right: 30px;
   float: right;
 	letter-spacing: 1px;
+  border: 2px solid #fff;
 }
 </style>
 
