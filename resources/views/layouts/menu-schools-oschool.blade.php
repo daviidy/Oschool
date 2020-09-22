@@ -536,7 +536,7 @@ footer .container .row ul li a:hover{text-decoration:underline;}
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   {{--timer
-  timer--}}
+timer--}}
   @include('includes.timer');
 
 

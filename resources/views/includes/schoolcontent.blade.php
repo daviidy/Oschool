@@ -268,7 +268,7 @@ header,svg{display:none;}
                                 Deviens COMPTABLE PROFESSIONNEL
                             </h1>
                             <h2 class="text-color-white text-2-xs m-b-0-xs regular">
-                                Ouverture de la formation pratique au métier de comptable professionnel. Passez de zéro à héros avec la maîtrise du logiciel Sage Comptabilité. Fin des inscriptions ce 18 septembre 2020
+                                Ouverture de la formation pratique au métier de comptable professionnel. Passez de zéro à héros avec la maîtrise du logiciel Sage Comptabilité. Fin des inscriptions ce 27 septembre 2020
                             </h2>
                         </div>
                         <div class="form-footer">
