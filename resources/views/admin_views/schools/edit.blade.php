@@ -367,21 +367,6 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     </div>
     <!---->
     <!---->
-    <!--Card of mise à niveau-->
-                <div class="courses-container">
-                	<div class="course">
-                		<div class="course-preview">
-                			<h2>Nom de l'école</h2>
-                		</div>
-                		<div class="course-info">
-                			<h2>Mettez à niveau votre plan pour pouvoir nommer cet utilisateur en tant qu'administrateur.</h2>
-                			<button class="btn">Continue</button>
-                		</div>
-                	</div>
-                </div>
-
-    <!--End card of mise à niveau-->
-
     <!---->
     <ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-school">
         <form method="post" enctype="multipart/form-data" action="{{url('schools', $school)}}" name="settingsSchoolForm" class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength">
@@ -2599,9 +2584,347 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <!---->
     </ng-include>
     --}}
+		<!--URL PERSONALISEE-->
+		<!--Card of mise à niveau-->
+								<div class="courses-container">
+									<div class="course">
+										<div class="course-preview">
+											<h2>Nom de l'école</h2>
+										</div>
+										<div class="course-info">
+											<h2>Mettez à niveau votre plan pour pouvoir creer une url personnalisée..</h2>
+											<button class="btn">Continue</button>
+										</div>
+									</div>
+								</div>
 
+		<!--End card of mise à niveau-->
 
+		<ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-address">
+        <form method="post" enctype="multipart/form-data" action="{{url('schools', $school)}}" ng-submit="saveAddress(settingsAddressForm)" name="settingsAddressForm" novalidate="" class="ng-pristine ng-valid ng-valid-required">
+            <div ng-show="!section.if || section.if()" id="section-address" class="row tch-section-wrapper" section="section" save="true">
+                {{ csrf_field() }}
+                {{ method_field('patch') }}
+                <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
+                    <!---->
+                    <!---->
+                    <h2 ng-if="section.name" class="tch-subheading">
+                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Url personnalisée</span>
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!----><br ng-if="!removeDescriptionLineBreak">
+                        <!---->
+                        <p ng-bind-html="section.description" what="section-description" class="small">
+                            Ajoutez une url personnalisée pour votre site.
+                            </p>
+                        <!---->
+                        <!---->
+                    </h2>
+                    <!---->
+                </div>
 
+                <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
+                    <div ng-transclude="">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div form="settingsAddressForm" label="Street Address" for="line_one">
+                                    <!---->
+                                    <div ng-if="form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" show-errors="" class="form-group">
+                                        <label-block required-label="requiredLabel">
+                                            <!---->
+                                            <!----><label for="line_one" ng-if="label" class="control-label">
+                                                <!----><span ng-bind="label">Url personnalisée</span>
+                                                <!----></label>
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </label-block>
+                                        <div ng-transclude=""><input id="street-address" what="address line_one" name="street" ng-model="address.line_one" class="form-control ng-pristine ng-untouched ng-valid ng-empty"></div>
+                                        <help-block>
+                                            <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+
+                                            </ng-messages>
+                                            <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="line_one" class="help-block ng-hide"></div>
+                                        </help-block>
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div ng-show="showButtonsBar" class="tab-bottom">
+                        <!---->
+                        <!---->
+                        <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Enregistrer</button>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ng-include>
+    <!---->
+    <!---->
+
+    <ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-authors">
+        <form ng-submit="save()" name="settingsAuthorsForm" api-form="savePromise" class="ng-pristine ng-valid">
+            <div ng-show="!section.if || section.if()" id="section-authors" class="row tch-section-wrapper ng-hide" section="section" save="true">
+                <div ng-class="{ 'col-lg-12': fullWidth }" class="tch-section-heading col-md-12 col-lg-3">
+                    <!---->
+                    <!---->
+                    <h2 ng-if="section.name" class="tch-subheading">
+                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Auteurs</span>
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!----><br ng-if="!removeDescriptionLineBreak">
+                        <!---->
+                        <p ng-bind-html="section.description" what="section-description" class="small">Set course author permissions.</p>
+                        <!---->
+                        <!---->
+                    </h2>
+                    <!---->
+                </div>
+                <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
+                    <div ng-transclude="">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div form="" label="Let authors publish courses" for="author_publish_permissions">
+                                    <!---->
+                                    <!---->
+                                    <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
+                                        <label-block required-label="requiredLabel">
+                                            <!---->
+                                            <!----><label for="author_publish_permissions" ng-if="label" class="control-label">
+                                                <!----><span ng-bind="label">Let authors publish courses</span>
+                                                <!----></label>
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </label-block>
+                                        <div ng-transclude="">
+                                            <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-off" style="width: 58px;">
+                                                <div class="bootstrap-switch-container" style="width: 84px; margin-left: -28px;"><span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 28px;">Yes</span><span
+                                                      class="bootstrap-switch-label" style="width: 54px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 28px;">No</span><input bs-switch=""
+                                                      type="checkbox" ng-model="settings.preferences.authors_can_publish_courses" switch-on-text="Yes" switch-off-text="No" class="form-control ng-pristine ng-untouched ng-valid ng-empty"></div>
+                                            </div>
+                                        </div>
+                                        <help-block>
+                                            <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </ng-messages>
+                                            <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="author_publish_permissions" class="help-block ng-hide"></div>
+                                        </help-block>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div form="" label="Let authors email students" for="author_email_permissions">
+                                    <!---->
+                                    <!---->
+                                    <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
+                                        <label-block required-label="requiredLabel">
+                                            <!---->
+                                            <!----><label for="author_email_permissions" ng-if="label" class="control-label">
+                                                <!----><span ng-bind="label">Let authors email students</span>
+                                                <!----></label>
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </label-block>
+                                        <div ng-transclude="">
+                                            <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-off" style="width: 58px;">
+                                                <div class="bootstrap-switch-container" style="width: 84px; margin-left: -28px;"><span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 28px;">Yes</span><span
+                                                      class="bootstrap-switch-label" style="width: 54px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 28px;">No</span><input bs-switch=""
+                                                      type="checkbox" ng-model="settings.preferences.authors_can_email_students" switch-on-text="Yes" switch-off-text="No" class="form-control ng-pristine ng-untouched ng-valid ng-empty"></div>
+                                            </div>
+                                        </div>
+                                        <help-block>
+                                            <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </ng-messages>
+                                            <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="author_email_permissions" class="help-block ng-hide"></div>
+                                        </help-block>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div form="" label="Let authors set course prices" for="author_pricing_permissions">
+                                    <!---->
+                                    <!---->
+                                    <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
+                                        <label-block required-label="requiredLabel">
+                                            <!---->
+                                            <!----><label for="author_pricing_permissions" ng-if="label" class="control-label">
+                                                <!----><span ng-bind="label">Let authors set course prices</span>
+                                                <!----></label>
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </label-block>
+                                        <div ng-transclude="">
+                                            <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-off" style="width: 58px;">
+                                                <div class="bootstrap-switch-container" style="width: 84px; margin-left: -28px;"><span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 28px;">Yes</span><span
+                                                      class="bootstrap-switch-label" style="width: 54px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 28px;">No</span><input bs-switch=""
+                                                      type="checkbox" ng-model="settings.preferences.authors_can_set_course_prices" switch-on-text="Yes" switch-off-text="No" class="form-control ng-pristine ng-untouched ng-valid ng-empty"></div>
+                                            </div>
+                                        </div>
+                                        <help-block>
+                                            <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </ng-messages>
+                                            <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="author_pricing_permissions" class="help-block ng-hide"></div>
+                                        </help-block>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div form="" label="Let authors create coupons for their courses" for="author_coupon_permissions">
+                                    <!---->
+                                    <!---->
+                                    <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
+                                        <label-block required-label="requiredLabel">
+                                            <!---->
+                                            <!----><label for="author_coupon_permissions" ng-if="label" class="control-label">
+                                                <!----><span ng-bind="label">Let authors create coupons for their courses</span>
+                                                <!----></label>
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </label-block>
+                                        <div ng-transclude="">
+                                            <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-off" style="width: 58px;">
+                                                <div class="bootstrap-switch-container" style="width: 84px; margin-left: -28px;"><span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 28px;">Yes</span><span
+                                                      class="bootstrap-switch-label" style="width: 54px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 28px;">No</span><input bs-switch=""
+                                                      type="checkbox" ng-model="settings.preferences.authors_can_manage_coupons" switch-on-text="Yes" switch-off-text="No" class="form-control ng-pristine ng-untouched ng-valid ng-empty"></div>
+                                            </div>
+                                        </div>
+                                        <help-block>
+                                            <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </ng-messages>
+                                            <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="author_coupon_permissions" class="help-block ng-hide"></div>
+                                        </help-block>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="col-sm-4">
+                                <div form="" label="Let authors customize their course sales pages" for="author_course_pages">
+                                    <!---->
+                                    <!---->
+                                    <div ng-if="!form" ng-class="{ 'has-error': state.errors[for], 'no-margin': noMargin }" class="form-group">
+                                        <label-block required-label="requiredLabel">
+                                            <!---->
+                                            <!----><label for="author_course_pages" ng-if="label" class="control-label">
+                                                <!----><span ng-bind="label">Let authors customize their course sales pages</span>
+                                                <!----></label>
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </label-block>
+                                        <div ng-transclude="">
+                                            <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-off" style="width: 58px;">
+                                                <div class="bootstrap-switch-container" style="width: 84px; margin-left: -28px;"><span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 28px;">Yes</span><span
+                                                      class="bootstrap-switch-label" style="width: 54px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 28px;">No</span><input bs-switch=""
+                                                      type="checkbox" ng-model="settings.preferences.authors_can_manage_course_pages" switch-on-text="Yes" switch-off-text="No" class="form-control ng-pristine ng-untouched ng-valid ng-empty"></div>
+                                            </div>
+                                        </div>
+                                        <help-block>
+                                            <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </ng-messages>
+                                            <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="author_course_pages" class="help-block ng-hide"></div>
+                                        </help-block>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div ng-show="showButtonsBar" class="tab-bottom">
+                        <!---->
+                        <!---->
+                        <!----><button id="test-id-save-btn" ng-if="save" type="submit" ng-disabled="form.$invalid || form.$pending || disableSave" ng-bind="saveLabel || 'Save'" class="tch-btn-header-primary">Enregitrez</button>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ng-include>
+		<!--FIN URL PERSONALISEE-->
     <!---->
     <!---->
     <ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-status">
