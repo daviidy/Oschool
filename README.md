@@ -1,7 +1,7 @@
 # Oschool
 Learning Management System in Saas
 
-![screenshot](./images/screenshot.png)
+![screenshot](./public/images/screenshot.png)
 
 This project consists of building a software that allows companies to create their own e-elarning platform. The client wanted something similar like teachable.com.
 
