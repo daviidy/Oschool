@@ -316,6 +316,12 @@ button:focus{outline:none;}
 ._7ca935a0{width:100%;text-align:center;font-size:24px;}
 ._e3fbcfb{background-color:#4D90CC;border-radius:8px;box-shadow:0px 2px 12px 0px rgba(0, 0, 0, 0.1);padding:40px 40px 40px 40px;color:#ffffff;margin-bottom:30px;font-size:16px;}
 
+.sectionWrapper a {
+    font-weight: bold;
+    color: #4D90CC;
+    text-decoration: underline;
+}
+
 </style>
 
 <main class="container">
@@ -405,9 +411,11 @@ button:focus{outline:none;}
           <div class="navbar-leftNavigation">
               <a href="/{{$course->type == 'course' ? 'course' : 'path'}}/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour au parcours</span></a>
           </div>
+          <!--
           <div class="navbar-title">
             Jour 22
           </div>
+      -->
           <div class="navbar-rightNavigation"> <a href="https://discordapp.com/invite/hhbzcHE" target="_blank"><button class="navbar-button"><img src="https://img.icons8.com/material-rounded/24/000000/conference-background-selected.png"> <span>Aller à la communauté</span></button></a> </div>
         </div>
       </div>
