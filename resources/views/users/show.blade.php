@@ -6,7 +6,72 @@
 <!--for user infos-->
 
 <style media="screen">
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 20px 0;
+	overflow: hidden;
+	width: 100%;
+}
 
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+  line-height: normal;
+  font-size: medium;
+}
+
+.course-preview {
+	background-color: #4d90cc;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+
+.btn {
+	background-color: #4d90cc;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: relative;
+	bottom: -15px;
+	right: 30px;
+  float: right;
+	letter-spacing: 1px;
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+
+	.floating-btn {
+		right: 10px;
+	}
+}
 /*! CSS Used from: https://openclassrooms.com/bundles/common/css/master-0c0987a7.css ; media=all */
 @media all{
 h1{color:rgba(0,0,0,.92);margin:10px 0;font-weight:700;}
@@ -604,6 +669,20 @@ div.mce-edit-area{background:#fff;filter:none;}
                 </div>
 
             </div>
+<!--Card of mise à niveau-->
+            <div class="courses-container">
+            	<div class="course">
+            		<div class="course-preview">
+            			<h2>Nom de l'école</h2>
+            		</div>
+            		<div class="course-info">
+            			<h2>Mettez à niveau votre plan pour pouvoir nommer cet utilisateur en tant qu'administrateur.</h2>
+            			<button class="btn">Continue</button>
+            		</div>
+            	</div>
+            </div>
+
+<!--End card of mise à niveau-->
 
             <h2 class="secondTitle">
                 Parcours

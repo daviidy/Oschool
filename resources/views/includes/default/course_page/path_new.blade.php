@@ -1332,8 +1332,8 @@ img{max-width:100%;}
 
 
 @include('includes.timer');
-
 {{--timer
+
 timer--}}
 
 
