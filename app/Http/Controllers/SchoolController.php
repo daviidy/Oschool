@@ -1111,6 +1111,22 @@ class SchoolController extends Controller
             $user = User::find($request->user_id);
             $school = School::find($request->school_id);
 
+            //we check the number of owners in the schools
+            $number = count($school->users->where('type3', 'owner'));
+            //if number >= 1 and offer name is FREE
+            if ($number >= 1 && Auth::user()->offer->name == 'FREE') {
+                return redirect()->back()->with('status', 'Votre offre ne vous permet pas de nommer un administrateur de plus');
+            }
+            //if number >= 3 and offer name is BASIQUE
+            if ($number >= 3 && Auth::user()->offer->name == 'BASIQUE') {
+                return redirect()->back()->with('status', 'Votre offre ne vous permet pas de nommer un administrateur de plus');
+            }
+            //if number >=5 and offer name is PREMIUM
+            if ($number >= 5 && Auth::user()->offer->name == 'PREMIUM') {
+                return redirect()->back()->with('status', 'Votre offre ne vous permet pas de nommer un administrateur de plus');
+            }
+            //else
+
             $user->type3 = 'owner';
             $user->save();
 
