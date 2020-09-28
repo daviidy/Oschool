@@ -1318,7 +1318,7 @@ hr{border-color:#ececec;}
                 <div class="col-xs-12">
                     <h1 class="small-uppercase-text">CHOISISSEZ OSCHOOL POUR VOTRE ECOLE</h1>
                     <h2 class="default-header" style="max-width: 750px">Demandez rapidement un rendez-vous pour une démonstration gratuite</h2>
-                    <a target="_blank" href="https://calendly.com/yaodavidarmel/rendez-vous-oschool-university" class="orange-button">Commencez maintenant</a>
+                    <a href="#price_offer" class="orange-button">Commencez maintenant</a>
                 </div>
             </div>
         </div>
@@ -1819,7 +1819,7 @@ input.form-control {
             <div class="col-xs-12">
                 <h1 class="small-uppercase-text">CHOISISSEZ OSCHOOL POUR VOTRE ENTREPRISE</h1>
                 <h2 class="default-header" style="max-width: 750px">Demandez rapidement un rendez-vous pour une démonstration gratuite</h2>
-                <a target="_blank" href="https://calendly.com/yaodavidarmel/rendez-vous-oschool-university" class="orange-button">Commencez maintenant</a>
+                <a href="#price_offer" class="orange-button">Commencez maintenant</a>
             </div>
         </div>
     </div>

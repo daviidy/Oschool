@@ -346,6 +346,13 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
     padding: 7px 18px!important;
     text-transform: uppercase!important;
 }
+
+.lecture-text-container a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #4D90CC;
+}
+
 </style>
 
 @endif

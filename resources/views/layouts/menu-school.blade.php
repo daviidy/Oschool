@@ -1037,6 +1037,8 @@ img{display:block;}
         <div class="footer">
             <div class="footer__wrapper">
                 <div class="footer__inner">
+
+                    @if($school->user->offer->name !== 'FREE')
                     <ul class="footer__list">
                         <li class="footer__copyright">
                             ©
@@ -1045,6 +1047,7 @@ img{display:block;}
                         </li>
 
                     </ul>
+                    @endif
                     <ul class="footer__list legal-links">
                         <!--
                         <li>
@@ -1058,7 +1061,7 @@ img{display:block;}
                             </a>
                         </li>
                     -->
-
+                        @if($school->user->offer->name == 'FREE')
                         <li>
                             <span class="powered-by-text">Créez votre plateforme de formation avec</span>
                             <a class="powered-by" href="https://oschoolelearning.com/corporate">
@@ -1066,6 +1069,7 @@ img{display:block;}
                             </a>
 
                         </li>
+                        @endif
 
                     </ul>
                 </div>

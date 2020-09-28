@@ -669,20 +669,28 @@ div.mce-edit-area{background:#fff;filter:none;}
                 </div>
 
             </div>
-<!--Card of mise à niveau-->
+            @if(Auth::user()->isOwner())
+            @if(count($school->users->where('type3', 'owner')) >= 1 && Auth::user()->offer->name == 'FREE' || count($school->users->where('type3', 'owner')) >= 3 && Auth::user()->offer->name == 'BASIQUE' || count($school->users->where('type3', 'owner')) >= 5 && Auth::user()->offer->name == 'PREMIUM')
+            @if(!$user->adminSchools->contains($school->id))
+            <!--Card of mise à niveau-->
             <div class="courses-container">
             	<div class="course">
-            		<div class="course-preview">
-            			<h2>Nom de l'école</h2>
-            		</div>
+
             		<div class="course-info">
-            			<h2>Mettez à niveau votre plan pour pouvoir nommer cet utilisateur en tant qu'administrateur.</h2>
-            			<button class="btn">Continue</button>
+            			<h2>Mettez à niveau votre abonnement pour pouvoir nommer cet utilisateur en tant qu'administrateur.</h2>
+            			<button class="btn">
+                            <a target="_blank" href="/corporate/#price_offer">
+                                Continuer
+                            </a>
+                        </button>
             		</div>
             	</div>
             </div>
+            <!--End card of mise à niveau-->
+            @endif
+            @endif
+            @endif
 
-<!--End card of mise à niveau-->
 
             <h2 class="secondTitle">
                 Parcours
