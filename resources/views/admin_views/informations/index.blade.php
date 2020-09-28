@@ -243,7 +243,55 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
 /*! CSS Used from: Embedded */
 .FocusFixer-module_usingMouse__1zr_y :focus{outline:none;}
 
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 20px 0;
+	overflow: hidden;
+	width: 100%;
+}
 
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+  line-height: normal;
+  font-size: 20px;
+}
+
+.course-preview {
+	background-color: #4d90cc;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+  display: none;
+}
+
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+
+.btn_c {
+	background-color: #4d90cc;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: relative;
+	bottom: -15px;
+	right: 30px;
+  float: right;
+	letter-spacing: 1px;
+  border: 2px solid #fff;
+}
 </style>
 
 
@@ -298,6 +346,22 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             </ng-include> --}}
         </div>
     </div><br>
+
+    <!--Card of mise à niveau-->
+                <div class="courses-container">
+                  <div class="course">
+                    <div class="course-preview">
+                      <h2>Nom de l'école</h2>
+                    </div>
+                    <div class="course-info">
+                      <h2>Mettez à niveau votre plan pour pouvoir envoyer des méssages aux utilisateurs.</h2>
+                      <button class="btn_c">Mettre à jour</button>
+                    </div>
+                  </div>
+                </div>
+
+    <!--End card of mise à niveau-->
+
     <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
         <div class="tch-table-wrapper">
             <!---->

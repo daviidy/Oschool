@@ -284,12 +284,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('offers.index')}}">Liste des offre</a>
+                                            <a class="nav-link" href="{{route('offers.index')}}">Liste des offres</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{route('offers.create')}}">Ajouter une offre</a>
                                         </li>
-
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Ajouter un achat</a>
+                                        </li>
 
                                     </ul>
                                 </div>

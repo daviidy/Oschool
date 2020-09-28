@@ -41,8 +41,6 @@ Route::group(
 
 Route::post('/submit_contact_business', 'SchoolController@contactSubDomain')->name('website.subdomain.submit_contact_business');
 
-
-
 Route::get('/', function () {
     return view('home2');
 })->name('home2');
