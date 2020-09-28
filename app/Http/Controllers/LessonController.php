@@ -454,6 +454,8 @@ class LessonController extends Controller
         $lesson = Lesson::find($request->lesson_id);
         $lesson->webinar_meeting = $request->webinar_meeting;
         $lesson->save();
+        $lesson->course->school->token = null;
+        $lesson->course->school->save();
         Session::put('token', 'null');
         return redirect()->back()->with('status', 'La conférence a bien été créée');
     }
