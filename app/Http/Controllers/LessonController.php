@@ -450,6 +450,12 @@ class LessonController extends Controller
     }
 
 
+    public function addConference(Request $request){
+        $lesson = Lesson::find($request->lesson_id);
+        $lesson->webinar_meeting = $request->webinar_meeting;
+        $lesson->save();
+        return redirect()->back()->with('status', 'La conférence a bien été créée');
+    }
 
 
 
@@ -466,7 +472,7 @@ class LessonController extends Controller
                 Session::put('token', $school->token);
             }
 
-            if ($lesson->webinar_meeting !== null) {
+            if ($lesson->webinar_meeting !== null && Session::has('token')) {
                 function postData($params, $url){
                      try {
                      $curl = curl_init();
