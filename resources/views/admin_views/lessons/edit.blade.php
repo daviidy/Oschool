@@ -1905,7 +1905,7 @@ button.close{padding:0;background-color:transparent;border:0;}
 
 
 
-    @if($lesson->webinar_meeting !== null && session()->get('token'))
+    @if($lesson->webinar_meeting !== null && session()->get('token') !== 'null')
     <div ng-if="!enableReordering" ng-show="list.length > 0" class="row tch-course-list">
         <!---->
         <div what="course" which="Techniques de vente" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }" class="tch-course-listing">
