@@ -475,7 +475,7 @@ class LessonController extends Controller
                 Session::put('token', $school->token);
             }
 
-            if ($lesson->webinar_meeting !== null && Session::get('token') !== 'null') {
+            if ($lesson->webinar_meeting !== null && $lesson->course->school->token == null) {
                 function postData($params, $url){
                      try {
                      $curl = curl_init();
