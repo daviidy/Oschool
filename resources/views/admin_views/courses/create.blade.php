@@ -401,7 +401,19 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                             </label-block>
                             <div ng-transclude="">
+                                @if(Auth::user()->isOwner() && !Auth::user()->isAdmin())
+                                @if(count($school->authors) >= 1 && Auth::user()->offer->name == 'FREE' || count($school->authors) >= 5 && Auth::user()->offer->name == 'BASIQUE' || count($school->authors) >= 10 && Auth::user()->offer->name == 'PREMIUM')
+                                    <a style="cursor: pointer;" target="_blank" href="/corporate/#price_offer">
+                                        Mettez à niveau votre abonnement pour pouvoir ajouter un nouvel auteur.
+                                    </a>
+                                @else
                                 <a style="cursor: pointer;" id="addAuthor">Ajouter nouvel auteur</a>
+                                @endif
+                                @endif
+
+                                @if(Auth::user()->isAdmin() && !Auth::user()->isOwner())
+                                <a style="cursor: pointer;" id="addAuthor">Ajouter nouvel auteur</a>
+                                @endif
                                 @if($school->authors)
                                 <select id="listAuthor" name="author_id" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
                                     @foreach($school->authors as $author)

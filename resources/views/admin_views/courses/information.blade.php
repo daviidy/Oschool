@@ -615,10 +615,26 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     <br>
 
                                     <div class="tch-inline-form">
+                                        @if(Auth::user()->isOwner() && !Auth::user()->isAdmin())
+                                        @if(count($school->authors) >= 1 && Auth::user()->offer->name == 'FREE' || count($school->authors) >= 5 && Auth::user()->offer->name == 'BASIQUE' || count($school->authors) >= 10 && Auth::user()->offer->name == 'PREMIUM')
+                                        <div class="btn btn-block btn-attached fastclickable">
+                                            <a target="_blank" href="/corporate/#price_offer">
+                                                Mettez à niveau votre abonnement pour pouvoir ajouter un nouvel auteur.
+                                            </a>
+                                        </div>
+                                        @else
                                         <div id="addAuthor" class="btn btn-block btn-attached fastclickable">
                                             Nouveau auteur
                                             <i class="fa fa-angle-down icon-arrow-down"></i>
                                         </div>
+                                        @endif
+                                        @endif
+                                        @if(Auth::user()->isAdmin() && !Auth::user()->isOwner())
+                                        <div id="addAuthor" class="btn btn-block btn-attached fastclickable">
+                                            Nouveau auteur
+                                            <i class="fa fa-angle-down icon-arrow-down"></i>
+                                        </div>
+                                        @endif
                                         <div id="addAuthorZone" class="slide-hide">
                                             <!---->
                                             <ng-include src="'common/new-author/new-author-form.html'">
