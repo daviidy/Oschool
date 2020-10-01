@@ -11,6 +11,7 @@
 |
 */
 
+// Built-in subdomains
 Route::group(
     [
         'domain' => '{subdomain}.' . config('app.domain'),
@@ -34,12 +35,23 @@ Route::group(
 
         Route::get('/users/notifications_business', 'UserController@informationsSubDomain')->name('website.subdomain.notifications_business');
 
+        Route::post('/submit_contact_business', 'SchoolController@contactSubDomain')->name('website.subdomain.submit_contact_business');
+
 
         //Route::get('/course/{slug}','CourseController@showCourseOut')->name('website.subdomain.course_out');
     }
 );
 
-Route::post('/submit_contact_business', 'SchoolController@contactSubDomain')->name('website.subdomain.submit_contact_business');
+// Attached domains
+Route::group(
+    [
+        'domain' => '{domain}',
+    ],
+    function(){
+        Route::get('/', 'FrontendController@show')->name('website.domain');
+    }
+);
+
 
 Route::get('/', function () {
     return view('home2');

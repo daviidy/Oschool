@@ -2584,21 +2584,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         <!---->
     </ng-include>
     --}}
-		<!--URL PERSONALISEE-->
-		<!--Card of mise à niveau-->
-								<div class="courses-container">
-									<div class="course">
-										<div class="course-preview">
-											<h2>Nom de l'école</h2>
-										</div>
-										<div class="course-info">
-											<h2>Mettez à niveau votre plan pour pouvoir creer une url personnalisée..</h2>
-											<button class="btn">Continue</button>
-										</div>
-									</div>
-								</div>
 
-		<!--End card of mise à niveau-->
 
 		<ng-include src="'settings/general/sections/' + section.name + '.html'" ng-repeat="section in sections" id="section-address">
         <form method="post" enctype="multipart/form-data" action="{{url('schools', $school)}}" ng-submit="saveAddress(settingsAddressForm)" name="settingsAddressForm" novalidate="" class="ng-pristine ng-valid ng-valid-required">
@@ -2609,7 +2595,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                     <!---->
                     <h2 ng-if="section.name" class="tch-subheading">
-                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Url personnalisée</span>
+                        <!----><span ng-bind="::section.name | humanize" what="section-name" ng-if="!section.altName">Url personnalisée: pour ajouter un domaine personnalisé, créer un nouvel enregistrement A qui pointe à l'adresse 163.172.192.138
+, dans les paramètres DNS de votre domaine.</span>
                         <!---->
                         <!---->
                         <!---->
@@ -2625,6 +2612,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                     <!---->
                 </div>
 
+                @if(Auth::user()->isOwner() && Auth::user()->offer->name !== 'FREE' || Auth::user()->isAdmin())
                 <div ng-class="{ 'col-lg-12': fullWidth, 'no-border': noBorder, 'no-padding': noPadding, 'no-transition': noTransition }" class="tch-section-content col-md-12 col-lg-9">
                     <div ng-transclude="">
                         <div class="row">
@@ -2635,13 +2623,14 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                         <label-block required-label="requiredLabel">
                                             <!---->
                                             <!----><label for="line_one" ng-if="label" class="control-label">
-                                                <!----><span ng-bind="label">Url personnalisée</span>
+                                                <!----><span ng-bind="label">Url personnalisée: pour ajouter un domaine personnalisé, créer un nouvel enregistrement A qui pointe à l'adresse 163.172.192.138
+                        , dans les paramètres DNS de votre domaine.</span>
                                                 <!----></label>
                                             <!---->
                                             <!---->
                                             <!---->
                                         </label-block>
-                                        <div ng-transclude=""><input id="street-address" what="address line_one" name="street" ng-model="address.line_one" class="form-control ng-pristine ng-untouched ng-valid ng-empty"></div>
+                                        <div ng-transclude=""><input value="{{$school->domain}}" placeholder="eg. test.com" type="text" name="domain" class="form-control ng-pristine ng-untouched ng-valid ng-empty"></div>
                                         <help-block>
                                             <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
 
@@ -2663,6 +2652,23 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                         <!---->
                     </div>
                 </div>
+                @else
+                <div class="courses-container">
+                    <div style="max-width: 60%; margin-left: auto;" class="course">
+                        <div class="course-preview">
+                            <h2>Nom de l'école</h2>
+                        </div>
+                        <div class="course-info">
+                            <h2>Mettez à niveau votre plan pour pouvoir ajouter une url personnalisée..</h2>
+                            <button class="btn">
+                                <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
+                                Continuer
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                @endif
             </div>
         </form>
     </ng-include>
