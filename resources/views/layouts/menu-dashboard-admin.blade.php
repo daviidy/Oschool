@@ -290,7 +290,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <a class="nav-link" href="{{route('offers.create')}}">Ajouter une offre</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Ajouter un achat</a>
+                                            <a class="nav-link" href="/showBusinessPurchaseForm">Ajouter un achat</a>
                                         </li>
 
                                     </ul>

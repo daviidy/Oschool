@@ -526,7 +526,7 @@ class PurchaseController extends Controller
     }
 
 
-    //fonction pour rajouter un achat
+    //fonction pour rajouter un achat B2C
     public function add(School $school, Course $course, User $user)
     {
         //on retrouve le dernier achat fait par l'étudiant
@@ -563,6 +563,59 @@ class PurchaseController extends Controller
         return redirect()->back()->with('status', 'Achat ajouté avec succès');
     }
 
+    public function showBusinessPurchaseForm()
+    {
+        if (Auth::check() && Auth::user()->isAdmin()) {
+            $users = User::orderby('id', 'asc')->get();
+            $offers = Offer::orderby('id', 'asc')->get();
+            return view('admins.offer.achat', ['users' => $users, 'offers' => $offers]);
+        }
+    }
+
+    //fonction pour rajouter un achat B2B
+    public function addBusinessPurchase(Request $request)
+    {
+        //on retrouve l'offre choisie
+        $offer = Offer::find($request->offer_id);
+        foreach ($request->users_id as $user_id) {
+            $user = User::find($user_id);
+            $user->offer_id = $offer->id;
+            $user->type3 = 'owner';
+            $user->save();
+            //on crée un nouveau purchase pour le client
+            $purchase=Purchase::create([
+                              'price' => $offer->price,
+                              'date' => Carbon::now(),
+                              'user_id' => $user->id,
+                              'offer_id' => $offer->id,
+                              'status' => 'Validé',
+                            ]);
+
+
+
+            $admins = User::where('type1', 'admin')->orderby('id', 'asc')->paginate(1000);
+
+            //envoi mail utilisateur
+            /*
+             Mail::send('mails.users.purchases.successPartner', ['purchase' => $purchase], function($message) use($purchase){
+               $message->to($purchase->user->email, 'Cher(ère) Partenaire')->subject('Votre adhésion a été effectuée avec succès !');
+               $message->from('eventsoschool@gmail.com', 'Oschool');
+             });
+             */
+
+            foreach ($admins as $admin) {
+
+              //envoi mail admin
+              Mail::send('mails.admins.purchases.successPartner', ['purchase' => $purchase], function($message) use($admin){
+                $message->to($admin->email, 'Aux Admins Oschool')->subject('Une commande partenaire a été traitée avec succès');
+                $message->from('eventsoschool@gmail.com', 'Oschool');
+              });
+            }
+        }
+
+
+        return redirect()->back()->with('status', 'Achat ajouté avec succès');
+    }
 
 
     /**

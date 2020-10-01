@@ -377,6 +377,8 @@ Route::post('/unsubscribe', 'CourseController@unsubscribe');
 
 //ajouter manuellement un achat
 Route::get('/schoolAdmin/{school}/courses/{course}/students/{user}/subscribe', 'PurchaseController@add');
+Route::get('/showBusinessPurchaseForm', 'PurchaseController@showBusinessPurchaseForm');
+Route::post('/addBusinessPurchase', 'PurchaseController@addBusinessPurchase');
 /*
 
 Route::get('/schoolAdmin/{school}/courses', 'CourseController@coursesForAdmin');
