@@ -1405,6 +1405,55 @@ button.close{padding:0;background-color:transparent;border:0;}
 @media print{
 *,::after,::before{text-shadow:none!important;box-shadow:none!important;}
 }
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 20px 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+  line-height: normal;
+  font-size: 20px;
+}
+
+.course-preview {
+	background-color: #4d90cc;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+  display: none;
+}
+
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+
+.btn {
+	background-color: #4d90cc;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: relative;
+	bottom: -15px;
+	right: 30px;
+  float: right;
+	letter-spacing: 1px;
+  border: 2px solid #fff;
+}
 </style>
 
 
@@ -1852,8 +1901,22 @@ button.close{padding:0;background-color:transparent;border:0;}
 
 <ui-view style="display: none;" id="zoom" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
 
-<!---->
-<!---->
+      <!--CARD ZOOM-->
+      <div class="courses-container">
+          <div class="course">
+
+              <div class="course-info">
+                  <h2>Mettez à niveau votre plan pour pouvoir utiliser zoom.</h2>
+                  <button class="btn">
+                      <a  style="color: #fff;" target="_blank" href="#">
+                      Mise à niveau
+                      </a>
+                  </button>
+              </div>
+          </div>
+      </div>
+      <!---->
+
     <div class="styles__CategoryButtons-vgii8s-3 hqqZXZ">
         <a target="_blank" class="styles__CategoryButton-vgii8s-4 fUQatb" href="https://us04web.zoom.us/meeting/schedule">
             <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="161" height="147" viewBox="0 0 161 147" fill="none">
@@ -1943,8 +2006,22 @@ button.close{padding:0;background-color:transparent;border:0;}
 
 <ui-view style="display: none;" id="live" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
 
-<!---->
-<!---->
+    <!-- CARD TELEPRESENTIEL-->
+    <div class="courses-container">
+        <div class="course">
+
+            <div class="course-info">
+                <h2>Mettez à niveau votre plan pour pouvoir créer une classe.</h2>
+                <button class="btn">
+                    <a  style="color: #fff;" target="_blank" href="#">
+                    Mise à niveau
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!---->
+
     <div class="styles__CategoryButtons-vgii8s-3 hqqZXZ">
         <a target="_blank" data-toggle="modal" data-target="#formLive" class="styles__CategoryButton-vgii8s-4 fUQatb" href="https://us04web.zoom.us/meeting/schedule">
             <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="161" height="147" viewBox="0 0 161 147" fill="none">
