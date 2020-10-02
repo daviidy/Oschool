@@ -751,7 +751,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <!---->
         </div>
     </div>
-
+     <!--CARD PLAN STUDENT COURSE-->
     <div class="courses-container">
         <div class="course">
 
@@ -765,7 +765,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             </div>
         </div>
     </div>
-
+    <!--END CARD PLAN STUDENT COURSE-->
     <!--tableau-->
       <div class="tch-section-content">
       <!---->
