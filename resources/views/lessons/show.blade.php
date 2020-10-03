@@ -347,15 +347,17 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
     text-transform: uppercase!important;
 }
 
+</style>
+
+@endif
+
+<style media="screen">
 .lecture-text-container a {
     font-weight: bold;
     text-decoration: underline;
     color: #4D90CC;
 }
-
 </style>
-
-@endif
 
 
 <div class="course-sidebar lecture-page navbar-collapse navbar-sidebar-collapse collapse" id="courseSidebar" aria-expanded="false" style="height: 31px;">
