@@ -315,6 +315,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             <!---->
         </div>
     </div>
+    @if(Auth::user()->isOwner() && Auth::user()->offer->name !== 'FREE' || Auth::user()->isAdmin())
     <div class="tch-inline-form">
     <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/informations/create">Nouvelle Notification</a></div>
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
@@ -346,21 +347,6 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             </ng-include> --}}
         </div>
     </div><br>
-
-    <!--Card of mise à niveau-->
-                <div class="courses-container">
-                  <div class="course">
-                    <div class="course-preview">
-                      <h2>Nom de l'école</h2>
-                    </div>
-                    <div class="course-info">
-                      <h2>Mettez à niveau votre plan pour pouvoir envoyer des méssages aux utilisateurs.</h2>
-                      <button class="btn_c">Mettre à jour</button>
-                    </div>
-                  </div>
-                </div>
-
-    <!--End card of mise à niveau-->
 
     <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
         <div class="tch-table-wrapper">
@@ -443,6 +429,29 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
         <!----><br ng-if="products.length > 0">
         <!---->
     </div><br>
+    @else
+
+    <!--Card of mise à niveau-->
+                <div class="courses-container">
+                  <div class="course">
+                    <div class="course-preview">
+                      <h2>Nom de l'école</h2>
+                    </div>
+                    <div class="course-info">
+                      <h2>Mettez à niveau votre plan pour pouvoir envoyer des méssages aux utilisateurs.</h2>
+                      <button class="btn_c">
+                          <a target="_blank" href="/corporate/#price_offer">
+                              Mettre à jour
+                          </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+    <!--End card of mise à niveau-->
+    @endif
+
+
     @include('includes.information')
 </div>
 <script type="text/javascript" src="/js/admin_views/curriculum.js"></script>
