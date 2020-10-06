@@ -48,7 +48,7 @@ Route::group(
         'domain' => '{domain}',
     ],
     function(){
-        Route::get('/', 'FrontendController@show')->name('website.domain');
+        //Route::get('/', 'FrontendController@show')->name('website.domain');
     }
 );
 
