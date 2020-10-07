@@ -1454,6 +1454,32 @@ button.close{padding:0;background-color:transparent;border:0;}
 	letter-spacing: 1px;
   border: 2px solid #fff;
 }
+.table-bordered{
+  border: 2px solid #ccc9c9;
+  width: 100%;
+}
+.table-bordered td{
+  padding: 10px;
+}
+.table-bordered .td-1{
+    border-right: 2px solid #ccc9c9;
+}
+.table-bordered .td-2{
+    width: 30%;
+    text-align: center;
+}
+.btn-tab{
+  background-color: #dc4e4e;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    padding: 10px 25px;
+    letter-spacing: 1px;
+
+}
+.btn-tab:hover{
+  box-shadow: 0px 1px 9px 2px rgba(0, 0, 0, 0.2);
+}
 </style>
 
 
@@ -2053,7 +2079,20 @@ button.close{padding:0;background-color:transparent;border:0;}
         <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Voir un aperçu de cette leçon</h4>
     </a></div>
 
-
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td class="td-1">Link</td>
+          <td class="td-2">
+            <a href="#">
+              <button class="btn-tab" type="button" name="button">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
 
     <!---->
