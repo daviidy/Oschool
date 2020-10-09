@@ -1927,22 +1927,8 @@ button.close{padding:0;background-color:transparent;border:0;}
 
 <ui-view style="display: none;" id="zoom" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
 
-      <!--CARD ZOOM-->
-      <div class="courses-container">
-          <div class="course">
 
-              <div class="course-info">
-                  <h2>Mettez à niveau votre plan pour pouvoir utiliser zoom.</h2>
-                  <button class="btn">
-                      <a  style="color: #fff;" target="_blank" href="#">
-                      Mise à niveau
-                      </a>
-                  </button>
-              </div>
-          </div>
-      </div>
-      <!---->
-
+     @if(Auth::user()->isOwner() && Auth::user()->offer->name !== 'FREE' && Auth::user()->offer->name !== 'BASIQUE' || Auth::user()->isAdmin())
     <div class="styles__CategoryButtons-vgii8s-3 hqqZXZ">
         <a target="_blank" class="styles__CategoryButton-vgii8s-4 fUQatb" href="https://us04web.zoom.us/meeting/schedule">
             <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="161" height="147" viewBox="0 0 161 147" fill="none">
@@ -1961,8 +1947,8 @@ button.close{padding:0;background-color:transparent;border:0;}
                 </svg></div>
             <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Créer une classe</h4>
         </a>
-    <a class="styles__CategoryButton-vgii8s-4 fUQatb" href="/listMeetings/{{$lesson->id}}/{{Auth::user()->id}}">
-        <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="164" height="144" viewBox="0 0 164 144" fill="none">
+        <a class="styles__CategoryButton-vgii8s-4 fUQatb" href="/listMeetings/{{$lesson->id}}/{{Auth::user()->id}}">
+            <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="164" height="144" viewBox="0 0 164 144" fill="none">
                 <rect x="20" y="82" width="135" height="36" rx="18" fill="#FFCDB2"></rect>
                 <rect x="41" y="112" width="95" height="6" fill="#ED956E"></rect>
                 <path d="M9 34L21 44.5L26.5 67.5L32.5 69.5H39.5L46.5 83L32.5 84L24 89.5L5 52L1 37L9 34Z" fill="#E3E3E3"></path>
@@ -1979,7 +1965,8 @@ button.close{padding:0;background-color:transparent;border:0;}
                   stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg></div>
         <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Voir la liste des meetings</h4>
-    </a><a target="_blank" class="styles__CategoryButton-vgii8s-4 fUQatb" href="/course/{{$course->slug}}/lessons/{{$lesson->slug}}">
+        </a>
+        <a target="_blank" class="styles__CategoryButton-vgii8s-4 fUQatb" href="/course/{{$course->slug}}/lessons/{{$lesson->slug}}">
         <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="162" height="145" viewBox="0 0 162 145" fill="none">
                 <path d="M21 21L25.5 9L38.5 2H115L127 7L135.5 19V138L106 116H39.5L27 110.5L21 96.5V21Z" fill="#F8F8FF"></path>
                 <path
@@ -1991,8 +1978,23 @@ button.close{padding:0;background-color:transparent;border:0;}
             </svg></div>
         <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Voir un aperçu de cette leçon</h4>
     </a></div>
+    @else
+    <!--CARD ZOOM-->
+    <div class="courses-container">
+        <div class="course">
 
-
+            <div class="course-info">
+                <h2>Mettez à niveau votre plan pour pouvoir utiliser Zoom.</h2>
+                <button class="btn">
+                    <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
+                    Mettre à jour mon plan
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!---->
+    @endif
 
     @if($lesson->webinar_meeting !== null && $lesson->course->school->token !== null)
     <div ng-if="!enableReordering" ng-show="list.length > 0" class="row tch-course-list">
@@ -2032,22 +2034,24 @@ button.close{padding:0;background-color:transparent;border:0;}
 
 <ui-view style="display: none;" id="live" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
 
-    <!-- CARD TELEPRESENTIEL-->
-    <div class="courses-container">
-        <div class="course">
 
-            <div class="course-info">
-                <h2>Mettez à niveau votre plan pour pouvoir créer une classe.</h2>
-                <button class="btn">
-                    <a  style="color: #fff;" target="_blank" href="#">
-                    Mise à niveau
-                    </a>
-                </button>
-            </div>
-        </div>
-    </div>
-    <!---->
-
+    @if(Auth::user()->isOwner() && Auth::user()->offer->name !== 'FREE' && Auth::user()->offer->name !== 'BASIQUE' || Auth::user()->isAdmin())
+    @if($lesson->course->school->token == null && $lesson->webinar_meeting !== null)
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td class="td-1">{{$lesson->webinar_meeting}}</td>
+          <td class="td-2">
+            <a href="deleteConference/{{$lesson->id}}">
+              <button class="btn-tab" type="button" name="button">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    @else
     <div class="styles__CategoryButtons-vgii8s-3 hqqZXZ">
         <a target="_blank" data-toggle="modal" data-target="#formLive" class="styles__CategoryButton-vgii8s-4 fUQatb" href="https://us04web.zoom.us/meeting/schedule">
             <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="161" height="147" viewBox="0 0 161 147" fill="none">
@@ -2066,7 +2070,7 @@ button.close{padding:0;background-color:transparent;border:0;}
                 </svg></div>
             <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Créer une classe</h4>
         </a>
-    <a target="_blank" class="styles__CategoryButton-vgii8s-4 fUQatb" href="/course/{{$course->slug}}/lessons/{{$lesson->slug}}">
+        <a target="_blank" class="styles__CategoryButton-vgii8s-4 fUQatb" href="/course/{{$course->slug}}/lessons/{{$lesson->slug}}">
         <div class="styles__CategoryButton_Icon-vgii8s-6 fjEdZT"><svg width="162" height="145" viewBox="0 0 162 145" fill="none">
                 <path d="M21 21L25.5 9L38.5 2H115L127 7L135.5 19V138L106 116H39.5L27 110.5L21 96.5V21Z" fill="#F8F8FF"></path>
                 <path
@@ -2078,21 +2082,23 @@ button.close{padding:0;background-color:transparent;border:0;}
             </svg></div>
         <h4 class="MuiTypography-root Typography-ngwq8z-0 styles__CategoryButton_Title-vgii8s-5 eBqjAL MuiTypography-h4 MuiTypography-alignCenter" m="0,2">Voir un aperçu de cette leçon</h4>
     </a></div>
+    @endif
+    @else
+    <!--CARD ZOOM-->
+    <div class="courses-container">
+        <div class="course">
 
-    <table class="table table-bordered">
-      <tbody>
-        <tr>
-          <td class="td-1">Link</td>
-          <td class="td-2">
-            <a href="#">
-              <button class="btn-tab" type="button" name="button">
-                <i class="far fa-trash-alt"></i>
-              </button>
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <div class="course-info">
+                <h2>Mettez à niveau votre plan pour pouvoir utiliser Zoom.</h2>
+                <button class="btn">
+                    <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
+                    Mettre à jour mon plan
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+    @endif
 
 
     <!---->

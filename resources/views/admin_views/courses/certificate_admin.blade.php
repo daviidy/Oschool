@@ -427,71 +427,74 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     @include('includes.status')
 
 
-    <!--CARD PLAN PLANIFICATION COURSE-->
-    <div class="courses-container">
-       <div class="course">
-
-           <div class="course-info">
-               <h2>Mettez à niveau votre plan pour pouvoir administrer le certificat.</h2>
-               <button class="btn">
-                   <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
-                   Mise à niveau
-                   </a>
-               </button>
-           </div>
-       </div>
-    </div>
-    <!--END CARD PLAN PLANIFICATION COURSE-->
+    @if(Auth::user()->isOwner() && Auth::user()->offer->name !== 'FREE' || Auth::user()->isAdmin())
     <div ng-if="courses.length > 0">
-    <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
-        <div class="course-list__header">
-            <span class="course-list__header-item"></span>
-            <span class="course-list__header-item _22oLp">Administration certificat</span>
-            <span class="course-list__header-item _22oLp"></span>
-            <span
-              class="course-list__header-item _22oLp"></span>
-        </div>
-        <!---->
-        <!---->
-        <div ng-if="!enableReordering" ng-show="list.length > 0" class="row tch-course-list">
+        <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
+            <div class="course-list__header">
+                <span class="course-list__header-item"></span>
+                <span class="course-list__header-item _22oLp">Administration certificat</span>
+                <span class="course-list__header-item _22oLp"></span>
+                <span
+                  class="course-list__header-item _22oLp"></span>
+            </div>
             <!---->
-            <div what="course" which="Techniques de vente" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }" class="tch-course-listing">
+            <!---->
+            <div ng-if="!enableReordering" ng-show="list.length > 0" class="row tch-course-list">
+                <!---->
+                <div what="course" which="Techniques de vente" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }" class="tch-course-listing">
 
-                    <div class="tch-course-listing-wrapper" what="course-card" course="course" course-stats="courseStats">
-                        <div style="background-image: url(https://media-public.canva.com/MADDT1Eof7I/1/thumbnail_large.png)" class="tch-course-listing-image"></div>
-                        <div what="course name" ng-bind="::course.name" class="tch-course-listing-title _2kIOe">
-                            Quelle est la note (en %) globale requise pour avoir le certificat ?<br>
+                        <div class="tch-course-listing-wrapper" what="course-card" course="course" course-stats="courseStats">
+                            <div style="background-image: url(https://media-public.canva.com/MADDT1Eof7I/1/thumbnail_large.png)" class="tch-course-listing-image"></div>
+                            <div what="course name" ng-bind="::course.name" class="tch-course-listing-title _2kIOe">
+                                Quelle est la note (en %) globale requise pour avoir le certificat ?<br>
 
-                            <form class="" action="/addResult" method="post">
-                                @csrf
-                                <input type="number" name="result" value="{{$course->result ? $course->result : ''}}">
-                                <input hidden type="text" name="course_id" value="{{$course->id}}">
+                                <form class="" action="/addResult" method="post">
+                                    @csrf
+                                    <input type="number" name="result" value="{{$course->result ? $course->result : ''}}">
+                                    <input hidden type="text" name="course_id" value="{{$course->id}}">
 
-                                <button type="submit" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
-                                    Ajouter la note
-                                </button>
-                            </form>
+                                    <button type="submit" id="test-id-new-lecture-btn" class="tch-btn-content-primary tch-btn-sm tch-btn-sm-block fastclickable">
+                                        Ajouter la note
+                                    </button>
+                                </form>
+
+                            </div>
+                            <div class="date-days tch-course-listing-title _2kIOe">
+
+                            </div>
 
                         </div>
-                        <div class="date-days tch-course-listing-title _2kIOe">
-
-                        </div>
-
                     </div>
-                </div>
+                <!---->
+            </div>
+        </div><br>
+        {{--
+        <div ng-show="ctrl.meta.number_of_pages > 1" class="col-sm-12 tch-page-nav ng-hide" meta="meta">
             <!---->
-        </div>
-    </div><br>
-    {{--
-    <div ng-show="ctrl.meta.number_of_pages > 1" class="col-sm-12 tch-page-nav ng-hide" meta="meta">
-        <!---->
-        <div class="pull-right"> <span class="tch-page-nav-page-number">Page 1 of 1</span><span class="space"></span> <button ng-click="ctrl.previousPage()" ng-disabled="ctrl.meta.page == 1" class="tch-page-nav-btn tch-back-button fastclickable"
-              disabled="disabled"> <i class="fa fa-angle-left"></i> </button> <button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page" class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"> <i
-                  class="fa fa-angle-right"></i> </button> </div>
-    </div><br><br>
---}}
-</div>
+            <div class="pull-right"> <span class="tch-page-nav-page-number">Page 1 of 1</span><span class="space"></span> <button ng-click="ctrl.previousPage()" ng-disabled="ctrl.meta.page == 1" class="tch-page-nav-btn tch-back-button fastclickable"
+                  disabled="disabled"> <i class="fa fa-angle-left"></i> </button> <button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page" class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"> <i
+                      class="fa fa-angle-right"></i> </button> </div>
+        </div><br><br>
+    --}}
+    </div>
+    @else
+    <!--CARD PLAN STUDENT COURSE-->
+    <!--CARD ZOOM-->
+    <div class="courses-container">
+        <div class="course">
 
+            <div class="course-info">
+                <h2>Mettez à niveau votre plan pour administrer le certificat de ce cours</h2>
+                <button class="btn">
+                    <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
+                    Mettre à jour mon plan
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+   <!--END CARD PLAN STUDENT COURSE-->
+    @endif
 
     @include('includes.information')
 </div>

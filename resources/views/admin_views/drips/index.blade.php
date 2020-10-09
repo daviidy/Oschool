@@ -424,85 +424,89 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
         </div>
     </div>
     @include('includes.status')
-    <!--CARD PLAN PLANIFICATION COURSE-->
-   <div class="courses-container">
-       <div class="course">
 
-           <div class="course-info">
-               <h2>Mettez à niveau votre plan pour pouvoir planifier vos cours.</h2>
-               <button class="btn">
-                   <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
-                   Mise à niveau
-                   </a>
-               </button>
-           </div>
-       </div>
-   </div>
-   <!--END CARD PLAN PLANIFICATION COURSE-->
+   @if(Auth::user()->isOwner() && Auth::user()->offer->name !== 'FREE' && Auth::user()->offer->name !== 'BASIQUE' || Auth::user()->isAdmin())
     <div ng-if="courses.length > 0">
-    <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
-        <div class="course-list__header">
-            <span class="course-list__header-item"></span>
-            <span class="course-list__header-item _22oLp">Sections</span>
-            <span class="course-list__header-item _22oLp"></span>
-            <span
-              class="course-list__header-item _22oLp"></span>
-        </div>
-        <!---->
-        <!---->
-        @if(count($course->sections) > 0)
-        @foreach($course->sections->sortBy('position') as $section)
-        <div ng-if="!enableReordering" ng-show="list.length > 0" class="row tch-course-list">
+        <div class="tch-box-wrapper" ui-sortable-save="courses" sortable-options="sortableOptions" list="filteredCourses" course-stats="courseStats" enable-reordering="enableReordering">
+            <div class="course-list__header">
+                <span class="course-list__header-item"></span>
+                <span class="course-list__header-item _22oLp">Sections</span>
+                <span class="course-list__header-item _22oLp"></span>
+                <span
+                  class="course-list__header-item _22oLp"></span>
+            </div>
             <!---->
-            <div what="course" which="Techniques de vente" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }" class="tch-course-listing">
+            <!---->
+            @if(count($course->sections) > 0)
+            @foreach($course->sections->sortBy('position') as $section)
+            <div ng-if="!enableReordering" ng-show="list.length > 0" class="row tch-course-list">
+                <!---->
+                <div what="course" which="Techniques de vente" ng-repeat="course in list" ng-class="::{ 'tch-course-listing-unpublished': course.is_published == false }" class="tch-course-listing">
 
-                    <div class="tch-course-listing-wrapper" what="course-card" course="course" course-stats="courseStats">
-                        <div style="background-image: url(/images/courses/logos/{{$course->logo}})" class="tch-course-listing-image"></div>
-                        <div what="course name" ng-bind="::course.name" class="tch-course-listing-title _2kIOe">
-                            {{$section->title}} <br>
-                            @if(!$section->drip)
-                            <p class="choices" style="color: black; cursor: default;">Publier <span id="{{$section->id}}" class="show-date-section" style="cursor: pointer;"> <strong>à une date spécifique</strong> </span> ou <span id="{{$section->id}}" class="show-days-section" style="cursor: pointer;"> <strong>à un nombre de jours après l'inscription</strong> </span>  </p>
-                            @elseif($section->drip->date !== null)
-                            <p style="color: black; cursor: default;">Cette section sera publiée le<span> <strong>{{Carbon\Carbon::parse($section->drip->date)->format('d-m-Y')}}</strong> </span>  </p>
-                            @elseif($section->drip->days !== null)
-                            <p style="color: black; cursor: default;">Cette section sera publiée<span> <strong>{{$section->drip->days}}</strong> jours après inscription au cours </span>  </p>
+                        <div class="tch-course-listing-wrapper" what="course-card" course="course" course-stats="courseStats">
+                            <div style="background-image: url(/images/courses/logos/{{$course->logo}})" class="tch-course-listing-image"></div>
+                            <div what="course name" ng-bind="::course.name" class="tch-course-listing-title _2kIOe">
+                                {{$section->title}} <br>
+                                @if(!$section->drip)
+                                <p class="choices" style="color: black; cursor: default;">Publier <span id="{{$section->id}}" class="show-date-section" style="cursor: pointer;"> <strong>à une date spécifique</strong> </span> ou <span id="{{$section->id}}" class="show-days-section" style="cursor: pointer;"> <strong>à un nombre de jours après l'inscription</strong> </span>  </p>
+                                @elseif($section->drip->date !== null)
+                                <p style="color: black; cursor: default;">Cette section sera publiée le<span> <strong>{{Carbon\Carbon::parse($section->drip->date)->format('d-m-Y')}}</strong> </span>  </p>
+                                @elseif($section->drip->days !== null)
+                                <p style="color: black; cursor: default;">Cette section sera publiée<span> <strong>{{$section->drip->days}}</strong> jours après inscription au cours </span>  </p>
+                                @endif
+                            </div>
+                            <div class="date-days tch-course-listing-title _2kIOe">
+
+                            </div>
+                            @if($section->drip)
+                            <div class="tch-course-listing-title _2kIOe">
+                                <form action="{{ route('drips.destroy', $section->drip) }}" method="post" style="margin-bottom: inherit;">
+                                    {{ csrf_field() }}
+                                    {{ method_field('delete') }}
+                                <!----><button style="min-width: 100px;" class="tch-btn-header-primary fastclickable">Supprimer</button>
+                                </form>
+                                @if($section->drip->date !== null)
+                                <span id="{{$section->id}}" class="edit-date-section" style="cursor: pointer;color: blue;">Modifier</span>
+                                @elseif($section->drip->days !== null)
+                                <span id="{{$section->id}}" class="edit-days-section" style="cursor: pointer;color: blue;">Modifier</span>
+                                @endif
+                            </div>
                             @endif
                         </div>
-                        <div class="date-days tch-course-listing-title _2kIOe">
-
-                        </div>
-                        @if($section->drip)
-                        <div class="tch-course-listing-title _2kIOe">
-                            <form action="{{ route('drips.destroy', $section->drip) }}" method="post" style="margin-bottom: inherit;">
-                                {{ csrf_field() }}
-                                {{ method_field('delete') }}
-                            <!----><button style="min-width: 100px;" class="tch-btn-header-primary fastclickable">Supprimer</button>
-                            </form>
-                            @if($section->drip->date !== null)
-                            <span id="{{$section->id}}" class="edit-date-section" style="cursor: pointer;color: blue;">Modifier</span>
-                            @elseif($section->drip->days !== null)
-                            <span id="{{$section->id}}" class="edit-days-section" style="cursor: pointer;color: blue;">Modifier</span>
-                            @endif
-                        </div>
-                        @endif
                     </div>
-                </div>
+                <!---->
+            </div>
             <!---->
-        </div>
-        <!---->
-        @endforeach
-        @endif
-    </div><br>
-    {{--
-    <div ng-show="ctrl.meta.number_of_pages > 1" class="col-sm-12 tch-page-nav ng-hide" meta="meta">
-        <!---->
-        <div class="pull-right"> <span class="tch-page-nav-page-number">Page 1 of 1</span><span class="space"></span> <button ng-click="ctrl.previousPage()" ng-disabled="ctrl.meta.page == 1" class="tch-page-nav-btn tch-back-button fastclickable"
-              disabled="disabled"> <i class="fa fa-angle-left"></i> </button> <button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page" class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"> <i
-                  class="fa fa-angle-right"></i> </button> </div>
-    </div><br><br>
---}}
-</div>
+            @endforeach
+            @endif
+        </div><br>
+        {{--
+        <div ng-show="ctrl.meta.number_of_pages > 1" class="col-sm-12 tch-page-nav ng-hide" meta="meta">
+            <!---->
+            <div class="pull-right"> <span class="tch-page-nav-page-number">Page 1 of 1</span><span class="space"></span> <button ng-click="ctrl.previousPage()" ng-disabled="ctrl.meta.page == 1" class="tch-page-nav-btn tch-back-button fastclickable"
+                  disabled="disabled"> <i class="fa fa-angle-left"></i> </button> <button ng-click="ctrl.nextPage()" ng-disabled="ctrl.meta.number_of_pages == ctrl.meta.page" class="tch-page-nav-btn tch-next-button fastclickable" disabled="disabled"> <i
+                      class="fa fa-angle-right"></i> </button> </div>
+        </div><br><br>
+    --}}
+    </div>
+    @else
+    <!--CARD PLAN STUDENT COURSE-->
+    <!--CARD ZOOM-->
+    <div class="courses-container">
+        <div class="course">
 
+            <div class="course-info">
+                <h2>Mettez à niveau votre plan pour débloquer progressivement le contenu de votre cours</h2>
+                <button class="btn">
+                    <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
+                    Mettre à jour mon plan
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+   <!--END CARD PLAN STUDENT COURSE-->
+    @endif
 
     @include('includes.information')
 </div>

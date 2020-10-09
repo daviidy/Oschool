@@ -348,6 +348,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
         </div>
     </div><br>
 
+
     <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
         <div class="tch-table-wrapper">
             <!---->
@@ -440,7 +441,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                     <div class="course-info">
                       <h2>Mettez à niveau votre plan pour pouvoir envoyer des méssages aux utilisateurs.</h2>
                       <button class="btn_c">
-                          <a target="_blank" href="/corporate/#price_offer">
+                          <a style="color: #fff;" target="_blank" href="/corporate/#price_offer">
                               Mettre à jour
                           </a>
                       </button>

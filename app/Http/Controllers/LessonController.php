@@ -460,6 +460,22 @@ class LessonController extends Controller
         return redirect()->back()->with('status', 'La conférence a bien été créée');
     }
 
+    public function deleteConference(Lesson $lesson){
+        if ($lesson->webinar_meeting !== null) {
+            $lesson->webinar_meeting = null;
+            $lesson->save();
+            $lesson->course->school->token = null;
+            $lesson->course->school->save();
+            Session::put('token', 'null');
+            return redirect()->back()->with('status', 'La conférence a bien été supprimée');
+        }
+        else {
+            return redirect()->back()->with('status', 'Aucune conférence n\'a encore été créée pour cette école');
+        }
+
+
+    }
+
 
 
     /**

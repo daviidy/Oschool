@@ -716,6 +716,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                             </div>
                                         </div>
                                         <!---->--}}
+
+                                        @if(Auth::user()->isOwner() && Auth::user()->offer->name !== 'FREE' || Auth::user()->isAdmin())
                                         <div class="filter-ui-select">
                                             <!---->
                                             <div ng-if="ctrl.option.type == 'text'">
@@ -751,21 +753,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
             <!---->
         </div>
     </div>
-     <!--CARD PLAN STUDENT COURSE-->
-    <div class="courses-container">
-        <div class="course">
 
-            <div class="course-info">
-                <h2>Mettez à niveau votre plan pour pouvoir voir les etudiants de ce cours.</h2>
-                <button class="btn">
-                    <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
-                    Mise à niveau
-                    </a>
-                </button>
-            </div>
-        </div>
-    </div>
-    <!--END CARD PLAN STUDENT COURSE-->
     <!--tableau-->
       <div class="tch-section-content">
       <!---->
@@ -965,7 +953,28 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
               </div>
           </ng-include>
           <!---->
+
+          @else
+          <!--CARD PLAN STUDENT COURSE-->
+          <!--CARD ZOOM-->
+          <div class="courses-container">
+              <div class="course">
+
+                  <div class="course-info">
+                      <h2>Mettez à niveau votre plan pour avoir des stats avancés sur les étudiants de ce cours.</h2>
+                      <button class="btn">
+                          <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
+                          Mettre à jour mon plan
+                          </a>
+                      </button>
+                  </div>
+              </div>
+          </div>
+         <!--END CARD PLAN STUDENT COURSE-->
+          @endif
       </div>
+
+
 
 
     @include('includes.admin_views.popup_note')

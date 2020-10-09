@@ -317,6 +317,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
         </div>
     </div>
     @include('includes.status')
+    @if(Auth::user()->isOwner() && Auth::user()->offer->name !== 'FREE' || Auth::user()->isAdmin())
     <div class="tch-inline-form">
     <div id="test-id-add-product-btn" class="btn btn-block btn-attached fastclickable"><a href="/schoolAdmin/{{$school->id}}/classrooms/create">Nouvelle Session</a></div>
         <div ng-class="{ 'slide-hide': !form.isShown, 'slide-show': form.isShown }" class="slide-hide">
@@ -348,22 +349,6 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
             </ng-include> --}}
         </div>
     </div><br>
-
-    <!--CARD PLAN COUPON-->
-    <div class="courses-container">
-       <div class="course">
-
-           <div class="course-info">
-               <h2>Mettez à niveau votre plan pour pouvoir créer des évènements.</h2>
-               <button class="btn_coup">
-                   <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
-                   Mise à niveau
-                   </a>
-               </button>
-           </div>
-       </div>
-    </div>
-    <!--END CARD PLAN COUPON-->
 
 
     <div ng-show="products.length > 0 || deletedPlansCount > 0" class="tch-section-content">
@@ -602,6 +587,26 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
         <!----><br ng-if="products.length > 0">
         <!---->
     </div><br>
+
+    @else
+    <!--CARD PLAN STUDENT COURSE-->
+    <!--CARD ZOOM-->
+    <div class="courses-container">
+        <div class="course">
+
+            <div class="course-info">
+                <h2>Mettez à niveau votre plan pour créer des événements pour votre école</h2>
+                <button class="btn">
+                    <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
+                    Mettre à jour mon plan
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+   <!--END CARD PLAN STUDENT COURSE-->
+    @endif
+
     @include('includes.information')
 </div>
 <script type="text/javascript" src="/js/admin_views/curriculum.js"></script>
