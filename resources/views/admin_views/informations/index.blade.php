@@ -450,7 +450,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
                 </div>
 
     <!--End card of mise à niveau-->
-
+    @endif
 
 
     @include('includes.information')
