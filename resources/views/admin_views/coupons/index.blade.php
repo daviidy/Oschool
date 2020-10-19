@@ -455,7 +455,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
 
             <div class="course-info">
                 <h2>Mettez à niveau votre plan pour créer des coupons pour ce cours.</h2>
-                <button class="btn">
+                <button class="btn_coup">
                     <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
                     Mettre à jour mon plan
                     </a>
