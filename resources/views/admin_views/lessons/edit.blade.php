@@ -1553,9 +1553,9 @@ button.close{padding:0;background-color:transparent;border:0;}
                         <a href="#quiz"  class="fastclickable">Quiz</a>
                     </li>
 
-                    <li class="tab fastclickable"  heading="Add Class" >
+                    <!--li class="tab fastclickable"  heading="Add Class" >
                         <a href="#zoom"  class="fastclickable">Zoom</a>
-                    </li>
+                    </li-->
 
                     <li class="tab fastclickable"  heading="Add Class" >
                         <a href="#live"  class="fastclickable">Téléprésentiel</a>
@@ -1925,7 +1925,7 @@ button.close{padding:0;background-color:transparent;border:0;}
     </div>
 </ui-view>
 
-<ui-view style="display: none;" id="zoom" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
+{{--<ui-view style="display: none;" id="zoom" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
 
 
      @if(Auth::user()->isOwner() && Auth::user()->offer->name !== 'FREE' && Auth::user()->offer->name !== 'BASIQUE' || Auth::user()->isAdmin())
@@ -2030,7 +2030,7 @@ button.close{padding:0;background-color:transparent;border:0;}
     <!---->
     @endif
     <!---->
-</ui-view>
+</ui-view>--}}
 
 <ui-view style="display: none;" id="live" class="tab-container add-lecture-attachment-wrapper tch-box-wrapper" style="">
 
