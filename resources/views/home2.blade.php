@@ -17797,7 +17797,7 @@
               <div class="hero__links" data-v-579e12f4=""> </div>
             </div>
             <div class="hero__placeholder" data-v-579e12f4="">
-              <picture class="image image--transparent aspect-ratio--1:1" data-v-958d1b38="" data-v-579e12f4=""><img src="https://www.hotmart.com/images/home-hero__image.png" data-src="/images/home-hero__image.png" class=" lazyloaded" data-v-958d1b38=""></picture>
+              <picture class="image image--transparent aspect-ratio--1:1" data-v-958d1b38="" data-v-579e12f4=""><img src="https://www.hotmart.com/images/home-hero__image.png" data-src="https://www.hotmart.com/images/home-hero__image.png" class=" lazyloaded" data-v-958d1b38=""></picture>
             </div>
           </div>
         </div>
