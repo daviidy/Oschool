@@ -554,7 +554,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 }
 
 
-.btn {
+.btn_note {
 	background-color: #4d90cc;
 	border: 0;
 	border-radius: 50px;
@@ -962,7 +962,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                   <div class="course-info">
                       <h2>Mettez à niveau votre plan pour avoir des stats avancés sur les étudiants de ce cours.</h2>
-                      <button class="btn">
+                      <button class="btn_note">
                           <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
                           Mettre à jour mon plan
                           </a>

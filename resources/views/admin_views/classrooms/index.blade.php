@@ -277,7 +277,7 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
 }
 
 
-.btn_coup {
+.btn_env {
 	background-color: #4d90cc;
 	border: 0;
 	border-radius: 50px;
@@ -589,14 +589,13 @@ a:hover,a:focus{color:#6aace6;text-decoration:none;}
     </div><br>
 
     @else
-    <!--CARD PLAN STUDENT COURSE-->
     <!--CARD ZOOM-->
     <div class="courses-container">
         <div class="course">
 
             <div class="course-info">
                 <h2>Mettez à niveau votre plan pour créer des événements pour votre école</h2>
-                <button class="btn">
+                <button class=".btn_env">
                     <a  style="color: #fff;" target="_blank" href="/corporate/#price_offer">
                     Mettre à jour mon plan
                     </a>
