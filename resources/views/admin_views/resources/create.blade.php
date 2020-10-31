@@ -206,7 +206,7 @@ p{margin:0 0 11px;font-size:13px;letter-spacing:0.4px;}
                                 <!---->
                                 <!---->
                             </label-block>
-                            <div ng-transclude="">
+                            <div>
 
                                   <select class="js-example-basic-multiple" name="title" style="width:250px;">
                                     @foreach($school->courses->where('type', 'mooc') as $data)

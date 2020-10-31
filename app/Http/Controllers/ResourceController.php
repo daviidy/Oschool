@@ -44,19 +44,15 @@ class ResourceController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request->course_id." ".$request->path_id);
         $resource = Resource::create([
-                            'title' => $request->title,
-                            'link' => 'aucun',
-                            'position' => Resource::where('project_id', $request->project_id)->max('position') + 1,
-                            'project_id' => $request->project_id,
+                            'course_id' => $request->course_id,
+                            'path_id' => $request->path_id,
+                            'position' => Resource::where('path_id', $request->path_id)->max('position') + 1,
+                            'type' => $request->type
                         ]);
 
-        $course = Course::where('name', $request->title)->first();
-        $resource->link = "/course/".$course->slug;
-        $resource->type = "course";
-        $resource->save();
-
-        return redirect('/schoolAdmin/'.$request->school_id.'/paths/'.$request->course_id.'/curriculum');
+        return redirect('/schoolAdmin/'.$request->school_id.'/paths/'.$request->path_id.'/curriculum');
     }
 
     /**
@@ -97,7 +93,8 @@ class ResourceController extends Controller
     {
         $resource->update($request->all());
 
-        return redirect('/schoolAdmin/'.$request->school_id.'/paths/'.$request->course_id.'/curriculum');
+        //return redirect('/schoolAdmin/'.$request->school_id.'/paths/'.$request->course_id.'/curriculum');
+        return redirect()->back()->with('status', 'Ressource modifiée avec succès');
     }
 
     /**

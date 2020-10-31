@@ -438,7 +438,7 @@ Route::get('/listMeetings/{lesson}/{user}', 'SchoolController@listMeetings')->na
 Route::post('/associateMeeting', 'SchoolController@associateMeeting')->name('course');
 Route::post('/dissociateMeeting', 'SchoolController@dissociateMeeting')->name('course');
 Route::post('/addConference', 'LessonController@addConference')->name('course');
-Route::post('/deleteConference/{lesson}', 'LessonController@deletesConference')->name('course');
+Route::get('/deleteConference/{lesson}', 'LessonController@deleteConference')->name('course');
 
 //api vimeo
 Route::get('/vimeocallback', 'SchoolController@vimeoCallback');

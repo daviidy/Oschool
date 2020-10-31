@@ -47,14 +47,19 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        $project = Project::create($request->all()
-    + ['position' => Project::where('course_id', $request->course_id)->max('position') + 1]);
+        $project = Project::create($request->all());
+        $slug = new SlugProject();
+        $project->slug = $slug->createSlug($request->title);
+        $project->save();
 
-    $slug = new SlugProject();
-    $project->slug = $slug->createSlug($request->title);
-    $project->save();
+        $resource = Resource::create([
+                            'position' => Resource::where('path_id', $request->path_id)->max('position') + 1,
+                            'project_id' => $project->id,
+                            'path_id' => $request->path_id,
+                            'type' => $request->type
+                        ]);
 
-        return redirect('/schoolAdmin/'.$request->school_id.'/paths/'.$request->course_id.'/curriculum');
+        return redirect('/schoolAdmin/'.$request->school_id.'/paths/'.$request->path_id.'/curriculum');
     }
 
     /**

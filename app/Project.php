@@ -21,15 +21,15 @@ class Project extends Model
                          ];
 
 
-     /**
-      * [users description]
-      * relationship one to many with Course model
-      * @return [array] [description]
-      */
-      public function course()
-      {
-          return $this->belongsTo('App\Course');
-      }
+     // /**
+     //  * [users description]
+     //  * relationship one to many with Course model
+     //  * @return [array] [description]
+     //  */
+     //  public function course()
+     //  {
+     //      return $this->belongsTo('App\Course');
+     //  }
 
 
       /**

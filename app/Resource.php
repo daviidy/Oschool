@@ -14,7 +14,9 @@ class Resource extends Model
                            'type',
                            'project_id',
                            'position',
-                           'title'
+                           'title',
+                           'course_id',
+                           'path_id'
                          ];
 
 
@@ -27,4 +29,19 @@ class Resource extends Model
       {
           return $this->belongsTo('App\Project');
       }
+
+      /**
+       * [users description]
+       * relationship one to many with Course model
+       * @return [array] [description]
+       */
+       public function course()
+       {
+           return $this->belongsTo('App\Course', 'path_id');
+       }
+
+       public function link()
+       {
+           return $this->belongsTo('App\Course', 'course_id');
+       }
 }

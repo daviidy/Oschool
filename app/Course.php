@@ -118,15 +118,15 @@ class Course extends Model
               return $this->hasMany('App\Section');
           }
 
-          /**
-           * [users description]
-           * relationship one to many with Project model
-           * @return [array] [description]
-           */
-           public function projects()
-           {
-               return $this->hasMany('App\Project');
-           }
+          // /**
+          //  * [users description]
+          //  * relationship one to many with Project model
+          //  * @return [array] [description]
+          //  */
+          //  public function projects()
+          //  {
+          //      return $this->hasMany('App\Project');
+          //  }
 
           /**
            * [users description]
@@ -176,17 +176,25 @@ class Course extends Model
               * @return [array] [description]
               */
 
-            public function informations()
+              public function informations()
               {
-                  return $this->belongsToMany('App\Information');
+                 return $this->belongsToMany('App\Information');
               }
 
-            public function faqs()
-                {
-                    return $this->hasMany('App\Faq');
-                }
+              public function faqs()
+              {
+                return $this->hasMany('App\Faq');
+              }
 
+              public function resources()
+              {
+                return $this->hasMany('App\Resource', 'path_id');
+              }
 
+              public function links()
+              {
+                return $this->hasMany('App\Resource', 'course_id');
+              }
 
            public static function boot() {
            parent::boot();

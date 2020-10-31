@@ -656,6 +656,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
     @include('includes.admin_views.popups-admin')
     @include('includes.admin_views.popups-date-section')
     @include('includes.admin_views.popups-days-section')
+    @include('includes.admin_views.popups-resource-course')
+    @include('includes.admin_views.popups-resource-project')
     @endif
 
 

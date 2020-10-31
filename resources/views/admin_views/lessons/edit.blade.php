@@ -2042,7 +2042,7 @@ button.close{padding:0;background-color:transparent;border:0;}
         <tr>
           <td class="td-1">{{$lesson->webinar_meeting}}</td>
           <td class="td-2">
-            <a href="deleteConference/{{$lesson->id}}">
+            <a href="/deleteConference/{{$lesson->id}}">
               <button class="btn-tab" type="button" name="button">
                 <i class="far fa-trash-alt"></i>
               </button>
