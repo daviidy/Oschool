@@ -469,7 +469,8 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
 
                         <!---->
                         <!---->
-                        <li what="nav item" ui-sref-active="active" style=""
+                        {{--
+                          <li what="nav item" ui-sref-active="active" style=""
                           ng-class="{ 'hide-on-expand': hideOnExpand, 'show-on-expand': showOnExpand, 'pin-bottom-level-': pinToBottom, 'pin-bottom': pinToBottom, 'top-border': topBorder, 'force-active': (buttonActive == true) }"
                           ng-if="::permissions.can('view_migrated_notifications')" text="Notifications" icon="icon icon-envelope" sref="admin.settings.notifications">
                             <!----><a what="link" ui-sref="admin.settings.notifications" ng-if="sref &amp;&amp; !migrated" ng-class="{ 'text-only': minimal, 'small-link': small, 'never-highlight': neverHighlight }" href="/schoolAdmin/{{$school->id}}/integrations">
@@ -482,6 +483,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             <!---->
                             <!---->
                         </li>
+                        --}}
 
                         <!---->
                         <!---->
