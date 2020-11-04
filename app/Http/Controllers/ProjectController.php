@@ -70,7 +70,16 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+
+    }
+
+    public function showProject($slugCourse, $slug)
+    {
+        $course = Course::where('slug', $slugCourse)->firstOrFail();
+        $project = Project::where('slug', $slug)->firstOrFail();
+
+        return view('admin_views.projects.show', ['course' => $course, 'project' => $project]);
+
     }
 
     /**

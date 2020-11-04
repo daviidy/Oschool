@@ -37,9 +37,9 @@ class Project extends Model
         * relationship one to many with Resource model
         * @return [array] [description]
         */
-        public function resources()
+        public function resource()
         {
-          return $this->hasMany('App\Resource');
+          return $this->hasOne('App\Resource');
         }
 
         /**

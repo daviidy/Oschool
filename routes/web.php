@@ -414,9 +414,10 @@ Route::post('/addResult', 'CourseController@addResult');
 Route::get('/course/{slug}', 'CourseController@showSlug')->name('course.slug');
 Route::get('/path/{slug}', 'CourseController@showSlug')->name('path.slug');
 Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('enrolled.slug');
+Route::get('/path/enrolled/{slug}', 'CourseController@showCurriculum')->name('enrolled.slug');
 Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');
 Route::get('/course/{slugCourse}/checkout/{pricing}', 'PurchaseController@checkout');
-Route::get('/path/{slugCourse}/projects/{slug}', 'CourseController@showPath');
+Route::get('/{slugCourse}/projects/{slug}', 'ProjectController@showProject');
 
 Route::get('/checkoutPartners/{offer}', 'OfferController@checkoutPartners');
 

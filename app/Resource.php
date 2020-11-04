@@ -44,4 +44,9 @@ class Resource extends Model
        {
            return $this->belongsTo('App\Course', 'course_id');
        }
+
+       public function users()
+       {
+           return $this->belongsToMany('App\User');
+       }
 }

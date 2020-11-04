@@ -1,44 +1,53 @@
-<section class="pricing py-5" id="price">
-  <div class="container">
-    <h1 class="title-price">Nos offres de prix</h1>
-    <div class="row centre">
-      <!-- Free Tier -->
-      @foreach($course->pricings as $pricing)
-          @if($pricing->status == "1")
-      <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
-          <div class="card-body">
-            <h5 class="card-title text-muted text-uppercase text-center">{{$pricing->name}}</h5>
-          <h6 class="card-price text-center">{{$pricing->type == 'Free' ? '0' : number_format($pricing->price, 0, '.', ' ')}} FCFA <span class="period"> {{$pricing->per == 'month' ? '/ Mois' : ''}} {{$pricing->per == 'year' ? '/ Année' : ''}}</span></h6>
-            <hr>
-            @if($pricing->type == 'Plan de paiement')
-            Vous paierez cette somme {{$pricing->times}} fois
-            <hr>
-            @endif
-            {!!$pricing->description!!}
-            <br>
-            <br>
-            <!--
-            <ul class="fa-ul">
-              <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Un seul utilisateur</li>
-              <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Mentoring</li>
-              <li><span class="fa-li"><img src="https://img.icons8.com/color/48/000000/checked-2.png" width="20"></span>Test</li>
-              {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li> --}}
-              {{-- <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li> --}}
-            </ul>
-        -->
-            @auth
-            <a href="/course/{{$course->slug}}/checkout/{{$pricing->id}}" class="btn btn-block btn-primary text-uppercase">S'inscrire</a>
-            @endauth
+<!-- Modal -->
+<div class="modal fade" id="courseOffer" tabindex="-1" aria-labelledby="courseOfferLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-xl">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="mx-auto col-md-10">
+        <h5 class="modal-title text-center text-uppercase" id="courseOfferLabel">Nos offres de prix</h5>
+      </div>
+      <button type="button" class="close col-md-1" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body p-4">
+      <div class="container">
+        <div class="row">
+        @foreach($course->pricings as $pricing)
+            @if($pricing->status == "1")
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card-body border-none rounded h-100 shadow">
+              <div class="pb-3 summary">
+                <h5 class="card-title text-muted text-uppercase text-center">{{$pricing->name}}</h5>
+                <h6 class="card-price text-center">{{$pricing->type == 'Free' ? '0' : number_format($pricing->price, 0, '.', ' ')}} FCFA <span class="period"> {{$pricing->per == 'month' ? '/ Mois' : ''}} {{$pricing->per == 'year' ? '/ Année' : ''}}</span></h6>
+                <hr>
+                @if($pricing->type == 'Plan de paiement')
+                Vous paierez cette somme {{$pricing->times}} fois
+                <hr>
+                @endif
+                {!!$pricing->description!!}
+                <br>
+                <br>
+              </div>
+              @auth
+              <a href="/course/{{$course->slug}}/checkout/{{$pricing->id}}" class="w-100 btn btn-primary bg-oschool rounded text-center">S'inscrire</a>
+              @endauth
               @guest
-              <a href="#" class="btn btn-block btn-primary text-uppercase" data-toggle="modal" data-target="#modalLogin{{$pricing->id}}">S'inscrire</a>
+              <a href="#" class="w-100 btn btn-primary bg-oschool rounded text-center" data-toggle="modal" data-target="#modalLogin{{$pricing->id}}">S'inscrire</a>
               @endguest
+            </div>
           </div>
+            @endif
+          @endforeach
         </div>
       </div>
-      @endif
-      @endforeach
     </div>
   </div>
-</section>
+  <!--div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div-->
+</div>
+</div>
+</div>
 @include('includes.popupauth')

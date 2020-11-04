@@ -1,0 +1,212 @@
+/*
+    CSS Reset
+*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+button,
+ul,
+li,
+a,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+  list-style: none;
+}
+
+/* Global Setting */
+
+@font-face {
+  font-family: Cocogoose;
+  src: url('../assets/fonts/cocogoose/Cocogoose Pro-trial.ttf');
+}
+
+.navbar {
+  z-index: 1999;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+pre {
+  width: 100%;
+}
+
+iframe {
+  width: 100% !important;
+  height: 515px !important;
+  box-shadow: -4px 11px 26px -4px rgba(0,0,0,0.75);
+}
+
+a:hover {
+  text-decoration: none;
+  color: #4D90CC;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.blue-oschool {
+  color: #4D90CC;
+}
+
+.bg-oschool {
+  background-color: #4D90CC;
+}
+
+.bg-code-signal {
+  background-color: #2B3D52;
+}
+
+.green {
+  color: rgb(80, 204, 47);
+}
+
+.bg-green {
+  background-color: rgb(80, 204, 47);
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3, h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* menu */
+
+.logo-short, .user-avatar {
+  width: 13%;
+}
+
+.logo {
+  width: 50%;
+}
+
+.user-avatar {
+  width: 30px;
+}
+
+.navbar .navbar-nav:nth-child(1){
+  width: 70%;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+.dropdown-menu {
+  position: absolute !important;
+  left: auto;
+  right: 0;
+}
+
+/* main */
+
+.main-content {
+  margin-top: 5rem;
+}
+
+.path-map::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  top: 220px;
+  left: 50%;
+  border-left: 2px dashed #8291a3;
+}
+
+.path-map .row {
+  z-index:1000;
+}
+
+.path-title {
+  margin-top: -10px;
+  border-radius: 40px;
+}
+
+.resource-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 896px;
+  height: 232px;
+}
+
+.previous, .next {
+  color: rgb(107, 106, 120);
+  max-width: 250px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.next-link {
+  color: #4D90CC;
+  border-color: #4D90CC;
+}
+
+.progression span {
+  font-size: 11px;
+  font-weight: 300;
+}
+
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0,0,0,0.7);
+  z-index: 99;
+  display: none;
+}
+
+/* media queries */
+
+@media screen and (max-width: 599px){
+  .logo {
+    display: none;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 315px !important;
+    box-shadow: -4px 11px 26px -4px rgba(0,0,0,0.75);
+  }
+}
+
+@media screen and (min-width: 600px){
+  .logo-short {
+    display: none;
+  }
+}

@@ -1,8 +1,5 @@
 <style type="text/css">
-  body{
-      font-family: TeachableSans-Regular;
 
-  }
   .modal-footer a{
     color: #4d90cc;
     font-weight: 500;
@@ -162,7 +159,7 @@ input.form-control {
 
                   </label>
 
-                  
+
 
 
                 </div>

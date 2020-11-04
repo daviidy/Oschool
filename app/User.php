@@ -76,6 +76,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsToMany('App\Lesson');
     }
 
+    public function resources()
+    {
+        return $this->belongsToMany('App\Resource');
+    }
+
     /**
      * [users description]
      * relationship many to many with Course model
