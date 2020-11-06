@@ -1554,7 +1554,7 @@ console.log(JSON.stringify(positions));
 
       dataImage.append('_token', '{{csrf_token()}}');
       dataImage.append('school_id', $("input[name=school_id]").val());
-      dataImage.append('course_id', $("input[name=course_id]").val());
+      //dataImage.append('course_id', $("input[name=course_id]").val());
       dataImage.append('project_id', $("input[name=project_id]").val());
       dataImage.append('title', $("input[name=title]").val());
       dataImage.append('video', $("input[name=video]").val());

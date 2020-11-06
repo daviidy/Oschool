@@ -1,541 +1,364 @@
-@extends('layouts.menu-project')
-@section('title', $project->title.' - '.$project->course->name)
-@section('image', $project->image)
-@section('content')
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<style media="screen">
-/*! CSS Used from: http://localhost:8000/css/course_single.css */
-@media screen{
-a{background:0 0;}
-a:active,a:hover{outline:0;}
-img{border:0;}
-@media print{
-*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
-a,a:visited{text-decoration:underline;}
-a[href]:after{content:" (" attr(href) ")";}
-img{page-break-inside:avoid;}
-img{max-width:100%!important;}
-p{orphans:3;widows:3;}
-}
-*{box-sizing:border-box;}
-:before,:after{box-sizing:border-box;}
-a{color:#428bca;text-decoration:none;}
-a:hover,a:focus{color:#2a6496;text-decoration:underline;}
-a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
-img{vertical-align:middle;}
-p{margin:0 0 10px;}
-}
-a{color:#4D90CC;}
-a:hover,a:active{color:#1d3a50;}
-a,a:active,a:hover,a:focus{text-decoration:none;}
-p{font-size:18px;font-weight:200;line-height:28px;}
-/*! CSS Used from: http://localhost:8000/css/fedora-course.css ; media=screen */
-@media screen{
-a{background:0 0;}
-a:active,a:hover{outline:0;}
-img{border:0;}
-@media print{
-*{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
-a,a:visited{text-decoration:underline;}
-a[href]:after{content:" (" attr(href) ")";}
-img{page-break-inside:avoid;}
-img{max-width:100%!important;}
-p{orphans:3;widows:3;}
-}
-*{box-sizing:border-box;}
-:before,:after{box-sizing:border-box;}
-a{color:#428bca;text-decoration:none;}
-a:hover,a:focus{color:#2a6496;text-decoration:underline;}
-a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
-img{vertical-align:middle;}
-h4{font-family:'TeachableSans-Regular';font-weight:500;line-height:1.1;color:inherit;}
-h4{margin-top:10px;margin-bottom:10px;}
-h4{font-size:18px;}
-p{margin:0 0 10px;}
-}
-/*! CSS Used from: http://localhost:8000/css/theme-course.css */
-a{color:#39719a;}
-a:hover,a:active{color:#1d3a50;}
-a,a:active,a:hover,a:focus{text-decoration:none;}
-p{font-size:18px;font-weight:200;line-height:28px;}
-h4{color:#2b3636;}
-/*! CSS Used from: Embedded */
-@media all{
-p{font-size:16px;}
-a{background-color:transparent;}
-a:active,a:hover{outline:0;}
-img{border:0;}
-@media print{
-*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
-a,a:visited{text-decoration:underline;}
-a[href]:after{content:" (" attr(href) ")";}
-img{page-break-inside:avoid;}
-img{max-width:100%!important;}
-p{orphans:3;widows:3;}
-}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-a{color:#337ab7;text-decoration:none;}
-a:hover,a:focus{color:#23527c;text-decoration:underline;}
-a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
-img{vertical-align:middle;}
-h4{font-family:'TeachableSans-Regular';font-weight:500;line-height:1.1;color:inherit;}
-h4{margin-top:10px;margin-bottom:10px;}
-h4{font-size:18px;}
-p{margin:0 0 10px;}
-*:focus{outline:none;}
-a,a:hover{color:inherit;text-decoration:inherit;}
-a:focus{color:inherit;text-decoration:none;}
-h4{margin:0;font-weight:normal;}
-img{-webkit-user-drag:none;}
-p{margin:0;}
-}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-img{border-style:none;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-@media print{
-*,:after,:before{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;}
-}
-*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-:focus{outline:none;}
-*,::after,::before{box-sizing:inherit;}
-img{border-style:none;}
-*,::after,::before{box-sizing:inherit;}
-*,::after,::before{box-sizing:inherit;}
-img{border-style:none;}
-*,::after,::before{box-sizing:inherit;}
-img{border-style:none;}
-*,::after,::before{box-sizing:inherit;}
-img{border:0;}
-@media print{
-*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
-img{page-break-inside:avoid;}
-img{max-width:100%!important;}
-}
-*,:after,:before{box-sizing:border-box;}
-img{vertical-align:middle;}
-@media screen{
-div{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-body *{box-sizing:border-box;}
-}
-@media screen{
-div{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-body *{box-sizing:border-box;}
-}
-@media all{
-a{background-color:transparent;}
-a:active,a:hover{outline:0;}
-img{border:0;}
-@media print{
-*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
-a,a:visited{text-decoration:underline;}
-a[href]:after{content:" (" attr(href) ")";}
-img{page-break-inside:avoid;}
-img{max-width:100%!important;}
-p{orphans:3;widows:3;}
-}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-a{color:#337ab7;text-decoration:none;}
-a:hover,a:focus{color:#23527c;text-decoration:underline;}
-a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
-img{vertical-align:middle;}
-h4{font-family:'TeachableSans-Regular';font-weight:500;line-height:1.1;color:inherit;}
-h4{margin-top:10px;margin-bottom:10px;}
-h4{font-size:18px;}
-p{margin:0 0 10px;}
-*:focus{outline:none;}
-a,a:hover{color:inherit;text-decoration:inherit;}
-a:focus{color:inherit;text-decoration:none;}
-h4{margin:0;font-weight:normal;}
-img{-webkit-user-drag:none;}
-p{margin:0;}
-}
-/*! CSS Used from: Embedded */
-@media all{
-a{background-color:transparent;}
-a:active,a:hover{outline:0;}
-@media print{
-*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
-a,a:visited{text-decoration:underline;}
-a[href]:after{content:" (" attr(href) ")";}
-}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-a{color:#337ab7;text-decoration:none;}
-a:hover,a:focus{color:#23527c;text-decoration:underline;}
-a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
-*:focus{outline:none;}
-a,a:hover{color:inherit;text-decoration:inherit;}
-a:focus{color:inherit;text-decoration:none;}
-}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-*,*::after,*::before{box-sizing:inherit;}
-@media print{
-*,:after,:before{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;}
-}
-*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-:focus{outline:none;}
-*,::after,::before{box-sizing:inherit;}
-*,::after,::before{box-sizing:inherit;}
-*,::after,::before{box-sizing:inherit;}
-*,::after,::before{box-sizing:inherit;}
-*,::after,::before{box-sizing:inherit;}
-@media print{
-*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;box-shadow:none!important;}
-}
-*,:after,:before{box-sizing:border-box;}
-@media screen{
-body *{box-sizing:border-box;}
-}
-@media screen{
-body *{box-sizing:border-box;}
-}
-@media all{
-a{background-color:transparent;}
-a:active,a:hover{outline:0;}
-@media print{
-*,*:before,*:after{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important;}
-a,a:visited{text-decoration:underline;}
-a[href]:after{content:" (" attr(href) ")";}
-}
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-a{color:#337ab7;text-decoration:none;}
-a:hover,a:focus{color:#23527c;text-decoration:underline;}
-a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
-*:focus{outline:none;}
-a,a:hover{color:inherit;text-decoration:inherit;}
-a:focus{color:inherit;text-decoration:none;}
-}
-/*! CSS Used from: Embedded ; media=screen */
-@media screen{
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Projet</title>
+  <!--link rel="icon" href=""-->
+  <!--END PLUGIN -->
+  <link href="/assets/plugin/dist/ssi-uploader/styles/ssi-uploader.min.css" rel="stylesheet">
 
-.material-icons{position:relative;width:1em;height:1em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;font-feature-settings:"liga";}
-.material-icons:before{position:absolute;top:0;left:0;}
-.module-progress-card{transition:transform .25s ease,box-shadow .25s ease;display:block;border-radius:6px;box-shadow:0 0 12px 0 #f1f3f4;background:#fff;border:1px solid #e8eaed;padding:20px 24px;margin:0 0 8px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;}
-@media (max-width:1440px){
-.module-progress-card{padding:20px;margin:0 0 16px;}
-}
-@media (max-width:599px){
-.module-progress-card{position:relative;padding:24px;flex-direction:column;justify-content:flex-start;align-items:left;}
-}
-@media (min-width:600px){
-.module-progress-card:hover{transform:scale(1.03);box-shadow:0 1px 25px 0 rgba(0,0,0,.05);z-index:2;}
-}
-@media (min-width:600px){
-.module-progress-card>*{margin:0 12px;}
-.module-progress-card>:first-child{margin-left:0;margin-right:12px;}
-.module-progress-card>:last-child{margin-left:12px;margin-right:0;}
-}
-@media (max-width:599px){
-.module-progress-card>*{margin:0;}
-}
-.module-progress-card__icon{width:60px;height:60px;background:#f1f3f4;padding:5px;border-radius:50%;flex:0 0 60px;}
-@media (max-width:599px){
-.module-progress-card__icon{margin-bottom:12px;}
-}
-.module-progress-card__icon img{display:block;width:100%;height:100%;}
-.module-progress-card h4.module-progress-card__title{margin:0;color:#3c4043;font-weight:500;flex:1 1 50%;}
-@media (max-width:599px){
-.module-progress-card h4.module-progress-card__title{flex:0;width:100%;margin-bottom:16px;}
-}
-.module-progress-card p.module-progress-card__duration{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';font-size:14px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.29;opacity:.9;letter-spacing:normal;color:#80868b;display:flex;align-items:center;flex:0 1 13%;min-width:80px;}
-@media (max-width:599px){
-.module-progress-card p.module-progress-card__duration{flex:0;width:100%;margin-bottom:16px;}
-}
-.module-progress-card p.module-progress-card__duration i{font-size:22px;color:#f9ab00;margin-right:3px;margin-left:0;}
-.module-progress-card__progress{display:flex;align-items:center;flex:0 0 133px;}
-@media (max-width:599px){
-.module-progress-card__progress{flex:0;width:133px;}
-}
-.module-progress-card__progress--completed{animation-name:fade;animation-duration:.25s;animation-delay:.5s;animation-timing-function:ease;animation-iteration-count:1;animation-direction:normal;animation-fill-mode:both;will-change:opacity;}
-.module-progress-card__progress i{color:#34a853;font-size:22px;margin-right:3px;margin-left:0;}
-.module-progress-card__progress__completed{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:'TeachableSans-Regular';font-size:14px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.29;letter-spacing:normal;font-weight:500;color:#34a853;}
-.module-progress-card__cta{flex:1 0 24px;display:flex;justify-content:flex-end;align-items:center;text-align:right;}
-@media (max-width:599px){
-.module-progress-card__cta{position:absolute;bottom:24px;right:24px;left:auto;}
-}
-.module-progress-card__cta i{color:#1a73e8;}
+  <!--END PLUGIN -->
 
-}
-@media screen{
-.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;}
-}
-@media screen{
-.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;}
-}
-}
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
+  <script src="https://kit.fontawesome.com/d86848cfe0.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-.sectionWrapper--video iframe{
-    width: 50% !important;
-    height: 100% !important;
-}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/lecture_path.css">
+  <link rel="stylesheet" href="/css/atom-one-dark.min.css">
 
-</style>
+</head>
 
-<style>
-    /*! CSS Used from: https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css */
-    *,::after,::before{box-sizing:border-box;}
-    .alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;}
-    .alert-success{color:#155724;background-color:#d4edda;border-color:#c3e6cb;}
-    @media print{
-        *,::after,::before{text-shadow:none!important;box-shadow:none!important;}
-    }
-    /*! CSS Used from: https://getbootstrap.com/docs/4.0/assets/css/docs.min.css */
-    .bd-example>.alert+.alert{margin-top:1rem;}
-</style>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm bg-white border-bottom fixed-top">
+      <ul class="navbar-nav flex-row align-items-center">
+        <li class="nav-item ml-3">
+          <img class="logo-short img-fluid" src="/assets/images/logo-os-noir.png" alt="Logo">
+          <img class="logo" src="/assets/images/logo-oschool-noir.png" alt="">
+        </li>
+      </ul>
 
-<style media="screen">
-/*! CSS Used from: Embedded */
-button:focus,button:active,button:hover{outline:0px!important;-webkit-appearance:none;}
-h2{font-weight:normal;}
-h2{font-weight:normal;}
-button:focus{outline:none;}
-/*! CSS Used from: Embedded */
-::-ms-clear{display:none;}
-/*! CSS Used from: Embedded */
-._1f67b618{width:100%;text-align:center;margin-bottom:32px;}
-._342054f3{cursor:pointer;border-radius:4px;border:0px;background-color:#62d76b;color:#ffffff;height:48px;font-size:16px;letter-spacing:1px;font-family:'TeachableSans-Regular';width:100%;}
-._342054f3:hover{background-color:#32b964;}
-._35af145{display:flex;flex-direction:row;justify-content:center;}
-._7c686bce{color:#ffd011;}
-._7ca935a0{width:100%;text-align:center;font-size:24px;}
-._e3fbcfb{background-color:#4D90CC;border-radius:8px;box-shadow:0px 2px 12px 0px rgba(0, 0, 0, 0.1);padding:40px 40px 40px 40px;color:#ffffff;margin-bottom:30px;font-size:16px;}
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            <img class="rounded-circle img-fluid user-avatar" src="https://secure.gravatar.com/avatar/9c275cba24f7c939201cda28f832f8e0?s=80" alt="User">
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-.sectionWrapper a {
-    font-weight: bold;
-    color: #4D90CC;
-    text-decoration: underline;
-}
+  <main class="container">
+    <div class="row">
 
-</style>
+      <!--main content-->
+      <div class="col-md-12 main-content">
+         @if(session('status'))
+         <div class="row">
+           <div class="col-md-12">
+             <div class="alert alert-success" role="alert">
+               {{session('status')}}
+             </div>
+           </div>
+         </div>
+         @endif
+         @if(count(Auth::user()->deliverables->where('project_id', $project->id)) > 0)
+         <div class="row">
+           <div class="col-md-12">
+             <div class="alert alert-success" role="alert">
+               <a href="{{Auth::user()->deliverables->where('project_id', $project->id)->first()->link}}">
+                  Cliquez ici pour voir vos travaux
+               </a>
+             </div>
+           </div>
+         </div>
+         @endif
 
-<main class="container">
-  <div class="xl:px-3">
-    <div class="xl:px-5">
-      <div>
-        <div id="overlay-sendWorks" class="overlay"></div>
-        <div class="modalWrapper" style="left: 453px;">
-
-          {{-- Submit doc Beginning --}}
-
-        <form method="POST" action="{{route('deliverables.store')}}" >
-            @csrf
-
-          <div id="modal" class="modal rounded-t-lg ">
-            <div class="modal-cover rounded-t-lg ">
-              <div class="coverWrapper rounded-t-lg rounded-b-none">
-                <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div>
-              </div>
-              <div class="modal-coverButton">
-                <div class="button button--round"><i class="icon icon-window-close" aria-hidden="true"></i></div>
-              </div>
-            </div>
-            <div class="modal-contents">
-              <div class="modal-headline">
-                {{-- <div class="logo" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div> --}}
-                <h3 class="text-2xl ml-2 mt-1">Soumission de projet</h3>
-              </div>
-              <div class="modal-input"><span class="mb-2">Veuillez copier les liens de votre projet</span>
-                <div class="relative">
-                  <input name="link" type="text" placeholder="https://exemple.drive.com" class="input input--withButton text-center">
-                <input type="hidden" name="project_id" value="{{$project->id}}">
-                  <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-                  <input type="hidden" name="course_id" value="{{$project->course->id}}">
-                  <div class="button button--input"><i class="icon icon-copy" aria-hidden="true"></i></div>
-                </div>
-              </div>
-                    <button type="submit" class="modal-button button button--primary w-full">Soumettre mon projet</button>
+        <div class="lecture-actions row mt-5">
+          <div class="col-6">
+            <a href="{{$course->type == 'mooc' ? '/course/enrolled/'.$course->slug : '/path/enrolled/'.$course->slug}}" class="border p-2 font-weight-bold rounded">
+              <i class="fas fa-arrow-left mr-4"></i>
+              Retour
+            </a>
+            <div class="previous">
+              <span>Curriculum</span>
             </div>
           </div>
-    </form>
-      </div>
-
-{{--          Au cas ou l'etudiant devra resoumettre son travail--}}
-          <div class="modalWrapperagain" style="left: 453px;">
-
-              {{-- Submit doc Beginning --}}
-
-              <form method="POST" action="/resubmitDeliverable" >
-                  @csrf
-
-                  <div id="modal" class="modal rounded-t-lg ">
-                      <div class="modal-cover rounded-t-lg ">
-                          <div class="coverWrapper rounded-t-lg rounded-b-none">
-                              <div class="cover rounded-t-lg rounded-b-none" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div>
-                          </div>
-                          <div class="modal-coverButton">
-                              <div class="button button--round again"><i class="icon icon-window-close" aria-hidden="true"></i></div>
-                          </div>
-                      </div>
-                      <div class="modal-contents">
-                          <div class="modal-headline">
-                              {{-- <div class="logo" style="background-image: url(&quot;/images/divers/project.jpg&quot;);"></div> --}}
-                              <h3 class="text-2xl ml-2 mt-1">Re-soumission de projet</h3>
-                          </div>
-{{--                          <div class="modal-input"><span class="mb-2">Veuillez copier les liens de votre projet</span>--}}
-                              <div class="relative">
-                                  {{-- <input type="hidden" name="link" value="{{$deliverable->link}}" class="input input--withButton text-center"> --}}
-                                  <input type="hidden" name="project_id" value="{{$project->id}}">
-                                  <input type="hidden" name="user_id" value="null">
-                                  {{-- <div class="button button--input"><i class="icon icon-copy" aria-hidden="true"></i></div> --}}
-                              </div>
-                          </div>
-                          <button type="submit" class="modal-button button button--primary w-full">Oui</button>
-                      </div>
-                  </div>
-              </form>
-          </div>
-
-
-      </div>
-
-
-        {{-- Submit doc end --}}
-      <div class="navbar">
-        <div class="navbar-container">
-          <div class="navbar-leftNavigation">
-              <a href="/{{$course->type == 'course' ? 'course' : 'path'}}/{{$course->slug}}" class="navbar-link"><ion-icon name="arrow-back" size="small"></ion-icon><span class="navbar-linkText">Retour au parcours</span></a>
-          </div>
-          <!--
-          <div class="navbar-title">
-            Jour 22
-          </div>
-      -->
-          <div class="navbar-rightNavigation"> <a href="https://discordapp.com/invite/hhbzcHE" target="_blank"><button class="navbar-button"><img src="https://img.icons8.com/material-rounded/24/000000/conference-background-selected.png"> <span>Aller à la communauté</span></button></a> </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="content">
-    <div class="p-0 md:px-5">
-      <div class="bg-white md:rounded-lg p-3 pt-16 md:p-8 md:pt-24 min-h-screen">
-        <div class="sectionWrapper sectionWrapper--noTopPadding">
-
-            @if ($message = Session::get('success'))
-                <div class="alert alert-success alert-block">
-{{--                    <button type="button" class="close" data-dismiss="alert">×</button>--}}
-                    <strong>{{ $message }}</strong>
+        <div class="row mt-3">
+          <div class="col-12">
+            <h1>{{$project->title}}</h1>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 mt-4">
+            <a href="#" class="p-2 bg-oschool text-white rounded">
+              Communauté
+            </a>
+          </div>
+        </div>
+        <!--Ressource téléchargeable-->
+        @if(count(Auth::user()->deliverables->where('project_id', $project->id)) > 0)
+        @if(count(Auth::user()->deliverables->where('project_id', $project->id)->first()->medias) > 0)
+        <div class="row mt-3 p-3">
+          <div class=" col-md-12">
+            <!--Contenu Ressource téléchargeable-->
+            @foreach(Auth::user()->deliverables->where('project_id', $project->id)->first()->medias as $media)
+            <div class="row bg-dark rounded mt-3">
+              <div class="col-md-2 d-md-block d-none">
+                <div class="p-1 p-md-3">
+                  <img src="/assets/images/resource_icon.png" alt="" class="mx-auto w-75 img-fluid">
                 </div>
-            @endif
-                @if(count(Auth::user()->deliverables->where('project_id', $project->id)) > 0)
-
-
-                    <a target="_blank" href="{{Auth::user()->deliverables->where('project_id', $project->id)->first()->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
-                      <div class="module-progress-card__icon">
-                          <img src="/images/divers/resource_icon.png" alt="Les opportunités qu'offre Internet">
-                      </div>
-                      <h4 class="module-progress-card__title">Le lien de votre projet</h4>
-                    </a>
-
-
-
-
-              @endif
-
-          <section class="section section--header">
-            <h2 class="section-header">{{$project->title}}</h2>
-          </section>
+              </div>
+              <div class="col-md-7 flex-grow p-md-3">
+                <div class="p-1 p-md-3">
+                  <p class="text-white font-bold m-3">{{$media->name}}</p>
+                </div>
+              </div>
+              <div class="col-md-3 ">
+                <div class="p-1 p-md-3">
+                  <a download href="/deliverables/{{$media->name}}" class="btn bg-oschool rounded-pill m-3 text-white">Télécharger</a>
+                </div>
+              </div>
+            </div>
+            @endforeach
+            <!--End Contenu Ressource téléchargeable-->
+          </div>
         </div>
-        <div>
-          <section style="text-align: center;" class="sectionWrapper sectionWrapper--video has-markers is-first">
+        @endif
+        @endif
+        @if(count($project->tasks) > 0)
+        <div class="row mt-3">
+          <div class="col-12 col-md-10 summary">
+            <h6 class="pointer bg-light border title-summary mb-0" data-toggle="collapse" data-target="#summaryCollapse">En résumé pour ce projet <i class="fas fa-angle-down ml-3"></i></h6>
+            <ul class="bg-light title-summary" id="summaryCollapse">
+            @foreach($project->tasks as $task)
+              <li class="list-summary">
+                <a href="#">{{$task->heading}}</a>
+              </li>
+             @endforeach
+            </ul>
+          </div>
+        </div>
+        @endif
+
+        <div class="lecture-content row mt-5">
+          <div class="col-12">
+            @if($project->video)
+            <p>
+              Regardez cette vidéo minutieusement
+            </p>
             {!!$project->video!!}
-          </section>
-          <!---->
-          <!---->
-          <!---->
-          <!---->
-        </div>
-        <div>
-          <!---->
-          <div class="sectionWrapper">
-            <div class="section section--text">
-              {!!$project->description!!}
-            </div>
-          </div>
-          <!---->
-          <!---->
-          <!---->
-        </div>
-        <div>
-          <!---->
-          <!---->
-          <section class="sectionWrapper sectionWrapper--audio">
-              <h3>Les cours à suivre pour réaliser ce projet</h3><br>
-              @foreach($project->resources->sortBy('position') as $resource)
-              <a target="_blank" href="{{$resource->link}}" class="module-progress-card" data-gtm-tag="module-card module-link">
-                  <div class="module-progress-card__icon">
-                      <img src="/images/divers/resource_icon.png" alt="Les opportunités qu'offre Internet">
-                  </div>
-                  <h4 class="module-progress-card__title">{{$resource->title}}</h4>
+            @endif
 
-              </a>
-              @endforeach
-          </section>
-          <!---->
-          <!---->
+            {!!$project->description!!}
+
+          </div>
         </div>
 
         @if(count(Auth::user()->deliverables->where('project_id', $project->id)) > 0)
         @if(Auth::user()->deliverables->where('project_id', $project->id)->first()->comment)
-        <div style="width: 60%; margin: auto;" class="_e3fbcfb">
-            <div class="_35af145"><img width="200" src="https://oschoolelearning.com/images/divers/feature1.png"></div>
-            <h2 class="_7ca935a0"><span>Commentaire sur votre travail</span></h2>
-            <p class="_1f67b618">{!!Auth::user()->deliverables->where('project_id', $project->id)->first()->comment!!}</p>
+        <div class="row">
+            <div class="col-12 col-md-6 rounded border p-5">
+                <h3>Les commentaires sur vos travaux</h3>
+                <p class="mt-3">{!!Auth::user()->deliverables->where('project_id', $project->id)->first()->comment!!}</p>
+            </div>
         </div>
         @endif
         @endif
 
-
-
-
-        <section class="sectionWrapper sectionWrapper--tasks">
-          <div class="section section--tasks">
-            <div class="tasks">
-              <header class="tasks-header">
-                {{Auth::user()->tasks->where('project_id', $project->id)->count()}}/{{$project->tasks->count()}} tâches terminées
-              </header>
-              <div class="tasks-body">
-                @foreach($project->tasks as $task)
-                <div class="taskWrapper">
-                  <div class="task">
-                    <div class="task-content">
-                      <div class="task-cover">
-                        <div class="coverWrapper--tasks">
-                          <div class="cover cover--tasks" style="background-image: url(&quot;/images/divers/user.jpg&quot;);"></div>
-                        </div>
-                      </div>
-
-                      <div class="task-description {{Auth::user()->tasks->contains($task->id) ? 'task-description--completed' : ''}}">
-                        <div class="sign {{Auth::user()->tasks->contains($task->id) ? 'sign--completed' : ''}}"><ion-icon name="checkmark-circle-outline"></ion-icon></div>
-                        <div class="task-name">{{$task->heading}}</div>
-                      </div>
-                    </div>
-                  </div>
+        @if(count($project->tasks) > 0)
+        <!--section des taches-->
+        <div class="row p-4">
+          <div class="col-12">
+            <p class="h6 text-center p-3 text-uppercase font-weight-bold">{{Auth::user()->tasks->where('project_id', $project->id)->count()}}/{{$project->tasks->count()}} tâches terminées</p>
+          </div>
+        </div>
+        <div class="row p-4">
+        @foreach($project->tasks as $task)
+          <div class="col-md-4 ">
+            <div class="shadow-sm p-0">
+              <div class="">
+                <img src="https://oschoolelearning.com/images/divers/user.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="d-flex">
+                <span class="p-3">
+                  @if(Auth::user()->tasks->contains($task->id))
+                  <i class="fas fa-check-circle green"></i>
+                  @else
+                  <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-check2-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L8 9.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                    <path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1 0 13.5 8a.5.5 0 0 1 1 0 6.5 6.5 0 1 1-3.25-5.63.5.5 0 1 1-.5.865A5.472 5.472 0 0 0 8 2.5z" />
+                  </svg>
+                  @endif
+                </span>
+                <div class="p-3">
+                  <p class="h6">{{$task->heading}}</p>
                 </div>
-                @endforeach
               </div>
             </div>
           </div>
-        </section>
+          @endforeach
+
+        </div>
+        @endif
+        <!--Boutton evoyer des travaux-->
+        <div class="row">
+          <div class="col-md-12">
+             @if(count(Auth::user()->deliverables->where('user_id', Auth::user()->id)->where('project_id', $project->id)) > 0)
+             @if(Auth::user()->deliverables->where('project_id', $project->id)->first()->status == null)
+            <div class="p-4 text-center">
+              <a class="bg-light p-3 rounded-pill text-decoration-none text-white">Votre projet a déjà été envoyé et est en cours de correction</a>
+            </div>
+            @elseif(Auth::user()->deliverables->where('project_id', $project->id)->first()->status == '0')
+            <div class="p-4 text-center">
+              <a href="#" class="bg-oschool p-3 rounded-pill text-decoration-none text-white" data-toggle="modal" data-target="#projectResubmit">Renvoyer mes travaux</a>
+            </div>
+            @endif
+            @else
+            <div class="p-4 text-center">
+              <a href="#" class="bg-oschool p-3 rounded-pill text-decoration-none text-white" data-toggle="modal" data-target="#projectForm">Envoyer mes travaux</a>
+            </div>
+            @endif
+          </div>
+        </div>
+
+
+      <!--end main content-->
+      <div id="overlay"></div>
+    </div>
+  </main>
+  <!--POPUP ENVOIE DES PROJETS-->
+  <div class="modal fade" id="projectForm" tabindex="-1"  aria-labelledby="projectForm" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class=" border-bottom-0 modal-header" style="background-image: url('/assets/images/resource_icon.png')">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form method="POST" action="{{route('deliverables.store')}}" enctype="multipart/form-data">
+            @csrf
+          <div class="modal-body">
+            <div class="container">
+              <div class="">
+
+              </div>
+              <div class="">
+                <p class="h5 p-3 text-center">Soumission de projet</p>
+              </div>
+            </div>
+            <div class="input-group mb-3 p-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">https//</span>
+              </div>
+              <input name="link" type="url" class="form-control" id="url" aria-describedby="basic-addon3" placeholder="Mettez le lien de vos travaux" data-theme="fas">
+              <input type="hidden" name="project_id" value="{{$project->id}}">
+                <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                <input type="hidden" name="course_id" value="{{$course->id}}">
+            </div>
+            <!--PLUGIN evoyer des travaux-->
+            <div class="ssi-uploader">
+              <div class="ssi-buttonWrapper">
+                <span class="ssi-InputLabel">
+                  <input name="file[]" type="file" multiple id="ssi-upload" class="ssi-uploadInput">
+                </span>
+                <button id="ssi-abortBtn" type="button" class="ssi-button error ssi-cancelAll ssi-hidden"><span class="inBtn">Abort </span></button>
+                <button id="ssi-uploadBtn" type="button" class="ssi-button success ssi-hidden"><span class="ssi-btnIn">Upload&nbsp;</span><span id="ssi-up_loading" class="ssi-btnIn"></span></button>
+                <button id="ssi-clearBtn" type="button" class="ssi-hidden ssi-button info">Clear</button>
+              </div>
+            </div>
+            <!--END PLUGIN evoyer des travaux-->
+            <div class="modal-footer border-top-0 d-flex justify-content-center">
+              <button type="submit" class="btn bg-oschool text-white">Soumettre mon projet</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-</main>
+
+  <!-- RENVOI DES PROJETS -->
+  <div class="modal fade" id="projectResubmit" tabindex="-1"  aria-labelledby="projectForm" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class=" border-bottom-0 modal-header" style="background-image: url('/assets/images/resource_icon.png')">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form method="POST" action="/resubmitDeliverable" enctype="multipart/form-data">
+            @csrf
+          <div class="modal-body">
+            <div class="container">
+              <div class="">
+
+              </div>
+              <div class="">
+                <p class="h5 p-3 text-center">Renvoyez vos travaux</p>
+              </div>
+            </div>
+            <div class="input-group mb-3 p-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">https//</span>
+              </div>
+              <input value="{{count(Auth::user()->deliverables->where('project_id', $project->id)) > 0 ? Auth::user()->deliverables->where('project_id', $project->id)->first()->link : ''}}" name="link" type="url" class="form-control" id="url" aria-describedby="basic-addon3" placeholder="Mettez le lien de vos travaux" data-theme="fas">
+              <input type="hidden" name="project_id" value="{{$project->id}}">
+            </div>
+            <!--PLUGIN evoyer des travaux-->
+            <div class="ssi-uploader">
+              <div class="ssi-buttonWrapper">
+                <span class="ssi-InputLabel">
+                  <input name="file[]" type="file" multiple id="ssi-upload2" class="ssi-uploadInput">
+                </span>
+                <button id="ssi-abortBtn" type="button" class="ssi-button error ssi-cancelAll ssi-hidden"><span class="inBtn">Abort </span></button>
+                <button id="ssi-uploadBtn" type="button" class="ssi-button success ssi-hidden"><span class="ssi-btnIn">Upload&nbsp;</span><span id="ssi-up_loading" class="ssi-btnIn"></span></button>
+                <button id="ssi-clearBtn" type="button" class="ssi-hidden ssi-button info">Clear</button>
+              </div>
+            </div>
+            <!--END PLUGIN evoyer des travaux-->
+            <div class="modal-footer border-top-0 d-flex justify-content-center">
+              <button type="submit" class="btn bg-oschool text-white">Re-soumettre mon projet</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $('#ssi-upload').ssi_uploader({
+        dropZone: false,
+        locale: 'fr',
+        allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif', 'pdf', 'zip'],
+
+      });
+
+      $('#ssi-upload2').ssi_uploader({
+        dropZone: false,
+        locale: 'fr',
+        allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif', 'pdf', 'zip'],
+
+      });
+
+    });
+  </script>
 
 
-@endsection
+  <script src="/assets/plugin/dist/ssi-uploader/js/ssi-uploader.min.js"></script>
+
+</body>
+
+
+</html>

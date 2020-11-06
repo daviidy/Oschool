@@ -84,10 +84,12 @@
           @foreach($course->resources->sortBy('position') as $resource)
           <div class="row mt-5 rounded-top">
             <div class="col-12 resource-image text-center" style="background-image: url({{$resource->type == 'course' ? '/images/courses/logos/'.$resource->link->logo : '/images/projects/images/'.$resource->project->image}});">
-              <h2 class="text-dark bg-white pr-3 pl-3 path-title w-50 ml-auto mr-auto">
-                {{$resource->type == 'course' ? $resource->link->name : $resource->project->title}}
-                <i class="fas fa-check-circle green ml-3"></i>
-              </h2>
+              <a target="_blank" href="{{$resource->type == 'course' ? '/course/enrolled/'.$resource->link->slug : '/'.$course->slug.'/projects/'.$resource->project->slug}}">
+                  <h2 class="text-dark bg-white pr-3 pl-3 path-title w-50 ml-auto mr-auto">
+                    {{$resource->type == 'course' ? $resource->link->name : $resource->project->title}}
+                    <i class="fas fa-check-circle green ml-3"></i>
+                  </h2>
+              </a>
             </div>
             <div class="col-12 bg-white text-center p-3 rounded-bottom">
              @if($resource->type == 'course')

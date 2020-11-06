@@ -47,4 +47,9 @@ class Deliverable extends Model
       {
           return $this->belongsTo('App\User');
       }
+
+      public function medias()
+      {
+          return $this->hasMany('App\Media');
+      }
 }

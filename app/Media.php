@@ -21,4 +21,9 @@ class Media extends Model
       {
           return $this->belongsTo('App\Lesson');
       }
+
+      public function deliverable()
+      {
+          return $this->belongsTo('App\Deliverable');
+      }
 }

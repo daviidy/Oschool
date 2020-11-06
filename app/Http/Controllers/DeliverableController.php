@@ -13,6 +13,8 @@ use DB;
 use Mail;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Media;
+use Validator;
 
 class DeliverableController extends Controller
 {
@@ -51,7 +53,26 @@ class DeliverableController extends Controller
         $deliverable = Deliverable::create($request->all());
         $deliverable->save();
 
+        $validation = Validator::make($request->all(), [
+              'file.*' => 'required|file|mimes:jpeg,png,jpg,pdf,mp3,mp4|max:10000'
+          ],[
+              'file.*.required' => 'Please upload a file',
+                'file.*.mimes' => 'Only jpeg,png,jpg,pdf,mp3,mp4 files are allowed',
+                'file.*.max' => 'Sorry! Maximum allowed size for an image is 10MB',
+          ]);
 
+          if ($validation->passes()) {
+              if ($request->hasFile('file') ) {
+                foreach ($request->file('input2') as $file) {
+                  $filename = $file->getClientOriginalName();
+                  $media = Media::create([
+                      'name' => $filename,
+                      'deliverable_id' => $deliverable->id,
+                  ]);
+                  $file->move(public_path('/deliverables/'), $filename);
+                }
+            }
+          }
          Mail::send('mails.users.projects.notification', ['deliverable' => $deliverable], function($message) use($deliverable){
            $message->to($deliverable->course->school->user->email, 'Cher(ère) Partenaire')->subject('Un étudiant a soumis ses travaux pour le projet '.$deliverable->project->title);
            $message->from('eventsoschool@gmail.com', 'Oschool');
@@ -111,15 +132,13 @@ class DeliverableController extends Controller
                 }
             }
         }
-
-
         $deliverable->save();
         //send mail to the student
          Mail::send('mails.users.projects.evaluation', ['deliverable' => $deliverable], function($message) use($deliverable){
            $message->to($deliverable->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre travail pour le projet '.$deliverable->project->title.' a été évalué');
            $message->from('eventsoschool@gmail.com', 'Oschool');
          });
-        return back()->with('status', 'Evaluation ajoutée');
+        return back()->with('status', 'La modification des travaux a été bien pris en compte');
     }
 
 
@@ -129,7 +148,31 @@ class DeliverableController extends Controller
         $deliverable->status = null;
         $deliverable->save();
 
+        $validation = Validator::make($request->all(), [
+              'file.*' => 'required|file|mimes:jpeg,png,jpg,pdf,mp3,mp4|max:10000'
+          ],[
+              'file.*.required' => 'Please upload a file',
+                'file.*.mimes' => 'Only jpeg,png,jpg,pdf,mp3,mp4 files are allowed',
+                'file.*.max' => 'Sorry! Maximum allowed size for an image is 10MB',
+          ]);
 
+          if ($validation->passes()) {
+              if ($request->hasFile('file') ) {
+                if (count($deliverable->medias) > 0) {
+                    foreach ($deliverable->medias as $media) {
+                        $media->delete();
+                    }
+                }
+                foreach ($request->file('input2') as $file) {
+                  $filename = $file->getClientOriginalName();
+                  $media = Media::create([
+                      'name' => $filename,
+                      'deliverable_id' => $deliverable->id,
+                  ]);
+                  $file->move(public_path('/deliverables/'), $filename);
+                }
+            }
+          }
 
          Mail::send('mails.users.projects.notification', ['deliverable' => $deliverable], function($message) use($deliverable){
            $message->to($deliverable->course->school->user->email, 'Cher(ère) Partenaire')->subject('Un étudiant a soumis ses travaux pour le projet '.$deliverable->project->title);

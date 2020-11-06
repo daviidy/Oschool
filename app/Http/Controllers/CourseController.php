@@ -120,11 +120,12 @@ class CourseController extends Controller
                 if ($course->type == 'mooc') {
                         return view('courses.show', ['course' => $course]);
                     }
-                }
                 //sinon si le cours path
-                elseif ($course->type == 'path' || $course->type == 'bootcamp') {
+                else{
+
                     return view('paths.show', ['course' => $course]);
                 }
+            }
             //sinon (proprio owner)
             else {
                 if ($course->type == 'mooc') {
@@ -173,25 +174,18 @@ class CourseController extends Controller
             }
         }
         //sinon
-        else {
+        elseif (!Auth::check()) {
+            return redirect()->back()->with('status', 'Connectez-vous d\'abord');
+        } else {
             if ($course->type == 'mooc') {
-
-                if (Auth::user()->courses->contains($course->id)) {
-                    //take first lesson not ended and redirect user to this lesson
-                    foreach ($course->lessons->sortBy('position') as $lesson) {
-                        if (!Auth::user()->lessons->contains($lesson->id)) {
-                            return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug)->with('status', 'Content de vous revoir');
-                        }
-                    }
-                }
-                else {
-                    return view('courses.show', ['course' => $course]);
-                }
+                $lesson = $course->lessons->first();
+                return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug);
             }
             else {
                 return view('paths.curriculum', ['course' => $course]);
             }
         }
+
     }
 
     /**
