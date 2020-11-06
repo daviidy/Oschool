@@ -113,79 +113,27 @@ class CourseController extends Controller
     {
         $course = Course::where('slug', $slug)->firstOrFail();
         $school = School::find($course->school_id);
-        //si l'utilisateur est connecté
-        //et n'est ni admin ni owner
-        if (Auth::check() && !Auth::user()->isAdmin() && !Auth::user()->isOwner()) {
             //si le proprio de l'école
             //est admin
             if ($course->school->user->isAdmin()) {
                 //si le cours est un mooc
                 if ($course->type == 'mooc') {
-                    //si user connecté et inscrit au cours
-                    if (Auth::user()->courses->contains($course->id)) {
-                        //take first lesson not ended and redirect user to this lesson
-                        foreach ($course->lessons->sortBy('position') as $lesson) {
-                            if (!Auth::user()->lessons->contains($lesson->id)) {
-                                return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug)->with('status', 'Content de vous revoir');
-                            }
-                        }
-                    }
-                    else {
                         return view('courses.show', ['course' => $course]);
                     }
                 }
                 //sinon si le cours path
                 elseif ($course->type == 'path' || $course->type == 'bootcamp') {
-                    return view('paths.curriculum', ['course' => $course]);
+                    return view('paths.show', ['course' => $course]);
                 }
-            }
             //sinon (proprio owner)
             else {
                 if ($course->type == 'mooc') {
-                    //si user connecté et inscrit au cours
-                    if (Auth::user()->courses->contains($course->id)) {
-                        //take first lesson not ended and redirect user to this lesson
-                        foreach ($course->lessons->sortBy('position') as $lesson) {
-                            if (!Auth::user()->lessons->contains($lesson->id)) {
-                                return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug)->with('status', 'Content de vous revoir');
-                            }
-                        }
-                    }
-                    else {
-                        return view('courses.showCourseOut', ['course' => $course, 'school' => $school]);
-                    }
-                }
-                elseif ($course->type == 'path' || $course->type == 'bootcamp') {
-                    return view('paths.curriculum', ['course' => $course]);
-                }
-            }
-
-        }
-        //sinon (utilisateur pas connecté)
-        //ou utilisateur admin ou owner
-        else {
-            //si user est proprio
-            if ($course->school->user->isOwner()) {
-                if ($course->type == 'mooc') {
                     return view('courses.showCourseOut', ['course' => $course, 'school' => $school]);
                 }
-                else {
+                elseif ($course->type == 'path' || $course->type == 'bootcamp') {
                     return view('paths.show', ['course' => $course]);
                 }
             }
-            else {
-                if ($course->type == 'mooc') {
-                    return view('courses.show', ['course' => $course]);
-                }
-                else {
-                    return view('paths.show', ['course' => $course]);
-                }
-            }
-
-        }
-
-
-
     }
 
 
@@ -204,7 +152,12 @@ class CourseController extends Controller
 
             if ($course->type == 'mooc') {
                 if (Auth::user()->courses->contains($course->id)) {
-                    return view('courses.curriculum', ['course' => $course]);
+                    //take first lesson not ended and redirect user to this lesson
+                    foreach ($course->lessons->sortBy('position') as $lesson) {
+                        if (!Auth::user()->lessons->contains($lesson->id)) {
+                            return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug)->with('status', 'Content de vous revoir');
+                        }
+                    }
                 }
                 else {
                     return view('courses.show', ['course' => $course]);
@@ -222,7 +175,18 @@ class CourseController extends Controller
         //sinon
         else {
             if ($course->type == 'mooc') {
-                return view('courses.curriculum', ['course' => $course]);
+
+                if (Auth::user()->courses->contains($course->id)) {
+                    //take first lesson not ended and redirect user to this lesson
+                    foreach ($course->lessons->sortBy('position') as $lesson) {
+                        if (!Auth::user()->lessons->contains($lesson->id)) {
+                            return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug)->with('status', 'Content de vous revoir');
+                        }
+                    }
+                }
+                else {
+                    return view('courses.show', ['course' => $course]);
+                }
             }
             else {
                 return view('paths.curriculum', ['course' => $course]);
