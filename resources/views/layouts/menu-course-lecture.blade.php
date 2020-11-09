@@ -311,7 +311,7 @@ a {
         <button type="submit" class="nav-btn complete" id="nav-btn-complete" data-cpl-tooltip="You must complete all lecture material before progressing" href="" role="button" id="lecture_complete_button">
               @csrf
               <input type="hidden" name="id" value="{{$lesson->id}}">
-              <span class="nav-text">Valider et continuer</span>
+              <span class="nav-text">Marquer ce chapitre comme terminé</span>
               &nbsp;
               <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </button>

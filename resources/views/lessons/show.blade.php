@@ -78,8 +78,7 @@
           </div>
           <div id="lessonsList{{$section->id}}">
              @if($section->lessons)
-             @foreach($section->lessons->sortBy('position') as $section_lesson)
-             @if($section_lesson->status == 'active')
+             @foreach($section->lessons->where('status', 'active')->sortBy('position') as $section_lesson)
             <div class="lessons d-flex pt-0 pb-0">
                 @if($loop->first)
               <i class="{{Auth::user()->lessons->contains($section_lesson->id) ? 'fas' : 'far'}} fa-circle mr-2 {{Auth::user()->lessons->contains($section_lesson->id) ? 'green' : 'bg-light'}} position-absolute first"></i>
@@ -88,11 +87,10 @@
                 @else
               <i class="{{Auth::user()->lessons->contains($section_lesson->id) ? 'fas' : 'far'}} fa-circle mr-2 {{Auth::user()->lessons->contains($section_lesson->id) ? 'green' : 'bg-light'}} position-absolute other"></i>
                 @endif
-              <div class="single-lesson pl-4">
+              <div class="single-lesson pl-4 {{$loop->first ? '' : 'pt-3'}}">
                 <a href="#">{{$section_lesson->title ? $section_lesson->title : 'Nouvelle leçon'}}</a>
               </div>
             </div>
-            @endif
             @endforeach
             @endif
 
@@ -258,27 +256,45 @@
 
         @endif
 
-
+        @auth
+        @if(!$lesson->section->drip && $status !== '0' && Auth::user()->courses->contains($lesson->section->course->id) && !Auth::user()->isOwner())
         <div class="lecture-actions row mt-5">
           <div class="col-6">
-            <a href="#" class="border p-2 font-weight-bold rounded">
+            <a href="/course/{{$lesson->course->slug}}/lessons/{{$previous_lesson->slug}}" class="border p-2 font-weight-bold rounded">
               <i class="fas fa-arrow-left mr-4"></i>
-              Back
+              Chapitre précédent
             </a>
             <div class="previous">
-              <span>Conditionals Return Values</span>
+              <span>{{$previous_lesson->title}}</span>
             </div>
           </div>
+          @if(Auth::user()->lessons->contains($lesson->id))
           <div class="col-6 text-right">
-            <a href="#" class="border p-2 font-weight-bold next-link rounded">
-              Next
+            <a href="/course/{{$lesson->course->slug}}/lessons/{{$next_lesson->slug}}" class="border p-2 font-weight-bold next-link rounded">
+              Chapitre suivant
               <i class="fas fa-arrow-right ml-4"></i>
             </a>
             <div class="next ml-auto">
-              <span>Conditionals Return Values</span>
+              <span>{{$next_lesson->title}}</span>
             </div>
           </div>
+          @else
+          <div class="col-6 text-right">
+            <form action="/completeLesson" method="post">
+                <button type="submit" class="btn green"role="button" id="lecture_complete_button">
+                      @csrf
+                      <input type="hidden" name="id" value="{{$lesson->id}}">
+                      <span class="nav-text">Marquer ce chapitre comme terminé</span>
+                      &nbsp;
+                      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </form>
+          </div>
+          @endif
+
         </div>
+        @endif
+        @endauth
 
         <div class="progression row mt-5 mb-5">
           <div class="col-8">
