@@ -97,11 +97,13 @@
           </div>
         </div>
         <div class="row mt-3">
-          <div class="col-12 mt-4">
-            <a href="#" class="p-2 bg-oschool text-white rounded">
-              Communauté
-            </a>
-          </div>
+            @if(count($course->school->communities) > 0)
+            <div class="col-12 mt-4">
+              <a href="{{$course->school->communities->first()->link}}" target="_blank" class="p-2 bg-oschool text-white rounded">
+                Communauté
+              </a>
+            </div>
+            @endif
         </div>
         <!--Ressource téléchargeable-->
         @if(count(Auth::user()->deliverables->where('project_id', $project->id)) > 0)

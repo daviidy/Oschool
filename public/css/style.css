@@ -1,0 +1,272 @@
+/*
+    CSS Reset
+*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+button,
+ul,
+li,
+a,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+  list-style: none;
+}
+
+/* Global Setting */
+@font-face {
+  font-family: Cocogoose;
+  src: url('../assets/fonts/cocogoose/Cocogoose Pro-trial.ttf');
+}
+
+.navbar {
+  z-index: 1999;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+pre {
+  width: 100%;
+}
+
+iframe {
+  width: 100% !important;
+  height: 515px !important;
+  box-shadow: -4px 11px 26px -4px rgba(0, 0, 0, 0.75);
+}
+
+a:hover {
+  text-decoration: none;
+  color: #4d90cc;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.blue-oschool {
+  color: #4d90cc;
+}
+
+.bg-oschool {
+  background-color: #4d90cc;
+}
+
+.green {
+  color: rgb(80, 204, 47);
+}
+
+.bg-green {
+  background-color: rgb(80, 204, 47);
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3,
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* menu */
+.logo-short,
+.user-avatar {
+  width: 13%;
+}
+
+.logo {
+  width: 50%;
+}
+
+.user-avatar {
+  width: 30px;
+}
+
+.navbar .navbar-nav:nth-child(1) {
+  width: 70%;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+.dropdown-menu {
+  position: absolute !important;
+  left: auto;
+  right: 0;
+}
+
+/* main */
+.main-content {
+  margin-top: 5rem;
+}
+
+.summary ul li a::before {
+  content: "✅";
+  color: rgb(136, 135, 255);
+  display: inline-block;
+  margin-right: 0.2rem;
+}
+
+.title-summary {
+  width: 70%;
+  padding: 9px 25px;
+}
+
+.list-summary {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.lecture-content p,
+.lecture-content h2,
+.lecture-content h3,
+.lecture-content h4,
+.lecture-content h5,
+.lecture-content h6,
+.lecture-content img,
+.lecture-content iframe {
+  margin: 0 0 20px;
+}
+
+.lecture-content img {
+  width: 50%;
+}
+
+.lecture-content a {
+  color: #4d90cc;
+}
+
+.lecture-content a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.previous,
+.next {
+  color: rgb(107, 106, 120);
+  max-width: 250px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.next-link {
+  color: #4d90cc;
+  border-color: #4d90cc;
+}
+
+.progression span {
+  font-size: 11px;
+  font-weight: 300;
+}
+
+/* curriculum */
+.side-menu {
+  z-index: 100;
+  margin-top: 4rem;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.curriculum {
+  overflow-y: auto;
+}
+
+.lessons i {
+  font-size: 15px;
+}
+
+.lessons {
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.single-lesson {
+  border-left: 1px solid rgba(0, 0, 0, 0.87);
+}
+
+.first {
+  margin-left: -7px;
+}
+
+.other {
+  margin-left: -7px;
+  margin-top: 17px;
+}
+
+.last {
+  margin-left: -7px;
+  margin-top: 22px;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  display: none;
+}
+
+.os-hover:hover {
+  position: relative;
+  top: 15px;
+}
+
+.bg-oschool-footer {
+  background-color: #f3f9fa;
+}
+
+/* media queries */
+@media screen and (max-width: 599px) {
+  .logo {
+    display: none;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 315px !important;
+    box-shadow: -4px 11px 26px -4px rgba(0, 0, 0, 0.75);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .logo-short {
+    display: none;
+  }
+}

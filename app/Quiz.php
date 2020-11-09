@@ -19,6 +19,11 @@ class Quiz extends Model
          return $this->hasMany('App\Question');
      }
 
+     public function options()
+     {
+         return $this->hasMany('App\Option');
+     }
+
      /**
       * [users description]
       * relationship one to many with Result model

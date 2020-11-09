@@ -20,6 +20,11 @@ class Option extends Model
             return $this->belongsTo('App\Question');
         }
 
+        public function quiz()
+        {
+            return $this->belongsTo('App\Quiz');
+        }
+
         //function for relmationship between
         //option and answers (one to many)
         public function answers()

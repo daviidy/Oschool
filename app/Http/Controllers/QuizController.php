@@ -147,7 +147,7 @@ class QuizController extends Controller
       //on crée une réponse du user
       $options_tab = json_decode($request->options);
         foreach ($options_tab as $selected_option) {
-                $option = Option::where('text', $selected_option)->first();
+                $option = Option::where('text', trim($selected_option))->first();
                 $answer = Answer::create([
                                       'option_id' => $option->id,
                                       'result_id' => $result->id,

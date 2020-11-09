@@ -155,7 +155,7 @@ class CourseController extends Controller
                 if (Auth::user()->courses->contains($course->id)) {
                     //take first lesson not ended and redirect user to this lesson
                     foreach ($course->lessons->sortBy('position') as $lesson) {
-                        if (!Auth::user()->lessons->contains($lesson->id)) {
+                        if (!Auth::user()->lessons->contains($lesson->id) && $lesson->status == 'active') {
                             return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug)->with('status', 'Content de vous revoir');
                         }
                     }
