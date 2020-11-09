@@ -283,10 +283,10 @@
         <div class="progression row mt-5 mb-5">
           <div class="col-8">
             <span class="">
-              75% completed, meet the criteria and claim your course certificate!
+              {{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}% achevés
             </span>
             <div class="progress blue-oschool mt-3" style="height:10px">
-              <div class="progress-bar bg-oschool" style="width:40%;height:10px"></div>
+              <div class="progress-bar bg-oschool" style="width:{{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}%;height:10px"></div>
             </div>
           </div>
           <div class="col-4 text-center text-md-right">
