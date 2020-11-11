@@ -1,58 +1,15 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+@extends('layouts.menu-project')
+@section('content')
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Projet</title>
-  <!--link rel="icon" href=""-->
-  <!--END PLUGIN -->
-  <link href="/assets/plugin/dist/ssi-uploader/styles/ssi-uploader.min.css" rel="stylesheet">
+<style media="screen">
+.delete-blue-box{
+    display: none;
+}
 
-  <!--END PLUGIN -->
-
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
-  <script src="https://kit.fontawesome.com/d86848cfe0.js"></script>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="/css/lecture_path.css">
-  <link rel="stylesheet" href="/css/atom-one-dark.min.css">
-
-</head>
-
-<body>
-  <header>
-    <nav class="navbar navbar-expand-sm bg-white border-bottom fixed-top">
-      <ul class="navbar-nav flex-row align-items-center">
-        <li class="nav-item ml-3">
-          <img class="logo-short img-fluid" src="/assets/images/logo-os-noir.png" alt="Logo">
-          <img class="logo" src="/assets/images/logo-oschool-noir.png" alt="">
-        </li>
-      </ul>
-
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            <img class="rounded-circle img-fluid user-avatar" src="https://secure.gravatar.com/avatar/9c275cba24f7c939201cda28f832f8e0?s=80" alt="User">
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Link 1</a>
-            <a class="dropdown-item" href="#">Link 2</a>
-            <a class="dropdown-item" href="#">Link 3</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </header>
+.rm-mg {
+    margin: 0 !important;
+}
+</style>
 
   <main class="container">
     <div class="row">
@@ -333,34 +290,5 @@
       </div>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad();
-  </script>
 
-  <script>
-    $(document).ready(function() {
-      $('#ssi-upload').ssi_uploader({
-        dropZone: false,
-        locale: 'fr',
-        allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif', 'pdf', 'zip'],
-
-      });
-
-      $('#ssi-upload2').ssi_uploader({
-        dropZone: false,
-        locale: 'fr',
-        allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif', 'pdf', 'zip'],
-
-      });
-
-    });
-  </script>
-
-
-  <script src="/assets/plugin/dist/ssi-uploader/js/ssi-uploader.min.js"></script>
-
-</body>
-
-
-</html>
+  @endsection

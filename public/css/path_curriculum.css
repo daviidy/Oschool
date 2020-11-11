@@ -191,6 +191,15 @@ i {
   display: none;
 }
 
+.os-hover:hover {
+  position: relative;
+  top: 15px;
+}
+
+.bg-oschool-footer {
+  background-color: #f3f9fa;
+}
+
 /* media queries */
 
 @media screen and (max-width: 599px){

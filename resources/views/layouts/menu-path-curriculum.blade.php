@@ -67,12 +67,12 @@ drift.load('2uy6g3spxi59');
 </script>
 <!-- End of Async Drift Code -->
 
-  <link rel="stylesheet" href="/css/lecture_path.css">
+  <link rel="stylesheet" href="/css/path_curriculum.css">
   <link rel="stylesheet" href="/css/atom-one-dark.min.css">
 
 </head>
 
-<body>
+<body class="bg-code-signal">
   <header>
     <nav class="navbar navbar-expand-sm bg-white border-bottom fixed-top">
       <ul class="navbar-nav flex-row align-items-center">
@@ -92,32 +92,6 @@ drift.load('2uy6g3spxi59');
 
   @include('includes.footer')
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad();
-  </script>
-
-  <script>
-    $(document).ready(function() {
-      $('#ssi-upload').ssi_uploader({
-        dropZone: false,
-        locale: 'fr',
-        allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif', 'pdf', 'zip'],
-
-      });
-
-      $('#ssi-upload2').ssi_uploader({
-        dropZone: false,
-        locale: 'fr',
-        allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif', 'pdf', 'zip'],
-
-      });
-
-    });
-  </script>
-
-
-  <script src="/assets/plugin/dist/ssi-uploader/js/ssi-uploader.min.js"></script>
 
 </body>
 

@@ -173,12 +173,12 @@ class CourseController extends Controller
                 }
             }
         }
-        //sinon
+        //sinon (user forcement admin)
         elseif (!Auth::check()) {
             return redirect()->back()->with('status', 'Connectez-vous d\'abord');
         } else {
             if ($course->type == 'mooc') {
-                $lesson = $course->lessons->first();
+                $lesson = $course->lessons->sortBy('position')->first();
                 return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug);
             }
             else {

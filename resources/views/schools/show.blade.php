@@ -258,7 +258,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                                             </g>
                                         </g>
                                     </svg>
-                                    {{count($course->projects)}} Projets
+                                    {{count($course->resources)}} modules
                                 </div>
                             </div>
                         </div>

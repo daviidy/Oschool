@@ -417,7 +417,7 @@ Route::get('/course/enrolled/{slug}', 'CourseController@showCurriculum')->name('
 Route::get('/path/enrolled/{slug}', 'CourseController@showCurriculum')->name('enrolled.slug');
 Route::get('/course/{slugCourse}/lessons/{slug}', 'LessonController@showSlug')->name('lesson.slug');
 Route::get('/course/{slugCourse}/checkout/{pricing}', 'PurchaseController@checkout');
-Route::get('/{slugCourse}/projects/{slug}', 'ProjectController@showProject');
+Route::get('/path/{slugCourse}/projects/{slug}', 'ProjectController@showProject');
 
 Route::get('/checkoutPartners/{offer}', 'OfferController@checkoutPartners');
 

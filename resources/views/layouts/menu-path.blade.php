@@ -32,7 +32,7 @@
       <script src="https://kit.fontawesome.com/d86848cfe0.js"></script>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <link rel="stylesheet" href="/css/course.css">
+      <link rel="stylesheet" href="/css/path.css">
       <link rel="stylesheet" href="/css/atom-one-dark.min.css">
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

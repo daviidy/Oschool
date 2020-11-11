@@ -1,63 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{$course->name}}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
-    <script src="https://kit.fontawesome.com/d86848cfe0.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/css/path.css">
-    <link rel="stylesheet" href="/css/atom-one-dark.min.css">
-
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-sm bg-white border-bottom fixed-top">
-        <ul class="navbar-nav flex-row align-items-center">
-          <li class="nav-item ml-3">
-            <img class="logo-short img-fluid" src="/images/schools/logos/logo_os_noir.png" alt="Oschool">
-            <img class="logo img-fluid" src="/images/schools/logos/logo_oschool_noir.png" alt="Oschool">
-          </li>
-          <li class="d-none d-md-block nav-item mr-3 ml-3">
-            <a href="#" class="nav-link">Nos écoles</a>
-          </li>
-          <li class="d-none d-md-block nav-item mr-3 ml-3">
-            <a href="#" class="nav-link">Business</a>
-          </li>
-        </ul>
-
-        <ul class="navbar-nav ml-auto">
-          <li class="d-none d-md-block nav-item">
-            <div class="p-2 bg-oschool text-white rounded text-center w-100">
-              <a href="#" class="cta">
-                Connectez-vous
-              </a>
-            </div>
-          </li>
-          <li class="nav-item dropdown d-md-none">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarmenu" data-toggle="dropdown">
-              <i class="fas fa-bars hamburger"></i>
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Link 1</a>
-              <a class="dropdown-item" href="#">Link 2</a>
-              <a class="dropdown-item" href="#">Link 3</a>
-            </div>
-          </li>
-
-        </ul>
-      </nav>
-    </header>
-
+@extends('layouts.menu-path')
+@section('content')
     <main class="container">
       <div class="row">
         <!--main content-->
@@ -259,8 +201,4 @@
 
     @include('includes.pricing')
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-  </body>
-</html>
+@endsection
