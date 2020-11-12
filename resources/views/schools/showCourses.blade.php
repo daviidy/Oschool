@@ -102,11 +102,6 @@
                                                 @if($course->type == 'mooc')
                                                 <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width:
                                                 {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}%;" aria-valuenow="0%"></div>
-                                                @else
-                                                @if(count($course->resources) > 0)
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width:
-                                                {{number_format((count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->resources)) * 100)}}%;" aria-valuenow="0%"></div>
-                                                @endif
                                                 @endif
                                         </div>
                                         @endif

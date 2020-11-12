@@ -12,6 +12,7 @@
 </style>
 
   <main class="container">
+      @include('includes.status')
     <div class="row">
 
       <!--main content-->

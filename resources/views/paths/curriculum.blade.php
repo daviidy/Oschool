@@ -10,6 +10,7 @@
 }
 </style>
   <main class="container text-white">
+      @include('includes.status')
     <div class="row">
       <!--main content-->
       <div class="col-md-12 main-content">

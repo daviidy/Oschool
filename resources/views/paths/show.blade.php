@@ -1,6 +1,7 @@
 @extends('layouts.menu-path')
 @section('content')
     <main class="container">
+        @include('includes.status')
       <div class="row">
         <!--main content-->
         <div class="col-md-9 col-12 main-content">

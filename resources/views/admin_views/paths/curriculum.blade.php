@@ -303,7 +303,7 @@ li.angular-ui-tree-wrapper{background-color:rgba(255, 255, 255, .84);z-index:0;c
                               @elseif($resource->type == 'project')
                               <a href="/schoolAdmin/{{$school->id}}/paths/{{$course->id}}/curriculum/projects/{{$resource->project->id}}/edit">
                                   <span class="title">
-                                      <span class="lecture-name editable">
+                                      <span style="font-weight: bold; color: #000;" class="lecture-name editable">
                                           {{$resource->project->title}}
                                       </span>
                                       <button class="tch-btn-icon-fa icon-gray fastclickable">

@@ -14,6 +14,7 @@
 
 
 <main class="container-fluid">
+    @include('includes.status')
 <div class="row">
   <!--progression-->
   <div class="col-3 bg-light d-none side-menu d-md-block">
