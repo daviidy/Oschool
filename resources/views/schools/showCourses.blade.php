@@ -99,7 +99,7 @@
                                         @auth
                                         @if(Auth::user()->courses->contains($course->id))
                                         <div style="width: 95%;" class="col-xs-12" aria-hidden="false">
-                                            @if($course->type == 'mooc')
+                                                @if($course->type == 'mooc')
                                                 <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width:
                                                 {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}%;" aria-valuenow="0%"></div>
                                                 @else

@@ -16,7 +16,8 @@ class Resource extends Model
                            'position',
                            'title',
                            'course_id',
-                           'path_id'
+                           'path_id',
+                           'status'
                          ];
 
 
