@@ -15,7 +15,8 @@ class DeletePositionToProjectsTable extends Migration
     {
         Schema::table('projects', function (Blueprint $table) {
             $table->dropColumn('position');
-            //$table->dropColumn('course_id');
+            $table->dropForeign('projects_course_id_foreign');
+            $table->dropColumn('course_id');
         });
     }
 

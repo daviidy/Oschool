@@ -31,7 +31,9 @@ class AddCourseIdToResourcesTable extends Migration
     public function down()
     {
         Schema::table('resources', function (Blueprint $table) {
+            $table->dropForeign('resources_course_id_foreign');
             $table->dropColumn('course_id');
+            $table->dropForeign('resources_path_id_foreign');
             $table->dropColumn('path_id');
         });
     }
