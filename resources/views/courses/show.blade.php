@@ -37,7 +37,7 @@
           </div>
 
           <div class="row mt-5 course-characteristics">
-            <<div class="col-12 d-md-flex d-block justify-content-between bg-light border rounded p-3">
+            <div class="col-12 d-md-flex d-block justify-content-between bg-light border rounded p-3">
               @if(count($course->resources->where('type', 'course')) > 0)
               <div class="text-center mt-3 mt-md-0">
                 <span class="font-weight-bold blue-oschool">{{count($course->resources->where('type', 'course'))}}</span><br>
