@@ -75,15 +75,19 @@
           <div class="row mt-3 d-md-none">
             <div class="col-12">
                 @auth
-                <div class="pointer p-2 bg-oschool text-white rounded text-center w-100" {{!Auth::user()->courses->contains($course->id) ? 'data-toggle="modal" data-target="#courseOffer"' : ''}}>
-                  <a {{Auth::user()->courses->contains($course->id) ? "href=/path/enrolled/".$course->slug : ''}}>
-                      @if(Auth::user()->courses->contains($course->id))
+                @if(Auth::user()->courses->contains($course->id))
+                <div class="pointer p-2 bg-oschool text-white rounded text-center w-100">
+                  <a href="/path/enrolled/{{$course->slug}}">
                           Continuez la formation
-                      @else
-                          Accédez à la formation
-                      @endif
                   </a>
                 </div>
+                @else
+                <div class="pointer p-2 bg-oschool text-white rounded text-center w-100" data-toggle="modal" data-target="#courseOffer">
+                  <a>
+                      Accédez à la formation
+                  </a>
+                </div>
+                @endif
                 @endauth
                 @guest
                 <div class="pointer p-2 bg-oschool text-white rounded text-center w-100" data-toggle="modal" data-target="#courseOffer">
@@ -163,15 +167,19 @@
             <div class="row mt-3">
               <div class="col-12">
                   @auth
-                  <div class="pointer p-2 bg-oschool text-white rounded text-center w-100" {{!Auth::user()->courses->contains($course->id) ? 'data-toggle="modal" data-target="#courseOffer"' : ''}}>
-                    <a {{Auth::user()->courses->contains($course->id) ? "href=/path/enrolled/".$course->slug : ''}}>
-                        @if(Auth::user()->courses->contains($course->id))
+                  @if(Auth::user()->courses->contains($course->id))
+                  <div class="pointer p-2 bg-oschool text-white rounded text-center w-100">
+                    <a href="/path/enrolled/{{$course->slug}}">
                             Continuez la formation
-                        @else
-                            Accédez à la formation
-                        @endif
                     </a>
                   </div>
+                  @else
+                  <div class="pointer p-2 bg-oschool text-white rounded text-center w-100" data-toggle="modal" data-target="#courseOffer">
+                    <a>
+                        Accédez à la formation
+                    </a>
+                  </div>
+                  @endif
                   @endauth
                   @guest
                   <div class="pointer p-2 bg-oschool text-white rounded text-center w-100" data-toggle="modal" data-target="#courseOffer">
