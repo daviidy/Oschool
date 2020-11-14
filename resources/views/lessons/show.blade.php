@@ -52,7 +52,7 @@
           <i class="{{Auth::user()->lessons->contains($section_lesson->id) ? 'fas' : 'far'}} fa-circle mr-2 {{Auth::user()->lessons->contains($section_lesson->id) ? 'green' : 'bg-light'}} position-absolute other"></i>
             @endif
           <div class="single-lesson pl-4 {{$loop->first ? '' : 'pt-3'}}">
-            <a href="#">{{$section_lesson->title ? $section_lesson->title : 'Nouvelle leçon'}}</a>
+            <a href="/course/{{$lesson->course->slug}}/lessons/{{$section_lesson->slug}}">{{$section_lesson->title ? $section_lesson->title : 'Nouvelle leçon'}}</a>
           </div>
         </div>
         @endforeach
