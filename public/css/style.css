@@ -157,6 +157,7 @@ i {
 .lecture-content img,
 .lecture-content iframe {
   margin: 0 0 20px;
+  line-height: 1.5rem;
 }
 
 .lecture-content img {
