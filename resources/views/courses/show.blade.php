@@ -1,4 +1,7 @@
 @extends('layouts.menu-course')
+@section('image', '/images/courses/logos/'.$course->logo)
+@section('title', $course->name)
+@section('description', $course->subtitle)
 
 @section('content')
 

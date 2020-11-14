@@ -1,4 +1,7 @@
 @extends('layouts.menu-path-curriculum')
+@section('image', '/images/courses/logos/'.$course->logo)
+@section('title', $course->name)
+@section('description', $course->subtitle)
 @section('content')
 <style media="screen">
 .delete-blue-box{

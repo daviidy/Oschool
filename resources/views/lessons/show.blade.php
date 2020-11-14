@@ -1,5 +1,8 @@
 @extends('layouts.menu-course-lecture')
 
+@section('image', '/images/lessons/images/image.png')
+@section('title', $lesson->title)
+@section('description', $lesson->title)
 @section('content')
 
 <style media="screen">
@@ -125,9 +128,9 @@
 
     @if(count($lesson->medias) > 0)
     <!--Ressource téléchargeable-->
-    <h2>Ressources à télécharger</h2>
+    <h5 class="mt-5">Ressources à télécharger</h5>
     @foreach($lesson->medias as $media)
-    <div class="row mt-3 p-3">
+    <div class="row p-3">
       <div class=" col-md-12">
         <!--Contenu Ressource téléchargeable-->
         <div class="row bg-dark rounded mt-3">

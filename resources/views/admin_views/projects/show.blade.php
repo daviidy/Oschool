@@ -1,4 +1,7 @@
 @extends('layouts.menu-project')
+@section('image', '/images/projects/images/'.$project->image)
+@section('title', $project->title)
+@section('description', $project->title)
 @section('content')
 
 <style media="screen">
