@@ -33,7 +33,7 @@
         <div class="row mt-3 mb-5 text-center">
             <div class="col-12">
               <span class="">
-                {{floor($number_resources_validated / count($course->resources)) * 100}}% achevés
+                {{($number_resources_validated / count($course->resources)) * 100}}% achevés
               </span>
               <div class="progress blue-oschool mt-3" style="height:10px">
                 <div class="progress-bar bg-oschool" style="width:{{floor($number_resources_validated / count($course->resources)) * 100}}%;height:10px"></div>
