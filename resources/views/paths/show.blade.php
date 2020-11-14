@@ -138,12 +138,14 @@
                   </div>
                 </div>
               </div>
+              @if($resource->type == 'course')
               <div class="col-12 text-right mt-3">
-                <a href="#" class="border p-2 font-weight-bold next-link rounded">
+                <a target="_blank" href="/course/{{$resource->link->slug}}" class="border p-2 font-weight-bold next-link rounded">
                   Voir
                   <i class="fas fa-arrow-right ml-4"></i>
                 </a>
               </div>
+              @endif
             </div>
             @endforeach
             @endif

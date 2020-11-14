@@ -1,5 +1,5 @@
 @guest
-<li class="d-none d-md-block nav-item">
+<li class="nav-item">
   <div class="p-2 bg-oschool text-white rounded text-center w-100">
     <a href="/login" class="">
       Connectez-vous
@@ -29,3 +29,11 @@
   </div>
 </li>
 @endauth
+
+<style media="screen">
+    @media screen and (max-width: 600px){
+        .navbar .navbar-nav:nth-child(1) {
+            width: 55%;
+        }
+    }
+</style>
