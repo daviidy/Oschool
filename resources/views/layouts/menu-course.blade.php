@@ -85,8 +85,7 @@
               </div>
             </li>
           <li class="nav-item ml-3">
-            <img class="logo-short img-fluid" src="/images/schools/logos/logo_os_noir.png" alt="Oschool">
-            <img class="logo img-fluid" src="/images/schools/logos/logo_oschool_noir.png" alt="Oschool">
+             @include('includes.logo')
           </li>
           <li class="d-none d-md-block nav-item mr-3 ml-3">
             <a href="/schools" class="nav-link">Nos écoles</a>

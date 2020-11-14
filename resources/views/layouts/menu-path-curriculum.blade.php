@@ -77,8 +77,7 @@ drift.load('2uy6g3spxi59');
     <nav class="navbar navbar-expand-sm bg-white border-bottom fixed-top">
       <ul class="navbar-nav flex-row align-items-center">
         <li class="nav-item ml-3">
-          <img class="logo-short img-fluid" src="/assets/images/logo-os-noir.png" alt="Logo">
-          <img class="logo" src="/assets/images/logo-oschool-noir.png" alt="">
+          @include('includes.logo')
         </li>
       </ul>
 
