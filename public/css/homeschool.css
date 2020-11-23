@@ -1,0 +1,164 @@
+/*
+    CSS Reset
+*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+button,
+ul,
+li,
+a,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+  list-style: none;
+}
+
+/* Global Setting */
+@font-face {
+  font-family: Cocogoose;
+  src: url('../assets/fonts/cocogoose/Cocogoose Pro-trial.ttf');
+}
+
+.navbar {
+  z-index: 1999;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+.blue-oschool {
+  color: #4d90cc;
+}
+
+.bg-oschool {
+  background-color: #4d90cc;
+}
+
+/* menu */
+.logo-short,
+.user-avatar {
+  width: 13%;
+}
+
+.logo {
+  width: 75%;
+}
+
+.user-avatar {
+  width: 30px;
+}
+
+.navbar .navbar-nav:nth-child(1) {
+  width: 70%;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+.dropdown-menu {
+  position: absolute !important;
+  left: auto;
+  right: 0;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  display: none;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.os-hover:hover {
+  position: relative;
+  top: 15px;
+}
+
+.bg-oschool-footer {
+  background-color: #f3f9fa;
+}
+
+.box-slide {
+  top: 6.4rem;
+  left: 4.8rem;
+  max-width: 35rem;
+}
+
+.price-position {
+  bottom: 150px;
+  left: 15px;
+}
+
+.btn-view-all svg {
+  background-color: #fff !important;
+  color: #0078ee;
+}
+
+.course-border {
+  border-radius: 30px;
+}
+
+.course-border:hover {
+  border-bottom: 7px solid #4d90cc !important;
+}
+
+.event-date-rounded {
+  height: 85px;
+  width: 85px;
+  padding: 15px;
+}
+
+.bg-img-course img {
+  border-radius: 20px;
+  height: 170px;
+}
+
+/* media queries */
+@media screen and (max-width: 700px) {
+  .logo {
+    display: none;
+  }
+
+  .bg-sm-white {
+    background-color: #fff;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 315px !important;
+    box-shadow: -4px 11px 26px -4px rgba(0, 0, 0, 0.75);
+  }
+
+  .box-slide {
+    position: initial !important;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .logo-short {
+    display: none;
+  }
+}
