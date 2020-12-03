@@ -135,6 +135,10 @@ i {
   height: 170px;
 }
 
+.kv-fileinput-caption {
+  padding: 1.5rem!important;
+}
+
 /* media queries */
 @media screen and (max-width: 700px) {
   .logo {

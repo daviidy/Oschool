@@ -227,15 +227,13 @@
                 <input type="hidden" name="course_id" value="{{$course->id}}">
             </div>
             <!--PLUGIN evoyer des travaux-->
-            <div class="ssi-uploader">
-              <div class="ssi-buttonWrapper">
-                <span class="ssi-InputLabel">
-                  <input name="file[]" type="file" multiple id="ssi-upload" class="ssi-uploadInput">
-                </span>
-                <button id="ssi-abortBtn" type="button" class="ssi-button error ssi-cancelAll ssi-hidden"><span class="inBtn">Abort </span></button>
-                <button id="ssi-uploadBtn" type="button" class="ssi-button success ssi-hidden"><span class="ssi-btnIn">Upload&nbsp;</span><span id="ssi-up_loading" class="ssi-btnIn"></span></button>
-                <button id="ssi-clearBtn" type="button" class="ssi-hidden ssi-button info">Clear</button>
-              </div>
+            <div class="col-md-12 text-left mb-4">
+                <h4 class="mb-3">Joindre des fichiers</h4>
+                <div class="form-group">
+                      <span style="width: 100%;" class="btn btn-default btn-file">
+                        <input id="input-1" name="input1[]" type="file" class="file" multiple data-show-upload="true" data-show-caption="true">
+                      </span>
+                </div>
             </div>
             <!--END PLUGIN evoyer des travaux-->
             <div class="modal-footer border-top-0 d-flex justify-content-center">
@@ -275,15 +273,13 @@
               <input type="hidden" name="project_id" value="{{$project->id}}">
             </div>
             <!--PLUGIN evoyer des travaux-->
-            <div class="ssi-uploader">
-              <div class="ssi-buttonWrapper">
-                <span class="ssi-InputLabel">
-                  <input name="file[]" type="file" multiple id="ssi-upload2" class="ssi-uploadInput">
-                </span>
-                <button id="ssi-abortBtn" type="button" class="ssi-button error ssi-cancelAll ssi-hidden"><span class="inBtn">Abort </span></button>
-                <button id="ssi-uploadBtn" type="button" class="ssi-button success ssi-hidden"><span class="ssi-btnIn">Upload&nbsp;</span><span id="ssi-up_loading" class="ssi-btnIn"></span></button>
-                <button id="ssi-clearBtn" type="button" class="ssi-hidden ssi-button info">Clear</button>
-              </div>
+            <div class="col-md-12 text-left mb-4">
+                <h4 class="mb-3">Joindre des fichiers</h4>
+                <div class="form-group">
+                      <span style="width: 100%;" class="btn btn-default btn-file">
+                        <input id="input-2" name="input2[]" type="file" class="file" multiple data-show-upload="true" data-show-caption="true">
+                      </span>
+                </div>
             </div>
             <!--END PLUGIN evoyer des travaux-->
             <div class="modal-footer border-top-0 d-flex justify-content-center">
