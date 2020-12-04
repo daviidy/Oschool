@@ -99,16 +99,18 @@
             <div class="col-md-3 py-3">
               <div class="p-0 shadow course-border">
                 <a href="/path/{{$course->slug}}" class="text-decoration-none">
-                  <div class="rounded-lg p-2 bg-img-course">
-                    <img src="/images/courses/logos/{{$course->logo}}" alt=""
-                      class="img-fluid w-100">
-                    <!-- <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">25000 Fcfa</span> -->
-                    @auth
-                    @if(Auth::user()->courses->contains($course->id))
-                    <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">0%</span>
-                    @endif
-                    @endauth
+                  <div class=" p-2">
+                    <div class="p-2 bg-img-course bg-course-img course-border-img" style="background-image: url('/images/courses/logos/{{$course->logo}}')">
+                      <!--img src="/images/courses/logos/{{$course->logo}}" alt=""
+                        class="img-fluid w-100"-->
+                      <!-- <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">25000 Fcfa</span> -->
+                      @auth
+                      @if(Auth::user()->courses->contains($course->id))
+                      <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">0%</span>
+                      @endif
+                      @endauth
 
+                    </div>
                   </div>
                   <div class="">
                     <h5 class="p-4 font-weight-bold h6">{{$course->name}}</h5>
@@ -162,16 +164,18 @@
             <div class="col-md-3 py-3">
               <div class="p-0 shadow course-border">
                 <a href="{{ route('course.slug', $course->slug) }}" class="text-decoration-none">
-                  <div class="rounded-lg p-2 bg-img-course">
-                    <img src="/images/courses/logos/{{$course->logo}}" alt=""
-                      class="img-fluid w-100">
-                    <!-- <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">25000 Fcfa</span> -->
-                    @auth
-                    @if(Auth::user()->courses->contains($course->id))
-                    <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">0%</span>
-                    @endif
-                    @endauth
+                  <div class=" p-2">
+                    <div class="p-2 bg-img-course bg-course-img course-border-img" style="background-image: url('/images/courses/logos/{{$course->logo}}')">
+                      <!--img src="/images/courses/logos/{{$course->logo}}" alt=""
+                        class="img-fluid w-100"-->
+                      <!-- <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">25000 Fcfa</span> -->
+                      @auth
+                      @if(Auth::user()->courses->contains($course->id))
+                      <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">0%</span>
+                      @endif
+                      @endauth
 
+                    </div>
                   </div>
                   <div class="">
                     <h5 class="p-4 font-weight-bold h6">{{$course->name}}</h5>
