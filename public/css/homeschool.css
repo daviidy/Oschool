@@ -44,6 +44,10 @@ body {
   color: #4d90cc;
 }
 
+.active1 {
+    border-bottom: 2px solid #4d90cc!important;
+}
+
 .bg-oschool {
   background-color: #4d90cc;
 }
