@@ -25,6 +25,9 @@
 
 
     <title>@yield('title')</title>
+    <!--file input-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.3.1/css/fileinput.css">
+
     <!--link rel="icon" href="#"-->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
@@ -37,6 +40,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/homeschool.css">
+    <link rel="stylesheet" href="/css/atom-one-dark.min.css">
 
     <!-- Start of Async Drift Code -->
 <script>
@@ -95,28 +100,8 @@ drift.load('2uy6g3spxi59');
   <script>
     hljs.initHighlightingOnLoad();
   </script>
-
-  <script>
-    $(document).ready(function() {
-      $('#ssi-upload').ssi_uploader({
-        dropZone: false,
-        locale: 'fr',
-        allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif', 'pdf', 'zip'],
-
-      });
-
-      $('#ssi-upload2').ssi_uploader({
-        dropZone: false,
-        locale: 'fr',
-        allowed: ['jpg', 'jpeg', 'png', 'bmp', 'gif', 'pdf', 'zip'],
-
-      });
-
-    });
-  </script>
-
-
-  <script src="/assets/plugin/dist/ssi-uploader/js/ssi-uploader.min.js"></script>
+  <!--file input-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.3.1/js/fileinput.js"></script>
 
 </body>
 
