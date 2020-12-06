@@ -44,6 +44,10 @@ body {
   color: #4d90cc;
 }
 
+.active1 {
+    border-bottom: 2px solid #4d90cc!important;
+}
+
 .bg-oschool {
   background-color: #4d90cc;
 }
@@ -107,7 +111,7 @@ i {
 }
 
 .price-position {
-  bottom: 150px;
+  top: 18px;
   left: 15px;
 }
 
@@ -116,9 +120,11 @@ i {
   color: #0078ee;
 }
 
-.course-border {
+.course-border,
+.course-border-img {
   border-radius: 30px;
 }
+
 
 .course-border:hover {
   border-bottom: 7px solid #4d90cc !important;
@@ -137,6 +143,13 @@ i {
 
 .kv-fileinput-caption {
   padding: 1.5rem!important;
+}
+
+.bg-course-img{
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 }
 
 /* media queries */
