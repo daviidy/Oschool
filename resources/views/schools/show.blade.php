@@ -65,7 +65,7 @@
           </div>
         </div>
         <div class="col-md-12 text-center">
-          <button class="btn bg-oschool rounded-pill font-weight-bold p-2">
+          <button class="btn bg-oschool rounded-pill font-weight-bold p-2" data-toggle="modal" data-target="#category">
             <span class="px-3 py-3 text-white">
               Toutes nos catégories
             </span>
@@ -285,5 +285,5 @@
         </div>
       </div>
     </section> -->
-
-    @endsection
+@include('includes.categoriePopup')
+@endsection

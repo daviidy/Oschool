@@ -151,6 +151,31 @@ i {
     background-size: cover;
     width: 100%;
 }
+/* Modal catégorie */
+
+
+.popup-shadow {
+  box-shadow: 0 -10px 8px 0 rgb(0 0 0 / 70%), 0px 5px 25px 0 rgb(0 0 0 / 65%);
+
+}
+
+.svg-delete {
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
+}
+
+#category{
+  background: #1a1b20;
+  z-index: 9999;
+}
+
+#scrolling-wrapper{
+	overflow: auto!important;
+  height: 350px;
+}
 
 /* media queries */
 @media screen and (max-width: 700px) {
