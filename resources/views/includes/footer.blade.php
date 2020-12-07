@@ -107,10 +107,23 @@
 
 <!--oschool business footer-->
 
-<section class="container-fluid">
-  <div class="row">
-    <div class="col-md-">
-      
+<section class="container-fluid bg-oschool-footer">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+      <div class="p-4">
+        <p class="font-weight-light">© <span id="year2">2010</span> Forscote. TOUS DROITS RÉSERVÉS.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4">
+        <ul class="list-group">
+          <li class="bg-transparent border-0 font-weight-bold h4 list-group-item d-flex justify-content-between align-items-center">
+            Par
+            <span>@include('includes.logo')</span>
+          </li>
+
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -120,4 +133,9 @@
     var date = new Date();
     var annee = date.getFullYear();
     document.getElementById('year').innerHTML = annee;
+</script>
+<script type="text/javascript">
+    var date = new Date();
+    var annee = date.getFullYear();
+    document.getElementById('year2').innerHTML = annee;
 </script>
