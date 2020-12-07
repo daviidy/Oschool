@@ -105,6 +105,15 @@
   </div>
 </footer>
 
+<!--oschool business footer-->
+
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-md-">
+      
+    </div>
+  </div>
+</section>
 
 <!--COPYRIGTH SCRIPT-->
 <script type="text/javascript">
