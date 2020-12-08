@@ -30,10 +30,10 @@
                 <br>
               </div>
               @auth
-              <a href="/course/{{$course->slug}}/checkout/{{$pricing->id}}" class="w-100 btn btn-primary bg-oschool rounded text-center">S'inscrire</a>
+              <a href="/course/{{$course->slug}}/checkout/{{$pricing->id}}" class="w-100 btn btn-primary bg-oschool rounded text-center text-white">S'inscrire</a>
               @endauth
               @guest
-              <a href="#" class="w-100 btn btn-primary bg-oschool rounded text-center" data-toggle="modal" data-target="#modalLogin{{$pricing->id}}">S'inscrire</a>
+              <a href="#" class="w-100 btn btn-primary bg-oschool rounded text-center text-white" data-toggle="modal" data-target="#modalLogin{{$pricing->id}}">S'inscrire</a>
               @endguest
             </div>
           </div>

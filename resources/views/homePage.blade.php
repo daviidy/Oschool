@@ -1,4 +1,7 @@
 @extends('layouts.homePageMenu')
+@section('title', 'Créez votre plateforme de formation en ligne')
+@section('image', 'https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/0tTy4z3lTbCkw18ehjQ8')
+@section('description', 'Créez votre plateforme de formation en ligne')
 @section('content')
       <div class="px-md-3 py-md-5 p-2 mt-5">
           <div class="row">

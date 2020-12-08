@@ -74,16 +74,14 @@ drift.load('2uy6g3spxi59');
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-sm bg-white border-bottom fixed-top">
+    <nav class="navbar navbar-expand-sm border-bottom fixed-top" style="background: #{{$school->color->navbar_footer}};">
       <ul class="navbar-nav flex-row align-items-center">
         <li class="nav-item">
           <a href="#">
-            <i class="fas fa-bars hamburger"></i>
+            <i class="fas fa-bars hamburger" style="color: #{{$school->color->navbar_links}} !important;"></i>
           </a>
         </li>
-        <li class="nav-item ml-3">
-          @include('includes.logo')
-        </li>
+        @include('includes.menu-items')
       </ul>
 
       <ul class="navbar-nav ml-auto">
@@ -94,7 +92,11 @@ drift.load('2uy6g3spxi59');
 
   @yield('content')
 
-  @include('includes.footer')
+  @if($school->user->isAdmin())
+      @include('includes.footer')
+  @else
+      @include('includes.footer_business')
+  @endif
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
   <script>

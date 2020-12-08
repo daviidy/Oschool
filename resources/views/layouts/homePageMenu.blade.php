@@ -13,6 +13,23 @@
     <meta charset="utf-8">
     <title>@yield('title') | Oschool</title>
     <meta name="og:image" content="@yield('image')"/>
+    <meta name="description" content="@yield('title')">
+
+    <meta name="title" content="@yield('title')">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{Request::url()}}">
+    <meta property="og:title" content="@yield('title')">
+    <meta property="og:description" content="@yield('description')">
+    <meta property="og:image" content="@yield('image')">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="@yield('image')">
+    <meta property="twitter:url" content="{{Request::url()}}">
+    <meta property="twitter:title" content="@yield('title')">
+    <meta property="twitter:description" content="@yield('description')">
+    <meta property="twitter:image" content="@yield('image')">
     <!-- Facebook Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -99,7 +116,7 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" aria-expanded="false">
-                  <img class="rounded-circle img-fluid user-avatar" src="/images/users/default/image.jpg" alt="Arsene">
+                  <img class="rounded-circle img-fluid user-avatar" src="/images/users/default/{{Auth::user()->image}}" alt="{{Auth::user()->name}}">
                 </a>
                 <div class="dropdown-menu p-4">
                   <a class="dropdown-item pl-3 pb-3" href="/home">

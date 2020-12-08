@@ -1,7 +1,7 @@
 @guest
 <li class="nav-item">
-  <div class="p-2 bg-oschool text-white rounded text-center w-100">
-    <a href="/login" class="">
+  <div class="p-2 bg-oschool text-white rounded text-center w-100 div-login">
+    <a href="/login" class="login">
       Connectez-vous
     </a>
   </div>

@@ -73,26 +73,9 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-sm bg-white border-bottom fixed-top">
+      <nav class="navbar navbar-expand-sm border-bottom fixed-top" style="background: #{{$school->color->navbar_footer}};">
         <ul class="navbar-nav flex-row align-items-center">
-            <li class="nav-item dropdown d-md-none">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarmenu" data-toggle="dropdown">
-                <i class="fas fa-bars hamburger"></i>
-              </a>
-              <div class="dropdown-menu" style="left: 0;">
-                <a class="dropdown-item" href="/schools">Nos écoles</a>
-                <a class="dropdown-item" href="/corporate">Business</a>
-              </div>
-            </li>
-          <li class="nav-item ml-3">
-             @include('includes.logo')
-          </li>
-          <li class="d-none d-md-block nav-item mr-3 ml-3">
-            <a href="/schools" class="nav-link">Nos écoles</a>
-          </li>
-          <li class="d-none d-md-block nav-item mr-3 ml-3">
-            <a href="/corporate" class="nav-link">Business</a>
-          </li>
+            @include('includes.menu-items')
         </ul>
 
         <ul class="navbar-nav ml-auto">
@@ -103,7 +86,11 @@
 
     @yield('content')
 
-    @include('includes.footer')
+    @if($school->user->isAdmin())
+        @include('includes.footer')
+    @else
+        @include('includes.footer_business')
+    @endif
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>

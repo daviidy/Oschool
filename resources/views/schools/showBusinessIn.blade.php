@@ -2,188 +2,140 @@
 @section('title', 'Tous les cours')
 @section('content')
 
-    <div role="main" class="view-school">
+@include('includes.branding')
 
+<div class="mt-5 pt-5 px-md-5" id="btnActive">
+  <ul class="border-0 list-group list-group-horizontal-md nav-tabs justify-content-between align-items-center" id="myTab" role="tablist">
+    @if(count($school->courses->where('type', 'mooc')->where('state', 'active')) > 0)
+    <li class="border-0 list-group-item nav-item " role="presentation">
+      <a class="pb-3 px-0 border-0 h3 font-weight-bold active1 nav-link active" id="noscours-tab" data-toggle="tab" href="#noscours" role="tab" aria-controls="noscours" aria-selected="true">
+        @if($school->section2)
+        {{$school->section2}}
+        @else
+        Nos cours
+        @endif
+      </a>
+    </li>
+    @endif
+    <li class="border-0 list-group-item nav-item" role="presentation">
+      <a class="nav-link pb-3 px-0 border-0 h3 font-weight-bold" id="nosparcours-tab" data-toggle="tab" href="#nosparcours" role="tab" aria-controls="nosparcours" aria-selected="false">Nos parcours</a>
+    </li>
+    <li class="border-0 list-group-item">
+      <input class="form-control" id="courseSearch" type="text" placeholder="Search..">
+    </li>
+  </ul>
+</div>
+<!-- Tab panes -->
 
+<div class="tab-content" id="myTabContent">
+  <!-- Courses -->
+  @if(count($school->courses->where('type', 'mooc')->where('state', 'active')) > 0)
+  <div class="tab-pane fade show active" id="noscours" role="tabpanel" aria-labelledby="noscours-tab">
+    <div class="row p-5">
+      @foreach($school->courses->where('type', 'mooc')->where('state', 'active') as $course)
+      @if($course->state == 'active')
+    <div class="col-md-3 py-3 filter">
+      <div class="p-0 shadow course-border">
+        <a href="{{ route('course.slug', $course->slug) }}" class="text-decoration-none">
+          <div class=" p-2">
+            <div class="p-2 bg-img-course bg-course-img course-border-img" style="background-image: url('/images/courses/logos/{{$course->logo}}')">
+              <!--img src="/images/courses/logos/{{$course->logo}}" alt=""
+                class="img-fluid w-100"-->
+              <!-- <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">25000 Fcfa</span> -->
+              @auth
+              @if(Auth::user()->courses->contains($course->id))
+              <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">0%</span>
+              @endif
+              @endauth
 
-        <div class="view-directory course-directory signed-in-directory">
-            <div class="container">
-                <div class="row search">
-
-                    <!-- Filter: Category -->
-                    <div class="pull-left course-filter">
-                        <div class="filter-label">
-                            Types de formation:
-                        </div>
-                        <div class="btn-group">
-                            <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                @if($type == 'mooc')
-                                MOOC
-                                @elseif($type == 'path')
-                                Spécialisations
-                                @elseif($type == 'bootcamp')
-                                Formations en salle
-                                @else
-                                Tous
-                                @endif
-                                <span class="caret"></span>
-
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/schools/{{$school->id}}/courses">Tous</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/mooc">MOOC</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/path">Spécialisations</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/bootcamp">Formations en salle</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Filter: Category
-                    <div class="pull-left course-filter">
-                        <div class="filter-label">
-                            Catégories:
-                        </div>
-                        <div class="btn-group">
-                            <button class="btn btn-default btn-lg btn-course-filter dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-
-                                Tous <span class="caret"></span>
-
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/schools/{{$school->id}}/courses/filter/all">Tous</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/mooc">MOOC</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/path">Spécialisations</a></li>
-                                <li><a href="/schools/{{$school->id}}/courses/filter/bootcamp">Formations en salle</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                -->
-
-                    <!-- Search Box -->
-                    <div class="col-lg-4 col-md-4 col-xs-12 pull-right">
-                        <form role="search" method="get" action="/search">
-                            @csrf
-                            <div class="input-group">
-                                <label for="search-courses" class="sr-only">Trouver un cours</label>
-                                <input class="form-control search input-lg" data-list=".list" id="search-courses" name="query" placeholder="Trouvez un cours" type="text">
-                                <!--
-                                <span class="input-group-btn">
-                                    <button aria-label="Search Courses" id="search-course-button" class="btn search btn-default btn-lg" type="submit"><i class="fa fa-search" title="Search"></i></button>
-                                </span>
-                            -->
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- Filter Title & Description-->
-
-
-                <div class="row course-list list">
-                    <!-- Course Listing -->
-                    @foreach($courses as $course)
-                    @if($course->state == 'active')
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
-                            <div style="width: 100%;" class="row">
-                                <a href="{{ route('course.slug', $course->slug) }}" data-role="course-box-link">
-                                    <div class="col-lg-12">
-                                        <!-- Course Image, Name & Subtitle (everyone) -->
-                                        <div class="course-box-image-container">
-                                            <img class="course-box-image" src="/images/courses/logos/{{$course->logo}}" role="presentation">
-                                        </div>
-                                        <div class="course-listing-title" role="heading" aria-level="2" title="The MissionFX Full Program">
-                                            {{$course->name}}
-                                        </div>
-                                        <!-- Progress bar (enrolled users) -->
-                                        @auth
-                                        @if(Auth::user()->courses->contains($course->id))
-                                        <div style="width: 95%;" class="col-xs-12" aria-hidden="false">
-                                            <div class="progressbar">
-                                                @if($course->type == 'mooc')
-                                                @if(count($course->lessons) > 0)
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width:
-                                                {{number_format((count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons)) * 100)}}%;" aria-valuenow="0%"></div>
-                                                @endif
-                                                @else
-                                                @if(count($course->projects) > 0)
-                                                <div class="progressbar-fill" role="progressbar" aria-labelledby="percent-complete-628848" style="min-width:
-                                                {{number_format((count(Auth::user()->deliverables->where('course_id', $course->id)->where('status', '1')) / count($course->projects)) * 100)}}%;" aria-valuenow="0%"></div>
-                                                @endif
-                                                @endif
-
-                                            </div>
-                                        </div>
-                                        @endif
-                                        @endauth
-
-                                        @guest
-                                        <!-- Subtitle (unenrolled users) -->
-                                        <div class="course-listing-subtitle" title="Trading made simple" role="heading" aria-level="3">
-                                            {{ str_limit($course->subtitle, $limit = 100, $end = '...') }}
-                                        </div>
-                                        @endguest
-                                        @auth
-                                        @if(!Auth::user()->courses->contains($course->id))
-                                        <!-- Subtitle (unenrolled users) -->
-                                        <div class="course-listing-subtitle" title="Trading made simple" role="heading" aria-level="3">
-                                            {{ str_limit($course->subtitle, $limit = 100, $end = '...') }}
-                                        </div>
-                                        @endif
-                                        @endauth
-
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="course-listing-extra-info col-xs-12">
-                                <div class="pull-left">
-                                    <!-- Bundle Info (everyone) -->
-
-                                    <!-- Author Image and Name (everyone) -->
-                                    <img align="left" class="img-circle" src="/images/users/authors/{{$course->author->image}}" alt="{{$course->author->full_name}}">
-                                    <div class="small course-author-name">
-                                        {{$course->author->full_name}}
-                                    </div>
-
-                                </div>
-                                <!-- Progress percentage (enrolled users) -->
-                                <div class="pull-right hidden" aria-hidden="true">
-                                    <div class="small course-progress">
-                                        <span class="percentage" id="percent-complete-474431" data-course-id="474431">
-                                            %
-                                        </span>
-                                        <br>
-                                        COMPLETE
-                                    </div>
-                                </div>
-                                <!-- Price (unenrolled users) -->
-                                <div class="pull-right">
-                                    <div class="small course-price" id="course-box-price-product-1461563">
-                                        $1,497
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endif
-                    @endforeach
-
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <center>
-
-
-                        </center>
-                    </div>
-                </div>
-                <br>
             </div>
-        </div>
-
-
+          </div>
+          <div class="">
+            <h5 class="p-4 font-weight-bold h6">{{$course->name}}</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+    @endif
+    @endforeach
 
     </div>
+  </div>
+  @endif
+
+  <!-- Paths -->
+  @if(count($school->courses->where('type', 'path')->where('state', 'active')) > 0)
+  <div class="tab-pane fade" id="nosparcours" role="tabpanel" aria-labelledby="nosparcours-tab">
+    <div class="row p-5">
+      @foreach($school->courses->where('type', 'path')->where('state', 'active') as $course)
+      @if($course->state == 'active')
+    <div class="col-md-3 py-3 filter">
+      <div class="p-0 shadow course-border">
+        <a href="/path/{{$course->slug}}" class="text-decoration-none">
+          <div class=" p-2">
+            <div class="p-2 bg-img-course bg-course-img course-border-img" style="background-image: url('/images/courses/logos/{{$course->logo}}')">
+                <!--img src="/images/courses/logos/{{$course->logo}}" alt=""
+                class="img-fluid w-100"-->
+              <!-- <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">25000 Fcfa</span> -->
+              @auth
+              @if(Auth::user()->courses->contains($course->id))
+              <span class="p-2 rounded-lg bg-dark border border-white text-white position-relative price-position">0%</span>
+              @endif
+              @endauth
+
+            </div>
+          </div>
+          <div class="">
+            <h5 class="p-4 font-weight-bold h6">{{$course->name}}</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+    @endif
+    @endforeach
+    </div>
+  </div>
+  @endif
+</div>
+
+<script>
+    $(document).ready(function(){
+      $('#btnActive ul li a').click(function(){
+        $('.nav-item a').removeClass("active1");
+        $(this).addClass("active1");
+    });
+    });
+
+</script>
+
+<script>
+
+    $(document).ready(function(){
+      $("#courseSearch").keyup(function() {
+
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(),
+          count = 0;
+
+        // Loop through the comment list
+        $('#myTabContent .filter').each(function() {
 
 
-    @endsection
+          // If the list item does not contain the text phrase fade it out
+          if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+            $(this).hide();
+
+            // Show the list item if the phrase matches and increase the count by 1
+          } else {
+            $(this).show();
+            count++;
+          }
+
+        });
+
+      });
+
+    });
+</script>
+
+@endsection

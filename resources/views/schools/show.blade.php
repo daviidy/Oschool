@@ -8,7 +8,7 @@
     <section class="container-fluid">
       <div class="row">
         <div class="col-md-12 px-0">
-          <div class="" style="background: url('/images/schools/logos/{{$school->logo}}') center no-repeat; background-size: cover; height: 500px;">
+          <div class="" style="background: url('/images/schools/backgrounds/{{$school->background}}') center no-repeat; background-size: cover; height: 500px;">
             <!-- <img src="/assets/images/oschool-slide2.jpg" alt="" class="w-100 d-block d-md-none" width="1340" height="300">
             <img src="/assets/images/oschool-slide.png" alt="" class="w-100 d-none d-md-block" width="1340" height="500"> -->
           </div>
@@ -203,21 +203,33 @@
       </div>
     </section>
     @endif
+    @if(!$school->user->isAdmin())
     <!--============Description de l'école================-->
     <section class="container-fluid">
       <div class="row">
           <div class="col-md-6">
             <div class="p-4 h4">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2>{{$school->heading}}</h2><br><br>
+                <p>{!!$school->description!!}</p><br><br>
+                <p>
+                    <strong>
+                        <a style="color: #{{$school->color->buttons_links}};">
+                            {{$school->city}}
+                            {{$school->state}}
+                            {{$school->street}}
+                        </a>
+                    </strong>
+                </p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="p-4">
-              <img src="https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/0tTy4z3lTbCkw18ehjQ8" alt="" class="img-fluid">
+              <img src="/images/schools/backgrounds/{{$school->background}}" alt="" class="img-fluid">
             </div>
           </div>
       </div>
     </section>
+    @endif
     <!--============END Description de l'école================-->
 
     <!--========== EVENEMENTS================-->

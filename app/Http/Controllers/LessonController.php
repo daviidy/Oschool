@@ -119,6 +119,7 @@ class LessonController extends Controller
         if (Auth::check()) {
 
             $course = Course::where('slug', $slugCourse)->firstOrFail();
+            $school = School::find($course->school_id);
             $lesson = Lesson::where('slug', $slug)->where('course_id', $course->id)->firstOrFail();
             $today = Carbon::now();
             $purchase = $lesson->section->course->purchases->where('user_id', Auth::user()->id)->where('status', 'Validé')->first();
@@ -437,7 +438,8 @@ class LessonController extends Controller
                                          'previous_lesson' => $previous_lesson,
                                          'days' => $days,
                                          'available' => $available,
-                                         'status' => $status
+                                         'status' => $status,
+                                         'school' => $school
                                      ]);
 
         }

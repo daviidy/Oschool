@@ -2,6 +2,8 @@
 @section('title', 'Tous les cours')
 @section('content')
 
+@include('includes.branding')
+
 <div class="mt-5 pt-5 px-md-5" id="btnActive">
   <ul class="border-0 list-group list-group-horizontal-md nav-tabs justify-content-between align-items-center" id="myTab" role="tablist">
     @if(count($school->courses->where('type', 'mooc')->where('state', 'active')) > 0)

@@ -5,6 +5,8 @@
 @section('description', $lesson->title)
 @section('content')
 
+@include('includes.branding')
+
 <style media="screen">
 .delete-blue-box{
     display: none;
