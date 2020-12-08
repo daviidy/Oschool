@@ -39,13 +39,30 @@ body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
-
-.blue-oschool {
-  color: #4d90cc;
+.hero {
+  background-image: linear-gradient( 180deg,hsla(0,0%,100%,0),var(--white)),url(https://www.hotmart.com/images/gallaxy.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.hero .titre {
+  font-size: 3rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5;
 }
 
-.active1 {
-    border-bottom: 2px solid #4d90cc!important;
+.img-head img {
+  position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.blue-oschool {
+  color: #4d90cc;
 }
 
 .bg-oschool {
@@ -110,30 +127,8 @@ i {
   max-width: 35rem;
 }
 
-.price-position {
-  top: 18px;
-  left: 15px;
-}
-
-.btn-view-all svg {
-  background-color: #fff !important;
-  color: #0078ee;
-}
-
-.course-border,
-.course-border-img {
+.course-border {
   border-radius: 30px;
-}
-
-
-.course-border:hover {
-  border-bottom: 7px solid #4d90cc !important;
-}
-
-.event-date-rounded {
-  height: 85px;
-  width: 85px;
-  padding: 15px;
 }
 
 .bg-img-course img {
@@ -141,44 +136,41 @@ i {
   height: 170px;
 }
 
-.kv-fileinput-caption {
-  padding: 1.5rem!important;
+.bg-box-2 {
+  background-color: #ecf8f8;
 }
 
-.bg-course-img{
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-}
-/* Modal catégorie */
-
-
-.popup-shadow {
-  box-shadow: 0 -10px 8px 0 rgb(0 0 0 / 70%), 0px 5px 25px 0 rgb(0 0 0 / 65%);
-
+.bg-box-2 span svg{
+  color: #4d90cc;
 }
 
-.svg-delete {
-  top: 10px;
-  right: 10px;
-  padding: 5px;
-  background-color: #fff;
-  box-shadow: 0px 0px 4px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
+.bg-box-2::after {
+  content: "";
+    position: absolute;
+    z-index: 1;
+    left: 96%;
+    top: 0;
+    width: 50px;
+    height: 32%;
+    -webkit-clip-path: polygon(0 0, 0 100%, 60% 50%);
+    clip-path: polygon(0 0, 0 100%, 60% 50%);
+    background-color: #ecf8f8;
 }
-
-#category{
-  background: #1a1b20;
-  z-index: 9999;
-}
-
-#scrolling-wrapper{
-	overflow: auto!important;
-  height: 350px;
+.height-responsive {
+  height: calc(100% + 10px);
 }
 
 /* media queries */
 @media screen and (max-width: 700px) {
+  .text-responsive,
+  .hero .titre {
+    font-size: calc(100% + 1vw + 1vh)!important;
+  }
+
+  .col-md-8 .display-4 {
+    font-size: calc(100% + 1vw + 1vh)!important;
+  }
+
   .logo {
     display: none;
   }
@@ -197,6 +189,13 @@ i {
     position: initial !important;
     max-width: 100%;
   }
+  .videoResize .w-75 {
+    width: 100%!important;
+  }
+
+  .bg-box-2::after {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -204,3 +203,18 @@ i {
     display: none;
   }
 }
+
+@if(\Route::current()->getName() == 'homePage')
+    .menu_link{
+        color: #000!important;
+    }
+
+    @media (min-width: 992px){
+    .nav-menu li>a:hover,
+    .nav-menu li>a:active,
+    .nav-menu .log-in:hover,
+    .nav-menu .log-in:active {
+    border-bottom: 2px solid #000;
+    }
+  }
+@endif
