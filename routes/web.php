@@ -54,8 +54,8 @@ Route::group(
 
 
 Route::get('/', function () {
-    return view('home2');
-})->name('home2');
+    return view('homePage');
+})->name('homePage');
 
 
 Route::get('/wecash', function () {
