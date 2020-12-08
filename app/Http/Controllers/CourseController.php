@@ -152,6 +152,7 @@ class CourseController extends Controller
         if (Auth::check() && !Auth::user()->isAdmin() && !Auth::user()->isOwner()) {
 
             if ($course->type == 'mooc') {
+                //if user is subscribed to the course
                 if (Auth::user()->courses->contains($course->id)) {
                     //take first lesson not ended and redirect user to this lesson
                     foreach ($course->lessons->sortBy('position') as $lesson) {
@@ -164,6 +165,7 @@ class CourseController extends Controller
                     return view('courses.show', ['course' => $course]);
                 }
             }
+            //si c'est un parcours
             else {
                 if (Auth::user()->courses->contains($course->id)) {
                     //calcul de la progression
@@ -192,36 +194,23 @@ class CourseController extends Controller
             }
         }
         //sinon (user forcement admin)
-        elseif (!Auth::check()) {
-            return redirect()->back()->with('status', 'Connectez-vous d\'abord');
-        } else {
+        elseif (Auth::check() && Auth::user()->isAdmin()) {
             if ($course->type == 'mooc') {
-                $lesson = $course->lessons->sortBy('position')->first();
-                return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug);
+                return view('courses.show', ['course' => $course]);
+            }
+            //si c'est un parcours
+            else {
+                $number_resources_validated = 0;
+                return view('paths.curriculum', ['course' => $course, 'number_resources_validated' => $number_resources_validated]);
+            }
+        }
+        //pas connecté
+        else {
+            if ($course->type == 'mooc') {
+                return redirect('/course/'.$course->slug)->with('status', 'Connectez-vous d\'abord');
             }
             else {
-
-                    //calcul de la progression
-                    $number_resources_validated = 0;
-                    foreach ($course->resources as $resource) {
-                        if ($resource->type == 'course') {
-                            if (count(Auth::user()->lessons->where('course_id', $resource->link->id)) / count($resource->link->lessons->where('status', 'active')) == 1) {
-                                $number_resources_validated += 1;
-                                $resource->status = 1;
-                                $resource->save();
-                            }
-                        }
-                        else {
-                            if (count(Auth::user()->deliverables->where('project_id', $resource->project->id)->where('status', '1')) > 0) {
-                                $number_resources_validated += 1;
-                                $resource->status = 1;
-                                $resource->save();
-                            }
-                        }
-                    }
-                    return view('paths.curriculum', ['course' => $course, 'number_resources_validated' => $number_resources_validated]);
-
-                return view('paths.curriculum', ['course' => $course]);
+                return redirect('/path/'.$course->slug)->with('status', 'Connectez-vous d\'abord');
             }
         }
 

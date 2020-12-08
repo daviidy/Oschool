@@ -29,7 +29,7 @@
           </div>
 
         </div>
-
+        @if(!Auth::user()->isAdmin() && !Auth::user()->isOwner())
         <div class="row mt-3 mb-5 text-center">
             <div class="col-12">
               <span class="">
@@ -42,13 +42,13 @@
         </div>
 
         <div class="row mt-3 mb-5 text-center">
-
           <div class="col-12 text-center">
             <a href="#" class="p-2 bg-oschool text-white rounded ">
               Certificat
             </a>
           </div>
         </div>
+        @endif
 
         <div class="path-map">
           @if(count($course->resources) > 0)
@@ -58,7 +58,17 @@
               <a target="_blank" href="{{$resource->type == 'course' ? '/course/enrolled/'.$resource->link->slug : '/path/'.$course->slug.'/projects/'.$resource->project->slug}}">
                   <h2 class="text-dark bg-white pr-3 pl-3 path-title w-50 ml-auto mr-auto" style="font-size:2vw;">
                     {{$resource->type == 'course' ? $resource->link->name : $resource->project->title}}
-                    <i class="fas fa-check-circle green ml-3"></i>
+                    @if(!Auth::user()->isAdmin() && !Auth::user()->isOwner())
+                        @if($resource->type == 'course')
+                            @if(count(Auth::user()->lessons->where('course_id', $resource->link->id)) > 0 && (count(Auth::user()->lessons->where('course_id', $resource->link->id)) / count($resource->link->lessons->where('status', 'active'))) == 1)
+                            <i class="fas fa-check-circle green ml-3"></i>
+                            @endif
+                        @elseif($resource->type == 'project')
+                            @if(count(Auth::user()->deliverables->where('project_id', $resource->project->id)->where('status', '1')) > 0)
+                            <i class="fas fa-check-circle green ml-3"></i>
+                            @endif
+                        @endif
+                    @endif
                   </h2>
               </a>
             </div>

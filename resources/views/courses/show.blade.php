@@ -5,6 +5,12 @@
 
 @section('content')
 
+<style media="screen">
+    .status {
+        margin-top: 4rem;
+    }
+</style>
+
     <main class="container">
         @include('includes.status')
       <div class="row">
