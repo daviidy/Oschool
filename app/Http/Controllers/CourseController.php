@@ -118,12 +118,12 @@ class CourseController extends Controller
             if ($course->school->user->isAdmin()) {
                 //si le cours est un mooc
                 if ($course->type == 'mooc') {
-                        return view('courses.show', ['course' => $course]);
+                        return view('courses.show', ['course' => $course, 'school' => $school]);
                     }
                 //sinon si le cours path
                 else{
 
-                    return view('paths.show', ['course' => $course]);
+                    return view('paths.show', ['course' => $course, 'school' => $school]);
                 }
             }
             //sinon (proprio owner)
@@ -132,7 +132,7 @@ class CourseController extends Controller
                     return view('courses.showCourseOut', ['course' => $course, 'school' => $school]);
                 }
                 elseif ($course->type == 'path' || $course->type == 'bootcamp') {
-                    return view('paths.show', ['course' => $course]);
+                    return view('paths.show', ['course' => $course, 'school' => $school]);
                 }
             }
     }
@@ -148,6 +148,7 @@ class CourseController extends Controller
     public function showCurriculum($slug)
     {
         $course = Course::where('slug', $slug)->firstOrFail();
+        $school = School::find($course->school_id);
         //si utilisateur est ni admin ni owner
         if (Auth::check() && !Auth::user()->isAdmin() && !Auth::user()->isOwner()) {
 
@@ -162,7 +163,7 @@ class CourseController extends Controller
                     }
                 }
                 else {
-                    return view('courses.show', ['course' => $course]);
+                    return view('courses.show', ['course' => $course, 'school' => $school]);
                 }
             }
             //si c'est un parcours
@@ -186,22 +187,22 @@ class CourseController extends Controller
                             }
                         }
                     }
-                    return view('paths.curriculum', ['course' => $course, 'number_resources_validated' => $number_resources_validated]);
+                    return view('paths.curriculum', ['course' => $course, 'number_resources_validated' => $number_resources_validated, 'school' => $school]);
                 }
                 else {
-                    return view('paths.show', ['course' => $course]);
+                    return view('paths.show', ['course' => $course, 'school' => $school]);
                 }
             }
         }
         //sinon (user forcement admin)
         elseif (Auth::check() && Auth::user()->isAdmin()) {
             if ($course->type == 'mooc') {
-                return view('courses.show', ['course' => $course]);
+                return view('courses.show', ['course' => $course, 'school' => $school]);
             }
             //si c'est un parcours
             else {
                 $number_resources_validated = 0;
-                return view('paths.curriculum', ['course' => $course, 'number_resources_validated' => $number_resources_validated]);
+                return view('paths.curriculum', ['course' => $course, 'number_resources_validated' => $number_resources_validated, 'school' => $school]);
             }
         }
         //pas connecté

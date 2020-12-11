@@ -2,7 +2,10 @@
 @section('image', '/images/courses/logos/'.$course->logo)
 @section('title', $course->name)
 @section('description', $course->subtitle)
+
 @section('content')
+
+@include('includes.branding')
 <style media="screen">
 .delete-blue-box{
     display: none;

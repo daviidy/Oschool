@@ -8,7 +8,7 @@ class Media extends Model
 {
     protected $fillable = ['name',
                            'lesson_id',
-
+                           'deliverable_id'
                          ];
 
 

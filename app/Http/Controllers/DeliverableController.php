@@ -50,34 +50,36 @@ class DeliverableController extends Controller
      */
     public function store(Request $request)
     {
+        //on cree le livrable
         $deliverable = Deliverable::create($request->all());
-        $deliverable->save();
 
+        //on valide les fichiers eventuels soumis
         $validation = Validator::make($request->all(), [
-              'file.*' => 'required|file|mimes:jpeg,png,jpg,pdf,mp3,mp4|max:10000'
+              'file.*' => 'file|mimes:jpeg,png,jpg,pdf,mp3,mp4|max:10000'
           ],[
-              'file.*.required' => 'Please upload a file',
                 'file.*.mimes' => 'Only jpeg,png,jpg,pdf,mp3,mp4 files are allowed',
                 'file.*.max' => 'Sorry! Maximum allowed size for an image is 10MB',
           ]);
 
+          //on associe ces fichiers au livrable crée
           if ($validation->passes()) {
-              if ($request->hasFile('file') ) {
-                foreach ($request->file('input2') as $file) {
+              if ($request->hasFile('input1') ) {
+                foreach ($request->file('input1') as $file) {
                   $filename = $file->getClientOriginalName();
                   $media = Media::create([
                       'name' => $filename,
                       'deliverable_id' => $deliverable->id,
                   ]);
-                  $file->move(public_path('/deliverables/'), $filename);
+                  $file->move(public_path('/deliverablesFiles/'), $filename);
                 }
             }
           }
+         //on envoie un mail au proprietaire de l'éécole
          Mail::send('mails.users.projects.notification', ['deliverable' => $deliverable], function($message) use($deliverable){
            $message->to($deliverable->course->school->user->email, 'Cher(ère) Partenaire')->subject('Un étudiant a soumis ses travaux pour le projet '.$deliverable->project->title);
            $message->from('eventsoschool@gmail.com', 'Oschool');
          });
-        return back()->with('success', 'Votre projet a été envoyé');
+        return back()->with('status', 'Votre projet a été envoyé');
     }
 
     /**
@@ -116,7 +118,10 @@ class DeliverableController extends Controller
      */
     public function update(Request $request, Deliverable $deliverable)
     {
+        //on met à jour le livrable
         $deliverable->update($request->all());
+
+        //on met a jour les taches effectuees par le student
         $user = User::find($request->user_id);
         if ($request->task_id) {
             foreach ($request->task_id as $task_id)
@@ -132,7 +137,6 @@ class DeliverableController extends Controller
                 }
             }
         }
-        $deliverable->save();
         //send mail to the student
          Mail::send('mails.users.projects.evaluation', ['deliverable' => $deliverable], function($message) use($deliverable){
            $message->to($deliverable->user->email, 'Cher(ère) Etudiant(e)')->subject('Votre travail pour le projet '.$deliverable->project->title.' a été évalué');
@@ -149,15 +153,14 @@ class DeliverableController extends Controller
         $deliverable->save();
 
         $validation = Validator::make($request->all(), [
-              'file.*' => 'required|file|mimes:jpeg,png,jpg,pdf,mp3,mp4|max:10000'
+              'file.*' => 'file|mimes:jpeg,png,jpg,pdf,mp3,mp4|max:10000'
           ],[
-              'file.*.required' => 'Please upload a file',
                 'file.*.mimes' => 'Only jpeg,png,jpg,pdf,mp3,mp4 files are allowed',
                 'file.*.max' => 'Sorry! Maximum allowed size for an image is 10MB',
           ]);
 
           if ($validation->passes()) {
-              if ($request->hasFile('file') ) {
+              if ($request->hasFile('input2') ) {
                 if (count($deliverable->medias) > 0) {
                     foreach ($deliverable->medias as $media) {
                         $media->delete();
@@ -169,7 +172,7 @@ class DeliverableController extends Controller
                       'name' => $filename,
                       'deliverable_id' => $deliverable->id,
                   ]);
-                  $file->move(public_path('/deliverables/'), $filename);
+                  $file->move(public_path('/deliverablesFiles/'), $filename);
                 }
             }
           }
@@ -192,6 +195,6 @@ class DeliverableController extends Controller
     public function destroy(Deliverable $deliverable)
     {
         $deliverable->delete();
-        return back()->with('status', 'Livrables supprimé');
+        return back()->with('status', 'Livrable supprimé');
     }
 }

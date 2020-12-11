@@ -77,8 +77,9 @@ class ProjectController extends Controller
     {
         $course = Course::where('slug', $slugCourse)->firstOrFail();
         $project = Project::where('slug', $slug)->firstOrFail();
+        $school = School::find($course->school_id);
 
-        return view('admin_views.projects.show', ['course' => $course, 'project' => $project]);
+        return view('admin_views.projects.show', ['course' => $course, 'project' => $project, 'school' => $school]);
 
     }
 

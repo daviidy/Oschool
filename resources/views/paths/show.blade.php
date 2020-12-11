@@ -2,7 +2,15 @@
 @section('image', '/images/courses/logos/'.$course->logo)
 @section('title', $course->name)
 @section('description', $course->subtitle)
+
 @section('content')
+
+@include('includes.branding')
+<style media="screen">
+    .status {
+        margin-top: 4rem;
+    }
+</style>
     <main class="container">
         @include('includes.status')
       <div class="row">

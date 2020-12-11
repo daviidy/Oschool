@@ -1,6 +1,6 @@
 <!--oschool business footer-->
 
-<footer class="container-fluid" style="background: #{{$school->color->navbar_footer}}; color: #{{$school->color->body_text}};position: fixed;bottom: 0;    z-index: 2000;">
+<footer class="container-fluid" style="background: #{{$school->color->navbar_footer}}; color: #{{$school->color->body_text}};">
   <div class="row align-items-center">
 
     <div class="col-md-8">

@@ -27,14 +27,20 @@
     .border-primary {
         border-color: #{{$school->color->buttons_links}} !important;
     }
+
+    .heading-title {
+        color: #{{$school->color->homepage_heading_subtitle}} !important;
+    }
+
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        color: #{{$school->color->homepage_heading_subtitle}} !important;
+        color: #{{$school->color->headings}} !important;
     }
+
     .btn-view-all svg {
         color: #{{$school->color->buttons_links}};
     }

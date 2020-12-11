@@ -15,7 +15,7 @@
             <img src="/assets/images/oschool-slide.png" alt="" class="w-100 d-none d-md-block" width="1340" height="500"> -->
           </div>
           <div class="p-4 d-flex position-absolute bg-white flex-column shadow-sm box-slide">
-            <h1 class="mb-4 h1 font-weight-bold">Bienvenue à {{$school->name}}</h1>
+            <h1 class="mb-4 h1 font-weight-bold heading-title">Bienvenue à {{$school->name}}</h1>
             <p>{{$school->subtitle}}</p>
             <!-- <form class="mt-5" action="index.html" method="post">
               <div class="form-group mb-2 w-100 border d-flex p-2 rounded">
@@ -52,8 +52,8 @@
             </div>
           </div>
           <div class="row p-5">
-              @foreach($school->categories as $category)
-              @if(count($category->courses) > 0)
+          @foreach($school->categories->take(4) as $category)
+          @if(count($category->courses) > 0)
             <div class="col-md-3 py-3">
               <div class=" border p-0 shadow-sm">
                 <a href="#" class="text-decoration-none">

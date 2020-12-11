@@ -73,23 +73,25 @@ drift.load('2uy6g3spxi59');
 </head>
 
 <body class="bg-code-signal">
-  <header>
-    <nav class="navbar navbar-expand-sm bg-white border-bottom fixed-top">
-      <ul class="navbar-nav flex-row align-items-center">
-        <li class="nav-item ml-3">
-          @include('includes.logo')
-        </li>
-      </ul>
+    <header>
+      <nav class="navbar navbar-expand-sm border-bottom fixed-top" style="background: #{{$school->color->navbar_footer}};">
+        <ul class="navbar-nav flex-row align-items-center">
+            @include('includes.menu-items')
+        </ul>
 
-      <ul class="navbar-nav ml-auto">
-        @include('includes.handle-login')
-      </ul>
-    </nav>
-  </header>
+        <ul class="navbar-nav ml-auto">
+          @include('includes.handle-login')
+        </ul>
+      </nav>
+    </header>
 
-  @yield('content')
+    @yield('content')
 
-  @include('includes.footer')
+    @if($school->user->isAdmin())
+        @include('includes.footer')
+    @else
+        @include('includes.footer_business')
+    @endif
 
 
 </body>

@@ -67,6 +67,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 
 </style>
 
+@include('includes.branding')
 
     <div role="main" class="view-school">
 
