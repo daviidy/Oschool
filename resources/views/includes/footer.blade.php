@@ -1,4 +1,4 @@
-<footer class="container-fluid mt-3 rm-mg">
+<footer class="container-fluid mt-3 rm-mg" id="footer">
   <div class="row position-relative delete-blue-box" style="top:55px">
     <div class="col-md-2 d-none d-md-block"></div>
     <div class=" col-md-8 col-12">
@@ -59,10 +59,10 @@
               <h5 class="pl-4 pt-4 font-weight-bold">Oschool</h5>
               <div class="mt-4">
                 <ul class="list-group border-0">
-                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="#">Devenez formateur</a></li>
-                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="#">FAQ</a></li>
-                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="#">Qui sommes nous?</a></li>
-                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="#">La communauté</a></li>
+                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="https://blog.oschoolelearning.com/devenir-formateur/" class="text-decoration-none">Devenez formateur</a></li>
+                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="https://blog.oschoolelearning.com/faq/" class="text-decoration-none">FAQ</a></li>
+                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="https://support.oschoolelearning.com/qui-sommes-nous/" class="text-decoration-none">Qui sommes nous?</a></li>
+                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="https://discord.gg/hhbzcHE" class="text-decoration-none">La communauté</a></li>
                 </ul>
               </div>
             </div>
@@ -70,10 +70,10 @@
               <h5 class="pl-4 pt-4 font-weight-bold">Plus</h5>
               <div class="mt-4">
                 <ul class="list-group border-0">
-                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="#">Conditions</a></li>
-                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="#">Confidentialité</a></li>
-                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="#">Contactez-nous</a></li>
-                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="#">Blog</a></li>
+                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="https://blog.oschoolelearning.com/condition/" class="text-decoration-none">Conditions</a></li>
+                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="https://blog.oschoolelearning.com/confidentialite/" class="text-decoration-none">Confidentialité</a></li>
+                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="https://blog.oschoolelearning.com/contact/" class="text-decoration-none">Contactez-nous</a></li>
+                  <li class="list-group-item border-0 bg-transparent font-weight-light"><a href="https://blog.oschoolelearning.com/" class="text-decoration-none">Blog</a></li>
                 </ul>
               </div>
             </div>

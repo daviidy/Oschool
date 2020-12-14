@@ -69,13 +69,13 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 
 @include('includes.branding')
 
-    <div role="main" class="view-school">
+    <div role="main" class="view-school position-relative">
 
 
 
         <div class="view-directory course-directory signed-in-directory">
             <div class="container">
-                <div class="row search">
+                <div class="search">
 
                     <div class="styles__ProfilePictureStyled-sdwfxm-0 hcbXTw">
                         <div size="125" class="styles__ProfileUserPic-sdwfxm-1 dtMxWm UserPic-iyi4aa-0 iWGKgF" overflow="hidden">
@@ -97,22 +97,21 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                         </div>
                     </div>
 
-                    <h2 style="padding-top: 2rem; text-align: center;">Tous les cours de {{ucfirst($author->full_name)}}</h2>
+                    <h2 class="h3 font-weight-bold m-auto pb-5" style="padding-top: 2rem; text-align: center;">Tous les cours de {{ucfirst($author->full_name)}}</h2>
 
 
                 <div class="row course-list list">
                     <!-- Course Listing -->
                     @foreach($author->courses as $course)
                     <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing">
-                            <div style="width: 109%;" class="row">
-                                <a href="{{ route('course.slug', $course->slug) }}" data-role="course-box-link">
+                        <div data-course-id="474431" data-course-url="/p/full" ,="" class="course-listing border-0 shadow rounded-lg p-2 mb-3">
+                            <div class="row">
+                                <a href="{{ route('course.slug', $course->slug) }}" data-role="course-box-link" class="w-100">
                                     <div class="col-lg-12">
                                         <!-- Course Image, Name & Subtitle (everyone) -->
-                                        <div class="course-box-image-container">
-                                            <img class="course-box-image" src="/images/courses/logos/{{$course->logo}}" role="presentation">
+                                        <div class="course-box-image-container authors-images" style="background-image: url('/images/courses/logos/{{$course->logo}}')">
                                         </div>
-                                        <div class="course-listing-title" role="heading" aria-level="2" title="The MissionFX Full Program">
+                                        <div class="course-listing-title py-3" role="heading" aria-level="2" title="The MissionFX Full Program">
                                             {{$course->name}}
                                         </div>
                                         <!-- Progress bar (enrolled users) -->
@@ -134,7 +133,7 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
 
                                         @guest
                                         <!-- Subtitle (unenrolled users) -->
-                                        <div class="course-listing-subtitle" title="Trading made simple" role="heading" aria-level="3">
+                                        <div class="course-listing-subtitle pb-3" title="Trading made simple" role="heading" aria-level="3">
                                             {{ str_limit($course->subtitle, $limit = 100, $end = '...') }}
                                         </div>
                                         @endguest
@@ -151,11 +150,11 @@ a:hover{color:inherit;border-bottom:none;text-decoration:none;}
                                 </a>
                             </div>
                             <div class="course-listing-extra-info col-xs-12">
-                                <div class="pull-left">
+                                <div class="pull-left justify-content-between align-items-center d-flex">
                                     <!-- Bundle Info (everyone) -->
 
                                     <!-- Author Image and Name (everyone) -->
-                                    <img align="left" class="img-circle" src="/images/users/authors/{{$course->author->image}}" alt="{{$course->author->full_name}}">
+                                    <img align="left" class="rounded-circle img-fluid w-author" src="/images/users/authors/{{$course->author->image}}" alt="{{$course->author->full_name}}">
                                     <div class="small course-author-name">
                                         {{$course->author->full_name}}
                                     </div>
