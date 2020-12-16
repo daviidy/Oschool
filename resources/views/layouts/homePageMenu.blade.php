@@ -50,6 +50,16 @@
         <header>
           <nav class="navbar navbar-expand-sm bg-transparent">
             <ul class="navbar-nav flex-row align-items-center">
+                <li class="nav-item dropdown d-md-none">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarmenu" data-toggle="dropdown">
+                    <i class="fas fa-bars hamburger"></i>
+                  </a>
+                  <div class="dropdown-menu" style="left: 0;">
+                    <a class="dropdown-item" href="/schools">Nos écoles</a>
+                    <a class="dropdown-item" href="/corporate">Business</a>
+                  </div>
+
+                </li>
               <li class="nav-item ml-3">
                 <img class="logo-short img-fluid" src="./assets/images/logo-os-noir.png" alt="Logo">
                 <img class="logo img-fluid" src="./assets/images/logo-oschool-noir.png" alt="">

@@ -5,9 +5,14 @@
 
 @section('content')
 
+@include('includes.branding')
 <style media="screen">
     .status {
         margin-top: 4rem;
+    }
+
+    .course-curriculum h4, a {
+        color: #000 !important;
     }
 </style>
 
@@ -84,30 +89,7 @@
           </div>
 
           <div class="row mt-3 d-md-none">
-            <div class="col-12">
-                @auth
-                @if(Auth::user()->courses->contains($course->id))
-                <div class="pointer p-2 bg-oschool text-white rounded text-center w-100">
-                  <a href="/course/enrolled/{{$course->slug}}">
-                          Continuez la formation
-                  </a>
-                </div>
-                @else
-                <div class="pointer p-2 bg-oschool text-white rounded text-center w-100" data-toggle="modal" data-target="#courseOffer">
-                  <a>
-                      Accédez à la formation
-                  </a>
-                </div>
-                @endif
-                @endauth
-                @guest
-                <div class="pointer p-2 bg-oschool text-white rounded text-center w-100" data-toggle="modal" data-target="#courseOffer">
-                  <a>
-                      Accédez à la formation
-                  </a>
-                </div>
-                @endguest
-            </div>
+            @include('includes.cta_course')
           </div>
           @auth
           @if(Auth::user()->courses->contains($course->id))
@@ -166,30 +148,7 @@
           </div>
           <div class="sticky-top">
             <div class="row mt-3">
-              <div class="col-12">
-                  @auth
-                  @if(Auth::user()->courses->contains($course->id))
-                  <div class="pointer p-2 bg-oschool text-white rounded text-center w-100">
-                    <a href="/course/enrolled/{{$course->slug}}">
-                            Continuez la formation
-                    </a>
-                  </div>
-                  @else
-                  <div class="pointer p-2 bg-oschool text-white rounded text-center w-100" data-toggle="modal" data-target="#courseOffer">
-                    <a>
-                        Accédez à la formation
-                    </a>
-                  </div>
-                  @endif
-                  @endauth
-                  @guest
-                  <div class="pointer p-2 bg-oschool text-white rounded text-center w-100" data-toggle="modal" data-target="#courseOffer">
-                    <a>
-                        Accédez à la formation
-                    </a>
-                  </div>
-                  @endguest
-              </div>
+              @include('includes.cta_course')
             </div>
             @auth
             @if(Auth::user()->courses->contains($course->id))

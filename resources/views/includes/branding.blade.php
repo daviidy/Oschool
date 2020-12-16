@@ -54,6 +54,10 @@
     }
 
     i {
-        color: #000 !important;
+        color: #{{$school->color->navbar_links}} !important;
+    }
+
+    .dropdown-menu {
+        background: #{{$school->color->navbar_footer}};
     }
 </style>
