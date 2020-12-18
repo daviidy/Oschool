@@ -512,9 +512,6 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                         <!----><span ng-if="!onboardingPricingPageCheckoutSuccess">Créer </span>
                         <!---->une nouvelle catégorie d'activités ou de cours
                     </h2>
-                    <!---->
-                    <p class="survey-container__customize m-t-4-xs p-h-3-xs">.</p>
-
 
                     <form enctype="multipart/form-data" method="post" action="{{route('school_category.store',$school->id)}}" class="ng-pristine ng-valid ng-valid-schema-form" id="information-container">
                             @csrf
@@ -524,12 +521,22 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 
                         <bootstrap-decorator form="schemaForm.form[5]">
                             <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
-                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Libéllé de la catégorie</label>
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Nom de la catégorie</label>
                               <input type="text" name="name">
 
 
                         </div>
                         </bootstrap-decorator>
+
+                        <bootstrap-decorator form="schemaForm.form[5]">
+                            <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Image de la catégorie</label>
+                              <input type="file" name="image">
+
+
+                            </div>
+                        </bootstrap-decorator>
+
                         <bootstrap-decorator form="schemaForm.form[6]">
 
                             <input type="hidden" name="school_id" value="{{$school->id}}">

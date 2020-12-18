@@ -15,6 +15,14 @@
 .rm-mg {
     margin: 0 !important;
 }
+
+.curriculum h5 {
+    color: #000 !important;
+}
+
+i {
+    color: #000 !important;
+}
 </style>
 
 
@@ -229,7 +237,7 @@
     @if(!$lesson->section->drip && $status !== '0' && Auth::user()->courses->contains($lesson->section->course->id) && !Auth::user()->isOwner())
     <div class="lecture-actions row mt-5">
       <div class="col-6">
-        <a href="/course/{{$lesson->course->slug}}/lessons/{{$previous_lesson->slug}}" class="border p-2 font-weight-bold rounded">
+        <a href="/course/{{$lesson->course->slug}}/lessons/{{$previous_lesson->slug}}" class="border p-2 font-weight-bold rounded text-dark">
           <i class="fas fa-arrow-left mr-4"></i>
           Chapitre précédent
         </a>
@@ -253,7 +261,7 @@
             <button type="submit" class="btn green"role="button" id="lecture_complete_button">
                   @csrf
                   <input type="hidden" name="id" value="{{$lesson->id}}">
-                  <span class="nav-text">Marquer ce chapitre comme terminé</span>
+                  <span class="nav-text text-white">Marquer ce chapitre comme terminé</span>
                   &nbsp;
                   <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </button>
@@ -270,7 +278,7 @@
         <span class="">
           {{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}% achevés
         </span>
-        <div class="progress blue-oschool mt-3" style="height:10px">
+        <div class="progress mt-3" style="height:10px; color: #{{$school->color->buttons_links}};">
           <div class="progress-bar bg-oschool" style="width:{{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}%;height:10px"></div>
         </div>
       </div>

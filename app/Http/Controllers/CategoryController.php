@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Category;
 use Auth;
 use App\School;
+use Image;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -54,7 +56,22 @@ class CategoryController extends Controller
         // //Pour la mise a jour des categories specifique a chaque ecole
         public function updateSchoolCategorie(Request $request,School $school,Category $category)
         {
+            if($request->hasFile('image')){
+              $image = $request->file('image');
+              if ($category->image !== 'image.jpg' && File::exists(public_path('/images/categories/' . $category->image))) {
+                  File::delete(public_path('/images/categories/' . $category->image));
+              }
+            }
+
             $category->update($request->all());
+
+            if($request->hasFile('image')){
+              $image = $request->file('image');
+              $filename = time() . '.' . $image->getClientOriginalExtension();
+              Image::make($image)->save(public_path('/images/categories/' . $filename));
+              $category->image = $filename;
+              $category->save();
+            }
             return redirect()->route('school_category.index',$request->school_id)->with('status', 'Catégorie mis à jour');
 
         }
@@ -83,14 +100,14 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $category = Category::create($request->all());
-        if($request->school_id)
-        {
-            return redirect()->route('school_category.index',$request->school_id)->with('status', 'Catégorie ajoutée');
-        }else{
-            return redirect('categories')->with('status', 'Catégorie ajoutée');
+        if($request->hasFile('image')){
+          $image = $request->file('image');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/images/categories/' . $filename));
+          $category->image = $filename;
+          $category->save();
         }
-
-        return redirect('categories')->with('status', 'Catégorie ajoutée');
+        return redirect()->route('school_category.index',$request->school_id)->with('status', 'Catégorie ajoutée');
     }
 
     /**
@@ -130,6 +147,16 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $category->update($request->all());
+        if($request->hasFile('image')){
+          $image = $request->file('image');
+          if ($category->image !== 'image.jpg' && File::exists(public_path('/images/categories/' . $category->image))) {
+              File::delete(public_path('/images/categories/' . $category->image));
+          }
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/images/categories/' . $filename));
+          $category->image = $filename;
+          $category->save();
+        }
         return redirect('categories')->with('status', 'Catégorie modifiée');
     }
 

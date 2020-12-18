@@ -495,7 +495,7 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                             <!---->
                             <div ng-if="!hideHamburger" class="tch-btn-hamburger"><button type="button" ng-click="toggleSidebar()" class="tch-btn-header-icon fastclickable"><i class="fa fa-bars"></i></button></div>
                             <!---->
-                            <!---->Modifier une catégorie d'école
+                            <!---->Modifier une catégorie
                         </div>
                         <!---->
                         <div ng-transclude="" ng-class="{ 'no-title': noTitle }" class="tch-section-nav-buttons"></div>
@@ -510,11 +510,10 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
                     <h2 class="survey-container__header p-t-3-xs m-b-0-xs text-center-xs w-6">
                         <!---->
                         <!----><span ng-if="!onboardingPricingPageCheckoutSuccess">Modifier </span>
-                        <!---->une catégorie d'école
+                        <!---->une catégorie
                     </h2>
                     <!---->
-                    <p class="survey-container__customize m-t-4-xs p-h-3-xs">.</p>
-
+                    <img width="100" src="/images/categories/{{$school_category->image}}" alt="{{$school_category->name}}">
 
                     <form enctype="multipart/form-data" method="post" action="{{route('school_category.update',[$school_category->school_id,$school_category->id])}}" class="ng-pristine ng-valid ng-valid-schema-form" id="information-container">
                         {{ csrf_field() }}
@@ -530,6 +529,14 @@ html body .m-v-6-m{margin-top:40px;margin-bottom:40px;}
 
 
                         </div>
+                        </bootstrap-decorator>
+                        <bootstrap-decorator form="schemaForm.form[5]">
+                            <div ng-class="{'has-error': form.disableErrorState !== true &amp;&amp; hasError(), 'has-success': form.disableSuccessState !== true &amp;&amp; hasSuccess(), 'has-feedback': form.feedback !== false}"
+                              class="form-group schema-form-select  has-feedback"><label ng-show="showTitle()" class="control-label">Image de la catégorie</label>
+                              <input type="file" name="image">
+
+
+                            </div>
                         </bootstrap-decorator>
                         <bootstrap-decorator form="schemaForm.form[6]">
 

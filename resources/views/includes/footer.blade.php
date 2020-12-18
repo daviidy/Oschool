@@ -52,7 +52,7 @@
             <div class="col-md-4">
               <div class="p-2">
                 <img src="/assets/images/logo-oschool-noir.png" width="150" alt="" class="img-fluid">
-                <p class="mb-3 text-justify">Oschool vous offre la possibilité de poursuivre des diplômes et certificats 100% en ligne, auprès des meilleures universités d’Afrique.</p>
+                <p class="mb-3 text-justify text-dark">Oschool vous offre la possibilité de poursuivre des diplômes et certificats 100% en ligne, auprès des meilleures universités d’Afrique.</p>
               </div>
             </div>
             <div class="col-md-3">
@@ -81,10 +81,10 @@
               <h5 class="pl-4 pt-4 font-weight-bold">Réseaux sociaux</h5>
               <div class="mt-4">
                 <ul class="list border-0">
-                  <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://www.facebook.com/Oschool.ci/"><i class="fab fa-facebook"></i></a></li>
-                  <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://twitter.com/OschoolLearning"><i class="fab fa-twitter"></i></a></li>
-                  <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://www.linkedin.com/school/11128322"><i class="fab fa-linkedin"></i></a></li>
-                  <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://www.instagram.com/oschool_e_learning/"><i class="fab fa-instagram"></i></a></li>
+                  <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://www.facebook.com/Oschool.ci/"><i class="fab fa-facebook text-dark"></i></a></li>
+                  <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://twitter.com/OschoolLearning"><i class="fab fa-twitter text-dark"></i></a></li>
+                  <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://www.linkedin.com/school/11128322"><i class="fab fa-linkedin text-dark"></i></a></li>
+                  <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://www.instagram.com/oschool_e_learning/"><i class="fab fa-instagram text-dark"></i></a></li>
                 </ul>
               </div>
             </div>

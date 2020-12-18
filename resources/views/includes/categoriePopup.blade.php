@@ -24,7 +24,7 @@
                 <div class="col-md-4 pb-3">
                   <div class=" border p-0 shadow-sm">
                     <a href="#" class="text-decoration-none">
-                      <img src="https://s.udemycdn.com/home/top-categories/lohp-category-design.jpg" alt="" class="img-fluid w-100">
+                      <img src="/images/categories/{{$category->image}}" alt="" class="img-fluid w-100">
                       <p class="p-3 font-weight-bold h6">{{$category->name}}</p>
                     </a>
                   </div>

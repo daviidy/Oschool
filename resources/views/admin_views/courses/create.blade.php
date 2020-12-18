@@ -322,29 +322,12 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                             </label-block>
                             <div ng-transclude="">
                                 <select name="category_id" what="author" ng-model="course.author_bio_id" ng-options="author.id as author.name for author in authors | orderBy:'name'" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty">
-                                    @foreach($categories as $category)
+                                    @foreach($school->categories as $category)
                                     <option label="" value="{{$category->id}}">{{$category->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
-                            <help-block>
-                                <ng-messages for="form[for].$error" role="alert" class="ng-inactive">
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                </ng-messages>
-                                <div ng-show="state.errors[for]" ng-bind="state.errors[for]" for="author" class="help-block ng-hide"></div>
-                            </help-block>
+
                         </div>
                         <!---->
                     </div>

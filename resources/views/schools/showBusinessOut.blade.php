@@ -57,7 +57,7 @@
             <div class="col-md-3 py-3">
               <div class=" border p-0 shadow-sm">
                 <a href="#" class="text-decoration-none">
-                  <img src="https://s.udemycdn.com/home/top-categories/lohp-category-design.jpg" alt="" class="img-fluid w-100">
+                  <img src="/images/categories/{{$category->image}}" alt="" class="img-fluid w-100">
                   <p class="p-4 font-weight-bold h5">{{$category->name}}</p>
                 </a>
               </div>
@@ -190,16 +190,18 @@
 
           </div>
           <div class="col-md-12 text-center">
-            <button class="btn bg-oschool rounded-pill font-weight-bold p-2">
-              <span class="px-3 py-3 text-white">
-                Tous nos cours
-              </span>
-              <span class="rounded-circle btn-view-all">
-                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short rounded-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                </svg>
-              </span>
-            </button>
+              <a href="/schools/{{$school->id}}/courses">
+                 <button class="btn bg-oschool rounded-pill font-weight-bold p-2">
+                   <span class="px-3 py-3 text-white">
+                     Tous nos cours
+                   </span>
+                   <span class="rounded-circle btn-view-all">
+                     <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short rounded-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                       <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                     </svg>
+                   </span>
+                 </button>
+             </a>
           </div>
         </div>
       </div>

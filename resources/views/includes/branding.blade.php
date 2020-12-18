@@ -54,6 +54,17 @@
     }
 
     i {
+        color: #{{$school->color->navbar_links}} !important;
+    }
+
+    .dropdown-menu {
+        background: #{{$school->color->navbar_footer}};
+    }
+
+    .course-characteristics i,
+    .lessons i,
+    .course-curriculum i {
         color: #000 !important;
     }
+
 </style>
