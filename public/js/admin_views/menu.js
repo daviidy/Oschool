@@ -7,6 +7,13 @@ $('#addAuthor').on('click', function() {
                   $("#selectAuthor").hide();
 });
 
+$('#cancelAddAuthor').on('click', function() {
+
+                  $('#inputCreateAuthor').hide();
+                  $('#createAuthor').hide();
+                  $("#selectAuthor").show();
+});
+
 
 $('#createAuthor').on('click', function() {
 

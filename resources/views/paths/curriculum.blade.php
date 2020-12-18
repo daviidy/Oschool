@@ -77,7 +77,7 @@
             </div>
             <div class="col-12 bg-white text-center p-3 rounded-bottom">
              @if($resource->type == 'course')
-              <a target="_blank" href="/course/enrolled/{{$resource->link->slug}}" class="p-2 bg-oschool text-white rounded">
+              <a target="_blank" href="/course/{{$resource->link->slug}}" class="p-2 bg-oschool text-white rounded">
                 Accéder au cours
               </a>
              @endif

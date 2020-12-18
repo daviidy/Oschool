@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Course;
 use App\CsvFile;
-
+use App\Lesson;
 use App\Faq;
 use App\School;
 use App\Category;
@@ -149,17 +149,23 @@ class CourseController extends Controller
     {
         $course = Course::where('slug', $slug)->firstOrFail();
         $school = School::find($course->school_id);
-        //si utilisateur est ni admin ni owner
-        if (Auth::check() && !Auth::user()->isAdmin() && !Auth::user()->isOwner()) {
-
+        //si utilisateur est connecté
+        if (Auth::check()) {
+            //si cours est mooc
             if ($course->type == 'mooc') {
                 //if user is subscribed to the course
                 if (Auth::user()->courses->contains($course->id)) {
-                    //take first lesson not ended and redirect user to this lesson
-                    foreach ($course->lessons->sortBy('position') as $lesson) {
-                        if (!Auth::user()->lessons->contains($lesson->id) && $lesson->status == 'active') {
-                            return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug)->with('status', 'Content de vous revoir');
-                        }
+                    //if user have finished all the active lessons
+                    if (count($course->lessons->where('status', 'active')) == count(Auth::user()->lessons->where('course_id', $course->id))) {
+                        return redirect('/course/'.$course->slug.'/lessons/'.$course->lessons->where('status', 'active')->first()->slug)->with('status', 'Content de vous revoir');
+                    }
+                    //else take first lesson not ended and redirect user to this lesson
+                    else {
+                        $id = Auth::id();
+                        $lesson = Lesson::with('users')->where('status', 'active')->where('course_id', $course->id)->whereDoesntHave('users', function($query) use ($id) {
+                            $query->where('users.id', $id);
+                        })->first();
+                        return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug)->with('status', 'Content de vous revoir');
                     }
                 }
                 else {
@@ -189,20 +195,19 @@ class CourseController extends Controller
                     }
                     return view('paths.curriculum', ['course' => $course, 'number_resources_validated' => $number_resources_validated, 'school' => $school]);
                 }
+                elseif (Auth::user()->isAdmin() || Auth::user()->isOwner()) {
+                    if ($course->type == 'mooc') {
+                        return view('courses.show', ['course' => $course, 'school' => $school]);
+                    }
+                    //si c'est un parcours
+                    else {
+                        $number_resources_validated = 0;
+                        return view('paths.curriculum', ['course' => $course, 'number_resources_validated' => $number_resources_validated, 'school' => $school]);
+                    }
+                }
                 else {
                     return view('paths.show', ['course' => $course, 'school' => $school]);
                 }
-            }
-        }
-        //sinon (user forcement admin)
-        elseif (Auth::check() && Auth::user()->isAdmin()) {
-            if ($course->type == 'mooc') {
-                return view('courses.show', ['course' => $course, 'school' => $school]);
-            }
-            //si c'est un parcours
-            else {
-                $number_resources_validated = 0;
-                return view('paths.curriculum', ['course' => $course, 'number_resources_validated' => $number_resources_validated, 'school' => $school]);
             }
         }
         //pas connecté

@@ -763,7 +763,7 @@ a:hover,a:focus{color:#167b72;text-decoration:none;}
                                     <select name="category_id"
                                       class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-api-validate">
                                         <option value="" selected="" disabled="">Catégorie du cours</option>
-                                        @foreach($categories as $category)
+                                        @foreach($school->categories as $category)
                                         @if($category->id == $course->category_id)
                                         <option label="" value="{{$category->id}}" selected="selected">{{$category->name}}</option>
                                         @else

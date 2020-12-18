@@ -60,4 +60,11 @@
     .dropdown-menu {
         background: #{{$school->color->navbar_footer}};
     }
+
+    .course-characteristics i,
+    .lessons i,
+    .course-curriculum i {
+        color: #000 !important;
+    }
+
 </style>
