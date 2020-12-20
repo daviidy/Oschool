@@ -17,7 +17,7 @@
               Créez aussi votre plateforme de formation en ligne avec
             </a>
           </li>
-          <li class="bg-transparent border-0 font-weight-bold h4 list-group-item d-flex justify-content-between align-items-center">
+          <li class="bg-transparent border-0 font-weight-bold h4 list-group-item d-flex justify-content-between align-items-center text-decoration-none">
             <a href="https://oschoolelearning.com">
               <img width="100" class="img-fluid" src="/images/schools/logos/oschool.png" alt="Oschool E-learning">
             </a>

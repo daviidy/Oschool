@@ -176,6 +176,35 @@ i {
 	overflow: auto!important;
   height: 350px;
 }
+/*authors*/
+
+.view-school {
+  top: 75px;
+}
+
+.authors-images {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.course-listing-extra-info .pull-left .w-author {
+  width: 50px;
+  height: 50px;
+}
+
+#footer {
+  color: #000000!important;
+}
+
+#footer i{
+  color: #4d90cc!important;
+}
+
+#footer a{
+  color: #0056b3;
+}
 
 /* media queries */
 @media screen and (max-width: 700px) {
