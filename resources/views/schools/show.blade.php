@@ -5,6 +5,14 @@
 
 @section('content')
 
+@include('includes.branding')
+
+<style media="screen">
+    .status {
+        margin-top: 4rem;
+    }
+</style>
+
     <section class="container-fluid">
       <div class="row">
         <div class="col-md-12 px-0">
@@ -54,7 +62,7 @@
               @if(count($category->courses) > 0)
             <div class="col-md-3 py-3">
               <div class=" border p-0 shadow-sm">
-                <a href="#" class="text-decoration-none">
+                <a href="/school/{{$school->id}}/categories/{{$category->id}}" class="text-decoration-none">
                   <img src="/images/categories/{{$category->image}}" alt="" class="img-fluid w-100">
                   <p class="p-4 font-weight-bold h5">{{$category->name}}</p>
                 </a>

@@ -28,53 +28,62 @@ class CategoryController extends Controller
 
     }
 
-        //index pour la vue des categories specifiques a chaque ecole
-        public function indexSchoolCategorie(School $school)
-        {
+    public function indexBy($school_id, $category_id)
+    {
+        $school = School::find($school_id);
+        $category = Category::find($category_id);
+        return view('categories.index', ['category' => $category, 'school' => $school]);
 
-            $school_categorie = Category::where('school_id',$school->id)->get();
+    }
 
-            return view('admin_views.school_category.index',compact('school','school_categorie'));
+
+    //index pour la vue des categories specifiques a chaque ecole
+    public function indexSchoolCategorie(School $school)
+    {
+
+        $school_categorie = Category::where('school_id',$school->id)->get();
+
+        return view('admin_views.school_category.index',compact('school','school_categorie'));
+    }
+
+    // //Pour la vue de creation des categories specifique a chaque ecole
+    public function createSchoolCategorie(School $school)
+    {
+
+        return view('admin_views.school_category.create', ['school' => $school]);
+    }
+
+    // //Pour la vue de modification des categories specifique a chaque ecole
+    public function editSchoolCategorie(School $school,Category $category)
+    {
+        $school_category = Category::where('id',$category->id)->first();
+        // dd($school_categorie);
+        return view('admin_views.school_category.edit', ['school' => $school, 'school_category'=>$school_category]);
+
+    }
+
+    // //Pour la mise a jour des categories specifique a chaque ecole
+    public function updateSchoolCategorie(Request $request,School $school,Category $category)
+    {
+        if($request->hasFile('image')){
+          $image = $request->file('image');
+          if ($category->image !== 'image.jpg' && File::exists(public_path('/images/categories/' . $category->image))) {
+              File::delete(public_path('/images/categories/' . $category->image));
+          }
         }
 
-        // //Pour la vue de creation des categories specifique a chaque ecole
-        public function createSchoolCategorie(School $school)
-        {
+        $category->update($request->all());
 
-            return view('admin_views.school_category.create', ['school' => $school]);
+        if($request->hasFile('image')){
+          $image = $request->file('image');
+          $filename = time() . '.' . $image->getClientOriginalExtension();
+          Image::make($image)->save(public_path('/images/categories/' . $filename));
+          $category->image = $filename;
+          $category->save();
         }
+        return redirect()->route('school_category.index',$request->school_id)->with('status', 'Catégorie mis à jour');
 
-        // //Pour la vue de modification des categories specifique a chaque ecole
-        public function editSchoolCategorie(School $school,Category $category)
-        {
-            $school_category = Category::where('id',$category->id)->first();
-            // dd($school_categorie);
-            return view('admin_views.school_category.edit', ['school' => $school, 'school_category'=>$school_category]);
-
-        }
-
-        // //Pour la mise a jour des categories specifique a chaque ecole
-        public function updateSchoolCategorie(Request $request,School $school,Category $category)
-        {
-            if($request->hasFile('image')){
-              $image = $request->file('image');
-              if ($category->image !== 'image.jpg' && File::exists(public_path('/images/categories/' . $category->image))) {
-                  File::delete(public_path('/images/categories/' . $category->image));
-              }
-            }
-
-            $category->update($request->all());
-
-            if($request->hasFile('image')){
-              $image = $request->file('image');
-              $filename = time() . '.' . $image->getClientOriginalExtension();
-              Image::make($image)->save(public_path('/images/categories/' . $filename));
-              $category->image = $filename;
-              $category->save();
-            }
-            return redirect()->route('school_category.index',$request->school_id)->with('status', 'Catégorie mis à jour');
-
-        }
+    }
 
     /**
      * Show the form for creating a new resource.

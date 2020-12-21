@@ -23,7 +23,7 @@
                   @if(count($category->courses) > 0)
                 <div class="col-md-4 pb-3">
                   <div class=" border p-0 shadow-sm">
-                    <a href="#" class="text-decoration-none">
+                    <a href="/school/{{$school->id}}/categories/{{$category->id}}" class="text-decoration-none">
                       <img src="/images/categories/{{$category->image}}" alt="" class="img-fluid w-100">
                       <p class="p-3 font-weight-bold h6">{{$category->name}}</p>
                     </a>

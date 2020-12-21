@@ -287,6 +287,7 @@ Route::post('/schoolAdmin/{school}/school_categorie/create', 'CategoryController
 Route::get('/schoolAdmin/{school}/school_categorie/{category}/edit','CategoryController@editSchoolCategorie');
 Route::get('/schoolAdmin/{school}/school_categorie/{category}/update','CategoryController@editSchoolCategorie');
 Route::patch('/schoolAdmin/{school}/school_categorie/{category}/update','CategoryController@updateSchoolCategorie')->name('school_category.update');
+Route::get('/school/{school}/categories/{category}','CategoryController@indexBy');
 
 
 //routes for faq tab
