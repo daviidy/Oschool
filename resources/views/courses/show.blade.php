@@ -34,7 +34,7 @@
           </div>
           <div class="row mt-3 border-bottom pb-4">
             <div class="col-12">
-              <p><i class="fas fa-medal blue-oschool mr-3"></i>Certificat de formation reconnu</h1>
+              <p><i class="fas fa-medal text-dark mr-3"></i>Certificat de formation reconnu</h1>
             </div>
           </div>
           <div class="row mt-5">
@@ -62,15 +62,15 @@
               </div>
               @endif
               <div class="text-center mt-3 mt-md-0">
-                <span class="font-weight-bold"><i class="fas fa-clock blue-oschool"></i></span><br>
+                <span class="font-weight-bold"><i class="fas fa-clock text-dark"></i></span><br>
                 <span>A votre rythme</span>
               </div>
               <div class="text-center mt-3 mt-md-0">
-                <span class="font-weight-bold"><i class="fas fa-cog blue-oschool"></i></span><br>
+                <span class="font-weight-bold"><i class="fas fa-cog text-dark"></i></span><br>
                 <span>100% pratique</span>
               </div>
               <div class="text-center mt-3 mt-md-0">
-                <span class="font-weight-bold"><i class="fas fa-hands-helping blue-oschool"></i></span><br>
+                <span class="font-weight-bold"><i class="fas fa-hands-helping text-dark"></i></span><br>
                 <span>Accompagnement</span>
               </div>
             </div>
@@ -123,7 +123,7 @@
               @if($lesson->status == 'active')
               <div class="col-12 mt-4 border-bottom pb-4">
                 @auth
-                <a {{Auth::user()->courses->contains($course->id) ? "href=/course/".$lesson->section->course->slug."/lessons/".$lesson->slug : ''}}><i class="{{Auth::user()->lessons->contains($lesson) ? 'fas-fa-circle' : 'far fa-circle'}} green mr-3"></i>{{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}</a>
+                <a {{Auth::user()->courses->contains($course->id) ? "href=/course/".$lesson->section->course->slug."/lessons/".$lesson->slug : ''}}><i class="{{Auth::user()->lessons->contains($lesson) ? 'fas fa-circle' : 'far fa-circle'}} green mr-3"></i>{{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}</a>
                 @endauth
                 @guest
                 <a><i class="far fa-circle green mr-3"></i>{{$lesson->title ? $lesson->title : 'Nouvelle leçon'}}</a>

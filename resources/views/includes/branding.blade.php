@@ -61,9 +61,8 @@
         background: #{{$school->color->navbar_footer}};
     }
 
-    .course-characteristics i,
-    .lessons i,
-    .course-curriculum i {
+    .course-characteristics i
+    {
         color: #000 !important;
     }
 

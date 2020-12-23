@@ -126,6 +126,10 @@ class LessonController extends Controller
             $days = Carbon::now();
             $available = '';
             $status = '';
+            $progression = 0;
+            if (count(Auth::user()->lessons->where('course_id', $course->id)) > 0 && count($course->lessons->where('status', 'active')) > 0) {
+                $progression = count(Auth::user()->lessons->where('course_id', $course->id)) / count($course->lessons->where('status', 'active')) * 100;
+            }
 
             if ($course->school->token !== null) {
                 Session::put('token', $course->school->token);
@@ -439,7 +443,8 @@ class LessonController extends Controller
                                          'days' => $days,
                                          'available' => $available,
                                          'status' => $status,
-                                         'school' => $school
+                                         'school' => $school,
+                                         'progression' => $progression
                                      ]);
 
         }

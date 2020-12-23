@@ -40,11 +40,13 @@ i {
       </h6>
     </div>
     <h4 class="mt-3 mb-3">{{$lesson->course->name}}</h4>
+    @if(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) > 0)
     <span class="">
-      {{number_format((count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)->where('state', 'active')) * 100)}}% achevés
+      {{number_format($progression)}}% achevés
     </span>
+    @endif
     <div class="progress blue-oschool mt-3" style="height:10px">
-      <div class="progress-bar bg-oschool" style="width:{{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)->where('state', 'active')) * 100}}%;height:10px"></div>
+      <div class="progress-bar bg-oschool" style="width:{{$progression}}%;height:10px"></div>
     </div>
     <div class="curriculum mt-5">
       @if($lesson->course->sections)
@@ -275,11 +277,13 @@ i {
 
     <div class="progression row mt-5 mb-5">
       <div class="col-8">
+        @if(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) > 0)
         <span class="">
-          {{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)) * 100}}% achevés
+          {{number_format($progression)}}% achevés
         </span>
+        @endif
         <div class="progress mt-3" style="height:10px; color: #{{$school->color->buttons_links}};">
-          <div class="progress-bar bg-oschool" style="width:{{(count(Auth::user()->lessons->where('course_id', $lesson->course_id)) / count($lesson->course->lessons)->where('state', 'active')) * 100}}%;height:10px"></div>
+          <div class="progress-bar bg-oschool" style="width:{{$progression}}%;height:10px"></div>
         </div>
       </div>
       <div class="col-4 text-center text-md-right">

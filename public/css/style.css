@@ -68,11 +68,11 @@ a:hover {
 }
 
 .green {
-  color: rgb(80, 204, 47);
+  color: rgb(80, 204, 47) !important;
 }
 
 .bg-green {
-  background-color: rgb(80, 204, 47);
+  background-color: rgb(80, 204, 47) !important;
 }
 
 h1 {

@@ -65,7 +65,7 @@ a:hover {
 }
 
 .blue-oschool {
-  color: #4D90CC;
+  color: #4D90CC !important;
 }
 
 .bg-oschool {
@@ -73,11 +73,11 @@ a:hover {
 }
 
 .green {
-  color: rgb(80, 204, 47);
+  color: rgb(80, 204, 47) !important;
 }
 
 .bg-green {
-  background-color: rgb(80, 204, 47);
+  background-color: rgb(80, 204, 47) !important;
 }
 
 h1 {

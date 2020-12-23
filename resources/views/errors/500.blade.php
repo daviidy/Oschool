@@ -191,6 +191,7 @@ animation: blink 0.7s infinite;
         <div class="button red"></div>
       </header>
       <section class="terminal">
+        <p>{{ $exception->getMessage() }}</p>
         <div class="history"></div>
         $&nbsp;<span class="prompt"></span>
         <span class="typed-cursor"></span>
