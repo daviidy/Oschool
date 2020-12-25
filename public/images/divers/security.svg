@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37px" height="42px" viewBox="0 0 37 42" version="1.1">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>SSL</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-592.000000, -446.000000)">
+            <g id="SSL" transform="translate(591.000000, 445.000000)">
+                <rect id="Rectangle-22" x="0.174173414" y="0" width="45" height="45"/>
+                <g id="Group-4-Copy-2" transform="translate(2.559084, 2.078016)">
+                    <path d="M0.96607745,-5.68434189e-14 C0.440841718,-5.68434189e-14 1.50990331e-13,0.433469487 1.50990331e-13,0.968181197 L1.88293825e-13,39.8717287 C1.88293825e-13,40.3994047 0.432527607,40.8399099 0.96607745,40.8399099 L27.0994055,40.8399099 C27.6246413,40.8399099 28.065483,40.4064404 28.065483,39.8717287 L28.065483,8.5140096 L19.8435995,-5.68434189e-14 L0.96607745,-5.68434189e-14 Z" id="Combined-Shape" fill="#FFFFFF"/>
+                    <rect id="Rectangle-8" stroke="#4d90cc" stroke-width="1.5" x="4.83887637" y="4.83887637" width="9.67775275" height="9.67775275" rx="1"/>
+                    <path d="M19.5667338,2.48689958e-14 L19.8435995,2.48689958e-14 L19.8435995,2.48689958e-14 L28.065483,8.5140096 L28.065483,8.75250666 L20.5328112,8.75250666 C19.9992614,8.75250666 19.5667338,8.31200147 19.5667338,7.78432546 L19.5667338,2.42028619e-14 Z" id="Combined-Shape" stroke="#404F54" stroke-width="1.5"/>
+                    <path d="M0,12.2776448 L0,38.8717287 C0,39.3994047 0.432527607,39.8399099 0.96607745,39.8399099 L18.5186676,39.8399099 M28.065483,19.0836752 C28.065483,15.5604533 28.065483,8.5140096 28.065483,8.5140096 L19.8435995,0 L0.96607745,0 C0.440841718,0 0,0.433469487 0,0.968181197 L0,7.76310511" id="Combined-Shape-Copy" stroke="#404F54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <path d="M7,22 L20.0984768,22" id="Path-83" stroke="#E0EAEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+                <path d="M7,26 L13.4430629,25.9524473" id="Path-83-Copy" stroke="#4d90cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+                <path d="M7,30 L19.0984768,30" id="Path-83-Copy-2" stroke="#E0EAEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+                <g id="Group-3" transform="translate(23.000000, 24.000000)">
+                    <rect id="Rectangle-4" stroke="#404F54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" x="3" y="0.43196615" width="8" height="13.0537083" rx="4"/>
+                    <rect id="Rectangle-23" fill="#5e5e5e" x="0" y="6" width="12.4973443" height="9.19959264" rx="2"/>
+                    <path d="M14,14.8453943 L14,15.0003482 C14,16.1047254 13.1029399,17 11.9941413,17 L2.00585866,17 C0.898053512,17 0,16.0998238 0,15.007983 L0,7.99201702 L0,7.99201702 C0,6.8918564 0.897060126,6 2.00585866,6 L11.9941413,6 C13.1019465,6 14,6.88817328 14,7.99798775 L14,10.4955362" id="Rectangle-23-Copy" stroke="#404F54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.19849162,10.940581 L7.19849162,13.4856745" id="Path-84" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

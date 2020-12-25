@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41px" height="41px" viewBox="0 0 41 41" version="1.1">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>marketing</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-909.000000, -227.000000)">
+            <g id="marketing" transform="translate(905.000000, 224.000000)">
+                <rect id="Rectangle-22" x="2.17417341" y="0" width="45" height="45"/>
+                <g id="Group-7" transform="translate(20.000000, 26.500000) rotate(-30.000000) translate(-20.000000, -26.500000) translate(4.000000, 15.000000)">
+                    <path d="M1.8410216,9.27308572 C1.8410216,9.27308572 5.71459896,17.1182484 2.29437138,20.3680929 C-1.1258562,23.6179374 6.78967123,21.4019516 6.78967123,21.4019516 C6.78967123,21.4019516 8.21304882,12.641545 5.02703521,9.38164842" id="Path-87" stroke="#4d90cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+                    <rect id="Combined-Shape" stroke="#404F54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#5e5e5e" x="-2.09610107e-13" y="8" width="14" height="5" rx="2"/>
+                    <polygon id="Path-86" fill="#FFFFFF" points="4.48638743 8.34710643 28.8196388 0.442207972 28.8196388 20.2089643 4.48638743 13.0893431"/>
+                    <path d="M13.8878427,5.22507204 C13.8878427,5.22507204 9.28649256,11.0558478 13.8878427,15.5734742" id="Path-88" stroke="#5e5e5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+                    <path d="M17.8514652,4.4355527 C17.8514652,4.4355527 12.4584307,11.2695414 17.8514652,16.5644473" id="Path-88-Copy" stroke="#5e5e5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+                    <polyline id="Path-86-Copy" stroke="#404F54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="24.5915448 1.81574631 28.8196388 0.442207972 28.8196388 20.2089643 4.48638743 13.0893431 4.48638743 8.34710643 4.48638743 8.34710643 20.8784176 3.02199256"/>
+                    <ellipse id="Oval-4" stroke="#404F54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#E0EAEF" cx="28.8196388" cy="10.3833782" rx="2.5" ry="9.88337816"/>
+                </g>
+                <polyline id="Path-89" stroke="#5e5e5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF" points="30.6308919 9.03391963 32.2139621 6.64986987 33.7291117 6.61611057 34.6333787 4.32489889"/>
+                <polyline id="Path-89-Copy" stroke="#5e5e5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF" points="38.6308919 25.0339196 41.5159946 25.0339196 43.8361629 23.3243352"/>
+                <polyline id="Path-89-Copy-2" stroke="#5e5e5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF" points="35.6308919 16.0339196 38.1919982 15.1102624 40.3879186 13.0959404"/>
+            </g>
+        </g>
+    </g>
+</svg>
