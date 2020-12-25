@@ -203,6 +203,16 @@
             }
           }
         </script>
+
+        <script>
+            $(document).ready(function(){
+              $('#btnActive ul li a').click(function(){
+                $('.nav-item a').removeClass("active1");
+                $(this).addClass("active1");
+            });
+            });
+
+        </script>
       </body>
 
       </html>
