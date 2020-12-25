@@ -23,7 +23,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="navbar-brand" href="#">
           <i class="fas fa-bars hamburger text-white"></i>
-          <a href="#">
+          <a href="/">
             <img class="logo img-fluid" src="../assets/images/logo-oschool-noir.png" alt="">
           </a>
         </div>
@@ -75,8 +75,9 @@
             <div class="my-md-5">
               <div>
                 <ul class="list-group menu">
+                  @if(Auth::user()->isAdmin())
                   <li class="list-group-item border-0 px-2 py-md-3 py-md-3">
-                    <a href="#" class="text-decoration-none align-items-center justify-content-between">
+                    <a href="/user/admin" class="text-decoration-none align-items-center justify-content-between">
                       <span class="pr-md-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
@@ -86,14 +87,16 @@
                       TABLEAU DE BORD ADMIN
                     </a>
                   </li>
-                  <li class="list-group-item border-0 px-2 py-md-3">
-                    <a href="dashboard.html" class="text-decoration-none align-items-center justify-content-between">
+                  @endif
+                  <li class="list-group-item border-0 px-2 py-md-3 {{\Route::current()->getName() == 'home' ? 'selected' : ''}}">
+                    <a href="/home" class="text-decoration-none align-items-center justify-content-between">
                       <span class="pr-md-3"><i class="far fa-building"></i></span>
                       MES ÉCOLES
                     </a>
                   </li>
-                  <li class="list-group-item border-0 px-2 py-md-3">
-                    <a href="create.html" class="text-decoration-none align-items-center justify-content-between">
+                  @if(Auth::user()->isAdmin() || Auth::user()->isOwner())
+                  <li class="list-group-item border-0 px-2 py-md-3 {{\Route::current()->getName() == 'schools.create' ? 'selected' : ''}}">
+                    <a href="{{route('schools.create')}}" class="text-decoration-none align-items-center justify-content-between">
                       <span class="pr-md-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -103,22 +106,23 @@
                       CRÉER UNE NOUVELLE ÉCOLE / CLASSE
                     </a>
                   </li>
-                  <li class="list-group-item border-0 px-2 py-md-3">
-                    <a href="messessions.html" class="text-decoration-none align-items-center justify-content-between">
+                  @endif
+                  <li class="list-group-item border-0 px-2 py-md-3 {{\Route::current()->getName() == 'users.sessions' ? 'selected' : ''}}">
+                    <a href="/users/sessions" class="text-decoration-none align-items-center justify-content-between">
                       <span class="pr-md-3">
                         <i class="fas fa-award"></i>
                       </span>
                       MES SESSIONS
                     </a>
                   </li>
-                  <li class="list-group-item border-0 px-2 py-md-3">
-                    <a href="notification.html" class="text-decoration-none align-items-center justify-content-between">
+                  <li class="list-group-item border-0 px-2 py-md-3 {{\Route::current()->getName() == 'users.notifications' ? 'selected' : ''}}">
+                    <a href="/users/notifications" class="text-decoration-none align-items-center justify-content-between">
                       <span class="pr-md-3"><i class="far fa-bell"></i></span>
                       MES NOTIFICATIONS
                     </a>
                   </li>
-                  <li class="list-group-item border-0 px-2 py-md-3">
-                    <a href="parametre.html" class="text-decoration-none align-items-center justify-content-between">
+                  <li class="list-group-item border-0 px-2 py-md-3 {{\Route::current()->getName() == 'users.settings' ? 'selected' : ''}}">
+                    <a href="/users/settings" class="text-decoration-none align-items-center justify-content-between">
                       <span class="pr-md-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
                           <path fill-rule="evenodd"
@@ -129,14 +133,14 @@
                       MES PARAMÈTRES
                     </a>
                   </li>
-                  <li class="list-group-item border-0 px-2 py-md-3">
-                    <a href="facturation.html" class="text-decoration-none align-items-center justify-content-between">
+                  <li class="list-group-item border-0 px-2 py-md-3 {{\Route::current()->getName() == 'users.billings' ? 'selected' : ''}}">
+                    <a href="/users/billings" class="text-decoration-none align-items-center justify-content-between">
                       <span class="pr-md-3"><i class="fas fa-funnel-dollar"></i></span>
                       FACTURATION
                     </a>
                   </li>
                   <li class="list-group-item border-0 px-2 py-md-3">
-                    <a href="#" class="text-decoration-none align-items-center justify-content-between">
+                    <a href="https://support.oschoolelearning.com/" class="text-decoration-none align-items-center justify-content-between">
                       <span class="pr-md-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-life-preserver" viewBox="0 0 16 16">
                           <path fill-rule="evenodd"
@@ -147,7 +151,7 @@
                     </a>
                   </li>
                   <li class="list-group-item border-0 px-2 py-md-3">
-                    <a href="#" class="text-decoration-none align-items-center justify-content-between">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="text-decoration-none align-items-center justify-content-between">
                       <span class="pr-md-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                           <path fill-rule="evenodd"
@@ -156,6 +160,9 @@
                         </svg>
                       </span>
                       SE DÉCONNECTER
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
                     </a>
                   </li>
                 </ul>
