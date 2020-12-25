@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="35px" viewBox="0 0 40 35" version="1.1">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>instant upgrades</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-276.000000, -450.000000)">
+            <g id="instant-upgrades" transform="translate(274.000000, 445.000000)">
+                <rect id="Rectangle-22" x="0.174173414" y="0" width="45" height="45"/>
+                <path d="M40,28.4666344 L40,30.5314176 L40,34.0003489 C40,36.7615799 37.7688083,39 34.9907763,39 L8.00922367,39 C5.24270583,39 3,36.7559738 3,33.9941611 L3,16.0058389 L3,16.0058389 C3,13.2411904 5.23119173,11 8.00922367,11 L34.9907763,11 C37.7572942,11 40,13.2408288 40,15.9909015 L40,25.0439128" id="Rectangle-3" stroke="#404F54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+                <rect id="Rectangle-3-Copy" stroke="#404F54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#E0EAEF" x="3" y="11" width="37" height="7.71825433" rx="3.85912716"/>
+                <g id="Group" transform="translate(24.000000, 6.000000)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2.20554054,3.25895185 C0.994860282,4.72769553 0.267714082,6.60988545 0.267714082,8.66190947 C0.267714082,13.3563298 4.07329371,17.1619095 8.76771408,17.1619095 L8.76771408,17.1619095 C13.4621345,17.1619095 17.2677141,13.3563298 17.2677141,8.66190947 C17.2677141,3.96748909 13.4621345,0.161909468 8.76771408,0.161909468 C7.60282171,0.161909468 6.4926601,0.396239777 5.48179583,0.820333845" id="Oval-12" stroke="#404F54" fill="#5e5e5e"/>
+                    <polyline id="Path-81" stroke="#FFFFFF" transform="translate(8.767714, 7.959986) rotate(-225.000000) translate(-8.767714, -7.959986) " points="6.58869065 5.70805266 6.58869065 10.2119197 10.9467375 10.2119197"/>
+                    <path d="M8.75830234,4.97229977 L8.75830234,12.3515192" id="Path-82" stroke="#FFFFFF" fill="#FFFFFF"/>
+                </g>
+                <path d="M8.34836256,24.176465 L21.4468394,24.176465" id="Path-83" stroke="#E0EAEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+                <path d="M8.34836256,28.176465 L14.7914255,28.1289123" id="Path-83-Copy" stroke="#4d90cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+                <path d="M8.34836256,32.176465 L21.4468394,32.176465" id="Path-83-Copy-3" stroke="#4d90cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+                <path d="M18.3483626,28.176465 L30.4468394,28.176465" id="Path-83-Copy-2" stroke="#E0EAEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"/>
+            </g>
+        </g>
+    </g>
+</svg>

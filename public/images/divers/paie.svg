@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39px" height="36px" viewBox="0 0 39 36" version="1.1">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>Payment data</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-909.000000, -453.000000)">
+            <g id="Payment-data" transform="translate(907.000000, 445.000000)">
+                <rect id="Rectangle-22" x="0.174173414" y="0" width="45" height="45"/>
+                <g id="Group-5" transform="translate(21.500000, 29.000000) rotate(-16.000000) translate(-21.500000, -29.000000) translate(5.000000, 19.000000)">
+                    <rect id="Rectangle-5-Copy" fill="#FFFFFF" x="0" y="0" width="33" height="20" rx="2"/>
+                    <g id="Group-4" transform="translate(3.000000, 11.076340)" stroke="#4d90cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse id="Oval-3" cx="2.46182975" cy="2.46182975" rx="2.46182975" ry="2.46182975"/>
+                        <circle id="Oval-3-Copy" fill="#9BE8E2" cx="5.74426942" cy="2.46182975" r="2.46182975"/>
+                    </g>
+                    <rect id="Rectangle-5" stroke="#E0EAEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" x="0" y="4.17798404" width="33" height="3"/>
+                    <rect id="Rectangle-5-Copy-2" stroke="#404F54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" x="0" y="0" width="33" height="20" rx="2"/>
+                </g>
+                <g id="Group-5-Copy" transform="translate(4.000000, 22.000000)">
+                    <path d="M21.0395098,20 L1.99831405,20 C0.894675676,20 0,19.1017876 0,18.0092049 L0,1.99079514 L0,1.99079514 C0,0.891309342 0.899784928,0 2.00228533,0 L30.9977147,0 C32.1035463,0 33,0.898212381 33,1.99079514 L33,18.0092049 C33,19.1086907 32.10236,20 30.9980872,20 L24.9013546,20" id="Rectangle-5-Copy" fill="#FFFFFF"/>
+                    <g id="Group-4" transform="translate(3.000000, 11.076340)" stroke="#4d90cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse id="Oval-3" cx="2.46182975" cy="2.46182975" rx="2.46182975" ry="2.46182975"/>
+                        <circle id="Oval-3-Copy" fill="#9BE8E2" cx="5.74426942" cy="2.46182975" r="2.46182975"/>
+                    </g>
+                    <rect id="Rectangle-5" stroke="#E0EAEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" x="0" y="4.17798404" width="33" height="3"/>
+                    <path d="M22.7287189,20 L1.997102,20 C0.89413302,20 0,19.1017876 0,18.0092049 L0,1.99079514 C0,0.891309342 0.899784928,0 2.00228533,0 L30.9977147,0 C32.1035463,0 33,0.898212381 33,1.99079514 L33,18.0092049 C33,19.1086907 32.1125328,20 30.9920167,20 L26.9927966,20" id="Rectangle-5-Copy-2" stroke="#404F54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <g id="Group" transform="translate(23.000000, 9.000000)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2.20554054,3.25895185 C0.994860282,4.72769553 0.267714082,6.60988545 0.267714082,8.66190947 C0.267714082,13.3563298 4.07329371,17.1619095 8.76771408,17.1619095 L8.76771408,17.1619095 C13.4621345,17.1619095 17.2677141,13.3563298 17.2677141,8.66190947 C17.2677141,3.96748909 13.4621345,0.161909468 8.76771408,0.161909468 C7.60282171,0.161909468 6.4926601,0.396239777 5.48179583,0.820333845" id="Oval-12" stroke="#404F54" fill="#5e5e5e"/>
+                    <g id="Group-6" transform="translate(8.500000, 8.500000) rotate(-315.000000) translate(-8.500000, -8.500000) translate(5.000000, 4.000000)" stroke="#FFFFFF">
+                        <polyline id="Path-81" transform="translate(3.767714, 3.959986) rotate(-225.000000) translate(-3.767714, -3.959986) " points="1.58869065 1.70805266 1.58869065 6.21191971 5.94673752 6.21191971"/>
+                        <path d="M3.75830234,0.972299773 L3.75830234,8.35151916" id="Path-82" fill="#FFFFFF"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
