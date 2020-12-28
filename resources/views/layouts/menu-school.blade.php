@@ -73,7 +73,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-sm border-bottom fixed-top" style="background: #{{$school->color->navbar_footer}};">
+      <nav class="navbar border-bottom fixed-top" style="background: #{{$school->color->navbar_footer}};">
         <ul class="navbar-nav flex-row align-items-center">
             @include('includes.menu-items')
         </ul>

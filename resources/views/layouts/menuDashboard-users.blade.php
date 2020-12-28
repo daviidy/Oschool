@@ -35,10 +35,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto mx-md-auto align-items-md-center">
             <li class="nav-item px-md-4 active">
-              <a class="nav-link font-weight-bold text-white" href="#">Nos écoles<span class="sr-only">(current)</span></a>
+              <a class="nav-link font-weight-bold text-white" href="/schools">Nos écoles<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item px-md-4 active">
-              <a class="nav-link font-weight-bold text-white" href="#">Business</a>
+              <a class="nav-link font-weight-bold text-white" href="/corporate">Business</a>
             </li>
             <li class="nav-item px-md-4 active">
               <a class="nav-link font-weight-bold text-white" href="#">Tous les cours</a>
@@ -49,8 +49,17 @@
               <img class="rounded-circle img-fluid user-avatar" src="https://oschoolelearning.com/images/users/default/1578057364.png" alt="User" width="50" height="50">
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Tableau de bord</a>
-              <a class="dropdown-item" href="#"> Déconnexion</a>
+              <a class="dropdown-item pl-3 pb-3" href="/home">
+                <i style="font-size: 13px;" class="pr-2 fas fa-house-user" aria-hidden="true"></i>
+                Tableau de bord
+              </a>
+              <a class="dropdown-item pl-3 pb-3" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i style="font-size: 13px;" class="pr-2 fas fa-sign-out-alt" aria-hidden="true"></i>
+                    Déconnexion
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                              @csrf
+                    </form>
+              </a>
             </div>
           </div>
         </div>
