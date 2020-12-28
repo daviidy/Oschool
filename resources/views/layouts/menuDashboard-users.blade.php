@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/d86848cfe0.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/css/intlTelInput.css">
   <style media="screen">
     .active1 {
       border-bottom: 2px solid #4d90cc !important;
@@ -213,6 +214,22 @@
             });
 
         </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/intlTelInput.js"></script>
+
+        <script>
+            var input = document.querySelector("#edit-user-tel");
+            window.intlTelInput(input, {
+
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/utils.js",
+            preferredCountries: ["ci", "sn", "cm", "ml"],
+            autoPlaceholder: "polite",
+            hiddenInput: "full",
+
+          });
+          </script>
+          <script class="iti-load-utils" async="" src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/utils.js"></script>
+
       </body>
 
       </html>
