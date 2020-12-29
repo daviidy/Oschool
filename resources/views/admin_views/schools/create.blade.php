@@ -1,118 +1,40 @@
-@extends('layouts.menu-dashboard-user')
-@section('title', 'Créer une école')
-
+@extends('layouts.menuDashboard-users')
+@section('title', 'Paramètres du compte')
 @section('content')
 
-<div class="main my-teachable-dashboard">
-    <!--
-    <div class="sticky-center-container pinned">
-        <div class="content-box form-wrapper">
-            <form enctype="multipart/form-data" class="new_school" id="new_school" action="{{route('schools.store')}}" accept-charset="UTF-8" method="post">
-                @csrf
-                <div class="form-group ">
-                    <label class="control-label" for="school_name">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">
-                                Nommez votre école
-                            </font>
-                        </font>
-                    </label>
-                    <div class="control-input">
-                        <input class="form-control" maxlength="100" placeholder="" required="required" autofocus="autofocus" size="100" type="text" name="name" id="school_name">
-                        <span class="input-icon"></span>
-                    </div>
-                    <div style="display: none;" class="control-input">
-                        <input value="{{Auth::user()->id}}" class="form-control" maxlength="100" placeholder="" required="required" autofocus="autofocus" size="100" type="text" name="user_id">
-                        <span class="input-icon"></span>
-                    </div>
-                    <!--
-                    <label class="description">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Votre école sera hébergée sur un </font>
-                            <font style="vertical-align: inherit;">sous-domaine </font>
-                        </font><span class="highlight-text">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">oschool</font>
-                            </font>
-                        </span>
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;"> . </font>
-                            <font style="vertical-align: inherit;">Vous pouvez toujours changer le nom de votre école ou configurer un domaine personnalisé ultérieurement.</font>
-                        </font>
-                    </label>
-                -->
-                <!--
-                </div>
-
-                <div class="button-group text-center">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;"><input type="submit" name="commit" value="Créer une nouvelle école" id="foo-submit" class="btn btn-primary btn-md btn-orange btn-teachable-block"></font>
-                    </font>
-                </div>
-            </form>
+<div class="col-md-9 bg-page main-content">
+  <div class="bg-white my-5 shadow" id="btnActive">
+    <ul class="border-0 list-group list-group-horizontal-md nav-tabs align-items-center" id="myTab" role="tablist">
+      <li class="border-0 list-group-item nav-item py-1">
+        <a class="pb-3 px-0 border-0 h3 font-weight-bold active1 nav-link active">
+          CRÉER UNE NOUVELLE ÉCOLE / CLASSE
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="p-md-4">
+    <div class="p-md-4">
+      <div class="card mx-auto border-0 bg-page">
+        <div class="card-body p-md-5">
+          <form class="text-center shadow-sm mx-auto bg-white p-md-5 p-3 shadow-sm">
+            <div class="form-group text-left">
+              <label for="exampleInputEmail1">Nommez votre école</label>
+              <input type="email" class="form-control" id="exampleInputEmail1">
+            </div>
+            <div class="form-group text-left">
+              <label for="exampleInputPassword1">Domaine personnalisé</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn p-md-3 shadow bg-oschool rounded-pill w-auto text-white">Créer une nouvelle école</button>
+          </form>
         </div>
-
+      </div>
     </div>
--->
-
-    <div class="sticky-center-container pinned">
-        <div class="content-box form-wrapper">
-            <form enctype="multipart/form-data" class="new_school" id="new_school" action="{{route('schools.storeBusiness')}}" accept-charset="UTF-8" method="post">
-                @csrf
-                <div class="form-group ">
-                    <label class="control-label" for="school_name">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">
-                                Nommez votre école
-                            </font>
-                        </font>
-                    </label>
-                    <div class="control-input">
-                        <input class="form-control" maxlength="100" placeholder="" required="required" autofocus="autofocus" size="100" type="text" name="name" id="school_name">
-                        <span class="input-icon"></span>
-                    </div>
-                    <label class="control-label" for="school_name">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">
-                                Domaine personnalisé
-                            </font>
-                        </font>
-                    </label>
-                    <div class="control-input">
-                        <input class="form-control" maxlength="100" placeholder="" autofocus="autofocus" size="100" type="text" name="domain" id="school_domain">
-                        <span class="input-icon"></span>
-                    </div>
-                    <div style="display: none;" class="control-input">
-                        <input value="{{Auth::user()->id}}" class="form-control" maxlength="100" placeholder="" required="required" autofocus="autofocus" size="100" type="text" name="user_id">
-                        <span class="input-icon"></span>
-                    </div>
-                    <!--
-                    <label class="description">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Votre école sera hébergée sur un </font>
-                            <font style="vertical-align: inherit;">sous-domaine </font>
-                        </font><span class="highlight-text">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">oschool</font>
-                            </font>
-                        </span>
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;"> . </font>
-                            <font style="vertical-align: inherit;">Vous pouvez toujours changer le nom de votre école ou configurer un domaine personnalisé ultérieurement.</font>
-                        </font>
-                    </label>
-                -->
-                </div>
-
-                <div class="button-group text-center">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;"><input type="submit" name="commit" value="Créer une nouvelle école" id="foo-submit" class="btn btn-primary btn-md btn-orange btn-teachable-block"></font>
-                    </font>
-                </div>
-            </form>
-        </div>
-
-    </div>
+  </div>
 </div>
+</div>
+</div>
+</section>
+
 
 @endsection
