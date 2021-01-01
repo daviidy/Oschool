@@ -1,5 +1,7 @@
 @extends('layouts.menuDashboard-users')
+@section('image', '/images/users/default/'.Auth::user()->image)
 @section('title', 'Historique des paiements')
+@section('description', 'Historique des paiements')
 
 @section('content')
 

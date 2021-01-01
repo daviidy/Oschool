@@ -1,3 +1,11 @@
+<style media="screen">
+    footer a {
+        color: #000 !important;
+    }
+    footer a:hover {
+        color: #4D90CC !important;
+    }
+</style>
 <footer class="container-fluid mt-3 rm-mg" id="footer">
   <div class="row position-relative delete-blue-box" style="top:55px">
     <div class="col-md-2 d-none d-md-block"></div>

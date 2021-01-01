@@ -72,7 +72,7 @@ class ClassroomController extends Controller
 
      public function subscribeToClassroom(Classroom $classroom)
      {
-         if (Auth::check() && count(Auth::user()->classrooms) < 6) {
+         if (Auth::check()) {
              $user = Auth::user();
              $classroom->users()->attach($user);
              Mail::send('mails.users.sessions.planning', ['classroom' => $classroom, 'user' => $user], function($message) use($user){
@@ -80,9 +80,6 @@ class ClassroomController extends Controller
                $message->from('eventsoschool@gmail.com', 'Oschool');
              });
              return back()->with('status', 'Votre participation a bien été enregistrée');
-         }
-         elseif (count(Auth::user()->classrooms) >= 6) {
-             return redirect()->back()->with('status', 'Vous avez atteint votre limite d\'appels');
          }
          else {
              return redirect('home');

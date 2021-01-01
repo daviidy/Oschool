@@ -1,5 +1,7 @@
 @extends('layouts.menuDashboard-users')
-@section('title', 'Paramètres du compte')
+@section('image', '/images/users/default/'.Auth::user()->image)
+@section('title', 'Messages et notifications')
+@section('description', 'Messages et notifications')
 @section('content')
 
 
@@ -13,48 +15,40 @@
               </li>
             </ul>
           </div>
+          <!--on vérifie si l'utilisateur est inscrit à au moins une école-->
+              @if(count(Auth::user()->schools) > 0)
+                 <!--si oui, pour chaque école dans laquelle il est inscrit-->
+                      @foreach(Auth::user()->schools as $school)
+                          <!--on parcourt chaque information de cette école-->
+                          @foreach($school->courses as $course)
+                              @foreach($course->informations->sortByDesc('created_at') as $information)
           <div class="p-md-4">
             <div class="bg-white d-md-flex align-items-md-start p-4 mb-3">
               <div class="d-flex align-items-center pt-md-3 py-3">
-                <a href="#">
-                  <img class="img-fluid" src="https://oschoolelearning.com/images/courses/logos/1580161319.png" alt="" width="150" height="150">
+                <a target="_blank" href="{{$course->type == 'mooc' ? '/course/enrolled/'.$course->slug : '/path/'.$course->slug}}">
+                  <img class="img-fluid" src="/images/courses/logos/{{$course->logo}}" alt="{{$course->name}}" width="150" height="150">
                 </a>
-                <a href="#" class="d-md-none d-block">
-                  Développeur Web Full Stack
+                <a target="_blank" href="{{$course->type == 'mooc' ? '/course/enrolled/'.$course->slug : '/path/'.$course->slug}}" class="d-md-none d-block">
+                  {{$course->name}}
                 </a>
               </div>
               <div class="w-100 p-md-4">
                 <div class="d-md-block d-none pb-md-4">
-                  <a href="#">Développeur Web Full Stack</a>
-                  <span><strong>2020-09-14 12:54:26</strong> </span>
+                  <a href="#">{{$course->name}}</a>
+                  <span><strong>{{$information->created_at}}</strong> </span>
                 </div>
                 <div class="p-3 bg-notif rounded-lg">
-                  <p style="line-height:2; ">Bonjour, j'espère que tu vas bien.
-
-                    MESSAGE AUX ETUDIANTS DE LA FORMATION EN LIGNE
-
-
-
-                    Je reçois des mails m'informant que certains d'entre vous ont été retiré de la formation en ligne DEVELOPPEUR WEB FULL STACK parce qu'ils n'ont pas été capable de régler la somme de 20 000 F pour avoir accès à la formation à vie.
-
-                    Ces personnes en général, se sont inscrites mais n'ont même pas été assez courageuses pour terminer le projet 1.
-
-                    Sérieux ? Mais à bien y réfléchir, tout se résume à une seule chose: les priorités.
-
-                    Quelle sont tes priorités? Coder en fait-il partie?
-
-                    Ce qui est incroyable c'est que beaucoup de ceux qui ont démaré les 30 jours gratuits m'ont tous dit: "oui David je suis prêt à aller jusqu'au bout".
-
-                    Au final, ils ont fermé la porte à l'opportunité d'avoir accès à la formation à vie à 20 000 FCFA !
-
-                    Réfléchis bien à ce que tu veux de ta vie, et si la réponse est de devenir un bon codeur, règle une bonne fois pour toutes les 20 000 à payer, et dédie 2 heurs par jours à ta formation.
-
-                    N'oublie pas de me rejoindre demain à l'appel hebdomadaire de ce vendredi 19 H.
+                  <p style="line-height:2;">
+                      {!!$information->text!!}
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          @endforeach
+          @endforeach
+          @endforeach
+          @endif
         </div>
       </div>
     </div>

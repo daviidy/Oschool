@@ -1,5 +1,7 @@
 @extends('layouts.menuDashboard-users')
-@section('title', 'Paramètres du compte')
+@section('image', '/images/users/default/'.Auth::user()->image)
+@section('title', 'Créer une école')
+@section('description', 'Mes écoles et cours')
 @section('content')
 
 <div class="col-md-9 bg-page main-content">
@@ -16,15 +18,17 @@
     <div class="p-md-4">
       <div class="card mx-auto border-0 bg-page">
         <div class="card-body p-md-5">
-          <form class="text-center shadow-sm mx-auto bg-white p-md-5 p-3 shadow-sm">
+          <form enctype="multipart/form-data" action="{{route('schools.storeBusiness')}}" accept-charset="UTF-8" method="post" class="text-center shadow-sm mx-auto bg-white p-md-5 p-3 shadow-sm">
+              @csrf
             <div class="form-group text-left">
-              <label for="exampleInputEmail1">Nommez votre école</label>
-              <input type="email" class="form-control" id="exampleInputEmail1">
+              <label for="school_name">Nommez votre école</label>
+              <input id="school_name" type="text" class="form-control" maxlength="100" required name="name" placeholder="eg. Ecole des développeurs">
             </div>
             <div class="form-group text-left">
-              <label for="exampleInputPassword1">Domaine personnalisé</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="school_domain">Domaine personnalisé(facultatif) </label>
+              <input placeholder="Mettez une URL si vous voulez lier un domaine à votre école" id="school_domain" type="text" class="form-control" maxlength="100" name="domain">
             </div>
+            <input hidden value="{{Auth::user()->id}}" class="form-control" type="text" name="user_id">
             <button type="submit" class="btn p-md-3 shadow bg-oschool rounded-pill w-auto text-white">Créer une nouvelle école</button>
           </form>
         </div>

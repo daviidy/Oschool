@@ -164,25 +164,7 @@ class CourseController extends Controller
             //si c'est un parcours
             else {
                 if (Auth::user()->courses->contains($course->id)) {
-                    //calcul de la progression
-                    $number_resources_validated = 0;
-                    foreach ($course->resources as $resource) {
-                        if ($resource->type == 'course') {
-                            if (count(Auth::user()->lessons->where('course_id', $resource->link->id)) / count($resource->link->lessons->where('status', 'active')) == 1) {
-                                $number_resources_validated += 1;
-                                $resource->status = 1;
-                                $resource->save();
-                            }
-                        }
-                        else {
-                            if (count(Auth::user()->deliverables->where('project_id', $resource->project->id)->where('status', '1')) > 0) {
-                                $number_resources_validated += 1;
-                                $resource->status = 1;
-                                $resource->save();
-                            }
-                        }
-                    }
-                    return view('paths.curriculum', ['course' => $course, 'number_resources_validated' => $number_resources_validated, 'school' => $school]);
+                    return view('paths.curriculum', ['course' => $course, 'school' => $school]);
                 }
                 elseif (Auth::user()->isAdmin() || Auth::user()->isOwner()) {
                     if ($course->type == 'mooc') {

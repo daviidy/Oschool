@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
+use Auth;
 
 class Course extends Model
 {
@@ -25,7 +26,36 @@ class Course extends Model
                            'result'
                          ];
 
-
+     public function getProgression()
+     {
+         if ($this->type == 'mooc') {
+             $progression = 0;
+             if (count(Auth::user()->lessons->where('course_id', $this->id)) > 0 && count($this->lessons->where('status', 'active')) > 0) {
+                 $progression = count(Auth::user()->lessons->where('course_id', $this->id)) / count($this->lessons->where('status', 'active')) * 100;
+             }
+             return $progression;
+         }
+         else {
+             $number_resources_validated = 0;
+             foreach ($this->resources as $resource) {
+                 if ($resource->type == 'course') {
+                     if (count(Auth::user()->lessons->where('course_id', $resource->link->id)) / count($resource->link->lessons->where('status', 'active')) == 1) {
+                     $number_resources_validated += 1;
+                     $resource->status = 1;
+                     $resource->save();
+                 }
+                }
+                else {
+                 if (count(Auth::user()->deliverables->where('project_id', $resource->project->id)->where('status', '1')) > 0) {
+                     $number_resources_validated += 1;
+                     $resource->status = 1;
+                     $resource->save();
+                 }
+                }
+            }//end foreach
+            return floor(($number_resources_validated / count($this->resources)) * 100);
+         }
+     }
 
      /**
       * [users description]

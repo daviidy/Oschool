@@ -32,14 +32,13 @@
           </div>
 
         </div>
-        @if(!Auth::user()->isAdmin() && !Auth::user()->isOwner())
         <div class="row mt-3 mb-5 text-center">
             <div class="col-12">
               <span class="">
-                {{floor(($number_resources_validated / count($course->resources)) * 100)}}% achevés
+                {{$course->getProgression()}}% achevés
               </span>
               <div class="progress blue-oschool mt-3" style="height:10px">
-                <div class="progress-bar bg-oschool" style="width:{{floor(($number_resources_validated / count($course->resources)) * 100)}}%;height:10px"></div>
+                <div class="progress-bar bg-oschool" style="width:{{$course->getProgression()}}%;height:10px"></div>
               </div>
             </div>
         </div>
@@ -51,7 +50,6 @@
             </a>
           </div>
         </div>
-        @endif
 
         <div class="path-map">
           @if(count($course->resources) > 0)
@@ -61,15 +59,13 @@
               <a target="_blank" href="{{$resource->type == 'course' ? '/course/enrolled/'.$resource->link->slug : '/path/'.$course->slug.'/projects/'.$resource->project->slug}}">
                   <h2 class="text-dark bg-white pr-3 pl-3 path-title w-50 ml-auto mr-auto" style="font-size:2vw;">
                     {{$resource->type == 'course' ? $resource->link->name : $resource->project->title}}
-                    @if(!Auth::user()->isAdmin() && !Auth::user()->isOwner())
-                        @if($resource->type == 'course')
-                            @if(count(Auth::user()->lessons->where('course_id', $resource->link->id)) > 0 && (count(Auth::user()->lessons->where('course_id', $resource->link->id)) / count($resource->link->lessons->where('status', 'active'))) == 1)
-                            <i class="fas fa-check-circle green ml-3"></i>
-                            @endif
-                        @elseif($resource->type == 'project')
-                            @if(count(Auth::user()->deliverables->where('project_id', $resource->project->id)->where('status', '1')) > 0)
-                            <i class="fas fa-check-circle green ml-3"></i>
-                            @endif
+                    @if($resource->type == 'course')
+                        @if($resource->link->getProgression() == 100)
+                        <i class="fas fa-check-circle green ml-3" style="color: rgb(80, 204, 47) !important;"></i>
+                        @endif
+                    @elseif($resource->type == 'project')
+                        @if(count(Auth::user()->deliverables->where('project_id', $resource->project->id)->where('status', '1')) > 0)
+                        <i class="fas fa-check-circle green ml-3" style="color: rgb(80, 204, 47) !important;"></i>
                         @endif
                     @endif
                   </h2>

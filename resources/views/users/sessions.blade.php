@@ -1,5 +1,7 @@
 @extends('layouts.menuDashboard-users')
-@section('title', 'Historique des paiements')
+@section('image', '/images/users/default/'.Auth::user()->image)
+@section('title', 'Mes sessions')
+@section('description', 'Mes sessions')
 @section('content')
 <div class="col-md-9 bg-page main-content">
   <div class="bg-white my-5 shadow" id="btnActive">
@@ -21,7 +23,6 @@
       <div class="card-body">
         <blockquote class="blockquote mb-0">
           <p>Retrouvez ci-dessous la liste des anciens appels hebdomadaires.</p>
-          @if(count(Auth::user()->classrooms) < 6)
           @foreach(Auth::user()->schools as $school)
           @if(count($school->classrooms) > 0)
           @if($school->classrooms->where('statut', null) && !$school->classrooms->where('statut', null)->last()->users->contains(Auth::user()->id))
@@ -35,7 +36,6 @@
           @endif
           @endif
           @endforeach
-          @endif
         </blockquote>
       </div>
     </div>
@@ -52,7 +52,6 @@
           Il s'agit d'un échange de <strong>questions / réponses</strong> avec vos mentors.<br>
           <br>
           Vous pouvez participer en posant vos questions ou simplement en écoutant passivement les conversations.<br><br>
-          Vous avez <strong>6 appels</strong> pour chacun des parcours dans lesquels vous êtes inscrits.
         </p>
       </div>
     </div>

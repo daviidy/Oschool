@@ -1,5 +1,7 @@
 @extends('layouts.menuDashboard-users')
-@section('title', 'Paramètres du compte')
+@section('image', '/images/users/default/'.Auth::user()->image)
+@section('title', 'Paramètres de votre compte Oschool')
+@section('description', 'Paramètres de votre compte Oschool')
 @section('content')
 
 <div class="col-md-9 bg-page main-content">
@@ -17,28 +19,41 @@
       <div class="card bg-page border-0 m-auto w-75" id="setting">
         <div class="card-body m-auto p-2 w-100">
           <div class="bg-white rounded-lg p-3 shadow">
-            <form class="p-md-4">
+            <form enctype="multipart/form-data" id="profile-form" action="{{url('users', Auth::user())}}" accept-charset="UTF-8" method="post" class="p-md-4">
+                @csrf
+                {{method_field('patch')}}
+                @if(session('status'))
+                <div id="form-success" class="alert alert-success" role="alert">Votre profil a été mis à jour.</div>
+                @endif
+
               <div class="form-group text-center">
-                  <img class="rounded-circle img-fluid" src="https://oschoolelearning.com/images/users/default/1578057364.png" alt="" height="50" width="50"><br><br>
+                  <img class="rounded-circle img-fluid" src="/images/users/default/{{Auth::user()->image}}" alt="" height="50" width="50"><br><br>
                 <label for="exampleFormControlFile1">Changez votre image ci-dessous</label>
-                <input type="file" class="form-control-file w-auto mx-auto" id="exampleFormControlFile1">
+                <input type="file" class="form-control-file w-auto mx-auto" id="exampleFormControlFile1" name="image">
               </div>
               <div class="form-group">
                 <label >Nom complet</label>
-                <input class="form-control" type="text" placeholder="Nom complet">
+                <input class="form-control" id="edit-user-name" name="name" required type="text" value="{{Auth::user()->name}}">
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Adresse email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input disabled class="form-control" id="edit-user-email" name="email" required type="email" value="{{Auth::user()->email}}">
               </div>
               <div class="form-group">
-                <label class="input-size">Numéro de téléphone <strong>(+22589078025)</strong></label>
+                <label class="input-size">
+                    Numéro de téléphone
+                    @if(Auth::user()->telephone)
+                    <strong>
+                    ({{Auth::user()->telephone}})
+                    </strong>
+                    @endif
+                </label>
                 <div class="control-input">
-                    <input placeholder="" class="form-control rounded-pill border-top-0 shadow-sm" id="edit-user-tel" name="telephone" required="required" type="tel" value="{{Auth::user()->tel}}">
+                    <input placeholder="" class="form-control rounded-pill border-top-0 shadow-sm" id="edit-user-tel" name="telephone" type="tel" value="{{Auth::user()->tel}}">
                     <span class="input-icon"></span>
                 </div>
               </div>
-              <a href="#" class="input-size">Changer de mot de passe</a>
+              <a target="_blank" href="{{url('user/settings/changePassword')}}" class="input-size">Changer de mot de passe</a>
               <div class="form-group mt-md-4 mt-3">
                 <input type="submit" class="form-control text-white btn-bg rounded-pill w-auto m-auto" value="Enregistrer les modifications">
               </div>

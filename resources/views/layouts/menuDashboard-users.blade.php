@@ -2,9 +2,29 @@
 <html lang="fr" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="{!! csrf_token() !!}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="@yield('title')">
+
+    <meta name="title" content="@yield('title')">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{Request::url()}}">
+    <meta property="og:title" content="@yield('title')">
+    <meta property="og:description" content="@yield('description')">
+    <meta property="og:image" content="@yield('image')">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="@yield('image')">
+    <meta property="twitter:url" content="{{Request::url()}}">
+    <meta property="twitter:title" content="@yield('title')">
+    <meta property="twitter:description" content="@yield('description')">
+    <meta property="twitter:image" content="@yield('image')">
+
+
+    <title>@yield('title')</title>
   <link rel="stylesheet" href="/css/dashboard-user/master.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
@@ -40,13 +60,10 @@
             <li class="nav-item px-md-4 active">
               <a class="nav-link font-weight-bold text-white" href="/corporate">Business</a>
             </li>
-            <li class="nav-item px-md-4 active">
-              <a class="nav-link font-weight-bold text-white" href="#">Tous les cours</a>
-            </li>
           </ul>
           <div class="dropdown">
             <a class="dropdown-toggle" href="#" id="navbardr" data-toggle="dropdown">
-              <img class="rounded-circle img-fluid user-avatar" src="https://oschoolelearning.com/images/users/default/1578057364.png" alt="User" width="50" height="50">
+              <img class="rounded-circle img-fluid user-avatar" src="/images/users/default/{{Auth::user()->image}}" alt="User" width="50" height="50">
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item pl-3 pb-3" href="/home">
@@ -75,10 +92,10 @@
             <div>
               <ul class="list-group align-items-center">
                 <li class="list-group-item border list-group-item p-1 rounded-circle">
-                  <img class="rounded-circle img-fluid user-avatar" src="https://oschoolelearning.com/images/users/default/1578057364.png" alt="User" width="100" height="100">
+                  <img class="rounded-circle img-fluid user-avatar" src="/images/users/default/{{Auth::user()->image}}" alt="User" width="100" height="100">
                 </li>
-                <li class="list-group-item border-0 py-1">Arsene Kouassi aouman</li>
-                <li class="list-group-item border-0 py-1">Arsene@gmail.com</li>
+                <li class="list-group-item border-0 py-1">{{Auth::user()->name}}</li>
+                <li class="list-group-item border-0 py-1">{{Auth::user()->email}}</li>
               </ul>
             </div>
 
@@ -150,7 +167,7 @@
                     </a>
                   </li>
                   <li class="list-group-item border-0 px-2 py-md-3">
-                    <a href="https://support.oschoolelearning.com/" class="text-decoration-none align-items-center justify-content-between">
+                    <a target="_blank" href="https://support.oschoolelearning.com/" class="text-decoration-none align-items-center justify-content-between">
                       <span class="pr-md-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-life-preserver" viewBox="0 0 16 16">
                           <path fill-rule="evenodd"
