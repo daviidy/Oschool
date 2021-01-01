@@ -40,10 +40,10 @@
 
 <body class="bg-page">
   <section>
-    <header class="bg-oschool">
+    <header class="bg-white">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="navbar-brand" href="#">
-          <i class="fas fa-bars hamburger text-white"></i>
+          <i class="fas fa-bars hamburger text-dark"></i>
           <a href="/">
             <img class="logo img-fluid" src="../assets/images/logo-oschool-noir.png" alt="">
           </a>
@@ -55,10 +55,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto mx-md-auto align-items-md-center">
             <li class="nav-item px-md-4 active">
-              <a class="nav-link font-weight-bold text-white" href="/schools">Nos écoles<span class="sr-only">(current)</span></a>
+              <a class="nav-link font-weight-bold text-dark" href="/schools">Nos écoles<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item px-md-4 active">
-              <a class="nav-link font-weight-bold text-white" href="/corporate">Business</a>
+              <a class="nav-link font-weight-bold text-dark" href="/corporate">Business</a>
             </li>
           </ul>
           <div class="dropdown">
