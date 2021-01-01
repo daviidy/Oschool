@@ -155,18 +155,7 @@ class CourseController extends Controller
             if ($course->type == 'mooc') {
                 //if user is subscribed to the course
                 if (Auth::user()->courses->contains($course->id)) {
-                    //if user have finished all the active lessons
-                    if (count($course->lessons->where('status', 'active')) == count(Auth::user()->lessons->where('course_id', $course->id))) {
-                        return redirect('/course/'.$course->slug.'/lessons/'.$course->lessons->where('status', 'active')->first()->slug)->with('status', 'Content de vous revoir');
-                    }
-                    //else take first lesson not ended and redirect user to this lesson
-                    else {
-                        $id = Auth::id();
-                        $lesson = Lesson::with('users')->where('status', 'active')->where('course_id', $course->id)->whereDoesntHave('users', function($query) use ($id) {
-                            $query->where('users.id', $id);
-                        })->first();
-                        return redirect('/course/'.$course->slug.'/lessons/'.$lesson->slug)->with('status', 'Content de vous revoir');
-                    }
+                    return redirect('/course/'.$course->slug.'/lessons/'.$course->lessons->where('status', 'active')->first()->slug)->with('status', 'Content de vous revoir');
                 }
                 else {
                     return view('courses.show', ['course' => $course, 'school' => $school]);
