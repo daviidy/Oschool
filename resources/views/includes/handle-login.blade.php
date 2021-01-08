@@ -1,7 +1,7 @@
 @guest
 <li class="nav-item">
   <div class="p-2 bg-oschool text-white rounded text-center w-100 div-login">
-    <a href="/login" class="login">
+    <a href="#" class="login" data-toggle="modal" data-target="#loginModal">
       Connectez-vous
     </a>
   </div>
@@ -37,3 +37,4 @@
         }
     }
 </style>
+@include('includes.auths.register')

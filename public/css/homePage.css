@@ -69,6 +69,15 @@ body {
   background-color: #4d90cc;
 }
 
+.svg-delete {
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
+  z-index: 9999;
+}
+
 /* menu */
 .logo-short,
 .user-avatar {
