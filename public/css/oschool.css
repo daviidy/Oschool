@@ -1,0 +1,85 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+button,
+ul,
+li,
+a,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+  list-style: none;
+}
+
+.btn-size{
+  font-size: 25px!important;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bg-oschool {
+  background-color: #4d90cc!important;
+}
+
+.school-img {
+  background-size: cover;
+    background-repeat: no-repeat;
+    height: 288px;
+    width: 100%;
+}
+
+.search input{
+  width: 25%;
+}
+.hero-bg{
+  background-image: linear-gradient(to bottom, rgba(48,56,83,0) 40%, #303853 60%, #303853 100%),url('https://static.teamtreehouse.com/assets/views/marketing/home/homepage-hero-86e988fc10618a6d2b743327d67eeca3b0396f9720d94c35bbff8cd217de96d1.jpg');
+    background-position-x: 100%, 100%;
+    background-position-y: 0px, -200px;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-color: #303853;
+    background-attachment: fixed, fixed;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00303853', endColorstr='#303853',GradientType=0 );
+}
+
+.overlay{
+  background-color: #00000099;
+  height: 288px;
+}
+.school-text {
+  top: 100px;
+}
+.before-green-dot{
+  background-color: #000000b3;
+}
+.before-green {
+  right: 50px;
+}
+
+.before-green-dot:before{
+  content: " ";
+    background: #3BDB71;
+    border-radius: 50%;
+    width: .60rem;
+    height: .60rem;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px){
+  .search input{
+    width: 100%;
+  }
+}
