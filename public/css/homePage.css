@@ -179,6 +179,13 @@ i {
   .col-md-8 .display-4 {
     font-size: calc(100% + 1vw + 1vh)!important;
   }
+  .logo-short{
+    width: 25%;
+  }
+
+  .navbar-nav {
+    width: 198px!important;
+  }
 
   .logo {
     display: none;

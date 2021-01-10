@@ -67,7 +67,7 @@ body {
 }
 
 .navbar .navbar-nav:nth-child(1) {
-  width: 70%;
+  width: 90%;
 }
 
 i {
@@ -219,9 +219,16 @@ i {
   .logo {
     display: none;
   }
+  .logo-short{
+    width: 25%;
+  }
 
   .bg-sm-white {
     background-color: #fff;
+  }
+
+  .navbar-nav {
+    width: 198px;
   }
 
   iframe {
