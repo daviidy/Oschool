@@ -33,7 +33,7 @@
         <div class="row">
           <div class="col-md-12 py-4">
             <div class="h-100 m-md-auto m-sm-auto w-75">
-              <div class="shadow-lg">
+              <div class="shadow p-md-3">
                 <iframe width="800" height="515" src="https://www.youtube.com/embed/pIc2vQFDU3I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class=" lazyloaded w-100" data-v-958d1b38=""></iframe>
               </div>
             </div>

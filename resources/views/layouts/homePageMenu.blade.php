@@ -61,14 +61,16 @@
 
                 </li>
               <li class="nav-item ml-3">
-                <img class="logo-short img-fluid" src="./assets/images/logo-os-noir.png" alt="Logo">
-                <img class="logo img-fluid" src="./assets/images/logo-oschool-noir.png" alt="">
+                <a href="/">
+                  <img class="logo-short img-fluid" src="./assets/images/logo-os-noir.png" alt="Logo">
+                  <img class="logo img-fluid" src="./assets/images/logo-oschool-noir.png" alt="">
+                </a>
               </li>
               <li class="d-none d-md-block nav-item mr-3 ml-3">
-                <a href="{{url('schools')}}" class="nav-link">Nos écoles</a>
+                <a href="{{url('schools')}}" class="nav-link text-dark">Nos écoles</a>
               </li>
               <li class="d-none d-md-block nav-item mr-3 ml-3">
-                <a href="/corporate" class="nav-link">Business</a>
+                <a href="/corporate" class="nav-link text-dark">Business</a>
               </li>
 
             </ul>
