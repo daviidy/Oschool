@@ -1,44 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/css/oschool.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d86848cfe0.js"></script>
-  </head>
-  <body>
-    <section class="hero-bg">
-      <div class="container-fluid p-md-4 p-3">
-        <div class="row p-md-5 p-3 justify-content-center align-items-center">
-          <div class="col-md-6">
-            <div class="text-white pb-4 pb-md-3">
-              <h1>Apprends ce que tu veux</h1>
-              <h2 class="font-weight-light">Apprenez à votre rythme Étudiez n'importe quel sujet, à tout moment. Choisissez dès maintenant parmi les nombreux cours dirigés par nos experts.</h2>
-              <div class="pt-md-3">
-                <a href="https://oschoolelearning.com/schools" class="text-decoration-none">
-                  <button class="btn w-100 p-3 text-white bg-oschool btn-size" type="button" name="button">Commencez MAINTENANT !</button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="">
-              <div class="card">
-                <div class="card-header p-md-3 p-1">
-                  <p class="text-center">Commencez dès maintenant <span>et sans engagement</span> </p>
-                </div>
-                <div class="card-body">
-                  <img style="border-radius: 8px;width:100%;" src="/images/divers/osch.jpg" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+@extends('layouts.our-schools')
+@section('title', 'Créez votre plateforme de formation en ligne')
+@section('image', 'https://process.filestackapi.com/AtM7HNKzQZ6u2HxwJF1Jiz/compress/quality=value:90/0tTy4z3lTbCkw18ehjQ8')
+@section('description', 'Créez votre plateforme de formation en ligne')
+@section('content')
     <section>
       <div class="container-fluid p-md-5">
         <div class="p-3 p-md-3">
@@ -126,6 +90,4 @@
 
         });
     </script>
-
-  </body>
-</html>
+@endsection
