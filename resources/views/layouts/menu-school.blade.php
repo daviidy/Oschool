@@ -94,7 +94,7 @@
     @include('includes.auths.register')
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <!--script>hljs.initHighlightingOnLoad();</script-->
 
   </body>
 </html>

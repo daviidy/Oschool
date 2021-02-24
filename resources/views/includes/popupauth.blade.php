@@ -148,11 +148,11 @@ input.form-control {
 
                 <div class="md-form mb-4 text-center">
                   <label class="checkbox-label">
-                    <input {{ old('remember') ? 'checked' : '' }} id="remember" default="default" type="checkbox" name="remember" class="terms-of-service-checkbox">Se souvenir de moi</a>
+                    <input {{ old('remember') ? 'checked' : '' }} id="remember" default="default" type="checkbox" name="remember" class="terms-of-service-checkbox">Se souvenir de moi</input> <br><br>
 
 
                     @if (Route::has('password.request'))
-                                  <a style="margin-bottom: 0px;" class="btn btn-link" href="{{ route('password.request') }}">
+                                  <a style="margin-bottom: 0px;" class="text-decoration-none " href="{{ route('password.request') }}">
                                       {{ __('Mot de passe oublié?') }}
                                   </a>
                   @endif
@@ -171,7 +171,7 @@ input.form-control {
           </form>
           <div class="modal-footer d-flex justify-content-center">
             <p>Pas de compte ?
-              <a href="#" class="log btn btn-link" data-toggle="modal" data-target="#modalRegisterForm{{$pricing->id}}" data-dismiss="modal" aria-label="Close">S'INSCRIRE</a>
+              <a href="#" class="log text-decoration-none" data-toggle="modal" data-target="#modalRegisterForm{{$pricing->id}}" data-dismiss="modal" aria-label="Close">S'INSCRIRE</a>
             </p>
           </div>
         </div>
@@ -223,7 +223,7 @@ input.form-control {
           </form>
           <div class="modal-footer d-flex justify-content-center">
             <p>Avez-vous un compte ?
-              <a href="#" class="log btn btn-link" data-toggle="modal" data-target="#modalLogin{{$pricing->id}}" data-dismiss="modal" aria-label="Close">CONNECTEZ-VOUS!</a>
+              <a href="#" class="log " data-toggle="modal" data-target="#modalLogin{{$pricing->id}}" data-dismiss="modal" aria-label="Close">CONNECTEZ-VOUS!</a>
             </p>
           </div>
         </div>
