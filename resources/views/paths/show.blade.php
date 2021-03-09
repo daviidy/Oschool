@@ -95,7 +95,7 @@
           <div class="row mt-3 d-md-none">
             <div class="col-12">
               <div class="p-2 bg-light border rounded text-center w-100">
-                <a href="#" class="">
+                <a href="#" class="text-decoration-none">
                   Acheter le certificat
                 </a>
               </div>
@@ -164,7 +164,7 @@
             <div class="row mt-3">
               <div class="col-12">
                 <div class="p-2 bg-light border rounded text-center w-100">
-                  <a href="#" class="">
+                  <a href="#" class="text-decoration-none">
                     Acheter le certificat
                   </a>
                 </div>
