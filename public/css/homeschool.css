@@ -76,7 +76,7 @@ i {
 
 .dropdown-menu {
   position: absolute !important;
-  left: auto;
+  left: auto !important;
   right: 0;
 }
 
@@ -232,7 +232,7 @@ i {
   }
 
   .navbar-nav {
-    width: 198px;
+    width: 25%;
   }
 
   iframe {

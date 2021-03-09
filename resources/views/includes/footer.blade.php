@@ -88,7 +88,7 @@
             <div class="col-md-2">
               <h5 class="pl-4 pt-4 font-weight-bold">Réseaux sociaux</h5>
               <div class="mt-4">
-                <ul class="list border-0">
+                <ul class="list border-0 reso">
                   <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://www.facebook.com/Oschool.ci/"><i class="fab fa-facebook text-dark"></i></a></li>
                   <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://twitter.com/OschoolLearning"><i class="fab fa-twitter text-dark"></i></a></li>
                   <li class="list-group-item border-0 bg-transparent p-2 blue-oschool"><a href="https://www.linkedin.com/school/11128322"><i class="fab fa-linkedin text-dark"></i></a></li>

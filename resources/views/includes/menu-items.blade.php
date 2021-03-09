@@ -1,36 +1,36 @@
 <!-- hamburger icon -->
-<li class="nav-item dropdown d-md-none">
+<li class="nav-item dropdown d-md-none menu-mobile">
   <a class="nav-link dropdown-toggle" href="#" id="navbarmenu" data-toggle="dropdown">
     <i class="fas fa-bars hamburger"></i>
   </a>
-  <div class="dropdown-menu" style="left: 0;">
+  <div class="dropdown-menu" style="left: 0!important;">
     @if($school->user->type1 == 'admin')
-    <a class="dropdown-item" href="/schools">Nos écoles</a>
-    <a class="dropdown-item" href="/corporate">Business</a>
+    <a class="dropdown-item text-dark " href="/schools">Nos écoles</a>
+    <a class="dropdown-item text-dark" href="/corporate">Business</a>
     @endif
     @auth
     @if(Auth::user()->createSchools->contains($school->id) || Auth::user()->adminSchools->contains($school->id))
-      <a class="dropdown-item" href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
+      <a class="dropdown-item text-dark" href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
           Admin
       </a>
     @endif
     @if(Auth::user()->isOwner() && Auth::user()->createSchools->contains($school->id))
-      <a class="dropdown-item" href="{{ route('website.subdomain.previewIn', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
+      <a class="dropdown-item text-dark" href="{{ route('website.subdomain.previewIn', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
           Aperçu inscrit
       </a>
-      <a class="dropdown-item" href="{{ route('website.subdomain.previewOut', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
+      <a class="dropdown-item text-dark" href="{{ route('website.subdomain.previewOut', ['school' => $school->id, 'subdomain' => $school->slug]) }}">
           Aperçu visiteur
       </a>
     @elseif(Auth::user()->isAdmin() && Auth::user()->createSchools->contains($school->id))
-      <a class="dropdown-item" href="{{url('schoolAdmin', $school)}}">
+      <a class="dropdown-item text-dark" href="{{url('schoolAdmin', $school)}}">
           Aperçu inscrit
       </a>
-      <a class="dropdown-item" href="{{url('schoolAdmin', $school)}}">
+      <a class="dropdown-item text-dark" href="{{url('schoolAdmin', $school)}}">
           Aperçu visiteur
       </a>
     @endif
     @endauth
-      <a class="dropdown-item" href="/schools/{{$school->id}}/courses">
+      <a class="dropdown-item text-dark" href="/schools/{{$school->id}}/courses">
           Tous les cours
       </a>
   </div>
@@ -38,7 +38,7 @@
 </li>
 <!-- end hamburger icon -->
 
-<li class="nav-item ml-3">
+<li class="nav-item">
   @if($school->user->type3 == 'owner')
    @if($school->logo == 'image.jpg')
   <a href="{{ route('website.subdomain.home', ['subdomain' => $school->slug]) }}">
@@ -56,7 +56,7 @@
 </li>
 @auth
 @if(Auth::user()->createSchools->contains($school->id) || Auth::user()->adminSchools->contains($school->id))
-<li class="d-none d-md-block nav-item mr-3 ml-3">
+<li class="d-none d-md-block nav-item ml-3">
 <a href="{{ route('website.subdomain', ['school' => $school->id, 'subdomain' => $school->slug]) }}" class="nav-link">
     Admin
 </a>

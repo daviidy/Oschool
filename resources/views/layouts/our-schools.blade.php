@@ -55,7 +55,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarmenu" data-toggle="dropdown">
                           <i class="fas fa-bars hamburger"></i>
                         </a>
-                        <div class="dropdown-menu" style="left: 0;">
+                        <div class="dropdown-menu" style="left: 0!important;">
                           <a class="dropdown-item" href="/schools">Nos écoles</a>
                           <a class="dropdown-item" href="/corporate">Business</a>
                         </div>

@@ -74,7 +74,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-sm border-bottom fixed-top" style="background: #{{$school->color->navbar_footer}};">
-        <ul class="navbar-nav flex-row align-items-center">
+        <ul class="navbar-nav flex-row align-items-center w-100">
             @include('includes.menu-items')
         </ul>
 

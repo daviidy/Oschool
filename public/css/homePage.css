@@ -102,8 +102,12 @@ i {
 
 .dropdown-menu {
   position: absolute !important;
-  left: auto;
+  left: auto!important;
   right: 0;
+}
+
+.mobile-menu .dropdown-menu {
+  left: 0 !important;
 }
 
 #overlay {
@@ -183,9 +187,9 @@ i {
     width: 25%;
   }
 
-  .navbar-nav {
+  /*.navbar-nav {
     width: 198px!important;
-  }
+  }*/
 
   .logo {
     display: none;

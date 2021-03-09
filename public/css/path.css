@@ -135,10 +135,13 @@ i {
 
 .dropdown-menu {
   position: absolute !important;
-  left: auto;
+  left: auto !important;
   right: 0;
 }
-
+.menu-mobile .dropdown-menu {
+  left: 0!important;
+  color: #000;
+}
 .cta:hover {
     color: #fff;
 }

@@ -50,11 +50,11 @@
         <header>
           <nav class="navbar navbar-expand-sm bg-transparent">
             <ul class="navbar-nav flex-row align-items-center">
-                <li class="nav-item dropdown d-md-none">
+                <li class="nav-item dropdown d-md-none mobile-menu">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarmenu" data-toggle="dropdown">
                     <i class="fas fa-bars hamburger"></i>
                   </a>
-                  <div class="dropdown-menu" style="left: 0;">
+                  <div class="dropdown-menu">
                     <a class="dropdown-item" href="/schools">Nos écoles</a>
                     <a class="dropdown-item" href="/corporate">Business</a>
                   </div>
@@ -80,13 +80,13 @@
                     Inscrivez-vous
                   </a>
                   <!--mobile-->
-                  <a href="{{route('login')}}" class="bg-danger text-decoration-none d-md-none d-block p-3 bg-oschool text-white rounded-pill text-center mr-2 mr-md-3" data-toggle="modal" data-target="#registerModal">
+                  <a href="{{route('login')}}" class="bg-danger text-decoration-none d-md-none d-block p-2 bg-oschool text-white rounded-pill text-center mr-2 mr-md-3" data-toggle="modal" data-target="#registerModal">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
                       <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
                     </svg>
                   </a>
-                  <a href="{{route('login')}}" class="text-decoration-none d-md-none d-block p-3 bg-oschool text-white rounded-pill text-center mr-2 mr-md-3" data-toggle="modal" data-target="#loginModal">
+                  <a href="{{route('login')}}" class="text-decoration-none d-md-none d-block p-2 bg-oschool text-white rounded-pill text-center mr-2 mr-md-3" data-toggle="modal" data-target="#loginModal">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
                       <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
                       <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
@@ -103,7 +103,7 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" aria-expanded="false">
-                  <img class="rounded-circle img-fluid user-avatar" src="/images/users/default/{{Auth::user()->image}}" alt="{{Auth::user()->name}}">
+                  <img class="rounded-circle img-fluid user-avatar" src="/images/users/default/{{Auth::user()->image}}" alt="{{Auth::user()->name}}" style="height:30px !important">
                 </a>
                 <div class="dropdown-menu p-4">
                   <a class="dropdown-item pl-3 pb-3" href="/home">
